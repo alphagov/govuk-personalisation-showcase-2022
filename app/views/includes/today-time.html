@@ -1,0 +1,13 @@
+<script>
+    var today = new Date();
+    var hours = String(today.getHours()).padStart(2, '0');
+    var mins = String(today.getMinutes()).padStart(2, '0');
+    var seconds = String(today.getSeconds()).padStart(2, '0');
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = hours + ':' + mins + ':' + seconds + ' on ' + dd + '-' + mm + '-' + yyyy;
+    document.write(today);
+
+</script>

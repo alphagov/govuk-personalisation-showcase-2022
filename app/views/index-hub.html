@@ -1,0 +1,225 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {% include "includes/projectname.html" %}
+        </h1>
+    </div>
+</div>
+<!--
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The vision
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p>One login for government <a href="https://docs.google.com/presentation/d/17uoK4PVk787AdmMdC0nYEOSzBp1e4OSFPSIkkjfKcxI/edit?usp=sharing" target="_blank">[1]</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The {% include "includes/projectname.html" %} mission
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p>
+                    A simple and safe way to login for everyone, and an easy integration path for service teams across government. <a href="https://docs.google.com/presentation/d/1LDKCK2dlKv5epAvhutIrSJzAhAjoxQ8Ofg_QOgPFdKM/edit#slide=id.gd9e79fdec5_2_0" target="_blank">[2]</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <ol class="govuk-list govuk-list--number">
+            <li><a href="#team">The team</a></li>
+            <li><a href="#activities">Week-by-week activity</a></li>
+            <li><a href="#documentation">Links &amp; documents</a></li>
+            <li><a href="#prototypes">Prototypes</a></li>
+        </ol>
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="team" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">The team</h2>
+
+    </div>
+
+    <div id="team" class="govuk-grid-column-one-half">
+
+        <ul class="govuk-list">
+            <li>
+                <a href="mailto:selin.barnett@hippodigital.co.uk">
+                    Selin Barnett</a> (Product Manager)
+            </li>
+            <li>
+                <a href="mailto:nic.teeman@hippodigital.co.uk">
+                    Nic Teeman</a> (Delivery Manager)
+            </li>
+            <li>
+                <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a> (Service Designer)
+            </li>
+            <li>
+                <a href="mailto:ruth.taylor@hippodigital.co.uk">
+                    Ruth Taylor</a> (User Researcher)
+            </li>
+            <li>
+                <a href="#">Kasmyn Chen</a> (Business Analyst)
+            </li>
+            <li>
+                <a href="mailto:michael.stoodley@hippodigital.co.uk">Mike Stoodley</a> (Technical Architect)
+            </li>
+            <li>
+                <a href="mailto:jonny.edwards@hippodigital.co.uk">Jonny Edwards</a> (Data Scientist)
+            </li>
+            <li>
+                <a href="mailto:tracy.green@hippodigital.co.uk">Tracy Green</a> (Engagement Lead)
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <div id="activities" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">Week-by-week activity</h2>
+
+        <br /> <br />
+
+        <ul class="govuk-list">
+            <li>
+
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            28-Jun - 02-Jul
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <ul class="govuk-list govuk-list--bullet">
+
+                            <li>
+                                To follow
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </details>
+
+            </li>
+
+        </ul>
+
+        <br /><br />
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <div id="documentation" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">Links &amp; documents</h2>
+
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <ul class="govuk-list ">
+
+            <li><img src="../../public/images/slack.png" height="18px;"> <a href="https://hippo-digital.slack.com/archives/C025CLX1HB2">Slack channel (Hippo)</a></li>
+            <li>📂 <a href="https://drive.google.com/drive/u/2/folders/0APQTfByqSsKlUk9PVA" target="_blank">Main G-drive folder (Hippo)</a></li>
+            <li><img src="../../public/images/miro.svg" style="height: 18px;"> <a href="https://miro.com/app/board/o9J_l9dbC7E=/"> Miro board</a></li>
+            <li><img src="../../public/images/Figma-logo.svg" style="height: 18px;"> <a href="https://www.figma.com/file/OCbZOmhqS1LanDWF6utzIX/GOV-UK-Personalisation?node-id=0%3A1">Figma</a></li>
+
+        </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+
+    </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="prototypes" class="govuk-grid-column-two-thirds">
+
+        <h3 class="govuk-heading-l">Prototypes</h3>
+
+        <p>
+            To follow
+        </p>
+
+    </div>
+
+</div>
+
+<br /><br />
+
+
+
+
+{% endblock %}
