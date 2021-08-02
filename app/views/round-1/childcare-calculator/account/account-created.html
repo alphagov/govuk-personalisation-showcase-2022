@@ -1,0 +1,60 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="enter-otp.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/round-1/childcare-calculator/what-youll-need" method="POST">
+            <!-- Success Panel -->
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    You have successfully created your GOV.UK Account
+                </h1>
+            </div>
+            <h1 class="govuk-heading-m">What happens next</h1>
+            <p class="govuk-body">At the moment you can only use this account to save your progress on applications or services and finish them later.</p>
+            <p class="govuk-body">In the future, you will be able to use your GOV.UK Account to sign in to other government services. It will take a few years for this to happen.</p>
+            <p class="govuk-body">For now, you’ll need to use different accounts for different government services.</p>
+            <!-- Inset Text -->
+            <div class="govuk-inset-text govuk-!-font-weight-bold">
+                Your progress on 'Tell DVLA you've sold, transferred or bought a vehicle' has been saved.
+            </div>
+            <p class="govuk-body">We've sent you an <a href="emails/email-resume.html" class="hide-email">email</a> so you can complete it later.</p>
+            <button class="govuk-button" data-module="govuk-button">Continue to childcare calculator</button>
+        </form>
+        <a href="sign-out">Sign out</a>
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% if data['devMode'] === 'true' %}
+{# DEVMODE SCENARIOS #}
+
+<div class="govuk-!-padding-bottom-9"></div>
+
+<details class="govuk-details dev-mode" role="group">
+    <summary class="govuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="govuk-details__summary-text">
+            Screen Routes and Error Scenarios
+        </span>
+    </summary>
+    <div class="govuk-details__text" id="devModeDetails">
+        <h4>Emails sent to user</h4>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <a href="emails/email-resume.html">Email to resume to report</a>
+            </li>
+        </ul>
+    </div>
+</details>
+{% endif %}
+
+{% endblock %}

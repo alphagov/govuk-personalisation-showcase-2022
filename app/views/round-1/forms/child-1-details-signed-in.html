@@ -1,0 +1,63 @@
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+
+            <!-- name of child 1 -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="child-1-name">What is their full name?</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="child-1-name" name="child-1-name" type="text" spellcheck="false" value="{{ data['child-1-name'] }}">
+            </div> <!-- /. form-group -->
+
+            <br />
+
+            <!-- child 1 Date of birth [Day] -->
+            <div class="govuk-date-input" id="date-of-birth">
+                <p>What is their date of birth?</p>
+                <div class="govuk-hint">
+                    For example, 27 3 2007
+                </div>
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-day">Day</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-day" name="child-1-date-of-birth-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['child-1-date-of-birth-day'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+                <!-- child 1 Date of birth [Month] -->
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-month">Month</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="child-1-date-of-birth-month" name="child-1-date-of-birth-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['child-1-date-of-birth-month'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+                <!-- child 1 Date of birth [Year] -->
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="child-1-date-of-birth-year">Year</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="child-1-date-of-birth-year" name="child-1-date-of-birth-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['child-1-date-of-birth-year'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+            </div>
+            <input id="number-of-children" name="number-of-children" value="1" type="hidden">
+            <br /> <br />
+
+            <!-- add child [RADIO] -->
+            <div class="govuk-radios">
+                <p>Do you have any additional children?</p>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-child" name="add-child-1" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="add-child-1">
+                        Yes
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="add-child-1-2" name="add-child-1" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="add-child-1-2">
+                        No
+                    </label>
+                </div>
+            </div>
+
+        </fieldset> <!-- govuk-fieldset -->
+    </div> <!-- govuk-form-group -->

@@ -1,0 +1,19 @@
+<form class="form" action="/round-1/sign-in-or-create-account" method="post">
+    <!--  <div class="govuk-form-group no-mar-bot">
+
+        <input class="govuk-input" id="signing" name="signing" type="hidden" value="yes"> -->
+
+    {% if data['accountstatus'] == "active" %}
+    <input class="govuk-input" id="refer" name="refer" type="hidden" value="masthead">
+    <button class="govuk-button no-mar-bot orange-bg" data-module="govuk-button">
+        Sign in to GOV.UK Account
+    </button>
+    {% else %}
+    <button class="govuk-button no-mar-bot orange-bg" data-module="govuk-button">
+        Register or sign in to GOV.UK Account
+    </button>
+    {% endif %}
+
+
+    <!--   </div> -->
+</form>

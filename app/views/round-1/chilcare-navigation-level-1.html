@@ -1,0 +1,48 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Childcare navigation level 1
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="govuk-home" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Childcare navigation level 1
+        </h1>
+
+
+        <p>To follow...</p>
+
+        <p><a href="chilcare-navigation-level-2">Chilcare navigation level 2</a></p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

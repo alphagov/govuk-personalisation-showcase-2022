@@ -1,0 +1,204 @@
+        <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+            <ol class="app-step-nav__steps">
+                <li class="app-step-nav__step js-step" id="check-youre-allowed-to-drive">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="1">
+                        <h2 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden">Step</span> 1
+                                    </span>
+                                </span>
+                            </span>
+
+                            <span class="js-step-title">
+                                Find out if you can get help with childcare costs
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-check-youre-allowed-to-drive-1">
+
+                        <p><a data-position="1.1" class="gem-c-step-nav__link js-link" href="childcare-calculator/start">Check what help you could get with childcare costs </a><br /><br /> {% if data['childcare-calc-status'] == "started" and data['signing'] == "yes" %}
+                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
+                                In progress
+                            </strong><br />
+                            {% elif data['childcare-calc-status'] == "completed" and data['signing'] == "yes" %}
+                            <strong class="govuk-tag app-task-list__tag">Completed</strong><br />
+                            {% else %}
+                            {% endif %}
+                        </p>
+                        <p>You can only get help with 'approved childcare'. </p>
+
+                        <p>
+                            <a data-position="1.2" class="gem-c-step-nav__link js-link" href="help-with-childcare-costs">Find out what 'approved childcare' is </a></p>
+
+                        <br />
+
+                    </div>
+
+                </li>
+
+                <li class="app-step-nav__step js-step" id="get-a-provisional-licence">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="2">
+                        <h2 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden">Step</span> 2
+                                    </span>
+                                </span>
+                            </span>
+
+                            <span class="js-step-title">
+                                Find where you can get childcare
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-get-a-provisional-licence-2">
+                        {% if data['signing'] == "yes" %}
+                        <p><a href="/round-1/ofsted/ofsted-reports-nursery">Find a nursery school place </a></p>
+                        {% else %}
+                        <p><a href="/round-1/ofsted/find-ofsted-nursery">Find a nursery school place </a></p>
+                        {% endif %}
+
+                        {% if data['signing'] == "yes" %}
+                        <p><a href="/round-1/ofsted/ofsted-reports-childminder">Find a childminder </a></p>
+                        {% else %}
+                        <p><a href="/round-1/ofsted/find-ofsted-childminder">Find a childminder </a></p>
+                        {% endif %}
+
+                        {% if data['signing'] == "yes" %}
+                        <p><a href="/round-1/ofsted/ofsted-reports-free-early">Find free early education and childcare </a></p>
+                        {% else %}
+                        <p><a href="/round-1/ofsted/find-ofsted-free-early">Find free early education and childcare </a></p>
+                        {% endif %}
+
+                    </div>
+
+                </li>
+
+                <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                        <h2 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden">Step</span> 3
+                                    </span>
+                                </span>
+                            </span>
+
+                            <span class="js-step-title">
+                                Get help paying for childcare
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-driving-lessons-and-practice-3">
+                        <p>You can get help with childcare costs for children under 18. You might be able to apply for:</p>
+
+                        <ul class="govuk-list govuk-list--bullet" data-length="4">
+                            <li class=" govuk-link"><a data-position="3.1" class="gem-c-step-nav__link js-link" href="/get-tax-free-childcare?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Tax-Free Childcare </a></li>
+                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/tax-credits?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">tax credits </a></li>
+                            <li class=" govuk-link"><a data-position="3.3" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/universal-credit?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Universal Credit </a></li>
+                            <li class=" govuk-link"><a data-position="3.4" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/support-while-you-study?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">help while you study </a></li>
+                        </ul>
+
+                        <p>You could also get free hours childcare when your child is aged 2 to 4. You might be able to apply for:</p>
+
+                        <ul class="govuk-list govuk-list--bullet" data-length="3">
+                            <li class=" govuk-link"><a data-position="3.5" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/free-childcare-2-year-olds?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">free education and childcare for 2 year olds </a></li>
+                            <li class=" govuk-link"><a data-position="3.6" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/free-childcare-and-education-for-2-to-4-year-olds?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">15 hours free childcare for 3 to 4 year olds </a></li>
+                            <li class=" govuk-link"><a data-position="3.7" class="gem-c-step-nav__link js-link" href="/apply-30-hours-free-tax-free-childcare?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">30 hours free childcare for 3 to 4 year olds </a></li>
+                        </ul>
+
+                        <p>You can only get childcare vouchers if you have already joined a scheme.</p>
+
+                        <ol class="govuk-list" data-length="1">
+                            <li class=" govuk-link"><a data-position="3.8" class="gem-c-step-nav__link js-link" href="/help-with-childcare-costs/childcare-vouchers?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Check the rules for childcare vouchers </a></li>
+                        </ol>
+
+                        <br />
+                    </div>
+
+                </li>
+
+                <li class="app-step-nav__step js-step" id="prepare-for-your-theory-test">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="4">
+                        <h2 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden">Step</span> 4
+                                    </span>
+                                </span>
+                            </span>
+
+                            <span class="js-step-title">
+                                Check what to do if your circumstances change
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-prepare-for-your-theory-test-4">
+                        <p>Tell government straight away if your circumstances change and you're getting:</p>
+
+                        <ul class="govuk-list govuk-list--bullet" data-length="2">
+                            <li class=" govuk-link"><a data-position="4.1" class="gem-c-step-nav__link js-link" href="/changes-affect-tax-credits?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">tax credits </a></li>
+                            <li class=" govuk-link"><a data-position="4.2" class="gem-c-step-nav__link js-link" href="/universal-credit/changes-of-circumstances?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Universal Credit </a></li>
+                        </ul>
+
+                        <p>If you're getting 30 hours free childcare or Tax-Free Childcare you have to confirm if your details are up to date every 3 months.</p>
+
+                        <ol class="govuk-list" data-length="1">
+                            <li class=" govuk-link"><a data-position="4.3" class="gem-c-step-nav__link js-link" href="/sign-in-childcare-account?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Sign into your childcare account to find out when you next have to check your details </a></li>
+                        </ol>
+
+                        <p>Your eligibility for support with childcare costs might also change. </p>
+
+                        <ol class="govuk-list" data-length="1">
+                            <li class=" govuk-link"><a data-position="4.4" class="gem-c-step-nav__link js-link" href="/childcare-calculator?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Check if your eligibility for help with childcare costs has changed </a></li>
+                        </ol>
+
+                        <br />
+                    </div>
+
+                </li>
+
+                <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="5">
+                        <h2 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden">Step</span> 5
+                                    </span>
+                                </span>
+                            </span>
+
+                            <span class="js-step-title">
+                                Check what to do when your child reaches school age
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+                        <p>Your child starts primary school the September after they turn 4.</p>
+
+                        <ol class="govuk-list" data-length="2">
+                            <li class="govuk-link"><a class="gem-c-step-nav__link js-link" href="/schools-admissions/applying?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Apply for a primary school place </a></li>
+                            <li class="govuk-link"><a data-position="5.2" class="gem-c-step-nav__link js-link" href="/after-school-holiday-club?step-by-step-nav=f237ec8e-e82c-4ffa-8fba-2a88a739783b">Find before and after school and holiday clubs </a></li>
+                        </ol>
+
+                        <p>You might be able to use help like tax credits or Tax-Free Childcare to pay for childcare like wraparound care, after school clubs or other activities. </p>
+
+                        <br />
+                    </div>
+
+                </li>
+
+
+            </ol>
+        </div>

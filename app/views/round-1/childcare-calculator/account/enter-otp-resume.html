@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="enter-mobile-number.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/round-1/childcare-calculator/what-youll-need" method="POST">
+            <h1 class="govuk-heading-xl">Check your phone</h1>
+            <p class="govuk-body">We sent a code to <span id="phoneNumber">{{ data['phone-number'] }}</span>.</p>
+            <!-- OTP input -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="otp-input">Enter the 6 digit security code</label>
+                <input class="govuk-input govuk-!-width-one-quarter" id="otp-input" name="otp-input" type="number">
+                <input name="accountstatus" type="hidden" value="active">
+
+                <input name="accountcreated" type="hidden" value="yes">
+
+                <input id="signing" name="signing" value="yes" type="hidden">
+            </div>
+            <p class="govuk-body"><a href="enter-mobile-number.html">Request a new code</a> if you:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>didn’t receive a code</li>
+                <li>need a new code</li>
+            </ul>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+<script>
+    var phoneNumber = document.getElementById('phoneNumber').innerText;
+    if (phoneNumber) {
+        document.getElementById("phoneNumber").innerText = "*******" + phoneNumber.slice(7);
+    }
+
+</script>
+
+{% endblock %}

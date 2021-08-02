@@ -1,0 +1,56 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="enter-otp.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        {% if data['refer'] == "calculator" %}
+        <form action="/round-1/childcare-calculator/what-youll-need" method="POST">
+            <!-- Success Panel -->
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    You have successfully created your GOV.UK Account
+                </h1>
+            </div>
+            <h1 class="govuk-heading-m">What happens next</h1>
+
+            <p>stuff....</p>
+            <button class="govuk-button" data-module="govuk-button">Continue to childcare calculator</button>
+
+            <p><a href="sign-out">Sign out</a></p>
+            {% else %}
+            <form action="/round-1/govuk-home" method="POST">
+                <!-- Success Panel -->
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        You have successfully created your GOV.UK Account
+                    </h1>
+                </div>
+                <h1 class="govuk-heading-m">What happens next</h1>
+
+                <p>stuff....</p>
+                <button class="govuk-button" data-module="govuk-button">Return to GOV.UK homepage</button>
+
+                <p><a href="account">Continue to set up your new account</a></p>
+                <p><a href="../sign-out">Sign out</a></p>
+
+
+                {% endif %}
+            </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+
+{% endblock %}

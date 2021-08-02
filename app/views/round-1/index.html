@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="../index.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <!-- Research Intro -->
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Round 1</h1>
+        <p class="govuk-body">
+            To follow
+        </p>
+        <div class="govuk-!-padding-bottom-2"></div>
+        <a href="govuk-home.html">
+            <button class="govuk-button" data-module="govuk-button">Start Round 1 prototype</button>
+        </a>
+    </div>
+
+    <!-- one-third column [Research links & details] -->
+
+    <div class="govuk-grid-column-one-third" id="research-summary-page__one-third" style="margin-top: 100px;">
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Research Dates</p>
+        <p class="govuk-body">TBC</p>
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Documents</p>
+        <!--     <ul class="govuk-list govuk-list--bullet" style="list-style: none; padding-left: 0px;">
+            <li> 📁
+                <a href="https://drive.google.com/drive/folders/1w5TMbpcgbUP4XBlUt-4iBdZ-7talZu-l" target="_blank">
+                    GDS G-Drive folder
+                </a>
+            </li>
+            <li> 🖍️
+                <a href="https://www.figma.com/file/aVqNC4pKaebZchIU691f31/?node-id=1187%3A2048" target="_blank">
+                    Figma Round 5 Designs
+                </a>
+            </li>
+        </ul>  -->
+    </div>
+
+    <!-- Accordions -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <!-- Research Goals -->
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Research goals
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <!-- Goal 1 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 1</h1>
+                    <p class='govuk-body'>
+                        Explore user perception of Gov Account creation within the context of a x-gov service. i.e. perceived pros and cons
+                    </p>
+                    <!-- Goal 2 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 2</h1>
+                    <p class='govuk-body'>
+                        Explore when, how, and how often to ask for consent for data sharing
+                    </p>
+                    <!-- Goal 3 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 3</h1>
+                    <p class='govuk-body'>
+                        Explore where to position the Gov Account within the user journey
+                    </p>
+                    <!-- Goal 4 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 4</h1>
+                    <p class='govuk-body'>
+                        Explore UI options throughout e.g. pre-population, progress indicator
+                    </p>
+                    <!-- Goal 5 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 5</h1>
+                    <p class='govuk-body'>
+                        Elicit user reaction to saved data for future use
+                    </p>
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+            <!-- Hypotheses -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                            Hypotheses (DRAFT)
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <!-- Hypothesis 1 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 1</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> that conveying the benefits of a Gov Account within a x-gov transactional journey<br />
+                        <b>For</b> users of Get Childcare<br />
+                        <b>Will</b> increase willingness to sign up for a Gov Account
+                    </p>
+                    <!-- Hypothesis 2 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 2</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> stating where the data will be shared and how the data will be used<br />
+                        <b>For</b> users of Get Childcare<br />
+                        <b>Will</b> increase willingness to grant consent
+                    </p>
+                    <!-- Hypothesis 3 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 3</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> pre-filling forms <br />
+                        <b>Will</b> speed up task completion <br />
+                        <b>We will know this if / when</b> user research participants express potential benefits
+                    </p>
+
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+        </div> <!-- /. govuk-accordion -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

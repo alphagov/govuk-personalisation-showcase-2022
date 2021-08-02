@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<style>
+    #back-link {
+        cursor: pointer;
+    }
+</style>
+<a href="../create-password.html" class="govuk-back-link" id="back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <!-- Main Body Content -->
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">GOV.UK Account terms and conditions</h1>
+        <p class="govuk-body">
+            The GOV.UK Account is an online platform that allows you to use certain features of government services and create your own GOV.UK Account. 
+        </p>
+        <p class="govuk-body">
+            This page and any pages it links to explains the GOV.UK Account’s terms of use. By registering for and continuing to use a GOV.UK Account, you agree to be bound by these terms and conditions.
+        </p>
+        <p class="govuk-body">
+            You should also read our <a href="privacy-notice.html">privacy notice</a>
+        </p>
+
+        <!-- Who we are -->
+
+        <h3 class="govuk-heading-m">Who we are</h3>
+        <p class="govuk-body">GOV.UK is managed by <a href="https://www.gov.uk/government/organisations/government-digital-service" class="govuk-link">Government Digital Service</a> (GDS) on behalf of the Crown. GDS is part of the Cabinet Office and will be referred to as ‘we’ from now on.</p>
+
+        <!-- Accessing your GOV.UK Account -->
+
+        <h3 class="govuk-heading-m">Accessing your GOV.UK Account</h3>
+        <p class="govuk-body">You must provide your own device, operating system and browser to access your GOV.UK Account.</p>
+        <p class="govuk-body">We do not guarantee that your GOV.UK Account will always be available, or that access to it will be error free.</p>
+        <p class="govuk-body">We may suspend, stop, remove, update or change the GOV.UK Account without notice at any time.</p>
+        <p class="govuk-body">If you think that someone knows the username and password to your GOV.UK Account you must quickly reset your password.</p>
+
+        <!-- Using your GOV.UK Account -->
+
+        <h3 class="govuk-heading-m">Using your GOV.UK Account</h3>
+        <p class="govuk-body">You agree to use GOV.UK only for lawful purposes.</p>
+        <p class="govuk-body">Unless permitted by law or under these terms and conditions, you must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>not copy the GOV.UK Account except where such copying is incidental to normal use</li>
+            <li>not rent, lease, sub-license, loan, translate, merge, adapt, vary or modify the GOV.UK Account</li>
+            <li>not combine or incorporate the GOV.UK Account with any other programs or services</li>
+            <li>not disassemble, decompile, reverse-engineer or create derivative works based on any part of the GOV.UK Account</li>
+            <li>comply with all technology control or export laws that apply to the technology used by the GOV.UK Account</li>
+        </ul>
+        <p class="govuk-body">You shall not use your GOV.UK Account:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>to transmit any material that is insulting or offensive</li>
+            <li>to collect any data or attempt to decipher any transmissions to or from the servers running GOV.UK Account</li>
+            <li>in a way that could damage, disable, overburden, impair or compromise our systems or security</li>
+            <li>in a way that interferes with other users</li>
+            <li>in any unlawful manner or for any unlawful purpose</li>
+            <li>in a manner that is improper use or inconsistent with these terms and conditions</li>
+            <li>to act fraudulently or maliciously by hacking into GOV.UK Account</li>
+            <li>to transmit, send or upload any data that contains viruses, Trojan horses, worms, spyware or any other harmful programs designed to adversely affect the operation of computer software or hardware</li>
+            <li>in connection with any kind of denial of service attack</li>
+            <li>with someone else’s registered details, unless you have had the authority to do so from them</li>
+        </ul>
+
+        <p class="govuk-body">If you breach any of these terms and conditions, we may stop you from accessing your GOV.UK Account.</p>
+
+        <!-- Services and transactions -->
+
+        <h3 class="govuk-heading-m">Services and transactions</h3>
+
+        <p class="govuk-body">You can use your GOV.UK Account to access online government services and transactions.</p>
+
+        <p class="govuk-body">These can be managed by GDS or another government department or agency.</p>
+
+        <p class="govuk-body">Some services have their own terms and conditions which also apply. You should read these before you use the service.</p>
+
+        <!-- Our liability to you -->
+
+        <h3 class="govuk-heading-m">Our liability to you</h3>
+        <p class="govuk-body">
+            Although we make reasonable efforts to provide, maintain and update a robust GOV.UK Account service, it is provided 'as is'. To the extent allowed by law we make no expressed or implied representations, warranties or guarantees that your access to, or use of, GOV.UK Account will be unbroken or completely secure.
+        </p>
+        <p class="govuk-body">
+            We will not be liable or responsible for any loss or damage caused by a virus, denial of service attack or any other harmful material that may infect your device, equipment, programs, data or other proprietary material due to your use of GOV.UK Account.
+        </p>
+
+        <!-- Linking from the GOV.UK Account -->
+
+        <h3 class="govuk-heading-m">Linking from the GOV.UK Account</h3>
+
+        <p class="govuk-body">Any links from your GOV.UK Account links to websites that are managed by other government departments and agencies, service providers or other organisations. We do not have any control over the content on these websites.</p>
+        <p class="govuk-body">We’re not responsible for:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>the protection of any information you give to these websites</li>
+            <li>any loss or damage that may come from your use of these websites, or any other websites they link to</li>
+        </ul>
+
+        <p class="govuk-body">You agree to release us from any claims or disputes that may come from using these websites.</p>
+        <p class="govuk-body">You should read all terms and conditions, privacy policies and end user licences that relate to these websites before you use them.</p>
+
+        <!-- Loss and damages -->
+
+        <h3 class="govuk-heading-m">Loss and damages</h3>
+
+        <p class="govuk-body">We’re not liable for any loss or damage that may come from using the GOV.UK Account. This includes:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>any direct, indirect or consequential losses</li>
+            <li>any loss or damage caused by civil wrongs (‘tort’, including negligence), breach of contract or otherwise</li>
+            <li>the use of the GOV.UK Account and any websites that are linked to or from it</li>
+            <li>the inability to use the GOV.UK Account and any websites that are linked to or from it</li>
+        </ul>
+        <p class="govuk-body">This applies if the loss or damage was foreseeable, arose in the normal course of things or you advised us that it might happen.</p>
+
+        <!-- Changes to these terms and conditions -->
+
+        <h3 class="govuk-heading-m">Changes to these terms and conditions</h3>
+
+        <p class="govuk-body">Please check these terms and conditions regularly. We can update them at any time without notice.</p>
+
+        <p class="govuk-body">You’ll agree to any changes if you continue to use GOV.UK after the terms and conditions have been updated.</p>
+
+        <p class="govuk-body-s">Last updated 6 October 2015</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <!-- Related Content -->
+    <div class="govuk-grid-column-one-third">
+        <div class="related-content">
+            <h1 class="govuk-heading-s">Related content</h1>
+            <a class="govuk-link" href="privacy-notice.html">Privacy notice</a>
+            <div class="govuk-!-padding-bottom-3"></div>
+            <a class="govuk-link" href="about-govuk.html">About GOV.UK</a>
+        </div> <!-- /. related-content -->
+    </div> <!-- /. govuk-grid-column-one-third -->
+</div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+</script>
+
+{% endblock %}
