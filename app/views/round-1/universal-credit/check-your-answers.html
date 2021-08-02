@@ -20,6 +20,8 @@ Universal Credit
 
         <h1 class="govuk-heading-l">Universal Credit application</h1>
 
+        <p>Claim back up to 85% of your childcare costs</p>
+
         <br />
 
         {% if data['appsaved'] == "yes" %}
@@ -366,19 +368,112 @@ Universal Credit
             </div>
             <div class="govuk-summary-list__row">
                 <br />
-                <h3>Childcare providers</h3>
+                <h2>Childcare providers</h2>
 
 
             </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Do you have childcare costs?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['childcare-costs'] }}</p>
 
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Childcare provider details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">to follow</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Children attending childcare
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">to follow</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Childcare payment details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">to follow</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
         </dl>
 
     </div>
 
 </div>
 <div class="govuk-grid-row">
-
-
 
     <div class="govuk-grid-column-two-thirds">
 
@@ -407,22 +502,6 @@ Universal Credit
 
         <p>You need to answer all the questions before you can submit your application.</p>
 
-        {% endif %}
-
-        {% if data['signing'] == "yes" %}
-        <!-- <form id="r3-sar" method="post" action="service-1-cya">
-            <input type="hidden" id="check-your-answers-previous" name="refer" value="service-1">
-
-            <input class="govuk-input" id="appsaved" name="appsaved" type="hidden" value="yes">
-
-            <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Save and complete later</a></p>
-        </form> -->
-        {% else %}
-        <form id="r3-sar" method="post" action="email">
-            <input type="hidden" id="check-your-answers-previous" name="refer" value="service-1">
-
-            <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Save and complete later</a></p>
-        </form>
         {% endif %}
 
         <br />
