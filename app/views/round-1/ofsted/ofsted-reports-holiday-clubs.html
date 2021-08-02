@@ -21,7 +21,7 @@ Find an Ofsted inspection report
 {% block beforeContent %}
 <img src="../../../../public/images/ofsted-logo.svg" style="height: 48px; padding:20px 0px;">
 <br />
-<a href="find-ofsted-inspection-report" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+<a href="find-ofsted-holiday-clubs" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 
 {% endblock %}
 {% block content %}
@@ -30,7 +30,7 @@ Find an Ofsted inspection report
 <div class="govuk-grid-row" style="background: #44687d; color: white !important; padding: 40px; margin-bottom: 60px;">
     <div class="govuk-grid-column-full-width">
 
-        <h1 class="govuk-heading-xl" style="color: white;">Search results for {{ data['address-postcode'] }} </h1>
+        <h1 class="govuk-heading-xl" style="color: white;">Search results for holiday club places in {{ data['address-postcode'] }} and {{ data['address-town'] }}</h1>
 
         <p style="color: white;">You can find reports for schools, colleges, childminders, nurseries, children’s homes and more</p>
 
@@ -60,11 +60,6 @@ Find an Ofsted inspection report
             <button class="govuk-button" data-module="govuk-button">Update search</button>
             <div class="govuk-!-padding-bottom-1"></div>
 
-            <br />
-
-            <hr>
-
-            <br />
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 

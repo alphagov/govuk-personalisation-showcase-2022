@@ -1,0 +1,217 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Report changes that affect your tax credits
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-1/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-1/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Report changes that affect your tax credits</h1>
+
+        <p>Your tax credits could go up, down or stop if there are changes in your family or work life.</p>
+
+        <p>You must report any changes to your circumstances to HM Revenue and Customs (<abbr title="HM Revenue and Customs">HMRC</abbr>).</p>
+
+        <p>Do this as soon as possible to make sure you get the right amount of tax credits. You’ll have to pay back the money if you’re overpaid.</p>
+
+        <p>If your tax credits stop, you cannot claim tax credits again.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>This guide is also available <a href="/newidiadau-effeithio-credydau-treth">in Welsh (Cymraeg)</a>.</p>
+        </div>
+
+        <h2 class="govuk-heading-l">Changes you must report</h2>
+
+        <p>Tell <abbr title="HM Revenue and Customs">HMRC</abbr> straight away if your:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>living circumstances change, for example you start or stop a relationship, move in with a new partner, get married or form a civil partnership, permanently separate or divorce</li>
+            <li>child or partner dies (you do not need to tell <abbr title="HM Revenue and Customs">HMRC</abbr> if you’ve already used the <a href="/after-a-death/organisations-you-need-to-contact-and-tell-us-once?step-by-step-nav=4f1fe77d-f43b-4581-baf9-e2600e2a2b7a">Tell Us Once service</a>)</li>
+            <li>child stops going to childcare for 4 weeks or more when they would normally go</li>
+            <li>childcare costs stop, go down by £10 or more a week, or you start getting help with them</li>
+            <li>child leaves home, for example moves out or goes into care</li>
+            <li>child is taken into custody</li>
+            <li>child over 16 leaves <a href="/child-tax-credit-when-child-reaches-16">approved education or training, or a careers service</a>
+            </li>
+            <li>childcare provider is no longer <a href="/find-registered-childminder">registered or approved</a>
+            </li>
+            <li>working hours fall below 30 hours a week (combined if you’re in a couple with children)</li>
+            <li>working hours fall below or go above the <a href="/working-tax-credit/eligibility">minimum required to qualify</a>
+            </li>
+        </ul>
+
+        <p>You must also tell <abbr title="HM Revenue and Customs">HMRC</abbr> straight away if you:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>go abroad for 8 weeks or more</li>
+            <li>leave the UK permanently or lose the right to reside in the UK</li>
+            <li>start working for less than 16 hours while claiming childcare costs - <a href="/help-with-childcare-costs/tax-credits">except in certain situations</a>
+            </li>
+            <li>have been on strike for more than 10 consecutive days</li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="if-your-working-hours-fall-because-of-coronavirus-covid-19">If your working hours all because of coronavirus (COVID-19)</h3>
+
+        <p>You do not need to report any fall in your working hours as a result of coronavirus (for example you’re working fewer hours or have been put on furlough).</p>
+
+        <p>You’ll be treated as if you’re working your normal hours until the <a href="/guidance/check-if-you-could-be-covered-by-the-coronavirus-job-retention-scheme">Coronavirus Job Retention Scheme</a> closes.</p>
+
+        <p>You should still report any changes in income, childcare and increase in hours in the normal way. You must tell <abbr title="HM Revenue and Customs">HMRC</abbr> if you:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are made redundant</li>
+            <li>lose your job</li>
+            <li>are self-employed and stop trading</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>If you receive tax credits you’re not entitled to, you’ll need to <a href="/tax-credits-overpayments/repay-your-tax-credits">repay the money</a>. You may also have to pay a penalty.</p>
+        </div>
+
+        <h2 id="deadline-for-reporting">Deadline for reporting</h2>
+
+        <p>You must report these changes within 1 month. If you report changes as soon as they happen, you’re less likely to be paid the wrong amount.</p>
+
+        <div role="note" aria-label="Warning" class="application-notice help-notice">
+            <p>You could be fined up to £300 if you do not report certain changes within 1 month, and up to £3,000 if you give wrong information.</p>
+        </div>
+
+        <p>If you estimated your income when you renewed your tax credits - for example because you’re self-employed - tell <abbr title="HM Revenue and Customs">HMRC</abbr> your actual income by 31 January.</p>
+
+        <h2 class="govuk-heading-l">Other changes you should report</h2>
+
+        <p>Your tax credits are less likely to be affected, for example by building up an overpayment, if you tell <abbr title="HM Revenue and Customs">HMRC</abbr> as soon as you:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>have any change in income (report this immediately if it goes up or down by £2,500 or more)</li>
+            <li>increase your working hours to 30 hours or more a week (combined if you’re in a couple with children)</li>
+            <li>have a baby or take responsibility for another child</li>
+            <li>start or stop claiming benefits, or your benefits change</li>
+            <li>start or stop getting a disability benefit, or a member of your family does (for example Personal Independence Payment or Disability Living Allowance)</li>
+            <li>get certification that your child is blind (or no longer blind)</li>
+            <li>start paying for <a href="/find-registered-childminder">registered or approved childcare</a>
+            </li>
+            <li>stop getting help with childcare costs</li>
+        </ul>
+
+        <p>You should report these changes within 1 month to make sure you get everything you’re entitled to. Payments cannot usually be backdated any further than this.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>If you’re <a href="/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision">a critical worker</a> and you report a change, any increase in your tax credits will be backdated by up to 3 months. After the Coronavirus Job Retention Scheme (CJRS) closes, this will go back to 1 month.</p>
+        </div>
+
+        <p>You should also tell <abbr title="HM Revenue and Customs">HMRC</abbr> if you change:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>bank details - you can report this up to 30 days before it happens</li>
+            <li>address - wait until you’ve moved before telling <abbr title="HM Revenue and Customs">HMRC</abbr>
+            </li>
+            <li>childcare provider</li>
+            <li>your gender</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">How to report</h2>
+
+        <p>You can report most changes online.</p>
+
+        <p><a class="gem-c-button govuk-button govuk-button--start" role="button" href="https://www.tax.service.gov.uk/gg/sign-in?continue=/tax-credits-service/renewals/service-router&amp;accountType=individual&amp;origin=PTA-taxcredits&amp;_ga=2.26853556.842449638.1548667823-1568598937.1455889126"> Report a change <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                </svg></a></p>
+
+        <p>You cannot use the online service to report changes:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>to the bank account you want to use</li>
+            <li>to how often you want to be paid</li>
+            <li>that have not yet happened (apart from changes to existing childcare costs up to one week in advance)</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>You can <a href="/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries">report these and other changes by phone, webchat or post</a>.</p>
+        </div>
+
+        <h2 class="govuk-heading-l">Before you start</h2>
+
+        <p>Make sure you have as much information as possible about the change in circumstances. For example, if you’ve changed jobs you’ll need your employment dates and <abbr title="Pay As You Earn">PAYE</abbr> reference number for both jobs.</p>
+
+        <p>If you’re signing in to the service for the first time, you’ll need:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a Government Gateway user ID and password - if you do not have a user ID, you can create one when you use the service</li>
+            <li>a permanent National Insurance number</li>
+        </ul>
+
+        <p>You also need to prove your identity. You can use any 2 of the following:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your tax credit claim details</li>
+            <li>your <a href="/paye-forms-p45-p60-p11d/p60">P60</a>
+            </li>
+            <li>one of your 3 most recent payslips</li>
+            <li>your UK passport details</li>
+            <li>information held on your <a rel="external" href="https://www.citizensadvice.org.uk/debt-and-money/borrowing-money/how-lenders-decide-whether-to-give-you-credit/">credit file</a> (such as loans, credit cards, or mortgages)</li>
+            <li>details from your Self Assessment tax return (in the last 3 years)</li>
+        </ul>
+
+        <p>Signing in will also activate your personal tax account - you can use this to check and manage your <abbr title="HM Revenue and Customs">HMRC</abbr> records.</p>
+
+        <h2 class="govuk-heading-l">Why your tax credits change</h2>
+
+        <p>Your payments can go up if:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your income goes down by more than £2,500</li>
+            <li>your benefits stop or go down</li>
+            <li>you start getting personal independence payment (<abbr title="personal independence payment">PIP</abbr>), Disability Living Allowance (<abbr title="Disability Living Allowance">DLA</abbr>) or other disability benefits for yourself or a child</li>
+            <li>you have a child</li>
+            <li>your childcare costs go up</li>
+        </ul>
+
+        <p>Your payments can go down or stop if:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you or your partner make a claim for Universal Credit (even if your claim is not approved)</li>
+            <li>you move in with a partner who has made a claim for Universal Credit</li>
+            <li>your income goes up by more than £2,500 - report this straight away to reduce the amount you’re overpaid</li>
+            <li>you have not <a href="/renewing-your-tax-credits-claim">renewed your claim</a>
+            </li>
+            <li>your award notice shows you’ve been overpaid</li>
+            <li>you stop getting <abbr title="personal independence payment">PIP</abbr>, <abbr title="Disability Living Allowance">DLA</abbr> or other disability benefits for yourself or a child</li>
+            <li>your child is now 16, 18 or 19 and you have not told <abbr title="HM Revenue and Customs">HMRC</abbr> they’re in <a href="/child-tax-credit-when-child-reaches-16">approved education or training</a>
+            </li>
+            <li>your childcare costs go down</li>
+        </ul>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-1/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

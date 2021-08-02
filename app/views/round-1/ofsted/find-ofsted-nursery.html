@@ -1,11 +1,11 @@
 {% extends "layout_round-1.html" %}
 
 {% block pageTitle %}
-Find an Ofsted inspection report
+Find a nursery school place
 {% endblock %}
 
 {% set serviceName %}
-Find an Ofsted inspection report
+
 {% endset%}
 
 {% block pageScripts %}
@@ -20,7 +20,7 @@ Find an Ofsted inspection report
 
 {% block beforeContent %}
 
-<a href="/round-1/childcare/step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+<a href="/round-1/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 
 {% include "round-1/includes/childcare-step-by-step-panel.html" %}
 {% endblock %}
@@ -33,35 +33,32 @@ Find an Ofsted inspection report
         <h1 class="govuk-heading-xl">Find a nursery school place
         </h1>
 
-
         {% if data['signing'] == "yes" %}
         <p>//Paragraph here about what their GOV.UK Account will enable.</p>
         {% else %}
         <p>//Paragraph here about why they should use GOV.UK Account.</p>
         {% endif %}
 
-        <br />
-
-        {% if data['signing'] == "yes" %}
-        <form id="ofsted-start" method="post" action="/round-1/ofsted/ofsted-reports-nursery">
-            {% else %}
-            <form id="ofsted-start" method="post" action="/round-1/ofsted/sign-in-or-create-account">
-                {% endif %}
+        <form method="post" action="ofsted-reports-nursery" id="local-locator-form" class="location-form govuk-!-margin-bottom-9">
+            <fieldset class="govuk-fieldset">
+                <legend class=" govuk-fieldset__legend govuk-visually-hidden">Postcode lookup</legend>
 
                 <div class="govuk-form-group">
-                    <input id="ofsted-started" name="ofsted-status" value="started" type="hidden">
-                    <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                        </svg></button>
+
+                    <label for="postcode" class="gem-c-label govuk-label">Enter a postcode</label>
+
+                    <div id="hint-5038ba12" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                        For example SW1A 2AA
+                    </div>
+
+                    <input name="postcode" class="gem-c-input govuk-input" id="postcode" type="text" autocomplete="postal-code" aria-describedby="hint-5038ba12">
                 </div>
-            </form>
 
-            {% if data['signing'] == "yes" %}
-            {% else %}
-            <p>or</p>
-            <p><a href="ofsted-reports-nursery">Continue without a GOV.UK Account</a></p>
-            {% endif %}
+                <button class="gem-c-button govuk-button gem-c-button--bottom-margin" type="submit">Find</button>
 
+                <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a></p>
+            </fieldset>
+        </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 
