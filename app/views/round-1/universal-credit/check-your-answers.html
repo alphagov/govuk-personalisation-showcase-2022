@@ -1,0 +1,433 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Universal Credit - application
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Universal Credit application</h1>
+
+        <br />
+
+        {% if data['appsaved'] == "yes" %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Your application has been saved
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">
+                    Last saved:
+                </p>
+                <p>{% include "includes/today-time.html" %}</p>
+
+
+
+                <form id="r3-sar" method="post" action="signed-out">
+                    <input class="govuk-input" id="signing" name="signing" type="hidden" value="no">
+
+                    <input class="govuk-input" id="accountstatus" name="accountstatus" type="hidden" value="active">
+
+                    <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Sign out</a></p>
+                </form>
+            </div>
+        </div>
+        {% else %}
+
+        {% endif %}
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+
+                <h2>About you</h2>
+
+
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['full-name'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question1change" method="post" action="service-1-1">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question1change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question1change" method="post" action="service-1-1">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question1change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['date-of-birth-day'] %}
+                    {{ data['date-of-birth-day'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-month'] %}
+                    {{ data['date-of-birth-month'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-year'] %}
+                    {{ data['date-of-birth-year'] }}
+                    {% else %}
+
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question2change" method="post" action="service-1-2">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question2change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question2change" method="post" action="service-1-2">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question2change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['address-line-1'] %}
+                    {{ data['address-line-1'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-line-2'] %}
+                    {{ data['address-line-2'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-town'] %}
+                    {{ data['address-town'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-county'] %}
+                    {{ data['address-county'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-postcode'] %}
+                    {{ data['address-postcode'] }} <br />
+                    {% else %}
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question3change" method="post" action="service-1-3">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question3change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question3change" method="post" action="service-1-3">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question3change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['phone-number'] }}</p>
+                    <p class="govuk-body">{{ data['email-address'] }}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question4change" method="post" action="service-1-4">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question4change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question4change" method="post" action="service-1-4">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question4change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <br />
+                <h2>Who lives with you</h2>
+
+
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Number of children living with you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['number-of-children'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Child details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">
+                        {% if data['child-1-name'] %}
+                        <p><b>Child 1</b></p>
+                        <p>{{ data['child-1-name'] }}<br />{{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}</p>
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['child-2-name'] %}
+                        <br />
+                        <p><b>Child 2</b></p>
+                        <p>{{ data['child-2-name'] }}<br />{{ data['child-2-date-of-birth-day'] }}/{{ data['child-2-date-of-birth-month'] }}/{{ data['child-2-date-of-birth-year'] }}</p>
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['child-3-name'] %}
+
+                        <br />
+                        <p><b>Child 3</b></p>
+                        <p>{{ data['child-3-name'] }}<br />{{ data['child-3-date-of-birth-day'] }}/{{ data['child-3-date-of-birth-month'] }}/{{ data['child-3-date-of-birth-year'] }}</p>
+                        {% else %}
+                        {% endif %}
+                    </p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Do you live with your partner?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['partner-check'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <br />
+                <h2>Your employment</h2>
+
+
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Emplyoment status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['employment-status'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    How many hours a week do you usually work?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['parent-work-hours'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    How much do you get paid per week?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">£{{ data['parent-work-pay'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    {% if data['resume'] == "yes" %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% else %}
+                    <form id="question5change" method="post" action="service-1-5">
+                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
+                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
+                    </form>
+                    {% endif %}
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <br />
+                <h3>Childcare providers</h3>
+
+
+            </div>
+
+        </dl>
+
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if data['fullname'] and data['dob-day'] and data['address-line-1'] and data['mobile'] and data['question-5'] and data['question-6'] and data['question-7'] and data['question-8'] and data['question-9']  %}
+        <h2 class="govuk-heading-m">Now send your application</h2>
+
+        <p>By submitting this application you’re confirming that, as far as you know, the details you’re providing are correct</p>
+
+        <br />
+
+        <form class="form" action="confirmation" method="post">
+
+            <div class="govuk-form-group">
+
+                <input class="govuk-input" id="appcomplete" name="appcomplete" type="hidden" value="yes">
+
+
+                <button class="govuk-button no-mar-bot" data-module="govuk-button">
+                    Accept and send
+                </button>
+
+            </div>
+        </form>
+
+        {% else %}
+
+        <p>You need to answer all the questions before you can submit your application.</p>
+
+        {% endif %}
+
+        {% if data['signing'] == "yes" %}
+        <!-- <form id="r3-sar" method="post" action="service-1-cya">
+            <input type="hidden" id="check-your-answers-previous" name="refer" value="service-1">
+
+            <input class="govuk-input" id="appsaved" name="appsaved" type="hidden" value="yes">
+
+            <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Save and complete later</a></p>
+        </form> -->
+        {% else %}
+        <form id="r3-sar" method="post" action="email">
+            <input type="hidden" id="check-your-answers-previous" name="refer" value="service-1">
+
+            <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Save and complete later</a></p>
+        </form>
+        {% endif %}
+
+        <br />
+
+    </div>
+</div>
+
+{% endblock %}

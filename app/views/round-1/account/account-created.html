@@ -26,11 +26,12 @@ GOV.UK Prototype Kit
             <h1 class="govuk-heading-m">What happens next</h1>
 
             <p>stuff....</p>
+            <br />
+
             <button class="govuk-button" data-module="govuk-button">Continue to childcare calculator</button>
 
-            <p><a href="sign-out">Sign out</a></p>
-            {% else %}
-            <form action="/round-1/govuk-home" method="POST">
+            {% elif data['refer'] == "universal" %}
+            <form action="/round-1/universal-credit/pre-population" method="POST">
                 <!-- Success Panel -->
                 <div class="govuk-panel govuk-panel--confirmation">
                     <h1 class="govuk-panel__title">
@@ -40,14 +41,29 @@ GOV.UK Prototype Kit
                 <h1 class="govuk-heading-m">What happens next</h1>
 
                 <p>stuff....</p>
-                <button class="govuk-button" data-module="govuk-button">Return to GOV.UK homepage</button>
+                <br />
 
-                <p><a href="account">Continue to set up your new account</a></p>
-                <p><a href="../sign-out">Sign out</a></p>
+                <button class="govuk-button" data-module="govuk-button">Continue to Universal Credit</button>
+
+                {% else %}
+                <form action="/round-1/govuk-home" method="POST">
+                    <!-- Success Panel -->
+                    <div class="govuk-panel govuk-panel--confirmation">
+                        <h1 class="govuk-panel__title">
+                            You have successfully created your GOV.UK Account
+                        </h1>
+                    </div>
+                    <h1 class="govuk-heading-m">What happens next</h1>
+
+                    <p>stuff....</p>
+                    <button class="govuk-button" data-module="govuk-button">Return to GOV.UK homepage</button>
+
+                    <p><a href="account">Continue to set up your new account</a></p>
+                    <p><a href="../sign-out">Sign out</a></p>
 
 
-                {% endif %}
-            </form>
+                    {% endif %}
+                </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 </div> <!-- /. govuk-grid-row -->

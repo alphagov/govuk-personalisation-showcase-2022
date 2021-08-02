@@ -22,26 +22,7 @@ router.post('/round-1/sign-in-or-create-account-form', function (req, res) {
     }
 })
 
-// childcare calculator account logic
-router.post('/round-1/childcarere-calculator/account/sign-in-or-create-account-form', function (req, res) {
-
-    // The content in the "" is the name of the radio button
-    var option = req.session.data['signin-create-account-radios']
-
-    // The content in the "" is the value of the radio button
-    if (option === 'create-account') {
-        // Send user to this page
-        res.redirect('/round-1/childcare-calculator/account/create-account-enter-email')
-    } else if (option === 'signin') {
-        // Or send user to this page
-        res.redirect('/round-1/childcare-calculator/account/sign-in')
-    } else {
-        // Or send user to this page
-        res.redirect('/round-1/childcare-calculator/account/check-account-enter-email')
-    }
-})
-
-// v5 Resume application
+// round 1 Resume application - NOT USED
 // sign-in-to-resume.html [account check]
 router.post('/round-1/check-account-resume', function (req, res) {
     email = req.session.data['email-address']
@@ -64,7 +45,7 @@ router.post('/round-1/check-account-resume', function (req, res) {
     }
 })
 
-// Childcare calc Create an Account or Sign in page Check if you have a GOV.UK Account route
+// Create an Account or Sign in page Check if you have a GOV.UK Account route
 // create-account-enter-email.html
 router.post('/round-1/create-account', function (req, res) {
     email = req.session.data['email-address']
@@ -85,7 +66,7 @@ router.post('/round-1/create-account', function (req, res) {
     }
 })
 
-// Childcare calc Create an Account or Sign in page Sign in route
+// Create an Account or Sign in page Sign in route
 // sign-in.html
 router.post('/round-1/check-account-sign-in', function (req, res) {
     email = req.session.data['email-address']
@@ -106,7 +87,7 @@ router.post('/round-1/check-account-sign-in', function (req, res) {
     }
 })
 
-// Childcare calc Create an Account or Sign in page Check if you have a GOV.UK Account route
+// Create an Account or Sign in page Check if you have a GOV.UK Account route
 // check-account-enter-email.html
 router.post('/round-1/check-account', function (req, res) {
     email = req.session.data['email-address']
@@ -205,6 +186,22 @@ router.post('/round-1/paid-work-check', function (req, res) {
         res.redirect('/round-1/childcare-calculator/parent-work-hours')
     } else {
         res.redirect('/round-1/childcare-calculator/calculator-results')
+    }
+})
+
+// round 1 UC employment status check
+// employment-status.html
+router.post('/round-1/employment-status-check', function (req, res) {
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+
+    const empstat = req.session.data['employment-status']
+
+    if (empstat === 'Unemployed') {
+        res.redirect('/round-1/universal-credit/childcare-providers')
+    } else {
+        res.redirect('/round-1/universal-credit/parent-work-hours')
     }
 })
 

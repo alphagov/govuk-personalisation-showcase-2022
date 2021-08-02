@@ -51,7 +51,7 @@
 
                 <p>{% include "round-1/includes/childcare-step-by-step-panel.html" %}</p>
 
-                <p><a href="childcare-calculator/start">Chilcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                <p><a href="childcare-calculator/start">Childcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                         In progress
                     </strong></p>
 
@@ -59,16 +59,27 @@
 
                 <p>{% include "round-1/includes/childcare-step-by-step-panel.html" %}</p>
 
-                <p><a href="childcare-calculator/start">Chilcare calculator</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+                <p><a href="childcare-calculator/start">Childcare calculator</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+                <br />
+                {% else %}
+
+                {% endif %}
+
+
+                {% if data['universal-credit-status'] == "started" %}
+
+                <p><a href="universal-credit/apply">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                        In progress
+                    </strong></p>
+
+                {% elif data['universal-credit-status'] == "completed" %}
+
+                <p><a href="universal-credit/apply">Universal Credit: application</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
                 {% else %}
-                <p class="govuk-body">
-                    You do not have any saved pages yet.
-                </p>
-                <p class="govuk-body">
-                    Use the ‘save a page’ button on any GOV.UK page to add it to your list of saved pages.
-                </p>
+
                 {% endif %}
+
 
             </div>
 

@@ -1,0 +1,56 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Universal Credit - previous address check
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+<a href="address" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="single-partner" method="POST">
+            <h1 class="govuk-heading-xl">Previous address</h1>
+
+            <p class="govuk-body">Have you changed your UK address in the last 6 months?<p>
+
+                    <!-- Radio Button Group -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <div class="govuk-radios">
+                                <!-- Yes -->
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="address-change-1" name="address-change" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="address-change-1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <!-- No -->
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="address-change-2" name="address-change" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="address-change-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div> <!-- /. govuk-radios -->
+                        </fieldset> <!-- /. govuk-fieldset -->
+                    </div> <!-- /. form-group -->
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+        {% include "round-1/includes/childcare-side-panel-control.html" %}
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
