@@ -26,9 +26,56 @@ Universal Credit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Prepopulation ask</h1>
+        <h1 class="govuk-heading-xl">Do you wish to use stored information from your GOV.UK Account?
+        </h1>
 
-        <p><a href="name">Continue</a></p>
+        <p>The Universal Credit application requires the following information which you have already stored in your GOV.UK Account:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li class="">Your address</li>
+            <li class="">Your date of birth</li>
+            <li class="">Your child(ren)'s name and date of birth</li>
+            <li class="">Your childcare costs</li>
+            <li class="">If you live with a partner</li>
+            <li class="">Your employment status</li>
+            <li class="">Your average weekly hours worked</li>
+            <li class="">Your average weekly pay</li>
+        </ul>
+
+        <br />
+
+        <p>You will be asked to provide additional information to complete your application. That information can then be stored in your GOV.UK Account for future use.</p>
+
+        <br />
+
+        <p><b>Do you want the above data to be pre-populated into your Universal Credit application?</b></p>
+
+
+        <form action="/round-1/universal-credit/name" method="POST">
+
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-1" name="uc-reuse" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                Yes
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-2" name="uc-reuse" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                No
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 

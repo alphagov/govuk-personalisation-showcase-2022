@@ -31,41 +31,11 @@ Childcare calculator
 
             <p class="govuk-body">Choose your normal situation if you are currently on maternity, paternity, shared parental, adoption or sick leave.<p>
 
-                    <!-- Radio Button Group -->
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                            <div class="govuk-radios">
-                                <!-- Yes -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-1" name="employment-status" type="radio" value="Employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-1">
-                                        Employed
-                                    </label>
-                                </div>
-                                <!-- No -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-2" name="employment-status" type="radio" value="Self-employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-2">
-                                        Self-employed
-                                    </label>
-                                </div>
-                                <!-- Yes -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-3" name="employment-status" type="radio" value="Both employed and self-employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-3">
-                                        Both employed and self-employed
-                                    </label>
-                                </div>
-                                <!-- No -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-4" name="employment-status" type="radio" value="Unemployed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-4">
-                                        Unemployed
-                                    </label>
-                                </div>
-                            </div> <!-- /. govuk-radios -->
-                        </fieldset> <!-- /. govuk-fieldset -->
-                    </div> <!-- /. form-group -->
+                    {% if data['signing'] == "yes" %}
+                    {% include "../forms/employment-status-signed-in.html" %}
+                    {% else %}
+                    {% include "../forms/employment-status-signed-out.html" %}
+                    {% endif %}
 
                     <button class="govuk-button" data-module="govuk-button">Continue</button>
 
