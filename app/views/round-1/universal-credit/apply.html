@@ -39,11 +39,14 @@ Universal Credit
             <li>join your partner's claim</li>
         </ul>
 
+        <br />
+
+        <!--
         {% if data['signing'] == "yes" %}
         <p>//Paragraph explaining they are signed in with their GOV.UK Account so can proceed.</p>
         {% else %}
         <p>//Paragraph explaning you will need a GOV.UK Account to apply for Universal Credit</p>
-        {% endif %}
+        {% endif %} -->
 
         {% if data['signing'] == "yes" %}
         <form id="universal-credit-start" method="post" action="/round-1/universal-credit/pre-population">
