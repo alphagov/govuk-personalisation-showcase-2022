@@ -80,6 +80,24 @@
 
                 {% endif %}
 
+                {% if data['replace-passport-status'] == "started" %}
+
+                <p>{% include "round-1/includes/travel-abroad-step-by-step-panel.html" %}</p>
+
+                <p><a href="/round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                        In progress
+                    </strong></p>
+
+                {% elif data['replace-passport-status'] == "completed" %}
+
+                <p>{% include "round-1/includes/travel-abroad-step-by-step-panel.html" %}</p>
+
+                <p><a href="/round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+                <br />
+                {% else %}
+
+                {% endif %}
+
 
             </div>
 

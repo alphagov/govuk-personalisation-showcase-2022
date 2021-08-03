@@ -82,9 +82,25 @@ Replace your passport
 
         <p>You’ll need to ask someone to <a href="/confirm-identity-online-for-passport-application">confirm your identity online</a> if you’re replacing a lost or stolen passport.</p>
 
-        <p><a class="gem-c-button govuk-button govuk-button--start" role="button" href="/round-1/replace-your-passport/do-you-live-in-the-uk"> Replace online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-                </svg></a></p>
+        {% if data['signing'] == "yes" %}
+        <form id="universal-credit-start" method="post" action="/round-1/replace-your-passport/pre-population">
+            <div class="govuk-form-group">
+                <input id="universal-credit-started" name="replace-passport-status" value="started" type="hidden">
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Replace online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
+        </form>
+        {% else %}
+        <form id="universal-credit-start" method="post" action="/round-1/replace-your-passport/sign-in-or-create-account">
+            <div class="govuk-form-group">
+                <input id="universal-credit-started" name="replace-passport-status" value="started" type="hidden">
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Replace online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
+        </form>
+        {% endif %}
 
         <h2 class="govuk-heading-m">Replace using a paper application form</h2>
 
