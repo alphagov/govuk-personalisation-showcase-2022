@@ -22,26 +22,31 @@ Universal Credit
             <form action="/round-1/universal-credit/children" method="POST">
                 {% endif %}
 
+                <h1 class="govuk-heading-xl">Do you have a partner that you live with?</h1>
 
-                {% if data['partner-check'] == "yes" %}
-                <h1 class="govuk-heading-xl">Claim with your partner</h1>
-                {% else %}
-                <h1 class="govuk-heading-xl">Claim as a single person</h1>
-                {% endif %}
+                <br />
 
-                {% if data['partner-check'] == "yes" %}
-                <p>Your partner will be asked to provide their details.</p>
-                {% else %}
-                <p>You must let us know if you start living with your partner.</p>
-                {% endif %}
-
-                <p>You will now have to give details of things like:</p>
-
-                <ul class="govuk-list govuk-list--bullet">
-                    <li class="">any children that live with you</li>
-                    <li class="">your work and earnings</li>
-                    <li>childcare costs</li>
-                </ul>
+                <!-- Radio Button Group -->
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-radios">
+                            <!-- Yes -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="partner-check-1" name="partner-check" type="radio" value="yes" {% if data['partner-check'] == "yes" %} {{ checked("partner-check", "yes") }} {% else %} {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                    Yes
+                                </label>
+                            </div>
+                            <!-- No -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="partner-check-2" name="partner-check" type="radio" value="no" {% if data['partner-check'] == "no" %} {{ checked("partner-check", "no") }} {% else %} {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                    No
+                                </label>
+                            </div>
+                        </div> <!-- /. govuk-radios -->
+                    </fieldset> <!-- /. govuk-fieldset -->
+                </div> <!-- /. form-group -->
 
                 <button class="govuk-button" data-module="govuk-button">Continue</button>
 

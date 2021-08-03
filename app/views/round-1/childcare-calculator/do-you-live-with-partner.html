@@ -36,14 +36,14 @@ Childcare calculator
                             <div class="govuk-radios">
                                 <!-- Yes -->
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="partner-check-1" name="partner-check" type="radio" value="yes">
+                                    <input class="govuk-radios__input" id="partner-check-1" name="partner-check" type="radio" value="yes" {% if data['partner-check'] == "yes" %} {{ checked("partner-check", "yes") }} {% else %} {% endif %}>
                                     <label class="govuk-label govuk-radios__label" for="partner-check-1">
                                         Yes
                                     </label>
                                 </div>
                                 <!-- No -->
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="partner-check-2" name="partner-check" type="radio" value="no">
+                                    <input class="govuk-radios__input" id="partner-check-2" name="partner-check" type="radio" value="no" {% if data['partner-check'] == "yes" %} {{ checked("partner-check", "yes") }} {% else %} {% endif %}>
                                     <label class="govuk-label govuk-radios__label" for="partner-check-2">
                                         No
                                     </label>

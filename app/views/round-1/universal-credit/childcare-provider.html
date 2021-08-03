@@ -1,12 +1,13 @@
 {% extends "layout_round-1.html" %}
 
 {% block pageTitle %}
-Universal Credit - application
+Childcare calculator - childcare provider details
 {% endblock %}
 
 {% set serviceName %}
-Universal Credit
+Childcare calculator
 {% endset%}
+
 
 {% block pageScripts %}
 <script src="/public/javascripts/step-by-step-nav.js"></script>
@@ -22,7 +23,7 @@ Universal Credit
 <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-            <a href="employment-status" class="govuk-breadcrumbs__link">Back</a>
+            <a href="parent-work-pay" class="govuk-breadcrumbs__link">Back</a>
         </li>
     </ol>
 </div>
@@ -33,24 +34,30 @@ Universal Credit
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form action="parent-work-pay" method="POST">
-            <h1 class="govuk-heading-xl">How many hours a week do you usually work?</h1>
 
-            <p class="govuk-body">This is the hours worked in all your paid jobs, zero hours contracts and self-employment.<p>
+        <h1 class="govuk-heading-xl">Childcare provider details</h1>
 
-                    {% if data['signing'] == "yes" %}
-                    {% include "../forms/parent-work-hours-signed-in.html" %}
-                    {% else %}
-                    {% include "../forms/parent-work-hours-signed-out.html" %}
-                    {% endif %}
+        <p>
+            Tell us about your childcare provider.
+        </p>
 
-                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <br />
 
-        </form> <!-- /. form -->
-        {% include "../includes/prepop-explain-details.html" %}
+        <form action="/round-1/child-1-add" method="POST" autocomplete="off">
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/childcare-provider-details-signed-in.html" %}
+            {% else %}
+            {% include "../forms/childcare-provider-details-signed-out.html" %}
+            {% endif %}
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+
+        <!-- /. form -->
     </div> <!-- /. govuk-grid-column-two-thirds -->
     <div class="govuk-grid-column-one-third">
-
+        {% include "round-1/includes/childcare-side-panel-control.html" %}
     </div>
 </div> <!-- /. govuk-grid-row -->
 

@@ -68,13 +68,13 @@
 
                 {% if data['universal-credit-status'] == "started" %}
 
-                <p><a href="universal-credit/apply">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                <p><a href="/round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                         In progress
                     </strong></p>
 
                 {% elif data['universal-credit-status'] == "completed" %}
 
-                <p><a href="universal-credit/apply">Universal Credit: application</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+                <p><a href="/round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
                 {% else %}
 

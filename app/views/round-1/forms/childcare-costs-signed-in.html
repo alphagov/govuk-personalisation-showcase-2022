@@ -2,19 +2,19 @@
     <fieldset class="govuk-fieldset">
         <div class="govuk-radios">
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="childcare-costs" name="childcare-costs" type="radio" value="yes">
+                <input class="govuk-radios__input" id="childcare-costs" name="childcare-costs" type="radio" value="yes" {% if data['childcare-costs'] == "yes" %} {{ checked("childcare-costs", "yes") }} {% else %} {% endif %}>
                 <label class="govuk-label govuk-radios__label" for="childcare-costs">
                     Yes
                 </label>
             </div>
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="childcare-costs-2" name="childcare-costs" type="radio" value="no">
+                <input class="govuk-radios__input" id="childcare-costs-2" name="childcare-costs" type="radio" value="no" {% if data['childcare-costs'] == "no" %} {{ checked("childcare-costs", "no") }} {% else %} {% endif %}>
                 <label class="govuk-label govuk-radios__label" for="childcare-costs-2">
                     No
                 </label>
             </div>
             <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="childcare-costs-3" name="childcare-costs" type="radio" value="future">
+                <input class="govuk-radios__input" id="childcare-costs-3" name="childcare-costs" type="radio" value="future" {% if data['childcare-costs'] == "future" %} {{ checked("childcare-costs", "future") }} {% else %} {% endif %}>
                 <label class="govuk-label govuk-radios__label" for="childcare-costs-3">
                     Not yet but maybe in future
                 </label>

@@ -35,17 +35,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question1change" method="post" action="service-1-1">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question1change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question1change" method="post" action="service-1-1">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question1change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -72,18 +62,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question2change" method="post" action="service-1-2">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question2change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question2change" method="post" action="service-1-2">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question2change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
-
+                    <a href="#">Change</a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -118,17 +97,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question3change" method="post" action="service-1-3">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question3change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question3change" method="post" action="service-1-3">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question3change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -142,17 +111,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question4change" method="post" action="service-1-4">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question4change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question4change" method="post" action="service-1-4">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question4change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -172,18 +131,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
-
+                    <a href="#">Change</a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -191,43 +139,32 @@ Universal Credit
                     Child details
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-                        {% if data['child-1-name'] %}
-                        <p><b>Child 1</b></p>
-                        <p>{{ data['child-1-name'] }}<br />{{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}</p>
-                        {% else %}
-                        {% endif %}
 
-                        {% if data['child-2-name'] %}
-                        <br />
-                        <p><b>Child 2</b></p>
-                        <p>{{ data['child-2-name'] }}<br />{{ data['child-2-date-of-birth-day'] }}/{{ data['child-2-date-of-birth-month'] }}/{{ data['child-2-date-of-birth-year'] }}</p>
-                        {% else %}
-                        {% endif %}
+                    {% if data['child-1-name'] %}
+                    <p><b>Child 1</b></p>
+                    <p>{{ data['child-1-name'] }}<br />{{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}</p>
+                    {% else %}
+                    {% endif %}
 
-                        {% if data['child-3-name'] %}
+                    {% if data['child-2-name'] %}
+                    <br />
+                    <p><b>Child 2</b></p>
+                    <p>{{ data['child-2-name'] }}<br />{{ data['child-2-date-of-birth-day'] }}/{{ data['child-2-date-of-birth-month'] }}/{{ data['child-2-date-of-birth-year'] }}</p>
+                    {% else %}
+                    {% endif %}
 
-                        <br />
-                        <p><b>Child 3</b></p>
-                        <p>{{ data['child-3-name'] }}<br />{{ data['child-3-date-of-birth-day'] }}/{{ data['child-3-date-of-birth-month'] }}/{{ data['child-3-date-of-birth-year'] }}</p>
-                        {% else %}
-                        {% endif %}
-                    </p>
+                    {% if data['child-3-name'] %}
+
+                    <br />
+                    <p><b>Child 3</b></p>
+                    <p>{{ data['child-3-name'] }}<br />{{ data['child-3-date-of-birth-day'] }}/{{ data['child-3-date-of-birth-month'] }}/{{ data['child-3-date-of-birth-year'] }}</p>
+                    {% else %}
+                    {% endif %}
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -241,18 +178,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
-
+                    <a href="#">Change</a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -271,17 +197,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -295,17 +211,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -319,17 +225,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -349,17 +245,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -368,22 +254,59 @@ Universal Credit
                     Childcare provider details
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">to follow</p>
+                    <p class="govuk-body">
+
+                        {% if data['childcare-provider-name'] %}
+                        {{ data['childcare-provider-name'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        <br />
+
+                        {% if data['childcare-provider-reg'] %}
+                        {{ data['childcare-provider-reg'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        <br />
+
+                        {% if data['childcare-provider-phone-number'] %}
+                        {{ data['childcare-provider-phone-number'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        <br />
+
+                        {% if data['childcare-provider-address-line-1'] %}
+                        {{ data['childcare-provider-address-line-1'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-line-2'] %}
+                        {{ data['childcare-provider-address-line-2'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-town'] %}
+                        {{ data['childcare-provider-address-town'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-county'] %}
+                        {{ data['childcare-provider-address-county'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-postcode'] %}
+                        {{ data['childcare-provider-address-postcode'] }} <br />
+                        {% else %}
+                        {% endif %}
+                    </p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -397,17 +320,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
+                    <a href="#">Change</a>
 
                 </dd>
             </div>
@@ -421,18 +334,7 @@ Universal Credit
                 </dd>
                 <dd class="govuk-summary-list__actions">
 
-                    {% if data['resume'] == "yes" %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="no">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% else %}
-                    <form id="question5change" method="post" action="service-1-5">
-                        <input type="hidden" id="check-your-answers-previous" name="check-your-answers-previous" value="Yes">
-                        <a href="javascript:{}" onclick="document.getElementById('question5change').submit();return false;">Change</a>
-                    </form>
-                    {% endif %}
-
+                    <a href="#">Change</a>
                 </dd>
             </div>
         </dl>
@@ -444,14 +346,13 @@ Universal Credit
 
     <div class="govuk-grid-column-two-thirds">
 
-        {% if data['fullname'] and data['dob-day'] and data['address-line-1'] and data['mobile'] and data['question-5'] and data['question-6'] and data['question-7'] and data['question-8'] and data['question-9']  %}
         <h2 class="govuk-heading-m">Now send your application</h2>
 
         <p>By submitting this application you’re confirming that, as far as you know, the details you’re providing are correct</p>
 
         <br />
 
-        <form class="form" action="confirmation" method="post">
+        <form class="form" action="consent" method="post">
 
             <div class="govuk-form-group">
 
@@ -464,12 +365,6 @@ Universal Credit
 
             </div>
         </form>
-
-        {% else %}
-
-        <p>You need to answer all the questions before you can submit your application.</p>
-
-        {% endif %}
 
         <br />
 
