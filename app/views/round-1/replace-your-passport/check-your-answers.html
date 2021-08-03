@@ -113,212 +113,14 @@ Replace your passport
 
                 </dd>
             </div>
-            <div class="govuk-summary-list__row">
-                <br />
-                <h2>Who lives with you</h2>
-
-
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Number of children living with you
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['number-of-children'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Child details
-                </dt>
-                <dd class="govuk-summary-list__value">
-
-                    {% if data['child-1-name'] %}
-                    <p><b>Child 1</b></p>
-                    <p>{{ data['child-1-name'] }}<br />{{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}</p>
-                    {% else %}
-                    {% endif %}
-
-                    {% if data['child-2-name'] %}
-                    <br />
-                    <p><b>Child 2</b></p>
-                    <p>{{ data['child-2-name'] }}<br />{{ data['child-2-date-of-birth-day'] }}/{{ data['child-2-date-of-birth-month'] }}/{{ data['child-2-date-of-birth-year'] }}</p>
-                    {% else %}
-                    {% endif %}
-
-                    {% if data['child-3-name'] %}
-
-                    <br />
-                    <p><b>Child 3</b></p>
-                    <p>{{ data['child-3-name'] }}<br />{{ data['child-3-date-of-birth-day'] }}/{{ data['child-3-date-of-birth-month'] }}/{{ data['child-3-date-of-birth-year'] }}</p>
-                    {% else %}
-                    {% endif %}
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Do you live with your partner?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['partner-check'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <br />
-                <h2>Your employment</h2>
-
-
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Employment status
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['employment-status'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    How many hours a week do you usually work?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['parent-work-hours'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    How much do you get paid per week?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">£{{ data['parent-work-pay'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <br />
-                <h2>Childcare providers</h2>
-
-
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Do you have childcare costs?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['childcare-costs'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Childcare provider details
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-
-                        {% if data['childcare-provider-name'] %}
-                        {{ data['childcare-provider-name'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-reg'] %}
-                        {{ data['childcare-provider-reg'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-phone-number'] %}
-                        {{ data['childcare-provider-phone-number'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-address-line-1'] %}
-                        {{ data['childcare-provider-address-line-1'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-line-2'] %}
-                        {{ data['childcare-provider-address-line-2'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-town'] %}
-                        {{ data['childcare-provider-address-town'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-county'] %}
-                        {{ data['childcare-provider-address-county'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-postcode'] %}
-                        {{ data['childcare-provider-address-postcode'] }} <br />
-                        {% else %}
-                        {% endif %}
-                    </p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Childcare payment details
+                    Old passport details
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-
-                        £{{ data['childcare-payment-amount'] }} <br />
-                        {{ data['date-of-payment-day'] }}/{{ data['date-of-payment-month'] }}/{{ data['date-of-payment-year'] }}
-                    </p>
+                    <p class="govuk-body">Number: {{ data['passport-number'] }}</p>
+                    <p class="govuk-body">Expires: {{ data['passport-expiry-day'] }}/{{ data['passport-expiry-month'] }}/{{ data['passport-expiry-year'] }}</p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
@@ -329,25 +131,24 @@ Replace your passport
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Children attending childcare
+                    Gender
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
+                    <p class="govuk-body">{{ data['gender'] }}</p>
 
-                        {% if data['child-1-cared'] == 'yes' %}
-                        {{ data['child-1-name'] }}
-                        {% else %}
-                        {% endif %} <br />
-                        {% if data['child-2-cared'] == 'yes' %}
-                        {{ data['child-2-name'] }}
-                        {% else %}
-                        {% endif %}
-                        <br />
-                        {% if data['child-3-cared'] == 'yes' %}
-                        {{ data['child-3-name'] }}
-                        {% else %}
-                        {% endif %}
-                    </p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Place of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['town-of-birth'] }}</p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
@@ -356,9 +157,7 @@ Replace your passport
 
                 </dd>
             </div>
-
         </dl>
-
     </div>
 
 </div>
