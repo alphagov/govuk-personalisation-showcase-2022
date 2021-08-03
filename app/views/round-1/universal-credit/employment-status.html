@@ -16,47 +16,45 @@ Childcare calculator
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form action="/round-1/employment-status-check" method="POST">
-            <h1 class="govuk-heading-xl">Are you in paid work?</h1>
+            <h1 class="govuk-heading-xl">What is your current work status?</h1>
 
-            <p class="govuk-body">Paid work includes maternity, paternity, shared parental, adoption and sick leave.<p>
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-1" name="employment-status" type="radio" value="Employed">
+                            <label class="govuk-label govuk-radios__label" for="paid-work-1">
+                                Employed
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-2" name="employment-status" type="radio" value="Self-employed">
+                            <label class="govuk-label govuk-radios__label" for="paid-work-2">
+                                Self-employed
+                            </label>
+                        </div>
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-3" name="employment-status" type="radio" value="Both employed and self-employed">
+                            <label class="govuk-label govuk-radios__label" for="paid-work-3">
+                                Both employed and self-employed
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-4" name="employment-status" type="radio" value="Unemployed">
+                            <label class="govuk-label govuk-radios__label" for="paid-work-4">
+                                Unemployed
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->
 
-                    <!-- Radio Button Group -->
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                            <div class="govuk-radios">
-                                <!-- Yes -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-1" name="employment-status" type="radio" value="Employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-1">
-                                        Employed
-                                    </label>
-                                </div>
-                                <!-- No -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-2" name="employment-status" type="radio" value="Self-employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-2">
-                                        Self-employed
-                                    </label>
-                                </div>
-                                <!-- Yes -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-3" name="employment-status" type="radio" value="Both employed and self-employed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-3">
-                                        Both employed and self-employed
-                                    </label>
-                                </div>
-                                <!-- No -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-4" name="employment-status" type="radio" value="Unemployed">
-                                    <label class="govuk-label govuk-radios__label" for="paid-work-4">
-                                        Unemployed
-                                    </label>
-                                </div>
-                            </div> <!-- /. govuk-radios -->
-                        </fieldset> <!-- /. govuk-fieldset -->
-                    </div> <!-- /. form-group -->
-
-                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
 
 
         </form> <!-- /. form -->

@@ -1,0 +1,92 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Childcare calculator
+{% endblock %}
+
+{% set serviceName %}
+Childcare calculator
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="../childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Do you consent to sharing this data with your GOV.UK Account?
+        </h1>
+
+        <p>You entered the following information into the Childcare costs calculator:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li class="">Your address</li>
+            <li class="">Your date of birth</li>
+            <li class="">Your child(ren)'s name and date of birth</li>
+            <li class="">Your childcare costs</li>
+            <li class="">If you live with a partner</li>
+            <li class="">Your employment status</li>
+            <li class="">Your average weekly hours worked</li>
+            <li class="">Your average weekly pay</li>
+        </ul>
+
+        <br />
+
+        <p><b>Do you consent to this data being added to your GOV.UK Account to make it available across GOV.UK?</b></p>
+
+        <p>If you do, you will be able to use those answers to pre-populate other forms and applications, saving you time.</p>
+
+        <br />
+
+        <form action="/round-1/childcare-calculator/spinner-calculator-results" method="POST">
+
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-1" name="calculator-consent" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                Yes, I consent to making that data available for reuse across GOV.UK
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-2" name="calculator-consent" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                No, I do not consent to making that data available for reuse across GOV.UK
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        </form> <!-- /. form -->
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

@@ -7,6 +7,17 @@ Childcare calculator - Do you have a partner that you live with?
 {% set serviceName %}
 Childcare calculator
 {% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
 {% block beforeContent %}
 <a href="childcare-approved-provider" class="govuk-back-link">Back</a>
 {% endblock %}

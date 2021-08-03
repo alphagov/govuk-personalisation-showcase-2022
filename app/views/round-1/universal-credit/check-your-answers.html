@@ -22,42 +22,9 @@ Universal Credit
 
         <p>Claim back up to 85% of your childcare costs</p>
 
-        <br />
-
-        {% if data['appsaved'] == "yes" %}
-        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-            <div class="govuk-notification-banner__header">
-                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                    Your application has been saved
-                </h2>
-            </div>
-            <div class="govuk-notification-banner__content">
-                <p class="govuk-notification-banner__heading">
-                    Last saved:
-                </p>
-                <p>{% include "includes/today-time.html" %}</p>
-
-
-
-                <form id="r3-sar" method="post" action="signed-out">
-                    <input class="govuk-input" id="signing" name="signing" type="hidden" value="no">
-
-                    <input class="govuk-input" id="accountstatus" name="accountstatus" type="hidden" value="active">
-
-                    <p><a href="javascript:{}" onclick="document.getElementById('r3-sar').submit();return false;">Sign out</a></p>
-                </form>
-            </div>
-        </div>
-        {% else %}
-
-        {% endif %}
-
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-
+            <div class="govuk-sumary-list__row">
                 <h2>About you</h2>
-
-
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -296,7 +263,7 @@ Universal Credit
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Emplyoment status
+                    Employment status
                 </dt>
                 <dd class="govuk-summary-list__value">
                     <p class="govuk-body">{{ data['employment-status'] }}</p>

@@ -7,6 +7,17 @@ Childcare calculator - Are you in paid work?
 {% set serviceName %}
 Childcare calculator
 {% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
 {% block beforeContent %}
 <a href="do-you-live-with-partner" class="govuk-back-link">Back</a>
 {% endblock %}
@@ -16,9 +27,9 @@ Childcare calculator
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <form action="/round-1/paid-work-check" method="POST">
-            <h1 class="govuk-heading-xl">Are you in paid work?</h1>
+            <h1 class="govuk-heading-xl">What is your current employment status?</h1>
 
-            <p class="govuk-body">Paid work includes maternity, paternity, shared parental, adoption and sick leave.<p>
+            <p class="govuk-body">Choose your normal situation if you are currently on maternity, paternity, shared parental, adoption or sick leave.<p>
 
                     <!-- Radio Button Group -->
                     <div class="govuk-form-group">
@@ -26,16 +37,30 @@ Childcare calculator
                             <div class="govuk-radios">
                                 <!-- Yes -->
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-1" name="paid-work" type="radio" value="yes">
+                                    <input class="govuk-radios__input" id="paid-work-1" name="employment-status" type="radio" value="Employed">
                                     <label class="govuk-label govuk-radios__label" for="paid-work-1">
-                                        Yes
+                                        Employed
                                     </label>
                                 </div>
                                 <!-- No -->
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paid-work-2" name="paid-work" type="radio" value="no">
+                                    <input class="govuk-radios__input" id="paid-work-2" name="employment-status" type="radio" value="Self-employed">
                                     <label class="govuk-label govuk-radios__label" for="paid-work-2">
-                                        No
+                                        Self-employed
+                                    </label>
+                                </div>
+                                <!-- Yes -->
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="paid-work-3" name="employment-status" type="radio" value="Both employed and self-employed">
+                                    <label class="govuk-label govuk-radios__label" for="paid-work-3">
+                                        Both employed and self-employed
+                                    </label>
+                                </div>
+                                <!-- No -->
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="paid-work-4" name="employment-status" type="radio" value="Unemployed">
+                                    <label class="govuk-label govuk-radios__label" for="paid-work-4">
+                                        Unemployed
                                     </label>
                                 </div>
                             </div> <!-- /. govuk-radios -->

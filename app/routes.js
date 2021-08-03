@@ -180,12 +180,12 @@ router.post('/round-1/paid-work-check', function (req, res) {
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
 
-    const paidwork = req.session.data['paid-work']
+    const empstat = req.session.data['employment-status']
 
-    if (paidwork === 'yes') {
-        res.redirect('/round-1/childcare-calculator/parent-work-hours')
+    if (empstat === 'Unemployed') {
+        res.redirect('/round-1/childcare-calculator/check-your-answers')
     } else {
-        res.redirect('/round-1/childcare-calculator/calculator-results')
+        res.redirect('/round-1/childcare-calculator/parent-work-hours')
     }
 })
 
