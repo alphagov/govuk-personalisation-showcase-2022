@@ -1,11 +1,11 @@
 {% extends "layout_round-1.html" %}
 
 {% block pageTitle %}
-Universal credit - childcare provider details
+Childcare calculator - childcare provider details
 {% endblock %}
 
 {% set serviceName %}
-Universal Credit
+Childcare calculator
 {% endset%}
 
 
@@ -23,7 +23,7 @@ Universal Credit
 <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-            <a href="parent-work-pay" class="govuk-breadcrumbs__link">Back</a>
+            <a href="childcare-provider" class="govuk-breadcrumbs__link">Back</a>
         </li>
     </ol>
 </div>
@@ -35,19 +35,13 @@ Universal Credit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Childcare provider details</h1>
+        <h1 class="govuk-heading-xl">Childcare payment details</h1>
 
-        <p>
-            Tell us about your childcare provider.
-        </p>
-
-        <br />
-
-        <form action="/round-1/universal-credit/childcare-payment" method="POST" autocomplete="off">
+        <form action="/round-1/universal-credit/childcare-which-children" method="POST" autocomplete="off">
             {% if data['signing'] == "yes" %}
-            {% include "../forms/childcare-provider-details-signed-in.html" %}
+            {% include "../forms/childcare-payment-details-signed-in.html" %}
             {% else %}
-            {% include "../forms/childcare-provider-details-signed-out.html" %}
+            {% include "../forms/childcare-payment-details-signed-out.html" %}
             {% endif %}
             <button class="govuk-button" data-module="govuk-button">Continue</button>
             <div class="govuk-!-padding-bottom-1"></div>

@@ -310,26 +310,17 @@ Universal Credit
 
                 </dd>
             </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Children attending childcare
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">to follow</p>
 
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Childcare payment details
                 </dt>
                 <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">to follow</p>
+                    <p class="govuk-body">
+
+                        £{{ data['childcare-payment-amount'] }} <br />
+                        {{ data['date-of-payment-day'] }}/{{ data['date-of-payment-month'] }}/{{ data['date-of-payment-year'] }}
+                    </p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
@@ -337,6 +328,37 @@ Universal Credit
                     <a href="#">Change</a>
                 </dd>
             </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Children attending childcare
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">
+
+                        {% if data['child-1-cared'] == 'yes' %}
+                        {{ data['child-1-name'] }}
+                        {% else %}
+                        {% endif %} <br />
+                        {% if data['child-2-cared'] == 'yes' %}
+                        {{ data['child-2-name'] }}
+                        {% else %}
+                        {% endif %}
+                        <br />
+                        {% if data['child-3-cared'] == 'yes' %}
+                        {{ data['child-3-name'] }}
+                        {% else %}
+                        {% endif %}
+                    </p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
         </dl>
 
     </div>

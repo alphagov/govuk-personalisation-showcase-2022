@@ -1,0 +1,48 @@
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+
+
+            <!-- Childcare payment amount -->
+            <div class="govuk-date-input" id="number-of-children">
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="childcare-payment-amount"><b>How much you paid</b></label>
+                        <div class="govuk-hint">For example, £350</div>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-8" id="childcare-payment-amount" name="childcare-payment-amount" type="number" pattern="[0-9]*" inputmode="numeric" value="{{ data['childcare-payment-amount'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+            </div> <!-- govuk-date-input -->
+
+            <br /><br />
+
+            <!-- Date of payment [Day] -->
+            <label class="govuk-label govuk-date-input__label" for="date-of-birth-day"><b>Date you paid the invoice</b></label>
+            <div class="govuk-hint">For example, 20 08 2021</div>
+            <div class="govuk-date-input" id="date-of-birth">
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">Day</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-payment" name="date-of-birth-payment" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['date-of-birth-payment'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+                <!-- Date of payment [Month] -->
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="pdate-of-birth-month">Month</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-payment" name="date-of-birth-payment" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['date-of-payment-payment'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+                <!-- Date of payment [Year] -->
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">Year</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-payment-year" name="date-of-payment-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['date-of-payment-year'] }}">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+
+            </div> <!-- govuk-date-input -->
+
+        </fieldset> <!-- govuk-fieldset -->
+    </div> <!-- govuk-form-group -->
