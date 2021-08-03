@@ -38,9 +38,9 @@ Childcare calculator
 
         <form action="/round-1/replace-your-passport/gender" method="POST">
             {% if data['signing'] == "yes" %}
-            {% include "../forms/date-of-birth-signed-in.html" %}
+            {% include "../forms/name-signed-in.html" %}
             {% else %}
-            {% include "../forms/date-of-birth-signed-out.html" %}
+            {% include "../forms/name-signed-out.html" %}
             {% endif %}
             <button class="govuk-button" data-module="govuk-button">Continue</button>
             <div class="govuk-!-padding-bottom-1"></div>

@@ -39,8 +39,10 @@ Replace your passport
         <form action="/round-1/replace-your-passport/signing-a-passport" method="POST">
             {% if data['signing'] == "yes" %}
             {% include "../forms/email-signed-in.html" %}
+            {% include "../forms/phone-signed-in.html" %}
             {% else %}
             {% include "../forms/email-signed-out.html" %}
+            {% include "../forms/phone-signed-out.html" %}
             {% endif %}
             <button class="govuk-button" data-module="govuk-button">Continue</button>
             <div class="govuk-!-padding-bottom-1"></div>

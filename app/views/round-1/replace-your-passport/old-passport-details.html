@@ -36,18 +36,56 @@ Childcare calculator
 
         <h1 class="govuk-heading-xl">Old passport details</h1>
 
+        <p>Enter your old passport details if you have them.</p>
+
         <form action="/round-1/replace-your-passport/new-passport-details" method="POST">
-            {% if data['signing'] == "yes" %}
-            {% include "../forms/date-of-birth-signed-in.html" %}
-            {% else %}
-            {% include "../forms/date-of-birth-signed-out.html" %}
-            {% endif %}
+            <div class="govuk-form-group">
+
+                <!-- name of childcare provider -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="passport-number"><b>Passport number (optional)</b></label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="cpassport-number" name="passport-number" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['passport-number'] }}">
+                </div> <!-- /. form-group -->
+
+            </div>
+            <br />
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="passport-number"><b>Expiry date (optional)</b></label>
+                <div id="date-of-birth-hint" class="govuk-hint">For example, 12 11 2007</div>
+
+                <!-- Passport expiry [Day] -->
+                <div class="govuk-date-input" id="date-of-birth">
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-expiry-day">Day</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-expiry-day" name="passport-expiry-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['passport-expiry-day'] }}">
+                        </div> <!-- govuk-form-group -->
+                    </div> <!-- govuk-date-input__item -->
+
+                    <!-- Passport expiry [Month] -->
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-expiry-month">Month</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-expiry-month" name="passport-expiry-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['passport-expiry-month'] }}">
+                        </div> <!-- govuk-form-group -->
+                    </div> <!-- govuk-date-input__item -->
+
+                    <!-- Passport expiry [Year] -->
+                    <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-expiry-year">Year</label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-expiry-year" name="passport-expiry-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['passport-expiry-year'] }}">
+                        </div> <!-- govuk-form-group -->
+                    </div> <!-- govuk-date-input__item -->
+
+                </div> <!-- govuk-date-input -->
+
+            </div> <!-- govuk-form-group -->
             <button class="govuk-button" data-module="govuk-button">Continue</button>
-            <div class="govuk-!-padding-bottom-1"></div>
 
         </form>
         <!-- /. form -->
-        {% include "../includes/prepop-explain-details.html" %}
+
     </div> <!-- /. govuk-grid-column-two-thirds -->
     <div class="govuk-grid-column-one-third">
         {% include "round-1/includes/travel-abroad-side-panel-control.html" %}

@@ -31,16 +31,16 @@ Replace your passport
 
 
             {% if data['signing'] == "yes" %}
-            {% include "../forms/live-in-uk-signed-in.html" %}
+            {% include "../forms/gender-signed-in.html" %}
             {% else %}
-            {% include "../forms/live-in-uk-signed-out.html" %}
+            {% include "../forms/gender-signed-out.html" %}
             {% endif %}
 
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
 
         </form> <!-- /. form -->
-        {% include "../includes/prepop-explain-details.html" %}
+
     </div> <!-- /. govuk-grid-column-two-thirds -->
     <div class="govuk-grid-column-one-third">
         {% include "round-1/includes/travel-abroad-side-panel-control.html" %}
