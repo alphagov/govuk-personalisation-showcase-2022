@@ -3,8 +3,65 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// mastheead account logic
+// childcare calc account logic
 router.post('/round-1/sign-in-or-create-account-form', function (req, res) {
+
+    // The content in the "" is the name of the radio button
+    var option = req.session.data['signin-create-account-radios']
+
+    // The content in the "" is the value of the radio button
+    if (option === 'create-account') {
+        // Send user to this page
+        res.redirect('/round-1/account/create-account-enter-email')
+    } else if (option === 'signin') {
+        // Or send user to this page
+        res.redirect('/round-1/account/sign-in')
+    } else {
+        // Or send user to this page
+        res.redirect('/round-1/childcare-calculator/what-youll-need')
+    }
+})
+
+// universal credit account logic
+router.post('/round-1/sign-in-or-create-account-form-2', function (req, res) {
+
+    // The content in the "" is the name of the radio button
+    var option = req.session.data['signin-create-account-radios']
+
+    // The content in the "" is the value of the radio button
+    if (option === 'create-account') {
+        // Send user to this page
+        res.redirect('/round-1/account/create-account-enter-email')
+    } else if (option === 'signin') {
+        // Or send user to this page
+        res.redirect('/round-1/account/sign-in')
+    } else {
+        // Or send user to this page
+        res.redirect('/round-1/universal-credit/name')
+    }
+})
+
+// replace passport account logic
+router.post('/round-1/sign-in-or-create-account-form-4', function (req, res) {
+
+    // The content in the "" is the name of the radio button
+    var option = req.session.data['signin-create-account-radios']
+
+    // The content in the "" is the value of the radio button
+    if (option === 'create-account') {
+        // Send user to this page
+        res.redirect('/round-1/account/create-account-enter-email')
+    } else if (option === 'signin') {
+        // Or send user to this page
+        res.redirect('/round-1/account/sign-in')
+    } else {
+        // Or send user to this page
+        res.redirect('/round-1/replace-your-passport/do-you-live-in-the-uk')
+    }
+})
+
+// masthead account logic
+router.post('/round-1/sign-in-or-create-account-form-3', function (req, res) {
 
     // The content in the "" is the name of the radio button
     var option = req.session.data['signin-create-account-radios']

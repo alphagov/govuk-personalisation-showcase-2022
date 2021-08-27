@@ -40,12 +40,6 @@ Childcare calculator
             <li class="">help with childcare costs if your child is under 16 (or under 17 and disabled)</li>
         </ul>
 
-        {% if data['signing'] == "yes" %}
-        <p>//Paragraph here about what their GOV.UK Account will enable.</p>
-        {% else %}
-        <p>//Paragraph here about why they should use GOV.UK Account.</p>
-        {% endif %}
-
         <br />
 
         {% if data['signing'] == "yes" %}
@@ -61,13 +55,6 @@ Childcare calculator
                         </svg></button>
                 </div>
             </form>
-
-            {% if data['signing'] == "yes" %}
-
-            {% else %}
-            <p>or</p>
-            <p><a href="what-youll-need">Continue without a GOV.UK Account</a></p>
-            {% endif %}
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 
