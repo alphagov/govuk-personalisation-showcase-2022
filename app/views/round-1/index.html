@@ -18,9 +18,21 @@ GOV.UK Prototype Kit
         <h1 class="govuk-heading-xl">Round 1</h1>
         <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Latest version</strong>
         <br /><br />
-        <p class="govuk-body">
-            To follow
-        </p>
+
+        <ol class="govuk-list govuk-list--number">
+            <li>Interact with Get Childcare step-by-step </li>
+            <li>Create a GOV.UK account </li>
+            <li>Interact with HMRC Childcare Calculator </li>
+            <li>Consent to save data inputted in HMRC Chldcare Calculator to GOV.UK Account </li>
+            <li>[possible] interact with OFSTED ‘find childcare’ page and concept check use of postcode from saved data</li>
+            <li>Apply for Universal Credit</li>
+            <li>Consent to use stored data from GOV UK account in the Universal Credit application</li>
+            <li>Consent to share additional data which was inputted as part of the Universal Credit application</li>
+            <li>Forced log out and log in</li>
+            <li>HMPO renew passport </li>
+            <li>Consent to use stored data from GOV UK Account in HMPO renew passport application</li>
+        </ol>
+
         <div class="govuk-!-padding-bottom-2"></div>
         <a href="govuk-home.html">
             <button class="govuk-button" data-module="govuk-button">Start Round 1 prototype</button>
@@ -65,7 +77,7 @@ GOV.UK Prototype Kit
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
                         <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                            Research goals
+                            Goals
                         </span>
                     </h2>
                 </div>
@@ -99,13 +111,35 @@ GOV.UK Prototype Kit
                 </div> <!-- /. accordion-default-content-1 -->
             </div> <!-- /. govuk-accordion__section -->
 
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Assumptions
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <!-- Goal 1 -->
+                    <ol class="govuk-list govuk-list--number">
+                        <li>All services are connected via broker API</li>
+                        <li>All services use the GOV.UK Account SSO</li>
+                        <li>User needs to be signed in to GOV.UK Account for data/activity to be captured</li>
+                        <li>Save and return is available on all forms</li>
+                        <li>Legacy data requires user to PYI (out of scope for MVP)</li>
+                        <li>This is a future view where service would already be consumed by GOV.UK account. Therefore this research does not cover account confusion and issues around onboarding.</li>
+                    </ol>
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
             <!-- Hypotheses -->
 
             <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
                         <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                            Hypotheses (DRAFT)
+                            Hypotheses
                         </span>
                     </h2>
                 </div>
@@ -131,7 +165,28 @@ GOV.UK Prototype Kit
                         <b>Will</b> speed up task completion <br />
                         <b>We will know this if / when</b> user research participants express potential benefits
                     </p>
-
+                    <!-- Hypothesis 4 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 4</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> pre-populating forms <br />
+                        <b>Will</b> be perceived as a valuable feature of the gov account <br />
+                        <b>We will know this if / when</b> user researcher participants cite this as a potential benefit
+                    </p>
+                    <!-- Hypothesis 5 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 5</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> offering greater transparency and control over data <br />
+                        <b>Will</b> enhance trust and confidence <br />
+                        <b>We will know this if / when</b> user research participants express interest in ways to interact with and control their data items
+                    </p>
+                    <!-- Hypothesis 6 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 6</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> stating where the data will be shared and how the data will be used <br />
+                        <b>Will</b> increase willingness and confidence in saving and using data for future transactions <br />
+                        <b>We will know this if / when</b> users react positively to their data being used in an unrelated service (see task list)interest in ways to interact with and control their data items
+                    </p>
+                    <br />
                 </div> <!-- /. accordion-default-content-1 -->
             </div> <!-- /. govuk-accordion__section -->
         </div> <!-- /. govuk-accordion -->
