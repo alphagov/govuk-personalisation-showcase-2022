@@ -1,9 +1,11 @@
 {% extends "layout.html" %}
+{% set serviceName %}
+{% include "includes/projectname.html" %}
+{% endset%}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+{% include "includes/projectname.html" %} hub page
 {% endblock %}
-
 {% block beforeContent %}
 <a href="../index.html" class="govuk-back-link">Back</a>
 {% endblock %}
@@ -15,7 +17,7 @@ GOV.UK Prototype Kit
     <!-- Research Intro -->
 
     <div class="govuk-grid-column-two-thirds">
-        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Latest version</strong>
+
         <h1 class="govuk-heading-xl">Round 1</h1>
         <p> <a href="govuk-home.html">
                 <button class="govuk-button" data-module="govuk-button">Start Round 1 prototype</button>
