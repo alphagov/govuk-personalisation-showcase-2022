@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Account - Sign in or create
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+<a href="/round-2/universal-credit/apply" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/round-2/sign-in-or-create-account-form-2" method="POST">
+            <!-- Page Header Content -->
+            <h1 class="govuk-heading-xl">Sign in or create a GOV.UK Account</h1>
+
+            <p>A GOV.UK account allows you to reuse any information you enter across other GOV.UK services in the future, saving you time.
+            </p>
+
+            <!-- Details -->
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">More about GOV.UK Accounts</span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p class="govuk-body">The GOV.UK account can be used to sign in to all online government services.</p>
+
+                    <p>Any information you provide during your applications can be saved to your account and used to fill in any future applications or forms.</p>
+
+                    <p>You can choose whether to share your data with each service you use. You can review and change the sharing permissions of your data in your account dashboard.</p>
+                </div>
+            </details>
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="create-account-or-sign-in-hint">
+                    <div class="govuk-radios">
+                        <!-- Create an account -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="create-account" name="signin-create-account-radios" type="radio" value="create-account" aria-describedby="create-account-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="create-account">Create an account</label>
+                            <div id="create-account-item-hint" class="govuk-hint govuk-radios__hint">
+                                You’ll need an email address and a UK mobile phone number. It will take no more than 5 minutes.
+                            </div>
+                        </div> <!-- /. govuk-radio__item -->
+                        <!-- Sign in Radio Button -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sign-in" name="signin-create-account-radios" type="radio" value="signin" aria-describedby="sign-in-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="sign-in">Sign in</label>
+                        </div> <!-- /. govuk-radio__item -->
+                        <!-- Radio Divider -->
+                        <div class="govuk-radios__divider">or</div>
+                        <!-- Check if you have a GOV.UK Account -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="check-account" name="signin-create-account-radios" type="radio" value="check-account" aria-describedby="check-account-hint">
+                            <label class="govuk-label govuk-radios__label" for="check-account">
+                                Continue without a GOV.UK account
+                            </label>
+                        </div> <!-- /. govuk-radio__item -->
+                    </div> <!-- /.govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. govuk-form-group -->
+            <input class="govuk-input" id="refer" name="refer" type="hidden" value="passport">
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

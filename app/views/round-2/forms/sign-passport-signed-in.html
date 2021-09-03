@@ -1,0 +1,22 @@
+<!-- Radio Button Group -->
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+            <!-- Yes -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-passport-1" name="sign-passport" type="radio" value="yes" {% if data['sign-passport'] == "yes"  %} {{ checked("sign-passport", "yes") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="sign-passport-1">
+                    I understand and will sign my passport
+                </label>
+            </div>
+            <!-- No -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-passport-2" name="sign-passport" type="radio" value="no" {% if data['sign-passport'] == "no"  %} {{ checked("sign-passport", "no") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="sign-passport-2">
+                    I can't sign my name
+                </label>
+            </div>
+
+        </div> <!-- /. govuk-radios -->
+    </fieldset> <!-- /. govuk-fieldset -->
+</div> <!-- /. form-group -->

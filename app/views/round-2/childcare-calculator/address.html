@@ -1,0 +1,57 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Childcare calculator - your address
+{% endblock %}
+
+{% set serviceName %}
+Childcare calculator
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="what-youll-need" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">What is your address?</h1>
+
+        <form action="date-of-birth" method="POST">
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/address-signed-in.html" %}
+            {% else %}
+            {% include "../forms/address-signed-out.html" %}
+            {% endif %}
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form> <!-- /. form -->
+        <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+        {% include "round-2/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

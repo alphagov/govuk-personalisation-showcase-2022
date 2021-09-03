@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Account - Enter phone number
+{% endblock %}
+
+{% set serviceName %}
+GOV.UK Account
+{% endset%}
+
+{% block beforeContent %}
+<a href="create-password.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="enter-otp" method="POST">
+            <h1 class="govuk-heading-xl">Enter your mobile phone number</h1>
+            <p class="govuk-body">We will send a 6 digit security code to the number you give us.</p>
+            <p class="govuk-body">You must use a UK mobile phone number.</p>
+            <!-- UK phone number input -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="phone-number">UK phone number</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="phone-number" name="phone-number" type="number">
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

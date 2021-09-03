@@ -1,0 +1,59 @@
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+
+            <!-- name of childcare provider -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="childcare-provider-name">Name of provider</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="childcare-provider-name" name="childcare-provider-name" type="text" spellcheck="false" value="{{ data['childcare-provider-name'] }}">
+            </div> <!-- /. form-group -->
+
+            <!-- reg num of childcare provider -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="childcare-provider-reg">Registration number</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="childcare-provider-reg" name="childcare-provider-reg" type="text" spellcheck="false" value="{{ data['childcare-provider-reg'] }}">
+            </div> <!-- /. form-group -->
+
+            <!-- mobile of childcare provider -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="phone-number">Telephone number</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="phone-number" name="childcare-provider-phone-number" type="number">
+            </div>
+
+            <br />
+
+            <!-- Building and street line 1-->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-1">
+                    Address (building &amp; street) <span class="govuk-visually-hidden">line 1 of 2</span>
+                </label>
+                <input class="govuk-input" id="address-line-1" name="childcare-provider-address-line-1" type="text" value="{{ data['childcare-provider-address-line-1'] }}">
+            </div>
+            <!-- Building and street line 2 -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-line-2">
+                    <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                </label>
+                <input class="govuk-input" id="address-line-2" name="childcare-provider-address-line-2" type="text" value="{{ data['childcare-provider-address-line-2'] }}">
+            </div>
+            <!-- Town or city -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-town">
+                    Town or city
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="childcare-provider-address-town" type="text" value="{{ data['childcare-provider-address-town'] }}"></div>
+            <!-- County -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-county">
+                    County
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="childcare-provider-address-county" type="text" value="{{ data['childcare-provider-address-county'] }}">
+            </div>
+            <!-- Postcode -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="address-postcode">
+                    Postcode
+                </label>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="childcare-provider-address-postcode" type="text" value="{{ data['childcare-provider-address-postcode'] }}"></div>
+
+        </fieldset> <!-- govuk-fieldset -->
+    </div> <!-- govuk-form-group -->

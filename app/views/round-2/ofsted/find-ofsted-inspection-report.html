@@ -1,0 +1,83 @@
+{% extends "layout_round-1.html" %}
+
+{% block pageTitle %}
+Find an Ofsted inspection report
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-1/help-with-childcare-costs" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-1/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Find an Ofsted inspection report
+        </h1>
+
+        <p>Search for Ofsted inspection reports for:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li class="">childminders and childcare providers</li>
+            <li class="">schools</li>
+            <li class="">colleges and further education providers</li>
+            <li class="">colleges and further education providers</li>
+            <li class="">residential holiday schemes for disabled children</li>
+        </ul>
+
+        {% if data['signing'] == "yes" %}
+        <p>//Paragraph here about what their GOV.UK Account will enable.</p>
+        {% else %}
+        <p>//Paragraph here about why they should use GOV.UK Account.</p>
+        {% endif %}
+
+        <br />
+
+        {% if data['signing'] == "yes" %}
+        <form id="ofsted-start" method="post" action="/round-1/ofsted/ofsted-reports">
+            {% else %}
+            <form id="ofsted-start" method="post" action="/round-1/ofsted/sign-in-or-create-account">
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <input id="ofsted-started" name="ofsted-status" value="started" type="hidden">
+                    <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                        </svg></button>
+                </div>
+            </form>
+
+            {% if data['signing'] == "yes" %}
+            {% else %}
+            <p>or</p>
+            <p><a href="ofsted-reports">Continue without a GOV.UK Account</a></p>
+            {% endif %}
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-1/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

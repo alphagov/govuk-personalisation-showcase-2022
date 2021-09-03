@@ -1,0 +1,128 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Renew your passport
+{% endblock %}
+
+{% set serviceName %}
+Renew your passport
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-2/govuk-home" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-2/includes/travel-abroad-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <aside class="part-navigation-container" role="complementary">
+            <nav class="gem-c-contents-list" aria-label="Pages in this guide" role="navigation" data-module="gem-track-click">
+                <h2 class="gem-c-contents-list__title">
+                    Contents
+                </h2>
+                <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/renew-adult-passport" data-track-options="{&quot;dimension29&quot;:&quot;Overview&quot;}" href="/round-2/replace-your-passport/">Overview</a>
+
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                        Renew
+
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/renew-adult-passport/replace" data-track-options="{&quot;dimension29&quot;:&quot;Replace a lost, stolen or damaged passport&quot;}" href="/round-2/replace-your-passport/replace">Replace a lost, stolen or damaged passport</a>
+
+                    </li>
+                </ol>
+            </nav>
+        </aside>
+
+        <hr>
+
+        <br />
+
+        <h1 class="govuk-heading-xl"> Renew
+        </h1>
+
+        <p>You must renew your passport before you can travel if either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your passport has expired</li>
+            <li>you do not have enough time left on it</li>
+        </ul>
+
+        <p>How much time you need on your passport depends on the country you’re visiting. <a href="/foreign-travel-advice">Check the entry requirements of the country you want to travel to</a>.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>There are different rules if your <a href="/renew-adult-passport/replace">passport is lost, stolen or damaged</a> or you need to <a href="/changing-passport-information">change your name or personal details</a>.</p>
+        </div>
+
+        <p>If your passport is burgundy or has ‘European Union’ on the cover, you can still use it as long as it’s valid for travel.</p>
+
+        <h2 class="govuk-heading-m">>Renew online</h2>
+
+        <p>Use this service to renew your passport online. It costs £75.50.</p>
+
+        <p>You’ll need:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a <a href="/photos-for-passports">digital photo</a>
+            </li>
+            <li>a credit or debit card</li>
+            <li>your passport</li>
+        </ul>
+
+        <p><a class="gem-c-button govuk-button govuk-button--start" role="button" data-module="cross-domain-tracking" data-tracking-code="UA-50679428-3" data-tracking-name="govspeakButtonTracker" href="https://www.passport.service.gov.uk/filter?_ga=2.80103903.932495294.1537777477-946183992.1475581620"> Renew online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                </svg></a></p>
+
+        <h2 class="govuk-heading-m">Renew using a paper application form</h2>
+
+        <p>You can get a paper application form by either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>going to a Post Office that has a <a href="/how-the-post-office-check-and-send-service-works">Check and Send service</a>
+            </li>
+            <li>calling the <a href="/passport-advice-line">Passport Adviceline</a>
+            </li>
+        </ul>
+
+        <p>It costs £85. You can pay by either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>debit or credit card - fill in the form in the application pack</li>
+            <li>cheque - made payable to ‘Her Majesty’s Passport Office’</li>
+        </ul>
+
+        <p>You’ll need 2 new and identical <a href="/photos-for-passports/photo-requirements">printed photos</a> of yourself.</p>
+
+        <h2 class="govuk-heading-m">Unexpired visas</h2>
+
+        <p>Send your previous passport with the visa attached to it with your application. Your previous passport will be returned to you.</p>
+
+        <p>You’ll be able to use the visa if you carry both passports.</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-2/includes/travel-abroad-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

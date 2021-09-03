@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="enter-otp-resume.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="enter-otp-resume" method="POST">
+            <h1 class="govuk-heading-xl">Request a new security code</h1>
+            <p class="govuk-body">We’ll send a new code to 07123456789.<p>
+            <p class="govuk-body">Text messages can sometimes take a few minutes to arrive.</p>
+            <button class="govuk-button" data-module="govuk-button">Send a new code</button>
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

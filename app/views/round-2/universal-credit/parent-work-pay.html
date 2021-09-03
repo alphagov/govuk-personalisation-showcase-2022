@@ -1,0 +1,59 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Universal Credit - application
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="parent-work-hours" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="childcare-provider" method="POST">
+            <h1 class="govuk-heading-xl">How much do get paid per week?</h1>
+
+            <p class="govuk-body">This is your total weekly pay, or profit from self-employment, before tax and National Insurance is taken off. If you’re off work for maternity, paternity, adoption or sick pay, it’s how much you earned before that.<p>
+
+                    {% if data['signing'] == "yes" %}
+                    {% include "../forms/parent-work-pay-signed-in.html" %}
+                    {% else %}
+                    {% include "../forms/parent-work-pay-signed-out.html" %}
+                    {% endif %}
+                    <input id="childcare-calc-started" name="childcare-calc-status" value="completed" type="hidden">
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+        {% include "../includes/prepop-explain-details.html" %}
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

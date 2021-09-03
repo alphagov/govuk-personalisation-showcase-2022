@@ -1,0 +1,83 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Replace your passport
+{% endblock %}
+
+{% set serviceName %}
+Replace your passport
+{% endset%}
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Do you want to share information from your GOV.UK account?
+        </h1>
+
+        <p>The replace your passport application requires the following information which you have already saved in your GOV.UK Account:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li class="">Your address</li>
+            <li class="">Your date of birth</li>
+            <li class="">Your email address</li>
+            <li class="">Your mobile number</li>
+        </ul>
+
+        <br />
+
+        <p>You’ll be asked to provide more information to complete your application, which can also be saved in your GOV.UK account for future use.</p>
+
+        <br />
+
+        <p><b>Do you want the above information to be filled out on the replace your passport application?
+            </b></p>
+
+        <form action="/round-2/replace-your-passport/do-you-live-in-the-uk" method="POST">
+
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-1" name="pp-reuse" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                Yes
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-2" name="pp-reuse" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                No
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

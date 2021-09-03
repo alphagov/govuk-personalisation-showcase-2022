@@ -1,0 +1,60 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Universal Credit - previous address check
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+<a href="address" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        {% if data['signing'] == "yes" %}
+        <form action="/round-2/universal-credit/children-details" method="POST">
+            {% else %}
+            <form action="/round-2/universal-credit/children" method="POST">
+                {% endif %}
+
+                <h1 class="govuk-heading-xl">Do you have a partner that you live with?</h1>
+
+                <br />
+
+                <!-- Radio Button Group -->
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-radios">
+                            <!-- Yes -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="partner-check-1" name="partner-check" type="radio" value="yes" {% if data['partner-check'] == "yes" %} {{ checked("partner-check", "yes") }} {% else %} {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                    Yes
+                                </label>
+                            </div>
+                            <!-- No -->
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="partner-check-2" name="partner-check" type="radio" value="no" {% if data['partner-check'] == "no" %} {{ checked("partner-check", "no") }} {% else %} {% endif %}>
+                                <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                    No
+                                </label>
+                            </div>
+                        </div> <!-- /. govuk-radios -->
+                    </fieldset> <!-- /. govuk-fieldset -->
+                </div> <!-- /. form-group -->
+
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+            </form> <!-- /. form -->
+            {% include "../includes/prepop-explain-details.html" %}
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Free education and childcare for 2-year-olds
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-2/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-2/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Free education and childcare for 2-year-olds</h1>
+
+        <p>Your 2-year-old can get free childcare if you live in England and get one of the following benefits:
+
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Income Support</li>
+            <li>income-based Jobseeker’s Allowance (JSA)</li>
+            <li>income-related Employment and Support Allowance (ESA)</li>
+            <li>Universal Credit, and your household income is £15,400 a year or less after tax, not including benefit payments</li>
+            <li>child tax credits, and your household income is £16,190 a year or less before tax</li>
+            <li>the guaranteed element of Pension Credit</li>
+            <li>the Working Tax Credit 4-week run on (the payment you get when you stop qualifying for Working Tax Credit)</li>
+        </ul>
+
+        <p>2-year-olds can also get free childcare if they:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are looked after by a local authority</li>
+            <li>have a statement of special education needs (SEN) or an education, health and care (EHC) plan</li>
+            <li>get Disability Living Allowance</li>
+            <li>have left care under an adoption order, special guardianship order or a child arrangements order</li>
+        </ul>
+
+        <p>You may have to pay for extra costs like meals, nappies or trips.</p>
+
+        <p>Contact your childcare provider or local council to find out more.</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-2/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
