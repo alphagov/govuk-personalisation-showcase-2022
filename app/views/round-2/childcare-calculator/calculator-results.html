@@ -22,7 +22,7 @@ Childcare calculator
 
 <a href="check-your-answers" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 
-{% include "round-2/includes/childcare-step-by-step-panel.html" %}
+{% include "round-2/includes/personalised.html" %}
 {% endblock %}
 {% block content %}
 
@@ -30,8 +30,6 @@ Childcare calculator
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">Help you could get with your childcare costs</h1>
-
-        <p class="govuk-inset-text">{% include "round-2/includes/calculator-results-summary.html" %}</p>
 
         <p>The amount you could get is for the next 12 months. If your circumstances change in that time, you’ll need to get a new estimate.</p>
 
@@ -45,7 +43,7 @@ Childcare calculator
             You could get up to <b>30 hours</b> free childcare a week - this is 1,140 hours a year.
         </div> <!-- /. inset-text -->
 
-        <p>You can get free hours for your 3 or 4 year old that can be used in or outside of school term time. Your provider may apply charges for additional services.</p>
+        <p>You can get free hours for <b>{{ data['child-1-name'] }}</b> that can be used in or outside of school term time. Your provider may apply charges for additional services.</p>
 
         <p>Free childcare hours stop when <b>{{ data['child-1-name'] }}</b> starts in reception class.</p>
 
@@ -71,6 +69,8 @@ Childcare calculator
 
             </div>
         </details>
+
+        <br />
 
         <hr>
 
@@ -100,6 +100,8 @@ Childcare calculator
             </div>
         </details>
 
+        <br />
+
         <hr>
 
         <br />
@@ -108,7 +110,6 @@ Childcare calculator
 
         <div class="govuk-inset-text">
             You may be able to claim back up to 85% of your childcare costs if you’re eligible for <a href="/round-2/universal-credit">Universal Credit</a>.
-
 
         </div> <!-- /. inset-text -->
 

@@ -32,6 +32,8 @@ Childcare: step by step
         </li>
     </ol>
 </div>
+<br />
+{% include "round-2/includes/personalised.html" %}
 {% endblock %}
 
 {% block content %}
@@ -43,24 +45,9 @@ Childcare: step by step
             Get childcare: step by step
         </h1>
 
-        {% if data['childcare-calc-status'] == "completed" and data['signing'] == "yes" %}
-        <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                    This page is being personalised based on information stored in your GOV.UK account
-                </span>
-            </summary>
-            <div class="govuk-details__text">
-                <p>{% include "round-2/includes/calculator-results-summary.html" %}</p>
-                <p><a href="account/index">View your GOV.UK account</a></p>
-            </div>
-        </details>
-
-        {% else %}
         <p>
             How to find childcare, get help paying for it and what to do if your circumstances change.
         </p>
-        {% endif %}
 
         {% include "round-2/includes/childcare-step-by-step.html" %}
 

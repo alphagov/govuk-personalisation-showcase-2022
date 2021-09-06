@@ -781,3 +781,13 @@
 .browse .browse-panes .subsection-pane .detailed-guidance {
     margin-top: 30px
 }
+
+.personalised {
+    padding: 10px;
+    background: #f0f0f0;
+    margin-bottom: 0px;
+}
+
+.govuk-details {
+    margin-bottom: 0px;
+}

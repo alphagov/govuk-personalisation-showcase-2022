@@ -63,7 +63,7 @@
 
                         <ul class="govuk-list govuk-list--bullet" data-length="4">
 
-                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/round-2/tax-credits">tax credits </a></li>
+                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/round-2/tax-free-childcare">Tax-Free Childcare </a></li>
                             <li class=" govuk-link"><a data-position="3.3" class="gem-c-step-nav__link js-link" href="/round-2/universal-credit">Universal Credit </a> {% if data['universal-credit-status'] == "started" and data['signing'] == "yes" %}
                                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
                                     In progress
@@ -75,12 +75,14 @@
 
                         </ul>
 
-                        <p>You could also get free hours childcare for <b>{{ data['child-1-name'] }}</b>. You can apply for:</p>
+                        <p>You can also get 30 free hours childcare for <b>{{ data['child-1-name'] }}</b></p>
 
-                        <ul class="govuk-list govuk-list--bullet" data-length="3">
+                        <p>There's one application for Tax-Free Childcare and 30 hours free childcare. As part of your application, you will find out if you can get both.</p>
+
+                        <!--  <ul class="govuk-list govuk-list--bullet" data-length="3">
 
                             <li class=" govuk-link"><a data-position="3.7" class="gem-c-step-nav__link js-link" href="#">30 hours free childcare for 3 to 4 year olds </a></li>
-                        </ul>
+                        </ul> -->
 
                         <br />
                         {% else %}
@@ -89,7 +91,7 @@
 
                         <ul class="govuk-list govuk-list--bullet" data-length="4">
 
-                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/round-2/tax-credits">tax credits </a></li>
+                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/round-2/tax-free-childcare">Tax-free childcare </a></li>
                             <li class=" govuk-link"><a data-position="3.3" class="gem-c-step-nav__link js-link" href="/round-2/universal-credit">Universal Credit </a> {% if data['universal-credit-status'] == "started" and data['signing'] == "yes" %}
                                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
                                     In progress
@@ -176,7 +178,7 @@
                         <p>Tell government straight away if your circumstances change and you're getting:</p>
 
                         <ul class="govuk-list govuk-list--bullet" data-length="2">
-                            <li class=" govuk-link"><a data-position="4.1" class="gem-c-step-nav__link js-link" href="/round-2/changes-affecting-tax-credits">tax credits </a></li>
+                            <li class=" govuk-link"><a data-position="4.1" class="gem-c-step-nav__link js-link" href="/round-2/changes-affecting-tax-credits">Tax-free childcare</a></li>
                             <li class=" govuk-link"><a data-position="4.2" class="gem-c-step-nav__link js-link" href="/round-2/universal-credit/changes-of-circumstances">Universal Credit </a></li>
                         </ul>
 
@@ -217,7 +219,7 @@
                     <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
 
                         {% if data['signing'] == "yes" %}
-                        <p><b>{{ data['child-1-name'] }}</b> starts primary school <b>September 2022</b>.</p>
+                        <p><b>{{ data['child-1-name'] }}</b> starts primary school in <b>September 2022</b>.</p>
                         {% else %}
                         <p>Your child starts primary school the September after they turn 4.</p>
                         {% endif %}
