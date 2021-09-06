@@ -25,51 +25,69 @@ Replace your passport
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Do you want to share information from your GOV.UK account?
-        </h1>
+        <form action="/round-2/replace-your-passport/old-passport-details" method="POST">
 
-        <p>The replace your passport application requires the following information which you have already saved in your GOV.UK Account:</p>
-
-        <ul class="govuk-list govuk-list--bullet">
-            <li class="">Your address</li>
-            <li class="">Your date of birth</li>
-            <li class="">Your email address</li>
-            <li class="">Your mobile number</li>
-        </ul>
-
-        <br />
-
-        <p>You’ll be asked to provide more information to complete your application, which can also be saved in your GOV.UK account for future use.</p>
-
-        <br />
-
-        <p><b>Do you want the above information to be filled out on the replace your passport application?
-            </b></p>
-
-        <form action="/round-2/replace-your-passport/do-you-live-in-the-uk" method="POST">
-
-            <!-- Radio Button Group -->
             <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <div class="govuk-radios">
-                        <!-- Yes -->
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="partner-check-1" name="pp-reuse" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="partner-check-1">
-                                Yes
+                <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Do you want to use information saved in your GOV.UK account?
+                        </h1>
+                    </legend>
+                    <p>The replace your passport application requires some information which you already have saved in your GOV.UK account.
+                    </p>
+
+                    <p>You can prefill the application form with your saved answers, saving you time.</p>
+
+                    <br />
+
+                    <p><b>Select the information you want to be prefilled on your replace your passport application:</b></p>
+
+                    <div id="calculator-consent-hint" class="govuk-hint">
+
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent">
+                                Your address
                             </label>
                         </div>
-                        <!-- No -->
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="partner-check-2" name="pp-reuse" type="radio" value="no">
-                            <label class="govuk-label govuk-radios__label" for="partner-check-2">
-                                No
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-2" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-2">
+                                Your date of birth
                             </label>
                         </div>
-                    </div> <!-- /. govuk-radios -->
-                </fieldset> <!-- /. govuk-fieldset -->
-            </div> <!-- /. form-group -->
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-3" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-3">
+                                Your email address
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-4" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-4">
+                                Your mobile number
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__divider">or</div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-5" name="calculator-consent" type="checkbox" value="none" data-behaviour="exclusive">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-5">
+                                No, I don't want to use any information from my GOV.UK account
+                            </label>
+
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <p>You’ll be asked to provide more information to complete your application, which can also be saved in your GOV.UK account for future use.</p>
+
             <button class="govuk-button" data-module="govuk-button">Continue</button>
+
         </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
