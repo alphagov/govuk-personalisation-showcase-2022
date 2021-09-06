@@ -6,7 +6,8 @@
                         You are signed in
                         {% if data['full-name'] %}
                         as {{ data['full-name'] }}.
-                        {% else %}.
+                        {% else %}
+                        as <b>{{ data['email-address'] }}</b>.
                         {% endif %}
                         <br /> This page is being personalised based on information saved in your GOV.UK account
                     </span>

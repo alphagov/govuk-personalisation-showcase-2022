@@ -1,4 +1,4 @@
-{% extends "layout_round-1.html" %}
+{% extends "layout_round-2.html" %}
 
 {% block pageTitle %}
 Find a nursery school place
@@ -33,11 +33,7 @@ Find a nursery school place
         <h1 class="govuk-heading-xl">Find a nursery school place
         </h1>
 
-        {% if data['signing'] == "yes" %}
-        <p>//Paragraph here about what their GOV.UK Account will enable.</p>
-        {% else %}
-        <p>//Paragraph here about why they should use GOV.UK Account.</p>
-        {% endif %}
+
 
         <form method="post" action="ofsted-reports-nursery" id="local-locator-form" class="location-form govuk-!-margin-bottom-9">
             <fieldset class="govuk-fieldset">
@@ -63,7 +59,7 @@ Find a nursery school place
     </div> <!-- /. govuk-grid-column-two-thirds -->
 
     <div class="govuk-grid-column-one-third">
-        {% include "round-1/includes/childcare-side-panel-control.html" %}
+
     </div>
 
 </div> <!-- /. govuk-grid-row -->
