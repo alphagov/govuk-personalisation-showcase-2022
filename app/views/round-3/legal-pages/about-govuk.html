@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<style>
+    #back-link {
+        cursor: pointer;
+    }
+</style>
+<a href="../create-password.html" class="govuk-back-link" id="back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <!-- Main Body Content -->
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">About GOV.UK</h1>
+        <p>GOV.UK is the website for the UK government. It’s the best place to find government services and information.</p>
+
+        <p>The site is maintained by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service (<abbr title="Government Digital Service" style="text-decoration: none;">GDS</abbr>)</a>.</p>
+
+        <!-- Whats on GOV.UK -->
+
+        <h3 class="govuk-heading-m">What’s on GOV.UK</h3>
+        <p class="govuk-body">You can find:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>information and services for citizens and businesses</li>
+            <li>detailed guidance for professionals</li>
+            <li>information on government and policy</li>
+        </ul>
+
+        <!-- How GOV.UK is updated -->
+
+        <h3 class="govuk-heading-m">How GOV.UK is updated</h3>
+
+        <p class="govuk-body">We work closely with every government department to make sure all the information on GOV.UK is accurate and up to date.</p>
+        <p class="govuk-body">GOV.UK is also updated based on results from user research and feedback from members of the public.</p>
+
+        <!-- Tracking users -->
+
+        <h3 class="govuk-heading-m">Tracking users</h3>
+
+        <p class="govuk-body">We track how you use GOV.UK, but we do not collect or store your personal information (such as your name or address) while you’re browsing. This means that you cannot be personally identified.</p>
+        <p class="govuk-body">We use Google Analytics software to track:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>what pages you visit</li>
+            <li>how long you use the site</li>
+            <li>how you got to the site and what links you clicked on</li>
+        </ul>
+
+        <p class="govuk-body">We do not allow Google to share this data with anyone else.</p>
+
+        <!-- Reuse information published on GOV.UK -->
+
+        <h3 class="govuk-heading-m">Reuse information published on GOV.UK</h3>
+
+        <p class="govuk-body">You can republish any of the content on GOV.UK, as long as you meet the conditions of the <a rel="external" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" class="govuk-link">Open Government Licence</a>.</p>
+
+        <!-- Links to other sites from GOV.UK -->
+
+        <h3 class="govuk-heading-m">Links to other sites from GOV.UK</h3>
+
+        <p class="govuk-body">GOV.UK links to external organisations when that link is essential for helping someone complete a task that they begin on the site.</p>
+        <p class="govuk-body">For example, there’s a link from the content on university applications to the Universities and Colleges Admissions Service (UCAS) website.</p>
+        <p class="govuk-body">We will only consider link requests if the website falls into this ‘essential’ category.</p>
+        <p class="govuk-body">You can <a href="https://www.gov.uk/contact/govuk" class="govuk-link">ask for a link to be added</a> to GOV.UK.</p>
+
+        <!-- Data sets on GOV.UK -->
+
+        <h3 class="govuk-heading-m">Data sets on GOV.UK</h3>
+
+        <p class="govuk-body">GOV.UK uses several data sets to help make the website better.</p>
+        <p class="govuk-body">For example, data is used to take you to your council’s website if you want to know what day your bin’s collected.</p>
+        <p class="govuk-body">Many of these data sets are used under the <a rel="external" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" class="govuk-body">Open Government Licence</a>.</p>
+
+        <p class="govuk-body">We use:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+            <a rel="external" href="http://id.esd.org.uk/ServiceList" class="govuk-link">Local Government Service List</a> and <a rel="external" href="http://id.esd.org.uk/list/interactions" class="govuk-link">Local Government Interaction List</a> by <a rel="external" href="http://esd.org.uk/" class="govuk-link">esd-toolkit</a>
+            </li>
+            <li>
+            <a rel="external" href="http://www.ordnancesurvey.co.uk/oswebsite/products/boundary-line/index.html" class="govuk-link">Boundary-Line</a> from <a rel="external" href="http://www.ordnancesurvey.co.uk/oswebsite/" class="govuk-link">Ordnance Survey</a>
+            </li>
+            <li>
+            <a rel="external" href="https://www.ons.gov.uk/methodology/geography/geographicalproducts/postcodeproducts" class="govuk-link">ONS Postcode Directory</a> from <a rel="external" href="http://www.ons.gov.uk/ons/index.html" class="govuk-link">Office for National Statistics</a>
+            </li>
+        </ul>
+
+        <p class="govuk-body-s">Last updated 12 November 2014</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <!-- Related Content -->
+    <div class="govuk-grid-column-one-third">
+        <div class="related-content">
+            <h1 class="govuk-heading-s">Related content</h1>
+            <a class="govuk-link" href="privacy-notice.html">Privacy notice</a>
+            <div class="govuk-!-padding-bottom-3"></div>
+            <a class="govuk-link" href="terms-and-conditions.html">Terms and conditions</a>
+        </div> <!-- /. related-content -->
+    </div> <!-- /. govuk-grid-column-one-third -->
+</div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+</script>
+
+{% endblock %}

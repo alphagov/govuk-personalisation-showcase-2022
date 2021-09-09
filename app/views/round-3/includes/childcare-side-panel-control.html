@@ -1,0 +1,6 @@
+            {% if data['signing'] == "yes" %}
+            {% include "round-3/includes/childcare-signed-in-side-panel.html" %}
+            {% else %}
+            {% include "round-3/includes/childcare-signed-out-side-panel.html" %}
+            {% endif %}
+            {% include "round-3/includes/childcare-side-panel-step-by-step.html" %}

@@ -1,0 +1,50 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Childcare calculator - Are you in paid work?
+{% endblock %}
+
+{% set serviceName %}
+Childcare calculator
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="do-you-live-with-partner" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/round-3/paid-work-check" method="POST">
+            <h1 class="govuk-heading-xl">What is your current employment status?</h1>
+
+            <p class="govuk-body">Choose your normal situation if you are currently on maternity, paternity, shared parental, adoption or sick leave.<p>
+
+                    {% if data['signing'] == "yes" %}
+                    {% include "../forms/employment-status-signed-in.html" %}
+                    {% else %}
+                    {% include "../forms/employment-status-signed-out.html" %}
+                    {% endif %}
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/childcare-side-panel-control.html" %}
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

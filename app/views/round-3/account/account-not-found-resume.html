@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="dvla-service-page-1" method="POST">
+            <h1 class="govuk-heading-xl">No GOV.UK Account found</h1>
+            <p class="govuk-body">We could not find a GOV.UK Account using this email address.</p>
+            <p class="govuk-body">This could be because:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>
+                    you don't have a GOV.UK Account
+                </li>
+                <li>
+                    you entered an incorrect email address
+                </li>
+            </ul>
+            <button class="govuk-button" data-module="govuk-button">Start a new report to DVLA</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+            <a href="sign-in-to-resume.html" class="govuk-link">Try another email address</a>
+        </form>
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

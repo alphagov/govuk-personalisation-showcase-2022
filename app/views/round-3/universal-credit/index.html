@@ -1,0 +1,83 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Universal Credit
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-3/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-3/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Universal Credit eligibility</h1>
+
+
+
+        <p>Universal Credit is a payment to help with your living costs. It’s paid monthly - or <a href="/universal-credit/how-youre-paid">twice a month for some people in Scotland</a>.</p>
+
+        <p>You may be able to get it if you’re on a low income, out of work or you cannot work.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>This guide is also available <a href="/credyd-cynhwysol">in Welsh (Cymraeg)</a>.</p>
+        </div>
+
+        <p>If you live in Northern Ireland, go to <a rel="external" href="https://www.nidirect.gov.uk/universalcredit">Universal Credit in Northern Ireland</a>.</p>
+
+        <h2 id="sign-in">Sign in</h2>
+
+        <p><a href="/sign-in-universal-credit">Sign in to your Universal Credit account</a> if you already have one.</p>
+
+        <h2 id="if-you-already-get-other-benefits">If you already get other benefits</h2>
+
+        <p>Universal Credit is replacing the following benefits:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Child Tax Credit</li>
+            <li>Housing Benefit</li>
+            <li>Income Support</li>
+            <li>income-based Jobseeker’s Allowance (JSA)</li>
+            <li>income-related Employment and Support Allowance (ESA)</li>
+            <li>Working Tax Credit</li>
+        </ul>
+
+        <p>If you currently get any of these benefits, you do not need to do anything unless:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you have a <a href="/universal-credit/changes-of-circumstances">change of circumstances</a> you need to report</li>
+            <li>the Department for Work and Pensions (DWP) contacts you about moving to Universal Credit</li>
+        </ul>
+
+        <p>If you get tax credits, they will stop when you or your partner applies for Universal Credit. <a href="/how-tax-credits-affect-other-benefits">Check how tax credits and Universal Credit affect each other</a>.</p>
+
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

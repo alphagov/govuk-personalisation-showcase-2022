@@ -1,0 +1,83 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+account created
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+{% block beforeContent %}
+
+<a href="enter-otp.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        {% if data['refer'] == "calculator" %}
+        <form action="/round-3/childcare-calculator/address" method="POST">
+            <!-- Success Panel -->
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    You have created your GOV.UK account
+
+                </h1>
+            </div>
+            <h2 class="govuk-heading-m">What you can do with your GOV.UK account</h2>
+
+            <p>A GOV.UK account allows you to save any information you enter during the Childcare Calculator and reuse it across other GOV.UK services in the future, saving you time. </p>
+
+            <p>Any information you provide can be used to prefill forms and personalise your account, such as tailored help content.</p>
+
+            <p>Your account can be used for all GOV.UK services, not just the Childcare Calculator.
+            </p>
+
+            <br />
+
+            <button class="govuk-button" data-module="govuk-button">Continue to childcare calculator</button>
+
+            {% elif data['refer'] == "universal" %}
+            <form action="/round-3/universal-credit/pre-population" method="POST">
+                <!-- Success Panel -->
+                <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">
+                        You have created your GOV.UK account
+
+                    </h1>
+                </div>
+                <h2 class="govuk-heading-m">What you can do with your GOV.UK account</h2>
+
+                <p>A GOV.UK account allows you to save any information you enter during the Universal Credit application and reuse it across other GOV.UK services in the future, saving you time. </p>
+
+                <p>Any information you provide can be used to prefill forms and personalise your account, such as tailored help content.</p>
+
+                <p>Your account can be used for all GOV.UK services, not just Universal Credit.
+                </p>
+
+                <br />
+
+                <button class="govuk-button" data-module="govuk-button">Continue to Universal Credit</button>
+
+                {% else %}
+                <form action="/round-3/govuk-home" method="POST">
+                    <!-- Success Panel -->
+                    <div class="govuk-panel govuk-panel--confirmation">
+                        <h1 class="govuk-panel__title">
+                            You have successfully created your GOV.UK Account
+                        </h1>
+                    </div>
+
+                    <button class="govuk-button" data-module="govuk-button">Return to GOV.UK homepage</button>
+
+                    {% endif %}
+                </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+
+{% endblock %}

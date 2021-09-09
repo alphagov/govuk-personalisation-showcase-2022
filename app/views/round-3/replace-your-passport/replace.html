@@ -1,0 +1,138 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Replace your passport
+{% endblock %}
+
+{% set serviceName %}
+Replace your passport
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-3/govuk-home" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-3/includes/travel-abroad-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <aside class="part-navigation-container" role="complementary">
+            <nav class="gem-c-contents-list" aria-label="Pages in this guide" role="navigation" data-module="gem-track-click">
+                <h2 class="gem-c-contents-list__title">
+                    Contents
+                </h2>
+                <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/renew-adult-passport" data-track-options="{&quot;dimension29&quot;:&quot;Overview&quot;}" href="index">Overview</a>
+
+                    </li>
+
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/renew-adult-passport/replace" data-track-options="{&quot;dimension29&quot;:&quot;Replace a lost, stolen or damaged passport&quot;}" href="/round-3/replace-your-passport/renew">Renew </a>
+
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                        Replace a lost, stolen or damaged passport
+
+                    </li>
+                </ol>
+            </nav>
+        </aside>
+
+        <hr>
+
+        <br />
+
+        <h1 class="govuk-heading-xl">Replace your adult passport
+        </h1>
+
+        <p>You must replace your passport if it has more than reasonable wear and tear because you may not be allowed to travel with it.</p>
+
+        <h2 class="govuk-heading-m">If you need to attend an interview</h2>
+
+        <p>Passport offices are temporarily closed and face-to-face interviews are suspended because of coronavirus (COVID-19).</p>
+
+        <p>Video interviews are taking place online. If you need an interview, you’ll be contacted after your application has been processed to book it.</p>
+
+        <h2 class="govuk-heading-m">Replace online</h2>
+
+        <p>Use this service to replace your passport online. It costs £75.50.</p>
+
+        <p>You’ll need:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a <a href="/photos-for-passports">digital photo</a>
+            </li>
+            <li>a credit or debit card</li>
+        </ul>
+
+        <p>You’ll need to ask someone to <a href="/confirm-identity-online-for-passport-application">confirm your identity online</a> if you’re replacing a lost or stolen passport.</p>
+
+        {% if data['signing'] == "yes" %}
+        <form id="universal-credit-start" method="post" action="/round-3/replace-your-passport/pre-population">
+            <div class="govuk-form-group">
+                <input id="replace-passport-started" name="replace-passport-status" value="started" type="hidden">
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Replace online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
+        </form>
+        {% else %}
+        <form id="universal-credit-start" method="post" action="/round-3/replace-your-passport/sign-in-or-create-account">
+            <div class="govuk-form-group">
+                <input id="universal-credit-started" name="replace-passport-status" value="started" type="hidden">
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Replace online <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
+        </form>
+        {% endif %}
+
+        <h2 class="govuk-heading-m">Replace using a paper application form</h2>
+
+        <p>You can get a paper application form by either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>going to the Post Office</li>
+            <li>calling the <a href="/passport-advice-line">Passport Adviceline</a>
+            </li>
+        </ul>
+
+        <p>It costs £85. You can pay by either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>debit or credit card - fill in the form in the application pack</li>
+            <li>cheque - made payable to ‘Her Majesty’s Passport Office’</li>
+        </ul>
+
+        <p>You’ll need 2 new and identical <a href="/photos-for-passports/photo-requirements">printed photos</a> of yourself.</p>
+
+        <p>You can use the <a href="/how-the-post-office-check-and-send-service-works">Post Office Check and Send service</a> if you’re using a paper form. The address to send it to is on the form.</p>
+
+        <h3 class="govuk-heading-s">Countersignatories</h3>
+
+        <p>You need to get your application form and 1 of your photos <a href="/countersigning-passport-applications">signed by someone else</a> to prove your identity.</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/travel-abroad-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

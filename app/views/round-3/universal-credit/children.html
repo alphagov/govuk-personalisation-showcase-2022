@@ -1,0 +1,49 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Universal Credit - previous address check
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+<a href="address" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/round-3/paid-work-check" method="POST">
+
+            {% if data['partner-check'] == "yes" %}
+            <h1 class="govuk-heading-xl">Claim with your partner</h1>
+            {% else %}
+            <h1 class="govuk-heading-xl">Claim as a single person</h1>
+            {% endif %}
+
+            {% if data['partner-check'] == "yes" %}
+            <p>Your partner will be asked to provide their details.</p>
+            {% else %}
+            <p>You must let us know if you start living with your partner.</p>
+            {% endif %}
+
+            <p>You will now have to give details of things like:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li class="">any children that live with you</li>
+                <li class="">your work and earnings</li>
+                <li>childcare costs</li>
+            </ul>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

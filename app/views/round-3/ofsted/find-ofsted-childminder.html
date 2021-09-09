@@ -1,0 +1,65 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Find a childminder
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/round-3/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-3/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Find a childminder
+        </h1>
+
+
+        <form method="post" action="ofsted-reports-childminder" class="location-form govuk-!-margin-bottom-9">
+            <fieldset class="govuk-fieldset">
+                <legend class=" govuk-fieldset__legend govuk-visually-hidden">Postcode lookup</legend>
+
+                <div class="govuk-form-group">
+
+                    <label for="postcode" class="gem-c-label govuk-label">Enter a postcode</label>
+
+                    <div id="hint-5038ba12" class="gem-c-hint govuk-hint govuk-!-margin-bottom-3">
+                        For example SW1A 2AA
+                    </div>
+
+                    <input name="address-postcode" class="gem-c-input govuk-input" id="postcode" type="text" autocomplete="postal-code" aria-describedby="hint-5038ba12">
+                </div>
+
+                <button class="gem-c-button govuk-button gem-c-button--bottom-margin" type="submit">Find</button>
+
+                <p class="govuk-body"><a id="postcode-finder-link" class="govuk-link" rel="external" href="https://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a></p>
+            </fieldset>
+        </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
