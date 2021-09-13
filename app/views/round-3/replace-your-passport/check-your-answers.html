@@ -21,9 +21,7 @@ Replace your passport
         <h1 class="govuk-heading-l">Replace your passport - check your answers</h1>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-sumary-list__row">
-                <h2>About you</h2>
-            </div>
+
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Name
@@ -120,7 +118,7 @@ Replace your passport
                 </dt>
                 <dd class="govuk-summary-list__value">
                     <p class="govuk-body">Number: {{ data['passport-number'] }}</p>
-                    <p class="govuk-body">Expires: {{ data['passport-expiry-day'] }}-{{ data['passport-expiry-month'] }}-{{ data['passport-expiry-year'] }}</p>
+                    <p class="govuk-body">Expires: {{ data['passport-expiry-day'] }} - {{ data['passport-expiry-month'] }} - {{ data['passport-expiry-year'] }}</p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
@@ -161,7 +159,7 @@ Replace your passport
 
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                    Passport photo
+                    Digital photo
                 </dt>
                 <dd class="govuk-summary-list__value" style="vertical-align: top;">
                     <p class="govuk-body"><img src="../../public/images/queen.png"></p>
