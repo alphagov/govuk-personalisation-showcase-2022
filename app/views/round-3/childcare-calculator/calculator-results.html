@@ -115,9 +115,13 @@ Childcare calculator
 
         <br />
 
-        <a href="../childcare-step-by-step"><button class="govuk-button" data-module="govuk-button">
-                Back to childcare step-by-step
-            </button></a>
+        <form id="childcare-calc-start" method="post" action="/round-3/childcare-step-by-step">
+
+            <div class="govuk-form-group">
+                <input id="childcare-calc-started" name="child-1-name" value="Child 1" type="hidden">
+                <button class="govuk-button govuk-button" data-module="govuk-button">Back to childcare step-by-step </button>
+            </div>
+        </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 

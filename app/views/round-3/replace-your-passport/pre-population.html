@@ -25,7 +25,7 @@ Replace your passport
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form action="/round-3/replace-your-passport/old-passport-details" method="POST">
+        <form action="/round-3/replace-your-passport/check-your-answers" method="POST">
 
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
@@ -48,9 +48,15 @@ Replace your passport
                     </div>
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                <b>Select all</b>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="calculator-consent" name="calculator-consent" type="checkbox" value="france">
                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent">
-                                Your address
+                                Your name
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
@@ -71,20 +77,54 @@ Replace your passport
                                 Your mobile number
                             </label>
                         </div>
-                        <div class="govuk-checkboxes__divider">or</div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-5" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-5">
+                                Your gender
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-6" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-6">
+                                Your address
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-7" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-7">
+                                Your place of birth
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-8" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-8">
+                                Your old passport number
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-9" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-9">
+                                Your current driving licence photo
+                            </label>
+                        </div>
+                        <!--  <div class="govuk-checkboxes__divider">or</div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="calculator-consent-5" name="calculator-consent" type="checkbox" value="none" data-behaviour="exclusive">
                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-5">
                                 No, I don't want to use any information from my GOV.UK account
                             </label>
 
-                        </div>
+                        </div> -->
                     </div>
-
+                    <input id="childcare-calc-started" name="gender" value="Female" type="hidden">
+                    <input id="childcare-calc-started" name="passport-number" value="JXB124272929P" type="hidden">
+                    <input id="childcare-calc-started" name="passport-expiry-day" value="12" type="hidden">
+                    <input id="childcare-calc-started" name="passport-expiry-month" value="May" type="hidden">
+                    <input id="childcare-calc-started" name="passport-expiry-year" value="2027" type="hidden"> <input id="childcare-calc-started" name="town-of-birth" value="London" type="hidden">
                 </fieldset>
             </div>
 
-            <p>You’ll be asked to provide more information to complete your application, which can also be saved in your GOV.UK account for future use.</p>
+            {% include "round-3/includes/prefill-explain.html" %}
 
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
@@ -97,5 +137,7 @@ Replace your passport
     </div>
 
 </div> <!-- /. govuk-grid-row -->
+
+{% include "round-3/includes/select-all.js" %}
 
 {% endblock %}

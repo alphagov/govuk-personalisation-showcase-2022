@@ -120,7 +120,7 @@ Replace your passport
                 </dt>
                 <dd class="govuk-summary-list__value">
                     <p class="govuk-body">Number: {{ data['passport-number'] }}</p>
-                    <p class="govuk-body">Expires: {{ data['passport-expiry-day'] }}/{{ data['passport-expiry-month'] }}/{{ data['passport-expiry-year'] }}</p>
+                    <p class="govuk-body">Expires: {{ data['passport-expiry-day'] }}-{{ data['passport-expiry-month'] }}-{{ data['passport-expiry-year'] }}</p>
 
                 </dd>
                 <dd class="govuk-summary-list__actions">
@@ -157,6 +157,22 @@ Replace your passport
 
                 </dd>
             </div>
+
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Passport photo
+                </dt>
+                <dd class="govuk-summary-list__value" style="vertical-align: top;">
+                    <p class="govuk-body"><img src="../../public/images/queen.png"></p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
         </dl>
     </div>
 
@@ -171,7 +187,7 @@ Replace your passport
 
         <br />
 
-        <form class="form" action="consent" method="post">
+        <form class="form" action="confirmation" method="post">
 
             <div class="govuk-form-group">
 

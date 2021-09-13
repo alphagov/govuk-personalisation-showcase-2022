@@ -49,6 +49,12 @@ Universal Credit
                     </div>
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                <b>Select all</b>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="calculator-consent" name="calculator-consent" type="checkbox" value="france">
                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent">
                                 Your address
@@ -63,7 +69,7 @@ Universal Credit
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="calculator-consent-3" name="calculator-consent" type="checkbox" value="spain">
                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-3">
-                                Your child(ren)'s name and date of birth
+                                Your child(ren)'s date of birth
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item">
@@ -96,20 +102,20 @@ Universal Credit
                                 Your average weekly pay
                             </label>
                         </div>
-                        <div class="govuk-checkboxes__divider">or</div>
+                        <!-- <div class="govuk-checkboxes__divider">or</div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="calculator-consent-5" name="calculator-consent" type="checkbox" value="none" data-behaviour="exclusive">
                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-5">
                                 No, I don't want to use any information from my GOV.UK account
                             </label>
 
-                        </div>
+                        </div> -->
                     </div>
 
                 </fieldset>
             </div>
 
-            <p>You’ll be asked to provide more information to complete your application, which can also be saved in your GOV.UK account for future use.</p>
+            {% include "round-3/includes/prefill-explain.html" %}
 
             <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form>
@@ -121,5 +127,7 @@ Universal Credit
     </div>
 
 </div> <!-- /. govuk-grid-row -->
+
+{% include "round-3/includes/select-all.js" %}
 
 {% endblock %}

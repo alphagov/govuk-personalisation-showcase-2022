@@ -35,14 +35,13 @@ Childcare calculator
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Which children were cared for?</h1>
+        <h1 class="govuk-heading-xl">What is the name of the child that was cared for?</h1>
 
         <form action="/round-3/universal-credit/check-your-answers" method="POST" autocomplete="off">
-            {% if data['signing'] == "yes" %}
-            {% include "../forms/childcare-which-signed-in.html" %}
-            {% else %}
-            {% include "../forms/childcare-which-signed-out.html" %}
-            {% endif %}
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="child-1-name">What is their full name?</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="child-1-name" name="child-1-name" type="text" spellcheck="false">
+            </div>
             <button class="govuk-button" data-module="govuk-button">Continue</button>
             <div class="govuk-!-padding-bottom-1"></div>
 
