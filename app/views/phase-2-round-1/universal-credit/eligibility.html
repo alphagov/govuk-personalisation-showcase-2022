@@ -1,0 +1,67 @@
+{% extends "layout_phase-2-round-1.html" %}
+
+{% block pageTitle %}
+Universal Credit eligibility
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/phase-2-round-1/universal-credit" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "phase-2-round-1/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Universal Credit eligibility</h1>
+
+        <p>You may be able to claim back up to 85% of your childcare costs if you’re eligible for <a href="/universal-credit/eligibility">Universal Credit</a>.</p>
+
+        <p>You (and your partner if you live with them) will usually need to either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>be working - it does not matter how many hours you or your partner work</li>
+            <li>have a job offer</li>
+        </ul>
+
+        <h2 class="govuk-heading-l" id="how-much-youll-get">How much you’ll get</h2>
+
+        <p>The most you can get back each month is:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>£646 for one child</li>
+            <li>£1108 for 2 or more children</li>
+        </ul>
+
+        <p>You can <a href="/apply-universal-credit">claim Universal Credit online</a>.</p>
+
+        <h2 class="govuk-heading-l" id="if-you-stop-working">If you stop working</h2>
+
+        <p>If you stop working you must report a change of circumstances in <a href="/sign-in-universal-credit">your Universal Credit account</a>.</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-1/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

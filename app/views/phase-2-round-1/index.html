@@ -1,0 +1,209 @@
+{% extends "layout.html" %}
+{% set serviceName %}
+{% include "includes/projectname.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+{% block beforeContent %}
+<a href="../index.html" class="govuk-back-link">Back</a>
+<br /><br />
+{% include "includes/round-links.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <!-- Research Intro -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Phase 2 / Round 1</h1>
+
+        <p>To follow...</p>
+
+        <br />
+
+        <p> <a href="govuk-home.html">
+                <button class="govuk-button" data-module="govuk-button">Launch prototype</button>
+            </a> </p>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Tasks
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <ol class="govuk-list govuk-list--number">
+                        <li>Interact with Get Childcare step-by-step </li>
+                        <li>Create a GOV.UK account (content updated on this page since last round) </li>
+                        <li>Interact with HMRC Childcare Calculator </li>
+                        <li>Consent to save inputted data at individual data item level, but omitting data item ‘child’s name’ </li>
+                        <li>Explore personalised elements of the childcare calculator results</li>
+                        <li>Force sign out and sign in</li>
+                        <li>Start ‘Apply for Universal Credit’</li>
+                        <li>Consent to use saved data from GOV.UK account</li>
+                        <li>Add additional information in Apply for Universal Credit</li>
+                        <li>Apply for Universal Credit summary page</li>
+                        <li>Force sign out and sign in</li>
+                        <li>Test fully completed HMPO replace passport online</li>
+                    </ol>
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Goals
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <!-- Goal 1 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 1</h1>
+                    <p class='govuk-body'>
+                        Explore user perception of Gov Account creation within the context of a x-gov service. i.e. perceived pros and cons
+                    </p>
+                    <!-- Goal 2 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 2</h1>
+                    <p class='govuk-body'>
+                        Explore extent to which content can enable understanding of Gov Account
+                    </p>
+                    <!-- Goal 3 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 3</h1>
+                    <p class='govuk-body'>
+                        Test scenario to resolve around data being used in service <b>and</b> saved to GOV acount (see r1 and r2 insights)
+                    </p>
+                    <!-- Goal 4 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 4</h1>
+                    <p class='govuk-body'>
+                        Elicit user reaction to personalisation and curated content
+                    </p>
+                    <!-- Goal 5 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Goal 5</h1>
+                    <p class='govuk-body'>
+                        Elicit user reaction to full auto-complete (see renew passport task)
+                    </p>
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Assumptions
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <!-- Goal 1 -->
+                    <ol class="govuk-list govuk-list--number">
+                        <li>All services are connected via broker API</li>
+                        <li>All services use the GOV.UK Account SSO</li>
+                        <li>User needs to be signed in to GOV.UK Account for data/activity to be captured</li>
+                        <li>Save and return is available on all forms</li>
+                        <li>Legacy data requires user to PYI (out of scope for MVP)</li>
+                        <li>This is a future view where service would already be consumed by GOV.UK account. Therefore this research does not cover account confusion and issues around onboarding.</li>
+                    </ol>
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+            <!-- Hypotheses -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                            Hypotheses
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <!-- Hypothesis 1 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 1</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> the use of explicit content which reflects users’ own language [from rounds 1 and 2] <br />
+
+                        <b>Will</b> enhance understanding of what the GOV.UK Account does and enable better comprehension<br />
+                        <b>we will know this when </b>user research participants can confidently summarise the purpose of the GOV.UK account
+                    </p>
+                    <!-- Hypothesis 2 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 2</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> more explicit content on consent pages<br />
+                        <b>Will</b> enable a more informed consent to save and use data within the GOV.UK account <br />
+                        <b>We will know this when </b>user research participants can confidently explain that their data is being used by the service and saved to the gov account
+                    </p>
+                    <!-- Hypothesis 3 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 3</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> offering save and share consent over individual data items <br />
+                        <b>Will</b> enhance trust in gov accounts <br />
+                        <b>We will know this if / when</b> user research participants cite this as a positive feature
+                    </p>
+                    <!-- Hypothesis 4 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 4</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> full pre-population / auto-complete of a transactional form <br />
+                        <b>Will</b> save users time <br />
+                        <b>We will know this if / when</b> user research participants cite this as a perceived benefit
+                    </p>
+                    <!-- Hypothesis 5 -->
+                    <h1 class="govuk-heading-s" style="margin-bottom: 10px;">Hypothesis 5</h1>
+                    <p class='govuk-body'>
+                        <b>We believe</b> full pre-population / auto-complete of a transactional form <br />
+                        <b>Will</b> be a valuable and trusted feature <br />
+                        <b>We will know this if / when</b> user research participants can confidently explain why data has passed from one gov service to another via the GOV.UK account [see renew passport task]
+                    </p>
+
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+        </div> <!-- /. govuk-accordion -->
+    </div>
+
+    <!-- one-third column [Research links & details] -->
+
+    <div class="govuk-grid-column-one-third" id="research-summary-page__one-third" style="margin-top: 100px;">
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Research Dates</p>
+        <p class="govuk-body">26-Oct-2021 - 28-Oct-2021</p>
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Participants</p>
+        <p class="govuk-body">?</p>
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Documents</p>
+        <ul class="govuk-list govuk-list--bullet" style="list-style: none; padding-left: 0px;">
+
+            <!--  <li> <img src="../../../public/images/miro.svg" style="height: 24px;">&nbsp;
+                <a href="https://miro.com/app/board/o9J_l6rYOGw=/?utm_source=notification&utm_medium=email&utm_campaign=mentions&utm_content=header" target="_blank">
+                    Research Miro board
+                </a>
+            </li>
+            <li> <img src="../../../public/images/Figma-logo.svg" style="height: 24px;">&nbsp;
+                <a href="https://www.figma.com/file/OCbZOmhqS1LanDWF6utzIX/?node-id=359%3A1954" target="_blank">
+                    User flow Figma board
+                </a>
+            </li>
+            <li> 🎞&nbsp;
+                <a href="https://drive.google.com/drive/folders/1j-XfPGQ32dPq1LHw_cKXTdQk5bj9LmFA" target="_blank">
+                    Video recordings
+                </a>
+            </li>
+-->
+        </ul>
+    </div>
+
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+    #button-link {
+        text-decoration: none;
+        margin-right: 15px;
+    }
+    #back-link {
+        cursor: pointer;
+    }
+</style>
+<a id="back-link" class="govuk-back-link" onclick="goBack()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Are you sure you want to sign out?</h1>
+        <p class="govuk-body">You haven't saved your progress. If you sign out without saving, your progress will be lost.</p>
+        <!-- Save progress -->
+        <a href="check-answers-8-complete.html" id="button-link">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Save my progress
+            </button>
+        </a>
+        <!-- Sign out -->
+        <a href="sign-out.html" id="button-link">
+            <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+                Sign out
+            </button>
+        </a>
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+</script>
+
+{% endblock %}

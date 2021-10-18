@@ -1,0 +1,19 @@
+<form class="form" action="/phase-2-round-1/sign-in-or-create-account" method="post">
+    <div class="govuk-form-group no-mar-bot">
+
+        <input class="govuk-input" id="signing" name="signing" type="hidden" value="yes">
+
+        {% if data['accountstatus'] == "active" %}
+        <input class="govuk-input" id="refer" name="refer" type="hidden" value="masthead">
+        <button class="non-button no-mar-bot" data-module="govuk-button">
+            Sign in
+        </button>
+
+        {% else %}
+        <button class="non-button no-mar-bot" data-module="govuk-button">
+            Sign in
+        </button>
+
+        {% endif %}
+    </div>
+</form>

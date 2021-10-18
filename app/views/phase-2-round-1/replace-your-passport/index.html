@@ -1,0 +1,104 @@
+{% extends "layout_phase-2-round-1.html" %}
+
+{% block pageTitle %}
+Renew your passport
+{% endblock %}
+
+{% set serviceName %}
+Renew your passport
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/phase-2-round-1/govuk-home" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "phase-2-round-1/includes/travel-abroad-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <aside class="part-navigation-container" role="complementary">
+            <nav class="gem-c-contents-list" aria-label="Pages in this guide" role="navigation" data-module="gem-track-click">
+                <h2 class="gem-c-contents-list__title">
+                    Contents
+                </h2>
+                <ol class="gem-c-contents-list__list">
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+                        Overview
+
+                    </li>
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/renew-adult-passport" data-track-options="{&quot;dimension29&quot;:&quot;Overview&quot;}" href="/phase-2-round-1/replace-your-passport/renew">Renew</a>
+
+                    </li>
+
+                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <a class="gem-c-contents-list__link govuk-link" data-track-category="contentsClicked" data-track-action="content_item 3" data-track-label="/renew-adult-passport/replace" data-track-options="{&quot;dimension29&quot;:&quot;Replace a lost, stolen or damaged passport&quot;}" href="/phase-2-round-1/replace-your-passport/replace">Replace a lost, stolen or damaged passport</a>
+
+                    </li>
+                </ol>
+            </nav>
+        </aside>
+
+        <hr>
+
+        <br />
+
+        <h1 class="govuk-heading-xl">Renew or replace your adult passport
+        </h1>
+
+        <h2 class="govuk-heading-m">
+            Overview
+        </h2>
+
+        <p>It costs £75.50 to renew or replace your passport if you apply online or £85 if you fill in a paper form.</p>
+
+        <p>You must be aged 16 or over (or turning 16 in the next 3 weeks) to get an adult passport. There’s a different process to <a href="/get-a-child-passport">get a passport for a child</a>.</p>
+
+        <p>There are different ways to <a href="/overseas-passports">renew or replace your passport if you’re outside the UK</a>.</p>
+
+        <h2 class="govuk-heading-m" id="how-long-it-takes">How long it takes</h2>
+
+        <p>Allow up to 10 weeks to get your passport. It takes longer to apply by post than online.</p>
+
+        <p>You may be able to <a href="/get-a-passport-urgently">get a passport urgently</a> if you need one sooner.</p>
+
+        <p>Do not book travel until you have a valid passport - your new passport will not have the same number as your old one.</p>
+
+        <h2 class="govuk-heading-m" id="tracking-your-passport-application">Tracking your passport application</h2>
+
+        <p>You can <a href="/track-passport-application">track your passport application</a> immediately if you apply online or after 10 weeks if you apply by post.</p>
+
+        <h2 class="govuk-heading-m" id="getting-your-new-passport">Getting your new passport</h2>
+
+        <p>Your new passport will be sent to you by courier or Royal Mail. They’ll either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>post it through your letterbox</li>
+            <li>hand it to you if you’re home</li>
+            <li>leave a card or post you a letter saying how you can get it (it will not say the package is your passport)</li>
+        </ul>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-1/includes/travel-abroad-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

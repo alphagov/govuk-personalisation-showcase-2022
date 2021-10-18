@@ -1,0 +1,66 @@
+{% extends "layout_phase-2-round-1.html" %}
+
+{% block pageTitle %}
+Step by step navigation
+{% endblock %}
+
+{% set serviceName %}
+Childcare: step by step
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="govuk-home">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Childcare and parenting</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link">Childcare</a>
+        </li>
+    </ol>
+</div>
+<br />
+{% include "phase-2-round-1/includes/personalised.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            Get childcare: step by step
+        </h1>
+
+        <p>
+            How to find childcare, get help paying for it and what to do if your circumstances change.
+        </p>
+
+        {% include "phase-2-round-1/includes/childcare-step-by-step.html" %}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        {% if data['signing'] == "yes" %}
+        {% include "phase-2-round-1/includes/childcare-signed-in-side-panel.html" %}
+        {% else %}
+        {% include "phase-2-round-1/includes/childcare-signed-out-side-panel.html" %}
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

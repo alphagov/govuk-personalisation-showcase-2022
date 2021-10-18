@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="sign-in-or-create-account.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="spinner-check-account-sign-in" method="POST">
+            <h1 class="govuk-heading-xl">Enter your email address</h1>
+            <p class="govuk-body">Enter your email address to sign in to your account.<p>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email-address">Email address</label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
+            </div> <!-- /. govuk-form-group -->
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <input class="govuk-input" name="sign-in" type="hidden" value="signin">
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

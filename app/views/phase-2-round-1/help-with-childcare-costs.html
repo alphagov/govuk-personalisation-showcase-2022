@@ -1,0 +1,124 @@
+{% extends "layout_round-2.html" %}
+
+{% block pageTitle %}
+Childcare you can get help paying for
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-2/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-2/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Childcare you can get help paying for</h1>
+
+
+        <p>You can get help paying for childcare if it’s provided by a:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>registered childminder, nanny, playscheme, nursery or club</li>
+            <li>childminder or nanny with a registered childminder agency or childcare agency</li>
+            <li>registered school</li>
+            <li>home care worker working for a registered home care agency</li>
+        </ul>
+
+        <p>This is known as ‘approved childcare’.</p>
+
+        <p>The rules about how childcare providers become approved are different depending on where you live.</p>
+
+        <p>You can check if a childcare provider is approved or search for one in:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <a href="ofsted/find-ofsted-inspection-report">England</a> through Ofsted</li>
+            <li>
+                <a rel="external" href="http://cssiw.org.uk/find-a-care-service/service-directory/?lang=en#/find-a-care-service/service-directory/?service=CDC&amp;lang=en">Wales</a> through Care Inspectorate Wales</li>
+            <li>
+                <a rel="external" href="http://www.careinspectorate.com/">Scotland</a> through the Scottish Care Inspectorate</li>
+            <li>
+                <a rel="external" href="https://www.nidirect.gov.uk/articles/early-years-teams">Northern Ireland</a> through the local early years team register</li>
+        </ul>
+
+        <br />
+
+        <h2 class="govuk-heading-m" id="childcare-at-school">Childcare at school</h2>
+
+        <p>You can only get help paying for care that is outside school hours, for example after school clubs or breakfast clubs.</p>
+
+        <p>You cannot get help paying for:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your child’s compulsory education</li>
+            <li>private lessons during school time (for example, private music lessons during school hours)</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>If your child has not started primary school, you can get help paying for childcare provided by a school. This includes nursery school fees.</p>
+        </div>
+
+        <br />
+
+        <h2 class="govuk-heading-m" id="childcare-provided-by-relatives">Childcare provided by relatives</h2>
+
+        <h3 class="govuk-heading-s" id="if-you-live-in-england-or-scotland">If you live in England or Scotland</h3>
+        <p>You can only get <a href="/tax-free-childcare">Tax-Free Childcare</a> to help pay for childcare provided by a relative (for example, a grandparent) if they’re a registered childminder and care for your child outside your home.</p>
+
+        <p>You cannot claim for <a href="/30-hours-free-childcare">30 hours free childcare</a> for childcare provided by a relative (for example, a grandparent).</p>
+
+        <p>You cannot get help for childcare provided by your partner. This is not accepted as ‘approved childcare’.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>If you live in England and get 30 hours free childcare, you can pay the childcare provider using Universal Credit, tax credits, childcare vouchers or Tax-Free Childcare.</p>
+        </div>
+
+        <h3 class="govuk-heading-s" id="if-you-live-in-northern-ireland">If you live in Northern Ireland</h3>
+
+        <p>You can only get help paying for childcare provided by a relative if all of the following apply:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>they’re in a childcare approval scheme in <a rel="external" href="http://www.nidirect.gov.uk/home-childcarers">Northern Ireland</a>
+            </li>
+            <li>they care for your child outside your home</li>
+            <li>they care for at least one other child that is not related to you</li>
+        </ul>
+
+        <h3 class="govuk-heading-s" id="if-you-live-in-wales">If you live in Wales</h3>
+
+        <p>You can only get help paying for childcare provided by a relative if they’re a registered childminder and care for your child outside your home.</p>
+
+        <h2 class="govuk-heading-m" id="foster-carers">Foster carers</h2>
+
+        <p>Childcare provided by a foster carer in England only counts if they’re <a href="/register-childminder-childcare-provider">registered as a childcare provider</a>.</p>
+
+        <p>You may be able to claim if a foster carer provides childcare in <a href="/hmrc-internal-manuals/tax-credits-technical-manual/tctm02630#in-wales-only">Wales</a>, <a href="/hmrc-internal-manuals/tax-credits-technical-manual/tctm02630#in-scotland-only">Scotland</a> or <a href="/hmrc-internal-manuals/tax-credits-technical-manual/tctm02630#in-northern-ireland-only">Northern Ireland</a>.</p>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-2/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
