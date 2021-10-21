@@ -33,101 +33,216 @@
 
     <div class="govuk-grid-column-three-quarters">
         <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Manage your data</h1>
-        <p>{{ data['email'] }}</p>
+
+        <div class="accounts-panel">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Saved data</h2>
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#personal">
+                            Personal
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#family">
+                            Family
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#employment">
+                            Employment
+                        </a>
+                    </li>
+
+
+                </ul>
+                <div class="govuk-tabs__panel" id="personal">
+
+                    <table class="govuk-table">
+                        <!-- <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Data item</th>
+                                <th scope="col" class="govuk-table__header">Cases opened</th>
+                                <th scope="col" class="govuk-table__header">Cases closed</th>
+                            </tr>
+                        </thead> -->
+                        <tbody class="govuk-table__body">
+                            {% if data['full-name'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Name<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell">{{ data['full-name'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['date-of-birth-day'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Date of birth<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell"> {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['town-of-birth'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Place of birth</td>
+                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['address-line-1'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Address</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        {{ data['address-line-1'] }} <br />
+
+                                        {{ data['address-line-2'] }} <br />
+
+                                        {{ data['address-town'] }} <br />
+
+                                        {{ data['address-county'] }} <br />
+
+                                        {{ data['address-postcode'] }} <br />
+                                    </p>
+                                    <p class="govuk-body-s"><a href="#">View address history</a></p>
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="family">
+
+                    <table class="govuk-table">
+                        <!--       <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Case manager</th>
+                                <th scope="col" class="govuk-table__header">Cases opened</th>
+                                <th scope="col" class="govuk-table__header">Cases closed</th>
+                            </tr>
+                        </thead> -->
+                        <tbody class="govuk-table__body">
+
+                            {% if data['partner-check'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Live with partner</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        {{ data['partner-check'] }}
+                                    </p>
+
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['child-1-name'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Child(ren)<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell">
+                                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}</p>
+                                    <p><b>Date of birth:</b> <br />
+                                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}
+                                    </p>
+                                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}</p>
+                                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}</p>
+                                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}</p>
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="employment">
+
+                    <table class="govuk-table">
+                        <!--  <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Case manager</th>
+                                <th scope="col" class="govuk-table__header">Cases opened</th>
+                                <th scope="col" class="govuk-table__header">Cases closed</th>
+                            </tr>
+                        </thead> -->
+                        <tbody class="govuk-table__body">
+                            {% if data['NIN'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">National Insurance number<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        {{ data['NIN'] }}
+                                    </p>
+
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['employment-status'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Employment status</td>
+                                <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Edit</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
         <br />
         <div class="accounts-panel">
 
-            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Stored data</h2>
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Saved documents</h2>
 
-            <div class="govuk-grid-row" class="data-item">
-                <div class="govuk-grid-column-one-third">
-                    <p>Address</p>
-                </div>
-                <div class="govuk-grid-column-one-third">
-                    <p>{% if data['address-line-1'] %}
-                        {{ data['address-line-1'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['address-line-2'] %}
-                        {{ data['address-line-2'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['address-town'] %}
-                        {{ data['address-town'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['address-county'] %}
-                        {{ data['address-county'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['address-postcode'] %}
-                        {{ data['address-postcode'] }} <br />
-                        {% else %}
-                        {% endif %}</p>
-                    <p><a href="#">Edit</a></p>
-                </div>
-                <div class="govuk-grid-column-one-third">
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                    Upload a file
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
             </div>
-
-            <hr>
-
-            <div class="govuk-grid-row" class="data-item">
-                <div class="govuk-grid-column-one-third">
-                    <p>Date of birth</p>
-                </div>
-                <div class="govuk-grid-column-one-third">
-                    <p>{% if data['date-of-birth-day'] %}
-                        {{ data['date-of-birth-day'] }} -
-                        {% else %}
-
-                        {% endif %}
-                        {% if data['date-of-birth-month'] %}
-                        {{ data['date-of-birth-month'] }} -
-                        {% else %}
-
-                        {% endif %}
-                        {% if data['date-of-birth-year'] %}
-                        {{ data['date-of-birth-year'] }}
-                        {% else %}
-
-                        {% endif %}</p>
-                    <p><a href="#">Edit</a></p>
-                </div>
-                <div class="govuk-grid-column-one-third">
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
-
-            <hr>
-
 
         </div>
 

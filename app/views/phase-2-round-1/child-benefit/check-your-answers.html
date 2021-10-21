@@ -20,7 +20,7 @@ Child Benefit claim
 
         <h1 class="govuk-heading-l">Child Benefit claim - check your answers</h1>
 
-        <p>Please check your answers before submitting so we can calculate how much you could get towards approved childcare.</p>
+        <p>Please check your answers before submitting.</p>
 
         <br />
 
@@ -175,14 +175,13 @@ Child Benefit claim
                 <dd class="govuk-summary-list__value">
 
                     {% if data['child-1-name'] %}
-                    <p><b>Child 1</b></p>
-                    <p>{{ data['child-1-name'] }}</p>
-                    <p>
+                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}</p>
+                    <p><b>Date of birth:</b> <br />
                         {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}
                     </p>
-                    <p>{{ data['child-gender'] }}</p>
-                    <p>Birth certificate number: {{ data['child-birth-cert-number'] }}</p>
-                    <p>Child/parent relationship: {{ data['child-relationship'] }}</p>
+                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}</p>
+                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}</p>
+                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}</p>
                     {% else %}
                     {% endif %}
 

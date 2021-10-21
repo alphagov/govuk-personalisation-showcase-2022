@@ -39,20 +39,40 @@
 
 
         <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
-        <p>{{ data['email'] }}</p>
 
-        <br />
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-half">
                 <div class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Notifications</h2>
+                    {% if data['child-benefit-status'] == "completed" %}
+
+                    <p><span class="notification-marker">•</span> Child Benefit claim has been approved <span class="govuk-body-s">(27-11-2021)</span></p>
+
+
+                    <br />
+                    <p><span class="notification-marker">•</span> Date of birth &amp; National Insurance number have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
+                    {% else %}
+
+                    {% endif %}
+                    <br />
+                    <span class="govuk-body-s"><a href="#">Clear read notifications</a>
                 </div>
             </div>
             <div class="govuk-grid-column-one-half">
                 <div class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
-                    <p class="govuk-body-m"><img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></p>
+                    <span class="govuk-body-s">17-04-2022</span><br />
+                    <p><a href="#">Renew Vehicle tax</a> (DVLA) </p>
+
+                    <br />
+
+                    <span class="govuk-body-s">31-01-2022</span><br />
+                    <p><a href="#">Personal tax deadline</a> (HMRC) </p>
+
+
+                    <br /> <br /><br />
+                    <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span>
                 </div>
             </div>
         </div>
@@ -69,14 +89,14 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/childcare-calculator/check-your-answers">Childcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
-                    <hr>
-                    <br />
+
+
 
                     {% elif data['childcare-calc-status'] == "completed" %}
 
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Childcare calculator <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-                    <hr>
-                    <br />
+
+
                     {% else %}
 
                     {% endif %}
@@ -86,15 +106,15 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
-                    <hr>
-                    <br />
+
+
 
                     {% elif data['universal-credit-status'] == "completed" %}
 
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Universal Credit: application <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
-                    <hr>
-                    <br />
+
+
                     {% else %}
 
                     {% endif %}
@@ -105,15 +125,15 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
-                    <hr>
-                    <br />
+
+
 
                     {% elif data['replace-passport-status'] == "completed" %}
 
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Replace your passport <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
-                    <hr>
-                    <br />
+
+
                     {% else %}
 
                     {% endif %}
@@ -123,15 +143,15 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Child Benefit claim <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
-                    <hr>
-                    <br />
+
+
 
                     {% elif data['child-benefit-status'] == "completed" %}
 
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Child Benefit claim <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
-                    <hr>
-                    <br />
+
+
                     {% else %}
 
                     {% endif %}

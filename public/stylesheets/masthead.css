@@ -855,3 +855,24 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+.notification-marker {
+    font-size: 36px;
+    line-height: 16px;
+    padding: 0px;
+    position: relative;
+    color: green;
+    top: 5px;
+}
+
+.verified {
+    color: #00703c;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.right {
+    text-align: right;
+}
