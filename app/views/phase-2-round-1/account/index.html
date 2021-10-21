@@ -66,14 +66,15 @@
 
                     {% if data['childcare-calc-status'] == "started" %}
 
-                    <p><a href="/phase-2-round-1/childcare-calculator/check-your-answers">Childcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/childcare-calculator/check-your-answers">Childcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
+                    <hr>
+                    <br />
 
                     {% elif data['childcare-calc-status'] == "completed" %}
 
-                    <p><a href="/phase-2-round-1/childcare-calculator/check-your-answers">Childcare calculator</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-                    <p class="govuk-body-s">{% include "includes/today.html" %}</p>
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Childcare calculator <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
                     <hr>
                     <br />
                     {% else %}
@@ -82,16 +83,18 @@
 
                     {% if data['universal-credit-status'] == "started" %}
 
-                    <p><a href="/phase-2-round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
+                    <hr>
+                    <br />
 
                     {% elif data['universal-credit-status'] == "completed" %}
 
-                    <p><a href="/phase-2-round-1/universal-credit/check-your-answers">Universal Credit: application</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-                    <p class="govuk-body-s">{% include "includes/today.html" %}</p>
-                    <hr>
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Universal Credit: application <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
 
+                    <hr>
+                    <br />
                     {% else %}
 
                     {% endif %}
@@ -99,14 +102,16 @@
                     {% if data['replace-passport-status'] == "started" %}
 
 
-                    <p><a href="/phase-2-round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
+                    <hr>
+                    <br />
 
                     {% elif data['replace-passport-status'] == "completed" %}
 
-                    <p><a href="/phase-2-round-1/replace-your-passport/check-your-answers">Replace your passport</a> <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-                    <p class="govuk-body-s">{% include "includes/today.html" %}</p>
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Replace your passport <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+
                     <hr>
                     <br />
                     {% else %}
@@ -115,14 +120,16 @@
 
                     {% if data['child-benefit-status'] == "started" %}
 
-                    <p>Child Benefit claim <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Child Benefit claim <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
                             In progress
                         </strong></p>
+                    <hr>
+                    <br />
 
                     {% elif data['child-benefit-status'] == "completed" %}
 
-                    <p>Child Benefit claim <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-                    <p class="govuk-body-s">{% include "includes/today.html" %}</p>
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Child Benefit claim <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
+
                     <hr>
                     <br />
                     {% else %}

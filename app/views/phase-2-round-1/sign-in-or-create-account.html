@@ -19,55 +19,41 @@ GOV.UK Account
         <form action="/phase-2-round-1/sign-in-or-create-account-form" method="POST">
             <!-- Page Header Content -->
             <h1 class="govuk-heading-xl">Sign in or create a GOV.UK account</h1>
-            <p class="govuk-body">
-                You need a GOV.UK Account to save your progress. If you don’t have a GOV.UK Account, you can create one.
-                <p>
-                    <!-- Inset -->
-                    <div class="govuk-inset-text">
-                        The GOV.UK Account is different to other government accounts you already have (for example your personal tax account or Government Gateway).
-                    </div>
-                    <!-- Details -->
-                    <details class="govuk-details" data-module="govuk-details">
-                        <summary class="govuk-details__summary">
-                            <span class="govuk-details__summary-text">More about GOV.UK Accounts</span>
-                        </summary>
-                        <div class="govuk-details__text">
-                            <p class="govuk-body">GOV.UK Account is a new account that we’re starting to use for some government services.<p>
-                                    <p class="govuk-body">Other services use different accounts, such as Government Gateway or your Universal Credit account.</p>
-                                    <p class="govuk-body">In the future, you’ll be able to use your GOV.UK Account for all government services. For now, you need different accounts for different services.</p>
-                        </div>
-                    </details>
-                    <!-- Radio Button Group -->
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="create-account-or-sign-in-hint">
-                            <div class="govuk-radios">
-                                <!-- Create an account -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="create-account" name="signin-create-account-radios" type="radio" value="create-account" aria-describedby="create-account-item-hint">
-                                    <label class="govuk-label govuk-radios__label" for="create-account">Create an account</label>
-                                    <div id="create-account-item-hint" class="govuk-hint govuk-radios__hint">
-                                        You’ll need an email address and a UK mobile phone number. It will take no more than 5 minutes.
-                                    </div>
-                                </div> <!-- /. govuk-radio__item -->
-                                <!-- Sign in Radio Button -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="sign-in" name="signin-create-account-radios" type="radio" value="signin" aria-describedby="sign-in-item-hint">
-                                    <label class="govuk-label govuk-radios__label" for="sign-in">Sign in</label>
-                                </div> <!-- /. govuk-radio__item -->
-                                <!-- Radio Divider -->
-                                <div class="govuk-radios__divider">or</div>
-                                <!-- Check if you have a GOV.UK Account -->
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="check-account" name="signin-create-account-radios" type="radio" value="check-account" aria-describedby="check-account-hint">
-                                    <label class="govuk-label govuk-radios__label" for="check-account">
-                                        Check if you have a GOV.UK Account
-                                    </label>
-                                </div> <!-- /. govuk-radio__item -->
-                            </div> <!-- /.govuk-radios -->
-                        </fieldset> <!-- /. govuk-fieldset -->
-                    </div> <!-- /. govuk-form-group -->
-                    <input class="govuk-input" id="refere" name="refer" type="hidden" value="masthead">
-                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <p>You can use your GOV.UK account to:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>prefill forms and applications using answers you’ve saved to your account </li>
+                <li>see personalised information pages based on your circumstances</li>
+                <li>save and return to applications at your convenience</li>
+            </ul>
+
+            <br />
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="create-account-or-sign-in-hint">
+                    <div class="govuk-radios">
+                        <!-- Create an account -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="create-account" name="signin-create-account-radios" type="radio" value="create-account" aria-describedby="create-account-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="create-account">Create an account</label>
+                            <div id="create-account-item-hint" class="govuk-hint govuk-radios__hint">
+                                You’ll need an email address and a UK mobile phone number. It will take no more than 2 minutes.
+                            </div>
+                        </div> <!-- /. govuk-radio__item -->
+                        <!-- Radio Divider -->
+                        <div class="govuk-radios__divider">or</div>
+                        <!-- Sign in Radio Button -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sign-in" name="signin-create-account-radios" type="radio" value="signin" aria-describedby="sign-in-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="sign-in">Sign in</label>
+                        </div> <!-- /. govuk-radio__item -->
+                        <!-- Radio Divider -->
+
+                    </div> <!-- /.govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. govuk-form-group -->
+            <input class="govuk-input" id="refere" name="refer" type="hidden" value="masthead">
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form> <!-- /. form -->
     </div> <!-- /. govuk-grid-column-two-thirds -->
 </div> <!-- /. govuk-grid-row -->

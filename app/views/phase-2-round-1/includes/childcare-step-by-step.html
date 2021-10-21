@@ -63,6 +63,14 @@
 
                         <ul class="govuk-list govuk-list--bullet" data-length="4">
 
+                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/child-benefit/start">Child Benefit </a>{% if data['child-benefit-status'] == "started" and data['signing'] == "yes" %}
+                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
+                                    In progress
+                                </strong><br /><br />
+                                {% elif data['child-benefit-status'] == "completed" and data['signing'] == "yes" %}
+                                <strong class="govuk-tag app-task-list__tag">Completed</strong><br /><br />
+                                {% else %}
+                                {% endif %}</li>
                             <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/tax-free-childcare">Tax-Free Childcare </a></li>
                             <li class=" govuk-link"><a data-position="3.3" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/universal-credit">Universal Credit </a> {% if data['universal-credit-status'] == "started" and data['signing'] == "yes" %}
                                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
@@ -91,13 +99,21 @@
 
                         <ul class="govuk-list govuk-list--bullet" data-length="4">
 
+                            <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/child-benefit/start">Child Benefit </a>{% if data['child-benefit-status'] == "started" and data['signing'] == "yes" %}
+                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
+                                    In progress
+                                </strong><br />
+                                {% elif data['child-benefit-status'] == "completed" and data['signing'] == "yes" %}
+                                <strong class="govuk-tag app-task-list__tag">Completed</strong><br />
+                                {% else %}
+                                {% endif %}</li>
                             <li class=" govuk-link"><a data-position="3.2" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/tax-free-childcare">Tax-free childcare </a></li>
                             <li class=" govuk-link"><a data-position="3.3" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/universal-credit">Universal Credit </a> {% if data['universal-credit-status'] == "started" and data['signing'] == "yes" %}
                                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag">
                                     In progress
-                                </strong><br /><br />
+                                </strong><br />
                                 {% elif data['universal-credit-status'] == "completed" and data['signing'] == "yes" %}
-                                <strong class="govuk-tag app-task-list__tag">Completed</strong><br /><br />
+                                <strong class="govuk-tag app-task-list__tag">Completed</strong><br />
                                 {% else %}
                                 {% endif %}</li>
                             <li class=" govuk-link"><a data-position="3.4" class="gem-c-step-nav__link js-link" href="/phase-2-round-1/help-while-you-study">help while you study </a></li>
