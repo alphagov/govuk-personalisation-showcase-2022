@@ -8,15 +8,14 @@ GOV.UK Prototype Kit
 
 {% endset%}
 
-
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="/phase-2-round-1/account/enter-password" method="POST">
+        <form class="form" action="/phase-2-round-1/childcare-calculator/calculator-results" method="POST">
 
-            <h1 class="govuk-heading-xl">Searching for your GOV.UK account</h1>
+            <h1 class="govuk-heading-xl">Calculating how much you could get towards approved childcare</h1>
 
             <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-6"></div>
 
@@ -35,7 +34,7 @@ GOV.UK Prototype Kit
         setTimeout(function() {
             // proceed
             document.getElementById('button2').click()
-        }, 2000)
+        }, 4000)
     }
 
 </script>

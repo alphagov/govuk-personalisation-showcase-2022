@@ -1,0 +1,103 @@
+{% extends "layout_phase-2-round-1.html" %}
+
+{% block pageTitle %}
+Child benefit
+{% endblock %}
+
+{% set serviceName %}
+Child benefit
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="../childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Claim Child Benefit
+        </h1>
+
+
+        <h2 class="govuk-heading-l">
+            How it works
+        </h2>
+
+        <p>You get Child Benefit if you’re responsible for bringing up a child who is:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>under 16</li>
+            <li>under 20 if they stay in approved <a href="/child-benefit-16-19">education or training</a>
+            </li>
+        </ul>
+
+        <p>Only one person can get Child Benefit for a child.</p>
+
+        <p>It’s paid every 4 weeks and there’s no limit to how many children you can claim for.</p>
+
+
+
+        <p>By claiming Child Benefit:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you can get <a href="/national-insurance-credits/overview">National Insurance credits</a> which count towards your <a href="/state-pension">State Pension</a>
+            </li>
+            <li>your child will automatically get a National Insurance number when they’re 16 years old</li>
+        </ul>
+
+        <p>If you choose not to get Child Benefit payments, you should still fill in and send off the claim form.</p>
+
+        <h2 class="govuk-heading-m">If you or your partner earn over £50,000</h2>
+
+        <p>You may have to pay back some of your Child Benefit in tax if your (or your partner’s) individual income is over £50,000.</p>
+
+        <h2 class="govuk-heading-m">If your circumstances change</h2>
+
+        <p>You must <a href="/report-changes-child-benefit">report any change of circumstances</a> to the Child Benefit Office.</p>
+
+        <h2 class="govuk-heading-l">How to claim</h2>
+
+        <p>You can claim Child Benefit as soon as you’ve registered the birth of your child, or they come to live with you.</p>
+
+
+
+
+        <br /> <br />
+
+        {% if data['signing'] == "yes" %}
+        <form id="child-benefit-start" method="post" action="/phase-2-round-1/child-benefit/NIN">
+            {% else %}
+            <form id="childcare-calc-start" method="post" action="/phase-2-round-1/child-benefit/sign-in-or-create-account">
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <input id="child-benefit-started" name="child-benefit-status" value="started" type="hidden">
+                    <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                        </svg></button>
+                </div>
+            </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
