@@ -61,8 +61,8 @@ Universal Credit
                     {% endif %}
                 </dd>
                 <dd class="govuk-summary-list__actions">
+                    {% include "phase-2-round-1/includes/verified.html" %}
 
-                    <a href="#">Change</a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -139,32 +139,19 @@ Universal Credit
                     Child details
                 </dt>
                 <dd class="govuk-summary-list__value">
-
                     {% if data['child-1-name'] %}
-                    <p><b>Child 1</b></p>
-                    <p>{{ data['child-1-name'] }}<br />{{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}</p>
+                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}</p>
+                    <p><b>Date of birth:</b> <br />
+                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}
+                    </p>
+                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}</p>
+                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}</p>
+                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}</p>
                     {% else %}
                     {% endif %}
-
-                    {% if data['child-2-name'] %}
-                    <br />
-                    <p><b>Child 2</b></p>
-                    <p>{{ data['child-2-name'] }}<br />{{ data['child-2-date-of-birth-day'] }}/{{ data['child-2-date-of-birth-month'] }}/{{ data['child-2-date-of-birth-year'] }}</p>
-                    {% else %}
-                    {% endif %}
-
-                    {% if data['child-3-name'] %}
-
-                    <br />
-                    <p><b>Child 3</b></p>
-                    <p>{{ data['child-3-name'] }}<br />{{ data['child-3-date-of-birth-day'] }}/{{ data['child-3-date-of-birth-month'] }}/{{ data['child-3-date-of-birth-year'] }}</p>
-                    {% else %}
-                    {% endif %}
-
                 </dd>
                 <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
+                    {% include "phase-2-round-1/includes/verified.html" %}
 
                 </dd>
             </div>
@@ -186,6 +173,21 @@ Universal Credit
                 <h2>Your employment</h2>
 
 
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    National Insurance number
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['NIN'] }} <br />
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    {% include "phase-2-round-1/includes/verified.html" %}
+
+
+                </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -229,135 +231,7 @@ Universal Credit
 
                 </dd>
             </div>
-            <div class="govuk-summary-list__row">
-                <br />
-                <h2>Childcare providers</h2>
 
-
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Do you have childcare costs?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">{{ data['childcare-costs'] }}</p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Childcare provider details
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-
-                        {% if data['childcare-provider-name'] %}
-                        {{ data['childcare-provider-name'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-reg'] %}
-                        {{ data['childcare-provider-reg'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-phone-number'] %}
-                        {{ data['childcare-provider-phone-number'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        <br />
-
-                        {% if data['childcare-provider-address-line-1'] %}
-                        {{ data['childcare-provider-address-line-1'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-line-2'] %}
-                        {{ data['childcare-provider-address-line-2'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-town'] %}
-                        {{ data['childcare-provider-address-town'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-county'] %}
-                        {{ data['childcare-provider-address-county'] }} <br />
-                        {% else %}
-                        {% endif %}
-
-                        {% if data['childcare-provider-address-postcode'] %}
-                        {{ data['childcare-provider-address-postcode'] }} <br />
-                        {% else %}
-                        {% endif %}
-                    </p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Childcare payment details
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-
-                        £{{ data['childcare-payment-amount'] }} <br />
-                        {{ data['date-of-payment-day'] }}/{{ data['date-of-payment-month'] }}/{{ data['date-of-payment-year'] }}
-                    </p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-                </dd>
-            </div>
-
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Children attending childcare
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">
-
-                        {% if data['child-1-cared'] == 'yes' %}
-                        {{ data['child-1-name'] }}
-                        {% else %}
-                        {% endif %} <br />
-                        {% if data['child-2-cared'] == 'yes' %}
-                        {{ data['child-2-name'] }}
-                        {% else %}
-                        {% endif %}
-                        <br />
-                        {% if data['child-3-cared'] == 'yes' %}
-                        {{ data['child-3-name'] }}
-                        {% else %}
-                        {% endif %}
-                    </p>
-
-                </dd>
-                <dd class="govuk-summary-list__actions">
-
-                    <a href="#">Change</a>
-
-                </dd>
-            </div>
 
         </dl>
 
@@ -378,7 +252,7 @@ Universal Credit
 
             <div class="govuk-form-group">
 
-                <input class="govuk-input" id="appcomplete" name="universal" type="hidden" value="yes">
+                <input class="govuk-input" id="appcomplete" name="universal-credit-status" type="hidden" value="completed">
 
 
                 <button class="govuk-button no-mar-bot" data-module="govuk-button">

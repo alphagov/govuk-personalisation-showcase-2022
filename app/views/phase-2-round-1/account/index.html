@@ -51,7 +51,10 @@
 
 
                     <br />
-                    <p><span class="notification-marker">•</span> Date of birth &amp; National Insurance number have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
+                    <p><span class="notification-marker">•</span> Your name, date of birth &amp; National Insurance number have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
+
+                    <br />
+                    <p><span class="notification-marker">•</span> Your child's details have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
                     {% else %}
 
                     {% endif %}
@@ -62,13 +65,20 @@
             <div class="govuk-grid-column-one-half">
                 <div class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
+
+
+                    <span class="govuk-body-s">31-01-2022</span><br />
+                    <p><a href="#">Personal tax deadline</a> (HMRC) </p>
+
+                    <br />
+
                     <span class="govuk-body-s">17-04-2022</span><br />
                     <p><a href="#">Renew Vehicle tax</a> (DVLA) </p>
 
                     <br />
 
-                    <span class="govuk-body-s">31-01-2022</span><br />
-                    <p><a href="#">Personal tax deadline</a> (HMRC) </p>
+                    <span class="govuk-body-s">30-06-2022</span><br />
+                    <p><a href="#">Personal tax payment</a> (HMRC) </p>
 
 
                     <br /> <br /><br />
@@ -84,22 +94,6 @@
                 <div class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Your recent activity</h2>
 
-                    {% if data['childcare-calc-status'] == "started" %}
-
-                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> <a href="/phase-2-round-1/childcare-calculator/check-your-answers">Childcare calculator</a> <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
-                            In progress
-                        </strong></p>
-
-
-
-                    {% elif data['childcare-calc-status'] == "completed" %}
-
-                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span> Childcare calculator <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong></p>
-
-
-                    {% else %}
-
-                    {% endif %}
 
                     {% if data['universal-credit-status'] == "started" %}
 
