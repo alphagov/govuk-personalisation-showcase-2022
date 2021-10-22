@@ -58,7 +58,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">28-11-2021:</span></td>
-                                <td class="govuk-table__cell">Universal Credit application submitted</td>
+                                <td class="govuk-table__cell">Universal Credit application submitted to DWP</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -88,7 +88,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim has been approved</td>
+                                <td class="govuk-table__cell">Child Benefit claim has been approved by HMRC</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -98,7 +98,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Your name, date of birth &amp; National Insurance number have been verified </td>
+                                <td class="govuk-table__cell">Your name, date of birth &amp; National Insurance number have been verified by HMRC</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -108,7 +108,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Your child's details have been verified </td>
+                                <td class="govuk-table__cell">Your child's details have been verified by HMRC </td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -125,7 +125,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim submitted</td>
+                                <td class="govuk-table__cell">Child Benefit claim submitted to HMRC</td>
                                 <td class="govuk-table__cell right">
 
                                 </td>
@@ -138,11 +138,8 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim </td>
+                                <td class="govuk-table__cell">Child Benefit claim - in progress</td>
                                 <td class="govuk-table__cell right">
-                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag " id="did-you-sell-the-vehicle-privately-status">
-                                        In progress
-                                    </strong>
 
                                 </td>
                             </tr>
@@ -155,6 +152,7 @@
 
                     {% if data['time'] == "task-2" %}
                     <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+
                     {% else %}
                     {% endif %}
 
@@ -231,6 +229,8 @@
     }
 
 </script>
+
+
 
 
 
