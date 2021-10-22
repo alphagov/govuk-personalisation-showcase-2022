@@ -37,7 +37,6 @@
 
     <div class="govuk-grid-column-three-quarters">
 
-
         <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
 
         <div class="govuk-grid-row">
@@ -59,9 +58,11 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">28-11-2021:</span></td>
-                                <td class="govuk-table__cell">Universal Credit application </td>
+                                <td class="govuk-table__cell">Universal Credit application submitted</td>
                                 <td class="govuk-table__cell right">
-                                    <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong>
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                        New
+                                    </strong>
                                 </td>
                             </tr>
 
@@ -83,13 +84,15 @@
                             {% else %}
                             {% endif %}
 
-                            {% if data['child-benefit-status'] == "completed" %}
+                            {% if data['time'] == "task-2" %}
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">27-11-2021:</span></td>
                                 <td class="govuk-table__cell">Child Benefit claim has been approved</td>
                                 <td class="govuk-table__cell right">
-
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
                                 </td>
                             </tr>
 
@@ -97,7 +100,9 @@
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
                                 <td class="govuk-table__cell">Your name, date of birth &amp; National Insurance number have been verified </td>
                                 <td class="govuk-table__cell right">
-
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
                                 </td>
                             </tr>
 
@@ -105,7 +110,9 @@
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
                                 <td class="govuk-table__cell">Your child's details have been verified </td>
                                 <td class="govuk-table__cell right">
-
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
                                 </td>
                             </tr>
 
@@ -118,9 +125,9 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim </td>
+                                <td class="govuk-table__cell">Child Benefit claim submitted</td>
                                 <td class="govuk-table__cell right">
-                                    <strong class="govuk-tag app-task-list__tag" id="what-is-your-full-name">Completed</strong>
+
                                 </td>
                             </tr>
 
@@ -133,9 +140,10 @@
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
                                 <td class="govuk-table__cell">Child Benefit claim </td>
                                 <td class="govuk-table__cell right">
-                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="did-you-sell-the-vehicle-privately-status">
+                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag " id="did-you-sell-the-vehicle-privately-status">
                                         In progress
                                     </strong>
+
                                 </td>
                             </tr>
 
@@ -144,6 +152,11 @@
 
                         </tbody>
                     </table>
+
+                    {% if data['time'] == "task-2" %}
+                    <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+                    {% else %}
+                    {% endif %}
 
                 </div>
             </div>
@@ -197,13 +210,28 @@
             </div>
         </div>
 
-        <br />
-
-
-
     </div>
 
 </div>
+
+<script>
+    function myFunction(language) {
+
+        var x = document.getElementsByClassName(language);
+
+        for (var i = 0; i < x.length; i++) {
+
+            if (x.item(i).style.display === "none") {
+                x.item(i).style.display = "block";
+            } else {
+                x.item(i).style.display = "none";
+            }
+        }
+
+    }
+
+</script>
+
 
 
 {% endblock %}

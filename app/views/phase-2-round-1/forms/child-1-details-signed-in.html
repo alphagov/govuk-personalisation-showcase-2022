@@ -49,13 +49,13 @@
             <div class="govuk-radios">
                 <p><strong>Is this child male or female?</strong></p>
                 <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="child-gender" name="child-gender" type="radio" value="Male">
+                    <input class="govuk-radios__input" id="child-gender" name="child-gender" type="radio" value="Male" {% if data['child-gender'] == "Male" %} {{ checked("child-gender", "Male") }} {% else %} {% endif %}>
                     <label class="govuk-label govuk-radios__label" for="child-gender">
                         Male
                     </label>
                 </div>
                 <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="child-gender-2" name="child-gender" type="radio" value="Female">
+                    <input class="govuk-radios__input" id="child-gender-2" name="child-gender" type="radio" value="Female" {% if data['child-gender'] == "Female" %} {{ checked("child-gender", "Female") }} {% else %} {% endif %}>
                     <label class="govuk-label govuk-radios__label" for="child-gender-2">
                         Female
                     </label>
@@ -70,9 +70,10 @@
                 </p>
                 <div id="account-number-hint" class="govuk-hint">
                     Tell us the 9 digit system number from the bottom left
-                    hand corner of their birth certificate
+                    hand corner of their birth certificate.
+                    For example, BXCG 457713
                 </div>
-                <input class="govuk-input govuk-input--width-10" id="account-number" name="child-birth-cert-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+                <input class="govuk-input govuk-input--width-10" id="account-number" name="child-birth-cert-number" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric" value="{{ data['child-birth-cert-number'] }}">
             </div>
             <br /> <br />
 
@@ -85,25 +86,25 @@
 
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="where-do-you-live" name="child-relationship" type="radio" value="Birth child">
+                            <input class="govuk-radios__input" id="where-do-you-live" name="child-relationship" type="radio" value="Birth child" {% if data['child-relationship'] == "Birth child" %} {{ checked("child-relationship", "Birth child") }} {% else %} {% endif %}>
                             <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                                 Birth child
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="where-do-you-live-2" name="child-relationship" type="radio" value="Adopted">
+                            <input class="govuk-radios__input" id="where-do-you-live-2" name="child-relationship" type="radio" value="Adopted" {% if data['child-relationship'] == "Adopted" %} {{ checked("child-relationship", "Adopted") }} {% else %} {% endif %}>
                             <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
                                 Adopted child
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="where-do-you-live-3" name="child-relationship" type="radio" value="Stepchild">
+                            <input class="govuk-radios__input" id="where-do-you-live-3" name="child-relationship" type="radio" value="Stepchild" {% if data['child-relationship'] == "Stepchild" %} {{ checked("child-relationship", "Stepchild") }} {% else %} {% endif %}>
                             <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
                                 Stepchild
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="where-do-you-live-4" name="child-relationship" type="radio" value="None of the above">
+                            <input class="govuk-radios__input" id="where-do-you-live-4" name="child-relationship" type="radio" value="None of the above" {% if data['child-relationship'] == "None of the above" %} {{ checked("child-relationship", "None of the above") }} {% else %} {% endif %}>
                             <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
                                 None of these
                             </label>
