@@ -876,3 +876,8 @@ input:checked + .slider:before {
 .right {
     text-align: right;
 }
+
+.personalised-inset {
+    border-left: 10px solid #4c2c92 !important;
+    background: #EDEAF4;
+}
