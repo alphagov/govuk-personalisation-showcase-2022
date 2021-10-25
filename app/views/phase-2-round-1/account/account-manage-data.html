@@ -171,7 +171,7 @@
 
                             {% if data['child-1-name'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Child(ren)</td>
+                                <td class="govuk-table__cell bold">Child 1</td>
                                 <td class="govuk-table__cell">
                                     <p><b>Full name:</b> <br />{{ data['child-1-name'] }}<br />{% include "phase-2-round-1/includes/verified.html" %}</p>
                                     <p><b>Date of birth:</b> <br />
@@ -251,7 +251,7 @@
                             {% if data['parent-work-pay'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Paid (per week)</td>
-                                <td class="govuk-table__cell"> {{ data['parent-work-pay'] }}</td>
+                                <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
