@@ -81,7 +81,7 @@
                                 <td class="govuk-table__cell bold">Name</td>
                                 <td class="govuk-table__cell">{{ data['full-name'] }}<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -92,8 +92,8 @@
                                 <td class="govuk-table__cell bold">Date of birth</td>
                                 <td class="govuk-table__cell"> {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />{% include "phase-2-round-1/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp; {% if data['time'] == "task-2" %}{% else %}
-                                        <a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                        <a href="#">Change</a><br />
                                         {% endif %}
 
                                         <a href="#" style="color: #d4351c;">Delete</a></p>
@@ -107,7 +107,7 @@
                                 <td class="govuk-table__cell bold">Place of birth</td>
                                 <td class="govuk-table__cell"> {{ data['town-of-birth'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -131,7 +131,7 @@
                                     <p class="govuk-body-s"><a href="#">View address history</a></p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -163,7 +163,7 @@
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -182,8 +182,8 @@
                                     <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br />{% include "phase-2-round-1/includes/verified.html" %}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp; {% if data['time'] == "task-2" %}{% else %}
-                                        <a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                        <a href="#">Change</a><br />
                                         {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
@@ -215,8 +215,8 @@
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp; {% if data['time'] == "task-2" %}{% else %}
-                                        <a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                        <a href="#">Change</a><br />
                                         {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
 
                                 </td>
@@ -229,7 +229,7 @@
                                 <td class="govuk-table__cell bold">Employment status</td>
                                 <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -241,7 +241,7 @@
                                 <td class="govuk-table__cell bold">Hours worked (per week)</td>
                                 <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -253,7 +253,7 @@
                                 <td class="govuk-table__cell bold">Paid (per week)</td>
                                 <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Change</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
