@@ -60,6 +60,15 @@
                     </label> Recommendations<br />
                     <p class="govuk-body-s">See suggested government services and articles based on your account activity</p>
                 </li>
+                {% if data['employer-connection-status'] == "connected" %}
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Automatic reconfirmation to The Childcare Service <br />
+                    <p class="govuk-body-s">Enable your GOV.UK account to automatically reconfirm your details every 3 months</p>
+                </li>
+                {% else %}
+                {% endif %}
             </ul>
         </div>
         <br>
