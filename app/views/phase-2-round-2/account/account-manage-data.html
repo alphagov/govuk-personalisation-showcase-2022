@@ -54,7 +54,7 @@
                     </li>
                     <li class="govuk-tabs__list-item">
                         <a class="govuk-tabs__tab" href="#family">
-                            Family
+                            Child(ren)
                         </a>
                     </li>
                     <li class="govuk-tabs__list-item">
@@ -81,7 +81,7 @@
                                 <td class="govuk-table__cell bold">Name</td>
                                 <td class="govuk-table__cell">{{ data['full-name'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -92,7 +92,7 @@
                                 <td class="govuk-table__cell bold">Date of birth</td>
                                 <td class="govuk-table__cell"> {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
                                         <a href="#">Change</a><br />
                                         {% endif %}
 
@@ -107,7 +107,7 @@
                                 <td class="govuk-table__cell bold">Place of birth</td>
                                 <td class="govuk-table__cell"> {{ data['town-of-birth'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -131,7 +131,23 @@
                                     <p class="govuk-body-s"><a href="#">View address history</a></p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['partner-check'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Live with partner</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        {{ data['partner-check'] }}
+                                    </p>
+
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -153,21 +169,7 @@
                         </thead> -->
                         <tbody class="govuk-table__body">
 
-                            {% if data['partner-check'] %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Live with partner</td>
-                                <td class="govuk-table__cell">
-                                    <p>
-                                        {{ data['partner-check'] }}
-                                    </p>
 
-                                </td>
-                                <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
 
                             {% if data['child-1-name'] %}
                             <tr class="govuk-table__row">
@@ -182,7 +184,43 @@
                                     <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                        <a href="#">Change</a><br />
+                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+
+                            {% if data['childcare-provider-name'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Childcare provider</td>
+                                <td class="govuk-table__cell">
+                                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }} </p>
+                                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }} </p>
+                                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} </p>
+
+                                    <p> <b>Address:<br /> </b>
+                                        {{ data['childcare-provider-address-line-1'] }} <br />
+
+
+                                        {{ data['childcare-provider-address-line-2'] }} <br />
+
+
+                                        {{ data['childcare-provider-address-town'] }} <br />
+
+
+
+                                        {{ data['childcare-provider-address-county'] }} <br />
+
+
+                                        {{ data['childcare-provider-address-postcode'] }} <br />
+
+                                    </p>
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
                                         <a href="#">Change</a><br />
                                         {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
@@ -215,7 +253,7 @@
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
                                         <a href="#">Change</a><br />
                                         {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
 
@@ -229,7 +267,7 @@
                                 <td class="govuk-table__cell bold">Employment status</td>
                                 <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -241,7 +279,31 @@
                                 <td class="govuk-table__cell bold">Hours worked (per week)</td>
                                 <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+
+                            {% if data['employment-start-month'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Employment start date</td>
+                                <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['employment-leave'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Current paid leave status</td>
+                                <td class="govuk-table__cell">{% if data['employment-leave'] == "None of these" %} Not currently on paid leave {% else %}
+                                    {% endif %}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -250,10 +312,14 @@
 
                             {% if data['parent-work-pay'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Paid (per week)</td>
+                                <td class="govuk-table__cell bold">Paid (per week) {% if data['pay-source'] == "self" %}
+                                    <p class="govuk-body-s">Self declared</p>
+                                    {% else %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% endif %}</td>
                                 <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">View usage</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -268,6 +334,25 @@
 
 
         </div>
+        <br />
+        <div class="accounts-panel">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Linked data</h2>
+
+
+            <p><i>Here's a sentence explaining what linked data is (name TBC). This is where the external data from employer will appear when they come back.</i></p>
+
+            <br />
+
+            <p><b>You have no linked data in your account</b> </p>
+
+
+            <br />
+            <p><a href="#">Add linked data</a></p>
+
+
+        </div>
+
         <br />
         <div class="accounts-panel">
 

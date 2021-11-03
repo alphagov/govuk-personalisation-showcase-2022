@@ -121,11 +121,11 @@
 
 
 
-                            {% if data['child-benefit-status'] == "completed" %}
+                            {% if data['child-service-status'] == "completed" %}
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim submitted to HMRC</td>
+                                <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim submitted to HMRC</td>
                                 <td class="govuk-table__cell right">
 
                                 </td>
@@ -134,11 +134,11 @@
                             {% else %}
                             {% endif %}
 
-                            {% if data['child-benefit-status'] == "started" %}
+                            {% if data['child-service-status'] == "started" %}
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim - in progress</td>
+                                <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim - in progress</td>
                                 <td class="govuk-table__cell right">
 
                                 </td>
@@ -192,11 +192,13 @@
                     <p><a href="#">Personal tax deadline</a> (HMRC) </p>
 
                     <br />
-
-                    <span class="govuk-body-s">17-04-2022</span><br />
-                    <p><a href="#">Renew Vehicle tax</a> (DVLA) </p>
+                    {% if data['child-service-status'] == "completed" %}
+                    <span class="govuk-body-s">05-02-2022</span><br />
+                    <p>Comfirm {% include "../includes/service-1-name.html" %} details </p>
 
                     <br />
+                    {% else %}
+                    {% endif %}
 
                     <span class="govuk-body-s">30-06-2022</span><br />
                     <p><a href="#">Personal tax payment</a> (HMRC) </p>
