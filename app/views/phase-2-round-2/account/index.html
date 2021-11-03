@@ -1,0 +1,237 @@
+{% extends "layout_phase-2-round-2.html" %}
+
+{% block pageTitle %}
+{% include "includes/auth-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "includes/auth-name.html" %}
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav aria-label="Account management">
+            <ul class="accounts-menu">
+                <li class="accounts-menu__item accounts-menu__item--current">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" aria-current="page" href="account" style="padding-left: 14px;">Your account</a>
+                </li>
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-2/account/account-manage.html">Your settings</a>
+                </li>
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-2/account/account-manage-data.html">Your data</a>
+                </li>
+                <!--   <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="#">Security and privacy</a>
+                </li> -->
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
+
+                    <table class="govuk-table">
+                        <!-- <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Data item</th>
+                                <th scope="col" class="govuk-table__header">Cases opened</th>
+                                <th scope="col" class="govuk-table__header">Cases closed</th>
+                            </tr>
+                        </thead> -->
+                        <tbody class="govuk-table__body">
+
+                            {% if data['universal-credit-status'] == "completed" %}
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">28-11-2021:</span></td>
+                                <td class="govuk-table__cell">Universal Credit application submitted to DWP</td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['universal-credit-status'] == "started" %}
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">28-11-2021:</span></td>
+                                <td class="govuk-table__cell">Universal Credit application - in progress</td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['time'] == "task-2" %}
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">27-11-2021:</span></td>
+                                <td class="govuk-table__cell">Child Benefit claim has been approved by HMRC</td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
+                                <td class="govuk-table__cell">Your name, date of birth &amp; National Insurance number have been verified by HMRC</td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
+                                <td class="govuk-table__cell">Your child's details have been verified by HMRC </td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            {% else %}
+                            {% endif %}
+
+
+
+                            {% if data['child-benefit-status'] == "completed" %}
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
+                                <td class="govuk-table__cell">Child Benefit claim submitted to HMRC</td>
+                                <td class="govuk-table__cell right">
+
+                                </td>
+                            </tr>
+
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['child-benefit-status'] == "started" %}
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
+                                <td class="govuk-table__cell">Child Benefit claim - in progress</td>
+                                <td class="govuk-table__cell right">
+
+                                </td>
+                            </tr>
+
+                            {% else %}
+                            {% endif %}
+
+                        </tbody>
+                    </table>
+
+                    {% if data['time'] == "task-2" %}
+                    <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+
+                    {% else %}
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="govuk-grid-row">
+            <!-- <div class="govuk-grid-column-one-half">
+                <div class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Notifications</h2>
+                    {% if data['child-benefit-status'] == "completed" %}
+
+                    <p><span class="notification-marker">•</span> Child Benefit claim has been approved <span class="govuk-body-s">(27-11-2021)</span></p>
+
+
+                    <br />
+                    <p><span class="notification-marker">•</span> Your name, date of birth &amp; National Insurance number have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
+
+                    <br />
+                    <p><span class="notification-marker">•</span> Your child's details have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
+                    {% else %}
+
+                    {% endif %}
+                    <br />
+                    <span class="govuk-body-s"><a href="#">Clear read notifications</a>
+                </div>
+            </div> -->
+            <div class="govuk-grid-column-one-half">
+                <div class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
+
+
+                    <span class="govuk-body-s">31-01-2022</span><br />
+                    <p><a href="#">Personal tax deadline</a> (HMRC) </p>
+
+                    <br />
+
+                    <span class="govuk-body-s">17-04-2022</span><br />
+                    <p><a href="#">Renew Vehicle tax</a> (DVLA) </p>
+
+                    <br />
+
+                    <span class="govuk-body-s">30-06-2022</span><br />
+                    <p><a href="#">Personal tax payment</a> (HMRC) </p>
+
+
+                    <br />
+                    <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function myFunction(language) {
+
+        var x = document.getElementsByClassName(language);
+
+        for (var i = 0; i < x.length; i++) {
+
+            if (x.item(i).style.display === "none") {
+                x.item(i).style.display = "block";
+            } else {
+                x.item(i).style.display = "none";
+            }
+        }
+
+    }
+
+</script>
+
+
+
+
+
+{% endblock %}

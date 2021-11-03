@@ -1,0 +1,607 @@
+{% extends "layout_phase-2-round-2.html" %}
+
+{% block pageTitle %}
+Tax credits and childcare
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+
+<style>
+    /* The switch - the box around the slider */
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+
+    /* Hide default HTML checkbox */
+
+    .switch input {
+        display: none;
+    }
+
+
+    /* The slider */
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+
+    /* Rounded sliders */
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    #toggle1b,
+    #toggle2b,
+    #toggle3b,
+    #toggle4b {
+        display: none;
+    }
+
+</style>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/phase-2-round-2/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% if data['child-benefit-status'] == "completed" and data['signing'] == "yes" %}
+<div class="personalised personalised-inset">
+    <p class="govuk-notification-banner__heading">
+        This page is being personalised based on information saved in your GOV.UK account
+    </p>
+    <p>You can turn the personalised content on/off by sliding the toggles next to each section.</p>
+
+</div>
+{% else %}
+{% endif %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Tax-Free Childcare</h1>
+
+        {% if data['signing'] == "yes" %}
+
+
+        <h2 class="govuk-heading-l" id="how-it-works">How it works</h2>
+
+
+        <p>You can get up to £500 every 3 months (up to £2,000 a year) for your child to help with the costs of childcare.</p>
+
+        <p>If you get Tax-Free Childcare, you’ll set up an online childcare account for your child. For every £8 you pay into this account, the government will pay in £2 to use to pay your provider.</p>
+
+        <p>You can get Tax-Free Childcare at the same time as 30 hours free childcare if you’re eligible for both.</p>
+
+        <br />
+
+        <h2 class="govuk-heading-m" id="what-you-can-use-tax-free-childcare-for">What you can use Tax-Free Childcare for</h2>
+
+        <p>You can use it to pay for <a href="/help-with-childcare-costs">approved childcare</a> for your child, for example:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>childminders, nurseries and nannies</li>
+            <li>after school clubs and play schemes</li>
+        </ul>
+
+        <p>Your childcare provider must be signed up to the scheme before you can pay them and benefit from Tax-Free Childcare.</p>
+
+        <p>Check with your provider to see if they’re signed up.</p>
+
+
+        <br /><br />
+
+        <h2 class="govuk-heading-l" id="eligibility">Eligibility</h2>
+
+        <div class="govuk-inset-text personalised-inset">Based on the information saved in your GOV.UK account, we think it's <b>very likely</b> you are eligible for tax-free childcare.</div>
+
+        <p>Eligibility for Tax-Free Childcare is based on:</p>
+
+        <ol class="govuk-list govuk-list--number">
+            <li>if you are working</li>
+            <li>your income (and your partner’s income, if you have one)</li>
+            <li>your child’s age and circumstances</li>
+            <li>your immigration status</li>
+        </ol>
+
+
+        <br /> <br />
+
+        <h3 class="govuk-heading-m" id="your-income">1. If you are working<span style="float: right;">
+                <form>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-1" checked="true" />
+                        <div class="slider "></div>
+                    </label>
+                </form>
+            </span>
+        </h3>
+
+        <div id="toggle1a">
+            <div class="govuk-inset-text  personalised-inset">
+                <p>According to your GOV.UK account, you are currently <b>in work</b> with an employment status of <b>{{ data['employment-status'] }}</b>.</p>
+
+                <p class="govuk-body-s"><a href="#">I need to change this</a></p>
+            </div>
+        </div>
+
+        <div id="toggle1b">
+
+            <h3 class="govuk-heading-s" id="if-youre-currently-working">If you’re currently working</h3>
+
+            <p>You can usually get Tax-Free Childcare if you (and your partner, if you have one) are:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>in work</li>
+                <li>on sick leave or annual leave</li>
+                <li>on shared parental, maternity, paternity or adoption leave</li>
+            </ul>
+
+            <p>If you’re on adoption leave, you cannot apply for the child you’re on leave for unless you’re going back to work within 31 days of the date you first applied.</p>
+
+            <h3 class="govuk-heading-s" id="if-youre-not-currently-working">If you’re not currently working</h3>
+
+            <p>You may still be eligible if your partner is working, and you get Incapacity Benefit, Severe Disablement Allowance, Carer’s Allowance or contribution-based Employment and Support Allowance.</p>
+
+            <p>You can apply if you’re starting or re-starting work within the next 31 days.</p>
+
+            <h3 class="govuk-heading-s" id="if-your-working-pattern-has-changed-because-of-coronavirus-covid-19">If your working pattern has changed because of coronavirus (COVID-19)</h3>
+
+            <p>You may still be eligible for Tax-Free Childcare if you’re temporarily working less and either:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>you’re on furlough through the Coronavirus Job Retention Scheme</li>
+                <li>you’re claiming a Self Employment Income Support Scheme grant</li>
+            </ul>
+
+
+        </div>
+
+        <br /><br />
+
+        <h3 class="govuk-heading-m" id="your-income">2. Your income<span style="float: right;">
+                <form>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-2" checked="true" />
+                        <div class="slider "></div>
+                    </label>
+                </form>
+            </span>
+        </h3>
+
+        <div id="toggle2a">
+            <div class="govuk-inset-text  personalised-inset">
+                <p>According to your GOV.UK account, you work <b>{{ data['parent-work-hours'] }}</b> hours a week, earning <b>£{{ data['parent-work-pay'] }}</b>.</p>
+
+
+                <p>As you are earning at least the <a href="/national-minimum-wage-rates">National Minimum Wage or Living Wage</a> for 16 hours a week on average, and less than £100,000 in the current tax year, your income falls within the boundaries of eligibility for tax-free childcare.</p>
+
+                <p>You <b>do not live with a partner</b>, so there is no partner's income to include in the calculation.</p>
+
+                <p>You are <b>not registered as self-employed</b>, so there are no profits to declare.</p>
+
+                <p class="govuk-body-s"><a href="#">I need to change this</a></p>
+            </div>
+        </div>
+
+        <div id="toggle2b">
+            <p>You’ll need to expect to earn a certain amount over the next 3 months. This is at least the <a href="/national-minimum-wage-rates">National Minimum Wage or Living Wage</a> for 16 hours a week on average.</p>
+
+            <p>For example, over the next 3 months you expect to earn at least £1,853.28 - the National Living Wage for people over 23.</p>
+
+            <p>If you have a partner, they’ll need to expect to earn at least this much too.</p>
+
+            <div role="note" aria-label="Information" class="application-notice info-notice">
+                <p>If you or your partner are temporarily earning less than this amount because of coronavirus, you may still be eligible. You must be furloughed through the Coronavirus Job Retention Scheme or claiming a Self Employment Income Support Scheme grant to qualify.</p>
+            </div>
+
+            <p>If you’re self-employed and do not expect to make enough profit in the next 3 months, you can use an average of how much you expect to make over the current tax year.</p>
+
+            <p>This earnings limit does not apply if you’re self-employed and started your business less than 12 months ago.</p>
+
+            <p>If you or your partner have an expected ‘adjusted net income’ over £100,000 in the current tax year you will not be eligible. This includes any bonuses you expect to get.</p>
+
+            <p>Your adjusted net income is your total <a href="/guidance/adjusted-net-income">taxable income</a> before any personal allowances and minus things like Gift Aid.</p>
+        </div>
+
+        <br /><br />
+
+        <h3 class="govuk-heading-m" id="your-child">3. Your child’s age and circumstances<span style="float: right;">
+                <form>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-3" checked="true" />
+                        <div class="slider "></div>
+                    </label>
+                </form>
+            </span></h3>
+
+        <div id="toggle3a">
+            <div class="govuk-inset-text personalised-inset">
+                <p>According to your GOV.UK account, {{ data['child-1-name'] }} is your <b>birth child</b>.</p>
+                <p>He is <b>under 11</b> and <b>lives with you</b>. He is <b>not registered as disabled</b>.</p>
+
+                <p>{{ data['child-1-name'] }} stops being eligible for tax-free childcare on <b>1 September 2029</b>.</p>
+
+                <p class="govuk-body-s"><a href="#">I need to change this</a></p>
+            </div>
+        </div>
+
+        <div id="toggle3b">
+            <p>Your child must be 11 or under and usually live with you. They stop being eligible on 1 September after their 11th birthday.</p>
+
+            <p>Adopted children are eligible, but foster children are not.</p>
+
+            <p>If your child is disabled you may get up to £4,000 a year until they’re 17. They’re eligible for this if they:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>get Disability Living Allowance, Personal Independence Payment or Armed Forces Independence Payment</li>
+                <li>are <a rel="external" href="https://www.rnib.org.uk/eye-health/registering-your-sight-loss/criteria-certification">certified as blind or severely sight-impaired</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <br /><br />
+
+        <h3 class="govuk-heading-m" id="your-immigration-status">4. Your immigration status<span style="float: right;">
+                <form>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-4" checked="true" />
+                        <div class="slider "></div>
+                    </label>
+                </form>
+            </span></h3>
+
+        <div id="toggle4a">
+            <div class="govuk-inset-text personalised-inset">
+                <p>According to your GOV.UK account, you have <b>British citizenship</b> and a <b>National Insurance number</b>.</p>
+
+                <p class="govuk-body-s"><a href="#">I need to change this</a></p>
+            </div>
+        </div>
+
+        <div id="toggle4b">
+            <p>To be eligible for Tax-Free Childcare, you must have a National Insurance number and at least one of the following:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>British or Irish citizenship</li>
+                <li>
+                    <a href="/settled-status-eu-citizens-families">settled or pre-settled status</a>, or you have applied and you’re waiting for a decision</li>
+                <li>permission to access public funds - your UK residence card will tell you if you cannot do this</li>
+            </ul>
+        </div>
+
+
+
+        <br /><br />
+
+        <h2 class="govuk-heading-l" id="apply">Apply</h2>
+
+        <p>If you apply for Tax-Free Childcare and someone else already gets 30 hours free childcare for that child, their 30 hours will stop at the end of the next term. You will be eligible for 30 hours free childcare instead.</p>
+
+        <h3 class="govuk-heading-s" id="if-you-are-separated">If you are separated</h3>
+
+        <p>You and your ex-partner need to decide who should apply if you are jointly responsible for your child.</p>
+
+        <p>If you cannot decide, both of you must apply separately and <abbr title="HM Revenue and Customs">HMRC</abbr> will decide who gets a childcare account.</p>
+
+        <br />
+
+        <p><a href="#"><button class="govuk-button" data-module="govuk-button">
+                    Apply online for Tax-Free Childcare
+                </button></a></p>
+
+        <br />
+
+        {% else %}
+
+        <!-- //////// SIGNED OUT CONTENT ////////-->
+
+        <p>You can get up to £500 every 3 months (up to £2,000 a year) for each of your children to help with the costs of childcare. This goes up to £1,000 every 3 months if a child is disabled (up to £4,000 a year).</p>
+
+        <p>If you get Tax-Free Childcare, you’ll set up an online childcare account for your child. For every £8 you pay into this account, the government will pay in £2 to use to pay your provider.</p>
+
+        <p>You can get Tax-Free Childcare at the same time as 30 hours free childcare if you’re eligible for both.</p>
+
+        <h2 class="govuk-heading-l" id="what-you-can-use-tax-free-childcare-for">What you can use Tax-Free Childcare for</h2>
+
+        <p>You can use it to pay for <a href="/help-with-childcare-costs">approved childcare</a>, for example:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>childminders, nurseries and nannies</li>
+            <li>after school clubs and play schemes</li>
+        </ul>
+
+        <p>Your childcare provider must be signed up to the scheme before you can pay them and benefit from Tax-Free Childcare.</p>
+
+        <p>Check with your provider to see if they’re signed up.</p>
+
+        <h3 class="govuk-heading-m" id="if-your-child-is-disabled">If your child is disabled</h3>
+
+        <p>You can use the extra Tax-Free Childcare money you get to help pay for extra hours of childcare. You can also use it to help pay your childcare provider so they can get specialist equipment for your child such as mobility aids. Talk to them about what equipment your child can get.</p>
+
+        <h3 class="govuk-heading-m" id="if-your-childcare-provider-is-in-an-eea-country">If your childcare provider is in an <abbr title="European Economic Area">EEA</abbr> country</h3>
+
+        <p>You may be able to use Tax-Free Childcare to pay a provider based in a <a href="/eu-eea">European Economic Area (<abbr title="European Economic Area">EEA</abbr>)</a> country. <a href="/government/organisations/hm-revenue-customs/contact/childcare-service-helpline">Contact HM Revenue and Customs (<abbr title="HM Revenue and Customs">HMRC</abbr>)</a> to check.</p>
+
+        <h2 class="govuk-heading-l" id="eligibility">Eligibility</h2>
+
+        <p>Your eligibility depends on:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>if you are working</li>
+            <li>your income (and your partner’s income, if you have one)</li>
+            <li>your child’s age and circumstances</li>
+            <li>your immigration status</li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="if-you-are-working">If you are working</h3>
+        <p>You can usually get Tax-Free Childcare if you (and your partner, if you have one) are:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>in work</li>
+            <li>on sick leave or annual leave</li>
+            <li>on shared parental, maternity, paternity or adoption leave</li>
+        </ul>
+
+        <p>If you’re on adoption leave, you cannot apply for the child you’re on leave for unless you’re going back to work within 31 days of the date you first applied.</p>
+
+        <h3 class="govuk-heading-m" id="if-your-working-pattern-has-changed-because-of-coronavirus-covid-19">If your working pattern has changed because of coronavirus (COVID-19)</h3>
+
+        <p>You may still be eligible for Tax-Free Childcare if you’re temporarily working less and either:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you’re on furlough through the Coronavirus Job Retention Scheme</li>
+            <li>you’re claiming a Self Employment Income Support Scheme grant</li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="if-youre-not-currently-working">If you’re not currently working</h3>
+
+        <p>You may still be eligible if your partner is working, and you get Incapacity Benefit, Severe Disablement Allowance, Carer’s Allowance or contribution-based Employment and Support Allowance.</p>
+
+        <p>You can apply if you’re starting or re-starting work within the next 31 days.</p>
+
+        <h3 class="govuk-heading-m" id="your-income">Your income</h3>
+        <p>You’ll need to expect to earn a certain amount over the next 3 months. This is at least the <a href="/national-minimum-wage-rates">National Minimum Wage or Living Wage</a> for 16 hours a week on average.</p>
+
+        <p>For example, over the next 3 months you expect to earn at least £1,853.28 - the National Living Wage for people over 23.</p>
+
+        <p>If you have a partner, they’ll need to expect to earn at least this much too.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>If you or your partner are temporarily earning less than this amount because of coronavirus, you may still be eligible. You must be furloughed through the Coronavirus Job Retention Scheme or claiming a Self Employment Income Support Scheme grant to qualify.</p>
+        </div>
+
+        <p>If you’re self-employed and do not expect to make enough profit in the next 3 months, you can use an average of how much you expect to make over the current tax year.</p>
+
+        <p>This earnings limit does not apply if you’re self-employed and started your business less than 12 months ago.</p>
+
+        <p>If you or your partner have an expected ‘adjusted net income’ over £100,000 in the current tax year you will not be eligible. This includes any bonuses you expect to get.</p>
+
+        <p>Your adjusted net income is your total <a href="/guidance/adjusted-net-income">taxable income</a> before any personal allowances and minus things like Gift Aid.</p>
+
+        <h3 class="govuk-heading-m" id="your-child">Your child</h3>
+
+        <p>Your child must be 11 or under and usually live with you. They stop being eligible on 1 September after their 11th birthday.</p>
+
+        <p>Adopted children are eligible, but foster children are not.</p>
+
+        <p>If your child is disabled you may get up to £4,000 a year until they’re 17. They’re eligible for this if they:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>get Disability Living Allowance, Personal Independence Payment or Armed Forces Independence Payment</li>
+            <li>are <a rel="external" href="https://www.rnib.org.uk/eye-health/registering-your-sight-loss/criteria-certification">certified as blind or severely sight-impaired</a>
+            </li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="your-immigration-status">Your immigration status</h3>
+
+        <p>To be eligible for Tax-Free Childcare, you (or your partner if you have one) must have a National Insurance number and at least one of the following:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>British or Irish citizenship</li>
+            <li>
+                <a href="/settled-status-eu-citizens-families">settled or pre-settled status</a>, or you have applied and you’re waiting for a decision</li>
+            <li>permission to access public funds - your UK residence card will tell you if you cannot do this</li>
+        </ul>
+
+        <p>If you’re living in an EU country, Switzerland, Norway, Iceland or Liechtenstein, you (or your partner if you have one) might still be eligible for Tax-Free Childcare if:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your work is in the UK</li>
+            <li>the work started before 1 January 2021</li>
+            <li>you’ve worked in the UK at least once every 12 months since you started working here</li>
+        </ul>
+
+        <p>This is known as being a <a href="/frontier-worker-permit">‘frontier worker’</a>. You must show your Frontier Worker permit to the Childcare Service when you apply for Tax-Free Childcare.</p>
+
+        <h2 class="govuk-heading-l" id="if-you-get-tax-credits-universal-credit-a-childcare-bursary-or-grant-or-childcare-vouchers">If you get tax credits, Universal Credit, a childcare bursary or grant, or childcare vouchers</h2>
+
+        <p>You cannot get Tax-Free Childcare at the same time as claiming Working Tax Credit, Child Tax Credit, Universal Credit or childcare vouchers.</p>
+
+        <p>Which scheme you’re better off with depends on your situation. Use the <a href="/childcare-calculator">childcare calculator</a> to work out which type of support is best for you.</p>
+
+        <h3 class="govuk-heading-m" id="tax-credits">Tax credits</h3>
+        <p>If you successfully apply for Tax-Free Childcare, your Working Tax Credit or Child Tax Credit will stop straight away. You cannot apply for them again.</p>
+
+        <h3 class="govuk-heading-m" id="childcare-vouchers">Childcare vouchers</h3>
+        <p>You must tell your employer within 90 days of applying for Tax-Free Childcare to stop your&nbsp;<a href="/help-with-childcare-costs/childcare-vouchers">childcare vouchers or directly contracted childcare</a>. They’ll then stop giving you new vouchers or directly contracted childcare.</p>
+
+        <p>You will have to give <abbr title="HM Revenue and Customs">HMRC</abbr> evidence you‘ve left your employer’s childcare voucher scheme, for example:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a copy of the letter telling your employer you’re leaving the childcare voucher scheme</li>
+            <li>copies of your payslips showing your pay before and after you’ve left the scheme</li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="universal-credit">Universal Credit</h3>
+        <p>Wait until you get a decision on your Tax-Free Childcare application before cancelling your Universal Credit claim.</p>
+
+        <h3 class="govuk-heading-m" id="bursaries">Bursaries</h3>
+
+        <p>If you or your partner get a childcare bursary or grant or expect to do so within the next 3 months, you cannot get Tax-Free Childcare.</p>
+
+        <h2 class="govuk-heading-m" id="apply">Apply</h2>
+
+        <p>If you apply for Tax-Free Childcare and someone else already gets 30 hours free childcare for that child, their 30 hours will stop at the end of the next term. You will be eligible for 30 hours free childcare instead.</p>
+
+        <h3 class="govuk-heading-m" id="if-you-have-a-partner">If you have a partner</h3>
+
+        <p>You must include your partner in your application if you are:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>married or in a civil partnership and live together</li>
+            <li>not married or in a civil partnership, but living together as though you are</li>
+        </ul>
+
+        <p>Their employment and income will not affect your eligibility if they:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>are or will be absent from your household for more than 6 months</li>
+            <li>are a prisoner</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>You and your partner cannot both have accounts for the same child.</p>
+        </div>
+
+        <h3 class="govuk-heading-m" id="if-you-are-separated">If you are separated</h3>
+
+        <p>You and your ex-partner need to decide who should apply if you are jointly responsible for your child.</p>
+
+        <p>If you cannot decide, both of you must apply separately and <abbr title="HM Revenue and Customs">HMRC</abbr> will decide who gets a childcare account.</p>
+
+        <p><a href="#"><button class="govuk-button" data-module="govuk-button">
+                    Apply online for Tax-Free Childcare
+                </button></a></p>
+
+
+        {% endif %}
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-2/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function() {
+        $("#toggle-1").click(function() {
+            if ($(this).is(":checked")) {
+                $("#toggle1a").show();
+                $("#toggle1b").hide();
+            } else {
+                $("#toggle1a").hide();
+                $("#toggle1b").show();
+            }
+        });
+    });
+
+</script>
+<script>
+    $(function() {
+        $("#toggle-2").click(function() {
+            if ($(this).is(":checked")) {
+                $("#toggle2a").show();
+                $("#toggle2b").hide();
+            } else {
+                $("#toggle2a").hide();
+                $("#toggle2b").show();
+            }
+        });
+    });
+
+</script>
+<script>
+    $(function() {
+        $("#toggle-3").click(function() {
+            if ($(this).is(":checked")) {
+                $("#toggle3a").show();
+                $("#toggle3b").hide();
+            } else {
+                $("#toggle3a").hide();
+                $("#toggle3b").show();
+            }
+        });
+    });
+
+</script>
+<script>
+    $(function() {
+        $("#toggle-4").click(function() {
+            if ($(this).is(":checked")) {
+                $("#toggle4a").show();
+                $("#toggle4b").hide();
+            } else {
+                $("#toggle4a").hide();
+                $("#toggle4b").show();
+            }
+        });
+    });
+
+</script>
+{% endblock %}

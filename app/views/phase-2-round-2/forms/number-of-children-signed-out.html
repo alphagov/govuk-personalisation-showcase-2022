@@ -1,0 +1,22 @@
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <!-- Header and Hint -->
+                <h1 class="govuk-fieldset__heading">
+                    How many children do you have?
+                </h1>
+            </legend>
+            <p>Only include children under the age if 20 that you're responsible for.</p>
+            <!-- <div id="date-of-birth-hint" class="govuk-hint">For example, 12 11 2007</div> -->
+
+            <!-- Number of children -->
+            <div class="govuk-date-input" id="number-of-children">
+                <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="number-of-children">Number of children</label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="number-of-children" name="number-of-children" type="number" pattern="[0-9]*" inputmode="numeric">
+                    </div> <!-- govuk-form-group -->
+                </div> <!-- govuk-date-input__item -->
+            </div> <!-- govuk-date-input -->
+        </fieldset> <!-- govuk-fieldset -->
+    </div> <!-- govuk-form-group -->

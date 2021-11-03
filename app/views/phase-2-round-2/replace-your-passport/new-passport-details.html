@@ -1,0 +1,57 @@
+{% extends "layout_phase-2-round-2.html" %}
+
+{% block pageTitle %}
+Childcare calculator - your date of birth
+{% endblock %}
+
+{% set serviceName %}
+Childcare calculator
+{% endset%}
+
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="old-passport-details" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">New passport details</h1>
+
+        <form action="/phase-2-round-2/replace-your-passport/gender" method="POST">
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/name-signed-in.html" %}
+            {% else %}
+            {% include "../forms/name-signed-out.html" %}
+            {% endif %}
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+        <!-- /. form -->
+        {% include "../includes/prepop-explain-details.html" %}
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-2/includes/travel-abroad-side-panel-control.html" %}
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

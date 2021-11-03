@@ -1,0 +1,51 @@
+    {% extends "layout_phase-2-round-2.html" %}
+
+    {% block pageTitle %}
+    {% include "../includes/service-1-name.html" %}
+    {% endblock %}
+
+    {% set serviceName %}
+    {% include "../includes/service-1-name.html" %}
+    {% endset%}
+
+
+    {% block pageScripts %}
+    <script src="/public/javascripts/step-by-step-nav.js"></script>
+    <script type="text/javascript">
+        var $element = $('#step-by-step-navigation')
+        var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+        stepByStepNavigation.start($element)
+
+    </script>
+    {% endblock %}
+
+    {% block beforeContent %}
+    <a href="NIN" class="govuk-back-link">Back</a>
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="employment-start" method="POST">
+                <h1 class="govuk-heading-xl">What is your current employment status?</h1>
+
+                <p class="govuk-body">Choose your normal situation if you are currently on maternity, paternity, shared parental, adoption or sick leave.<p>
+
+                        {% if data['signing'] == "yes" %}
+                        {% include "../forms/employment-status-signed-in.html" %}
+                        {% else %}
+                        {% include "../forms/employment-status-signed-out.html" %}
+                        {% endif %}
+
+                        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+            </form> <!-- /. form -->
+        </div> <!-- /. govuk-grid-column-two-thirds -->
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+    </div> <!-- /. govuk-grid-row -->
+
+    {% endblock %}

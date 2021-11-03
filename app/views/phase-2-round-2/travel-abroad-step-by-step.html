@@ -1,0 +1,75 @@
+{% extends "layout_phase-2-round-2.html" %}
+
+{% block pageTitle %}
+Step by step navigation
+{% endblock %}
+
+{% set serviceName %}
+Childcare: step by step
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="govuk-home">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Passports, travel and living abroad Travel abroad
+            </a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link">Travel abroad</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            Travel abroad: step by step
+
+        </h1>
+
+        <p>
+            Check what you need to do to travel internationally.</p>
+
+        <p>There’s different guidance if you are travelling for business in the EU or driving professionally abroad.
+        </p>
+
+        <!--
+        {% if data['signing'] == "yes" %}
+        <p>//Paragraph here about what their GOV.UK Account will enable.</p>
+        {% else %}
+        <p>//Paragraph here about why they should use GOV.UK Account.</p>
+        {% endif %} -->
+
+        {% include "phase-2-round-2/includes/travel-abroad-step-by-step.html" %}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        {% if data['signing'] == "yes" %}
+        {% include "phase-2-round-2/includes/travel-abroad-signed-in-side-panel.html" %}
+        {% else %}
+        {% include "phase-2-round-2/includes/travel-abroad-signed-out-side-panel.html" %}
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

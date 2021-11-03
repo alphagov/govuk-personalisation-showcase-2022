@@ -1,0 +1,270 @@
+{% extends "layout_phase-2-round-2.html" %}
+
+{% block pageTitle %}
+Universal Credit - application
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Universal Credit application - check your answers</h1>
+
+        <p>Claim back up to 85% of your childcare costs</p>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-sumary-list__row">
+                <h2>About you</h2>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['full-name'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['date-of-birth-day'] %}
+                    {{ data['date-of-birth-day'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-month'] %}
+                    {{ data['date-of-birth-month'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-year'] %}
+                    {{ data['date-of-birth-year'] }} <br />{% include "phase-2-round-2/includes/verified.html" %}
+                    {% else %}
+
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['address-line-1'] %}
+                    {{ data['address-line-1'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-line-2'] %}
+                    {{ data['address-line-2'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-town'] %}
+                    {{ data['address-town'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-county'] %}
+                    {{ data['address-county'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-postcode'] %}
+                    {{ data['address-postcode'] }} <br />
+                    {% else %}
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['phone-number'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %}</p>
+                    <p class="govuk-body">{{ data['email-address'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %}</p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a><br /><br /><a href="#">Change</a>
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <br />
+                <h2>Who lives with you</h2>
+
+
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Number of children living with you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['number-of-children'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Child details
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['child-1-name'] %}
+                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %} <br /> <br /></p>
+                    <p><b>Date of birth:</b> <br />
+                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %} <br /> <br />
+                    </p>
+                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %} <br /> <br /></p>
+                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %} <br /> <br /></p>
+                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br /> {% include "phase-2-round-2/includes/verified.html" %} <br /> <br /></p>
+                    {% else %}
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Do you live with your partner?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['partner-check'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <br />
+                <h2>Your employment</h2>
+
+
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    National Insurance number
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['NIN'] }} <br /> {% include "phase-2-round-2/includes/verified.html" %}
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Employment status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['employment-status'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    How many hours a week do you usually work?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['parent-work-hours'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    How much do you get paid per week?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">£{{ data['parent-work-pay'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+
+        </dl>
+
+    </div>
+
+</div>
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-m">Now send your application</h2>
+
+        <p>By submitting this application you’re confirming that, as far as you know, the details you’re providing are correct</p>
+
+        <br />
+
+        <form class="form" action="consent" method="post">
+
+            <div class="govuk-form-group">
+
+                <input class="govuk-input" id="appcomplete" name="universal-credit-status" type="hidden" value="completed">
+
+
+                <button class="govuk-button no-mar-bot" data-module="govuk-button">
+                    Accept and send
+                </button>
+
+            </div>
+        </form>
+
+        <br />
+
+    </div>
+</div>
+
+{% endblock %}
