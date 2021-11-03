@@ -107,9 +107,9 @@
                                 <td class="govuk-table__cell bold">Place of birth</td>
                                 <td class="govuk-table__cell"> {{ data['town-of-birth'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a>{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
                                         <a href="#">Change</a><br />
-                                        {% endif %}<br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -405,7 +405,7 @@
                 <tbody class="govuk-table__body">
 
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__cell bold">Smith &amp; Sons Ltd
+                        <td class="govuk-table__cell bold">{{ data['company-name'] }}
                             <p class="govuk-body-s">Employer</p>
                         </td>
                         <td class="govuk-table__cell">

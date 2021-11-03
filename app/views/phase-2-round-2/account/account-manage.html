@@ -69,6 +69,16 @@
                 </li>
                 {% else %}
                 {% endif %}
+
+                {% if data['childcare-payment-status'] == "connected" %}
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Automatic payments to your childcare provider <br />
+                    <p class="govuk-body-s">Enable automatic payments to your childcare provider when they send a bill to your account.</p>
+                </li>
+                {% else %}
+                {% endif %}
             </ul>
         </div>
         <br>

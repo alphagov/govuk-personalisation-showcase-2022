@@ -39,7 +39,24 @@
 
         <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
 
-        {% if data['employer-connection-status'] == "connected" %}
+        {% if data['employer-connection-status'] == "connected" and data['time'] == "task-2" and data['childcare-payment-status'] != "connected" %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Turn on automatic payments to your childcare provider
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="">
+                    You can automatically pay your childcare provider bills using the stored payment method in your GOV.UK account.
+                    <a class="govuk-notification-banner__link" href="../childcare-payment-setup">Set this up</a>.
+                </p>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if data['employer-connection-status'] == "connected" or data['time'] == "task-1" or data['childcare-payment-status'] == "connected" %}
         {% else %}
 
         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
@@ -71,6 +88,19 @@
                             </tr>
                         </thead> -->
                         <tbody class="govuk-table__body">
+
+                            {% if data['childcare-payment-status'] == "connected" %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">28-11-2021:</span></td>
+                                <td class="govuk-table__cell">Automatic payments to childcare provider activated</td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
 
                             {% if data['employer-connection-status'] == "connected" %}
                             <tr class="govuk-table__row">
@@ -209,27 +239,8 @@
         <br>
 
         <div class="govuk-grid-row">
-            <!-- <div class="govuk-grid-column-one-half">
-                <div class="accounts-panel">
-                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Notifications</h2>
-                    {% if data['child-benefit-status'] == "completed" %}
 
-                    <p><span class="notification-marker">•</span> Child Benefit claim has been approved <span class="govuk-body-s">(27-11-2021)</span></p>
-
-
-                    <br />
-                    <p><span class="notification-marker">•</span> Your name, date of birth &amp; National Insurance number have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
-
-                    <br />
-                    <p><span class="notification-marker">•</span> Your child's details have been verified <span class="govuk-body-s">(27-11-2021)</span></p>
-                    {% else %}
-
-                    {% endif %}
-                    <br />
-                    <span class="govuk-body-s"><a href="#">Clear read notifications</a>
-                </div>
-            </div> -->
-            <div class="govuk-grid-column-one-half">
+            <div class="govuk-grid-column-one-half govuk-!-margin-bottom-8">
                 <div class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
 
@@ -257,6 +268,21 @@
                     <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span>
                 </div>
             </div>
+            {% if data['childcare-payment-status'] == "connected" %}
+            <div class="govuk-grid-column-one-half">
+                <div class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Payments</h2>
+
+
+                    <p>Payments made from your GOV.UK account will be displayed here </p>
+
+
+                    <br />
+
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
         </div>
 
     </div>
