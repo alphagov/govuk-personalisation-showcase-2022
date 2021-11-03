@@ -39,6 +39,20 @@
 
         <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
 
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Activate automatic reconfirmation on {% include "../includes/service-1-name.html" %}
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="">
+                    You can enable your GOV.UK account to automatically reconfirm your childcare details every 3 months.
+                    <a class="govuk-notification-banner__link" href="../connect-employer">Set this up</a>.
+                </p>
+            </div>
+        </div>
+
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <div class="accounts-panel">
@@ -98,7 +112,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Your name, date of birth, place of birth, address &amp; National Insurance number have been verified by HMRC</td>
+                                <td class="govuk-table__cell">Some <a href="account-manage-data#personal">personal</a> and <a href="account-manage-data#employment">employment</a> details have been verified by HMRC</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -208,7 +222,7 @@
                     <br />
                     {% if data['child-service-status'] == "completed" %}
                     <span class="govuk-body-s">05-02-2022</span><br />
-                    <p><a href="#">Comfirm {% include "../includes/service-1-name.html" %} details</a> (HMRC)</p>
+                    <p><a href="#">Confirm {% include "../includes/service-1-name.html" %} details</a> (HMRC)</p>
 
                     <br />
                     {% else %}

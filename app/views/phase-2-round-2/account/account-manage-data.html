@@ -266,10 +266,19 @@
 
                             {% if data['employment-status'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Employment status</td>
+                                <td class="govuk-table__cell bold">Employment status{% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
                                 <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /> {% if data['employer-connection-status'] == "connected" %}
+                                        <a href="#">Disconnect</a>
+                                        {% else %}
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                        {% endif %}</p>
                                 </td>
                             </tr>
                             {% else %}
@@ -278,10 +287,21 @@
 
                             {% if data['parent-work-hours'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Hours worked (per week)</td>
+                                <td class="govuk-table__cell bold">Hours worked (per week){% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
                                 <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />
+                                        {% if data['employer-connection-status'] == "connected" %}
+                                        <a href="#">Disconnect</a>
+                                        {% else %}
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                        {% endif %}
+                                    </p>
                                 </td>
                             </tr>
                             {% else %}
@@ -290,10 +310,19 @@
 
                             {% if data['employment-start-month'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Employment start date</td>
+                                <td class="govuk-table__cell bold">Employment start date{% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
                                 <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['employer-connection-status'] == "connected" %}
+                                        <a href="#">Disconnect</a>
+                                        {% else %}
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                        {% endif %}</p>
                                 </td>
                             </tr>
                             {% else %}
@@ -301,11 +330,20 @@
 
                             {% if data['employment-leave'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Current paid leave status</td>
+                                <td class="govuk-table__cell bold">Current paid leave status {% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
                                 <td class="govuk-table__cell">{% if data['employment-leave'] == "None of these" %} Not currently on paid leave {% else %}
                                     {% endif %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['employer-connection-status'] == "connected" %}
+                                        <a href="#">Disconnect</a>
+                                        {% else %}
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                        {% endif %}</p>
                                 </td>
                             </tr>
                             {% else %}
@@ -317,11 +355,19 @@
                                 <td class="govuk-table__cell bold">Paid (per week) {% if data['pay-source'] == "self" %}
                                     <p class="govuk-body-s">Self declared</p>
                                     {% else %}
-                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% endif %}
+                                    {% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>{% else %}
+
                                     {% endif %}</td>
                                 <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['employer-connection-status'] == "connected" %}
+                                        <a href="#">Disconnect</a>
+                                        {% else %}
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                        {% endif %}</p>
                                 </td>
                             </tr>
                             {% else %}
@@ -339,18 +385,48 @@
         <br />
         <div class="accounts-panel">
 
-            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Linked data</h2>
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Connected data</h2>
 
 
-            <p><i>Here's a sentence explaining what linked data is (name TBC). This is where the external data from employer will appear when they come back.</i></p>
-
-            <br />
-
-            <p><b>You have no linked data in your account</b> </p>
-
+            <p>Manage any other data connected to your account. This could be from your bank, or employer, or car insurer.</p>
+            <p>Any of this information can be used to prefill forms across government services, saving you time. </p>
 
             <br />
-            <p><a href="#">Add linked data</a></p>
+
+            {% if data['employer-connection-status'] == "connected" %}
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Connection</th>
+                        <th scope="col" class="govuk-table__header">Data provided</th>
+                        <th scope="col" class="govuk-table__header">Manage connection</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell bold">Smith &amp; Sons Ltd
+                            <p class="govuk-body-s">Employer</p>
+                        </td>
+                        <td class="govuk-table__cell">
+                            Employment status<br />
+                            Employment start date<br />
+                            Current paid leave status<br />
+
+                            Weekly pay<br /></td>
+                        <td class="govuk-table__cell ">
+                            <a href="#">Disconnect</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            {% else %}
+            <p><b>You have no connected data in your account</b> </p>
+            {% endif %}
+
+            <br />
+            <p><a href="#">Connect a new data source</a></p>
 
 
         </div>
