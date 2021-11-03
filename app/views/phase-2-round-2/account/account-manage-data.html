@@ -105,9 +105,11 @@
                             {% if data['town-of-birth'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Place of birth</td>
-                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}</td>
+                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a>{% if data['time'] == "task-2" %}{% else %}
+                                        <a href="#">Change</a><br />
+                                        {% endif %}<br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -126,7 +128,7 @@
 
                                         {{ data['address-county'] }} <br />
 
-                                        {{ data['address-postcode'] }} <br />
+                                        {{ data['address-postcode'] }}<br />{% include "phase-2-round-2/includes/verified.html" %}
                                     </p>
                                     <p class="govuk-body-s"><a href="#">View address history</a></p>
                                 </td>
@@ -197,9 +199,9 @@
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Childcare provider</td>
                                 <td class="govuk-table__cell">
-                                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }} </p>
-                                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }} </p>
-                                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} </p>
+                                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }}<br />{% include "phase-2-round-2/includes/verified.html" %} </p>
+                                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }}<br />{% include "phase-2-round-2/includes/verified.html" %} </p>
+                                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} <br />{% include "phase-2-round-2/includes/verified.html" %}</p>
 
                                     <p> <b>Address:<br /> </b>
                                         {{ data['childcare-provider-address-line-1'] }} <br />
@@ -215,14 +217,14 @@
                                         {{ data['childcare-provider-address-county'] }} <br />
 
 
-                                        {{ data['childcare-provider-address-postcode'] }} <br />
+                                        {{ data['childcare-provider-address-postcode'] }} <br />{% include "phase-2-round-2/includes/verified.html" %}
 
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />
                                         <a href="#">Change</a><br />
-                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
+                                        <a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -289,7 +291,7 @@
                             {% if data['employment-start-month'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Employment start date</td>
-                                <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}</td>
+                                <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>

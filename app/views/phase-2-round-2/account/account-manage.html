@@ -36,7 +36,7 @@
 
         <p>View and manage your account settings.</p>
 
-        <div class="accounts-panel">
+        <div id="manage-account" class="accounts-panel">
             <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage your account settings </h2>
             <ul class="govuk-list">
                 <li><label class="switch" style="float: right;">
@@ -64,25 +64,30 @@
         </div>
         <br>
         <br>
-        <div class="accounts-panel">
+        <div id="manage-payment" class="accounts-panel">
             <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage your payment details</h2>
 
             <p>Save your preferred payment type for use across GOV.UK services.</p>
             <div class="govuk-grid-row">
 
                 {% if data['time'] == "task-2" %}
-                <div class="govuk-grid-column-one-third">
-                    <p><b>Credit / debit card</b><br />
-                        Halifax debit card <br />
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Debit card</b><br />
+                        Halifax card <br />
                         <!--    <span class="govuk-body-s">(Mastercard)</span></p> -->
 
                 </div>
-                <div class="govuk-grid-column-one-third">
-                    <p><b>Card nuumber</b><br />
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Card number</b><br />
                         XXXX-XXXX-4321<br /></p>
 
                 </div>
-                <div class="govuk-grid-column-one-third right">
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Expiry date</b><br />
+                        09/24<br /></p>
+
+                </div>
+                <div class="govuk-grid-column-one-quarter right">
 
                     <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
 

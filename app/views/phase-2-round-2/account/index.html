@@ -98,7 +98,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Your name, date of birth &amp; National Insurance number have been verified by HMRC</td>
+                                <td class="govuk-table__cell">Your name, date of birth, place of birth, address &amp; National Insurance number have been verified by HMRC</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -108,7 +108,17 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Your child's details have been verified by HMRC </td>
+                                <td class="govuk-table__cell">Your <a href="account-manage-data#family">child's details</a> have been verified by HMRC </td>
+                                <td class="govuk-table__cell right">
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div>
+                                </td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell"><span class="govuk-body-s">20-11-2021:</span></td>
+                                <td class="govuk-table__cell">You added a <a href="account-manage.html#manage-payment">credit/debit card</a> to your account </td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -127,7 +137,11 @@
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
                                 <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim submitted to HMRC </td>
                                 <td class="govuk-table__cell right">
-
+                                    {% if data['time'] == "task-2" %}
+                                    {% else %}
+                                    <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
+                                            New
+                                        </strong></div> {% endif %}
                                 </td>
                             </tr>
 
