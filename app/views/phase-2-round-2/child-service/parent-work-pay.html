@@ -37,21 +37,39 @@
         <form action="check-your-answers" method="POST">
             <h1 class="govuk-heading-xl">How much do get paid per week?</h1>
 
-            <p class="govuk-body">This is your total weekly pay.<p>
+            <p class="govuk-body">Tell us how much you earn per week. You can either enter your weekly amount manually or connect to your employer so they can provide it automatically.<p>
 
-                    <p class="govuk-body"><i>Here's a sentence explaining you can add this yourself, or connect your employer to your GOV.UK account. This will let the employer provide your exact pay after each payroll is filed. (Useful if it changes - and will be accurate and verfied enabling future auto applications) @sam we may want to move some of this content into a 'How does it work' reveal module? </i>
-                        <p>
 
-                            {% if data['signing'] == "yes" %}
-                            {% include "../forms/parent-work-pay-signed-in.html" %}
-                            {% else %}
-                            {% include "../forms/parent-work-pay-signed-out.html" %}
-                            {% endif %}
-                            <input id="childcare-calc-started" name="childcare-calc-status" value="completed" type="hidden">
 
-                            <button class="govuk-button" data-module="govuk-button">Continue</button>
+                    {% if data['signing'] == "yes" %}
+                    {% include "../forms/parent-work-pay-signed-in.html" %}
+                    {% else %}
+                    {% include "../forms/parent-work-pay-signed-out.html" %}
+                    {% endif %}
+                    <input id="childcare-calc-started" name="childcare-calc-status" value="completed" type="hidden">
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                How does this work?
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <p>Once you've found your employer you can link them to your GOV.UK account, so they can provide your weekly pay for you.</p>
+
+                            <p>Your pay will be automatically provided by your employer’s payroll, so {% include "../includes/service-1-name.html" %} will always have your most recent pay details.</p>
+
+                            <p>You can change the sharing permissions on this information in your <a href="../account/index.html">account dashboard</a>.</p>
+
+                        </div>
+                    </details>
+
+                    <br />
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
 
         </form>
+
 
         <!-- /. form -->
     </div> <!-- /. govuk-grid-column-two-thirds -->
