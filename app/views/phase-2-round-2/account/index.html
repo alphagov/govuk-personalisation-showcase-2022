@@ -88,7 +88,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">27-11-2021:</span></td>
-                                <td class="govuk-table__cell">Child Benefit claim has been approved by HMRC</td>
+                                <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim has been approved by HMRC</td>
                                 <td class="govuk-table__cell right">
                                     <div class="toggle"> <strong class="govuk-tag govuk-tag--blue">
                                             New
@@ -125,7 +125,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim submitted to HMRC</td>
+                                <td class="govuk-table__cell">{% include "../includes/service-1-name.html" %} claim submitted to HMRC </td>
                                 <td class="govuk-table__cell right">
 
                                 </td>
@@ -194,7 +194,7 @@
                     <br />
                     {% if data['child-service-status'] == "completed" %}
                     <span class="govuk-body-s">05-02-2022</span><br />
-                    <p>Comfirm {% include "../includes/service-1-name.html" %} details </p>
+                    <p><a href="#">Comfirm {% include "../includes/service-1-name.html" %} details</a> (HMRC)</p>
 
                     <br />
                     {% else %}

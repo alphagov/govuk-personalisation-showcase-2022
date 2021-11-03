@@ -23,7 +23,7 @@
                     Statutory Sick Pay
                 </label>
             </div>
-            <!-- No -->
+            <div class="govuk-radios__divider">or</div>
             <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="paid-work-4" name="employment-leave" type="radio" value="None of these" {% if data['employment-leave'] == "None of these" %} {{ checked("employment-leave", "None of these") }} {% else %} {% endif %}>
                 <label class="govuk-label govuk-radios__label" for="paid-work-4">
