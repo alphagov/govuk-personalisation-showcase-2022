@@ -1,0 +1,24 @@
+<!-- Radio Button Group -->
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+
+            <!-- female -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gender-2" name="gender" type="radio" value="Female" {% if data['gender'] == "Female" %} {{ checked("gender", "Female") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="gender-2">
+                    Female
+                </label>
+            </div>
+
+            <!-- male -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="gender-1" name="gender" type="radio" value="Male" {% if data['gender'] == "Male" %} {{ checked("gender", "Male") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="gender-1">
+                    Male
+                </label>
+            </div>
+
+        </div> <!-- /. govuk-radios -->
+    </fieldset> <!-- /. govuk-fieldset -->
+</div> <!-- /. form-group -->

@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} round 1 prototype
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} round 1 prototype
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {% include "includes/projectname.html" %} round 1 prototype
+        </h1>
+    </div>
+</div>
+<div class="browse-panes section" data-state="section" data-module="gem-track-click">
+    <div id="subsection" class="subsection-pane pane" style="display: none;"></div>
+    <div id="section" class="section-pane pane with-sort">
+        <div class="pane-inner curated">
+            <h2 tabindex="-1" class="js-heading">Browse: Childcare and parenting</h2>
+            <ul>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/childcare-parenting/pregnancy-birth" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Pregnancy and birth&quot;}" class="govuk-link" href="/browse/childcare-parenting/pregnancy-birth">
+                        <h3 class="pane-inner__title">Pregnancy and birth</h3>
+                        <p class="pane-inner__description">Working, time off and financial support when you have a baby, registering a birth</p>
+                    </a> </li>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/childcare-parenting/fostering-adoption-surrogacy" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Fostering, adoption and surrogacy&quot;}" class="govuk-link" href="/browse/childcare-parenting/fostering-adoption-surrogacy">
+                        <h3 class="pane-inner__title">Fostering, adoption and surrogacy</h3>
+                        <p class="pane-inner__description">Fostering or adopting a child, including from abroad, and being a surrogate mother</p>
+                    </a> </li>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/childcare-parenting/financial-help-children" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Financial help if you have children&quot;}" class="govuk-link" href="/browse/childcare-parenting/financial-help-children">
+                        <h3 class="pane-inner__title">Financial help if you have children</h3>
+                        <p class="pane-inner__description">Includes help when having a baby or adopting, child benefit and tax credits, support for childcare</p>
+                    </a> </li>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting/childcare" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Childcare&quot;}" class="govuk-link" href="/browse/childcare-parenting/childcare">
+                        <h3 class="pane-inner__title">Childcare</h3>
+                        <p class="pane-inner__description">Finding childcare, financial support for childcare and childcare for school-age children</p>
+                    </a> </li>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/childcare-parenting/schools-education" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Schools and education&quot;}" class="govuk-link" href="/browse/childcare-parenting/schools-education">
+                        <h3 class="pane-inner__title">Schools and education</h3>
+                        <p class="pane-inner__description">Sending a child to school, financial support, dealing with the school</p>
+                    </a> </li>
+                <li class="">
+                    <a data-track-category="secondLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/childcare-parenting/divorce-separation-legal" data-track-options="{&quot;dimension28&quot;:&quot;6&quot;,&quot;dimension29&quot;:&quot;Divorce, separation and legal issues&quot;}" class="govuk-link" href="/browse/childcare-parenting/divorce-separation-legal">
+                        <h3 class="pane-inner__title">Divorce, separation and legal issues</h3>
+                        <p class="pane-inner__description">Child maintenance and disagreements about parentage</p>
+                    </a> </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="root" class="pane root-pane">
+        <h2 class="govuk-visually-hidden" tabindex="-1">All categories</h2>
+        <ul>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="1" data-track-label="/browse/benefits" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Benefits&quot;}" class="govuk-link" href="/browse/benefits">Benefits</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="2" data-track-label="/browse/births-deaths-marriages" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Births, deaths, marriages and care&quot;}" class="govuk-link" href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="3" data-track-label="/browse/business" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Business and self-employed&quot;}" class="govuk-link" href="/browse/business">Business and self-employed</a>
+            </li>
+            <li class="active">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="4" data-track-label="/browse/childcare-parenting" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Childcare and parenting&quot;}" class="govuk-link" href="/browse/childcare-parenting">Childcare and parenting</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="5" data-track-label="/browse/citizenship" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Citizenship and living in the UK&quot;}" class="govuk-link" href="/browse/citizenship">Citizenship and living in the UK</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="6" data-track-label="/browse/justice" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Crime, justice and the law&quot;}" class="govuk-link" href="/browse/justice">Crime, justice and the law</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="7" data-track-label="/browse/disabilities" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Disabled people&quot;}" class="govuk-link" href="/browse/disabilities">Disabled people</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="8" data-track-label="/browse/driving" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Driving and transport&quot;}" class="govuk-link" href="/browse/driving">Driving and transport</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="9" data-track-label="/browse/education" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Education and learning&quot;}" class="govuk-link" href="/browse/education">Education and learning</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="10" data-track-label="/browse/employing-people" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Employing people&quot;}" class="govuk-link" href="/browse/employing-people">Employing people</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="11" data-track-label="/browse/environment-countryside" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Environment and countryside&quot;}" class="govuk-link" href="/browse/environment-countryside">Environment and countryside</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="12" data-track-label="/browse/housing-local-services" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Housing and local services&quot;}" class="govuk-link" href="/browse/housing-local-services">Housing and local services</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="13" data-track-label="/browse/tax" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Money and tax&quot;}" class="govuk-link" href="/browse/tax">Money and tax</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="14" data-track-label="/browse/abroad" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Passports, travel and living abroad&quot;}" class="govuk-link" href="/browse/abroad">Passports, travel and living abroad</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="15" data-track-label="/browse/visas-immigration" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Visas and immigration&quot;}" class="govuk-link" href="/browse/visas-immigration">Visas and immigration</a>
+            </li>
+            <li class="">
+                <a data-track-category="firstLevelBrowseLinkClicked" data-track-action="16" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;16&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="govuk-link" href="/browse/working">Working, jobs and pensions</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<br /><br />
+
+
+
+
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "includes/auth-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "includes/auth-name.html" %}
+{% endset%}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
+            <ul class="accounts-menu">
+                <li class="accounts-menu__item">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" aria-current="page" href="index.html">Your account</a>
+                </li>
+
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-3/account/account-manage-data.html">Your data</a>
+                </li>
+
+                <li class="accounts-menu__item accounts-menu__item--current" style="margin-left: 0px;">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="#" style="padding-left: 15px;">Your settings</a>
+                    <br />
+                    <ul class="govuk-list" style="padding-left: 14px;">
+                        <br />
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#manage-account">Manage settings</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#manage-payment">Payment details</a></p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#account-details">Account details</a></p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#delete-account" style="color: #d4351c;">Delete your account</a></p>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Your settings</h1>
+
+        <p>View and manage your account settings.</p>
+
+        <div id="manage-account" class="accounts-panel">
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage your account settings </h2>
+            <ul class="govuk-list">
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Autofill forms<br />
+                    <p class="govuk-body-s">Prefill forms using information stored in your account, saving you time
+
+                    </p>
+                </li>
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Personalisation<br />
+                    <p class="govuk-body-s">See personalised pages on GOV.UK based on information saved in your account
+                    </p>
+                </li>
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label> Recommendations (coming soon)<br />
+                    <p class="govuk-body-s">See suggested government services and articles based on your account activity</p>
+                </li>
+                {% if data['employer-connection-status'] == "connected" %}
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Automatic reconfirmation to The Childcare Service <br />
+                    <p class="govuk-body-s">Enable your GOV.UK account to automatically reconfirm your details every 3 months</p>
+                </li>
+                {% else %}
+                {% endif %}
+
+                {% if data['childcare-payment-status'] == "connected" %}
+                <li><label class="switch" style="float: right;">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label> Automatic payments to your childcare provider <br />
+                    <p class="govuk-body-s">Enable automatic payments to your childcare provider when they send a bill to your account.</p>
+                </li>
+                {% else %}
+                {% endif %}
+            </ul>
+        </div>
+        <br>
+        <br>
+        <div id="manage-payment" class="accounts-panel">
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage your payment details</h2>
+
+            <p>Save your preferred payment type for use across GOV.UK services.</p>
+            <div class="govuk-grid-row">
+
+                {% if data['time'] == "task-2" %}
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Debit card</b><br />
+                        Halifax card <br />
+                        <!--    <span class="govuk-body-s">(Mastercard)</span></p> -->
+
+                </div>
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Card number</b><br />
+                        XXXX-XXXX-4321<br /></p>
+
+                </div>
+                <div class="govuk-grid-column-one-quarter">
+                    <p><b>Expiry date</b><br />
+                        09/24<br /></p>
+
+                </div>
+                <div class="govuk-grid-column-one-quarter right">
+
+                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+
+                </div>
+
+                {% else %}
+                {% endif %}
+
+                <div class="govuk-grid-column-full">
+                    <br />
+                    <p><a href="#">Add payment type</a></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id="account-details" class="accounts-panel">
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage your account details</h2>
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <p><b>Email address</b><br />
+                        {{ data['email-address'] }}<br /></p>
+                    <p class="govuk-body-s"> <a href="account-manage-email-password">Change</a></p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <p><b>Password</b><br />
+                        XXXXXXXXX<br /></p>
+                    <p class="govuk-body-s"> <a href="account-manage-password">Change</a></p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <p><b>Phone number</b><br />
+                        {{ data['phone-number'] }}<br /></p>
+                    <p class="govuk-body-s"> <a href="account-manage-phone-number-password">Change</a></p>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id="delete-account" class="accounts-panel">
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Delete your account </h2>
+            <p>You can permanently delete this account and all the information stored in it.</p>
+            <ul class="govuk-list">
+
+                <li><a href="account-manage-delete-password" style="color: #d4351c;">Delete my account</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

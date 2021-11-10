@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% set serviceName %}
+{% include "includes/projectname.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+{% block beforeContent %}
+<a href="../index.html" class="govuk-back-link">Back</a>
+<br /><br />
+{% include "includes/round-links.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <!-- Research Intro -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Phase 2 / Round 3</h1>
+
+        <p>To walkthrough this prototype, follow the tasks below (suggestion: keep them open on a separate tab).</p>
+
+        <br />
+
+        <p> <a href="govuk-home.html">
+                <button class="govuk-button" data-module="govuk-button">Launch prototype</button>
+            </a> </p>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Tasks
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                    <ol class="govuk-list govuk-list--number">
+                        <li>Start on <a href="govuk-home">GOV.UK homepage</a></li>
+                        <li>View <a href="gov-uk-account-explained">GOV.UK account explained</a> page</li>
+                        <li>Click 'Sign in or create a GOV.UK account' link &amp; sign in</li>
+                        <li>Review <a href="account/index.html">account dashboard</a></li>
+
+                        <li>A list item
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>A nested list item
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <div class="govuk-!-padding-bottom-2"></div>
+
+                    <br />
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Objectives
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <ol class="govuk-list govuk-list--number">
+
+                        <li>to follow...</li>
+                    </ol>
+
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+
+
+            <!-- Hypotheses -->
+
+            <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                            Hypotheses
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <h2 class="govuk-heading-m" style="margin-bottom: 10px;">External data</h2>
+                    <br />
+                    <!-- Hypothesis 1 -->
+                    <p>to follow...</p>
+
+                </div> <!-- /. accordion-default-content-1 -->
+            </div> <!-- /. govuk-accordion__section -->
+        </div> <!-- /. govuk-accordion -->
+    </div>
+
+    <!-- one-third column [Research links & details] -->
+
+    <div class="govuk-grid-column-one-third" id="research-summary-page__one-third" style="margin-top: 100px;">
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Research Dates</p>
+        <p class="govuk-body">25-Nov-2021 - 26-Nov-2021</p>
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Participants</p>
+        <p class="govuk-body">6</p>
+        <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Documents</p>
+        <ul class="govuk-list govuk-list--bullet" style="list-style: none; padding-left: 0px;">
+            <li> <img src="../../../public/images/miro.svg" style="height: 24px;">&nbsp;
+                <a href="https://miro.com/app/board/o9J_llYz0fk=/" target="_blank">
+                    Miro board
+                </a>
+            </li>
+            <!--  <li> 🎞&nbsp;
+                <a href="https://drive.google.com/drive/folders/1j-XfPGQ32dPq1LHw_cKXTdQk5bj9LmFA" target="_blank">
+                    Video recordings
+                </a>
+            </li> -->
+
+        </ul>
+
+    </div>
+
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

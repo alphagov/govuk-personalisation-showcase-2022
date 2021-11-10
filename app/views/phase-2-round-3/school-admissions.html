@@ -1,0 +1,103 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+School admissions
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-3/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-3/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">School admissions</h1>
+
+        <p>If you live in England contact <a href="/find-your-local-council">your local council</a> to find:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>state-funded schools in your area</li>
+            <li>
+                <a href="/schools-admissions/admissions-criteria">admission criteria</a> for the schools you’re interested in</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>The process is different if you live in <a rel="external" href="https://www.mygov.scot/register-your-child-for-a-school/">Scotland</a>, <a rel="external" href="https://gov.wales/school-admissions">Wales</a> or <a rel="external" href="https://www.eani.org.uk/parents/admissions">Northern Ireland</a>.</p>
+        </div>
+
+        <p>You can also contact your local council to apply for places at state schools in other areas. You can search online to find <a rel="external" href="https://get-information-schools.service.gov.uk/">schools in England</a>.</p>
+
+        <h2 class="govuk-heading-l" id="private-schools-or-home-schooling">Private schools or home schooling</h2>
+
+        <p>If you’re looking for <a href="https://www.gov.uk/types-of-school/private-schools">a place at a private school</a> (also called ‘independent schools’), contact the school directly.</p>
+
+        <p>You can also choose to <a href="https://www.gov.uk/home-education">teach your child at home</a>, known as home schooling.</p>
+
+        <h2 class="govuk-heading-l" id="children-with-special-educational-needs-sen">Children with special educational needs (SEN)</h2>
+
+        <p>If your child has SEN, their Education, Health and Care (EHC) plan will name a school for them. The school must give your child a place.</p>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p>You can ask <a href="/find-your-local-council">your local council</a> to carry out an assessment if you think your child needs additional support with their educational, health and social needs.</p>
+        </div>
+
+        <h2 class="govuk-heading-l" id="find-out-about-a-primary-or-secondary-school">Find out about a primary or secondary school</h2>
+
+        <p>You can find out more by:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>visiting the school - most schools have open days</li>
+            <li>reading the school’s most recent <a rel="external" href="/round-3/find-ofsted-inspection-report">Ofsted reports</a>
+            </li>
+            <li>checking <a rel="external" href="http://www.education.gov.uk/schools/performance">school performance tables</a>
+            </li>
+            <li>talking to other parents about what they think of the school</li>
+        </ul>
+
+        <h3 class="govuk-heading-m" id="what-schools-must-publish-on-their-website">What schools must publish on their website</h3>
+
+        <p>Schools’ websites must include:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>admission arrangements, including how to apply</li>
+            <li>details of the curriculum</li>
+            <li>behaviour policy</li>
+            <li>links to Ofsted reports</li>
+            <li>links to performance data</li>
+            <li>the school’s latest key stage 2 and 4 attainment and progress measures</li>
+            <li>their policies for children with <a href="/children-with-special-educational-needs">special educational needs and disabilities</a>
+            </li>
+            <li>the amount of money they get for taking underprivileged children (the ‘pupil premium’), what they do with it and the effect it’s had</li>
+        </ul>
+
+        <p>You can also get advice about choosing state-funded schools from your <a href="/find-your-local-council">local council</a>.</p>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

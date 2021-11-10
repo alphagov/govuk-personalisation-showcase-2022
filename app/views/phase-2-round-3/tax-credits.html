@@ -1,0 +1,61 @@
+{% extends "layout_round-3.html" %}
+
+{% block pageTitle %}
+Tax credits and childcare
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/round-3/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "round-3/includes/childcare-step-by-step-panel.html" %}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Tax credits and childcare</h1>
+
+        <p>You may be able to claim:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="#">Child Tax Credit</a> - you do not need to be working
+            </li>
+            <li><a href="#">Working Tax Credit</a> - you may be able to claim extra amount to help cover the costs of approved childcare</li>
+        </ul>
+
+        <p>You can apply for Working Tax Credit even if you’re on leave or about to start a new job.</p>
+
+        <h2 class="govuk-heading-m" id="childcare-at-school">If you already claim tax credits</h2>
+
+        <p><a href="#">Call HM Revenue and Customs (HMRC)</a> to update your claim if you’re already claiming tax credits - you do not need a claim form.</p>
+
+        <p>You must tell HMRC about changes to your circumstances, for example your childcare costs stop or change by an average of £10 or more a week.</p>
+
+        <p>You must <a href="#">renew your claim</a> every year. You’ll get a reminder.</p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

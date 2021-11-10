@@ -1,0 +1,50 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-2-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-2-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="date-of-birth" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="born-in-uk" method="POST">
+            <h1 class="govuk-heading-xl">What is your sex?</h1>
+
+
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/gender-signed-in.html" %}
+            {% else %}
+            {% include "../forms/gender-signed-out.html" %}
+            {% endif %}
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        </form> <!-- /. form -->
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

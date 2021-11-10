@@ -1,0 +1,22 @@
+<!-- Radio Button Group -->
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+            <!-- Yes -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="live-in-uk-1" name="live-in-uk" type="radio" value="yes" {% if data['address-postcode']  %} {{ checked("live-in-uk", "yes") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="live-in-uk-1">
+                    Yes
+                </label>
+            </div>
+            <!-- No -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="live-in-uk-2" name="live-in-uk" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="live-in-uk-2">
+                    No
+                </label>
+            </div>
+
+        </div> <!-- /. govuk-radios -->
+    </fieldset> <!-- /. govuk-fieldset -->
+</div> <!-- /. form-group -->

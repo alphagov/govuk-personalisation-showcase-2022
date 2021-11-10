@@ -1,0 +1,136 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Find an Ofsted inspection report
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<img src="../../../../public/images/ofsted-logo.svg" style="height: 48px; padding:20px 0px;">
+<br />
+<a href="/phase-2-round-1/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row" style="background: #44687d; color: white !important; padding: 40px; margin-bottom: 60px;">
+    <div class="govuk-grid-column-full-width">
+
+        <h1 class="govuk-heading-xl" style="color: white;">Search results for free early education and childcare in {{ data['address-postcode'] }} </h1>
+
+        <p style="color: white;">You can find reports for schools, colleges, childminders, nurseries, children’s homes and more</p>
+
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third" style="padding-right: 30px;">
+
+        <form action="#" method="POST">
+            <fieldset class="govuk-fieldset">
+
+                <!-- URN -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="URN">
+                        Name, URN or keyword
+                    </label>
+                    <input class="govuk-input" id="URN" name="URN" type="text" value="{{ data['URN'] }}">
+                </div>
+
+                <!-- Postcode -->
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-postcode">
+                        Location or postcode
+                    </label>
+                    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="{{ data['address-postcode'] }}"></div>
+            </fieldset> <!-- /. govuk-fieldset -->
+            <button class="govuk-button" data-module="govuk-button">Update search</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <!-- Results heading -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <h2 class="govuk-heading-m"> 121 Results</h2>
+                <hr>
+            </div>
+        </div>
+
+        <!-- School -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <br />
+
+                <h3 class="govuk-heading-m"><a href="#">Robin Hood Primary School</a></h3>
+                <p class="govuk-body-s">12 High Street, {{ data['address-town'] }}, {{ data['address-county'] }} , {{ data['address-postcode'] }}</p>
+                <h4 class="govuk-heading-s">Rating: GOOD</h4>
+                <p class="govuk-body-s">URN: 108162 | Type: Primary | Latest report: 19 March 2020</p>
+                <hr>
+            </div>
+
+        </div>
+
+        <!-- School -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <br />
+
+                <h3 class="govuk-heading-m"><a href="#">Robin Hood Primary School</a></h3>
+                <p class="govuk-body-s">12 High Street, {{ data['address-town'] }}, {{ data['address-county'] }} , {{ data['address-postcode'] }}</p>
+                <h4 class="govuk-heading-s">Rating: GOOD</h4>
+                <p class="govuk-body-s">URN: 108162 | Type: Primary | Latest report: 19 March 2020</p>
+                <hr>
+            </div>
+
+        </div>
+
+        <!-- School -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <br />
+
+                <h3 class="govuk-heading-m"><a href="#">Robin Hood Primary School</a></h3>
+                <p class="govuk-body-s">12 High Street, {{ data['address-town'] }}, {{ data['address-county'] }} , {{ data['address-postcode'] }}</p>
+                <h4 class="govuk-heading-s">Rating: GOOD</h4>
+                <p class="govuk-body-s">URN: 108162 | Type: Primary | Latest report: 19 March 2020</p>
+                <hr>
+            </div>
+
+        </div>
+
+        <!-- School -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full-width">
+                <br />
+
+                <h3 class="govuk-heading-m"><a href="#">Robin Hood Primary School</a></h3>
+                <p class="govuk-body-s">12 High Street, {{ data['address-town'] }}, {{ data['address-county'] }} , {{ data['address-postcode'] }}</p>
+                <h4 class="govuk-heading-s">Rating: GOOD</h4>
+                <p class="govuk-body-s">URN: 108162 | Type: Primary | Latest report: 19 March 2020</p>
+                <hr>
+            </div>
+
+        </div>
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

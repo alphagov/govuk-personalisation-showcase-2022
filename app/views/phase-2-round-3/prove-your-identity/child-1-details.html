@@ -1,0 +1,61 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="do-you-live-with-partner" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">About your child</h1>
+
+        <div class="govuk-inset-text">
+            Only include children under the age if 20 that you're responsible for, and that live with you.
+        </div> <!-- /. inset-text -->
+
+        <form action="childcare-provider" method="POST" autocomplete="off">
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/child-1-details-signed-in.html" %}
+            {% else %}
+            {% include "../forms/child-1-details-signed-out.html" %}
+            {% endif %}
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+
+        <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

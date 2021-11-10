@@ -1,0 +1,60 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+GOV.UK account explained
+{% endblock %}
+
+{% set serviceName %}
+GOV.UK account
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="/phase-2-round-3/govuk-home" class="govuk-breadcrumbs__link govuk-back-link">Home</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl"> About the GOV.UK account
+        </h1>
+
+        <p>The GOV.UK account allows you to access all online government services from one place. The more you use your account, the more personalised GOV.UK will become for you.</p>
+
+        <p>Your GOV.UK account allows you to:</p>
+
+        {% include "phase-2-round-3/includes/account-benefit-bullets.html" %}
+
+        <p>Any information saved to your account is done with your consent, which you can manage from your account settings.</p>
+        <p><a href="#">Read the full GOV.UK accounts privacy notice</a> to find out how we collect, process and use information about you.</p>
+
+        <br />
+
+        <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Sign in or create a GOV.UK account</h2>
+        <p>To create a GOV.UK account, you'll need an email address and a UK mobile phone number. It will take no more than 2 minutes.</p>
+
+        <p><a href="sign-in-or-create-account">Sign in or create a GOV.UK account</a></p>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-2-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-2-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="../account/" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">{% include "../includes/service-2-name.html" %}
+        </h1>
+
+        <p>Here's the sentence that explains the process of completing the initial set-up, by adding personal details.</p>
+
+        <p>The benefits of doing so are explained here. These include that the account can start to personalise and tailor your GOV.UK experience now data is being added.</p>
+
+        <p>Also, once you've also <a href="../prove-your-identity/start.html">proved your ID</a> , you can request legacy data from the services which hold it.</p>
+
+        <div class="govuk-inset-text">
+            <p>Maybe explain that all this information can be edited and deleted and other user-concern related stuff, such as no government department can see what's in your account without you sharing it.</p>
+
+        </div>
+
+        <br />
+
+        <form id="name" method="post" action="/phase-2-round-3/personal-details/name">
+
+            <div class="govuk-form-group">
+
+                <input id="personal-details-started" name="personal-details" value="started" type="hidden">
+
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
+
+        </form>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

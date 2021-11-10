@@ -1,0 +1,93 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+Universal Credit
+{% endblock %}
+
+{% set serviceName %}
+Universal Credit
+{% endset%}
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="../childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="/phase-2-round-3/universal-credit/confirmation" method="POST">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which information do you want to save to your GOV.UK account?
+                        </h1>
+                    </legend>
+                    <p>Your GOV.UK accounts allows you to:</p>
+
+                    {% include "phase-2-round-3/includes/account-benefit-bullets.html" %}
+
+                    <br />
+
+                    <p><b>Select the information you entered on your Universal Credit application that you'd like to save to your GOV.UK account:</b></p>
+
+                    <div id="calculator-consent-hint" class="govuk-hint">
+
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                <b>Select all</b>
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent">
+                                Hours worked (per week)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-4" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-4">
+                                Pay (per week)
+                            </label>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <p>You can still continue with the Universal Credit application even if you don't want to save information, but it won't be saved to your GOV.UK account for future use.
+            </p>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% include "phase-2-round-3/includes/select-all.js" %}
+
+{% endblock %}

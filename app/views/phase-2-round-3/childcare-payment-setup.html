@@ -1,0 +1,128 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "phase-2-round-3/includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "phase-2-round-3/includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="account/index" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="payment-confirmation" method="POST">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Activate automatic payments to your childcare provider
+                        </h1>
+                    </legend>
+
+                    <br />
+
+                    <p>To automatically pay your childcare provider bills using the stored payment method in your GOV.UK account, please check these details are correct:</p>
+
+                    <h3 class="govuk-heading-m">Childcare provider details</h3>
+                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }} </p>
+                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }} </p>
+                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} </p>
+
+                    <p> <b>Address:<br /> </b>{% if data['childcare-provider-address-line-1'] %}
+                        {{ data['childcare-provider-address-line-1'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-line-2'] %}
+                        {{ data['childcare-provider-address-line-2'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-town'] %}
+                        {{ data['childcare-provider-address-town'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-county'] %}
+                        {{ data['childcare-provider-address-county'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-postcode'] %}
+                        {{ data['childcare-provider-address-postcode'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+
+                        <br />
+
+                        <h3 class="govuk-heading-m">Payment details</h3>
+
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-quarter">
+                                <p><b>Debit card</b><br />
+                                    Halifax card <br />
+                                    <!--    <span class="govuk-body-s">(Mastercard)</span></p> -->
+
+                            </div>
+                            <div class="govuk-grid-column-one-quarter">
+                                <p><b>Card number</b><br />
+                                    XXXX-XXXX-4321<br /></p>
+
+                            </div>
+                            <div class="govuk-grid-column-one-quarter">
+                                <p><b>Expiry date</b><br />
+                                    09/24<br /></p>
+
+                            </div>
+                        </div>
+
+                        <input id="childcare-payment-status" name="childcare-payment-status" value="connected" type="hidden">
+
+
+                        <br /><br />
+                        <p>By activating this automatic and recurring payment, you’re confirming that, as far as you know, the details you’re providing are correct.</p><br />
+
+                        <button class="govuk-button" data-module="govuk-button">Activate payment</button>
+
+                </fieldset>
+            </div>
+
+        </form> <!-- /. form -->
+
+
+
+        <p class="govuk-body-m"><a href="account/index">I don't want to make automatic payments to my childcare provider</a></p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% include "phase-2-round-3/includes/select-all.js" %}
+
+{% endblock %}
