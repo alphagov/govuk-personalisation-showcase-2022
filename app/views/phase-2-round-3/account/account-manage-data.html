@@ -93,7 +93,7 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Name</td>
-                                <td class="govuk-table__cell">{{ data['full-name'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell">{{ data['full-name'] }}<br /></td>
                                 <td class="govuk-table__cell right">
                                     {% if data['full-name'] %}
                                     <p class="govuk-body-s">
@@ -111,17 +111,13 @@
                                 <td class="govuk-table__cell">
                                     {% if data['date-of-birth-day'] %}
                                     {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />
-                                    {% include "phase-2-round-3/includes/verified.html" %}
+
                                     {% else %}
                                     {% endif %}</td>
                                 <td class="govuk-table__cell right">
                                     {% if data['date-of-birth-day'] %}
                                     <p class="govuk-body-s">
-
-                                        {% if data['time'] == "task-2" %}
-                                        {% else %}
                                         <a href="#">Change</a><br />
-                                        {% endif %}
                                         <a href="#" style="color: #d4351c;">Delete</a></p>
                                     {% else %}
                                     {% endif %}
@@ -131,12 +127,12 @@
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Place of birth</td>
-                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}<br /></td>
                                 <td class="govuk-table__cell right">
                                     {% if data['town-of-birth'] %}
-                                    <p class="govuk-body-s">{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s">
                                         <a href="#">Change</a><br />
-                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
+                                        <a href="#" style="color: #d4351c;">Delete</a></p>
                                     {% else %}
                                     {% endif %}
                                 </td>
@@ -158,7 +154,7 @@
                                         {{ data['address-county'] }} <br />
 
                                         {{ data['address-postcode'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}
+
 
                                     </p>
                                     <!-- <p class="govuk-body-s"><a href="#">View address history</a></p> -->
@@ -182,15 +178,14 @@
                                 <td class="govuk-table__cell bold">National Insurance number</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        {{ data['NIN'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['NIN'] }}<br />
                                     </p>
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">{% if data['time'] == "task-2" %}{% else %}
+                                    <p class="govuk-body-s">
                                         <a href="#">Change</a><br />
-                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
-
+                                        <a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -227,31 +222,29 @@
                 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="family">
 
                     <table class="govuk-table">
-                        <!--       <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Case manager</th>
-                                <th scope="col" class="govuk-table__header">Cases opened</th>
-                                <th scope="col" class="govuk-table__header">Cases closed</th>
-                            </tr>
-                        </thead> -->
+
                         <tbody class="govuk-table__body">
+
+                            {% if data['child-1-name'] or data['childcare-provider-name'] %}
+                            {% else %}
+                            <p>There is currently no child information saved to your account</p>
+                            {% endif %}
                               
                             {% if data['child-1-name'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Child 1</td>
                                 <td class="govuk-table__cell">
-                                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
+                                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}<br /></p>
                                     <p><b>Date of birth:</b> <br />
-                                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}<br />
                                     </p>
-                                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
-                                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
-                                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
+                                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}<br /></p>
+                                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}<br /></p>
+                                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br /></p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />{% if data['time'] == "task-2" %}{% else %}
-                                        <a href="#">Change</a><br />
-                                        {% endif %}<a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /> <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
@@ -262,9 +255,9 @@
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Childcare provider</td>
                                 <td class="govuk-table__cell">
-                                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }}<br />{% include "phase-2-round-3/includes/verified.html" %} </p>
-                                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }}<br />{% include "phase-2-round-3/includes/verified.html" %} </p>
-                                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} <br />{% include "phase-2-round-3/includes/verified.html" %}</p>
+                                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }}<br /> </p>
+                                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }}<br /> </p>
+                                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} <br /></p>
 
                                     <p> <b>Address:<br /> </b>
                                         {{ data['childcare-provider-address-line-1'] }} <br />
@@ -280,7 +273,7 @@
                                         {{ data['childcare-provider-address-county'] }} <br />
 
 
-                                        {{ data['childcare-provider-address-postcode'] }} <br />{% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['childcare-provider-address-postcode'] }} <br />
 
                                     </p>
                                 </td>
@@ -300,15 +293,13 @@
                 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="employment">
 
                     <table class="govuk-table">
-                        <!--  <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Case manager</th>
-                                <th scope="col" class="govuk-table__header">Cases opened</th>
-                                <th scope="col" class="govuk-table__header">Cases closed</th>
-                            </tr>
-                        </thead> -->
+
                         <tbody class="govuk-table__body">
 
+                            {% if data['employment-start-month'] or data['employment-status'] or  data['parent-work-hours'] or data['parent-work-pay'] or  data['employment-leave'] %}
+                            {% else %}
+                            <p>There is currently no employment information saved to your account</p>
+                            {% endif %}
 
                             {% if data['employment-status'] %}
                             <tr class="govuk-table__row">
@@ -481,10 +472,26 @@
 
             <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Saved documents</h2>
 
-
             <p>You can upload documents (such as your passport or driving licence), to make it easier to attach to forms and applications.</p>
 
             <br />
+
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    {% if data['PYI'] == "completed" %}
+                    <h3 class="govuk-heading-s">Passport</h3>
+                    <img src="../../../../public/images/passport.jpg" style="max-width: 100%;"><br />
+                    {% include "../includes/verified.html" %} <br />
+                    <a href="#" style="color: #d4351c;">Delete</a>
+                    {% else %}
+                    {% endif %}
+
+                </div>
+            </div>
+
+            <br /><br /> <br />
 
             <div class="govuk-form-group" style="padding: 10px; background: #f0f0f0;">
                 <label class="govuk-label" for="file-upload-1">
