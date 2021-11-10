@@ -32,62 +32,29 @@
         <h1 class="govuk-heading-xl">{% include "../includes/service-3-name.html" %}
         </h1>
 
-        <h2 class="govuk-heading-m">
-            How it works
-        </h2>
+        <p>Here's the sentence that explains the process of proving your identity.</p>
 
-        <p>Use this service to get your <a href="#">30 hours free childcare</a> or pay for your <a href="#">Tax-Free Childcare</a>.</p>
+        <p>The benefits of doing so are explained here. These include that the legacy data can be requested, and that certain data items can become verified.</p>
+        <p>This in turn could lead to more efficient services, and greater levels of potential automation.</p>
 
-        <div class="govuk-inset-text">
-            <p>To keep getting your 30 hours free childcare or Tax-Free Childcare, you must confirm your details are up to date every 3 months. You can use your GOV.UK account to do this automatically, saving you time.</p>
+        <h2 class="govuk-heading-m">What you'll need</h2>
 
-        </div>
+        <p>Choice of ID docs: passport, driving licence, etc. (Our prototype will choose passport).</p>
 
+        <br />
 
-        <p>If you’re eligible for 30 hours free childcare, sign in to get a code to give to your childcare provider.</p>
+        <form method="post" action="choose-document">
 
-        <p>If you’ve registered for Tax-Free Childcare, sign in to:</p>
+            <div class="govuk-form-group">
 
-        <ul class="govuk-list govuk-list--bullet">
-            <li>pay your childcare provider</li>
-            <li>set up automated payments</li>
-            <li>apply for a new child</li>
-        </ul>
+                <input id="PYI-started" name="PYI" value="started" type="hidden">
 
-        <p>You’ll need your <a href="#">GOV.UK account</a> details to sign in to this service.</p>
+                <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg></button>
+            </div>
 
-        <p>You sign in to your account in a different way if you’re a <a href="#">childcare provider</a>. </p>
-
-        <br /> <br />
-
-        {% if data['signing'] == "yes" %}
-        <form id="child-service-start" method="post" action="/phase-2-round-3/child-service/name">
-            {% else %}
-            <form id="childcare-calc-start" method="post" action="/phase-2-round-3/child-service/sign-in-or-create-account">
-                {% endif %}
-
-                <div class="govuk-form-group">
-                    <input id="child-service-started" name="child-service-status" value="started" type="hidden">
-                    <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                        </svg></button>
-                </div>
-            </form>
-
-            <h2 class="govuk-heading-m">
-                Before you start
-            </h2>
-
-            <p>You will need the following information to complete your application:
-            </p>
-
-            <ul class="govuk-list govuk-list--bullet">
-                <li>your National Insurance number </li>
-                <li>your child’s birth certificate number</li>
-                <li>your childcare provider’s details</li>
-            </ul>
-
-
+        </form>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 

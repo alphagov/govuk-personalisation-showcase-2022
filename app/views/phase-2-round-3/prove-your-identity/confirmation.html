@@ -1,11 +1,11 @@
 {% extends "layout_phase-2-round-3.html" %}
 
 {% block pageTitle %}
-{% include "../includes/service-1-name.html" %}
+{% include "../includes/service-3-name.html" %}
 {% endblock %}
 
 {% set serviceName %}
-{% include "../includes/service-1-name.html" %}
+{% include "../includes/service-3-name.html" %}
 {% endset%}
 
 {% block pageScripts %}
@@ -20,7 +20,7 @@
 
 {% block beforeContent %}
 
-<a href="consent" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+<a href="passport-details" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 
 {% endblock %}
 {% block content %}
@@ -29,14 +29,23 @@
     <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
             <h1 class="govuk-panel__title">
-                {% include "../includes/service-1-name.html" %} application is complete
+                {% include "../includes/service-3-name.html" %} application submitted.
             </h1>
             <div class="govuk-panel__body">
                 Your reference number<br><strong>HDJ2123F</strong>
             </div>
         </div>
 
-        <p class="govuk-body">We have sent you a confirmation email, and the application reference is stored in you <a href="../account/index.html">GOV.UK account</a>.</p>
+        <p class="govuk-body">We have sent you a confirmation email, and the application reference is stored in your <a href="../account/index.html">GOV.UK account</a>.</p>
+
+        <h2 class="govuk-heading-m">What next</h2>
+
+        <p class="govuk-body">We'll check your details with the HM Passport Office to make sure your passport has not been stolen or cancelled.</p>
+
+        <p>We will not share your details with anyone else.</p>
+
+        <p>Once you're identify has been verified, we'll let you know. Latest updates can be found in your <a href="../account/index.html">GOV.UK account</a></p>
+
 
         <br />
 

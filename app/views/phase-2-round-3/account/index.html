@@ -82,6 +82,28 @@
                     <li><a href="../prove-your-identity/start.html">Prove your identity</a> </li>
                     {% endif %}
                 </ol>
+                {% if data['PYI'] == "completed" %}
+                <form>
+                    <input id="time" name="time" value="task-2" type="hidden">
+                    <button class="govuk-button govuk-button--secondary">Clear</button>
+                    {% else %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if data['time'] == "task-2" %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Request legacy data
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+
+                <p>Content goes here</p>
 
             </div>
         </div>
@@ -93,39 +115,76 @@
                 <div id="recent-activity" class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
 
-                    <table class="govuk-table">
+                    {% if data['PYI'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You have proven your identity</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+                                <!-- colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
 
-                        <tbody class="govuk-table__body">
+                    {% if data['personal-details'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You added your personal details</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+                                <!-- colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
 
-                            {% if data['personal-details'] == "completed" %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">{% include "includes/today.html" %}:</span></td>
-                                <td class="govuk-table__cell">You added your personal details</td>
-                                <td class="govuk-table__cell right" style="min-width: 90px;">
-                                    <div class="toggle">
-                                        <strong class="govuk-tag govuk-tag--blue">New</strong>
-                                        <!-- colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
-                                    </div>
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">01-11-2021:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You created your GOV.UK account</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <div class="toggle">
+                                <!--   <strong class="govuk-tag govuk-tag--blue">New</strong>
+                                 colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
 
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell" style="min-width: 90px;"><span class="govuk-body-s">01-11-2021:</span></td>
-                                <td class="govuk-table__cell">You created your GOV.UK account</td>
-                                <td class="govuk-table__cell right" style="min-width: 90px;">
-                                    <div class="toggle">
-                                        <!--  <strong class="govuk-tag govuk-tag--blue">New</strong>
-                                        colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
-                                    </div>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                    <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+                    <!-- Clear notifications -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <br />
+                            <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>

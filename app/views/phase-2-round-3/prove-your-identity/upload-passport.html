@@ -8,6 +8,7 @@
 {% include "../includes/service-3-name.html" %}
 {% endset%}
 
+
 {% block pageScripts %}
 <script src="/public/javascripts/step-by-step-nav.js"></script>
 <script type="text/javascript">
@@ -19,39 +20,35 @@
 {% endblock %}
 
 {% block beforeContent %}
-
-<div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a href="date-of-birth" class="govuk-breadcrumbs__link">Back</a>
-        </li>
-    </ol>
-</div>
-<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+<a href="choose-document" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">What is your address?</h1>
+        <h1 class="govuk-heading-l">Upload your passport</h1>
 
-        <form action="contact-details" method="POST">
-            {% if data['signing'] == "yes" %}
-            {% include "../forms/address-signed-in.html" %}
-            {% else %}
-            {% include "../forms/address-signed-out.html" %}
-            {% endif %}
+        <p>Instructions go here.</p>
+
+        <form action="passport-details" method="POST">
+
+            <div class="govuk-form-group" style="padding: 10px; background: #f0f0f0;">
+                <!--  <label class="govuk-label" for="file-upload-1">
+                    Upload a file
+                </label> -->
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
             <button class="govuk-button" data-module="govuk-button">Continue</button>
-            <div class="govuk-!-padding-bottom-1"></div>
 
         </form> <!-- /. form -->
-        <!-- /. form -->
     </div> <!-- /. govuk-grid-column-two-thirds -->
+
     <div class="govuk-grid-column-one-third">
 
     </div>
-
 </div> <!-- /. govuk-grid-row -->
 
 {% endblock %}
