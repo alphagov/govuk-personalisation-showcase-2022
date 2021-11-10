@@ -59,7 +59,42 @@
 
         <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
 
-        {% if data['time'] == "task-1" %}
+        {% if data['personal-details'] == "completed" and data['PYI'] == "completed" and data['time'] == "task-1" %}
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Account set-up complete
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+
+                <ol class="govuk-list govuk-list--number">
+                    <li>✅ Create your account </li>
+                    <li>✅ Secure your account </li>
+                    {% if data['personal-details'] == "completed" %}
+                    <li>✅ Add personal details </li>
+                    {% else %}
+                    <li><a href="../personal-details/start.html">Add your personal details</a> </li>
+                    {% endif %}
+                    {% if data['PYI'] == "completed" %}
+                    <li>✅ Prove your identity </li>
+                    {% else %}
+                    <li><a href="../prove-your-identity/start.html">Prove your identity</a> </li>
+                    {% endif %}
+                </ol>
+
+                {% if data['PYI'] == "completed" %}
+                <form>
+                    <input id="time" name="time" value="task-2" type="hidden">
+                    <button class="govuk-button govuk-button--secondary">Clear</button>
+                    {% else %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        {% elif data['personal-details'] == "completed" and data['PYI'] == "completed" and data['time'] == "task-2" %}
+        {% else %}
         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -91,7 +126,6 @@
                 </form>
             </div>
         </div>
-        {% else %}
         {% endif %}
 
         {% if data['time'] == "task-2" %}
@@ -102,9 +136,7 @@
                 </h2>
             </div>
             <div class="govuk-notification-banner__content">
-
                 <p>Content goes here</p>
-
             </div>
         </div>
         {% else %}
@@ -178,6 +210,7 @@
                         </div>
                     </div>
 
+                    {% if data['personal-details'] == "completed" %}
                     <!-- Clear notifications -->
                     <div class="govuk-grid-row">
                         <div class="govuk-grid-column-full">
@@ -185,6 +218,8 @@
                             <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
                         </div>
                     </div>
+                    {% else %}
+                    {% endif %}
 
                 </div>
             </div>

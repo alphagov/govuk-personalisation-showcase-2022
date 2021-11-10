@@ -111,7 +111,6 @@
                                 <td class="govuk-table__cell">
                                     {% if data['date-of-birth-day'] %}
                                     {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />
-
                                     {% else %}
                                     {% endif %}</td>
                                 <td class="govuk-table__cell right">
@@ -124,6 +123,23 @@
                                 </td>
                             </tr>
 
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Gender</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        {{ data['gender'] }}
+                                    </p>
+
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    {% if data['gender'] %}
+                                    <p class="govuk-body-s">
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a></p>
+                                    {% else %}
+                                    {% endif %}
+                                </td>
+                            </tr>
 
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Place of birth</td>
@@ -138,24 +154,16 @@
                                 </td>
                             </tr>
 
-
-
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Address</td>
                                 <td class="govuk-table__cell">
                                     {% if data['address-line-1'] %}
                                     <p>
                                         {{ data['address-line-1'] }} <br />
-
                                         {{ data['address-line-2'] }} <br />
-
                                         {{ data['address-town'] }} <br />
-
                                         {{ data['address-county'] }} <br />
-
                                         {{ data['address-postcode'] }}<br />
-
-
                                     </p>
                                     <!-- <p class="govuk-body-s"><a href="#">View address history</a></p> -->
                                     {% else %}
@@ -173,7 +181,6 @@
                                 </td>
                             </tr>
 
-                            {% if data['NIN'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">National Insurance number</td>
                                 <td class="govuk-table__cell">
@@ -183,14 +190,32 @@
 
                                 </td>
                                 <td class="govuk-table__cell right">
+                                    {% if data['NIN'] %}
                                     <p class="govuk-body-s">
                                         <a href="#">Change</a><br />
                                         <a href="#" style="color: #d4351c;">Delete</a></p>
+                                    {% else %}
+                                    {% endif %}
+                                </td>
+                            </tr>
+
+                            {% if data['passport-number'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Passport details</td>
+                                <td class="govuk-table__cell">
+                                    <p>
+                                        <b>Passport number:<br /> </b> {{ data['passport-number'] }}<br />
+                                        <b>Passport issue:<br /> </b> {{ data['issue-day'] }}-{{ data['issue-month'] }}-{{ data['issue-year'] }}<br />
+                                        <b>Passport expiry:<br /> </b> {{ data['expiry-day'] }}-{{ data['expiry-month'] }}-{{ data['expiry-year'] }}<br />
+                                    </p>
+
+                                </td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s"><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
                                 </td>
                             </tr>
                             {% else %}
                             {% endif %}
-
 
                             {% if data['partner-check'] %}
                             <tr class="govuk-table__row">
@@ -258,23 +283,12 @@
                                     <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }}<br /> </p>
                                     <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }}<br /> </p>
                                     <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} <br /></p>
-
                                     <p> <b>Address:<br /> </b>
                                         {{ data['childcare-provider-address-line-1'] }} <br />
-
-
                                         {{ data['childcare-provider-address-line-2'] }} <br />
-
-
                                         {{ data['childcare-provider-address-town'] }} <br />
-
-
-
                                         {{ data['childcare-provider-address-county'] }} <br />
-
-
                                         {{ data['childcare-provider-address-postcode'] }} <br />
-
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
