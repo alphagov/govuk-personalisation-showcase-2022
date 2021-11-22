@@ -147,6 +147,41 @@
         {% else %}
         {% endif %}
 
+        {% if data['legacy-data'] == "completed" %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Update address with DVLA
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        You can be fined up to £1,000 if you do not tell DVLA when your address changes.
+                    </strong>
+                </div>
+
+                <p>It looks like the address the DVLA have on file is different from the verified address in your {% include "includes/auth-name.html" %}</p>
+
+                <p>You must update your driving licence, vehicle log book (V5C), Direct Debit for vehicle tax and other details when you move home.</p>
+
+                <p>You can still drive while you wait for your new documents to be sent to you.
+                </p>
+
+                <ol class="govuk-list govuk-list--number">
+                    <li><a href=""> Update your driving licence</a></li>
+                    <li><a href="">Update your vehicle log book (V5C)</a></li>
+                    <li><a href="">Update your Direct Debit for vehicle tax</a></li>
+                </ol>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <div id="recent-activity" class="accounts-panel">
@@ -261,9 +296,20 @@
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
 
                     {% if data['legacy-data'] == "completed" %}
-                    <span class="govuk-body-s">05-02-2022</span><br />
-                    <p><a href="#">Vehicle <b>AB12 AOT</b>: vehicle tax due</a> (DVLA)</p>
+                    <strong class="govuk-tag govuk-tag--red">
+                        Urgent
+                    </strong><br />
+                    <p><a href="#">Update your address on your driving licence</a> (DVLA)</p>
+                    <br />
 
+                    <strong class="govuk-tag govuk-tag--red">
+                        Urgent
+                    </strong><br />
+                    <p><a href="#">Update your address on your vehicle log book (V5C)</a> (DVLA)</p>
+                    <br />
+
+                    <span class="govuk-body-s"><b>05-02-2022</b></span><br />
+                    <p><a href="#">Vehicle <b>AB12 AOT</b>: vehicle tax due</a> (DVLA)</p>
                     {% else %}
                     <p>Personalised reminders will be added here</p>
                     {% endif %}
