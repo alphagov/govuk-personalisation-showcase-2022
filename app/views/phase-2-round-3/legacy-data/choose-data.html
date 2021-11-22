@@ -1,0 +1,239 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-4-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-4-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="choose-services.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="confirmation" method="POST">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which information do you want to save to your GOV.UK account?
+                        </h1>
+                    </legend>
+
+                    <br />
+
+                    <table class="govuk-table">
+                        <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Data item</th>
+                                <th scope="col" class="govuk-table__header">Value</th>
+                                <th scope="col" class="govuk-table__header">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                                Living status
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        Live with partner
+                                    </td>
+                                    <td class="govuk-table__cell">DWP</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                                Employment status
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        Employed
+                                    </td>
+                                    <td class="govuk-table__cell">HMRC</td>
+                                </tr>
+                            </div>
+                        </tbody>
+                    </table>
+
+                    <br />
+
+                    <!--                    <p>Your GOV.UK accounts allows you to:</p>
+
+                    {% include "phase-2-round-3/includes/account-benefit-bullets.html" %}
+
+                    <br />
+                    <p><b>Select the information you entered into the {% include "../includes/service-1-name.html" %} that you'd like to save to your GOV.UK account:</b></p>
+ -->
+                    <div id="calculator-consent-hint" class="govuk-hint">
+
+                    </div>
+                    <input id="child-service-status" name="child-service-status" value="completed" type="hidden">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                <b>Select all</b>
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                Name
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-2" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-2">
+                                Date of birth
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-3" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-3">
+                                Address
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-9" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-9">
+                                Place of birth
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-8" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-8">
+                                Living status (single or with partner)
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__divider">&nbsp;</div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-10" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-10">
+                                Your child's name
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-4" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-4">
+                                Your child's date of birth
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-5" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-5">
+                                Your child's gender
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-6" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-6">
+                                Your child's birth certificate number
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-12" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-12">
+                                Childcare providers details
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__divider">&nbsp;</div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent" name="calculator-consent" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent">
+                                National Insurance number
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-7" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-7">
+                                Employment status
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-13" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-13">
+                                Employment start date
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-14" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-14">
+                                Current paid leave status
+                            </label>
+                        </div>
+
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-15" name="calculator-consent" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-15">
+                                Weekly pay
+                            </label>
+                        </div>
+
+
+
+                        <!--    <div class="govuk-checkboxes__divider">or</div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-10" name="calculator-consent" type="checkbox" value="none" data-behaviour="exclusive">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-10">
+                                No, I don't want to save any information to my GOV.UK account
+                            </label>
+
+                        </div> -->
+                    </div>
+
+                </fieldset>
+            </div>
+            <p>The information you add to your account can be used to:</p>
+
+            {% include "phase-2-round-3/includes/account-benefit-bullets.html" %}
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+
+        <br />
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% include "phase-2-round-3/includes/select-all.js" %}
+
+{% endblock %}

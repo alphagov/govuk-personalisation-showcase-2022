@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Report a smokey vehicle
+{% endset%}
+
+{% block beforeContent %}
+<a href="../features/" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {{ fid }}. {{ fidtitle }}
+        </h1>
+        <p> {{ fid }}</p>
+    </div>
+</div>
+
+{% endblock %}

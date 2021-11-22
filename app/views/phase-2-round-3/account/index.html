@@ -107,14 +107,14 @@
                     <li>✅ Create your account </li>
                     <li>✅ Secure your account </li>
                     {% if data['personal-details'] == "completed" %}
-                    <li>✅ Add personal details </li>
+                    <li>✅ {% include "../includes/service-2-name.html" %} </li>
                     {% else %}
-                    <li><a href="../personal-details/start.html">Add your personal details</a> </li>
+                    <li><a href="../personal-details/start.html">{% include "../includes/service-2-name.html" %}</a> </li>
                     {% endif %}
                     {% if data['PYI'] == "completed" %}
-                    <li>✅ Prove your identity </li>
+                    <li>✅ {% include "../includes/service-3-name.html" %} </li>
                     {% else %}
-                    <li><a href="../prove-your-identity/start.html">Prove your identity</a> </li>
+                    <li><a href="../prove-your-identity/start.html">{% include "../includes/service-3-name.html" %}</a> </li>
                     {% endif %}
                 </ol>
                 {% if data['PYI'] == "completed" %}
@@ -132,11 +132,16 @@
         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                    Request legacy data
+                    {% include "../includes/service-4-name.html" %}
                 </h2>
             </div>
             <div class="govuk-notification-banner__content">
-                <p>Content goes here</p>
+                <p>Now you’ve verified your identity, you can request any information you've provided to GOV.UK services in the past. </p>
+
+                <p>This information can then be saved to your account, giving you full control of your information and making it easier to use services in the future.
+                </p>
+
+                <p><a href="../legacy-data/start.html">Request information</a> </p>
             </div>
         </div>
         {% else %}
@@ -292,9 +297,5 @@
     }
 
 </script>
-
-
-
-
 
 {% endblock %}

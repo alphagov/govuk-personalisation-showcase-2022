@@ -50,10 +50,10 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <ol class="govuk-list govuk-list--number">
-            <li><a href="#team">The team</a></li>
-            <!--      <li><a href="#activities">Week-by-week activity</a></li> -->
-            <li><a href="#documentation">Links &amp; documents</a></li>
-            <li><a href="#prototypes">Prototypes</a></li>
+            <li><a href="#section-1">{% include "includes/index-section-1.html" %}</a></li>
+            <li><a href="#section-2">{% include "includes/index-section-2.html" %}</a></li>
+            <li><a href="#section-3">{% include "includes/index-section-3.html" %}</a></li>
+            <!--   <li><a href="research/index.html">{% include "includes/index-section-4.html" %}</a></li> -->
         </ol>
     </div>
 </div>
@@ -67,13 +67,16 @@
 </div>
 
 <div class="govuk-grid-row">
-    <div id="team" class="govuk-grid-column-full">
+    <div id="section-1" class="govuk-grid-column-full">
 
-        <h2 class="govuk-heading-l">The team</h2>
+        <h2 class="govuk-heading-l">{% include "includes/index-section-1.html" %}</h2>
 
     </div>
 
-    <div class="govuk-grid-column-one-half">
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-1" class="govuk-grid-column-full">
         <ul class="govuk-list">
             <li>
                 <a href="mailto:leah.thompson@digital.cabinet-office.gov.uk">
@@ -125,9 +128,9 @@
 </div>
 
 <div class="govuk-grid-row">
-    <div id="documentation" class="govuk-grid-column-full">
+    <div id="section-2" class="govuk-grid-column-full">
 
-        <h2 class="govuk-heading-l">Links &amp; documents</h2>
+        <h2 class="govuk-heading-l">{% include "includes/index-section-2.html" %}</h2>
 
     </div>
 </div>
@@ -140,8 +143,8 @@
             <li><img src="../../public/images/slack.png" height="18px;"> <a href="https://gds.slack.com/archives/C024MKU7RLP">Slack channel (GDS)</a></li>
             <li>📂 <a href="https://drive.google.com/drive/u/0/folders/1knj8TE9me4o7FGQNtM0pAn30-BMt407X" target="_blank">Project (GDS)</a></li>
             <li>📂 <a href="https://drive.google.com/drive/u/2/folders/0APQTfByqSsKlUk9PVA" target="_blank">Admin (Hippo)</a></li>
-            <li><img src="../../public/images/miro.svg" style="height: 18px;"> <a href="https://miro.com/app/board/o9J_l6rYOGw=/" target="_blank">Research </a></li>
-            <li><img src="../../public/images/Figma-logo.svg" style="height: 18px;"> <a href="https://www.figma.com/file/OCbZOmhqS1LanDWF6utzIX/GOV-UK-Personalisation?node-id=0%3A1" target="_blank">Design</a></li>
+            <li><img src="../../public/images/miro.svg" style="height: 18px;"> <a href="https://miro.com/app/board/o9J_l6rYOGw=/" target="_blank">Research (note taking / affinity mapping)</a></li>
+            <!-- <li><img src="../../public/images/Figma-logo.svg" style="height: 18px;"> <a href="https://www.figma.com/file/OCbZOmhqS1LanDWF6utzIX/GOV-UK-Personalisation?node-id=0%3A1" target="_blank">Design</a></li> -->
 
         </ul>
     </div>
@@ -156,9 +159,9 @@
 </div>
 
 <div class="govuk-grid-row">
-    <div id="prototypes" class="govuk-grid-column-full">
+    <div id="section-3" class="govuk-grid-column-full">
 
-        <h3 class="govuk-heading-l">Prototypes</h3>
+        <h3 class="govuk-heading-l">{% include "includes/index-section-3.html" %}</h3>
 
         <p>Users researched with: <span class="govuk-heading-l">41</span></p>
 
@@ -196,15 +199,6 @@
         <a href="round-3/"><button class="govuk-button">View round 3</button></a>
 
     </div>
-    <!-- <div class="govuk-grid-column-one-quarter">
-
-        <strong class="govuk-tag govuk-tag--grey govuk-!-margin-top-0" style="font-size: 11px;">In preparation</strong>
-
-        <p class="govuk-hint govuk-!-margin-top-1"><small>16-Sep-2021 - 17-Sep-2021</small></p>
-
-        <a href="round-4/"><button class="govuk-button" disabled="disabled">View round 4</button></a>
-
-    </div> -->
 
     <div class="govuk-grid-column-full">
 
@@ -243,7 +237,6 @@
         <a href="phase-2-round-3/"><button class="govuk-button">View round 3</button></a>
 
     </div>
-
 </div>
 
 <div class="govuk-grid-row">
@@ -253,16 +246,36 @@
         <br /><br />
     </div>
 </div>
+<!-- RESEARCH HUB 
+<div class="govuk-grid-row">
+    <div id="section-4" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">{% include "includes/index-section-4.html" %}</h2>
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <p><a href="research/index.html">View the research hub</a></p>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div> -->
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-        <p class="govuk-body-s">Last updated: 10-Nov-2021
+        <p class="govuk-body-s">Last updated: 19-Nov-2021
             <br />
             <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a>
         </p>
     </div>
-
 </div>
 
 <br /><br />

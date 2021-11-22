@@ -91,113 +91,114 @@
 
                         <tbody class="govuk-table__body">
 
+                            {% if data['full-name'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Name</td>
-                                <td class="govuk-table__cell">{{ data['full-name'] }}<br /></td>
+                                <td class="govuk-table__cell">
+                                    <p>{{ data['full-name'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}</p>
+                                </td>
                                 <td class="govuk-table__cell right">
-                                    {% if data['full-name'] %}
                                     <p class="govuk-body-s">
-
                                         <a href="#">Change</a><br />
                                         <a href="#" style="color: #d4351c;">Delete</a>
                                     </p>
-                                    {% else %}
-                                    {% endif %}
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
 
+                            {% if data['date-of-birth-day'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Date of birth</td>
                                 <td class="govuk-table__cell">
-                                    {% if data['date-of-birth-day'] %}
-                                    {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />
-                                    {% else %}
-                                    {% endif %}</td>
+                                    <p>
+                                        {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
+                                </td>
                                 <td class="govuk-table__cell right">
-                                    {% if data['date-of-birth-day'] %}
                                     <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
-                                    {% else %}
-                                    {% endif %}
+                                        {% include "phase-2-round-3/includes/change-verified.html" %}
+                                    </p>
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
 
+                            {% if data['gender'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Gender</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        {{ data['gender'] }}
+                                        {{ data['gender'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}
                                     </p>
-
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    {% if data['gender'] %}
                                     <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
-                                    {% else %}
-                                    {% endif %}
+                                        {% include "phase-2-round-3/includes/change-verified.html" %}
+                                    </p>
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
 
+                            {% if data['town-of-birth'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Place of birth</td>
-                                <td class="govuk-table__cell"> {{ data['town-of-birth'] }}<br /></td>
+                                <td class="govuk-table__cell">
+                                    <p>{{ data['town-of-birth'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}</p>
+                                </td>
                                 <td class="govuk-table__cell right">
-                                    {% if data['town-of-birth'] %}
                                     <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
-                                    {% else %}
-                                    {% endif %}
+                                        {% include "phase-2-round-3/includes/change-verified.html" %}
+                                    </p>
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
 
+                            {% if data['address-line-1'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Address</td>
                                 <td class="govuk-table__cell">
-                                    {% if data['address-line-1'] %}
                                     <p>
                                         {{ data['address-line-1'] }} <br />
                                         {{ data['address-line-2'] }} <br />
                                         {{ data['address-town'] }} <br />
                                         {{ data['address-county'] }} <br />
                                         {{ data['address-postcode'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}
                                     </p>
-                                    <!-- <p class="govuk-body-s"><a href="#">View address history</a></p> -->
-                                    {% else %}
-                                    {% endif %}
                                 </td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s">
-                                        {% if data['address-line-1'] %}
-
                                         <a href="#">Change</a><br />
                                         <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% else %}
-                                        {% endif %}
                                     </p>
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
 
+                            {% if data['NIN'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">National Insurance number</td>
                                 <td class="govuk-table__cell">
                                     <p>
                                         {{ data['NIN'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}
                                     </p>
-
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    {% if data['NIN'] %}
                                     <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
-                                    {% else %}
-                                    {% endif %}
+                                        {% include "phase-2-round-3/includes/change-verified.html" %}
+                                    </p>
                                 </td>
                             </tr>
+                            {% else %}
+                            {% endif %}
+
 
                             {% if data['passport-number'] %}
                             <tr class="govuk-table__row">
@@ -207,11 +208,18 @@
                                         <b>Passport number:<br /> </b> {{ data['passport-number'] }}<br />
                                         <b>Passport issue:<br /> </b> {{ data['issue-day'] }}-{{ data['issue-month'] }}-{{ data['issue-year'] }}<br />
                                         <b>Passport expiry:<br /> </b> {{ data['expiry-day'] }}-{{ data['expiry-month'] }}-{{ data['expiry-year'] }}<br />
+                                        {% include "phase-2-round-3/includes/verified.html" %}
                                     </p>
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    {% if data['passport-number'] %}
+                                    <p class="govuk-body-s">
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                    </p>
+                                    {% else %}
+                                    {% endif %}
                                 </td>
                             </tr>
                             {% else %}
@@ -224,20 +232,29 @@
                                     <p>
                                         {{ data['partner-check'] }}
                                     </p>
-
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">Change</a><br /><a href="#" style="color: #d4351c;">Delete</a></p>
+                                    <p class="govuk-body-s">
+                                        <a href="#">Change</a><br />
+                                        <a href="#" style="color: #d4351c;">Delete</a>
+                                    </p>
                                 </td>
                             </tr>
                             {% else %}
                             {% endif %}
 
-
                         </tbody>
                     </table>
 
                     {% if data['personal-details'] == "completed" %}
+                    <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            If you change any information that has previously been verified, we'll need to check it again before marking it as verified.
+                        </strong>
+                    </div>
+
                     {% else %}
                     <p><a href="../personal-details/start.html">Add your personal details</a></p>
                     {% endif %}

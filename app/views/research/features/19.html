@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - {% include "includes/index-section-4.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="../index.html#features" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {{ fid }}. {{ fidtitle }}
+        </h1>
+        <p> {{ fiddler }}</p>
+    </div>
+</div>
+
+
+
+<br /><br />
+
+{% endblock %}

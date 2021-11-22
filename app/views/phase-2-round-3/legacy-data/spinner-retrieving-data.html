@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/phase-2-round-3/legacy-data/choose-data" method="POST">
+
+            <h1 class="govuk-heading-xl">Retrieving data from department / services</h1>
+
+            <p>We're pulling back all the information that's available for you to add to your {% include "includes/auth-name.html" %}</p>
+
+            <br /><br />
+
+            <div class="ccms-loader ccms-loader__fast govuk-!-margin-bottom-6"></div>
+
+            <button id="button2" class="govuk-button govuk-!-margin-top-4 govuk-visually-hidden" data-module="govuk-button">
+                Continue
+            </button>
+
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    spinnerTimer()
+
+    function spinnerTimer() {
+        setTimeout(function() {
+            // proceed
+            document.getElementById('button2').click()
+        }, 4000)
+    }
+
+</script>
+
+{% endblock %}

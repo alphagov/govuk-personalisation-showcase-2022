@@ -1562,4 +1562,28 @@ router.post('/phase-2-round-3/employment-status-check', function (req, res) {
     }
 })
 
+// features ids
+router.get('/research/features/19', function (req, res) {
+    res.render('research/features/19', {
+        fid: '19',
+        fidtitle: 'Fixed vs editable data'
+    })
+})
+
+router.get('/research/features/feature-ids/19', function (req, res) {
+    res.render('research/features/feature-ids/19', {
+        fid: '19',
+        fidtitle: 'Fixed vs editable data',
+        fiddler: 'Gary'
+    })
+})
+
+router.get('/research/features/20', function (req, res) {
+    res.render('research/features/20', {
+        fid: '20',
+        fidtitle: 'Shared information'
+    })
+})
+
+
 module.exports = router

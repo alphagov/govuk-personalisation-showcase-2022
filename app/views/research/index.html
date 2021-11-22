@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - {% include "includes/index-section-4.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="../index.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {% include "includes/index-section-4.html" %}
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="documents" class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">{% include "../research/includes/research-section-1.html" %}</h2>
+        {% include "../research/includes/research-menu.html" %}
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="features" class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">{% include "../research/includes/research-section-2.html" %}</h2>
+        {% include "../research/includes/features-menu.html" %}
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body-s">Last updated: 19-Nov-2021
+            <br />
+            <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a>
+        </p>
+    </div>
+</div>
+
+<br /><br />
+
+{% endblock %}
