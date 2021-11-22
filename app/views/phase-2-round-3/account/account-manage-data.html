@@ -93,10 +93,10 @@
 
                             {% if data['full-name'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Name</td>
+                                <td class="govuk-table__cell bold">Name<br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
-                                    <p>{{ data['full-name'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}</p>
+                                    <p>{{ data['full-name'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s">
@@ -110,10 +110,11 @@
 
                             {% if data['date-of-birth-day'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Date of birth</td>
+                                <td class="govuk-table__cell bold">Date of birth<br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}<br />{% include "phase-2-round-3/includes/verified.html" %}</p>
+                                        {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s">
@@ -126,11 +127,11 @@
 
                             {% if data['gender'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Gender</td>
+                                <td class="govuk-table__cell bold">Gender<br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        {{ data['gender'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['gender'] }}
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
@@ -144,10 +145,10 @@
 
                             {% if data['town-of-birth'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Place of birth</td>
+                                <td class="govuk-table__cell bold">Place of birth<br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
-                                    <p>{{ data['town-of-birth'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}</p>
+                                    <p>{{ data['town-of-birth'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s">
@@ -160,15 +161,15 @@
 
                             {% if data['address-line-1'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Address</td>
+                                <td class="govuk-table__cell bold">Address <br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
                                     <p>
                                         {{ data['address-line-1'] }} <br />
                                         {{ data['address-line-2'] }} <br />
                                         {{ data['address-town'] }} <br />
                                         {{ data['address-county'] }} <br />
-                                        {{ data['address-postcode'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['address-postcode'] }}
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
@@ -183,11 +184,11 @@
 
                             {% if data['NIN'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">National Insurance number</td>
+                                <td class="govuk-table__cell bold">National Insurance number<br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        {{ data['NIN'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}
+                                        {{ data['NIN'] }}
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
@@ -202,13 +203,13 @@
 
                             {% if data['passport-number'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Passport details</td>
+                                <td class="govuk-table__cell bold">Passport details <br />
+                                    {% include "phase-2-round-3/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell">
                                     <p>
-                                        <b>Passport number:<br /> </b> {{ data['passport-number'] }}<br />
-                                        <b>Passport issue:<br /> </b> {{ data['issue-day'] }}-{{ data['issue-month'] }}-{{ data['issue-year'] }}<br />
-                                        <b>Passport expiry:<br /> </b> {{ data['expiry-day'] }}-{{ data['expiry-month'] }}-{{ data['expiry-year'] }}<br />
-                                        {% include "phase-2-round-3/includes/verified.html" %}
+                                        <b>Passport number:<br /> </b> {{ data['passport-number'] }}<br /> <br />
+                                        <b>Passport issue:<br /> </b> {{ data['issue-day'] }}-{{ data['issue-month'] }}-{{ data['issue-year'] }}<br /> <br />
+                                        <b>Passport expiry:<br /> </b> {{ data['expiry-day'] }}-{{ data['expiry-month'] }}-{{ data['expiry-year'] }}
                                     </p>
 
                                 </td>

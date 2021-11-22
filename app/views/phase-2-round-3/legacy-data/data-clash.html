@@ -1,0 +1,96 @@
+{% extends "layout_phase-2-round-3.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-4-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-4-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="choose-data.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            Some of the requested data doesn't match verified data in your account
+        </h1>
+        <p>A sentence asking the user to confirm which is correct.</p>
+        <br />
+    </div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <form action="confirmation" method="POST">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="-hint">
+
+                    <div class="govuk-radios govuk-radios--conditional">
+
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="id" name="address-picker" type="radio" value="requested" aria-describedby="-hint">
+                            <label class="govuk-label govuk-radios__label" for="id">
+                                <b>Requested address (DVLA)</b> <br /><br />
+                                12 This Ol' House <br />
+                                Old Street <br />
+                                Previoustown <br />
+                                West Yorkshire <br />
+                                LS1 1AB <br />
+                            </label>
+                            <div id="-hint" class="govuk-hint govuk-radios__hint">
+
+                            </div>
+                        </div>
+                        <div class="govuk-radios__divider">or </div><br />
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="id" name="address-picker" type="radio" value="original" aria-describedby="-hint">
+                            <label class="govuk-label govuk-radios__label" for="id">
+                                <b>Verified address</b><br /><br />
+                                {{ data['address-line-1'] }} <br />
+                                {{ data['address-line-2'] }} <br />
+                                {{ data['address-town'] }} <br />
+                                {{ data['address-county'] }} <br />
+                                {{ data['address-postcode'] }}<br />
+                            </label>
+                            <div id="-hint" class="govuk-hint govuk-radios__hint">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input id="legacy-data" name="legacy-data" value="completed" type="hidden">
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}

@@ -128,7 +128,7 @@
         </div>
         {% endif %}
 
-        {% if data['time'] == "task-2" %}
+        {% if data['time'] == "task-2" and data['legacy-data'] != "completed" %}
         <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -151,6 +151,28 @@
             <div class="govuk-grid-column-full">
                 <div id="recent-activity" class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
+
+                    {% if data['legacy-data'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You have added legacy data to your account</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+                                <!-- colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
 
                     {% if data['PYI'] == "completed" %}
                     <!-- An activity item -->
@@ -240,8 +262,8 @@
 
                     {% if data['legacy-data'] == "completed" %}
                     <span class="govuk-body-s">05-02-2022</span><br />
-                    <p><a href="#">Confirm {% include "../includes/service-1-name.html" %} details</a> (HMRC)</p>
-                    <br />
+                    <p><a href="#">Vehicle <b>AB12 AOT</b>: vehicle tax due</a> (DVLA)</p>
+
                     {% else %}
                     <p>Personalised reminders will be added here</p>
                     {% endif %}
