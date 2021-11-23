@@ -28,9 +28,9 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">
-            Some of the requested data doesn't match verified data in your account
+            Some of the information you want to save is already in your {% include "includes/auth-name.html" %}
         </h1>
-        <p>A sentence asking the user to confirm which is correct.</p>
+        <p>What information do you want to save in your {% include "includes/auth-name.html" %}?</p>
         <br />
     </div>
 </div>
@@ -50,7 +50,7 @@
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="id" name="address-picker" type="radio" value="requested" aria-describedby="-hint">
                             <label class="govuk-label govuk-radios__label" for="id">
-                                <b>Requested address (DVLA)</b> <br /><br />
+                                <b>Address (requested from the DVLA)</b> <br /><br />
                                 12 This Ol' House <br />
                                 Old Street <br />
                                 Previoustown <br />
@@ -65,7 +65,7 @@
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="id" name="address-picker" type="radio" value="original" aria-describedby="-hint">
                             <label class="govuk-label govuk-radios__label" for="id">
-                                <b>Verified address</b><br /><br />
+                                <b>Saved address (verified in your {% include "includes/auth-name.html" %})</b><br /><br />
                                 {{ data['address-line-1'] }} <br />
                                 {{ data['address-line-2'] }} <br />
                                 {{ data['address-town'] }} <br />

@@ -34,45 +34,65 @@
                 <fieldset class="govuk-fieldset" aria-describedby="-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading">
-                            Choose services/departments(?)
+                            Choose services
                         </h1>
                     </legend>
 
-                    <p class="govuk-body">
-                        The following government department / or services (@Kas?) hold information in their systems about you.
-                        <p>
+                    <p>
+                        The following GOV.UK departments have personal information stored about you. This information was saved when you used their services in the past, for example applying for a passport.
+                    </p>
 
-                            <p>You can add that data to your GOV.UK account.</p>
+                    <p>You can now review the information and choose to save any information you think would be useful in your GOV.UK account.</p>
 
-                            <p>A sentence here explaining that this data can then be used to personalise your experience, and also be used in forms you need to fill in.</p>
-                            <p>But also explain that if these items are changed, then it wont automatically update the services/departments with the new information <b>(Global push explainer)</b></p>
+                    <br />
 
-                            <br />
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                More about how your GOV.UK account uses your information
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            Any information you save can be used to prefill forms and applications when using services. It will also be used to personalise your experience across GOV.UK.
+                        </div>
+                    </details>
 
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <br /><br />
 
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
-                                    <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                        DWP
-                                    </label>
-                                </div>
+                    <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            If you update your personal information it will only be updated in your account. It will not be shared with any services you’ve previously used, as this needs your consent.
+                        </strong>
+                    </div>
 
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
-                                    <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                        HMRC
-                                    </label>
-                                </div>
+                    <br />
 
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
-                                    <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                        DVLA
-                                    </label>
-                                </div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
-                            </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                <b>The Department for Work and Pensions (DWP)</b> - welfare, pensions and child maintenance
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                <b>Her Majesty's Revenue and Customs (HMRC)</b> - taxes and state support
+                            </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                <b>Driver and Vehicle Licensing Agency (DVLA)</b> - driver licences and vehicle records
+                            </label>
+                        </div>
+
+                    </div>
 
                 </fieldset>
             </div>

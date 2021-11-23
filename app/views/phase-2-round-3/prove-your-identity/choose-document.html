@@ -36,39 +36,36 @@
                                 Which ID document do you wish to use?
                             </h1>
                         </legend>
-                        <p class="govuk-body">A sentence goes here.<p>
-                                <div id="-hint" class="govuk-hint">
+
+                        <div class="govuk-radios govuk-radios--conditional">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-1" name="id-doc" type="radio" value="passport" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-1">
+                                    UK Passport
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
 
                                 </div>
-                                <div class="govuk-radios govuk-radios--conditional">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="id-document-1" name="id-doc" type="radio" value="passport" aria-describedby="id-doc-hint">
-                                        <label class="govuk-label govuk-radios__label" for="id-document-1">
-                                            UK Passport
-                                        </label>
-                                        <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-2" name="id-doc" type="radio" value="licence" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-2">
+                                    Driving licence
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
 
-                                        </div>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="id-document-2" name="id-doc" type="radio" value="licence" aria-describedby="id-doc-hint">
-                                        <label class="govuk-label govuk-radios__label" for="id-document-2">
-                                            Driving licence
-                                        </label>
-                                        <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
-
-                                        </div>
-                                    </div>
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="id-document-3" name="id-doc" type="radio" value="none" aria-describedby="id-doc-hint">
-                                        <label class="govuk-label govuk-radios__label" for="id-document-3">
-                                            I don't have either document
-                                        </label>
-                                        <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
-
-                                        </div>
-                                    </div>
                                 </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-3" name="id-doc" type="radio" value="none" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-3">
+                                    I don't have either document
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
+
+                                </div>
+                            </div>
+                        </div>
 
                     </fieldset>
                 </div>

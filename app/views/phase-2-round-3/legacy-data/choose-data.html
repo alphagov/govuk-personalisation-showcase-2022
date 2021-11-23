@@ -41,13 +41,22 @@
 
                     <br />
 
+                    <p>Saving this information will allow you to:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>prefill forms and applications saving you time</li>
+                        <li>personalise your experience across GOV.UK</li>
+                    </ul>
+
+                    <br />
+
                     <table class="govuk-table">
                         <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
                         <thead class="govuk-table__head">
                             <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Data item</th>
-                                <th scope="col" class="govuk-table__header">Value</th>
-                                <th scope="col" class="govuk-table__header">Source</th>
+                                <th scope="col" class="govuk-table__header">Information requested</th>
+                                <th scope="col" class="govuk-table__header">Your details</th>
+                                <th scope="col" class="govuk-table__header">Department</th>
                             </tr>
                         </thead>
                         <tbody class="govuk-table__body">
@@ -98,27 +107,24 @@
                                     </td>
                                     <td class="govuk-table__cell">DVLA</td>
                                 </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                                <b>Select all</b>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell"></td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr>
                             </div>
                         </tbody>
                     </table>
 
-                    <br />
-
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
-                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
-                                <b>Select all</b>
-                            </label>
-                        </div>
-
-                    </div>
-
                 </fieldset>
             </div>
-            <p>The information you add to your account can be used to:</p>
-
-            {% include "phase-2-round-3/includes/account-benefit-bullets.html" %}
 
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
