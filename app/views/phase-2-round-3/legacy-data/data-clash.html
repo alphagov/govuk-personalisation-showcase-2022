@@ -30,7 +30,7 @@
         <h1 class="govuk-heading-l">
             Some of the information you want to save is already in your {% include "includes/auth-name.html" %}
         </h1>
-        <p>What information do you want to save in your {% include "includes/auth-name.html" %}?</p>
+        <p>Which of these do you want to save to your {% include "includes/auth-name.html" %}?</p>
         <br />
     </div>
 </div>
@@ -50,7 +50,7 @@
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="id" name="address-picker" type="radio" value="requested" aria-describedby="-hint">
                             <label class="govuk-label govuk-radios__label" for="id">
-                                <b>Address (requested from the DVLA)</b> <br /><br />
+                                <b>Address (retrieved from the DVLA)</b> <br /><br />
                                 12 This Ol' House <br />
                                 Old Street <br />
                                 Previoustown <br />
@@ -83,6 +83,7 @@
             </div>
 
             <input id="legacy-data" name="legacy-data" value="completed" type="hidden">
+            <input id="legacy-data" name="account-icon" value="on" type="hidden">
 
             <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form>

@@ -71,9 +71,37 @@
                                         </div>
                                     </td>
                                     <td class="govuk-table__cell">
-                                        Live with partner
+                                        Lives with partner
                                     </td>
                                     <td class="govuk-table__cell">DWP</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                                Number of children
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        None
+                                    </td>
+                                    <td class="govuk-table__cell">DWP</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                                Marital status
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        Divorced
+                                    </td>
+                                    <td class="govuk-table__cell">HMRC</td>
                                 </tr>
                                 <tr class="govuk-table__row">
                                     <td class="govuk-table__cell">
@@ -86,6 +114,20 @@
                                     </td>
                                     <td class="govuk-table__cell">
                                         Employed
+                                    </td>
+                                    <td class="govuk-table__cell">HMRC</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
+                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
+                                                Current employer
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        Smith And Sons Ltd
                                     </td>
                                     <td class="govuk-table__cell">HMRC</td>
                                 </tr>
@@ -112,57 +154,44 @@
                                         <div class="govuk-checkboxes__item">
                                             <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
                                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                                A data item
+                                                Driving licence number
                                             </label>
                                         </div>
                                     </td>
                                     <td class="govuk-table__cell">
-                                        The answer
+                                        ABCD12345AJMPO9
                                     </td>
-                                    <td class="govuk-table__cell">Department here</td>
+                                    <td class="govuk-table__cell">DVLA</td>
                                 </tr>
                                 <tr class="govuk-table__row">
                                     <td class="govuk-table__cell">
                                         <div class="govuk-checkboxes__item">
                                             <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
                                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                                A data item
+                                                Date of driving licence issue
                                             </label>
                                         </div>
                                     </td>
                                     <td class="govuk-table__cell">
-                                        The answer
+                                        17-03-2017
                                     </td>
-                                    <td class="govuk-table__cell">Department here</td>
+                                    <td class="govuk-table__cell">DVLA</td>
                                 </tr>
                                 <tr class="govuk-table__row">
                                     <td class="govuk-table__cell">
                                         <div class="govuk-checkboxes__item">
                                             <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
                                             <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                                A data item
+                                                Date of driving licence expiry
                                             </label>
                                         </div>
                                     </td>
                                     <td class="govuk-table__cell">
-                                        The answer
+                                        17-03-2027
                                     </td>
-                                    <td class="govuk-table__cell">Department here</td>
+                                    <td class="govuk-table__cell">DVLA</td>
                                 </tr>
-                                <tr class="govuk-table__row">
-                                    <td class="govuk-table__cell">
-                                        <div class="govuk-checkboxes__item">
-                                            <input class="govuk-checkboxes__input" id="calculator-consent-11" name="calculator-consent" type="checkbox" value="portugal">
-                                            <label class="govuk-label govuk-checkboxes__label" for="calculator-consent-11">
-                                                A data item
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="govuk-table__cell">
-                                        The answer
-                                    </td>
-                                    <td class="govuk-table__cell">Department here</td>
-                                </tr>
+
                                 <tr class="govuk-table__row">
                                     <td class="govuk-table__cell">
                                         <div class="govuk-checkboxes__item">
@@ -182,6 +211,15 @@
                 </fieldset>
             </div>
 
+            <!-- Hidden inputs -->
+            <input class="govuk-input" name="driving-licence" type="hidden" value="ABCD12345AJMPO9">
+            <input class="govuk-input" name="driving-licence-issue" type="hidden" value="17-03-2017">
+            <input class="govuk-input" name="driving-licence-expiry" type="hidden" value="17-03-2027">
+            <input class="govuk-input" name="marital-status" type="hidden" value="Divorced">
+            <input class="govuk-input" name="partner-check" type="hidden" value="Yes">
+            <input class="govuk-input" name="number-children" type="hidden" value="None">
+            <input class="govuk-input" name="employment-status" type="hidden" value="Employed">
+            <input class="govuk-input" name="current-employer" type="hidden" value="Smith And Sons Ltd">
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
         </form> <!-- /. form -->

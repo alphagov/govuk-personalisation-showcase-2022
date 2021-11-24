@@ -2,7 +2,15 @@
 
     <div class="govuk-form-group no-mar-bot account-nav">
 
-        <a href="/phase-2-round-3/account/" class="account-link">Account</a> &nbsp;&nbsp;
+        <a href="/phase-2-round-3/account/" class="account-link">Account</a>
+        {% if data['account-icon'] == "on" %}
+        &nbsp;<span>❗️</span>
+
+
+        {% else %}
+        {% endif %}
+
+        &nbsp;&nbsp;
 
         <input class="govuk-input" id="signing" name="signing" type="hidden" value="no">
 
