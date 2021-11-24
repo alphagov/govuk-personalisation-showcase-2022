@@ -62,6 +62,11 @@
 
             <p>Your saved data can be used to prefill forms across government services, saving you time.</p>
 
+            {% if data['personal-details'] == "completed" %}
+            {% include "../includes/global-push-warning.html" %}
+            {% else %}
+            {% endif %}
+
             <div class="govuk-tabs" data-module="govuk-tabs">
                 <h2 class="govuk-tabs__title">
                     Contents
@@ -247,7 +252,7 @@
                         </tbody>
                     </table>
 
-                    {% if data['personal-details'] == "completed" %}
+                    {% if data['PYI'] == "completed" %}
                     <div class="govuk-warning-text">
                         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                         <strong class="govuk-warning-text__text">
@@ -255,7 +260,6 @@
                             If you change any verified information in your GOV.UK account, it will need to be reviewed before being verified again.
                         </strong>
                     </div>
-
                     {% else %}
                     <p><a href="../personal-details/start.html">Add your personal details</a></p>
                     {% endif %}

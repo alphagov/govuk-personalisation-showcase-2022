@@ -42,14 +42,14 @@
                         The following GOV.UK departments have personal information stored about you. This information was saved when you used their services in the past, for example applying for a passport.
                     </p>
 
-                    <p>You can now review the information and choose to save any information you think would be useful in your GOV.UK account.</p>
+                    <p>You can now review the information and choose to save it in your {% include "includes/auth-name.html" %}.</p>
 
                     <br />
 
                     <details class="govuk-details" data-module="govuk-details">
                         <summary class="govuk-details__summary">
                             <span class="govuk-details__summary-text">
-                                More about how your GOV.UK account uses your information
+                                More about how your {% include "includes/auth-name.html" %} uses your information
                             </span>
                         </summary>
                         <div class="govuk-details__text">
@@ -59,13 +59,7 @@
 
                     <br /><br />
 
-                    <div class="govuk-warning-text">
-                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                        <strong class="govuk-warning-text__text">
-                            <span class="govuk-warning-text__assistive">Warning</span>
-                            If you update your personal information it will only be updated in your account. It will not be shared with any services you’ve previously used, as this needs your consent.
-                        </strong>
-                    </div>
+                    {% include "../includes/global-push-warning.html" %}
 
                     <br />
 
