@@ -283,6 +283,10 @@
                         </strong>
                     </div>
                     {% else %}
+                    {% endif %}
+
+                    {% if data['personal-details'] == "completed" %}
+                    {% else %}
                     <p><a href="../personal-details/start.html">Add your personal details</a></p>
                     {% endif %}
 
