@@ -108,6 +108,27 @@
                 <div id="recent-activity" class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
 
+                    {% if data['share-data'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You have shared data with <b>Sarah Smith</b></p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <p class="govuk-body-s">
+                                <a href="#">View details</a>
+                            </p>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
+
                     {% if data['PYI'] == "completed" %}
                     <!-- An activity item -->
                     <div class="govuk-grid-row">
@@ -185,7 +206,7 @@
                             </div>
                         </div>
                         <div class="govuk-grid-column-full">
-                            <hr>
+
                         </div>
                     </div>
 

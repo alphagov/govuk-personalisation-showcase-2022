@@ -90,6 +90,14 @@
                             Driving
                         </a>
                     </li>
+                    {% if data['share-data'] == "completed" %}
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#shared">
+                            Shared
+                        </a>
+                    </li>
+                    {% else %}
+                    {% endif %}
                 </ul>
                 <div class="govuk-tabs__panel" id="personal">
 
@@ -105,10 +113,7 @@
                                     <p>{{ data['full-name'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -123,9 +128,7 @@
                                         {{ data['date-of-birth-day'] }}-{{ data['date-of-birth-month'] }}-{{ data['date-of-birth-year'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% include "phase-2-round-4/includes/change-verified.html" %}
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -141,9 +144,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% include "phase-2-round-4/includes/change-verified.html" %}
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -157,9 +158,7 @@
                                     <p>{{ data['town-of-birth'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% include "phase-2-round-4/includes/change-verified.html" %}
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -179,10 +178,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -198,9 +194,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% include "phase-2-round-4/includes/change-verified.html" %}
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -221,10 +215,7 @@
                                 </td>
                                 <td class="govuk-table__cell right">
                                     {% if data['passport-number'] %}
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                     {% else %}
                                     {% endif %}
                                 </td>
@@ -242,10 +233,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -260,10 +248,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -297,10 +282,7 @@
 
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -319,8 +301,7 @@
                                     <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}<br /></p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br /> <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -343,9 +324,7 @@
                                     </p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a></p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -369,16 +348,11 @@
                             {% if data['employment-status'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Employment status<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %}</td>
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
                                 <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% if data['employer-connection-status'] == "connected" %}
-                                        <a href="#">Disconnect</a>
-                                        {% else %}
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% endif %}</p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -390,10 +364,7 @@
                                     {% include "phase-2-round-4/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell"> {{ data['current-employer'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -408,14 +379,7 @@
                                     {% endif %}</td>
                                 <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s"><a href="#">{% include "../includes/view-usage-link.html" %}</a><br />
-                                        {% if data['employer-connection-status'] == "connected" %}
-                                        <a href="#">Disconnect</a>
-                                        {% else %}
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% endif %}
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -425,19 +389,11 @@
                             {% if data['employment-start-month'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Employment start date<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %} {% if data['employer-connection-status'] == "connected" %}
-                                    <p class="govuk-body-s">Provided by employer</p>
-                                    {% else %}
-
-                                    {% endif %}</td>
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
                                 <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">{% if data['employer-connection-status'] == "connected" %}
-                                        <a href="#">Disconnect</a>
-                                        {% else %}
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% endif %}</p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -453,13 +409,7 @@
                                 <td class="govuk-table__cell">{% if data['employment-leave'] == "None of these" %} Not currently on paid leave {% else %}
                                     {% endif %}</td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        {% if data['employer-connection-status'] == "connected" %}
-                                        <a href="#">Disconnect</a>
-                                        {% else %}
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% endif %}</p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -468,18 +418,15 @@
 
                             {% if data['parent-work-pay'] %}
                             <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Paid (per week)<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %}
+                                <td class="govuk-table__cell bold">Paid (per year)<br />
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}
                                 </td>
                                 <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
                                 <td class="govuk-table__cell right">
                                     <p class="govuk-body-s">
-                                        {% if data['employer-connection-status'] == "connected" %}
-                                        <a href="#">Disconnect</a>
-                                        {% else %}
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                        {% endif %}</p>
+                                        <a href="account-manage-data-item.html">Manage</a>
+                                    </p>
                                 </td>
                             </tr>
                             {% else %}
@@ -507,10 +454,7 @@
                                     <p>{{ data['driving-licence'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -524,10 +468,7 @@
                                     <p>{{ data['driving-licence-issue'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -541,10 +482,7 @@
                                     <p>{{ data['driving-licence-expiry'] }}</p>
                                 </td>
                                 <td class="govuk-table__cell right">
-                                    <p class="govuk-body-s">
-                                        <a href="#">Change</a><br />
-                                        <a href="#" style="color: #d4351c;">Delete</a>
-                                    </p>
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
                                 </td>
                             </tr>
                             {% else %}
@@ -554,6 +492,110 @@
                     </table>
 
                 </div>
+                {% if data['share-data'] == "completed" %}
+                <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="shared">
+
+                    <table class="govuk-table">
+
+                        <tbody class="govuk-table__body">
+
+                            {% if data['employment-start-month'] or data['employment-status'] or  data['parent-work-hours'] or data['parent-work-pay'] or  data['employment-leave'] %}
+                            {% else %}
+                            <p>There is currently no employment information saved to your account</p>
+                            {% endif %}
+
+                            {% if data['employment-status'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Employment status<br />
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
+                                <td class="govuk-table__cell"> {{ data['employment-status'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['current-employer'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Current employer<br />
+                                    {% include "phase-2-round-4/includes/verified.html" %}</td>
+                                <td class="govuk-table__cell"> {{ data['current-employer'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['parent-work-hours'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Hours worked (per week){% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
+                                <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+
+                            {% if data['employment-start-month'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Employment start date<br />
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
+                                <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
+                                <td class="govuk-table__cell right">
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+                            {% if data['employment-leave'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Current paid leave status {% if data['employer-connection-status'] == "connected" %}
+                                    <p class="govuk-body-s">Provided by employer</p>
+                                    {% else %}
+
+                                    {% endif %}</td>
+                                <td class="govuk-table__cell">{% if data['employment-leave'] == "None of these" %} Not currently on paid leave {% else %}
+                                    {% endif %}</td>
+                                <td class="govuk-table__cell right">
+                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+
+
+                            {% if data['parent-work-pay'] %}
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell bold">Paid (per year)<br />
+                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
+                                    {% include "phase-2-round-4/includes/shared.html" %}
+                                </td>
+                                <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
+                                <td class="govuk-table__cell right">
+                                    <p class="govuk-body-s">
+                                        <a href="account-manage-data-item.html">Manage</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            {% else %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+
+                </div>
+                {% else %}
+                {% endif %}
             </div>
 
             {% if data['PYI'] == "completed" %}
@@ -634,6 +676,7 @@
                     <img src="../../../../public/images/passport.jpg" style="max-width: 100%;"><br />
                     {% include "../includes/verified.html" %} <br />
                     <a href="#" style="color: #d4351c;">Delete</a>
+                    <br /><br /><br />
                     {% else %}
                     {% endif %}
 

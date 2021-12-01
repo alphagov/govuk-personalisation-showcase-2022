@@ -1,0 +1,132 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "includes/auth-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "includes/auth-name.html" %}
+{% endset%}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+        <a href="account-manage-data.html" class="govuk-back-link">Back to Your data</a>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Paid (per year)</h1>
+
+        <p>Change or delete your saved information / controlling any sharing / view how this info has been used</p>
+
+        <div id="saved-data" class="accounts-panel">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">A heading</h2>
+
+            {% if data['personal-details'] == "completed" %}
+            {% include "../includes/global-push-warning.html" %}
+            {% else %}
+            {% endif %}
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell bold">Paid (per year) </td>
+                        <td class="govuk-table__cell"> £{{ data['parent-work-pay'] }}</td>
+                        <td class="govuk-table__cell"> <a href="#">Change</a> </td>
+                        <td class="govuk-table__cell"> <a href="#" style="color: #d4351c;">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="govuk-body-s">
+                <a href="#">View previous entries</a>
+            </p>
+
+        </div>
+
+        <br /><br />
+
+        <div id="shared-data" class="accounts-panel">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage sharing</h2>
+
+            <p>Currently shared with:</p>
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell bold">Sam Smith</td>
+                        <td class="govuk-table__cell"> Indefinitely</td>
+                        <td class="govuk-table__cell"> Visible </td>
+                        <td class="govuk-table__cell"> <a href="#" style="color: #d4351c;">Stop sharing</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="govuk-body-s">
+                <a href="#">View sharing history</a>
+            </p>
+
+        </div>
+
+        <br /><br />
+
+        <!-- activity / audit log -->
+        <div id="recent-activity" class="accounts-panel">
+            <h2 class="gem-c-heading govuk-heading-m govuk-!-margin-bottom-4">How this information has been used</h2>
+
+            <br />
+
+            {% if data['share-data'] == "completed" %}
+            <!-- An activity item -->
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span></p>
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+                    <p>This information was reviewed by <b>DWP</b> as part of an application for The Childcare Service</p>
+                </div>
+
+                <div class="govuk-grid-column-full">
+                    <hr>
+                </div>
+            </div>
+            <!-- An activity item -->
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span></p>
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+                    <p>You shared this information with <b>Sarah Smith</b> indefinitely</p>
+                </div>
+
+                <div class="govuk-grid-column-full">
+                    <hr>
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+                    <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span></p>
+                </div>
+                <div class="govuk-grid-column-three-quarters">
+                    <p>You added this information to your account during 'Prove Your Identity'</p>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+    </div>
+</div>
+
+
+{% endblock %}
