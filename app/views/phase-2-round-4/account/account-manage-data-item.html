@@ -44,9 +44,16 @@
                 </tbody>
             </table>
 
-            <p class="govuk-body-s">
-                <a href="#">View previous entries</a>
-            </p>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View previous entries
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    There are no previous entries for this information.
+                </div>
+            </details>
 
         </div>
 
@@ -61,17 +68,33 @@
             <table class="govuk-table">
                 <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__cell bold">Sam Smith</td>
+                        <td class="govuk-table__cell bold">Name</td>
+                        <td class="govuk-table__cell bold"> Duration</td>
+                        <td class="govuk-table__cell bold"> Visibility </td>
+                        <td class="govuk-table__cell bold"> Date shared </td>
+                        <td class="govuk-table__cell bold"> </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Sam Smith</td>
                         <td class="govuk-table__cell"> Indefinitely</td>
-                        <td class="govuk-table__cell"> Visible </td>
+                        <td class="govuk-table__cell"> Show </td>
+                        <td class="govuk-table__cell"> {% include "includes/today.html" %} </td>
                         <td class="govuk-table__cell"> <a href="#" style="color: #d4351c;">Stop sharing</a></td>
                     </tr>
                 </tbody>
             </table>
 
-            <p class="govuk-body-s">
-                <a href="#">View sharing history</a>
-            </p>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View sharing history
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    There is no additional sharing history for this information.
+                </div>
+            </details>
+
 
         </div>
 
