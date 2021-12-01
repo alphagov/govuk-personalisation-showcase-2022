@@ -33,30 +33,26 @@
             Choose if and how you share the requested information
         </h1>
 
-        <br />
-
-
-        <div style="padding: 20px; background: #fafafa;">
-            <p><b>Sarah Smith</b> is requesting:</p>
-
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Employment status</li>
-                <li>Yearly salary</li>
-
-            </ul>
-
-            <p>This information is required as part of the application for The Childcare Service</p>
-        </div>
+        {% include "../includes/share-data-request-summary.html" %}
 
         <br />
 
-        <p>Explain the choices: </p>
+        <h2 class="govuk-heading-m">How sharing permissions work</h2>
+
+        <h3 class="govuk-heading-s">Sharing information</h3>
 
         <ul class="govuk-list govuk-list--bullet">
-            <li>'share once' (just for this application at this moment in time) (</li>
-            <li>share 'indefinitely' (share this information with this person - they can keep using it (in any form) - you can revoke this at any time</li>
-            <li>You choose if they get to see the information of just have the ability to add it to their form (veiled)</li>
+            <li>Select ‘Once’ to share the requested information on this application only.</li>
+            <li>Select ‘Always’ to allow the person requesting to use your information on any applications. You will be notified any time your information is used. You can revoke access at any time in your account.</li>
+        </ul>
 
+        <br />
+
+        <h3 class="govuk-heading-s">Information visibility</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Select ‘Show details’ to allow the person requesting to see your information.</li>
+            <li>Select ‘Hide details’ to hide your information from the person requesting and only share with the application.</li>
         </ul>
 
         <br />
@@ -89,9 +85,9 @@
                                         </label>
                                     </div>
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="share-2" name="share-employment-status" type="radio" value="indefinitely">
+                                        <input class="govuk-radios__input" id="share-2" name="share-employment-status" type="radio" value="always">
                                         <label class="govuk-label govuk-radios__label" for="share-2">
-                                            Indefinitely
+                                            Always
                                         </label>
                                     </div>
                                 </td>
@@ -125,9 +121,9 @@
                                         </label>
                                     </div>
                                     <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="share-2" name="share-yearly-salary" type="radio" value="indefinitely">
+                                        <input class="govuk-radios__input" id="share-2" name="share-yearly-salary" type="radio" value="always">
                                         <label class="govuk-label govuk-radios__label" for="share-2">
-                                            Indefinitely
+                                            Always
                                         </label>
                                     </div>
                                 </td>

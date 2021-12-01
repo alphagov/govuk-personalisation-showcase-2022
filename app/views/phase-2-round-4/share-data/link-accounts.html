@@ -31,14 +31,14 @@
         <h1 class="govuk-heading-xl">
             {% include "../includes/service-5-name.html" %}</h1>
 
-        <p>Content to explain this check's purpose, and reiterate the advice to <b>not share if in doubt</b></p>
+        <p>You have received a request to share some of your personal information with another GOV.UK account holder. This may be a part of a joint application, such as Universal Credit or The Childcare Service.</p>
 
-        <p>Please enter the 6-digit code the requester provided to you</p>
-
-
+        <p>You should only share information with people you trust. If you do not recognise this request or you have any security concerns, you can <a href="#">contact us</a>.</p>
+        <br />
         <form action="information-request" method="POST">
 
             <div class="govuk-form-group">
+                <label class="govuk-label" for="link-code">Enter the linking code given to you</label>
                 <input class="govuk-input govuk-input--width-10" id="link-code" name="link-code" type="number" aria-describedby="name-hint">
             </div>
 

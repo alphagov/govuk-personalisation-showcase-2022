@@ -62,16 +62,29 @@
             <div class="govuk-notification-banner__content">
 
                 <ol class="govuk-list govuk-list--number">
-                    <li>✅ Create your account </li>
+                    <li><b>Create your account</b>&nbsp;<strong class="govuk-tag govuk-tag--green">
+                            Done
+                        </strong><br /><br />
+                    </li>
                     {% if data['personal-details'] == "completed" %}
-                    <li>✅ {% include "../includes/service-2-name.html" %} </li>
+                    <li><b>{% include "../includes/service-2-name.html" %}</b>&nbsp;<strong class="govuk-tag govuk-tag--green">
+                            Done
+                        </strong><br /><br />
+                    </li>
                     {% else %}
-                    <li><a href="../personal-details/start.html">{% include "../includes/service-2-name.html" %}</a> </li>
+                    <li><b><a href="../personal-details/start.html">{% include "../includes/service-2-name.html" %}</a></b></li>
                     {% endif %}
                     {% if data['PYI'] == "completed" %}
-                    <li>✅ {% include "../includes/service-3-name.html" %} </li>
+                    <li><b>{% include "../includes/service-3-name.html" %}</b>&nbsp;<strong class="govuk-tag govuk-tag--green">
+                            Done
+                        </strong>
+                    </li>
                     {% else %}
-                    <li><a href="../prove-your-identity/start.html">{% include "../includes/service-3-name.html" %}</a> </li>
+                    <li>
+                        <b><a href="../prove-your-identity/start.html">{% include "../includes/service-3-name.html" %}</a></b>
+                        <br />
+                        Verifying your identity will make it easier to use GOV.UK services
+                    </li>
                     {% endif %}
                 </ol>
                 {% if data['PYI'] == "completed" %}
@@ -95,8 +108,10 @@
                 </h2>
             </div>
             <div class="govuk-notification-banner__content">
-                <p>You have received a request to share some of your information with another {% include "includes/auth-name.html" %} holder.</p>
-                <p>The person who is requesting your information should have provided you with a 6-digit code. If you are unsure blah blah (like a new payee warning on online banking)</p>
+                <p>You have received a request to share some of your personal information with another GOV.UK account holder. This may be a part of a joint application, such as Universal Credit or The Childcare Service.</p>
+
+                <p>The person who has made this request should have given you a linking code. You will need to provide this before you share your details. You should only share information with people you trust.
+                </p>
                 <p><a href="../share-data/link-accounts.html">View request to share information</a> </p>
             </div>
         </div>
@@ -115,7 +130,7 @@
                             <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
                         </div>
                         <div class="govuk-grid-column-one-half">
-                            <p>You have shared data with <b>Sarah Smith</b></p>
+                            <p>You have shared information with <b>Sarah Smith</b></p>
                         </div>
                         <div class="govuk-grid-column-one-quarter right">
                             <p class="govuk-body-s">

@@ -34,8 +34,15 @@
 
         <br />
 
-        <p>Content here about risks etc.</p>
-        <p><a href="#">Contact us</a> if there's something fishy going on....</p>
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                You should only share information with people you trust.
+            </strong>
+        </div>
+
+        <p>If you do not recognise this request or you have any security concerns, you can <a href="#">contact us</a>.</p>
 
         <form action="choose-data" method="POST">
 
@@ -47,11 +54,9 @@
             <div class="govuk-!-padding-bottom-1"></div>
 
         </form>
-
-        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-            Don't continue
-        </button>
         <!-- /. form -->
+
+        <p><a href="../account/index.html"> Go back to your {% include "includes/auth-name.html" %}</a></p>
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
     <div class="govuk-grid-column-one-third">

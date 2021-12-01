@@ -22,11 +22,11 @@
     <div class="govuk-grid-column-three-quarters">
         <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Paid (per year)</h1>
 
-        <p>Change or delete your saved information / controlling any sharing / view how this info has been used</p>
+        <p>Manage your salary information, sharing permissions and see where it has been used across GOV.UK.</p>
 
         <div id="saved-data" class="accounts-panel">
 
-            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">A heading</h2>
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Salary information</h2>
 
             {% if data['personal-details'] == "completed" %}
             {% include "../includes/global-push-warning.html" %}
@@ -47,7 +47,7 @@
             <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                        View previous entries
+                        View salary history
                     </span>
                 </summary>
                 <div class="govuk-details__text">
@@ -63,7 +63,8 @@
 
             <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Manage sharing</h2>
 
-            <p>Currently shared with:</p>
+            {% if data['share-data'] == "completed" %}
+            <p>You are currently sharing this information with:</p>
 
             <table class="govuk-table">
                 <tbody class="govuk-table__body">
@@ -76,13 +77,18 @@
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell">Sam Smith</td>
-                        <td class="govuk-table__cell"> Indefinitely</td>
+                        <td class="govuk-table__cell"> Always</td>
                         <td class="govuk-table__cell"> Show </td>
                         <td class="govuk-table__cell"> {% include "includes/today.html" %} </td>
                         <td class="govuk-table__cell"> <a href="#" style="color: #d4351c;">Stop sharing</a></td>
                     </tr>
                 </tbody>
             </table>
+
+            {% else %}
+            <p>You are not currently sharing this information with anyone.</p>
+
+            {% endif %}
 
             <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
@@ -113,7 +119,7 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span></p>
                 </div>
                 <div class="govuk-grid-column-three-quarters">
-                    <p>This information was reviewed by <b>DWP</b> as part of an application for The Childcare Service</p>
+                    <p>This information is being reviewed by <b>DWP</b> as part of an application for The Childcare Service</p>
                 </div>
 
                 <div class="govuk-grid-column-full">
@@ -126,7 +132,7 @@
                     <p><span class="govuk-body-s">{% include "includes/today.html" %}:</span></p>
                 </div>
                 <div class="govuk-grid-column-three-quarters">
-                    <p>You shared this information with <b>Sarah Smith</b> indefinitely</p>
+                    <p>You shared this information with <b>Sarah Smith</b></p>
                 </div>
 
                 <div class="govuk-grid-column-full">
