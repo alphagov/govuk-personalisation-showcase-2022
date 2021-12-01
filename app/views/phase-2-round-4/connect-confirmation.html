@@ -1,0 +1,53 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "phase-2-round-4/includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "phase-2-round-4/includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="consent" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                Automatic renewal to {% include "phase-2-round-4/includes/service-1-name.html" %} successfully set-up
+            </h1>
+            <div class="govuk-panel__body">
+
+            </div>
+        </div>
+
+        <p class="govuk-body">We have sent you a confirmation email.</p>
+
+        <p class="govuk-body">We will send you an email just before the next automatic renewal (due 05-02-2022), should you wish to manually adjust any of the information.</p>
+
+        <p class="govuk-body">You can view the information that has been provided by your employer in your <a href="account/account-manage-data#employment">account</a>. </p>
+
+        <br />
+
+        <p class="govuk-body">
+            <a href="/phase-2-round-4/govuk-home" class="govuk-link">Back to GOV.UK home</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

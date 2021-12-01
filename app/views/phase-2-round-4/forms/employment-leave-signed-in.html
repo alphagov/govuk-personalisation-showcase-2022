@@ -1,0 +1,35 @@
+<!-- Radio Button Group -->
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+            <!-- Yes -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="paid-work-1" name="employment-leave" type="radio" value="Maternity or parental leave" {% if data['employment-leave'] == "Maternity or parental leave" %} {{ checked("employment-leave", "Maternity or parental leave") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="paid-work-1">
+                    Maternity or parental leave
+                </label>
+            </div>
+            <!-- No -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="paid-work-2" name="employment-leave" type="radio" value="Adoption leave" {% if data['employment-leave'] == "Adoption leave" %} {{ checked("Adoption leave", "Self-employed") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="paid-work-2">
+                    Adoption leave
+                </label>
+            </div>
+            <!-- Yes -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="paid-work-3" name="employment-leave" type="radio" value="Statutory Sick Pay" {% if data['employment-leave'] == "Statutory Sick Pay" %} {{ checked("employment-leave", "Statutory Sick Pay") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="paid-work-3">
+                    Statutory Sick Pay
+                </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="paid-work-4" name="employment-leave" type="radio" value="None of these" {% if data['employment-leave'] == "None of these" %} {{ checked("employment-leave", "None of these") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="paid-work-4">
+                    None of these
+                </label>
+            </div>
+        </div> <!-- /. govuk-radios -->
+    </fieldset> <!-- /. govuk-fieldset -->
+</div> <!-- /. form-group -->

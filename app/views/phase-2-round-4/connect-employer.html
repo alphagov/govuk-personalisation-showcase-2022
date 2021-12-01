@@ -1,0 +1,85 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "phase-2-round-4/includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "phase-2-round-4/includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="account/index" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="select-employer-data" method="POST">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="calculator-consent-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Set up automatic renewal on {% include "phase-2-round-4/includes/service-1-name.html" %}
+                        </h1>
+                    </legend>
+
+                    <br />
+
+                    <p>To enable your GOV.UK account to automatically reconfirm your details every 3 months, you will need to connect your account to your employer.</p>
+
+                    <p>Once connected, any information about your pay and employment status can be sent directly to {% include "phase-2-round-4/includes/service-1-name.html" %}, helping to reconfirm your details.
+                    </p>
+
+
+                    <br />
+
+
+                    <label class="govuk-label" for="event-name">
+                        <b> Enter your employer's name or Registered company number</b>
+                    </label>
+                    <div id="event-name-hint" class="govuk-hint">
+                        e.g. Smith &amp; Sons Ltd
+                    </div>
+
+                    <input class="govuk-input" id="event-name" name="company-name" type="text">
+
+                    <br /> <br /> <br />
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+                </fieldset>
+            </div>
+
+        </form> <!-- /. form -->
+
+
+
+        <p class="govuk-body-m"><a href="account/index">I don't want to connect my employer to my GOV.UK account</a></p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% include "phase-2-round-4/includes/select-all.js" %}
+
+{% endblock %}

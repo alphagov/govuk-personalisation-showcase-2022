@@ -1,0 +1,83 @@
+    {% extends "layout_phase-2-round-4.html" %}
+
+    {% block pageTitle %}
+    {% include "../includes/service-3-name.html" %}
+    {% endblock %}
+
+    {% set serviceName %}
+    {% include "../includes/service-3-name.html" %}
+    {% endset%}
+
+
+    {% block pageScripts %}
+    <script src="/public/javascripts/step-by-step-nav.js"></script>
+    <script type="text/javascript">
+        var $element = $('#step-by-step-navigation')
+        var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+        stepByStepNavigation.start($element)
+
+    </script>
+    {% endblock %}
+
+    {% block beforeContent %}
+    <a href="start.html" class="govuk-back-link">Back</a>
+    {% endblock %}
+
+    {% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="upload-passport" method="POST">
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                                Which ID document do you wish to use?
+                            </h1>
+                        </legend>
+                        <br />
+                        <div class="govuk-radios govuk-radios--conditional">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-1" name="id-doc" type="radio" value="passport" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-1">
+                                    UK Passport
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
+
+                                </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-2" name="id-doc" type="radio" value="licence" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-2">
+                                    Driving licence
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
+
+                                </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="id-document-3" name="id-doc" type="radio" value="none" aria-describedby="id-doc-hint">
+                                <label class="govuk-label govuk-radios__label" for="id-document-3">
+                                    I don't have either document
+                                </label>
+                                <div id="id-doc-hint" class="govuk-hint govuk-radios__hint">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+            </form> <!-- /. form -->
+        </div> <!-- /. govuk-grid-column-two-thirds -->
+        <div class="govuk-grid-column-one-third">
+
+        </div>
+    </div> <!-- /. govuk-grid-row -->
+
+    {% endblock %}

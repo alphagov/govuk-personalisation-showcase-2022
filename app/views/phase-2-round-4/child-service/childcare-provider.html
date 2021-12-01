@@ -1,0 +1,63 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="child-1-details" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Childcare provider details</h1>
+
+        <p>
+            Tell us about your childcare provider.
+        </p>
+
+        <br />
+
+        <form action="NIN" method="POST" autocomplete="off">
+            {% if data['signing'] == "yes" %}
+            {% include "../forms/childcare-provider-details-signed-in.html" %}
+            {% else %}
+            {% include "../forms/childcare-provider-details-signed-out.html" %}
+            {% endif %}
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+
+        <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

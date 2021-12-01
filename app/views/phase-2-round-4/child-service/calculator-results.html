@@ -1,0 +1,133 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="check-your-answers" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% include "phase-2-round-4/includes/personalised.html" %}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Help you could get with your childcare costs</h1>
+
+        <p>The amount you could get is for the next 12 months. If your circumstances change in that time, you’ll need to get a new estimate.</p>
+
+        <br />
+
+        <h2 class="govuk-heading-l">You could get this</h2>
+
+        <h3 class="govuk-heading-m">Free childcare hours</h3>
+
+        <div class="govuk-inset-text">
+            You could get up to <b>30 hours</b> free childcare a week - this is 1,140 hours a year.
+        </div> <!-- /. inset-text -->
+
+        <p>You can get free hours for <b>{{ data['child-1-name'] }}</b> that can be used in or outside of school term time. Your provider may apply charges for additional services.</p>
+
+        <p>Free childcare hours stop when <b>{{ data['child-1-name'] }}</b> starts in reception class.</p>
+
+        <!-- Details -->
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">How free childcare hours works</span>
+            </summary>
+            <div class="govuk-details__text">
+                <p>You can take up the offer for the school term following your child’s third birthday. For example, if they turn 3 on 18 October, you will be able to get free childcare from January.</p>
+                <p>You must use childcare from an approved provider. For example:</p>
+
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>a registered childminder</li>
+                    <li>playscheme</li>
+                    <li>nursery</li>
+                    <li>out of school club</li>
+                    <li>home careworker working for a registered agency</li>
+                </ul>
+
+                <p>You may be able to use your free hours between 2 different providers.</p>
+
+            </div>
+        </details>
+
+        <br />
+
+        <hr>
+
+        <br />
+
+        <h3 class="govuk-heading-m">Tax-Free Childcare</h3>
+
+        <div class="govuk-inset-text">
+            You could get <b>£2,000</b> a year towards your childcare costs.
+        </div> <!-- /. inset-text -->
+
+        <p>You can get up to £2,000 a year towards your childcare costs for each child aged 11 or under. You get a £2 government top-up for every £8 you pay in childcare.</p>
+
+        <p><b>{{ data['child-1-name'] }}</b> stops being eligible for tax-free childcare on <b>1 September 2029</b>.</p>
+
+        <!-- Details -->
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">How Tax-Free Childcare works</span>
+            </summary>
+            <div class="govuk-details__text">
+                <p>You will create an online childcare account to pay into, get top-ups paid into it and use it to pay your approved provider directly. For example, for every £8 paid into the account, the government will pay a £2 top-up that would give you £10 towards your childcare costs for each child.</p>
+
+                <p>You can use it to pay for up to £10,000 of childcare for each child a year – so you’d get up to £2,000 in top-ups a year, or £4,000 a year if they are disabled.</p>
+
+
+            </div>
+        </details>
+
+        <br />
+
+        <hr>
+
+        <br />
+
+        <h3 class="govuk-heading-m">Universal Credit</h3>
+
+        <div class="govuk-inset-text">
+            You may be able to claim back up to 85% of your childcare costs if you’re eligible for <a href="/phase-2-round-4/universal-credit">Universal Credit</a>.
+
+        </div> <!-- /. inset-text -->
+
+        <br />
+
+        <form id="childcare-calc-start" method="post" action="/phase-2-round-4/childcare-step-by-step">
+
+            <div class="govuk-form-group">
+                <button class="govuk-button govuk-button" data-module="govuk-button">Back to childcare step-by-step </button>
+            </div>
+        </form>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-4/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

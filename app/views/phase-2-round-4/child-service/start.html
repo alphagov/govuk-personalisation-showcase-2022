@@ -1,0 +1,100 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="../childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">{% include "../includes/service-1-name.html" %}
+        </h1>
+
+        <h2 class="govuk-heading-m">
+            How it works
+        </h2>
+
+        <p>Use this service to get your <a href="#">30 hours free childcare</a> or pay for your <a href="#">Tax-Free Childcare</a>.</p>
+
+        <div class="govuk-inset-text">
+            <p>To keep getting your 30 hours free childcare or Tax-Free Childcare, you must confirm your details are up to date every 3 months. You can use your GOV.UK account to do this automatically, saving you time.</p>
+
+        </div>
+
+
+        <p>If you’re eligible for 30 hours free childcare, sign in to get a code to give to your childcare provider.</p>
+
+        <p>If you’ve registered for Tax-Free Childcare, sign in to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>pay your childcare provider</li>
+            <li>set up automated payments</li>
+            <li>apply for a new child</li>
+        </ul>
+
+        <p>You’ll need your <a href="#">GOV.UK account</a> details to sign in to this service.</p>
+
+        <p>You sign in to your account in a different way if you’re a <a href="#">childcare provider</a>. </p>
+
+        <br /> <br />
+
+        {% if data['signing'] == "yes" %}
+        <form id="child-service-start" method="post" action="/phase-2-round-4/child-service/name">
+            {% else %}
+            <form id="childcare-calc-start" method="post" action="/phase-2-round-4/child-service/sign-in-or-create-account">
+                {% endif %}
+
+                <div class="govuk-form-group">
+                    <input id="child-service-started" name="child-service-status" value="started" type="hidden">
+                    <button class="govuk-button govuk-button--start" data-module="govuk-button">Start <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                        </svg></button>
+                </div>
+            </form>
+
+            <h2 class="govuk-heading-m">
+                Before you start
+            </h2>
+
+            <p>You will need the following information to complete your application:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>your National Insurance number </li>
+                <li>your child’s birth certificate number</li>
+                <li>your childcare provider’s details</li>
+            </ul>
+
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

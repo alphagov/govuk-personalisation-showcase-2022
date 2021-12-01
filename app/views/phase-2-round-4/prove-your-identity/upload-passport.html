@@ -1,0 +1,61 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-3-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-3-name.html" %}
+{% endset%}
+
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="choose-document" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Upload your passport</h1>
+
+        <p>Your passport must be:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>clear and in focus</li>
+            <li>in colour</li>
+            <li>unaltered by computer software</li>
+
+        </ul>
+
+        <form action="passport-details" method="POST">
+
+            <div class="govuk-form-group" style="padding: 10px; background: #f0f0f0;">
+                <!--  <label class="govuk-label" for="file-upload-1">
+                    Upload a file
+                </label> -->
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

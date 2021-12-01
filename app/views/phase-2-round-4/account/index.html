@@ -1,0 +1,249 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "includes/auth-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "includes/auth-name.html" %}
+{% endset%}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav aria-label="Account management">
+            <ul class="accounts-menu">
+
+                <li class="accounts-menu__item accounts-menu__item--current" style="margin-left: 0px;">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" aria-current="page" href="#" style="padding-left: 14px;">Your account</a>
+                    <br />
+                    <ul class="govuk-list" style="padding-left: 14px;">
+                        <br />
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#recent-activity">Recent activity</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#reminders">Reminders</a></p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-4/account/account-manage-data.html">Your data</a>
+                </li>
+
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-4/account/account-manage.html">Your settings</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="gem-c-heading govuk-heading-l   govuk-!-margin-bottom-4">Your account</h1>
+
+        {% if data['personal-details'] == "completed" and data['PYI'] == "completed" %}
+        {% else %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Complete your account set-up
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+
+                <ol class="govuk-list govuk-list--number">
+                    <li>✅ Create your account </li>
+                    {% if data['personal-details'] == "completed" %}
+                    <li>✅ {% include "../includes/service-2-name.html" %} </li>
+                    {% else %}
+                    <li><a href="../personal-details/start.html">{% include "../includes/service-2-name.html" %}</a> </li>
+                    {% endif %}
+                    {% if data['PYI'] == "completed" %}
+                    <li>✅ {% include "../includes/service-3-name.html" %} </li>
+                    {% else %}
+                    <li><a href="../prove-your-identity/start.html">{% include "../includes/service-3-name.html" %}</a> </li>
+                    {% endif %}
+                </ol>
+                {% if data['PYI'] == "completed" %}
+                <form>
+                    <input id="time" name="time" value="task-2" type="hidden">
+                    <button class="govuk-button govuk-button--secondary">Clear</button>
+                    {% else %}
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if data['personal-details'] == "completed" and data['PYI'] == "completed" and data['share-data'] != "completed" %}
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    <div class="toggle" style="float: right;">
+                        <strong class="govuk-tag govuk-tag--blue">New</strong>
+                    </div>Request to share information
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p>You have received a request to share some of your information with another {% include "includes/auth-name.html" %} holder.</p>
+                <p>The person who is requesting your information should have provided you with a 6-digit code. If you are unsure blah blah (like a new payee warning on online banking)</p>
+                <p><a href="../share-data/link-accounts.html">View request to share information</a> </p>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-margin-bottom-8">
+                <div id="recent-activity" class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
+
+                    {% if data['PYI'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>Account set-up complete</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <!-- <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+
+                            </div> -->
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">{% include "includes/today.html" %}:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You have proven your identity</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <!-- <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+
+                            </div> -->
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['personal-details'] == "completed" %}
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">01-11-2021:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You added your personal details</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <!-- <div class="toggle">
+                                <strong class="govuk-tag govuk-tag--blue">New</strong>
+                             
+                            </div> -->
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
+
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">01-11-2021:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>You created your GOV.UK account</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <div class="toggle">
+                                <!--   <strong class="govuk-tag govuk-tag--blue">New</strong>
+                                 colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <!--      {% if data['personal-details'] == "completed" %}
+                                      <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <br />
+                            <button class="govuk-button govuk-button--secondary " onclick="myFunction('toggle')">Clear new notifications</button>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}  -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half govuk-!-margin-bottom-8">
+                <div id="reminders" class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
+
+                    <p>Personalised reminders will be added here</p>
+
+                    <br />
+                    <!--  <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span> -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+                <p class="govuk-body-s">Last sign in <br />{% include "includes/today-time.html" %} <br /><a href="#">Not you?</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function myFunction(language) {
+
+        var x = document.getElementsByClassName(language);
+
+        for (var i = 0; i < x.length; i++) {
+
+            if (x.item(i).style.display === "none") {
+                x.item(i).style.display = "block";
+            } else {
+                x.item(i).style.display = "none";
+            }
+        }
+
+    }
+
+</script>
+
+{% endblock %}

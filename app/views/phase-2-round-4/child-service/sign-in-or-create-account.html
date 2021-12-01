@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK account - Sign in or create
+{% endblock %}
+
+{% set serviceName %}
+GOV.UK account
+{% endset%}
+
+{% block beforeContent %}
+<a href="start" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="/phase-2-round-4/sign-in-or-create-account-form" method="POST">
+            <!-- Page Header Content -->
+            <h1 class="govuk-heading-xl">Sign in or create a GOV.UK account</h1>
+
+            <p>You can use your GOV.UK account to:</p>
+
+            {% include "phase-2-round-4/includes/account-benefit-bullets.html" %}
+
+            <br />
+
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="create-account-or-sign-in-hint">
+                    <div class="govuk-radios">
+                        <!-- Create an account -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="create-account" name="signin-create-account-radios" type="radio" value="create-account" aria-describedby="create-account-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="create-account">Create an account</label>
+                            <div id="create-account-item-hint" class="govuk-hint govuk-radios__hint">
+                                You’ll need an email address and a UK mobile phone number. It will take no more than 2 minutes.
+                            </div>
+                        </div> <!-- /. govuk-radio__item -->
+                        <div class="govuk-radios__divider">or</div>
+                        <!-- Sign in Radio Button -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="sign-in" name="signin-create-account-radios" type="radio" value="signin" aria-describedby="sign-in-item-hint">
+                            <label class="govuk-label govuk-radios__label" for="sign-in">Sign in</label>
+                        </div> <!-- /. govuk-radio__item -->
+                        <!-- Radio Divider -->
+
+
+                    </div> <!-- /.govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. govuk-form-group -->
+            <input class="govuk-input" id="refer" name="refer" type="hidden" value="child-service">
+            <input class="govuk-input" id="email" name="email-address" type="hidden" value="example@email.com">
+            <input class="govuk-input" id="phone-number" name="phone-number" value="07123456789" type="hidden">
+            <input class="govuk-input" name="time" type="hidden" value="task-1">
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

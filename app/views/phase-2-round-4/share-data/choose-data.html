@@ -1,0 +1,186 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-5-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-5-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="link-accounts.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            Choose if and how you share the requested information
+        </h1>
+
+        <br />
+
+
+        <div style="padding: 20px; background: #fafafa;">
+            <p><b>Sarah Smith</b> is requesting:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Employment status</li>
+                <li>Yearly salary</li>
+
+            </ul>
+
+            <p>This information is required as part of the application for The Childcare Service</p>
+        </div>
+
+        <br />
+
+        <p>Explain the choices: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>'share once' (just for this application at this moment in time) (</li>
+            <li>share 'indefinitely' (share this information with this person - they can keep using it (in any form) - you can revoke this at any time</li>
+            <li>You choose if they get to see the information of just have the ability to add it to their form (veiled)</li>
+
+        </ul>
+
+        <br />
+
+        <form action="confirmation" method="POST">
+            <table class="govuk-table">
+                <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Information requested</th>
+                        <th scope="col" class="govuk-table__header">Share information</th>
+                        <th scope="col" class="govuk-table__header">Details visibility</th>
+                    </tr>
+                </thead>
+
+                <div class="govuk-form-group">
+                    <tbody class="govuk-table__body">
+
+
+                        <tr class="govuk-table__row">
+                            <div class="govuk-radios govuk-radios--inline">
+                                <td class="govuk-table__cell">
+                                    Employment status
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="share" name="share-employment-status" type="radio" value="once">
+                                        <label class="govuk-label govuk-radios__label" for="share">
+                                            Once
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="share-2" name="share-employment-status" type="radio" value="indefinitely">
+                                        <label class="govuk-label govuk-radios__label" for="share-2">
+                                            Indefinitely
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="changed-name" name="show-employment-status" type="radio" value="yes">
+                                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                                            Show details
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="changed-name-2" name="show-employment-status" type="radio" value="no">
+                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                            Hide details
+                                        </label>
+                                    </div>
+                                </td>
+                            </div>
+                        </tr>
+
+                        <tr class="govuk-table__row">
+                            <div class="govuk-radios govuk-radios--inline">
+                                <td class="govuk-table__cell">
+                                    Yearly salary
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="share" name="share-yearly-salary" type="radio" value="once">
+                                        <label class="govuk-label govuk-radios__label" for="share">
+                                            Once
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="share-2" name="share-yearly-salary" type="radio" value="indefinitely">
+                                        <label class="govuk-label govuk-radios__label" for="share-2">
+                                            Indefinitely
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="govuk-table__cell">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="changed-name" name="show-yearly-salary" type="radio" value="yes">
+                                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                                            Show details
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="changed-name-2" name="show-yearly-salary" type="radio" value="no">
+                                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                            Hide details
+                                        </label>
+                                    </div>
+                                </td>
+                            </div>
+                        </tr>
+
+                        <!--  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+                                            <label class="govuk-label govuk-checkboxes__label" for="select-all">
+                                                <b>Share all</b>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td class="govuk-table__cell"></td>
+                                </tr> -->
+
+                    </tbody>
+                </div>
+            </table>
+            <input class="govuk-input" id="share-data" name="share-data" value="completed" type="hidden">
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form> <!-- /. form -->
+
+        <br />
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% include "phase-2-round-4/includes/select-all.js" %}
+
+{% endblock %}

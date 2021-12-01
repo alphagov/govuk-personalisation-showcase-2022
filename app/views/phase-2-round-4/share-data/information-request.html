@@ -1,0 +1,70 @@
+{% extends "layout_phase-2-round-4.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-5-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-5-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="link-accounts.html" class="govuk-breadcrumbs__link">Back</a>
+        </li>
+    </ol>
+</div>
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            Review the information request</h1>
+
+        <p>What's being requested, and why</p>
+
+        <p>Explain the choices: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>'share once' (just for this application at this moment in time) (</li>
+            <li>share 'indefinitely' (share this information with this person - they can keep using it (in any form) - you can revoke this at any time</li>
+            <li>You choose if they get to see the information of just have the ability to add it to their form (veiled)</li>
+
+        </ul>
+
+
+
+        <form action="choose-data" method="POST">
+
+            <div class="govuk-form-group">
+
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+        <!-- /. form -->
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
