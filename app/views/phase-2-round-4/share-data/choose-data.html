@@ -35,28 +35,6 @@
 
         {% include "../includes/share-data-request-summary.html" %}
 
-        <br />
-
-        <h2 class="govuk-heading-m">How sharing permissions work</h2>
-
-        <h3 class="govuk-heading-s">Sharing information</h3>
-
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Select ‘Once’ to share the requested information on this application only.</li>
-            <li>Select ‘Always’ to allow the person requesting to use your information on any applications. You will be notified any time your information is used. You can revoke access at any time in your account.</li>
-        </ul>
-
-        <br />
-
-        <h3 class="govuk-heading-s">Information visibility</h3>
-
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Select ‘Show details’ to allow the person requesting to see your information.</li>
-            <li>Select ‘Hide details’ to hide your information from the person requesting and only share with the application.</li>
-        </ul>
-
-        <br />
-
         <form action="confirmation" method="POST">
             <table class="govuk-table">
                 <!-- <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption> -->
@@ -163,11 +141,43 @@
                 </div>
             </table>
             <input class="govuk-input" id="share-data" name="share-data" value="completed" type="hidden">
+
+            <br />
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        How sharing permissions work
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <h3 class="govuk-heading-s">Sharing information</h3>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Select ‘Once’ to share the requested information on this application only.</li>
+                        <li>Select ‘Always’ to allow the person requesting to use your information on any applications. You will be notified any time your information is used. You can revoke access at any time in your account.</li>
+                    </ul>
+
+                    <br />
+
+                    <h3 class="govuk-heading-s">Information visibility</h3>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Select ‘Show details’ to allow the person requesting to see your information.</li>
+                        <li>Select ‘Hide details’ to hide your information from the person requesting and only share with the application.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <br /><br />
+
             <button class="govuk-button" data-module="govuk-button">Continue</button>
 
         </form> <!-- /. form -->
 
         <br />
+
+
 
     </div> <!-- /. govuk-grid-column-two-thirds -->
 
