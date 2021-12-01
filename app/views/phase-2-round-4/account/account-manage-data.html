@@ -389,8 +389,7 @@
                             {% if data['employment-start-month'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Employment start date<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
-                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
+                                    {% include "phase-2-round-4/includes/verified.html" %}</td>
                                 <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
                                 <td class="govuk-table__cell right">
                                     {% include "phase-2-round-4/includes/data-manage-link.html" %}
@@ -517,64 +516,6 @@
                             {% else %}
                             {% endif %}
 
-                            {% if data['current-employer'] %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Current employer<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %}</td>
-                                <td class="govuk-table__cell"> {{ data['current-employer'] }}</td>
-                                <td class="govuk-table__cell right">
-                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
-
-                            {% if data['parent-work-hours'] %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Hours worked (per week){% if data['employer-connection-status'] == "connected" %}
-                                    <p class="govuk-body-s">Provided by employer</p>
-                                    {% else %}
-
-                                    {% endif %}</td>
-                                <td class="govuk-table__cell"> {{ data['parent-work-hours'] }}</td>
-                                <td class="govuk-table__cell right">
-                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
-
-
-                            {% if data['employment-start-month'] %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Employment start date<br />
-                                    {% include "phase-2-round-4/includes/verified.html" %}&nbsp;
-                                    {% include "phase-2-round-4/includes/shared.html" %}</td>
-                                <td class="govuk-table__cell"> {{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}<br /></td>
-                                <td class="govuk-table__cell right">
-                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
-
-                            {% if data['employment-leave'] %}
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell bold">Current paid leave status {% if data['employer-connection-status'] == "connected" %}
-                                    <p class="govuk-body-s">Provided by employer</p>
-                                    {% else %}
-
-                                    {% endif %}</td>
-                                <td class="govuk-table__cell">{% if data['employment-leave'] == "None of these" %} Not currently on paid leave {% else %}
-                                    {% endif %}</td>
-                                <td class="govuk-table__cell right">
-                                    {% include "phase-2-round-4/includes/data-manage-link.html" %}
-                                </td>
-                            </tr>
-                            {% else %}
-                            {% endif %}
-
-
                             {% if data['parent-work-pay'] %}
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell bold">Paid (per year)<br />
@@ -590,6 +531,7 @@
                             </tr>
                             {% else %}
                             {% endif %}
+
                         </tbody>
                     </table>
 
