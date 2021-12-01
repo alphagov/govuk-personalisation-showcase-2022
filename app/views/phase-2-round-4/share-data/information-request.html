@@ -19,14 +19,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a href="link-accounts.html" class="govuk-breadcrumbs__link">Back</a>
-        </li>
-    </ol>
-</div>
-<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+<a href="link-accounts.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -34,20 +27,15 @@
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">
-            Review the information request</h1>
+            Review the information request
+        </h1>
 
-        <p>What's being requested, and why</p>
+        {% include "../includes/share-data-request-summary.html" %}
 
-        <p>Explain the choices: </p>
+        <br />
 
-        <ul class="govuk-list govuk-list--bullet">
-            <li>'share once' (just for this application at this moment in time) (</li>
-            <li>share 'indefinitely' (share this information with this person - they can keep using it (in any form) - you can revoke this at any time</li>
-            <li>You choose if they get to see the information of just have the ability to add it to their form (veiled)</li>
-
-        </ul>
-
-
+        <p>Content here about risks etc.</p>
+        <p><a href="#">Contact us</a> if there's something fishy going on....</p>
 
         <form action="choose-data" method="POST">
 
@@ -59,6 +47,10 @@
             <div class="govuk-!-padding-bottom-1"></div>
 
         </form>
+
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Don't continue
+        </button>
         <!-- /. form -->
 
     </div> <!-- /. govuk-grid-column-two-thirds -->

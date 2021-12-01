@@ -19,14 +19,9 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-            <a href="index.html" class="govuk-breadcrumbs__link">Back</a>
-        </li>
-    </ol>
-</div>
-<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+
+<a href="index.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
 {% endblock %}
 
 {% block content %}
@@ -41,7 +36,7 @@
         <p>Please enter the 6-digit code the requester provided to you</p>
 
 
-        <form action="choose-data" method="POST">
+        <form action="information-request" method="POST">
 
             <div class="govuk-form-group">
                 <input class="govuk-input govuk-input--width-10" id="link-code" name="link-code" type="number" aria-describedby="name-hint">
