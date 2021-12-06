@@ -25,6 +25,8 @@ router.get('/research/', function (req, res) {
     let total = req.session.data.rdd.features.length
 
     return res.render('research/index', {
+        'fid': fid,
+        'name': name,
         'total': total
     })
 })
@@ -42,6 +44,8 @@ router.get('/research/features/', function (req, res) {
     let total = req.session.data.rdd.features.length
 
     return res.render('research/features/index', {
+        'fid': fid,
+        'name': name,
         'total': total
     })
 })
