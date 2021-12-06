@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - The Hub
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {% include "includes/projectname.html" %} - {{ link1 }}
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <ol class="govuk-list govuk-list--number">
+            <li><a href="#section-1">{% include "includes/index-section-1.html" %}</a></li>
+            <li><a href="#section-2">{% include "includes/index-section-2.html" %}</a></li>
+            <li><a href="#section-3">{% include "includes/index-section-3.html" %}</a></li>
+            <!--   <li><a href="research/index.html">{% include "includes/index-section-4.html" %}</a></li> -->
+        </ol>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="problem" class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The problem
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-body-l">The user experience for tasks that span multiple services is fragmented.</p>
+                <p class="govuk-body-l"> Users have to understand and navigate the structure of government to work out what is relevant to them and input the same information across services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="vision" class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The vision
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-body-l">A seamless, joined up and personalised experience for users when completing sequential tasks across more than one government service</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-1" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">{% include "includes/index-section-1.html" %}</h2>
+
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-1" class="govuk-grid-column-full">
+        <ul class="govuk-list">
+            <li>
+                <a href="mailto:leah.thompson@digital.cabinet-office.gov.uk">
+                    Leah Thompson</a> (Product Manager)
+            </li>
+            <li>
+                <a href="mailto:adam.friday@digital.cabinet-office.gov.uk">Adam Friday</a> (Delivery Manager)
+            </li>
+            <li>
+                <a href="mailto:sam.robinson@digital.cabinet-office.gov.uk">Sam Robinson</a> (Content Designer)
+            </li>
+            <li>
+                <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a> (Designer)
+            </li>
+            <li>
+                <a href="mailto:ruth.taylor@digital.cabinet-office.gov.uk">
+                    Ruth Taylor</a> (User Researcher)
+            </li>
+            <li>
+                <a href="mailto:amy.barrs@digital.cabinet-office.gov.uk">
+                    Amy Barrs</a> (User Researcher)
+            </li>
+            <li>
+                <a href="#">Kasmyn Chen</a> (Business Analyst)
+            </li>
+            <li>
+                <a href="mailto:michael.stoodley@digital.cabinet-office.gov.uk">Mike Stoodley</a> (Technical Architect)
+            </li>
+            <li>
+                <a href="mailto:jonny.edwards@digital.cabinet-office.gov.uk">Jonny Edwards</a> (Data Scientist)
+            </li>
+            <li>
+                <a href="mailto:tracy.green@hippodigital.co.uk">Tracy Green</a> (Engagement Lead)
+            </li>
+            <li>
+                <a href="mailto:andrew.leimdorfer@digital.cabinet-office.gov.uk">Andrew Leimdorfer</a> (Senior Product Manager - GOVUK Accounts)
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!-- RESEARCH HUB 
+<div class="govuk-grid-row">
+    <div id="section-4" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">{% include "includes/index-section-4.html" %}</h2>
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <p><a href="research/index.html">View the research hub</a></p>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div> -->
+
+<br /><br />
+
+{% endblock %}

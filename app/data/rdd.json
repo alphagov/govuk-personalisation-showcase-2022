@@ -7,16 +7,11 @@
             "valueservice": "3",
             "enduserimpact": "med",
             "complexity": "high",
-            "need1": "yes",
-            "need2": "no",
-            "need3": "no",
-            "need4": "no",
-            "need5": "no",
-            "need6": "no",
-            "need7": "no",
+            "userneeds": ["01"],
             "showdesc": "yes",
-            "showuserfindings": "yes",
-            "trellolink": "https://trello.com/c/amkUKdZ8"
+            "showuserfindings": "no",
+            "trellolink": "https://trello.com/c/amkUKdZ8",
+            "relatedfeatures": ["01", "20", "21", "22"]
     },
         {
             "fid": "01",
@@ -25,16 +20,15 @@
             "valueservice": "3",
             "enduserimpact": "med",
             "complexity": "high",
-            "need1": "yes",
-            "need2": "no",
-            "need3": "no",
-            "need4": "no",
-            "need5": "no",
-            "need6": "no",
-            "need7": "no",
+            "userneeds": ["01"],
             "showdesc": "yes",
             "showuserfindings": "yes",
-            "trellolink": "https://trello.com/c/amkUKdZ8"
+            "showservicefindings": "no",
+            "showrisk": "yes",
+            "showrecommendations": "yes",
+            "prototypelink": "https://trello.com/c/amkUKdZ8",
+            "trellolink": "https://trello.com/c/amkUKdZ8",
+            "relatedfeatures": ["01", "02", "03"]
     },
         {
             "fid": "02",
@@ -43,16 +37,24 @@
             "valueservice": "3",
             "enduserimpact": "med",
             "complexity": "high",
-            "need1": "yes",
-            "need2": "no",
-            "need3": "no",
-            "need4": "no",
-            "need5": "no",
-            "need6": "no",
-            "need7": "no",
+            "userneeds": ["01"],
             "showdesc": "yes",
             "showuserfindings": "yes",
-            "trellolink": "https://trello.com/c/amkUKdZ8"
+            "trellolink": "https://trello.com/c/amkUKdZ8",
+            "relatedfeatures": ["01", "20", "21", "22"]
+    },
+        {
+            "fid": "03",
+            "name": "Dashboard",
+            "category": "personalisation",
+            "valueservice": "3",
+            "enduserimpact": "med",
+            "complexity": "high",
+            "userneeds": ["01"],
+            "showdesc": "yes",
+            "showuserfindings": "yes",
+            "trellolink": "https://trello.com/c/amkUKdZ8",
+            "relatedfeatures": ["01", "02"]
     }
   ]
 }

@@ -1,19 +1,48 @@
-{% if need === "01" %}
-{{ data['need01'] }}
+{% if "01" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel1'] }}
+</strong>
+<br /><br />
 {% else %}
 {% endif %}
-
-{% if need === "02" %}
-{{ data['need02'] }}
+{% if "02" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel2'] }}
+</strong>
+<br /><br />
 {% else %}
 {% endif %}
-
-{% if need === "03" %}
-{{ data['need03'] }}
+{% if "03" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel3'] }}
+</strong>
+<br /><br />
 {% else %}
 {% endif %}
-
-{% if need === "04" %}
-{{ data['need04'] }}
+{% if "04" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel4'] }}
+</strong>
+<br /><br />
+{% else %}
+{% endif %}
+{% if "05" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel5'] }}
+</strong>
+<br /><br />
+{% else %}
+{% endif %}
+{% if "06" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel6'] }}
+</strong>
+<br /><br />
+{% else %}
+{% endif %}
+{% if "07" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel7'] }}
+</strong>
 {% else %}
 {% endif %}

@@ -1,0 +1,15 @@
+{% if category === "data" %}
+<strong class="govuk-tag govuk-tag--purple">
+    Types of data
+</strong>
+{% elif category === "control" %}
+<strong class="govuk-tag govuk-tag--purple">
+    Control of data
+</strong>
+{% elif category === "personalisation" %}
+<strong class="govuk-tag govuk-tag--purple">
+    Personalisation
+</strong>
+{% else %}
+<p>Feature category not set</p>
+{% endif %}

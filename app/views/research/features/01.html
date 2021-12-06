@@ -16,24 +16,10 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
-        {% if category === "data" %}
-        <strong class="govuk-tag govuk-tag--purple">
-            Types of data
-        </strong>
-        {% elif category === "control" %}
-        <strong class="govuk-tag govuk-tag--purple">
-            Control of data
-        </strong>
-        {% elif category === "personalisation" %}
-        <strong class="govuk-tag govuk-tag--purple">
-            Personalisation
-        </strong>
-        {% else %}
-        <p>Feature category not set</p>
-        {% endif %}
+        {% include "../includes/logic-feature-category.html" %}
         <br /><br />
         <h1 class="govuk-heading-xl">
-            {{ fid }}. {{ name }}
+            {% include "../includes/logic-feature-name.html" %}
         </h1>
     </div>
 </div>
@@ -79,7 +65,7 @@
             </div>
             {% else %}
             {% endif %}
-            {% if showuser === "yes" %}
+            {% if showservice === "yes" %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -98,6 +84,7 @@
             </div>
             {% else %}
             {% endif %}
+            {% if showrisk === "yes" %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -114,6 +101,9 @@
                     <br />
                 </div>
             </div>
+            {% else %}
+            {% endif %}
+            {% if showrecommendations === "yes" %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -130,22 +120,8 @@
                     <br />
                 </div>
             </div>
-            <div class="govuk-accordion__section ">
-                <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading">
-                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-5">
-                            Future research
-                        </span>
-                    </h2>
-                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
-
-                    </div>
-                </div>
-                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-5">
-                    {% include "./future-research/" + fid + ".html" %}
-                    <br />
-                </div>
-            </div>
+            {% else %}
+            {% endif %}
         </div>
 
 
@@ -157,100 +133,47 @@
 
         <!-- User need -->
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
                 <h3 class="govuk-heading-s">End user need</h3>
-                {% if need1 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Get everything I’m eligible for
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need2 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Avoid the stress of paperwork and admin
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need3 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Avoid the burden of supplying proof
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need4 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Save time
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need5 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Avoid phoning the service
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need6 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Feel safe and secure online
-                </strong>
-                <br /><br />
-                {% else %}
-                {% endif %}
-                {% if need7 === "yes" %}
-                <strong class="govuk-tag govuk-tag--pink">
-                    Feel confident in the way my data is being used
-                </strong>
-                {% else %}
-                {% endif %}
+                {% include "../includes/logic-feature-user-need.html" %}
             </div>
         </div>
 
         <!-- value to service -->
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
                 <h3 class="govuk-heading-s">Value to service</h3>
-                {% if value === "1" %}
-                <strong class="govuk-tag govuk-tag--grey">
-                    Not applicable
-                </strong>
-                {% elif value === "2" %}
-                <strong class="govuk-tag govuk-tag--red">
-                    Indifferent
-                </strong>
-                {% elif value === "3" %}
-                <strong class="govuk-tag govuk-tag--orange">
-                    Somewhat valuable
-                </strong>
-                {% elif value === "4" %}
-                <strong class="govuk-tag govuk-tag--turquoise">
-                    Valuable
-                </strong>
-                {% else %}
-                {% endif %}
-            </div>
-        </div>
-
-        <!-- Related features -->
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-                <h3 class="govuk-heading-s">Related features</h3>
-
+                {% include "../includes/logic-feature-value-service.html" %}
             </div>
         </div>
 
         <!-- Links -->
         <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
                 <h3 class="govuk-heading-s">Links</h3>
-                {% if trello %}
-                <a href="{{ trello }}">Trello card</a><br />
-                {% else %}
-                {% endif %}
+                <ul class="govuk-list">
+                    {% if prototypelink %}
+                    <li>
+                        <a href="./examples/{{ fid }} " target="_blank">Live prototype example</a>
+                    </li>
+                    {% else %}
+                    {% endif %}
+                    {% if trello %}
+                    <li>
+                        <a href="{{ trello }}">Trello card</a>
+                    </li>
+                    {% else %}
+                    {% endif %}
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Related features -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+                <h3 class="govuk-heading-s">Related features</h3>
+                {% include "../includes/logic-feature-related-features.html" %}
             </div>
         </div>
 
