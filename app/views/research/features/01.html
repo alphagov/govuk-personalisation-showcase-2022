@@ -1,0 +1,263 @@
+{% extends "layout_research.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - {% include "includes/index-section-4.html" %}
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="../features" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
+        {% if category === "data" %}
+        <strong class="govuk-tag govuk-tag--purple">
+            Types of data
+        </strong>
+        {% elif category === "control" %}
+        <strong class="govuk-tag govuk-tag--purple">
+            Control of data
+        </strong>
+        {% elif category === "personalisation" %}
+        <strong class="govuk-tag govuk-tag--purple">
+            Personalisation
+        </strong>
+        {% else %}
+        <p>Feature category not set</p>
+        {% endif %}
+        <br /><br />
+        <h1 class="govuk-heading-xl">
+            {{ fid }}. {{ name }}
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <!-- End of two-thirds -->
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-11">
+                            Description
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-11">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-11">
+                    {% include "./feature-descriptions/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+            {% if showuser === "yes" %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                            User research findings
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    {% include "./user-research-findings/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+            {% if showuser === "yes" %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+                            Service research findings
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+                    {% include "./service-research-findings/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+                            Other risks/challenges/considerations
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+                    {% include "./risks/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                            Recommendations
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+                    {% include "./recommendations/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-5">
+                            Future research
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-5">
+                    {% include "./future-research/" + fid + ".html" %}
+                    <br />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- End of two-thirds -->
+
+    <!-- Start of one-third -->
+    <div class="govuk-grid-column-one-third">
+
+        <!-- User need -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">End user need</h3>
+                {% if need1 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Get everything I’m eligible for
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need2 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Avoid the stress of paperwork and admin
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need3 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Avoid the burden of supplying proof
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need4 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Save time
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need5 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Avoid phoning the service
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need6 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Feel safe and secure online
+                </strong>
+                <br /><br />
+                {% else %}
+                {% endif %}
+                {% if need7 === "yes" %}
+                <strong class="govuk-tag govuk-tag--pink">
+                    Feel confident in the way my data is being used
+                </strong>
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- value to service -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Value to service</h3>
+                {% if value === "1" %}
+                <strong class="govuk-tag govuk-tag--grey">
+                    Not applicable
+                </strong>
+                {% elif value === "2" %}
+                <strong class="govuk-tag govuk-tag--red">
+                    Indifferent
+                </strong>
+                {% elif value === "3" %}
+                <strong class="govuk-tag govuk-tag--orange">
+                    Somewhat valuable
+                </strong>
+                {% elif value === "4" %}
+                <strong class="govuk-tag govuk-tag--turquoise">
+                    Valuable
+                </strong>
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Related features -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Related features</h3>
+
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Links</h3>
+                {% if trello %}
+                <a href="{{ trello }}">Trello card</a><br />
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+    <!-- End of one-third -->
+</div>
+
+<br /><br />
+
+{% endblock %}

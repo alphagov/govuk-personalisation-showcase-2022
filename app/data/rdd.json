@@ -1,0 +1,58 @@
+{
+    "features": [
+        {
+            "fid": "00",
+            "name": "The feature name",
+            "category": "data",
+            "valueservice": "3",
+            "enduserimpact": "med",
+            "complexity": "high",
+            "need1": "yes",
+            "need2": "no",
+            "need3": "no",
+            "need4": "no",
+            "need5": "no",
+            "need6": "no",
+            "need7": "no",
+            "showdesc": "yes",
+            "showuserfindings": "yes",
+            "trellolink": "https://trello.com/c/amkUKdZ8"
+    },
+        {
+            "fid": "01",
+            "name": "Suggested eligibility",
+            "category": "personalisation",
+            "valueservice": "3",
+            "enduserimpact": "med",
+            "complexity": "high",
+            "need1": "yes",
+            "need2": "no",
+            "need3": "no",
+            "need4": "no",
+            "need5": "no",
+            "need6": "no",
+            "need7": "no",
+            "showdesc": "yes",
+            "showuserfindings": "yes",
+            "trellolink": "https://trello.com/c/amkUKdZ8"
+    },
+        {
+            "fid": "02",
+            "name": "Service recommendations",
+            "category": "personalisation",
+            "valueservice": "3",
+            "enduserimpact": "med",
+            "complexity": "high",
+            "need1": "yes",
+            "need2": "no",
+            "need3": "no",
+            "need4": "no",
+            "need5": "no",
+            "need6": "no",
+            "need7": "no",
+            "showdesc": "yes",
+            "showuserfindings": "yes",
+            "trellolink": "https://trello.com/c/amkUKdZ8"
+    }
+  ]
+}

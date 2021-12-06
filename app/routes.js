@@ -3,6 +3,11 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+// pull in research routes
+router.use('/', require('./routes/routes-research.js'))
+
+
+//ROUND 1
 // childcare calc account logic
 router.post('/round-1/sign-in-or-create-account-form', function (req, res) {
 
@@ -1821,29 +1826,5 @@ router.post('/phase-2-round-4/employment-status-check', function (req, res) {
         res.redirect('/phase-2-round-4/universal-credit/parent-work-hours')
     }
 })
-
-// features ids
-router.get('/research/features/19', function (req, res) {
-    res.render('research/features/19', {
-        fid: '19',
-        fidtitle: 'Fixed vs editable data'
-    })
-})
-
-router.get('/research/features/feature-ids/19', function (req, res) {
-    res.render('research/features/feature-ids/19', {
-        fid: '19',
-        fidtitle: 'Fixed vs editable data',
-        fiddler: 'Gary'
-    })
-})
-
-router.get('/research/features/20', function (req, res) {
-    res.render('research/features/20', {
-        fid: '20',
-        fidtitle: 'Shared information'
-    })
-})
-
 
 module.exports = router

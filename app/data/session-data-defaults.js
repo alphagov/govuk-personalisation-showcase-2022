@@ -19,6 +19,10 @@ Example usage:
 
 module.exports = {
 
-    "feat19": "19. Fixed vs editable data"
-
+    xgov: [
+        {
+            firstname: 'Joe',
+            surname: 'Blogs'
+    }
+  ]
 }
