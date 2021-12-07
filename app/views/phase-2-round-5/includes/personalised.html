@@ -1,11 +1,22 @@
-        {% if data['child-benefit-status'] == "completed" and data['signing'] == "yes" %}
-        <div class="personalised personalised-inset">
-            <p class="govuk-notification-banner__heading">
-                This page is being personalised based on information saved in your GOV.UK account
+{% if data['signing'] == "yes" %}
 
-            </p>
+{% if data['personalise-relevant'] == "on" or data['personalise-info'] == "on" %}
+<div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
 
+            <strong class="govuk-tag govuk-tag--purple">
+                Personalised
+            </strong>
+            <!-- colours: grey, green, turquoise, blue, purple, pink, red, orange, yellow -->
+            <span class="govuk-phase-banner__text" style="padding-left: 5px;">
+                This page has been personalised based on the information saved in your <a class="govuk-link" href="account/account-manage.html#personalisation">GOV.UK account</a>.
+            </span>
+        </p>
+    </div>
+</div>
+{% else %}
+{% endif %}
 
-        </div>
-        {% else %}
-        {% endif %}
+{% else %}
+{% endif %}

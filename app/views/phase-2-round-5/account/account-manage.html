@@ -62,11 +62,64 @@
         <p>View and manage your account settings.</p>
 
         <div id="manage-account" class="accounts-panel">
-            <h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Account features </h2>
+            <h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Account features</h2>
+            <br />
             <ul class="govuk-list">
                 <li>
-                    <h3 class="govuk-heading-m">Autofill forms</h3>
-                    <p>Prefill forms using information stored in your account </p>
+                    <h3 id="notifications" class="govuk-heading-m">Notifications</h3>
+                    <p>Manage how you want to be notified about </p>
+                    <form id="notifytoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="notify" name="notify" type="radio" value="email" {{ checked("notify", "email") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="notify">
+                                        Email
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="notify-2" name="notify" type="radio" value="text" {{ checked("notify", "text") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="notify-2">
+                                        Text message
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr>
+                    <br />
+                </li>
+                <li>
+                    <h3 id="reminders" class="govuk-heading-m">Reminders</h3>
+                    <p>Receive personalised reminders of key dates and deadlines. </p>
+                    <form id="reminderstoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="reminders" name="reminders" type="radio" value="on" {{ checked("reminders", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="reminders">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="reminders-2" name="reminders" type="radio" value="off" {{ checked("reminders", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="reminders-2">
+                                        Off
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <hr>
+                    <br />
+                </li>
+                <li>
+                    <h3 id="autofill" class="govuk-heading-m">Autofill forms</h3>
+                    <p>Prefill forms using information stored in my account. You will always be required to confirm the information is correct before submitting the form. </p>
                     <form id="autofilltoggle" method="post" action="">
                         <div class="govuk-form-group">
                             <div class="govuk-radios govuk-radios--small govuk-radios--inline">
@@ -91,7 +144,8 @@
                     <br />
                 </li>
                 <li>
-                    <h3 class="govuk-heading-m">Personalisation</h3>
+                    <h3 id="personalisation" class="govuk-heading-m">Personalisation</h3>
+                    <p><b>Using the information saved in my {% include "includes/auth-name.html" %}: </b></p>
                     <p>Only show information relevant to me across GOV.UK
                     </p>
                     <form id="personaliserelevanttoggle" method="post" action="">
@@ -114,7 +168,7 @@
                         </div>
                     </form>
 
-                    <p>Use my information to make dates, locations and amounts relevant to me
+                    <p>Make dates, locations and amounts relevant to me
                     </p>
                     <form id="personaliserelevanttoggle" method="post" action="">
                         <div class="govuk-form-group">
@@ -135,23 +189,24 @@
                             </div>
                         </div>
                     </form>
+
                     <hr>
                     <br />
                 </li>
                 <li>
-                    <h3 class="govuk-heading-m">Recommendations</h3>
-                    <p>Suggest services and benefits that I may be eligible for</p>
+                    <h3 id="suggestions" class="govuk-heading-m">Suggestions</h3>
+                    <p>Suggest tasks I may wish to complete, as well as services and benefits that I may be eligible for</p>
                     <form id="suggestservicestoggle" method="post" action="">
                         <div class="govuk-form-group">
                             <div class="govuk-radios govuk-radios--small govuk-radios--inline">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="suggest-services" name="suggest-services" type="radio" value="on" {{ checked("suggest-services", "on") }} onchange="this.form.submit()">
+                                    <input class="govuk-radios__input" id="suggest-services" name="suggestions" type="radio" value="on" {{ checked("suggestions", "on") }} onchange="this.form.submit()">
                                     <label class="govuk-label govuk-radios__label" for="suggest-services">
                                         On
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="suggest-services-2" name="suggest-services" type="radio" value="off" {{ checked("suggest-services", "off") }} onchange="this.form.submit()">
+                                    <input class="govuk-radios__input" id="suggest-services-2" name="suggestions" type="radio" value="off" {{ checked("suggestions", "off") }} onchange="this.form.submit()">
                                     <label class="govuk-label govuk-radios__label" for="suggest-services-2">
                                         Off
                                     </label>
@@ -161,7 +216,7 @@
                         </div>
                     </form>
 
-                    <p>Suggest tasks I may wish to complete
+                    <!-- <p>Suggest tasks I may wish to complete
                     </p>
                     <form id="suggesttasksstoggle" method="post" action="">
                         <div class="govuk-form-group">
@@ -181,7 +236,7 @@
 
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </li>
 
             </ul>

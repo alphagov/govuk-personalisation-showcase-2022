@@ -64,21 +64,40 @@
 
         <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Your account</h1>
 
-        {% if data['recommendations'] == "on" %}
+        {% if data['suggestions'] == "on" %}
         <div id="recommendation-panel" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
                     <div class="toggle" style="float: right;">
                         <strong class="govuk-tag govuk-tag--blue">New</strong>
-                    </div>Request to share information
+                    </div>Suggested for you
                 </h2>
             </div>
             <div class="govuk-notification-banner__content">
-                <p>You have received a request to share some of your personal information with another GOV.UK account holder. This may be a part of a joint application, such as Universal Credit or The Childcare Service.</p>
 
-                <p>The person who has made this request should have given you a linking code. You will need to provide this before you share your details. You should only share information with people you trust.
+                <p><b>Based on your recent account activity, you may find the following services useful.</b></p>
+
+                <p>As you now have a second child:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>You can add <b>{{ data['child-2-name'] }}</b> to your <a href="#">Child Benefit claim</a>. Your payments will increase by £14 per week. </li>
+                    <li>You and your spouse may be able to get <a href="#">Shared Parental Leave</a> </li>
+                </ul>
+
+                <br />
+                <p>As you recently renewed your passport, you may be thinking about travelling abroad:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+
+                    <li>You may want to apply for passports for <b>{{ data['child-1-name'] }}</b> and <b>{{ data['child-2-name'] }}</b>. Current waiting times are approx. 6 weeks.</li>
+                    <li>Find out how to <a href="#">travel safely in airports and on aircraft during COVID-19 with children</a>. </li>
+
+                </ul>
+                <br />
+                <p class="govuk-body-s">
+                    Don’t want to see this? You can turn off service recommendations in your <a href="account-manage.html#suggestions">account settings</a>
                 </p>
-                <p><a href="../share-data/link-accounts.html">View request to share information</a> </p>
+
             </div>
         </div>
         {% else %}
@@ -90,33 +109,65 @@
                 <div id="recent-activity" class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Recent activity</h2>
 
+                    <!-- Heading row -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <p><b>Date</b></p>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p><b>Event</b></p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <p><b>Department</b></p>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
+
                     <!-- An activity item -->
                     <div class="govuk-grid-row">
                         <div class="govuk-grid-column-one-quarter">
                             <span class="govuk-body-s">28-11-2021:</span>
                         </div>
                         <div class="govuk-grid-column-one-half">
-                            <p>New birth registered: <b>{{ data['child-2-name'] }}</b></p>
+                            <p>Registered birth of:<br /><a href="account-manage-documents.html#jill-birth-certificate">{{ data['child-2-name'] }}</a> </p>
                         </div>
                         <div class="govuk-grid-column-one-quarter right">
-
+                            <p>{{ data['address-town'] }} Registry Office</p>
                         </div>
                         <div class="govuk-grid-column-full">
-
+                            <hr>
                         </div>
                     </div>
-
 
                     <!-- An activity item -->
                     <div class="govuk-grid-row">
                         <div class="govuk-grid-column-one-quarter">
-                            <span class="govuk-body-s">12-01-2021:</span>
+                            <span class="govuk-body-s">14-11-2021:</span>
                         </div>
                         <div class="govuk-grid-column-one-half">
-                            <p>Add a load more to this list</p>
+                            <p>Applied online for a new <a href="account-manage-documents.html#saved-documents">passport</a></p>
                         </div>
                         <div class="govuk-grid-column-one-quarter right">
+                            <p>HMPO</p>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <hr>
+                        </div>
+                    </div>
 
+                    <!-- An activity item -->
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-quarter">
+                            <span class="govuk-body-s">05-02-2021:</span>
+                        </div>
+                        <div class="govuk-grid-column-one-half">
+                            <p>Vehicle taxed online:<br />
+                                {{ data['driving-vehicle-reg'] }} for 12 months</p>
+                        </div>
+                        <div class="govuk-grid-column-one-quarter right">
+                            <p>DVLA</p>
                         </div>
                         <div class="govuk-grid-column-full">
 
@@ -128,23 +179,36 @@
         </div>
 
         <div class="govuk-grid-row">
+
             <div class="govuk-grid-column-one-half govuk-!-margin-bottom-8">
+
+                {% if data['reminders'] == "on" %}
                 <div id="reminders" class="accounts-panel">
                     <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
 
-                    <p>Personalised reminders will be added here</p>
+                    <span class="govuk-body-s">05-02-2022:</span><br />
+                    <p><a href="#">Vehicle tax due: {{ data['driving-vehicle-reg'] }}</a></p>
+
 
                     <br />
-                    <!--  <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span> -->
+                    <span class="govuk-body-s">Add to: <img src="../../../../public/images/ical.png" height="16px"> <a href="#">iCal</a> | <img src="../../../../public/images/outlook-calendar-logo.png" height="16px"> <a href="#">Outlook</a></span>
 
                 </div>
+                {% else %}
+                <div id="reminders" class="accounts-panel">
+                    <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Reminders</h2>
+
+                    <p>You can turn on personalised reminders in your <a href="account-manage.html#reminders">account settings</a> </p>
+
+                </div>
+                {% endif %}
             </div>
 
         </div>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-half">
-                <p class="govuk-body-s">Last sign in <br />{% include "includes/today-time.html" %} <br /><a href="#">Not you?</a></p>
+                <p class="govuk-body-s">Last seen <br />{% include "includes/today-time.html" %} <br /><a href="#">Not you?</a></p>
             </div>
         </div>
 

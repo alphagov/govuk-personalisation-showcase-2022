@@ -29,7 +29,7 @@ module.exports = {
         "07": "Notifications",
         "08": "Global push",
         "09": "Profile completion",
-        "10": "Global consent &amp; personalisation permissions",
+        "10": "Global consent & personalisation permissions",
         "11": "Delete your data",
         "12": "External data",
         "13": "Consent management",

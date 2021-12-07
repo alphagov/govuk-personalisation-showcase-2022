@@ -1,0 +1,129 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+
+{% block beforeContent %}
+{% include "./includes/personalised.html" %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="govuk-home.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Childcare and parenting</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Financial help if you have children</a>
+        </li>
+    </ol>
+</div>
+
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Child Benefit payment dates</h1>
+
+        {% if data['personalise-relevant'] == "on" or data['personalise-info'] == "on" %}
+
+        <h2 class="govuk-heading-m" id="when-you-get-paid">When you get paid</h2>
+
+        <div class="govuk-inset-text  personalised-inset">
+            <p>You’re paid Child Benefit for {{ data['child-1-name'] }} every 4 weeks.</p>
+            <p>Your next payment of £120 will be made on the <b>2 January 2022</b>.</p>
+            {% if data['suggestions'] == "on" %}
+            <p>You can add <b>{{ data['child-2-name'] }}</b> to your <a href="#">Child Benefit claim</a>. Your payments will increase by £14 per week. </p>
+            {% else %}
+            {% endif %}
+        </div>
+
+        <p>You can manage your payment details in your <a href="account/">{% include "includes/auth-name.html" %}</a>.</p>
+
+        <p>You should be able to see your last payment on your bank statement. The payment reference will begin with ‘HMRC Child Benefit’ and is made up of 18 characters.
+        </p>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                There are <a href="#">different payment dates</a> if it’s due on a bank holiday.
+            </strong>
+        </div>
+
+        <h2 class="govuk-heading-m" id="if-you-havent-got-your-payment">If you haven’t got your payment</h2>
+
+        <p>Your payments may have stopped because:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you haven’t told the Child Benefit Office your bank has changed or about your child’s education plans after they turn 16</li>
+            <li>you haven’t replied to a letter from the Child Benefit Office</li>
+            <li>your child now <a href="/child-benefit-child-lives-with-someone-else">lives with someone else</a>
+            </li>
+            <li>you’re no longer <a href="/child-benefit/eligibility">eligible</a> to claim Child Benefit</li>
+        </ul>
+
+        <p><a href="#">Report changes of circumstances</a> to make sure your payments are correct.</p>
+
+        {% else %}
+        <!-- not personalised -->
+        <h2 class="govuk-heading-l" id="when-you-get-paid">When you get paid</h2>
+
+        <p>Child Benefit is usually paid every 4 weeks on a Monday or Tuesday.</p>
+
+        <p>There are <a href="/child-benefit-payment-dates/bank-holidays">different payment dates</a> if it’s due on a bank holiday.</p>
+
+        <p>You can get Child Benefit paid weekly if you’re a single parent or if you or your partner are getting certain benefits, such as Income Support.</p>
+
+        <h2 class="govuk-heading-l" id="working-out-your-next-payment">Working out your next payment</h2>
+
+        <p>You can work out when you’re next going to get Child Benefit by counting 4 weeks forward from your last payment. Do not count forward if your payment was <a href="/child-benefit-payment-dates/bank-holidays">due on a bank holiday</a> - the dates are different.</p>
+
+        <p>If you do not know when you got your last payment, check your bank statement. The payment reference will begin with ‘<abbr title="HM Revenue and Customs">HMRC</abbr> Child Benefit’ and is made up of 18 characters.</p>
+
+        <h3 class="govuk-heading-m" id="your-first-payment">Your first payment</h3>
+
+        <p>Check your award notice to find out when your first payment is due. You can count forward 4 weeks from this date to work out when you’ll get it next.</p>
+
+        <p>You might not get your first payment for 12 weeks (it can be longer if you’ve just moved to the UK). It will be backdated for up to 3 months.</p>
+
+        <h2 class="govuk-heading-l" id="if-you-havent-got-your-payment">If you haven’t got your payment</h2>
+
+        <p>Check your payment date and contact your bank before calling the <a href="/contact/hm-revenue-customs/child-benefit">Child Benefit Office</a> if a payment is late.</p>
+
+        <p>Your payments may have stopped because:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you haven’t told the Child Benefit Office your bank has changed or about your child’s education plans after they turn 16</li>
+            <li>you haven’t replied to a letter from the Child Benefit Office</li>
+            <li>your child now <a href="/child-benefit-child-lives-with-someone-else">lives with someone else</a>
+            </li>
+            <li>you’re no longer <a href="/child-benefit/eligibility">eligible</a> to claim Child Benefit</li>
+        </ul>
+
+        <div role="note" aria-label="Information" class="application-notice info-notice">
+            <p><a href="/report-changes-child-benefit">Report changes of circumstances</a> to make sure your payments are correct.</p>
+        </div>
+
+        {% endif %}
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

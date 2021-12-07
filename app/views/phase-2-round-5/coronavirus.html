@@ -1,0 +1,652 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+Coronavirus (COVID-19)
+{% endblock %}
+
+{% set serviceName %}
+Coronavirus (COVID-19)
+{% endset%}
+
+
+{% block beforeContent %}
+{% include "./includes/personalised.html" %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="govuk-home.html">Home</a>
+        </li>
+    </ol>
+</div>
+
+{% endblock %}
+{% block content %}
+
+<style>
+    .covid-statistics__data {
+        font-weight: bold;
+    }
+
+    .covid-statistics__latest {
+        font-size: 0.75rem;
+    }
+
+</style>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Coronavirus (COVID-19)</h1>
+
+        <p>Contents:</p>
+        <ul class="govuk-list">
+            <li><a href="#recent-changes">Recent and upcoming changes</a> </li>
+            <li><a href="#testing-vaccinations">Testing and vaccinations</a> </li>
+            <li><a href="#guidance-support">Guidance and support</a> </li>
+            <li><a href="#statistics">UK COVID-19 statistics</a> </li>
+        </ul>
+
+        <br />
+
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+<div class="govuk-grid-row" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-8" style="background: #f3f2f1; padding: 20px;">
+    <div class="govuk-grid-column-full">
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-full">
+
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-6">COVID-19 remains a serious health risk.<br /> <br />
+                    You should stay cautious to help protect yourself and others.</h2>
+
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                    <li>Let fresh air in if you meet indoors. Meeting outdoors is safer</li>
+                    <li>You must wear a face covering in shops and on all public transport</li>
+                    <li>
+                        <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/testing/get-tested-for-coronavirus/">Get tested</a> and self-isolate if required</li>
+                    <li>If you haven’t already, <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/">get vaccinated</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+<div class="govuk-grid-row govuk-!-margin-bottom-8" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+    <div class="govuk-grid-column-one-third">
+
+        <h2 id="recent-changes" class="govuk-heading-m">Recent and upcoming changes</h2>
+
+        {% if data['personalise-info'] == "on" %}
+        <div class="govuk-inset-text  personalised-inset">
+            <p>For {{ data['address-town'] }} and {{ data['address-county'] }}</p>
+        </div>
+        {% else %}
+        <br />
+        <form>
+            <div class="govuk-form-group">
+
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england" checked>
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                            England
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                            Scotland
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                            Wales
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                            Northern Ireland
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <div id="nation-england" class="js-covid-timeline">
+            <h3 class="govuk-heading-m govuk-visually-hidden">Changes in England</h3>
+            <div class="covid-timeline__item">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4"> Tests required for travel to England
+                    <span class="covid-timeline__tag-wrapper">
+                        <span class="govuk-visually-hidden">, this guidance applies to </span><strong class="govuk-tag govuk-tag--blue covid-timeline__tag">England</strong>
+                    </span>
+                </h3>
+
+
+                <div class="gem-c-govspeak govuk-govspeak govuk-!-margin-bottom-8" data-module="govspeak">
+                    <p>From 4am on Tuesday 7 December anyone aged 12 and over must show a negative PCR or lateral flow test result before travelling to England from abroad. You must take the test in the 2 days before you travel to England.</p>
+
+                    <p>You must also take a PCR test within 2 days of arriving and self-isolate until you get a negative test result, even if you’re fully vaccinated. <a href="/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19">Check what you need to do to travel to England from another country.
+                        </a></p>
+
+                </div>
+
+            </div>
+            <div class="covid-timeline__item">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4"> Changes to the red list for international travel
+                    <span class="covid-timeline__tag-wrapper">
+                        <span class="govuk-visually-hidden">, this guidance applies to </span><strong class="govuk-tag govuk-tag--blue covid-timeline__tag">England</strong>
+                    </span>
+                </h3>
+
+
+                <div class="gem-c-govspeak govuk-govspeak govuk-!-margin-bottom-8" data-module="govspeak">
+                    <p>Angola, Botswana, Eswatini, Lesotho, Malawi, Mozambique, Namibia, Nigeria, South Africa and Zambia have all moved to the <a href="/guidance/red-list-of-countries-and-territories">travel red list</a>. You can only enter England from these countries if you are a UK or Irish resident. You must quarantine in a managed hotel on arrival and take 2 COVID-19 tests.</p>
+
+                </div>
+
+            </div>
+            <div class="covid-timeline__item">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4"> New rules on face coverings and self-isolation
+                    <span class="covid-timeline__tag-wrapper">
+                        <span class="govuk-visually-hidden">, this guidance applies to </span><strong class="govuk-tag govuk-tag--blue covid-timeline__tag">England</strong>
+                    </span>
+                </h3>
+
+
+                <div class="gem-c-govspeak govuk-govspeak govuk-!-margin-bottom-8" data-module="govspeak">
+                    <p>You must wear a face covering in shops and on public transport. Face coverings should be worn in communal areas of universities, colleges and schools by staff, visitors and pupils or students in year 7 and above.</p>
+
+                    <p>If you’re a contact of someone who may have been infected with the Omicron variant, you must self-isolate for 10 days, regardless of your age, vaccination status or any negative test results.</p>
+
+                </div>
+
+            </div>
+            <div class="covid-timeline__item">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4"> Booster vaccines
+                    <span class="covid-timeline__tag-wrapper">
+                        <span class="govuk-visually-hidden">, this guidance applies to </span><strong class="govuk-tag govuk-tag--blue covid-timeline__tag">England</strong>
+                    </span>
+                </h3>
+
+
+                <div class="gem-c-govspeak govuk-govspeak govuk-!-margin-bottom-8" data-module="govspeak">
+                    <p>People aged 40 to 49 can now get a booster vaccine 6 months after their second dose. <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/book-coronavirus-vaccination/">Book your vaccination appointment online</a> or <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/find-a-walk-in-coronavirus-covid-19-vaccination-site/">find a walk-in clinic</a>. The NHS will contact you when you are eligible to book your booster dose.</p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-8" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+
+    <div class="govuk-grid-column-one-third">
+
+        <img src="../../../../public/images/nhs.svg" height="42px">
+
+        <h2 id="testing-vaccinations" class="govuk-heading-m">Testing and vaccinations</h2>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-heading-s">
+            <a class="govuk-link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/testing/">Testing for COVID-19</a>
+        </p>
+
+
+        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+            <p>Find out how to get tested, what your test result means and how to report your result.</p>
+
+        </div>
+        <br />
+        {% if data['personalise-info'] == "on" %}
+        <p id="bookPCR" class="govuk-heading-s">
+            <a class="govuk-link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/">Book a test</a>
+        </p>
+
+        <div class="govuk-inset-text  personalised-inset">
+            <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+                <p>You can <a href="#"> order a PCR test kit</a> to be sent to:<br /><br />
+                    {{ data['address-line-1'] }} <br />
+                    {{ data['address-line-2'] }} <br />
+                    {{ data['address-town'] }} <br />
+                    {{ data['address-county'] }} <br />
+                    {{ data['address-postcode'] }}
+                </p>
+                <p>or</p>
+                <p><a href="#">Book an appointment</a> at a walk-in or drive-through test site near <b>{{ data['address-postcode'] }}</b></p>
+            </div>
+        </div>
+        <br />
+        {% else %}
+        {% endif %}
+        <p class="govuk-heading-s">
+            <a class="govuk-link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/">COVID-19 vaccination</a>
+        </p>
+
+        {% if data['personalise-info'] == "on" %}
+        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+            <p>Get your COVID-19 vaccination including booster dose, read about how vaccinations work and what happens when you have one.</p>
+            <p><a href="#">Book your COVID-19 vaccination booster dose</a></p>
+        </div>
+        <div class="govuk-inset-text  personalised-inset">
+            <p><a href="#"> Find a walk-in vaccination site</a> near <b>{{ data['address-postcode'] }}</b></p>
+        </div>
+        <br />
+        {% else %}
+        <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
+            <p>Get your COVID-19 vaccination including booster dose, read about how vaccinations work and what happens when you have one.</p>
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-8" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+
+    <div class="govuk-grid-column-one-third">
+
+        <h2 id="guidance-support" class="govuk-heading-m">Guidance and support</h2>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                            Staying safe
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+
+                        Includes advice on preventing the spread of COVID-19, mental health and domestic abuse
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <div class="govuk-warning-text" style="background: #f3f2f1; padding: 15px;">
+                                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                <strong class="govuk-warning-text__text">
+                                    <span class="govuk-warning-text__assistive">Warning</span>
+
+                                    COVID-19 remains a serious health risk. Find out how to manage the risks and protect yourself and others.<br /><br />
+
+                                    <p><a class="govuk-link" style="color: #1d70b8;">
+                                            How to stay safe and help prevent the spread
+                                        </a></p>
+                                </strong>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own/face-coverings-when-to-wear-one-and-how-to-make-your-own?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Face coverings: when to wear one, exemptions, and how to make your own</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/covid-19-response-autumn-and-winter-plan-2021?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/covid-19-response-autumn-and-winter-plan-2021?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Autumn and Winter Plan 2021: how the government will manage COVID-19 in England</a>
+                        </li>
+                    </ul>
+                    <h4 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Get help and support with domestic abuse, homelessness or if you’re vulnerable</h4>
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/guidance/domestic-abuse-how-to-get-help?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/guidance/domestic-abuse-how-to-get-help?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Domestic abuse: how to get help</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/if-youre-homeless-at-risk-of-homelessness?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/if-youre-homeless-at-risk-of-homelessness?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Help if you’re homeless or about to become homeless</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="https://nhsvolunteerresponders.org.uk/services/help" href="https://nhsvolunteerresponders.org.uk/services/help">Get support if you cannot go out to get food or medicine from NHS Volunteer Responders</a>
+                        </li>
+                    </ul>
+                    <h4 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Get mental health support</h4>
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="https://www.mind.org.uk/information-support/coronavirus/coping-with-mental-health-problems-during-coronavirus/" href="https://www.mind.org.uk/information-support/coronavirus/coping-with-mental-health-problems-during-coronavirus/">Get help coping with mental health problems during coronavirus from Mind</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/" href="https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/">Getting urgent help for mental health on the NHS website</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="https://www.nhs.uk/every-mind-matters/" href="https://www.nhs.uk/every-mind-matters/">Looking after your mental health: Every Mind Matters on the NHS website</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+                            Testing and self-isolating
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+                        Includes information on getting tested for COVID-19, reporting your results and how to self-isolate
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+                    <p>Content goes here</p>
+                </div>
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+                            International travel
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+                        Includes showing your vaccination status, travelling to England and filling in your passenger locator form
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+                    <p>Content goes here</p>
+                </div>
+            </div>
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                            Long COVID
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+                        Includes advice, support and treatment options
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+                    <p>Content goes here</p>
+                </div>
+            </div>
+            {% if data['personalise-relevant'] == "on" %}
+            {% else %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-5">
+                            Self-employment and businesses
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-5">
+                        Includes keeping your business safe and getting financial support
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-5">
+                    <p>Content goes here</p>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-6">
+                            Work and support
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-6">
+                        Includes guidance on finding work, self-employment and benefits
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-6">
+                    <p>Content goes here</p>
+                </div>
+            </div>
+            {% if data['personalise-relevant'] == "on" %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-7">
+                            Childcare and parenting
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-7">
+                        Includes guidance for parents
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-7">
+                    <h4 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Advice for parents and carers during COVID-19</h4>
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/what-parents-and-carers-need-to-know-about-early-years-providers-schools-and-colleges-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/what-parents-and-carers-need-to-know-about-early-years-providers-schools-and-colleges-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Information for parents and carers about attending schools, nurseries and colleges during COVID-19</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/guidance-for-parents-and-carers-of-children-attending-out-of-school-settings-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/guidance-for-parents-and-carers-of-children-attending-out-of-school-settings-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Guidance for parents and carers of children attending out-of-school settings during COVID-19</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            {% else %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-7">
+                            Schools, universities, education and childcare
+
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-7">
+                        Includes guidance for parents, carers, students and education settings
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-7">
+
+                    <h4 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Advice for parents and carers during COVID-19</h4>
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/what-parents-and-carers-need-to-know-about-early-years-providers-schools-and-colleges-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/what-parents-and-carers-need-to-know-about-early-years-providers-schools-and-colleges-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Information for parents and carers about attending schools, nurseries and colleges during COVID-19</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/guidance-for-parents-and-carers-of-children-attending-out-of-school-settings-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/guidance-for-parents-and-carers-of-children-attending-out-of-school-settings-during-the-coronavirus-covid-19-outbreak?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Guidance for parents and carers of children attending out-of-school settings during COVID-19</a>
+                        </li>
+                    </ul>
+                    <h4 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Guidance on managing COVID-19 in different settings</h4>
+
+                    <ul class="govuk-list covid__list">
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/publications/coronavirus-covid-19-local-restrictions-in-education-and-childcare-settings?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/publications/coronavirus-covid-19-local-restrictions-in-education-and-childcare-settings?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Contingency framework for managing local outbreaks of COVID-19 in education and childcare settings</a>
+                        </li>
+                        <li class="covid__list-item">
+                            <a class="govuk-link" data-track-category="pageElementInteraction" data-track-action="AccordionClick" data-track-label="/government/collections/guidance-for-schools-coronavirus-covid-19?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae" href="/government/collections/guidance-for-schools-coronavirus-covid-19?priority-taxon=774cee22-d896-44c1-a611-e3109cce8eae">Guidance on running and managing early years, schools, colleges and other education providers during COVID-19</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <p>See <a href="#">all COVID-19 guidance on GOV.UK</a></p>
+
+        <p class="govuk-body">
+            See specific guidance for <a class="govuk-link" href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a class="govuk-link" href="https://gov.wales/coronavirus">Wales</a> and <a class="govuk-link" href="https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19">Northern Ireland</a>
+        </p>
+    </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-bottom-8" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+
+    <div class="govuk-grid-column-full">
+
+        <h2 id="statistics" class="govuk-heading-m">UK COVID-19 statistics</h2>
+
+        {% if data['personalise-info'] == "on" %}
+        <div class="govuk-inset-text  personalised-inset">
+            <p>Show statistics for: <a href="#statistics">{{ data['address-town'] }}</a>, <a href="#statistics">{{ data['address-county'] }}</a> </p>
+        </div>
+        {% else %}
+        {% endif %}
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">People tested positive</h3>
+
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Daily</span>
+                    <span class="covid-statistics__data">51,459</span>
+                </p>
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Last 7 days</span>
+                    <span class="covid-statistics__data">330,918</span>
+                    <span class="govuk-tag govuk-tag--yellow covid-statistics__tag">
+                        <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="covid-statistics__arrow">
+                            <path d="m4 12 1.41 1.41 5.59-5.58v12.17h2v-12.17l5.58 5.59 1.42-1.42-8-8z" fill="currentColor"></path>
+                        </svg>
+
+                        <span class="covid-statistics__data">27,596</span>
+                        (9.1%)
+                    </span>
+                </p>
+                <p class="govuk-body covid-statistics__all-link">
+                    <a class="govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="Statistics" data-track-label="https://coronavirus.data.gov.uk/details/cases" href="https://coronavirus.data.gov.uk/details/cases">All case data</a>
+                    <br>
+                    <span class="covid-statistics__latest">
+                        Latest data provided on 06 December 2021
+                    </span>
+                </p>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">Patients admitted to hospital</h3>
+
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Daily</span>
+                    <span class="covid-statistics__data">811</span>
+                </p>
+
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Last 7 days</span>
+                    <span class="covid-statistics__data">5,388</span>
+                    <span class="govuk-tag govuk-tag--yellow covid-statistics__tag">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="covid-statistics__arrow">
+                            <path d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="currentColor"></path>
+                        </svg>
+
+                        <span class="covid-statistics__data">-42</span>
+                        (-0.8%)
+                    </span>
+                </p>
+                <p class="govuk-body covid-statistics__all-link">
+                    <a class="govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="Statistics" data-track-label="https://coronavirus.data.gov.uk/details/healthcare" href="https://coronavirus.data.gov.uk/details/healthcare">All healthcare data</a>
+                    <br>
+                    <span class="covid-statistics__latest">
+                        Latest data provided on 30 November 2021
+                    </span>
+                </p>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <h3 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-4">People vaccinated, percentage of population aged 12 and over</h3>
+
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">First dose</span>
+                    <span class="covid-statistics__data">
+                        88.9%
+                        (51,118,266 people)
+                    </span>
+                </p>
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Second dose</span>
+                    <span class="covid-statistics__data">
+                        81.0%
+                        (46,557,413 people)
+                    </span>
+                </p>
+                <p class="govuk-body">
+                    <span class="covid-statistics__label">Booster or third dose</span>
+                    <span class="covid-statistics__data">
+                        35.8%
+                        (20,580,644 people)
+                    </span>
+                </p>
+                <p class="govuk-body covid-statistics__all-link">
+                    <a class="govuk-link" data-module="gem-track-click" data-track-category="pageElementInteraction" data-track-action="Statistics" data-track-label="https://coronavirus.data.gov.uk/details/vaccinations" href="https://coronavirus.data.gov.uk/details/vaccinations">All vaccination data</a>
+                    <br>
+                    <span class="covid-statistics__latest">
+                        Latest data provided on 05 December 2021
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="govuk-grid-row" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
+
+    {% if data['personalise-info'] == "on" %}
+    <div class="govuk-grid-column-full personalised-inset">
+
+        <section class="covid__topic-wrapper" style="padding: 40px;">
+            <div class="app-c-signup-link govuk-!-display-none-print govuk-!-margin-bottom-0 app-c-signup-link--with-background-and-border">
+                <div class="app-c-signup-link__inner govuk-width-container">
+                    <svg class="app-c-signup-link__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="36" width="36" viewBox="0 0 459.334 459.334">
+                        <path fill="black" d="M177.216 404.514c-.001.12-.009.239-.009.359 0 30.078 24.383 54.461 54.461 54.461s54.461-24.383 54.461-54.461c0-.12-.008-.239-.009-.359H175.216zM403.549 336.438l-49.015-72.002v-89.83c0-60.581-43.144-111.079-100.381-122.459V24.485C254.152 10.963 243.19 0 229.667 0s-24.485 10.963-24.485 24.485v27.663c-57.237 11.381-100.381 61.879-100.381 122.459v89.83l-49.015 72.002a24.76 24.76 0 0 0 20.468 38.693H383.08a24.761 24.761 0 0 0 20.469-38.694z"></path>
+                    </svg>
+                    <h3 class="govuk-heading-s app-c-signup-link__title">You will get notified via your GOV.UK account when we change any coronavirus information on the GOV.UK website relating to {{ data['address-town'] }} or {{ data['address-county'] }}</h3>
+                    <a href="account/account-manage.html#notification">Manage GOV.UK account notifications</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    {% else %}
+
+    <div class="govuk-grid-column-full">
+
+        <section class="covid__topic-wrapper" style="background: #f3f2f1; padding: 40px;">
+            <div class="app-c-signup-link govuk-!-display-none-print govuk-!-margin-bottom-0 app-c-signup-link--with-background-and-border">
+                <div class="app-c-signup-link__inner govuk-width-container">
+                    <svg class="app-c-signup-link__icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="36" width="36" viewBox="0 0 459.334 459.334">
+                        <path fill="black" d="M177.216 404.514c-.001.12-.009.239-.009.359 0 30.078 24.383 54.461 54.461 54.461s54.461-24.383 54.461-54.461c0-.12-.008-.239-.009-.359H175.216zM403.549 336.438l-49.015-72.002v-89.83c0-60.581-43.144-111.079-100.381-122.459V24.485C254.152 10.963 243.19 0 229.667 0s-24.485 10.963-24.485 24.485v27.663c-57.237 11.381-100.381 61.879-100.381 122.459v89.83l-49.015 72.002a24.76 24.76 0 0 0 20.468 38.693H383.08a24.761 24.761 0 0 0 20.469-38.694z"></path>
+                    </svg>
+                    <h3 class="govuk-heading-s app-c-signup-link__title">Stay up to date with GOV.UK</h3>
+                    <a class="govuk-link app-c-signup-link__link" data-module="gem-track-click" data-track-category="emailAlertLinkClicked" data-track-action="/coronavirus" href="/email-signup?topic=/coronavirus-taxon">Sign up to get emails when we change any coronavirus information on the GOV.UK website</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

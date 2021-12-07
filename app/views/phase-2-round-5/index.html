@@ -42,21 +42,48 @@
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
 
-                    <ol class="govuk-list govuk-list--number">
-                        <li>Start on GOV.UK homepage</li>
-                        <li>View GOV.UK account explained page</li>
+                    <ol class="govuk-list govuk-list--number govuk-list--spaced">
+                        <li>Start on <a href="govuk-home.html">GOV.UK homepage</a>  </li>
+                        <li>View <a href="gov-uk-account-explained.html">GOV.UK account explained</a> </li>
                         <li>Click 'Sign in or create a GOV.UK account' link &amp; sign in</li>
-                        <li>Review account dashboard</li>
-                        <li>Prove Your Identity</li>
-                        <li>add employment details</li>
-                        <li>Final ID checks</li>
-                        <li>Prove your ID successful</li>
-                        <li>Back to account - review updates incl. trusted data items</li>
-                        <li>Request to Share data</li>
-                        <li>Link account confirmation page</li>
-                        <li>Choose if and how you share data</li>
-                        <li>Return to account</li>
-                        <li>Review audit trail</li>
+                        <li>Review all 4 <a href="account/">account pages</a></li>
+                        <li>Turn on Reminders feature on <a href="account/account-manage#reminders">account features</a></li>
+                        <li>Return to account dashboard to review <a href="account/index#reminders">Reminders</a></li>
+                        <li>Turn on both personalisation features on <a href="account/account-manage#personalisation">account features</a>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>The first personalisation toggle will hide content deemed not relevant</li>
+                                <li>The second toggle will personalise any dates, amounts or locations </li>
+                            </ul>
+                        </li>
+                        <li>Return to <a href="govuk-home.html">GOV.UK homepage</a> <br /><br />
+                            This page is personalised in two ways:
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Lots of content and links have been stripped out, leaving those which the user uses most frequently.</li>
+                                <li>If the second toggle is on, the COVID-19 and Bank Holidays panels will be personalised to the users home address. </li>
+                            </ul>
+                        </li>
+                        <li>Check <a href="child-benefit-payment-dates.html"> Child Benefit Payment date</a> <br /><br />
+                            This page is personalised in two ways:
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Irrelevant content (such as 'first payment') is hidden.</li>
+                                <li>Personalised dates and amounts are shown in the personalised panel</li>
+                                <li><b>Unhappy path content ("If you haven’t got your payment") is always shown</b></li>
+
+                            </ul>
+                        </li>
+                        <li>Return to <a href="govuk-home.html">GOV.UK homepage</a></li>
+                        <li>Go to <a href="coronavirus.html">Coronavirus page</a><br /><br />
+                            This page is personalised in two ways:
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Irrelevant content (such as 'Self-employment guidance', and school-based advice in 'Childcare and parenting') is hidden.</li>
+                                <li>Personalised locations are used for booking tests, vaccinations, help and guidance, and statistics.</li>
+                            </ul>
+                        </li>
+                        <li>Turn on Suggestions feature on <a href="account/account-manage#suggestions">account features</a>
+                        </li>
+                        <li>View suggestions on <a href="account/">Account dashboard</a> - they are also shown on the <a href="govuk-home.html">GOV.UK homepage</a></li>
+                        <li>Also, the previously visited <a href="./child-benefit-payment-dates">Child Benefit Payment date</a> now includes the suggestion to add second child to the claim</li>
+                        <li>Sign out</li>
                     </ol>
 
                     <div class="govuk-!-padding-bottom-2"></div>
@@ -74,14 +101,12 @@
                     </h2>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-
+                    <p><i>Draft</i></p>
                     <ol class="govuk-list govuk-list--number">
-                        <li>Understand if there is an appetite to prove ID as part of GOV.UK account set up (continuation from round 3, there is a content iteration here)</li>
-                        <li>Explore user comprehension of what Proving your Identity enables (continued from round 3)</li>
-                        <li>Explore user comprehension of trusted data items (continued from rounds 1-3)</li>
-                        <li>Find out whether users are willing to share their data with their partner, as part of a joint transaction (in this case, getting help paying for childcare)</li>
-                        <li>Understand the perceived pros and cons to shared data.</li>
-                        <li>Explore whether an audit log is understood and whether it enhances trust and confidence</li>
+                        <li>
+                            Understand whether users are willing to use their data for personalisation.</li>
+                        <li>Understand perceived value of different types of personalised features and content i.e. recommendations for information, recommendations around eligibility.</li>
+
                     </ol>
 
 
@@ -102,8 +127,11 @@
                     <h3 class="govuk-heading-s">Main features</h3>
 
                     <ol class="govuk-list">
-                        <li>20. Shared data</li>
-                        <li>17. Audit trail</li>
+                        <li>04. {{ data['features']['04'] }}</li>
+                        <li>01. {{ data['features']['01'] }}</li>
+                        <li>10. {{ data['features']['10'] }}</li>
+                        <li>02. {{ data['features']['02'] }}</li>
+
                     </ol>
 
                     <br />
@@ -111,11 +139,10 @@
                     <h3 class="govuk-heading-s">Other features</h3>
 
                     <ol class="govuk-list">
-                        <li>12. Use of external data sources</li>
-                        <li>03. Dashboard</li>
-                        <li>06. Trusted data</li>
-                        <li>09. Prompt user to complete profile (PYI)</li>
-                        <li>18. Saved documents</li>
+                        <li>03. {{ data['features']['03'] }}</li>
+                        <li>24. {{ data['features']['24'] }}</li>
+                        <li>18. {{ data['features']['18'] }}</li>
+                        <li>07. {{ data['features']['07'] }}</li>
                     </ol>
 
 
@@ -128,13 +155,13 @@
 
     <div class="govuk-grid-column-one-third" id="research-summary-page__one-third" style="margin-top: 100px;">
         <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Research Dates</p>
-        <p class="govuk-body">02-Dec-2021 - 03-Dec-2021</p>
+        <p class="govuk-body">08-Dec-2021 - 09-Dec-2021</p>
         <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Participants</p>
         <p class="govuk-body">6</p>
         <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 10px;">Documents</p>
         <ul class="govuk-list govuk-list--bullet" style="list-style: none; padding-left: 0px;">
             <li> <img src="../../../public/images/miro.svg" style="height: 24px;">&nbsp;
-                <a href="https://miro.com/app/board/o9J_llYz0fk=/?moveToWidget=3458764514118634425&cot=14" target="_blank">
+                <a href="https://miro.com/app/board/o9J_llYz0fk=/?moveToWidget=3458764514582896003&cot=14" target="_blank">
                     Miro board
                 </a>
             </li>

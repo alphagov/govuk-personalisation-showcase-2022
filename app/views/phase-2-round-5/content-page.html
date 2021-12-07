@@ -1,0 +1,54 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% set serviceName %}
+
+{% endset%}
+
+
+{% block beforeContent %}
+{% include "./includes/personalised.html" %}
+<a href="/round-3/childcare-step-by-step" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">15 hours free childcare for 3 and 4-year-olds</h1>
+
+        <p>All 3 to 4-year-olds in England can get 570 free hours per year. It’s usually taken as 15 hours a week for 38 weeks of the year, but you can choose to take fewer hours over more weeks, for example. </p>
+
+        <div class="govuk-inset-text">
+            Some 3 to 4-year-olds are eligible for 30 hours free childcare a week. <a href="#">Check if you’re eligible and find out how to apply</a>.
+        </div>
+
+        <p>The free early education and childcare:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>must be with an <a href="/round-3/help-with-childcare-costs">approved childcare provider</a></li>
+            <li>stops when your child starts in reception class (or reaches compulsory school age, if later)</li>
+        </ul>
+
+        <p>You may have to pay for extra costs like meals, nappies or trips.</p>
+
+        <p>You can get it from the term after your child’s 3rd birthday.</p>
+
+        <p>Contact your childcare provider or local council to find out more.</p>
+
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "round-3/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

@@ -66,42 +66,6 @@
 
 <body class="mainstream homepage js-enabled" data-new-gr-c-s-loaded="9.29.0">
 
-    <!-- Cookie banner
-    <div id="global-cookie-message" class="gem-c-cookie-banner govuk-clearfix" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="" style="display: none;">
-        <div class="govuk-cookie-banner js-banner-wrapper" role="region" aria-label="Cookies on GOV.UK">
-            <div class="gem-c-cookie-banner__message govuk-cookie-banner__message govuk-width-container">
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
-                        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on GOV.UK</h2>
-                        <div class="govuk-cookie-banner__content">
-                            <p class="govuk-body">We use some essential cookies to make this website work.</p>
-                            <p class="govuk-body">We’d like to set additional cookies to understand how you use GOV.UK,
-                                remember your settings and improve government services.</p>
-                            <p class="govuk-body">We also use cookies set by other sites to help us deliver content from
-                                their services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="govuk-button-group">
-
-                    <button class="gem-c-button govuk-button" type="submit" data-module="gem-track-click" data-accept-cookies="true" data-track-category="cookieBanner" data-track-action="Cookie banner accepted" data-cookie-types="all" style="display: block;">Accept additional cookies</button>
-
-                    <button class="gem-c-button govuk-button" type="submit" data-module="gem-track-click" data-reject-cookies="true" data-track-category="cookieBanner" data-track-action="Cookie banner rejected" style="display: block;">Reject additional
-                        cookies</button>
-
-                    <a class="govuk-link" href="/help/cookies">View cookies</a>
-                </div>
-            </div>
-        </div>
-        <div class="gem-c-cookie-banner__confirmation govuk-width-container" tabindex="-1" hidden="">
-            <p class="gem-c-cookie-banner__confirmation-message" role="alert">You can <a class="govuk-link" href="/help/cookies" data-module="gem-track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked from confirmation">change your cookie settings</a>
-                at any time.</p>
-            <div class="govuk-button-group">
-                <button class="gem-c-cookie-banner__hide-button govuk-button" data-hide-cookie-banner="true" data-module="gem-track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner">Hide this message</button>
-            </div>
-        </div>
-    </div>  -->
-
     <div id="skiplink-container">
         <div>
             <a href="#content" class="skiplink govuk-link">Skip to main content</a>
@@ -139,11 +103,14 @@
         </div>
     </header>
 
-    <div id="global-header-bar"></div>
+    <!-- <div id="global-header-bar"></div> -->
 
     <div id="wrapper" class="">
 
         <main id="content" role="main">
+
+            {% include "./includes/personalised.html" %}
+
             <header class="home-top" {% if data['signing'] == "yes" %} style="background: #4c2c92;" {% else %} {% endif %}>
                 <div class="govuk-width-container home-top__inner">
                     <div class="govuk-grid-row">
@@ -151,7 +118,7 @@
                             <div class="gem-c-title gem-c-title--inverse govuk-!-margin-top-5 govuk-!-margin-bottom-3" style="margin-top: 20px;">
                                 {% if data['signing'] == "yes" %}
                                 <h1 class="gem-c-title__text ">
-                                    Welcome {{ data['full-name'] }}
+                                    Hello {{ data['full-name'] }}
                                 </h1>
                                 {% else %}
                                 <h1 class="gem-c-title__text ">
@@ -159,6 +126,7 @@
                                 </h1>
                                 {% endif %}
                             </div>
+
                             <p class="home-top__intro">The best place to find government services and information</p>
                             <p class="home-top__intro home-top__intro--simpler">Simpler, clearer, faster</p>
 
@@ -180,7 +148,24 @@
 
                             </form>
                         </div>
+                        {% if data['suggestions'] == "on" %}
+                        <div class="govuk-grid-column-one-third">
+                            <div class="home-top__links">
+                                <h2 class="home-top__links-title">Suggested tasks</h2>
+                                <ul class="home-top__links-list">
+                                    <li class="home-top__links-item"><a href="#" class="home-top__links-link">Add <b>{{ data['child-2-name'] }}</b> to your Child Benefit claim</a>
+                                    </li>
+                                    <li class="home-top__links-item"><a href="#" class="home-top__links-link">Apply for Shared Parental Leave</a></li>
+                                    <li class="home-top__links-item"><a href="#" class="home-top__links-link">Apply for passports for <b>{{ data['child-1-name'] }}</b> and <b>{{ data['child-2-name'] }}</a></li>
+                                    <li class="home-top__links-item">&nbsp;</li>
+                                    <li class="home-top__links-item"><a href="account-manage.html#suggestions" class="home-top__links-link" style="font-weight: normal;">Manage suggestions</a></li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
+
+                        {% else %}
                         <div class="govuk-grid-column-one-third">
                             <div class="home-top__links">
                                 <h2 class="home-top__links-title">Popular on GOV.UK</h2>
@@ -195,11 +180,99 @@
                                 </ul>
                             </div>
                         </div>
+                        {% endif %}
+
                     </div>
                 </div>
             </header>
-
             <div id="homepage" class="govuk-width-container">
+                {% if data['personalise-relevant'] == "on" %}
+                <br />
+                <h2 class="home-more__title">Your most used services</h2>
+                <section class="home-services" aria-labelledby="services-and-information-label" id="services-and-information">
+                    <div class="govuk-grid-row">
+                        <h2 id="services-and-information-label" class="govuk-visually-hidden">Services and information
+                        </h2>
+                        <div class="govuk-grid-column-one-third govuk-!-margin-bottom-4">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="govuk-link home-promo__link">
+                                        <a href="#" class="govuk-link">Child Benefit</a>
+                                    </h3>
+                                    <ul class="govuk-list ">
+                                        <li>
+                                            <a class="govuk-link" href="child-benefit-payment-dates.html">Child Benefit payment dates</a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="#">Report changes to Child Benefit</a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="#">Child Benefit tax calculator</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-grid-column-one-third govuk-!-margin-bottom-4">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="govuk-link home-promo__link"><a href="#" class="govuk-link">Pregnancy &amp; birth</a></h3>
+                                    <ul class="govuk-list ">
+
+                                        <li>
+                                            <a class="govuk-link" href="#">Maternity allowance</a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="#">Shared parental leave &amp; pay</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-grid-column-one-third govuk-!-margin-bottom-4">
+                            <ul class="govuk-list">
+                                <li>
+                                    <h3 class="govuk-link home-promo__link"><a href="coronavirus.html" class="govuk-link">Coronavirus (COVID-19)</a></h3>
+                                    <ul class="govuk-list ">
+                                        {% if data['personalise-info'] == "on" %}
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#recent-changes">Recent and upcoming changes for England </a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#statistics">COVID-19 statistics for {{ data['address-county'] }}</a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#bookPCR">Book a PCR test near {{ data['address-postcode'] }}</a>
+                                        </li>
+                                        {% else %}
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#recent-changes">Recent and upcoming changes for the UK </a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#statistics">COVID-19 statistics for the UK</a>
+                                        </li>
+                                        <li>
+                                            <a class="govuk-link" href="coronavirus.html#bookPCR">Book a PCR test</a>
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-grid-column-full">
+                            <br /><br />
+                            <p class="govuk-body-l">
+                                <a href="#">View all</a>
+                            </p>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                {% else %}
                 <section class="home-services" aria-labelledby="services-and-information-label" id="services-and-information">
                     <div class="govuk-grid-row">
                         <h2 id="services-and-information-label" class="govuk-visually-hidden">Services and information
@@ -295,9 +368,12 @@
 
                     </div>
                 </section>
+                {% endif %}
 
                 <hr class="home-divider" id="departments-and-policy" aria-hidden="true">
 
+                {% if data['personalise-relevant'] == "on" %}
+                {% else %}
                 <section class="departments-and-policy" aria-labelledby="departments-and-policy-label">
                     <div class="govuk-grid-row home-numbers-and-info">
                         <h2 id="departments-and-policy-label" class="govuk-visually-hidden">Departments and&nbsp;policy
@@ -340,20 +416,52 @@
                         </div>
                     </div>
                 </section>
-
+                {% endif %}
                 <section>
                     <div class="govuk-grid-row">
+                        {% if data['personalise-info'] == "on" %}
                         <div class="govuk-grid-column-one-third">
                             <a href="/coronavirus" aria-hidden="true" tabindex="-1">
-                                <img alt="" class="home-promo__image" height="400" loading="lazy" width="600" src="https://www.gov.uk/assets/frontend/homepage/covid-19-promo-stay-home-5f631a879aa33cbd5d583aef098037076e279ba4c929b4fd4833072229b78129.png">
+                                <img alt="" class="home-promo__image" height="400" loading="lazy" width="600" src="../../../public/images/bank-holidays.jpg">
                             </a>
+
                             <h3>
                                 <a href="/coronavirus" class="govuk-link home-promo__link">
-                                    Coronavirus (COVID-19)
+                                    Bank holidays in England
                                 </a>
                             </h3>
                             <p class="home-promo__text">
-                                Stay at home. Protect the NHS. Save Lives. Find out what you can and cannot do.
+                                Check the dates for bank holidays in England
+                            </p>
+                        </div>
+                        {% else %}
+                        <div class="govuk-grid-column-one-third">
+                            <a href="/coronavirus" aria-hidden="true" tabindex="-1">
+                                <img alt="" class="home-promo__image" height="400" loading="lazy" width="600" src="../../../public/images/bank-holidays.jpg">
+                            </a>
+
+                            <h3>
+                                <a href="/coronavirus" class="govuk-link home-promo__link">
+                                    Bank holidays in the UK
+                                </a>
+                            </h3>
+                            <p class="home-promo__text">
+                                Check the dates for bank holidays in England, Scotland, Wales &amp;
+                                Northern Ireland
+                            </p>
+                        </div>
+                        {% endif %}
+                        <div class="govuk-grid-column-one-third">
+                            <a href="https://covid19.nhs.uk/" aria-hidden="true" tabindex="-1">
+                                <img alt="" class="home-promo__image" height="400" width="600" src="https://www.gov.uk/assets/frontend/homepage/travel-abroad-step-by-step-1d1ecf20befbf7579ebffeef73268a370ff653475df1d2ec2b7031cc9d2a4580.png">
+                            </a>
+                            <h3>
+                                <a href="#" class="govuk-link home-promo__link">
+                                    Travel abroad: step by step
+                                </a>
+                            </h3>
+                            <p class="home-promo__text">
+                                Check what you need to do to travel internationally.
                             </p>
                         </div>
 
@@ -371,173 +479,56 @@
                             </p>
                         </div>
 
+
+                    </div>
+
+                </section>
+
+                {% if data['personalise-relevant'] == "on" %}
+                {% else %}
+                <hr class="home-divider" id="more-on-govuk" aria-hidden="true">
+                <section aria-labelledby="more-on-govuk-label">
+                    <div class="govuk-grid-row">
                         <div class="govuk-grid-column-one-third">
-                            <a href="https://covid19.nhs.uk/" aria-hidden="true" tabindex="-1">
-                                <img alt="" class="home-promo__image" height="400" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1020px) 33vw, 300px" srcset="https://www.gov.uk/assets/frontend/homepage/nhs-app--600w-c455515cf4c02ee56b3be0141217658d1f390209842898e4770867b6075f23af.jpg 600w, https://www.gov.uk/assets/frontend/homepage/nhs-app--480w-0289cc69ab921551cf45466e1d55843784f93082f5f5484c34a8721e86f2d4f3.jpg 480w, https://www.gov.uk/assets/frontend/homepage/nhs-app--320w-19f8c31633181e9443044b410202132500ca860844188c02315683207532c195.jpg 320w, https://www.gov.uk/assets/frontend/homepage/nhs-app--240w-791e8e6891482947383c59605958430f9c8fbf3c57f5daf64e1f5831d05a182b.jpg 240w, https://www.gov.uk/assets/frontend/homepage/nhs-app--170w-e4615905708d45d5e3b042c0ce1be65878489b8d8b4fcfccdd2cef2b1ef0cc40.jpg 170w" width="600" src="https://www.gov.uk/assets/frontend/homepage/nhs-app--480w-0289cc69ab921551cf45466e1d55843784f93082f5f5484c34a8721e86f2d4f3.jpg">
-                            </a>
+                            <h2 id="more-on-govuk-label" class="home-more__title">More on GOV.UK</h2>
+                        </div>
+
+                        <div class="govuk-grid-column-one-third">
+                            <h3 class="home-more__subtitle">Most active</h3>
+                            <ul class="govuk-list home-more__list">
+                                <li><a href="/jobsearch" class="govuk-link">Find a job</a></li>
+                                <li><a href="/student-finance-register-login" class="govuk-link">Log in to
+                                        student finance</a></li>
+                                <li><a href="/passport-fees" class="govuk-link">Passport fees</a></li>
+                                <li><a href="/jobseekers-allowance" class="govuk-link">Jobseeker's Allowance</a>
+                                </li>
+                                <li><a href="/council-tax-bands" class="govuk-link">Council Tax bands</a></li>
+                                <li><a href="/running-a-limited-company" class="govuk-link">Running a limited
+                                        company</a></li>
+                                <li><a href="/book-a-driving-theory-test" class="govuk-link">Driving theory
+                                        test</a></li>
+                                <li><a href="/calculate-vehicle-tax-rates" class="govuk-link">Vehicle tax
+                                        rates</a></li>
+                                <li><a href="/vehicle-tax" class="govuk-link">Renew vehicle tax</a></li>
+                                <li><a href="/vat-rates" class="govuk-link">VAT rates</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="govuk-grid-column-one-third" id="promo">
                             <h3>
-                                <a href="https://covid19.nhs.uk/" class="govuk-link home-promo__link">
-                                    Get the NHS COVID-19 app
+                                <a href="/bank-holidays" class="govuk-link home-more-promo" tabindex="-1">
+                                    <span class="home-more-promo__link-content">UK bank holidays</span>
                                 </a>
                             </h3>
-                            <p class="home-promo__text">
-                                Use the app to protect yourself and others from coronavirus.
-                            </p>
+                            <p class="home-promo__text">Check the dates for <a href="/bank-holidays" class="govuk-link">bank holidays</a> in England, Wales, Scotland and
+                                Northern Ireland.</p>
                         </div>
                     </div>
-                    <section>
-
-                        <hr class="home-divider" id="more-on-govuk" aria-hidden="true">
-
-                        <section aria-labelledby="more-on-govuk-label">
-                            <div class="govuk-grid-row">
-                                <div class="govuk-grid-column-one-third">
-                                    <h2 id="more-on-govuk-label" class="home-more__title">More on GOV.UK</h2>
-                                </div>
-
-                                <div class="govuk-grid-column-one-third">
-                                    <h3 class="home-more__subtitle">Most active</h3>
-                                    <ul class="govuk-list home-more__list">
-                                        <li><a href="/jobsearch" class="govuk-link">Find a job</a></li>
-                                        <li><a href="/student-finance-register-login" class="govuk-link">Log in to
-                                                student finance</a></li>
-                                        <li><a href="/passport-fees" class="govuk-link">Passport fees</a></li>
-                                        <li><a href="/jobseekers-allowance" class="govuk-link">Jobseeker's Allowance</a>
-                                        </li>
-                                        <li><a href="/council-tax-bands" class="govuk-link">Council Tax bands</a></li>
-                                        <li><a href="/running-a-limited-company" class="govuk-link">Running a limited
-                                                company</a></li>
-                                        <li><a href="/book-a-driving-theory-test" class="govuk-link">Driving theory
-                                                test</a></li>
-                                        <li><a href="/calculate-vehicle-tax-rates" class="govuk-link">Vehicle tax
-                                                rates</a></li>
-                                        <li><a href="/vehicle-tax" class="govuk-link">Renew vehicle tax</a></li>
-                                        <li><a href="/vat-rates" class="govuk-link">VAT rates</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="govuk-grid-column-one-third" id="promo">
-                                    <h3>
-                                        <a href="/bank-holidays" class="govuk-link home-more-promo" tabindex="-1">
-                                            <span class="home-more-promo__link-content">UK bank holidays</span>
-                                        </a>
-                                    </h3>
-                                    <p class="home-promo__text">Check the dates for <a href="/bank-holidays" class="govuk-link">bank holidays</a> in England, Wales, Scotland and
-                                        Northern Ireland.</p>
-                                </div>
-                            </div>
-                        </section>
-                    </section>
                 </section>
+                {% endif %}
             </div>
         </main>
 
-
-
-        <div class="feedback-wrapper">
-
-            <div class="gem-c-feedback" data-module="feedback">
-
-                <div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
-                    <div class="gem-c-feedback__prompt-questions js-prompt-questions">
-                        <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
-                        <!-- Maybe button exists only to try and capture clicks by bots -->
-                        <button data-track-category="yesNoFeedbackForm" data-track-action="ffMaybeClick" aria-expanded="false" style="display: none" hidden="hidden" aria-hidden="true">
-                            Maybe
-                        </button>
-
-                        <ul class="gem-c-feedback__option-list">
-                            <li class="gem-c-feedback__option-list-item">
-                                <button class="govuk-button gem-c-feedback__prompt-link js-page-is-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffYesClick">
-                                    Yes <span class="govuk-visually-hidden">this page is useful</span>
-                                </button>
-                            </li>
-                            <li class="gem-c-feedback__option-list-item">
-                                <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffNoClick" aria-controls="page-is-not-useful" aria-expanded="false">
-                                    No <span class="govuk-visually-hidden">this page is not useful</span>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-success js-prompt-success js-hidden" role="alert">
-                        Thank you for your feedback
-                    </div>
-                    <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-questions--something-is-wrong js-prompt-questions">
-                        <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-something-is-wrong" data-track-category="Onsite Feedback" data-track-action="GOV-UK Open Form" aria-controls="something-is-wrong" aria-expanded="false">
-                            There is something wrong with this page
-                        </button>
-                    </div>
-                </div>
-
-                <form action="/contact/govuk/problem_reports" id="something-is-wrong" class="gem-c-feedback__form js-feedback-form js-hidden" data-track-category="Onsite Feedback" data-track-action="GOV.UK Send Form" method="post" aria-hidden="true">
-                    <button class="govuk-button govuk-button--secondary gem-c-feedback__close gem-c-feedback__js-show js-close-form" data-track-category="Onsite Feedback" data-track-action="GOV.UK Close Form" aria-controls="something-is-wrong" aria-expanded="true">
-                        Close
-                    </button>
-
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-two-thirds">
-                            <div class="gem-c-feedback__error-summary gem-c-feedback__js-show js-hidden js-errors" tabindex="-1"></div>
-
-                            <input type="hidden" name="url" value="https://www.gov.uk/">
-
-                            <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
-                            <p id="feedback_explanation" class="gem-c-feedback__form-paragraph">Don’t include personal
-                                or financial information like your National Insurance number or credit card details.</p>
-
-
-                            <div class="govuk-form-group">
-
-                                <label for="input-4a22d2c2" class="gem-c-label govuk-label">What were you doing?</label>
-
-                                <input name="what_doing" class="gem-c-input govuk-input" id="input-4a22d2c2" type="text" aria-describedby="feedback_explanation">
-                            </div>
-
-                            <div class="govuk-form-group">
-
-                                <label for="input-523032c5" class="gem-c-label govuk-label">What went wrong?</label>
-
-                                <input name="what_wrong" class="gem-c-input govuk-input" id="input-523032c5" type="text">
-                            </div>
-
-                            <button class="gem-c-button govuk-button" type="submit">Send</button>
-
-                        </div>
-                    </div>
-                    <input type="hidden" name="javascript_enabled" value="true"><input type="hidden" name="referrer" value="unknown">
-                </form>
-
-                <form action="/contact/govuk/email-survey-signup" id="page-is-not-useful" class="gem-c-feedback__form gem-c-feedback__form--email gem-c-feedback__js-show js-feedback-form js-hidden" data-track-category="yesNoFeedbackForm" data-track-action="Send Form" method="post" aria-hidden="true">
-                    <button class="govuk-button govuk-button--secondary gem-c-feedback__close js-close-form" data-track-category="yesNoFeedbackForm" data-track-action="ffFormClose" aria-controls="page-is-not-useful" aria-expanded="true">
-                        Close
-                    </button>
-
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-two-thirds" id="survey-wrapper">
-                            <div class="gem-c-feedback__error-summary js-hidden js-errors" tabindex="-1"></div>
-
-                            <input name="email_survey_signup[survey_id]" type="hidden" value="footer_satisfaction_survey">
-                            <input name="email_survey_signup[survey_source]" type="hidden" value="/">
-
-                            <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
-                            <p id="survey_explanation" class="gem-c-feedback__form-paragraph">To help us improve GOV.UK,
-                                we’d like to know more about your visit today. We’ll send you a link to a feedback form.
-                                It will take only 2 minutes to fill in. Don’t worry we won’t send you spam or share your
-                                email address with anyone.</p>
-
-
-                            <div class="govuk-form-group">
-
-                                <label for="input-a2240fc4" class="gem-c-label govuk-label">Email address</label>
-
-                                <input name="email_survey_signup[email_address]" class="gem-c-input govuk-input" id="input-a2240fc4" type="email" autocomplete="email" aria-describedby="survey_explanation">
-                            </div>
-
-                            <button class="gem-c-button govuk-button" type="submit">Send me the survey</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 
     <footer class="group js-footer" id="footer" role="contentinfo">
