@@ -57,53 +57,133 @@
     </div>
 
     <div class="govuk-grid-column-three-quarters">
-        <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Your settings</h1>
+        <h1 class="gem-c-heading govuk-heading-xl govuk-!-margin-bottom-4">Your settings</h1>
 
         <p>View and manage your account settings.</p>
 
         <div id="manage-account" class="accounts-panel">
-            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Account features </h2>
+            <h2 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Account features </h2>
             <ul class="govuk-list">
-                <li><label class="switch" style="float: right;">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label> Autofill forms<br />
-                    <p class="govuk-body-s">Prefill forms using information stored in your account, saving you time
+                <li>
+                    <h3 class="govuk-heading-m">Autofill forms</h3>
+                    <p>Prefill forms using information stored in your account </p>
+                    <form id="autofilltoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="autofill" name="autofill" type="radio" value="on" {{ checked("autofill", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="autofill">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="autofill-2" name="autofill" type="radio" value="off" {{ checked("autofill", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="autofill-2">
+                                        Off
+                                    </label>
+                                </div>
 
-                    </p>
-                </li>
-                <li><label class="switch" style="float: right;">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label> Personalisation<br />
-                    <p class="govuk-body-s">See personalised pages on GOV.UK based on information saved in your account
-                    </p>
-                </li>
-                <li><label class="switch" style="float: right;">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label> Recommendations (coming soon)<br />
-                    <p class="govuk-body-s">See suggested government services and articles based on your account activity</p>
-                </li>
-                {% if data['employer-connection-status'] == "connected" %}
-                <li><label class="switch" style="float: right;">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label> Automatic reconfirmation to The Childcare Service <br />
-                    <p class="govuk-body-s">Enable your GOV.UK account to automatically reconfirm your details every 3 months</p>
-                </li>
-                {% else %}
-                {% endif %}
+                            </div>
+                        </div>
+                    </form>
 
-                {% if data['childcare-payment-status'] == "connected" %}
-                <li><label class="switch" style="float: right;">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label> Automatic payments to your childcare provider <br />
-                    <p class="govuk-body-s">Enable automatic payments to your childcare provider when they send a bill to your account.</p>
+                    <hr>
+                    <br />
                 </li>
-                {% else %}
-                {% endif %}
+                <li>
+                    <h3 class="govuk-heading-m">Personalisation</h3>
+                    <p>Only show information relevant to me across GOV.UK
+                    </p>
+                    <form id="personaliserelevanttoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="personalise-relevant" name="personalise-relevant" type="radio" value="on" {{ checked("personalise-relevant", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="personalise-relevant">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="personalise-relevant-2" name="personalise-relevant" type="radio" value="off" {{ checked("personalise-relevant", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="personalise-relevant-2">
+                                        Off
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <p>Use my information to make dates, locations and amounts relevant to me
+                    </p>
+                    <form id="personaliserelevanttoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="personalise-info" name="personalise-info" type="radio" value="on" {{ checked("personalise-info", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="personalise-info">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="personalise-info-2" name="personalise-info" type="radio" value="off" {{ checked("personalise-info", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="personalise-info-2">
+                                        Off
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                    <br />
+                </li>
+                <li>
+                    <h3 class="govuk-heading-m">Recommendations</h3>
+                    <p>Suggest services and benefits that I may be eligible for</p>
+                    <form id="suggestservicestoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="suggest-services" name="suggest-services" type="radio" value="on" {{ checked("suggest-services", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="suggest-services">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="suggest-services-2" name="suggest-services" type="radio" value="off" {{ checked("suggest-services", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="suggest-services-2">
+                                        Off
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                    <p>Suggest tasks I may wish to complete
+                    </p>
+                    <form id="suggesttasksstoggle" method="post" action="">
+                        <div class="govuk-form-group">
+                            <div class="govuk-radios govuk-radios--small govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="suggest-tasks" name="suggest-tasks" type="radio" value="on" {{ checked("suggest-tasks", "on") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="suggest-tasks">
+                                        On
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="suggest-tasks-2" name="suggest-tasks" type="radio" value="off" {{ checked("suggest-tasks", "off") }} onchange="this.form.submit()">
+                                    <label class="govuk-label govuk-radios__label" for="suggest-tasks-2">
+                                        Off
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </li>
+
             </ul>
         </div>
         <br>
@@ -181,6 +261,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}
