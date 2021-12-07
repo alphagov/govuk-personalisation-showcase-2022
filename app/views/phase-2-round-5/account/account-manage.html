@@ -67,9 +67,35 @@
             <ul class="govuk-list">
                 <li>
                     <h3 id="notifications" class="govuk-heading-m">Notifications</h3>
-                    <p>Manage how you want to be notified about </p>
+                    <p>Manage how you want to be notified. </p>
                     <form id="notifytoggle" method="post" action="">
+
                         <div class="govuk-form-group">
+
+                            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="notify" name="notify" type="checkbox" value="email">
+                                    <label class="govuk-label govuk-checkboxes__label" for="notify">
+                                        Email
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="notify-2" name="notify" type="checkbox" value="text" checked>
+                                    <label class="govuk-label govuk-checkboxes__label" for="notify-2">
+                                        Text message
+                                    </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="notify-3" name="notify" type="checkbox" value="whatsapp">
+                                    <label class="govuk-label govuk-checkboxes__label" for="notify-3">
+                                        WhatsApp
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="govuk-form-group">
                             <div class="govuk-radios govuk-radios--small govuk-radios--inline">
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="notify" name="notify" type="radio" value="email" {{ checked("notify", "email") }} onchange="this.form.submit()">
@@ -85,7 +111,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
                     </form>
 
                     <hr>
