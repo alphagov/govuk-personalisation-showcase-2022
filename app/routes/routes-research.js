@@ -9,8 +9,8 @@ function loadJSONFromFile(fileName, path = 'app/data/') {
     return JSON.parse(jsonFile) // Return JSON as object
 }
 
-// UPDATE URLS AND INDEX TO MATCH FEATURE ID
-router.get('/research/', function (req, res) {
+// 
+router.get('/', function (req, res) {
 
     // pull in JSON data file if someone jumps directly to this page
     if (!req.session.data['rdd']) {
@@ -19,33 +19,26 @@ router.get('/research/', function (req, res) {
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
 
-    let fid = req.session.data.rdd.features.fid
-    let name = req.session.data.rdd.features.name
-
+    // calculate number of features
     let total = req.session.data.rdd.features.length
+    console.log('Feature total is: ' + req.session.data.rdd.features.length)
 
-    return res.render('research/index', {
-        'fid': fid,
-        'name': name,
-        'total': total
-    })
-})
+    // create some empty arrays that we 'll pass into nunjucts
+    let names = []
+    let fids = []
 
-// UPDATE URLS AND INDEX TO MATCH FEATURE ID
-router.get('/research/features/', function (req, res) {
-
-    // pull in JSON data file if someone jumps directly to this page
-    if (!req.session.data['rdd']) {
-        let idvFile = 'rdd.json'
-        let path = 'app/data/'
-        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    // loop though the features and populate the arrays
+    for (i = 0; i < total; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
     }
+    // that should give the 4 names in array form
+    console.log('List of feature names: ' + names)
 
-    let total = req.session.data.rdd.features.length
-
-    return res.render('research/features/index', {
-        'fid': fid,
-        'name': name,
+    //return these
+    return res.render('index.html', {
+        'fids': fids,
+        'names': names,
         'total': total
     })
 })
@@ -94,6 +87,5 @@ router.get('/research/features/01', function (req, res) {
         'relatedfeatures': relatedfeatures
     })
 })
-
 
 module.exports = router

@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="../index.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+<a href="../" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -41,11 +41,9 @@
 <div class="govuk-grid-row">
     <div id="features" class="govuk-grid-column-full">
         <h2 class="govuk-heading-l">{% include "../research/includes/research-section-2.html" %}</h2>
-        <ul class="govuk-list">
-            {% for i in range(1, data.rdd.features.length) -%}
-            <li>
-                <a href="features/{{ data.rdd.features[i].fid }}">{{ data.rdd.features[i].fid }}. {{ data.rdd.features[i].name }}</a>
-            </li>
+        <ul class="govuk-list govuk-list--bullet">
+            {% for i in range(1, total) -%}
+            <li><a href="/research/feature/{{ fids[i] }}">{{ names[i] }}</a></li>
             {%- endfor %}
         </ul>
     </div>
