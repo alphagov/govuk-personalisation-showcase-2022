@@ -1,0 +1,139 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "includes/auth-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "includes/auth-name.html" %}
+{% endset%}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+        <nav aria-label="Account management">
+            <ul class="accounts-menu">
+                <li class="accounts-menu__item">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" aria-current="page" href="index.html">Your account</a>
+                </li>
+
+                <li class="accounts-menu__item">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" aria-current="page" href="../../phase-2-round-5/account/account-manage-data.html">Your data</a>
+                </li>
+
+                <li class="accounts-menu__item accounts-menu__item--current" style="margin-left: 0px;">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="#" style="padding-left: 15px;">Your documents</a>
+                    <br />
+                    <ul class="govuk-list" style="padding-left: 14px;">
+                        <br />
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#saved-documents">ID documents</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#saved-correspondence">Saved correspondence</a></p>
+                        </li>
+                        <li>
+                            <p class="govuk-body-s">
+                                <a class="govuk-link govuk-link--no-underline" href="#saved-documents-other">Other saved documents</a></p>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="accounts-menu__item ">
+                    <a class="accounts-menu__link govuk-link govuk-link--no-visited-state" href="../../phase-2-round-5/account/account-manage.html">Your settings</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="gem-c-heading govuk-heading-l govuk-!-margin-bottom-4">Your documents</h1>
+
+        <p>Manage your saved documents.</p>
+
+        <div id="saved-documents" class="accounts-panel govuk-!-margin-bottom-8">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">ID documents</h2>
+
+            <p>You can upload ID documents (such as your passport or driving licence), to make it easier to attach to forms and applications.</p>
+
+            <br />
+
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    {% if data['PYI'] == "completed" %}
+                    <h3 class="govuk-heading-s">Passport</h3>
+                    <img src="../../../../public/images/passport.jpg" style="max-width: 100%;"><br />
+                    {% include "../includes/verified.html" %} <br />
+                    <a href="#" style="color: #d4351c;">Delete</a>
+                    <br /><br /><br />
+                    {% else %}
+                    {% endif %}
+
+                </div>
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <h3 class="govuk-heading-s">Driving licence</h3>
+                    <p>Not uploaded</p>
+                    <br /><br /><br />
+
+                </div>
+
+                <div class="govuk-grid-column-one-quarter">
+
+                    <h3 class="govuk-heading-s">Birth certificate</h3>
+                    <p>Not uploaded</p>
+                    <br /><br /><br />
+
+                </div>
+            </div>
+
+            <div class="govuk-form-group" style="padding: 10px; background: #f0f0f0;">
+                <label class="govuk-label" for="file-upload-1">
+                    Upload an ID document
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+        </div>
+
+        <div id="saved-correspondence" class="accounts-panel govuk-!-margin-bottom-8">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Saved correspondence</h2>
+
+            <p>Copies of letters you have been sent from Government services, as well as telephone transcripts will be added here.</p>
+
+        </div>
+
+        <div id="saved-documents-other" class="accounts-panel govuk-!-margin-bottom-8">
+
+            <h2 class="gem-c-heading govuk-heading-m   govuk-!-margin-bottom-4">Other saved documents</h2>
+
+            <p>You can save any other relevant documents to your {% include "includes/auth-name.html" %}.</p>
+
+            <p>These documents will not be visible to anybody else.</p>
+
+            <div class="govuk-form-group" style="padding: 10px; background: #f0f0f0;">
+                <label class="govuk-label" for="file-upload-1">
+                    Upload an ID document
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

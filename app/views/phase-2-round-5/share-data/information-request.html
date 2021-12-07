@@ -1,0 +1,67 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-5-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-5-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="link-accounts.html" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">
+            Review the information request
+        </h1>
+
+        {% include "../includes/share-data-request-summary.html" %}
+
+        <br />
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                You should only share information with people you trust.
+            </strong>
+        </div>
+
+        <p>If you do not recognise this request or you have any security concerns, you can <a href="#">contact us</a>.</p>
+
+        <form action="choose-data" method="POST">
+
+            <div class="govuk-form-group">
+
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+            <div class="govuk-!-padding-bottom-1"></div>
+
+        </form>
+        <!-- /. form -->
+
+        <p><a href="../account/index.html"> Go back to your {% include "includes/auth-name.html" %}</a></p>
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

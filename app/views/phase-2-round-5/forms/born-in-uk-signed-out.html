@@ -1,0 +1,30 @@
+<!-- Radio Button Group -->
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+            <!-- Yes -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="born-in-uk-1" name="born-in-uk" type="radio" value="yes" {% if data['born-in-uk'] == "yes"  %} {{ checked("born-in-uk", "yes") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="born-in-uk-1">
+                    Yes
+                </label>
+            </div>
+            <!-- No -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="born-in-uk-2" name="born-in-uk" type="radio" value="no" {% if data['born-in-uk'] == "no"  %} {{ checked("born-in-uk", "no") }} {% else %} {% endif %}>
+                <label class="govuk-label govuk-radios__label" for="born-in-uk-2">
+                    No
+                </label>
+            </div>
+
+        </div> <!-- /. govuk-radios -->
+
+        <!-- town of birth -->
+        <div class="govuk-form-group">
+            <br /><br />
+            <label class="govuk-label" for="town-of-birth"><b>Town of birth</b></label>
+            <div id="date-of-birth-hint" class="govuk-hint">As written on your birth certificate.</div>
+            <input class="govuk-input govuk-!-width-two-thirds" id="town-of-birth" name="town-of-birth" type="text" spellcheck="false" value="{{ data['town-of-birth'] }}">
+        </div> <!-- /. form-group -->
+    </fieldset> <!-- /. govuk-fieldset -->
+</div> <!-- /. form-group -->

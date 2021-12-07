@@ -1,0 +1,37 @@
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pay-source" name="pay-source" type="radio" value="self" data-aria-controls="conditional-pay-source">
+                <label class="govuk-label govuk-radios__label" for="pay-source">
+                    I will provide my yearly pay
+                </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-pay-source">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="parent-work-pay">
+                        Yearly pay amount
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="parent-work-pay" name="parent-work-pay" type="numeric" spellcheck="false"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pay-source-2" name="pay-source" type="radio" value="employer" data-aria-controls="conditional-pay-source-2">
+                <label class="govuk-label govuk-radios__label" for="pay-source-2">
+                    I want my employer to provide my yearly pay
+                </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-pay-source-2">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="employer-name">
+                        Enter employer name or company number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="employer-name" name="employer-name" type="text"></div>
+
+            </div>
+
+        </div>
+
+    </fieldset>
+</div>

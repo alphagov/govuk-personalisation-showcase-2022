@@ -1,0 +1,35 @@
+<!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-1" name="employment-status" type="radio" value="Employed" {% if data['employment-status'] == "Employed" %} {{ checked("employment-status", "Employed") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="paid-work-1">
+                                Employed
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-2" name="employment-status" type="radio" value="Self-employed" {% if data['employment-status'] == "Self-employed" %} {{ checked("employment-status", "Self-employed") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="paid-work-2">
+                                Self-employed
+                            </label>
+                        </div>
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-3" name="employment-status" type="radio" value="Both employed and self-employed" {% if data['employment-status'] == "Both employed and self-employed" %} {{ checked("employment-status", "Both employed and self-employed") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="paid-work-3">
+                                Both employed and self-employed
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="paid-work-4" name="employment-status" type="radio" value="Unemployed" {% if data['employment-status'] == "Unemployed" %} {{ checked("employment-status", "Unemployed") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="paid-work-4">
+                                Unemployed
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->

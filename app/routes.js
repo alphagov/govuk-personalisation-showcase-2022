@@ -3,9 +3,9 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// pull in research routes
+// pull in other routes
 router.use('/', require('./routes/routes-research.js'))
-
+router.use('/', require('./routes/routes-p2-r5.js'))
 
 //ROUND 1
 // childcare calc account logic
@@ -1644,7 +1644,6 @@ router.post('/phase-2-round-4/sign-in-or-create-account-form-3', function (req, 
     }
 })
 
-// round 2 Resume application - NOT USED
 // sign-in-to-resume.html [account check]
 router.post('/phase-2-round-4/check-account-resume', function (req, res) {
     email = req.session.data['email-address']

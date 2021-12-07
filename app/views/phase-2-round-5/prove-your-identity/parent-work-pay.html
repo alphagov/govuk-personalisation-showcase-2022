@@ -1,0 +1,74 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-3-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-3-name.html" %}
+{% endset%}
+
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="employment-start.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="spinner-pyi-results-2" method="POST">
+            <h1 class="govuk-heading-xl">How much do you get paid per year?</h1>
+
+            <p class="govuk-body">Tell us how much you earn per year. You can either enter your yearly amount manually or connect to your employer so they can provide it automatically.<p>
+
+
+
+                    {% if data['signing'] == "yes" %}
+                    {% include "../forms/parent-work-pay-signed-in.html" %}
+                    {% else %}
+                    {% include "../forms/parent-work-pay-signed-out.html" %}
+                    {% endif %}
+                    <input id="childcare-calc-started" name="childcare-calc-status" value="completed" type="hidden">
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                How does this work?
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                            <p>Once you've found your employer you can link them to your GOV.UK account, so they can provide your annual pay for you.</p>
+
+                            <p>Your pay will be automatically provided by your employer’s payroll, so {% include "../includes/service-3-name.html" %} will always have your most recent pay details.</p>
+
+                            <p>You can change the sharing permissions on this information in your <a href="../account/index.html">account dashboard</a>.</p>
+
+                        </div>
+                    </details>
+
+                    <br />
+
+                    <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+
+        <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

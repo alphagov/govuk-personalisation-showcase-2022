@@ -1,0 +1,64 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-3-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-3-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+<a href="born-in-uk" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form action="child-1-details" method="POST">
+            <h1 class="govuk-heading-xl">Do you have a partner that you live with?</h1>
+            <!--  <p class="govuk-body"><p> -->
+
+            <!-- Radio Button Group -->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios">
+                        <!-- Yes -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-1" name="partner-check" type="radio" value="yes" {% if data['partner-check'] == "yes" %} {{ checked("partner-check", "yes") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="partner-check-1">
+                                Yes
+                            </label>
+                        </div>
+                        <!-- No -->
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="partner-check-2" name="partner-check" type="radio" value="no" {% if data['partner-check'] == "no" %} {{ checked("partner-check", "no") }} {% else %} {% endif %}>
+                            <label class="govuk-label govuk-radios__label" for="partner-check-2">
+                                No
+                            </label>
+                        </div>
+                    </div> <!-- /. govuk-radios -->
+                </fieldset> <!-- /. govuk-fieldset -->
+            </div> <!-- /. form-group -->
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+        </form> <!-- /. form -->
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}

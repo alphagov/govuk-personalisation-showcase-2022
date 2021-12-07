@@ -1,0 +1,348 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">{% include "../includes/service-1-name.html" %} - check your answers</h1>
+
+        <p>Please check your answers before sending your application.</p>
+
+        <br />
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+
+                <h3>1. Personal details</h3>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ data['full-name'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['date-of-birth-day'] %}
+                    {{ data['date-of-birth-day'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-month'] %}
+                    {{ data['date-of-birth-month'] }} -
+                    {% else %}
+
+                    {% endif %}
+                    {% if data['date-of-birth-year'] %}
+                    {{ data['date-of-birth-year'] }}
+                    {% else %}
+
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {% if data['address-line-1'] %}
+                    {{ data['address-line-1'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-line-2'] %}
+                    {{ data['address-line-2'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-town'] %}
+                    {{ data['address-town'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-county'] %}
+                    {{ data['address-county'] }} <br />
+                    {% else %}
+                    {% endif %}
+
+                    {% if data['address-postcode'] %}
+                    {{ data['address-postcode'] }} <br />
+                    {% else %}
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Contact details
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['email-address'] }}<br />
+                    {{ data['phone-number'] }}
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Place of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['town-of-birth'] }}
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Do you live with your partner?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['partner-check'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <br />
+                <h3>2. Your child</h3>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Child details
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {% if data['child-1-name'] %}
+                    <p><b>Full name:</b> <br />{{ data['child-1-name'] }}</p>
+                    <p><b>Date of birth:</b> <br />
+                        {{ data['child-1-date-of-birth-day'] }}/{{ data['child-1-date-of-birth-month'] }}/{{ data['child-1-date-of-birth-year'] }}
+                    </p>
+                    <p><b>Gender:</b> <br />{{ data['child-gender'] }}</p>
+                    <p><b>Birth certificate number:</b> <br />{{ data['child-birth-cert-number'] }}</p>
+                    <p><b>Child/parent relationship:</b> <br />{{ data['child-relationship'] }}</p>
+                    {% else %}
+                    {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Childcare provider details
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    <p> <b>Name: </b><br />{{ data['childcare-provider-name'] }} </p>
+                    <p> <b>Registration number:<br /> </b>{{ data['childcare-provider-reg'] }} </p>
+                    <p> <b>Contact number:<br /> </b>{{ data['childcare-provider-phone-number'] }} </p>
+
+                    <p> <b>Address:<br /> </b>{% if data['childcare-provider-address-line-1'] %}
+                        {{ data['childcare-provider-address-line-1'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-line-2'] %}
+                        {{ data['childcare-provider-address-line-2'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-town'] %}
+                        {{ data['childcare-provider-address-town'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-county'] %}
+                        {{ data['childcare-provider-address-county'] }} <br />
+                        {% else %}
+                        {% endif %}
+
+                        {% if data['childcare-provider-address-postcode'] %}
+                        {{ data['childcare-provider-address-postcode'] }} <br />
+                        {% else %}
+                        {% endif %}
+                    </p>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <br />
+                <h3>3. Employment / income</h3>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    National Insurance number
+                </dt>
+                <dd class="govuk-summary-list__value">
+
+                    {{ data['NIN'] }} <br />
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Employment status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['employment-status'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Employment start date
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['employment-start-month'] }}-{{ data['employment-start-year'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Are you on any of these types of leave or pay?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['employment-leave'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Weekly pay<br />
+                    {% if data['pay-source'] == "self" %}
+                    <p class="govuk-body-s">Self declared</p>
+                    {% else %}
+                    <p class="govuk-body-s">Provided by employer</p>
+                    {% endif %}
+
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">{{ data['parent-work-pay'] }}</p>
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+
+                    <a href="#">Change</a>
+                </dd>
+            </div>
+
+
+        </dl>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <p>By submitting this application you’re confirming that, as far as you know, the details you’re providing are correct.</p>
+
+        <br />
+
+        <form class="form" action="consent" method="post">
+
+            <div class="govuk-form-group">
+
+                <input class="govuk-input" id="appcomplete" name="appcomplete" type="hidden" value="yes">
+
+
+                <button class="govuk-button no-mar-bot" data-module="govuk-button">
+                    Accept and send
+                </button>
+
+            </div>
+        </form>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

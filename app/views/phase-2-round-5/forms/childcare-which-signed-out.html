@@ -1,0 +1,38 @@
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+        <div id="waste-hint" class="govuk-hint">
+            Select all that apply.
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            {% if data['child-1-name'] %}
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="child-1-cared" name="child-1-cared" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="child-1-cared">
+                    {{ data['child-1-name'] }}
+                </label>
+            </div>
+            {% else %}
+            {% endif %}
+            {% if data['child-2-name'] %}
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="child-2-cared" name="child-2-cared" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="child-2-cared">
+                    {{ data['child-2-name'] }}
+                </label>
+            </div>
+            {% else %}
+            {% endif %}
+            {% if data['child-3-name'] %}
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="child-3-cared" name="child-3-cared" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="child-3-cared">
+                    {{ data['child-3-name'] }}
+                </label>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
+
+    </fieldset>
+</div>

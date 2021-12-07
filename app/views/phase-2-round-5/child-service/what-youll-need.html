@@ -1,0 +1,69 @@
+{% extends "layout_phase-2-round-5.html" %}
+
+{% block pageTitle %}
+{% include "../includes/service-1-name.html" %}
+{% endblock %}
+
+{% set serviceName %}
+{% include "../includes/service-1-name.html" %}
+{% endset%}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+{% block beforeContent %}
+
+<a href="start" class="govuk-breadcrumbs__link govuk-back-link">Back</a>
+
+
+<!-- {% include "../includes/childcare-step-by-step-breadcrumb.html" %} -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">What you’ll need</h1>
+
+        <p>Check if you are eligible for up to 30 free hours of childcare a week and Tax-Free Childcare for each child.</p>
+        <p>You’ll need to know:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your working hours and income</li>
+            <li>the working hours and income for your partner (if you have one)</li>
+        </ul>
+        <p>You’ll also need information about your children, including:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>their names</li>
+            <li>their dates of birth</li>
+            <li>your likely weekly or monthly approved childcare costs</li>
+            <li>any disability benefits they get</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Tax credits and Universal Credit</h2>
+        <p>If you already get tax credits or are eligible to make a <a href="https://www.gov.uk/working-tax-credit">new claim for tax credits</a> you can use the calculator to find out how much you could claim for childcare.</p>
+        <p>If you are not eligible to continue claiming tax credits or make a new claim, you may need to check separately if you are eligible to <a href="/phase-2-round-5/universal-credit"> get help with childcare costs using Universal Credit</a>.</p>
+
+        <br />
+        <a href="address"><button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button></a>
+
+        <br />
+
+    </div> <!-- /. govuk-grid-column-two-thirds -->
+
+    <div class="govuk-grid-column-one-third">
+        {% include "phase-2-round-5/includes/childcare-side-panel-control.html" %}
+    </div>
+
+</div> <!-- /. govuk-grid-row -->
+
+{% endblock %}
