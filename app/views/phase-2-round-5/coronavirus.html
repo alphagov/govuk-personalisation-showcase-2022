@@ -88,7 +88,7 @@ Coronavirus (COVID-19)
 
         <h2 id="recent-changes" class="govuk-heading-m">Recent and upcoming changes</h2>
 
-        {% if data['personalise-info'] == "on" %}
+        {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
         <div class="govuk-inset-text  personalised-inset">
             <p>For {{ data['address-town'] }} and {{ data['address-county'] }}</p>
         </div>
@@ -220,7 +220,7 @@ Coronavirus (COVID-19)
 
         </div>
         <br />
-        {% if data['personalise-info'] == "on" %}
+        {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
         <p id="bookPCR" class="govuk-heading-s">
             <a class="govuk-link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/">Book a test</a>
         </p>
@@ -245,7 +245,7 @@ Coronavirus (COVID-19)
             <a class="govuk-link" href="https://www.nhs.uk/conditions/coronavirus-covid-19/coronavirus-vaccination/">COVID-19 vaccination</a>
         </p>
 
-        {% if data['personalise-info'] == "on" %}
+        {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
         <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak">
             <p>Get your COVID-19 vaccination including booster dose, read about how vaccinations work and what happens when you have one.</p>
             <p><a href="#">Book your COVID-19 vaccination booster dose</a></p>
@@ -391,7 +391,7 @@ Coronavirus (COVID-19)
                     <p>Content goes here</p>
                 </div>
             </div>
-            {% if data['personalise-relevant'] == "on" %}
+            {% if data['signing'] == "yes" and data['personalise-relevant'] == "on" %}
             {% else %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
@@ -426,7 +426,7 @@ Coronavirus (COVID-19)
                     <p>Content goes here</p>
                 </div>
             </div>
-            {% if data['personalise-relevant'] == "on" %}
+            {% if data['signing'] == "yes" and data['personalise-relevant'] == "on" %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -509,7 +509,7 @@ Coronavirus (COVID-19)
 
         <h2 id="statistics" class="govuk-heading-m">UK COVID-19 statistics</h2>
 
-        {% if data['personalise-info'] == "on" %}
+        {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
         <div class="govuk-inset-text  personalised-inset">
             <p>Show statistics for: <a href="#statistics">{{ data['address-town'] }}</a>, <a href="#statistics">{{ data['address-county'] }}</a> </p>
         </div>
@@ -613,7 +613,7 @@ Coronavirus (COVID-19)
 
 <div class="govuk-grid-row" style="border-top: solid 2px #0b0c0c; padding-top: 40px;">
 
-    {% if data['personalise-info'] == "on" %}
+    {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
     <div class="govuk-grid-column-full personalised-inset">
 
         <section class="covid__topic-wrapper" style="padding: 40px;">
