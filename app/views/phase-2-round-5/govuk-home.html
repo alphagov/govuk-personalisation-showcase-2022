@@ -186,7 +186,7 @@
                 </div>
             </header>
             <div id="homepage" class="govuk-width-container">
-                {% if data['personalise-relevant'] == "on" %}
+                {% if data['signing'] == "yes" and data['personalise-relevant'] == "on" %}
                 <br />
                 <h2 class="home-more__title">Your most used services</h2>
                 <section class="home-services" aria-labelledby="services-and-information-label" id="services-and-information">
@@ -372,7 +372,7 @@
 
                 <hr class="home-divider" id="departments-and-policy" aria-hidden="true">
 
-                {% if data['personalise-relevant'] == "on" %}
+                {% if data['signing'] == "yes" and data['personalise-relevant'] == "on" %}
                 {% else %}
                 <section class="departments-and-policy" aria-labelledby="departments-and-policy-label">
                     <div class="govuk-grid-row home-numbers-and-info">
@@ -419,9 +419,9 @@
                 {% endif %}
                 <section>
                     <div class="govuk-grid-row">
-                        {% if data['personalise-info'] == "on" %}
+                        {% if data['signing'] == "yes" and data['personalise-info'] == "on" %}
                         <div class="govuk-grid-column-one-third">
-                            <a href="/coronavirus" aria-hidden="true" tabindex="-1">
+                            <a href="#" aria-hidden="true" tabindex="-1">
                                 <img alt="" class="home-promo__image" height="400" loading="lazy" width="600" src="../../../public/images/bank-holidays.jpg">
                             </a>
 
@@ -436,7 +436,7 @@
                         </div>
                         {% else %}
                         <div class="govuk-grid-column-one-third">
-                            <a href="/coronavirus" aria-hidden="true" tabindex="-1">
+                            <a href="#" aria-hidden="true" tabindex="-1">
                                 <img alt="" class="home-promo__image" height="400" loading="lazy" width="600" src="../../../public/images/bank-holidays.jpg">
                             </a>
 
@@ -484,7 +484,7 @@
 
                 </section>
 
-                {% if data['personalise-relevant'] == "on" %}
+                {% if data['signing'] == "yes" and data['personalise-relevant'] == "on" %}
                 {% else %}
                 <hr class="home-divider" id="more-on-govuk" aria-hidden="true">
                 <section aria-labelledby="more-on-govuk-label">
