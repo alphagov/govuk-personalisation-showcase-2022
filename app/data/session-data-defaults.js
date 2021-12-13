@@ -189,6 +189,7 @@ module.exports = {
     prototypemenu: [
 
     ],
+    /* need to convert these features into arrays */
     features: {
         "01": "Suggested eligibility",
         "02": "Service recommendations",

@@ -486,7 +486,7 @@ router.get('/features/01', function (req, res) {
     let value = req.session.data.rdd.features[index].valueservice
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
-    let showrisk = req.session.data.rdd.features[index].showrisk
+    let showrisks = req.session.data.rdd.features[index].showrisks
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].showprototypelink
     let trello = req.session.data.rdd.features[index].trellolink
@@ -505,7 +505,7 @@ router.get('/features/01', function (req, res) {
         'value': value,
         'showuser': showuser,
         'showservice': showservice,
-        'showrisk': showrisk,
+        'showrisks': showrisks,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'trello': trello,
