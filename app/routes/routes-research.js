@@ -483,13 +483,19 @@ router.get('/features/01', function (req, res) {
     let name = req.session.data.rdd.features[index].name
     let category = req.session.data.rdd.features[index].category
     let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
     let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
-    let prototypelink = req.session.data.rdd.features[index].showprototypelink
-    let trello = req.session.data.rdd.features[index].trellolink
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
 
     let total = req.session.data.rdd.features.length
@@ -502,13 +508,81 @@ router.get('/features/01', function (req, res) {
         'category': category,
         'features': features,
         'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
         'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
-        'trello': trello,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/02', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 2
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    console.log('Related features: ' + relatedfeatures)
+
+    return res.render('features/02', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
         'total': total,
         'relatedfeatures': relatedfeatures
     })

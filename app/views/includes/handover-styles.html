@@ -56,8 +56,13 @@
     #project-name,
     #hippo-digital {
         min-height: 2vmax !important;
-        padding-top: 5vmax !important;
-        padding-bottom: 5vmax !important;
+        padding-top: 3vmax !important;
+    }
+
+
+    #hippo-digital,
+    #vision {
+        padding-bottom: 3vmax !important;
     }
 
     .team-thumbnail {
@@ -136,6 +141,24 @@
     .govuk-details__text {
         border-left: #f0f0f0 20px solid;
         margin-top: 10px;
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     @media (max-width: 40.0525em) {
