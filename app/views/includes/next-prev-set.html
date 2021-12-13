@@ -1,0 +1,6 @@
+{% set nextid = thispage | float + 1 %}
+{% set previd = thispage | float - 1 %}
+{% set nexttitle = data['hubmenu'][nextid]['title'] %}
+{% set prevtitle = data['hubmenu'][previd]['title'] %}
+{% set nextlink = data['hubmenu'][nextid]['url'] %}
+{% set prevlink = data['hubmenu'][previd]['url'] %}

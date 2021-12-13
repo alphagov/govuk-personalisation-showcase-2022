@@ -1,0 +1,62 @@
+{% extends "layout_unbranded.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - The Hub
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block content %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+
+{% include "includes/handover-styles.html" %}
+
+<style>
+    .govuk-template {
+        background-image: url(../../public/images/research/dots.svg);
+        background-size: 40%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100%;
+    }
+
+</style>
+
+<!--  Main heading -->
+<div id="project-name" class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {{ data['maintitle'] }}
+        </h1>
+    </div>
+</div>
+
+<!--  Main menu -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">Contents</h2>
+        <br />
+        {% include "includes/hubmenu.html" %}
+    </div>
+</div>
+
+<!--  Hippo Digital -->
+<div id="hippo-digital" class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 120px;"><br />
+        <p class="govuk-body-s">
+            December 2021
+        </p>
+    </div>
+</div>
+
+
+<br /><br />
+
+{% endblock %}

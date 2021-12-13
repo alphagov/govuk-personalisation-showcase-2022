@@ -1,0 +1,130 @@
+{% extends "layout_handover.html" %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+    <p class="govuk-heading-m"><b>{{ data['objectives']['objective1'] }}</b></p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <p>Number of rounds</p>
+
+    <p class="govuk-body-l">
+        6
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <p>Number of users</p>
+
+    <p class="govuk-body-l">
+        61
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <p>Features tested</p>
+
+    <p class="govuk-body-l">
+        23
+    </p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <p>We created front-end <a href="../prototypes/">prototypes</a> with account feature concepts, which were grouped by relevancy to the imagined scenario we created for each round.</p>
+
+    <p>We tested those prototypes and captured the users' understanding, perception and reactions to those features.</p>
+    <p>We were also keen to understand the users' expectations of how a feature would work from 'day 1' and how it could evolve, and how they thought features would connect and work together.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+                More about the features
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+            <p>The <a href="../features/">features section</a> compares users expectations with service expectations.</p>
+
+            <p>The risks, dependencies and complexities of joining up services across government, are captured in the <a href="#">risk log</a></p>
+
+        </div>
+    </details>
+
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+    <p>This might need to link off to separate pages as it's like to cover a lot...</p>
+    <p>We can also create/add videos</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bpk8kHcqLPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <p><i>(in draft, we’re still learning)</i>: </p>
+
+    <ol class="govuk-list govuk-list--number">
+        {% for number, need in data['needs'] %}
+        <li>{{ need }}</li>
+        {% else %}
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

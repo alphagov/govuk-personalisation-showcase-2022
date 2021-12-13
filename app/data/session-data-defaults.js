@@ -19,9 +19,179 @@ Example usage:
 
 module.exports = {
 
+    indexlink: "/index-handover",
+    maintitle: "X-Gov Services",
+    hubmenu: [
+        {
+            title: "The people",
+            url: "/people",
+            id: 1
+    },
+        {
+            title: "The problem",
+            url: "/problem",
+            id: 2
+    },
+        {
+            title: "End user research",
+            url: "/user-research",
+            id: 4
+    },
+        {
+            title: "Service research",
+            url: "/service-research",
+            id: 6
+    },
+        {
+            title: "Data",
+            url: "/data",
+            id: 3
+    },
+        {
+            title: "The 3 Pillars",
+            url: "/pillars",
+            id: 7
+    },
+        {
+            title: "Phase 3",
+            url: "/phase-3",
+            id: 8
+    },
+        {
+            title: "Glossary",
+            url: "/glossary",
+            id: 9
+    },
+        {
+            title: "Case study",
+            url: "/case-study",
+            id: 10
+    },
+        {
+            title: "Prototypes",
+            url: "/prototypes",
+            id: 11
+    },
+        {
+            title: "Features",
+            url: "/features",
+            id: 5
+    }
+             ],
+    problemmenu: [
+        {
+            title: "The problem",
+            anchor: "problem",
+    },
+        {
+            title: "The scope",
+            anchor: "scope",
+    },
+        {
+            title: "Objectives",
+            anchor: "objectives",
+    },
+        {
+            title: "The approach",
+            anchor: "approach",
+    }
+    ],
+    peoplemenu: [
+        {
+            title: "The team",
+            anchor: "team",
+    },
+        {
+            title: "Key stakeholders",
+            anchor: "stakeholders",
+    },
+        {
+            title: "Other teams",
+            anchor: "contacts",
+    }
+    ],
+    datamenu: [
+        {
+            title: "Objective",
+            anchor: "objective",
+    },
+        {
+            title: "Findings",
+            anchor: "findings",
+    },
+        {
+            title: "Workshops",
+            anchor: "workshops",
+    },
+        {
+            title: "Gap analysis",
+            anchor: "gapanalysis",
+    },
+        {
+            title: "Recommendations",
+            anchor: "recommendations",
+    },
+        {
+            title: "Data dictionary",
+            anchor: "dictionary",
+    },
+        {
+            title: "Data model",
+            anchor: "model",
+    }
+    ],
+    userresearchmenu: [
+        {
+            title: "Objective",
+            anchor: "objective",
+    },
+        {
+            title: "Methodology",
+            anchor: "methodology",
+    },
+        {
+            title: "Summary",
+            anchor: "summary",
+    },
+        {
+            title: "User needs",
+            anchor: "needs",
+    }
+    ],
+    serviceresearchmenu: [
+        {
+            title: "Objective",
+            anchor: "objective",
+    },
+        {
+            title: "Methodology",
+            anchor: "methodology",
+    },
+        {
+            title: "Summary",
+            anchor: "summary",
+    },
+        {
+            title: "User needs",
+            anchor: "needs",
+    }
+    ],
+    featuresmenu: [
+        {
+            title: "Summary",
+            anchor: "summary",
+    },
+        {
+            title: "List of all features",
+            anchor: "featurelist",
+    }
+    ],
+    prototypemenu: [
+
+    ],
     features: {
-        "01": 'Suggested eligibility',
-        "02": 'Service recommendations',
+        "01": "Suggested eligibility",
+        "02": "Service recommendations",
         "03": "Dashboard",
         "04": "Curated content",
         "05": "Legacy data",
@@ -60,10 +230,27 @@ module.exports = {
         needlabel6: 'Feel safe and secure online',
         needlabel7: 'Feel confident in the way my data is being used'
     },
+    objectives: {
+        objective1: 'Identify user benefits, expectations and challenges of a personalised experience across government, via the gov.uk account',
+        objective2: 'Identify service benefits, expectations and challenges of sharing data across government, via the gov.uk account',
+        objective3: 'Identify the gaps in current service journeys when processing data within application',
+        objective4: 'Create an indicative data model that enables data sharing across government services, via the gov.uk account',
+        objective5: 'Identify considerations and assumptions around legislation, data sharing MOUs, SLAs and Governance',
+        objective6: 'Identify gaps in technical architecture within services'
+    },
     valuetoservice: {
         valuetoservicelabel1: 'Not valuable',
         valuetoservicelabel2: 'Indifferent',
         valuetoservicelabel3: 'Somewhat valuable',
         valuetoservicelabel4: 'Valuable'
+    },
+    glossary: {
+        Banana: 'Definition goes here',
+        Apple: 'Definition goes here',
+        Cherry: 'Definition goes here',
+        Kiwi: 'Definition goes here',
+        Orange: 'Definition goes here',
+        Pear: 'Definition goes here'
     }
+
 }

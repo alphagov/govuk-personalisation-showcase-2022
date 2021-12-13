@@ -1,0 +1,183 @@
+{% extends "layout_handover.html" %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/leah.svg" class="team-thumbnail"> </p>
+    <p><b>Leah Thompson</b> <br />
+        Product <br />
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/adam.svg" class="team-thumbnail"> </p>
+    <p><b>Adam Friday</b> <br />
+        Delivery
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/jon.svg" class="team-thumbnail"> </p>
+    <p><b>Jon Maher</b> <br />
+        Design
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/sam.svg" class="team-thumbnail"> </p>
+    <p><b>Sam Robinson</b> <br />
+        Content
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/ruth.svg" class="team-thumbnail"> </p>
+    <p><b>Ruth Taylor</b> <br />
+        Research - End users
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/amy.svg" class="team-thumbnail"> </p>
+    <p><b>Amy Barrs</b> <br />
+        Research - Services
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/kasmyn.svg" class="team-thumbnail"> </p>
+    <p><b>Kasmyn Chen</b> <br />
+        Business Analysis
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/jonny.svg" class="team-thumbnail"> </p>
+    <p><b>Jonny Edwards</b> <br />
+        Data
+    </p>
+</div>
+<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
+    <p class="hide-on-mobile"><img src="../../../public/images/team/mike.svg" class="team-thumbnail"> </p>
+    <p><b>Mike Stoodley</b> <br />
+        Architecture
+    </p>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-full hide-on-mobile">
+
+    <p><img class="panel-image" src="../../../public/images/research/stakeholders.svg"></p>
+
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+    <p><a href="#">
+            <b>Leanne Cummings</b></a> <br />
+        <b>Job Title</b> <br /> Programme
+    </p>
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+    <p><a href="#"><b>
+                Robert Rankine</b></a> <br />
+        <b>Job Title</b> <br /> Programme
+    </p>
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+    <p>
+        <a href="mailto:andrew.leimdorfer@digital.cabinet-office.gov.uk"><b>Andrew Leimdorfer</b></a> <br />
+        <b>Senior Product Manager</b> <br /> GOV.UK Accounts
+    </p>
+</div>
+<div class="govuk-grid-column-full">
+
+    <p>We had weekly meetings with L/R, and did Show &amp; Tells for both GOV.UK and GDS audiences....</p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-two-thirds">
+    <p>A sentence to explain the overall landscape of this work, the other teams and how we fitted in.</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Accounts</li>
+        <li>GDX</li>
+        <li>Whole User Journeys</li>
+        <li>Manage Your Data</li>
+        <li>DI</li>
+    </ul>
+</div>
+<div class="govuk-grid-column-one-third hide-on-mobile">
+    <p><img class="panel-image" src="../../../public/images/research/venn-4.svg"></p>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+
+{% if pagemenu[6] %}
+{% block section7 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+<br /><br />
+
+<!-- PREVIOUS AND NEXT PANELS-->
+{% block prevnext %}
+<div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+
+    {% set nextid = thispage | float + 1 %}
+    {% set previd = thispage | float - 1 %}
+    {% set nexttitle = data['hubmenu'][nextid]['title'] %}
+    {% set prevtitle = data['hubmenu'][previd]['title'] %}
+    {% set nextlink = data['hubmenu'][nextid]['url'] %}
+    {% set prevlink = data['hubmenu'][previd]['url'] %}
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <div class="previous-chapter">
+            <p>Previous:</p>
+            <a href="{{ data['indexlink'] }}">Home</a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half hide-on-mobile">
+        &nbsp;
+    </div>
+    <div class="govuk-grid-column-one-quarter ">
+        <div class="next-chapter">
+            <p>Next:</p>
+            <a href="{{ nextlink }}">{{ nexttitle }}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
