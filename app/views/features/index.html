@@ -41,6 +41,12 @@
     </ul>
 </div> -->
 
+<div class="govuk-grid-column-full">
+
+    <h3 class="govuk-heading-m">by category</h3>
+
+</div>
+
 <div id="datalist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
 
     <strong class="govuk-tag govuk-tag--purple">
@@ -88,8 +94,68 @@
         {% endif %}
         {%- endfor %}
     </ul>
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-top-8">
+
+    <h3 class="govuk-heading-m">by future priority</h3>
 
 </div>
+
+<div id="lowplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+
+    <strong class="govuk-tag govuk-tag--grey">
+        Low
+    </strong>
+
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if priorities[i] === "low" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+
+</div>
+
+<div id="medplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+
+    <strong class="govuk-tag govuk-tag--blue">
+        Med
+    </strong>
+
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if priorities[i] === "med" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+
+</div>
+
+<div id="highplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+
+    <strong class="govuk-tag govuk-tag">
+        High
+    </strong>
+
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if priorities[i] === "high" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+
+</div>
+
 {% endblock %}
 {% else %}
 {% endif %}
