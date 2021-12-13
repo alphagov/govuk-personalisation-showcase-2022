@@ -44,7 +44,7 @@ Feature | {{ name }}
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/O1sZcX-BBSA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <br />  <br />
+        <br /> <br />
 
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
             <div class="govuk-accordion__section ">
@@ -273,6 +273,15 @@ Feature | {{ name }}
     <!-- End of one-third -->
 </div>
 
-<br /><br />
+{% block footlink %}
+<div id="hippo-footer" class="govuk-grid-row center">
+    <div class="govuk-grid-column-full">
+        <a href="https://hippodigital.co.uk" target="_blank"><img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 120px;"></a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% include "includes/back-to-top.html" %}
 
 {% endblock %}
