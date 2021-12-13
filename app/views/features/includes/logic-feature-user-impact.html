@@ -13,6 +13,10 @@
         <strong class="govuk-tag govuk-tag--red">
             Low impact
         </strong>
+        {% elif impact === "none" %}
+        <strong class="govuk-tag govuk-tag--grey">
+            Not tested
+        </strong>
         {% else %}
         {% endif %}
 

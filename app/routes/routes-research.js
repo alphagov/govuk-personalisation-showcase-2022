@@ -244,7 +244,6 @@ router.get('/service-research', function (req, res) {
     })
 })
 
-
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
@@ -424,19 +423,27 @@ router.get('/features', function (req, res) {
 
     // create some empty arrays that we 'll pass into nunjucts
     let names = []
+    let categories = []
+    let category = []
     let fids = []
     let pagemenu = []
     let featuresmenu = []
+    let features = []
     let titles = []
     let anchors = []
+    let priorities = []
 
     // loop though the features and populate the arrays
     for (i = 0; i < featurestotal; i++) {
-        featurestotal[i] = req.session.data.rdd.features[i]
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        categories[i] = req.session.data.rdd.features[i].category
     }
     for (i = 0; i < featurestotal; i++) {
         names[i] = req.session.data.rdd.features[i].name
         fids[i] = req.session.data.rdd.features[i].fid
+        priorities[i] = req.session.data.rdd.features[i].priority
     }
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
@@ -453,7 +460,11 @@ router.get('/features', function (req, res) {
     return res.render('features/index', {
         'featuresmenu': featuresmenu,
         'featurestotal': featurestotal,
+        'features': features,
         'fids': fids,
+        'categories': categories,
+        'category': category,
+        'priorities': priorities,
         'names': names,
         'pagemenu': pagemenu,
         'titles': titles,
@@ -462,7 +473,6 @@ router.get('/features', function (req, res) {
         'thispage': thispage
     })
 })
-
 
 // FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
 router.get('/features/01', function (req, res) {
@@ -482,6 +492,7 @@ router.get('/features/01', function (req, res) {
     let fid = req.session.data.rdd.features[index].fid
     let name = req.session.data.rdd.features[index].name
     let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
     let userneeds = req.session.data.rdd.features[index].userneeds
     let impact = req.session.data.rdd.features[index].userimpact
     let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
@@ -500,12 +511,11 @@ router.get('/features/01', function (req, res) {
 
     let total = req.session.data.rdd.features.length
 
-    console.log('Related features: ' + relatedfeatures)
-
     return res.render('features/01', {
         'fid': fid,
         'name': name,
         'category': category,
+        'priority': priority,
         'features': features,
         'userneeds': userneeds,
         'impact': impact,
@@ -544,6 +554,7 @@ router.get('/features/02', function (req, res) {
     let fid = req.session.data.rdd.features[index].fid
     let name = req.session.data.rdd.features[index].name
     let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
     let userneeds = req.session.data.rdd.features[index].userneeds
     let impact = req.session.data.rdd.features[index].userimpact
     let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
@@ -562,12 +573,1933 @@ router.get('/features/02', function (req, res) {
 
     let total = req.session.data.rdd.features.length
 
-    console.log('Related features: ' + relatedfeatures)
-
     return res.render('features/02', {
         'fid': fid,
         'name': name,
         'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/03', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 3
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/03', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/04', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 4
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/04', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/05', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 5
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/05', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/06', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 6
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/06', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/07', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 7
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/07', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/08', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 8
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/08', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/09', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 9
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/09', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/10', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 10
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/10', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/11', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 11
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/11', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/12', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 12
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/12', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/13', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 13
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/13', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/14', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 14
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/14', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/15', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 15
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/15', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/16', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 16
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/16', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/17', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 17
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/17', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/18', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 18
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/18', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/19', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 19
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/19', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/20', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 20
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/20', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/21', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 21
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/21', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/22', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 22
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/22', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/23', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 23
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/23', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/24', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 24
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/24', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/25', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 25
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/25', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/26', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 26
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/26', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/27', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 27
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/27', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/28', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 28
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/28', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/29', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 29
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/29', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/30', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 30
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/30', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/31', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 31
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/31', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/32', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 32
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/32', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
+        'features': features,
+        'userneeds': userneeds,
+        'impact': impact,
+        'confidenceuserimpact': confidenceuserimpact,
+        'value': value,
+        'confidenceservicevalue': confidenceservicevalue,
+        'complexityservice': complexityservice,
+        'confidencecomplexityservice': confidencecomplexityservice,
+        'showvideo': showvideo,
+        'showdesc': showdesc,
+        'showuser': showuser,
+        'showservice': showservice,
+        'showrisks': showrisks,
+        'showrecommendations': showrecommendations,
+        'prototypelink': prototypelink,
+        'total': total,
+        'relatedfeatures': relatedfeatures
+    })
+})
+
+// FEATURE TEMPLATE - UPDATE URLS AND INDEX TO MATCH FEATURE ID
+router.get('/features/33', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+    // this index needs match the feature ID
+    let index = 33
+
+    let features = req.session.data.features;
+
+    // grab the items we need to display and make the form work
+    let fid = req.session.data.rdd.features[index].fid
+    let name = req.session.data.rdd.features[index].name
+    let category = req.session.data.rdd.features[index].category
+    let priority = req.session.data.rdd.features[index].priority
+    let userneeds = req.session.data.rdd.features[index].userneeds
+    let impact = req.session.data.rdd.features[index].userimpact
+    let confidenceuserimpact = req.session.data.rdd.features[index].confidenceuserimpact
+    let value = req.session.data.rdd.features[index].valueservice
+    let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
+    let complexityservice = req.session.data.rdd.features[index].complexityservice
+    let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
+    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdesc = req.session.data.rdd.features[index].showdesc
+    let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservice = req.session.data.rdd.features[index].showservicefindings
+    let showrisks = req.session.data.rdd.features[index].showrisks
+    let showrecommendations = req.session.data.rdd.features[index].showrecommendations
+    let prototypelink = req.session.data.rdd.features[index].prototypelink
+    let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+
+    let total = req.session.data.rdd.features.length
+
+    return res.render('features/33', {
+        'fid': fid,
+        'name': name,
+        'category': category,
+        'priority': priority,
         'features': features,
         'userneeds': userneeds,
         'impact': impact,
