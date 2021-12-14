@@ -4,11 +4,13 @@
 {% block section1 %}
 <div class="govuk-grid-column-two-thirds">
 
-    <p>The user experience for tasks that span multiple services is fragmented.</p>
 
-    <p>Users have to understand and navigate the structure of government to work out what is relevant to them, and input the same information across services. </p>
 
-    <p>The goal of our project is to understand end user and service needs and expectations of a seamless, joined up and personalised experience for users when completing sequential tasks across more than one government service.</p>
+    <p class="govuk-body-l">The user experience for tasks that span multiple services is fragmented.</p>
+
+    <p class="govuk-body-l">Users have to understand and navigate the structure of government to work out what is relevant to them, and input the same information across services. </p>
+
+
 
 </div>
 <div class="govuk-grid-column-one-third hide-on-mobile">
@@ -22,88 +24,195 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>Explore the feasibility of joining up services across government, and discover which features within a GOV.UK account will serve a better and personalised experience for the user</p>
+    <h3 class="govuk-heading-m">Phase 1</h3>
 
-    <br />
+    <blockquote>
+        <p class="govuk-body-l">Exploring users needs, expectations and perceived benefits of a seamless, joined up and personalised experience when completing sequential tasks across more than one government service</p>
+    </blockquote>
 
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                Not in scope
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Explore technical architecture and technical solutions </li>
-                <li>Explore ownership of data</li>
-                <li>A deep dive in to legislation and governance (however we captured insights that came out of research)</li>
-            </ul>
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-full">
+
+            <h4 class="govuk-heading-s">Objectives</h4>
+
         </div>
-    </details>
 
-</div>
-<div class="govuk-grid-column-one-third  hide-on-mobile">
-
-    <p><img class="panel-image" src="../../../public/images/research/scope.svg"></p>
-
-</div>
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[2] %}
-{% block section3 %}
-<div class="govuk-grid-column-full">
-
-    <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">1</h4>
             <p>{{ data['objectives']['objective1'] }}</p>
             <br />
         </div>
 
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">2</h4>
             <p>{{ data['objectives']['objective2'] }}</p>
             <br />
         </div>
 
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">3</h4>
             <p>{{ data['objectives']['objective3'] }}</p>
             <br />
         </div>
-    </div>
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">4</h4>
             <p>{{ data['objectives']['objective4'] }}</p>
             <br />
         </div>
 
-        <div class="govuk-grid-column-one-third">
+    </div>
+
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m">Phase 2</h3>
+
+    <blockquote>
+        <p class="govuk-body-l">Exploring the feasibility of joining up services across government, and what features within a GOV.UK account will serve a better and personalised experience for the user</p>
+    </blockquote>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-full">
+
+            <h4 class="govuk-heading-s">Objectives</h4>
+
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <!-- Objective -->
+            <h4 class="govuk-heading-s">1</h4>
+            <p>{{ data['objectives']['objective1'] }}</p>
+            <br />
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <!-- Objective -->
+            <h4 class="govuk-heading-s">2</h4>
+            <p>{{ data['objectives']['objective2'] }}</p>
+            <br />
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <!-- Objective -->
+            <h4 class="govuk-heading-s">3</h4>
+            <p>{{ data['objectives']['objective3'] }}</p>
+            <br />
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <!-- Objective -->
+            <h4 class="govuk-heading-s">4</h4>
+            <p>{{ data['objectives']['objective4'] }}</p>
+            <br />
+        </div>
+
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">5</h4>
             <p>{{ data['objectives']['objective5'] }}</p>
             <br />
         </div>
 
-        <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-one-half">
             <!-- Objective -->
             <h4 class="govuk-heading-s">6</h4>
             <p>{{ data['objectives']['objective6'] }}</p>
             <br />
         </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        What's not in Phase 2 scope
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Usability testing of the account page as the scope of our work was to understand the value creating an account adds to users in regards to a joined up and personalised journey across gov.uk. Presenting the account to users would also duplicate work carried out within the Accounts Team</li>
+                        <li>Explore technical architecture and technical solutions as the Manage Your Data Team are moving in to an Alpha where they are exploring the feasibility of PODS</li>
+                        <li>Explore ownership of data as PODS is a solution that allows users to own their data </li>
+                        <li>A deep dive in to legislation and governance (however we captured insights that came out of research)</li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
 
     </div>
 
+</div>
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-full govuk-!-padding-top-4">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-heading-m">Phase 1</h3>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+            <p>Phase 1 focussed on research solely with users, this was to help us to understand what, if any, are the needs and perceived benefits of {{ data['maintitle'] }}.</p>
+            <p>In order to do this, we focussed our research on a small, linear user journey.</p>
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 center hide-on-mobile">
+
+            <img class="panel-image" src="../../../public/images/research/phase-1-journey.png">
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-heading-m">Phase 2</h3>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+            <p>Phase 2 introduced research with services.</p>
+            <p>Once we discovered that users deemed {{ data['maintitle'] }} to be of high benefit and value, we needed to understand the feasibility of joining up services and creating personalisation across government.</p>
+
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 center hide-on-mobile">
+
+            <img class="panel-image" src="../../../public/images/research/phase-2-journey.png">
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
+
+            <ol class="govuk-list govuk-list--number">
+                <li>We defined our objectives and key results as a team [link to]</li>
+                <li>We defined our features backlog to test within research lead by our research findings within phase 1, the features backlog is made up of 33 <a href="../features/">features</a></li>
+                <li>We decided on an approach that would best allow us to our features with <a href="../user-research#approach">end users</a> and <a href="../service-research#approach">services</a></li>
+                <!--    <li>Using our agreed approaches, we continued to research perceived benefits of X-Gov Services with both end users and services, whilst testing each feature within our backlog</li> -->
+                <li>Once our research concluded, we measured each feature on a matrix of user impact, value and complexity of adoption for services</li>
+                <li>Finally, we used our research findings and matrix to prioritise features to do conduct a ‘deep dive’ in to within <a href="../phase-3/">phase 3</a></li>
+
+            </ol>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% else %}
@@ -111,80 +220,18 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
-
-    <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">Life while having a baby</h3>
-            <p>Phase 1 focussed on joining up services within a predictable, linear user journey.</p>
-
-            <p>Stages of life often happen simultaneously, for example, buying a larger home or needing to learn how to drive because you’re expecting a baby. </p>
-
-            <p>Therefore, phase 2 focused on cutting across multiple user journeys, allowing us to understand and test the complex scenarios and challenges of joining up services across government.</p>
-
-            <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                        Life event criteria
-                    </span>
-                </summary>
-                <div class="govuk-details__text">
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li>A wide range of services and departments across government</li>
-                        <li>Includes users that are easy to reach for user research</li>
-                        <li>A diverse range of service users</li>
-                        <li>Service owners that are easy to access and engage with</li>
-                        <li>Has data that we are able to access</li>
-                        <li>Supports the features we want to test</li>
-                        <li>Include a broad set of data</li>
-                        <li>Spans a couple of years in a person’s life</li>
-                    </ul>
-                </div>
-            </details>
-
-        </div>
-        <div class="govuk-grid-column-one-third hide-on-mobile">
-
-            <p><img class="panel-image" src="../../../public/images/research/life-with-baby.svg"></p>
-
-        </div>
-    </div>
-</div>
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
-
-    <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-two-thirds">
-            <h3 class="govuk-heading-m">Meet Penny</h3>
-            <p>Penny and her husband got married last year and are soon to be expecting a baby. It is their first child so they’re not sure of the order in which they need to put things in place and what they are eligible for.</p>
-
-            <p>They currently live in the city but have decided that it is too hectic for a life with a newborn. They are ready to buy their first home together and have decided to do so outside of the city. Penny also realises that this means she will need to learn how to drive as amenities will no longer be on her doorstep like they are now in the city. </p>
-
-            <p>Moving to a new area means she will have to quit her job, and she isn’t sure when she will be going back to work after their baby is born so she needs to find out what support she and her husband can get throughout that period. </p>
-
-        </div>
-        <div class="govuk-grid-column-one-third hide-on-mobile">
-
-            <p><img class="panel-image" src="../../../public/images/research/penny.svg"></p>
-
-        </div>
-    </div>
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[4] %}
 {% block section5 %}
-
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[5] %}
 {% block section6 %}
-
 {% endblock %}
 {% else %}
 {% endif %}
@@ -192,7 +239,6 @@
 
 {% if pagemenu[6] %}
 {% block section7 %}
-
 {% endblock %}
 {% else %}
 {% endif %}

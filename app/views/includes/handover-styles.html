@@ -59,6 +59,22 @@
         padding-top: 3vmax !important;
     }
 
+    blockquote:before {
+        display: block;
+        padding-left: 10px;
+        content: "\201C";
+        font-size: 80px;
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        color: #7a7a7a;
+    }
+
+    blockquote {
+        margin: 0.25em 0;
+        padding: 0.35em 40px;
+        position: relative;
+    }
 
     #hippo-digital,
     #vision {
@@ -83,7 +99,7 @@
     }
 
     .panel-image:hover {
-        filter: invert(34%) sepia(64%) saturate(942%) hue-rotate(173deg) brightness(96%) contrast(92%);
+        /* filter: invert(34%) sepia(64%) saturate(942%) hue-rotate(173deg) brightness(96%) contrast(92%); */
         transition: 2.5s;
         transform: scale(1.2);
     }

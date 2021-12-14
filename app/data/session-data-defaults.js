@@ -48,6 +48,11 @@ module.exports = {
             id: 3
     },
         {
+            title: "Features",
+            url: "/features",
+            id: 5
+    },
+        {
             title: "The 3 Pillars",
             url: "/pillars",
             id: 7
@@ -71,25 +76,16 @@ module.exports = {
             title: "Prototypes",
             url: "/prototypes",
             id: 11
-    },
-        {
-            title: "Features",
-            url: "/features",
-            id: 5
     }
              ],
     problemmenu: [
         {
-            title: "The problem",
-            anchor: "problem",
+            title: "Overview",
+            anchor: "overview",
     },
         {
             title: "The scope",
             anchor: "scope",
-    },
-        {
-            title: "Objectives",
-            anchor: "objectives",
     },
         {
             title: "The approach",
@@ -108,6 +104,10 @@ module.exports = {
         {
             title: "Other teams",
             anchor: "contacts",
+    },
+        {
+            title: "Ways of working",
+            anchor: "ways-of-working",
     }
     ],
     datamenu: [
@@ -146,8 +146,8 @@ module.exports = {
             anchor: "objective",
     },
         {
-            title: "Methodology",
-            anchor: "methodology",
+            title: "Approach",
+            anchor: "approach",
     },
         {
             title: "Summary",
@@ -232,10 +232,10 @@ module.exports = {
         needlabel7: 'Feel confident in the way my data is being used'
     },
     objectives: {
-        objective1: 'Identify user benefits, expectations and challenges of a personalised experience across government, via the gov.uk account',
-        objective2: 'Identify service benefits, expectations and challenges of sharing data across government, via the gov.uk account',
+        objective1: 'Identify user benefits, expectations and challenges of a personalised experience across government, via the GOV.UK account',
+        objective2: 'Identify service benefits, expectations and challenges of sharing data across government, via the GOV.UK account',
         objective3: 'Identify the gaps in current service journeys when processing data within application',
-        objective4: 'Create an indicative data model that enables data sharing across government services, via the gov.uk account',
+        objective4: 'Create an indicative data model that enables data sharing across government services, via the GOV.UK account',
         objective5: 'Identify considerations and assumptions around legislation, data sharing MOUs, SLAs and Governance',
         objective6: 'Identify gaps in technical architecture within services'
     },

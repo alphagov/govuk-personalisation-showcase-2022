@@ -247,7 +247,7 @@ router.get('/service-research', function (req, res) {
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
-    let thispage = req.session.data.hubmenu[5].id;
+    let thispage = req.session.data.hubmenu[7].id;
 
     let pagemenu = []
 
@@ -265,7 +265,7 @@ router.get('/prototypes', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[7].id;
+    let thispage = req.session.data.hubmenu[9].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -301,7 +301,7 @@ router.get('/pillars', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[10].id;
+    let thispage = req.session.data.hubmenu[3].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -337,7 +337,7 @@ router.get('/phase-3', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[3].id;
+    let thispage = req.session.data.hubmenu[6].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -373,7 +373,7 @@ router.get('/case-study', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[6].id;
+    let thispage = req.session.data.hubmenu[8].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -419,7 +419,7 @@ router.get('/features', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.featuresmenu.length;
 
-    let thispage = req.session.data.hubmenu[8].id;
+    let thispage = req.session.data.hubmenu[5].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let names = []

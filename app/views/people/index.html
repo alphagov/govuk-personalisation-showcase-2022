@@ -85,11 +85,6 @@
         <b>Senior Product Manager</b> <br /> GOV.UK Accounts
     </p>
 </div>
-<div class="govuk-grid-column-full">
-
-    <p>We had weekly meetings with L/R, and did Show &amp; Tells for both GOV.UK and GDS audiences....</p>
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
@@ -116,7 +111,17 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
+<div class="govuk-grid-column-full">
 
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Team sprint planning sessions</li>
+        <li>Retrospectives</li>
+        <li>Fortnightly project update meetings with our <a href="#stakeholders">key stakeholders</a> </li>
+        <li>Fortnightly show and tells for GDS Leads and external teams</li>
+        <li>End user and service research playbacks to external teams</li>
+    </ul>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
