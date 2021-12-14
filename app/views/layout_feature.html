@@ -18,7 +18,7 @@ Feature | {{ name }}
             <a href="../features/" class="govuk-breadcrumbs__link">Features</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link">{% include "features/includes/logic-feature-name.html" %}</a>
+            <a class="govuk-breadcrumbs__link">{% include "features/includes/logic/logic-feature-name.html" %}</a>
         </li>
     </ol>
 </div>
@@ -29,7 +29,7 @@ Feature | {{ name }}
 {% block featureName %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
-        {% include "features/includes/logic-feature-category.html" %}
+        {% include "features/includes/logic/logic-feature-category.html" %}
     </div>
     <div class="govuk-grid-column-full govuk-!-padding-top-8">
         <h1 class="govuk-heading-xl">
@@ -179,7 +179,7 @@ Feature | {{ name }}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
                 <h3 class="govuk-heading-s">End user need</h3>
-                {% include "features/includes/logic-feature-user-need.html" %}
+                {% include "features/includes/logic/logic-feature-user-need.html" %}
             </div>
         </div>
         {% else %}
@@ -190,7 +190,7 @@ Feature | {{ name }}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
                 <h3 class="govuk-heading-s">User impact</h3>
-                {% include "features/includes/logic-feature-user-impact.html" %}
+                {% include "features/includes/logic/logic-feature-user-impact.html" %}
             </div>
         </div>
         {% else %}
@@ -202,7 +202,7 @@ Feature | {{ name }}
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
                 <h3 class="govuk-heading-s">Value to service</h3>
 
-                {% include "features/includes/logic-feature-service-value.html" %}
+                {% include "features/includes/logic/logic-feature-service-value.html" %}
 
             </div>
         </div>
@@ -214,7 +214,7 @@ Feature | {{ name }}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
                 <h3 class="govuk-heading-s">Complexity</h3>
-                {% include "features/includes/logic-feature-service-complexity.html" %}
+                {% include "features/includes/logic/logic-feature-service-complexity.html" %}
             </div>
         </div>
         {% else %}
@@ -225,7 +225,7 @@ Feature | {{ name }}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
                 <h3 class="govuk-heading-s">Risk category</h3>
-                {% include "features/includes/logic-feature-risk-category.html" %}
+                {% include "features/includes/logic/logic-feature-risk-category.html" %}
             </div>
         </div>
         {% else %}
@@ -238,7 +238,7 @@ Feature | {{ name }}
                 <h3 class="govuk-heading-s">Related features</h3>
                 <ul class="govuk-list govuk-body-s">
                     {% block relatedfeatures %}
-                    {% include "features/includes/logic-feature-related-features.html" %}
+                    {% include "features/includes/logic/logic-feature-related-features.html" %}
                     {% endblock %}
                 </ul>
             </div>
