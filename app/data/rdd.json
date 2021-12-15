@@ -151,7 +151,7 @@
             "showrisks": true,
             "showrecommendations": true,
             "prototypelink": "../prototypes/",
-            "relatedfeatures": ["21", "03", "15", "18", ],
+            "relatedfeatures": ["21", "03", "15", "18"],
             "riskcategory": "3"
     },
         {
@@ -269,8 +269,7 @@
             "name": "External data",
             "category": "data",
             "priority": "low",
-            "userneeds": ["02, "
-                03, "04", "05", "07"],
+            "userneeds": ["02", "03", "04", "05", "07"],
             "userimpact": "none",
             "confidenceuserimpact": "none",
             "valueservice": "1",
