@@ -1,0 +1,266 @@
+{% extends "layout_handover_child.html" %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+
+    <p>We designed at a point in future, where the following are true: </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>All services are connected via a broker API</li>
+        <li>All services use the GOV.UK account single sign-on</li>
+        <li>The user needs to be signed in to the GOV.UK account for data/activity to be captured</li>
+
+    </ul>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Design assumptions</h3>
+
+    <p>The GOV.UK account will be the biggest change to GOV.UK since its launch.</p>
+
+    <p>In time, every page, every department and every service will be affected by the account and its features. This will create a set of new design challenges which will stretch the current design system. New patterns and components will inevitably be required. </p>
+
+    <p>For the most part, our prototyping has leveraged existing patterns, deviating only to serve the research and questions we were trying to answer. Identifying the need of real detailed design and the iteration of new patterns wasn’t the priority of our research. </p>
+
+    <p>All prototypes and feature examples should be viewed with that in mind. </p>
+
+
+</div>
+<div class="govuk-grid-column-one-third hide-on-mobile center govuk-!-padding-top-8">
+
+    <p class="govuk-body-s">
+        image goes here
+    </p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Life while having a baby</h3>
+
+    <p>In phase 1 we focused on joining up services within a predictable, linear user journey. In reality, life is unpredictable. There are often many things to do at once, such as learning to drive because you’re expecting a baby.</p>
+
+    <p>With this in mind, we decided the second phase would focus on cutting across multiple user journeys - allowing us to understand and test the complex scenarios and challenges of joining up services across government.
+    </p>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+                Life event criteria
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+            <ul class="govuk-list govuk-list--bullet">
+                <li>A wide range of services and departments across government</li>
+                <li>Includes users that are easy to reach for user research</li>
+                <li>A diverse range of service users</li>
+                <li>Service owners that are easy to access and engage with</li>
+                <li>Has data that we’re able to access</li>
+                <li>Supports the features we want to test</li>
+                <li>Include a broad set of data</li>
+                <li>Spans a couple of years in a person’s life</li>
+            </ul>
+        </div>
+    </details>
+
+
+</div>
+<div class="govuk-grid-column-one-third hide-on-mobile govuk-!-padding-bottom-8">
+
+    <img class="panel-image" src="../../../public/images/research/life-with-baby.svg">
+
+</div>
+<div class="govuk-grid-column-one-half">
+
+    <p><b>Phase 1 journey</b></p>
+    <a href="../../../public/images/research/phase-1-journey.png" target="_blank"><img class="panel-image" src="../../../public/images/research/phase-1-journey.png">
+    </a>
+    <p class="govuk-body-s">
+        Click to enlarge
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-half">
+
+    <p><b>Phase 2 journey</b></p>
+    <a href="../../../public/images/research/phase-2-journey.png" target="_blank"><img class="panel-image" src="../../../public/images/research/phase-2-journey.png">
+    </a>
+    <p class="govuk-body-s">
+        Click to enlarge
+    </p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Most visited step-by-step journeys</h3>
+
+    <p>Our decision to design around this life event was further supported by Sam Dub’s work on <a href="https://live-stuff.herokuapp.com/document-types/step-by-step-nav" target="_blank"> step-by-step journeys</a></p>
+
+    <p>Get Tax-Free Childcare is one of the most visited step-by-step journeys. By working within ‘childcare’ as a transaction or event, we believe we’re able to design a realistic scenario and recruit participants who have experience dealing with multiple government service journeys.</p>
+
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">Number of rounds</h3>
+
+    <p class="govuk-body-l">
+        6
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">Number of users</h3>
+
+    <p class="govuk-body-l">
+        61
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">Features tested</h3>
+
+    <p class="govuk-body-l">
+        23
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+    <h4 class="govuk-heading-s">Participant profile</h4>
+
+    <p>Universal Credit claimants who have child(ren) and are in receipt of Child Benefits and/or the childcare element of Universal Credit.
+        We recruited for this demographic so the context and scenarios presented in research were familiar and relatable.
+    </p>
+
+    <h4 class="govuk-heading-s">Demographic split</h4>
+
+    <p>Mix of gender, age, ethnicity, religion, geographical location within England and digital confidence.</p>
+
+    <h4 class="govuk-heading-s">Accessibility</h4>
+
+    <p>We spoke to a sample of participants who identified as having cognitive needs such as dyslexia, dyspraxia, learning difficulties. The sample also included users with mental health conditions and mobility issues.</p>
+    <p>As the project is in proof of concept, this research did not focus on assistive technology testing.
+    </p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+    <h4 class="govuk-heading-s">Devices</h4>
+
+    <p>Whilst this testing was not solely focused on usability, we did run sessions with a mix of smartphone, tablet, and desktop users. </p>
+
+    <p class="govuk-body-s"><a href="https://docs.google.com/spreadsheets/d/1jgAuyzB1OGeMxJYYmxi4LbRDQNxqdF96s0Vfcuu9rrI/edit?usp=sharing" target="_blank">View the full breakdown of users (external Google sheet)</a> </p>
+
+    <h4 class="govuk-heading-s">Approach</h4>
+
+    <p>Exploring a proof of concept which covered 23 out of 31 features within phase 2. These were a combination of continued/iterated features from phase 1, as well as some new features. </p>
+
+    <p class="govuk-body-s"><a href="../features/" target="_blank">View the full list of features</a> </p>
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8">
+
+    <h3 class="govuk-heading-m">Exploring the concept</h3>
+
+    <p>Research within this programme has been going for some time, with a GOV.UK accounts discovery taking place in 2019.</p>
+    <p>In order to build on that work, our initial brief looked at testing the concept of the role of GOV.UK accounts within cross government journeys.</p>
+
+    <p>The primary focus of our citizen research was on concept exploration. We used a front end <a href="../prototypes/">prototype</a> to support discussions around potential GOV.UK account functions and <a href="../features/">features</a> and how they could improve cross government transactions.</p>
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8">
+
+    <h3 class="govuk-heading-m">Creating scenarios</h3>
+
+    <p>We worked together as a team to create scenarios for testing. Given that the work takes a step into the future, we acknowledge that the content and UI will be subject to change if and when the programme of work is delivered.</p>
+
+    <p>We used front end <a href="../prototypes/">prototypes</a> to walk users through example scenarios. This way, we were able to elicit discussions about their expectations and perceptions of the GOV.UK account, its role in cross government services and the various features.</p>
+
+    <p>In some sessions we asked participants to input information into form fields, insisting they used fictional information in the prototype.
+    </p>
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8">
+
+    <h3 class="govuk-heading-m">Gathering insights</h3>
+
+    <p>The outputs of our concept testing gave us a sense of user comprehension for various potential features within cross government journeys. We also gathered a range of user insights relating to the programme more generally, with some <a href="../features/">feature-level insights</a>.</p>
+
+    <p>We used the insights to collate <a href="user-needs.html">user needs</a>, which helped support team conversations around impact, value risk and feasibility.</p>
+
+    <p>After several rounds of testing, we were able to gather learnings around UI. The most notable example is the insights around a possible '<a href="../features/03.html">dashboard</a>', which should be designed with scalability in mind. In short, the dashboard should allow users to manage their data as different functions and states of data appear.</p>
+
+    <p>Although UI wasn’t the primary focus of our research, we anticipate there will be a more detailed focus on this as the GOV.UK account features progress through to Beta and Live. We’ve made a number of recommendations across the features, which we think will need to take place in the future.</p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <p><i>(in draft, we’re still learning)</i>: </p>
+
+    <ol class="govuk-list govuk-list--number">
+        {% for number, need in data['needs'] %}
+        <li>{{ need }}</li>
+        {% else %}
+        {% endfor %}
+    </ol>
+</div>
+<div class="govuk-grid-column-one-third hide-on-mobile">
+
+    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

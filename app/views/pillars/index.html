@@ -2,8 +2,8 @@
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <p class="govuk-heading-m"><b>{{ data['objectives']['objective1'] }}</b></p>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+    <p>Explanation goes here...</p>
 </div>
 {% endblock %}
 {% else %}
@@ -11,8 +11,14 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-    <p>To follow...</p>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+    <a href="https://miro.com/app/board/uXjVOaW9vKg=/" target="_blank"><img class="panel-image" src="../../../public/images/research/pillars-concept.png"></a>
+
+    <p class="govuk-body-s">
+        <a href="https://miro.com/app/board/uXjVOaW9vKg=/">Link to Miro board</a>
+    </p>
+
 </div>
 {% endblock %}
 {% else %}

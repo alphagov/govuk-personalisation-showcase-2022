@@ -1,0 +1,250 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+<link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+<!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!-->
+<link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+
+<!-- LOAD HIPPO FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- HIPPO STYLING -->
+{% include "includes/handover-styles.html" %}
+
+{% for stylesheetUrl in extensionConfig.stylesheets %}
+<link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+{% endfor %}
+{% endblock %}
+
+{% set serviceName %}
+{% endset%}
+
+{% block pageTitle %}
+{{ data['maintitle'] }} | {{ data['hubmenu'][thispage]['title'] }}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block beforeContent %}
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- BREADCRUMBS -->
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="{{ data['indexlink'] }}" class="govuk-breadcrumbs__link">{{ data['maintitle'] }}</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="{{ parentlink }}" class="govuk-breadcrumbs__link">{{ parent }}</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="#" class="govuk-breadcrumbs__link">{{ thispage }}</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block title %}
+<!-- MAIN TITLE -->
+<div id="main-title" class="govuk-grid-row govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {{ thispage }}
+        </h1>
+    </div>
+</div>
+{% endblock %}
+
+{% if pagemenu %}
+{% block menu %}
+<!-- PAGE MENU -->
+<div class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <ol class="govuk-list govuk-list--number">
+            {% for item in pagemenu %}
+            <li><a href="#{{ item.anchor }}">{{ item.title }}</a></li>
+            {% else %}
+            {% endfor %}
+            {% block extralinks %}
+
+            {% endblock %}
+        </ol>
+    </div>
+</div>
+<!-- VERTICAL SPACER -->
+<div class="govuk-grid-row govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[0] %}
+<!-- {{ pagemenu[0]['title'] }} -->
+<div id="{{ pagemenu[0]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l">
+            <span class="section-number">1</span>
+            <br />
+            {{ pagemenu[0]['title'] }}</h2>
+    </div>
+    {% block section1 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+<!-- {{ pagemenu[1]['title'] }} -->
+<div id="{{ pagemenu[1]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">2</span>
+            <br /> {{ pagemenu[1]['title'] }}</h2>
+    </div>
+    {% block section2 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+<!-- {{ pagemenu[2]['title'] }} -->
+<div id="{{ pagemenu[2]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">3</span>
+            <br />{{ pagemenu[2]['title'] }}</h2>
+    </div>
+    {% block section3 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+<!-- {{ pagemenu[3]['title'] }} -->
+<div id="{{ pagemenu[3]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">4</span>
+            <br />{{ pagemenu[3]['title'] }}</h2>
+    </div>
+    {% block section4 %}
+    {% endblock %}
+</div>
+
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+<!-- {{ pagemenu[4]['title'] }} -->
+<div id="{{ pagemenu[4]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">5</span>
+            <br />{{ pagemenu[4]['title'] }}</h2>
+    </div>
+    {% block section5 %}
+    {% endblock %}
+</div>
+
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+<!-- {{ pagemenu[5]['title'] }} -->
+<div id="{{ pagemenu[5]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">6</span>
+            <br />{{ pagemenu[5]['title'] }}</h2>
+    </div>
+    {% block section6 %}
+    {% endblock %}
+</div>
+
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+<!-- {{ pagemenu[6]['title'] }} -->
+<div id="{{ pagemenu[6]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">7</span>
+            <br />{{ pagemenu[6]['title'] }}</h2>
+    </div>
+    {% block section7 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+<!-- {{ pagemenu[7]['title'] }} -->
+<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">8</span>
+            <br />{{ pagemenu[7]['title'] }}</h2>
+    </div>
+    {% block section8 %}
+    {% endblock %}
+</div>
+
+{% else %}
+{% endif %}
+
+{% include "includes/line-hr.html" %}
+
+{% block prevnext %}
+<div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+
+    {% set nextid = thispage | float + 1 %}
+    {% set previd = thispage | float - 1 %}
+    {% set nexttitle = data['hubmenu'][nextid]['title'] %}
+    {% set prevtitle = data['hubmenu'][previd]['title'] %}
+    {% set nextlink = data['hubmenu'][nextid]['url'] %}
+    {% set prevlink = data['hubmenu'][previd]['url'] %}
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <div class="previous-chapter">
+            <p>← Previous</p>
+            <a href="{{ prevlink }}">{{ prevtitle }}</a>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half hide-on-mobile">
+
+        &nbsp;
+
+    </div>
+    <div class="govuk-grid-column-one-quarter ">
+        <div class="next-chapter">
+            <p>Next →</p>
+            <a href="{{ nextlink }}">{{ nexttitle }}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footlink %}
+<div id="hippo-footer" class="govuk-grid-row center">
+    <div class="govuk-grid-column-full">
+        <a href="https://hippodigital.co.uk" target="_blank"><img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 120px;"></a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% include "includes/back-to-top.html" %}
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

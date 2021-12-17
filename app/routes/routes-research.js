@@ -167,6 +167,9 @@ router.get('/user-research', function (req, res) {
 
     // calculate number of in page menu links
     let menusections = req.session.data.userresearchmenu.length;
+    let approachmenusections = req.session.data.userapproachmenu.length;
+    let summarymenusections = req.session.data.usersummarymenu.length;
+    let insightsmenusections = req.session.data.userinsightsmenu.length;
 
     // calculate number of features
     let featurestotal = req.session.data.rdd.features.length
@@ -175,6 +178,15 @@ router.get('/user-research', function (req, res) {
     let pagemenu = []
     let titles = []
     let anchors = []
+    let approachmenu = []
+    let approachtitles = []
+    let approachanchors = []
+    let summarymenu = []
+    let summarytitles = []
+    let summaryanchors = []
+    let insightsmenu = []
+    let insightstitles = []
+    let insightsanchors = []
     let names = []
     let fids = []
 
@@ -182,11 +194,38 @@ router.get('/user-research', function (req, res) {
     for (i = 0; i < menusections; i++) {
         pagemenu[i] = req.session.data.userresearchmenu[i]
     }
+    for (i = 0; i < approachmenusections; i++) {
+        approachmenu[i] = req.session.data.userapproachmenu[i]
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarymenu[i] = req.session.data.usersummarymenu[i]
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsmenu[i] = req.session.data.userinsightsmenu[i]
+    }
     for (i = 0; i < menusections; i++) {
         titles[i] = req.session.data.userresearchmenu[i].title
     }
     for (i = 0; i < menusections; i++) {
         anchors[i] = req.session.data.userresearchmenu[i].anchor
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachtitles[i] = req.session.data.userapproachmenu[i].title
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachanchors[i] = req.session.data.userapproachmenu[i].anchor
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarytitles[i] = req.session.data.usersummarymenu[i].title
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summaryanchors[i] = req.session.data.usersummarymenu[i].anchor
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightstitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsanchors[i] = req.session.data.userinsightsmenu[i].anchor
     }
     for (i = 0; i < featurestotal; i++) {
         featurestotal[i] = req.session.data.rdd.features[i]
@@ -202,10 +241,85 @@ router.get('/user-research', function (req, res) {
         'menusections': menusections,
         'titles': titles,
         'anchors': anchors,
+        'approachmenu': approachmenu,
+        'approachmenusections': approachmenusections,
+        'approachtitles': approachtitles,
+        'approachanchors': approachanchors,
+        'summarymenu': summarymenu,
+        'summarymenusections': summarymenusections,
+        'summarytitles': summarytitles,
+        'summaryanchors': summaryanchors,
+        'insightsmenu': insightsmenu,
+        'insightsmenusections': insightsmenusections,
+        'insightstitles': insightstitles,
+        'insightsanchors': insightsanchors,
         'featurestotal': featurestotal,
         'fids': fids,
         'names': names,
         'thispage': thispage
+    })
+})
+
+// USER RESEARCH approach
+router.get('/user-research/approach', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.userresearchmenu[0].title;
+    let parent = req.session.data.hubmenu[2].title;
+    let parentlink = req.session.data.hubmenu[2].url;
+
+    console.log('This page is: ' + thispage)
+
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.userapproachmenu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.userapproachmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.userapproachmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.userapproachmenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('user-research/approach', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
     })
 })
 
@@ -299,7 +413,7 @@ router.get('/prototypes', function (req, res) {
 router.get('/pillars', function (req, res) {
 
     // calculate number of in page menu links
-    let menusections = req.session.data.prototypemenu.length;
+    let menusections = req.session.data.pillarsmenu.length;
 
     let thispage = req.session.data.hubmenu[3].id;
 
@@ -310,13 +424,13 @@ router.get('/pillars', function (req, res) {
 
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
-        pagemenu[i] = req.session.data.prototypemenu[i]
+        pagemenu[i] = req.session.data.pillarsmenu[i]
     }
     for (i = 0; i < menusections; i++) {
-        titles[i] = req.session.data.prototypemenu[i].title
+        titles[i] = req.session.data.pillarsmenu[i].title
     }
     for (i = 0; i < menusections; i++) {
-        anchors[i] = req.session.data.prototypemenu[i].anchor
+        anchors[i] = req.session.data.pillarsmenu[i].anchor
     }
 
     //return these

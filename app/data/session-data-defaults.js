@@ -142,10 +142,6 @@ module.exports = {
     ],
     userresearchmenu: [
         {
-            title: "Objective",
-            anchor: "objective",
-    },
-        {
             title: "Approach",
             anchor: "approach",
     },
@@ -154,8 +150,50 @@ module.exports = {
             anchor: "summary",
     },
         {
-            title: "User needs",
-            anchor: "needs",
+            title: "Insights",
+            anchor: "insights",
+    }
+    ],
+    userapproachmenu: [
+        {
+            title: "Assumptions",
+            anchor: "assumptions",
+    },
+        {
+            title: "Life event",
+            anchor: "life-event",
+    },
+        {
+            title: "Testing",
+            anchor: "testing",
+    }
+    ],
+    usersummarymenu: [
+        {
+            title: "Assumptions",
+            anchor: "assumptions",
+    },
+        {
+            title: "Life event",
+            anchor: "life-event",
+    },
+        {
+            title: "Insights",
+            anchor: "insights",
+    }
+    ],
+    userinsightsmenu: [
+        {
+            title: "Assumptions",
+            anchor: "assumptions",
+    },
+        {
+            title: "Life event",
+            anchor: "life-event",
+    },
+        {
+            title: "Insights",
+            anchor: "insights",
     }
     ],
     serviceresearchmenu: [
@@ -184,6 +222,15 @@ module.exports = {
         {
             title: "List of all features",
             anchor: "featurelist",
+    }
+    ],
+    pillarsmenu: [
+        {
+            title: "Explanation (placeholder)",
+            anchor: "explanation",
+    }, {
+            title: "Diagram (placeholder)",
+            anchor: "diagram",
     }
     ],
     prototypemenu: [
