@@ -1,0 +1,179 @@
+{% extends "layout_handover_child.html" %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+
+    <p>In the second phase of the project, we wanted to broaden our research to include government services.</p>
+
+    <p>Our main focus was to explore the feasibility of joining up services across government, whilst identifying what service features would help make the GOV.UK account more personalised.</p>
+
+    <p>For the research, we wanted to represent the needs and views of a diverse range of government service teams. We did this by broadening the recruitment profile beyond the services within the life event (‘Life while having a baby’) to include a range of central government services and small local authorities.
+    </p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Objectives</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Identify the service benefits, expectations and challenges of sharing data across government, via the GOV.UK account</li>
+        <li>Understand the perceptions around data sharing and the appetite for joining up data across government services</li>
+
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Current data sharing activity</li>
+        <li>Current challenges</li>
+        <li>Benefits of joining up services</li>
+        <li>Future challenges of joining up services</li>
+        <li>Future expectations</li>
+        <li>Service readiness</li>
+    </ul>
+
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+
+    <p>We interviewed service owners and product managers.</p>
+
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>DEFRA - Future Farming</li>
+        <li>MOJ - Lasting power of attorney (digital sociologist)</li>
+        <li>HO - Update your UK Visas and Immigration account</li>
+        <li>MOD: AH Modernisation, Veterans</li>
+        <li>MOJ - Lasting power of attorney (service owner)</li>
+        <li>Northampton Council: Register a birth</li>
+        <li>OFSTED: Register as a childminder / Register as a nanny</li>
+        <li>Camden LA - The Camden account</li>
+        <li>Northampton Council - Blue Badge</li>
+        <li>DWP - Personal Independence Payment (PIP)</li>
+    </ol>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Objectives</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Determine the complexity vs. value of different account features identified in the backlog</li>
+        <li>Capture the risks, dependencies and complexities of joining up services</li>
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Understand the service expectations and challenges for each feature</li>
+        <li>How each of the features could deliver future value to a service</li>
+        <li>Results from the sessions aggregated into a matrix, showing feature placement across value and complexity of adoption</li>
+    </ul>
+
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+
+    <p>We did an interview and moderated card sorting with service owners and product managers.</p>
+
+    <p>Any features associated with account setup were excluded from the initial service research. We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
+
+    <p>We discussed each of these 13 hypothetical account features and asked participants to card sort each feature in 2 ways:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the perceived potential future value to the service </li>
+        <li>the perceived complexity of adoption</li>
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Features included in the research</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Verified data</li>
+        <li>Global push</li>
+        <li>Notifications</li>
+        <li>Reminders</li>
+        <li>Use of existing data</li>
+        <li>Fixed vs editable data</li>
+        <li>Share specific data with another person’s GOV.UK account</li>
+        <li>Saved documents</li>
+        <li>Suggested eligibility</li>
+        <li>Calculated data based on known information (Derived data)</li>
+        <li>Personalised content</li>
+        <li>Autofill forms</li>
+        <li>Prompt user to complete profile</li>
+    </ul>
+
+    <p class="govuk-body-s" style="color: red;">
+        This list needs tidying to reflect accurate feature names
+    </p>
+
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>MOJ - Lasting power of attorney </li>
+        <li>DEFRA - Future Farming</li>
+        <li>HMRC: Register a trust</li>
+        <li>Camden LA - The Camden account</li>
+        <li>Northampton Council - Blue Badge</li>
+        <li>DWP: Personal independence payment (PIP)</li>
+    </ol>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds">
+
+    <p>Due to limited availability at the end of the year, many service teams were unable to support with user research. We were unable to recruit services that exactly matched those within our life event (‘Life when having a baby’).</p>
+
+    <p>To overcome this, we recruited a wide range of services users (across local and central government) to make sure our findings are representative of service needs.</p>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

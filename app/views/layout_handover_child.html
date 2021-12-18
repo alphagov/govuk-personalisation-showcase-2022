@@ -27,7 +27,7 @@
 {% endset%}
 
 {% block pageTitle %}
-{{ data['maintitle'] }} | {{ data['hubmenu'][thispage]['title'] }}
+{{ data['maintitle'] }} | {{ parent }} > {{ thispage }}
 {% endblock %}
 
 {% block header %}{% endblock %}

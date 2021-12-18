@@ -35,47 +35,52 @@ module.exports = {
         {
             title: "End user research",
             url: "/user-research",
-            id: 4
+            id: 3
     },
         {
             title: "Service research",
             url: "/service-research",
-            id: 6
+            id: 4
     },
         {
             title: "Data",
             url: "/data",
-            id: 3
+            id: 5
     },
         {
             title: "Features",
             url: "/features",
-            id: 5
+            id: 6
+    },
+        {
+            title: "Recommendations",
+            url: "/recommendations",
+            id: 7
     },
         {
             title: "The 3 Pillars",
             url: "/pillars",
-            id: 7
+            id: 8
     },
         {
             title: "Phase 3",
             url: "/phase-3",
-            id: 8
+            id: 9
     },
         {
             title: "Glossary",
             url: "/glossary",
-            id: 9
+            id: 10
     },
         {
             title: "Case study",
             url: "/case-study",
-            id: 10
+            id: 11
     },
         {
             title: "Prototypes",
             url: "/prototypes",
-            id: 11
+            id: 12
     }
              ],
     problemmenu: [
@@ -198,20 +203,63 @@ module.exports = {
     ],
     serviceresearchmenu: [
         {
-            title: "Objective",
-            anchor: "objective",
-    },
-        {
-            title: "Methodology",
-            anchor: "methodology",
+            title: "Approach",
+            anchor: "approach",
     },
         {
             title: "Summary",
             anchor: "summary",
     },
         {
-            title: "User needs",
-            anchor: "needs",
+            title: "Insights",
+            anchor: "insights",
+    },
+        {
+            title: "Recommendations",
+            anchor: "recommendations",
+    }
+    ],
+    serviceapproachmenu: [
+        {
+            title: "Overview",
+            anchor: "overview",
+    },
+        {
+            title: "Round 1",
+            anchor: "round-1",
+    },
+        {
+            title: "Round 2",
+            anchor: "round-2",
+    },
+        {
+            title: "Challenges",
+            anchor: "challenges",
+    }
+    ],
+    servicesummarymenu: [
+
+    ],
+    serviceinsightsmenu: [
+        {
+            title: "Background",
+            anchor: "background ",
+    },
+        {
+            title: "Round 1",
+            anchor: "round-1",
+    },
+        {
+            title: "Round 2",
+            anchor: "round-2",
+    },
+        {
+            title: "Limitations",
+            anchor: "limitations",
+    },
+        {
+            title: "Recommendations",
+            anchor: "recommendations",
     }
     ],
     featuresmenu: [
@@ -222,6 +270,15 @@ module.exports = {
         {
             title: "List of all features",
             anchor: "featurelist",
+    }
+    ],
+    recommendationsmenu: [
+        {
+            title: "Section 1",
+            anchor: "explanation",
+    }, {
+            title: "Diagram (placeholder)",
+            anchor: "diagram",
     }
     ],
     pillarsmenu: [

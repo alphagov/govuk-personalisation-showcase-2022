@@ -124,7 +124,7 @@ router.get('/data', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.datamenu.length;
 
-    let thispage = req.session.data.hubmenu[2].id;
+    let thispage = req.session.data.hubmenu[3].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -327,24 +327,63 @@ router.get('/user-research/approach', function (req, res) {
 router.get('/service-research', function (req, res) {
 
     // calculate number of in page menu links
-    let menusections = req.session.data.prototypemenu.length;
+    let menusections = req.session.data.serviceresearchmenu.length;
+    let approachmenusections = req.session.data.serviceapproachmenu.length;
+    let summarymenusections = req.session.data.servicesummarymenu.length;
+    let insightsmenusections = req.session.data.serviceinsightsmenu.length;
 
-    let thispage = req.session.data.hubmenu[4].id;
+    let thispage = req.session.data.hubmenu[2].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
     let titles = []
     let anchors = []
+    let approachmenu = []
+    let approachtitles = []
+    let approachanchors = []
+    let summarymenu = []
+    let summarytitles = []
+    let summaryanchors = []
+    let insightsmenu = []
+    let insightstitles = []
+    let insightsanchors = []
 
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
-        pagemenu[i] = req.session.data.prototypemenu[i]
+        pagemenu[i] = req.session.data.serviceresearchmenu[i]
     }
     for (i = 0; i < menusections; i++) {
-        titles[i] = req.session.data.prototypemenu[i].title
+        titles[i] = req.session.data.serviceresearchmenu[i].title
     }
     for (i = 0; i < menusections; i++) {
-        anchors[i] = req.session.data.prototypemenu[i].anchor
+        anchors[i] = req.session.data.serviceresearchmenu[i].anchor
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachmenu[i] = req.session.data.serviceapproachmenu[i]
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarymenu[i] = req.session.data.servicesummarymenu[i]
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsmenu[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachtitles[i] = req.session.data.serviceapproachmenu[i].title
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachanchors[i] = req.session.data.serviceapproachmenu[i].anchor
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarytitles[i] = req.session.data.servicesummarymenu[i].title
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summaryanchors[i] = req.session.data.servicesummarymenu[i].anchor
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightstitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
     }
 
     //return these
@@ -353,15 +392,89 @@ router.get('/service-research', function (req, res) {
         'menusections': menusections,
         'titles': titles,
         'anchors': anchors,
+        'approachmenu': approachmenu,
+        'approachmenusections': approachmenusections,
+        'approachtitles': approachtitles,
+        'approachanchors': approachanchors,
+        'summarymenu': summarymenu,
+        'summarymenusections': summarymenusections,
+        'summarytitles': summarytitles,
+        'summaryanchors': summaryanchors,
+        'insightsmenu': insightsmenu,
+        'insightsmenusections': insightsmenusections,
+        'insightstitles': insightstitles,
+        'insightsanchors': insightsanchors,
         'thispage': thispage
+    })
+})
 
+// SERVICE USER approach
+router.get('/service-research/approach', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.serviceresearchmenu[0].title;
+    let parent = req.session.data.hubmenu[3].title;
+    let parentlink = req.session.data.hubmenu[3].url;
+
+    console.log('This page is: ' + thispage)
+
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.serviceapproachmenu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.serviceapproachmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.serviceapproachmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.serviceapproachmenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('service-research/approach', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
     })
 })
 
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
-    let thispage = req.session.data.hubmenu[7].id;
+    let thispage = req.session.data.hubmenu[8].id;
 
     let pagemenu = []
 
@@ -379,7 +492,7 @@ router.get('/prototypes', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[9].id;
+    let thispage = req.session.data.hubmenu[10].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -409,13 +522,48 @@ router.get('/prototypes', function (req, res) {
     })
 })
 
+// RECOMMENDATIONS  
+router.get('/recommendations', function (req, res) {
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.recommendationsmenu.length;
+
+    let thispage = req.session.data.hubmenu[5].id;
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.recommendationsmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.recommendationsmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.recommendationsmenu[i].anchor
+    }
+
+    //return these
+    return res.render('recommendations/index', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'thispage': thispage
+
+    })
+})
+
 // PILLARS
 router.get('/pillars', function (req, res) {
 
     // calculate number of in page menu links
     let menusections = req.session.data.pillarsmenu.length;
 
-    let thispage = req.session.data.hubmenu[3].id;
+    let thispage = req.session.data.hubmenu[6].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -451,7 +599,7 @@ router.get('/phase-3', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[6].id;
+    let thispage = req.session.data.hubmenu[7].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -487,7 +635,7 @@ router.get('/case-study', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[8].id;
+    let thispage = req.session.data.hubmenu[9].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -533,7 +681,7 @@ router.get('/features', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.featuresmenu.length;
 
-    let thispage = req.session.data.hubmenu[5].id;
+    let thispage = req.session.data.hubmenu[4].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let names = []
