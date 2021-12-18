@@ -170,6 +170,7 @@ router.get('/user-research', function (req, res) {
     let approachmenusections = req.session.data.userapproachmenu.length;
     let summarymenusections = req.session.data.usersummarymenu.length;
     let insightsmenusections = req.session.data.userinsightsmenu.length;
+    let recommendationsmenusections = req.session.data.userrecommendationsmenu.length;
 
     // calculate number of features
     let featurestotal = req.session.data.rdd.features.length
@@ -187,6 +188,9 @@ router.get('/user-research', function (req, res) {
     let insightsmenu = []
     let insightstitles = []
     let insightsanchors = []
+    let recommendationsmenu = []
+    let recommendationstitles = []
+    let recommendationsanchors = []
     let names = []
     let fids = []
 
@@ -202,6 +206,9 @@ router.get('/user-research', function (req, res) {
     }
     for (i = 0; i < insightsmenusections; i++) {
         insightsmenu[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < recommendationsmenusections; i++) {
+        recommendationsmenu[i] = req.session.data.userrecommendationsmenu[i]
     }
     for (i = 0; i < menusections; i++) {
         titles[i] = req.session.data.userresearchmenu[i].title
@@ -226,6 +233,12 @@ router.get('/user-research', function (req, res) {
     }
     for (i = 0; i < insightsmenusections; i++) {
         insightsanchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < recommendationsmenusections; i++) {
+        recommendationstitles[i] = req.session.data.userrecommendationsmenu[i].title
+    }
+    for (i = 0; i < recommendationsmenusections; i++) {
+        recommendationsanchors[i] = req.session.data.userrecommendationsmenu[i].anchor
     }
     for (i = 0; i < featurestotal; i++) {
         featurestotal[i] = req.session.data.rdd.features[i]
@@ -253,6 +266,10 @@ router.get('/user-research', function (req, res) {
         'insightsmenusections': insightsmenusections,
         'insightstitles': insightstitles,
         'insightsanchors': insightsanchors,
+        'recommendationsmenu': recommendationsmenu,
+        'recommendationsmenusections': recommendationsmenusections,
+        'recommendationstitles': recommendationstitles,
+        'recommendationsanchors': recommendationsanchors,
         'featurestotal': featurestotal,
         'fids': fids,
         'names': names,
