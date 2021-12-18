@@ -1,0 +1,147 @@
+{% extends "layout_handover_child.html" %}s
+
+{% block title %}
+{{ super() }}
+<!-- Subheading -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+        <p>[a sentence to explain that these are general guidance principles for how to approach future user-facing feature development]</p>
+    </div>
+</div>
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Always prioritise ensuring the user’s <b>expectations</b> and the capability of the feature are aligned
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Clearly describe what the feature <b>does</b> and what it <b>does not</b> enable</li>
+                <li>Ensure your feature and content does not create new unmet expectations for <b>related features</b>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li class="comment">[give examples - specific to research sessions]</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>Ensure the user can see <b>why</b> something is happening (e.g. be specific about how a page is being personalised, or why a service is being suggested)</li>
+        <li>Be clear about <b>impact</b> to the user - some features could lead to both user-perceived positive and negative outcomes (e.g. a new entitlement versus a benefit being turned off)</li>
+        <li>Ensure the user can review <b>what</b> has happened and when</li>
+        <li>Be clear about <b>responsibilities</b> - as the account becomes feature rich, it may allude to a shift in responsibilities away from the user</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/feature.png" class="panel-image hide-on-mobile">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Ensure the feature gives the user control and seeks their <b>permission</b></li>
+        <li>Users need to retain <b>control</b> of:</li>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Their data (nothing should go in or out of the account without permission and notification)</li>
+            <li>The way the account uses that data (all features must be user controllable)</li>
+            <li>The information passed to services (Users must always control the final ‘GO’ step</li>
+        </ul>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/feature2.jpeg" class="panel-image hide-on-mobile">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Consider how a feature will <b>scale</b> when the account (and data within it) gets very large</li>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>How will the UI tolerate this?</li>
+            <li>Is the feature still clear and simple to operate</li>
+        </ul>
+        <li>Be aware of tipping points when features could become more overhead than the efficiency and/or accuracy goals they are supporting</li>
+        <li>Does the feature <b>make sense</b> to the user if it’s not rolled out to all services?</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/feature3.png" class="panel-image hide-on-mobile">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Consider what a service needs to do to support this feature:
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Technically</li>
+                <li>Culturally</li>
+                <li>Financially</li>
+                <li>Legally</li>
+            </ul>
+        </li>
+        <li>Understand the services current and aspirational processes
+            <ul class="govuk-list govuk-list--bullet">
+                <li>What are the impacts on their current processes</li>
+                <li>Does the feature enable or move towards the aspirational processes</li>
+                <li>What other ‘go to’ processes become possible</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+    <img src="../../../public/images/research/feature.png" class="panel-image hide-on-mobile">
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

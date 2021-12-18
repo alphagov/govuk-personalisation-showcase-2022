@@ -157,6 +157,10 @@ module.exports = {
         {
             title: "Insights",
             anchor: "insights",
+    },
+        {
+            title: "Recommendations",
+            anchor: "recommendations",
     }
     ],
     userapproachmenu: [
@@ -174,32 +178,71 @@ module.exports = {
     }
     ],
     usersummarymenu: [
-        {
-            title: "Assumptions",
-            anchor: "assumptions",
-    },
-        {
-            title: "Life event",
-            anchor: "life-event",
-    },
-        {
-            title: "Insights",
-            anchor: "insights",
-    }
+
     ],
     userinsightsmenu: [
         {
-            title: "Assumptions",
-            anchor: "assumptions",
-    },
+            title: "Users identified a variety of benefits of the concept of the GOV.UK account within X-Gov transactions",
+            anchor: "insight-1"
+        },
         {
-            title: "Life event",
-            anchor: "life-event",
-    },
+            title: "Not everyone will perceive the GOV.UK account as valuable or useful",
+            anchor: "insight-2"
+        },
         {
-            title: "Insights",
-            anchor: "insights",
-    }
+            title: "Users want to be clear on how their data is being used",
+            anchor: "insight-3"
+        },
+        {
+            title: "Data control and management functions were received positively in user research",
+            anchor: "insight-4"
+        },
+        {
+            title: "Users expect their data will be processed in some way",
+            anchor: "insight-5"
+        },
+        {
+            title: "Users see curated or personalised content as being accurate to them",
+            anchor: "insight-6"
+        },
+        {
+            title: "Users’ descriptions of the GOV.UK account in their own words",
+            anchor: "insight-7"
+        },
+        {
+            title: "Users don’t care how their data is stored, as long as it is secure",
+            anchor: "insight-8"
+        },
+        {
+            title: "Users expect the government’s online services to be secure",
+            anchor: "insight-9"
+        },
+        {
+            title: "There were mixed perceptions of future features such as automated transactions",
+            anchor: "insight-10"
+        },
+        {
+            title: "User perception of how features could be used may not align to how we intended them to be used (needs rewrite)",
+            anchor: "insight-11"
+        }
+    ],
+    userrecommendationsmenu: [
+        {
+            title: "Clarity and transparency",
+            anchor: "recommendation-1"
+        },
+        {
+            title: "Control and consent",
+            anchor: "recommendation-2"
+        },
+        {
+            title: "Design considerations",
+            anchor: "recommendation-3"
+        },
+        {
+            title: "Impact on services",
+            anchor: "recommendation-4"
+        }
     ],
     serviceresearchmenu: [
         {
