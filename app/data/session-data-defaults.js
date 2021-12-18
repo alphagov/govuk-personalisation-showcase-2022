@@ -236,7 +236,7 @@ module.exports = {
             anchor: "recommendation-2"
         },
         {
-            title: "Design considerations",
+            title: "UI considerations",
             anchor: "recommendation-3"
         },
         {

@@ -9,8 +9,9 @@
 <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
     <p>We designed at a point in future, where the following are true: </p>
+    <br />
 
-    <ul class="govuk-list govuk-list--bullet">
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
         <li>All services are connected via a broker API</li>
         <li>All services use the GOV.UK account single sign-on</li>
         <li>The user needs to be signed in to the GOV.UK account for data/activity to be captured</li>
@@ -124,67 +125,101 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4 govuk-!-padding-top-8">
 
-    <h3 class="govuk-heading-m">Number of rounds</h3>
+    <h4 class="govuk-heading-m">Number of rounds</h4>
 
     <p class="govuk-body-l">
-        6
+        8
     </p>
 
 </div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4 govuk-!-padding-top-8">
 
-    <h3 class="govuk-heading-m">Number of users</h3>
+    <h4 class="govuk-heading-m">Number of users</h4>
 
     <p class="govuk-body-l">
-        61
+        52
     </p>
 
 </div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4 govuk-!-padding-top-8">
 
-    <h3 class="govuk-heading-m">Features tested</h3>
+    <h4 class="govuk-heading-m">Features tested</h4>
 
     <p class="govuk-body-l">
         23
     </p>
 
 </div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-2 govuk-!-padding-top-8">
 
-    <h4 class="govuk-heading-s">Participant profile</h4>
-
-    <p>Universal Credit claimants who have child(ren) and are in receipt of Child Benefits and/or the childcare element of Universal Credit.
-        We recruited for this demographic so the context and scenarios presented in research were familiar and relatable.
-    </p>
-
-    <h4 class="govuk-heading-s">Demographic split</h4>
-
-    <p>Mix of gender, age, ethnicity, religion, geographical location within England and digital confidence.</p>
-
-    <h4 class="govuk-heading-s">Accessibility</h4>
-
-    <p>We spoke to a sample of participants who identified as having cognitive needs such as dyslexia, dyspraxia, learning difficulties. The sample also included users with mental health conditions and mobility issues.</p>
-    <p>As the project is in proof of concept, this research did not focus on assistive technology testing.
-    </p>
+    <h3 class="govuk-heading-m">Users</h3>
 
 </div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
-    <h4 class="govuk-heading-s">Devices</h4>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>Whilst this testing was not solely focused on usability, we did run sessions with a mix of smartphone, tablet, and desktop users. </p>
+    <div class="govuk-grid-row">
 
-    <p class="govuk-body-s"><a href="https://docs.google.com/spreadsheets/d/1jgAuyzB1OGeMxJYYmxi4LbRDQNxqdF96s0Vfcuu9rrI/edit?usp=sharing" target="_blank">View the full breakdown of users (external Google sheet)</a> </p>
+        <div class="govuk-grid-column-one-half">
 
-    <h4 class="govuk-heading-s">Approach</h4>
+            <h4 class="govuk-heading-s">Participant profile</h4>
 
-    <p>Exploring a proof of concept which covered 23 out of 31 features within phase 2. These were a combination of continued/iterated features from phase 1, as well as some new features. </p>
+            <p>Universal Credit claimants who have child(ren) and are in receipt of Child Benefits and/or the childcare element of Universal Credit.</p>
+            <p>We recruited for this demographic so the context and scenarios presented in research were familiar and relatable.
+            </p>
 
-    <p class="govuk-body-s"><a href="../features/" target="_blank">View the full list of features</a> </p>
+        </div>
 
-    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 75%;">
+        <div class="govuk-grid-column-one-half">
+            <h4 class="govuk-heading-s">Demographic split</h4>
 
+            <p>Mix of gender, age, ethnicity, religion, geographical location within England and digital confidence.</p>
+
+            <p><a href="https://docs.google.com/spreadsheets/d/1jgAuyzB1OGeMxJYYmxi4LbRDQNxqdF96s0Vfcuu9rrI/edit?usp=sharing" target="_blank">View the full breakdown of users (external Google sheet)</a> </p>
+        </div>
+
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-one-half">
+            <h4 class="govuk-heading-s">Accessibility</h4>
+
+            <p>We spoke to a sample of participants who identified as having cognitive needs such as dyslexia, dyspraxia, learning difficulties. </p>
+            <p>The sample also included users with mental health conditions and mobility issues.</p>
+            <p>As the project is in proof of concept, this research did not focus on assistive technology testing.
+            </p>
+        </div>
+
+        <div class="govuk-grid-column-one-half center hide-on-mobile">
+
+            <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 55%;">
+
+        </div>
+    </div>
+
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-2">
+            <h3 class="govuk-heading-m">Methodology</h3>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+            <h4 class="govuk-heading-s">Prototypes</h4>
+            <p>We created proof of concept <a href="../prototypes/">prototypes</a> which covered 23 out of <a href="../features/" target="_blank">31 features</a> within phase 2.</p>
+            <p>These were a combination of continued/iterated features from phase 1, as well as some new features. </p>
+            <br />
+            <h4 class="govuk-heading-s">Devices</h4>
+
+            <p>Whilst this testing was not solely focused on usability, we did run sessions with a mix of smartphone, tablet, and desktop users. </p>
+        </div>
+        <div class="govuk-grid-column-one-half center hide-on-mobile">
+            <img src="../../../public/images/research/devices.svg" class="panel-image hide-on-mobile" style="max-width: 75%;">
+        </div>
+    </div>
 </div>
 
 <div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-8">
@@ -211,17 +246,35 @@
 
 </div>
 
-<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-2">
 
     <h3 class="govuk-heading-m">Gathering insights</h3>
 
-    <p>The outputs of our concept testing gave us a sense of user comprehension for various potential features within cross government journeys. We also gathered a range of user insights relating to the programme more generally, with some <a href="../features/">feature-level insights</a>.</p>
+</div>
+
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+    <p>The outputs of our concept testing gave us a sense of user comprehension for various potential <a href="../features/">features</a> within cross government journeys. </p>
+    <p>We also gathered a range of user <a href="insights.html">insights</a> relating to the programme more generally.
+        <!-- with some <a href="../features/">feature-level insights</a>. -->
+    </p>
 
     <p>We used the insights to collate <a href="user-needs.html">user needs</a>, which helped support team conversations around impact, value risk and feasibility.</p>
 
-    <p>After several rounds of testing, we were able to gather learnings around UI. The most notable example is the insights around a possible '<a href="../features/03.html">dashboard</a>', which should be designed with scalability in mind. In short, the dashboard should allow users to manage their data as different functions and states of data appear.</p>
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
-    <p>Although UI wasn’t the primary focus of our research, we anticipate there will be a more detailed focus on this as the GOV.UK account features progress through to Beta and Live. We’ve made a number of recommendations across the features, which we think will need to take place in the future.</p>
+    <p>Although UI wasn’t the primary focus of our research, after several rounds of testing, we were able to gather learnings around UI.</p>
+
+    <p>These have fed into initial <a href="recommendations.html#recommendation-3">UI design considerations</a></p>
+
+    <!-- <p> The most notable example is the insights around a possible '<a href="../features/03.html">dashboard</a>', which should be designed with scalability in mind. In short, the dashboard should allow users to manage their data as different functions and states of data appear.</p> -->
+
+    <p>We anticipate there will be a more detailed focus on this as the GOV.UK account features progress through to Beta and Live.</p>
+
+    <p>
+        We’ve also made a number of <a href="recommendations.html">recommendations</a> on how to approach feature delivery in the future.
+    </p>
 
 </div>
 {% endblock %}

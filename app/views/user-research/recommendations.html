@@ -5,7 +5,7 @@
 <!-- Subheading -->
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-        <p>[a sentence to explain that these are general guidance principles for how to approach future user-facing feature development]</p>
+        <p class="comment"><i>[a sentence to explain that these are general guidance principles for <b>how to approach future user-facing feature development</b>]</i></p>
     </div>
 </div>
 {% endblock %}
@@ -20,7 +20,7 @@
                 <li>Clearly describe what the feature <b>does</b> and what it <b>does not</b> enable</li>
                 <li>Ensure your feature and content does not create new unmet expectations for <b>related features</b>
                     <ul class="govuk-list govuk-list--bullet">
-                        <li class="comment">[give examples - specific to research sessions]</li>
+                        <li class="comment"><i>[<b>give examples</b> - specific to research sessions]</i></li>
                     </ul>
                 </li>
             </ul>
@@ -48,11 +48,12 @@
 
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
         <li>Ensure the feature gives the user control and seeks their <b>permission</b></li>
-        <li>Users need to retain <b>control</b> of:</li>
+        <li>Most of all, users need to retain control of:</li>
         <ul class="govuk-list govuk-list--bullet">
-            <li>Their data (nothing should go in or out of the account without permission and notification)</li>
-            <li>The way the account uses that data (all features must be user controllable)</li>
-            <li>The information passed to services (Users must always control the final ‘GO’ step</li>
+            <li>Their <b>data</b> - nothing should go in or out of the account without permission and notification</li>
+            <li>The <b>use</b> of data - all features must be user controllable</li>
+            <li>Who gets to <b>see</b> their data - e.g. for the information passed to services, users must always control the final ‘GO’ step
+            </li>
         </ul>
     </ul>
 
@@ -74,10 +75,9 @@
         <li>Consider how a feature will <b>scale</b> when the account (and data within it) gets very large</li>
         <ul class="govuk-list govuk-list--bullet">
             <li>How will the UI tolerate this?</li>
-            <li>Is the feature still clear and simple to operate</li>
+            <li>Will the UI still be clear and simple to use?</li>
         </ul>
-        <li>Be aware of tipping points when features could become more overhead than the efficiency and/or accuracy goals they are supporting</li>
-        <li>Does the feature <b>make sense</b> to the user if it’s not rolled out to all services?</li>
+        <li>Be aware of <b>tipping points</b> when using the UI could become more overhead than the efficiency and/or accuracy goals they are supporting</li>
     </ul>
 
 </div>
@@ -93,6 +93,8 @@
 {% if pagemenu[3] %}
 {% block section4 %}
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <p class="comment"><i>[Check with @Amy re this bit]</i></p>
 
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
         <li>Consider what a service needs to do to support this feature:
