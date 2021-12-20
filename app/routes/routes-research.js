@@ -464,6 +464,73 @@ router.get('/user-research/insights', function (req, res) {
     })
 })
 
+// USER RESEARCH user needs
+router.get('/user-research/user-needs', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.hubmenu[2].title;
+    let parent = req.session.data.hubmenu[2].title;
+    let parentlink = req.session.data.hubmenu[2].url;
+
+    console.log('This page is: ' + thispage)
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.userneedsmenu.length;
+    let totalneeds = req.session.data.needs.length;
+
+    console.log('Total needs: ' + totalneeds)
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let needs = req.session.data.needs
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.userneedsmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.userneedsmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.userneedsmenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('user-research/user-needs', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'needs': needs,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
 // USER RESEARCH recommendations
 router.get('/user-research/recommendations', function (req, res) {
 

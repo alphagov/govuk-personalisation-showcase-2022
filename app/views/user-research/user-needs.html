@@ -1,8 +1,10 @@
-{% extends "layout_handover_child.html" %}s
+{% extends "layout_handover_child.html" %}
+
+{% set thispage = "User needs" %}
 
 {% block title %}
 {{ super() }}
-<!-- Subheading -->
+<!-- Subheading 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
@@ -11,26 +13,20 @@
         </p>
 
     </div>
-</div>
+</div> -->
 {% endblock %}
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p>
-        <b>@sam</b> can we just have sentence that gives an intro to these 'approach' child pages please?
-    </p>
+    <p>The original <a href="https://docs.google.com/presentation/d/1r7Rq563dsahkepnyhRkfWOd9t-YnBDqK2YJj8Lc-IS4/edit#slide=id.g8ae8b29489_0_55" target="_blank">GOV.UK accounts discovery that took place in 2019</a> identified user needs and set out the original justification for the work.</p>
 
-</div>
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    <p>Whilst our project was not aimed at gathering user needs as part of discovery style research, we have found it useful to document user needs along the way. </p>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Assumptions</li>
-        <li>Life event</li>
-        <li>Testing</li>
+    <p>These user needs have enabled valuable discussions across the project. By putting user needs first, we can discuss which features best meet these needs, and also identify whether any of the provisional ideas for features could adversely impact users.</p>
 
-    </ul>
+    <p>This has all supported conversations around risk, impact and future service design. </p>
 
 </div>
 {% endblock %}
@@ -39,118 +35,63 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 ">
 
-    <h3 class="govuk-heading-m">Number of rounds</h3>
+    <p>We acknowledge that if we had chosen a different life event, these needs may look different. For example, if our work had focussed on ‘starting a business’ we may not have compiled this list of user needs.</p>
 
-    <p class="govuk-body-l">
-        6
+    <p>Our project did not seek to define user needs across a plethora of possible cross-gov transactions.</p>
+
+    <p>We anticipate that this learning will be ongoing over time in the programme of work.
     </p>
 
 </div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">Number of users</h3>
-
-    <p class="govuk-body-l">
-        61
-    </p>
-
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
-
-    <h3 class="govuk-heading-m">Features tested</h3>
-
-    <p class="govuk-body-l">
-        23
-    </p>
-
-</div>
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-
-    <p>We created front-end <a href="../prototypes/">prototypes</a> with account feature concepts, which were grouped by relevancy to the imagined scenario we created for each round.</p>
-
-    <p>We tested those prototypes and captured the users' understanding, perception and reactions to those features.</p>
-    <p>We were also keen to understand the users' expectations of how a feature would work from 'day 1' and how it could evolve, and how they thought features would connect and work together.</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                More about the features
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <p>The <a href="../features/">features section</a> compares users expectations with service expectations.</p>
-
-            <p>The risks, dependencies and complexities of joining up services across government, are captured in the <a href="#">risk log</a></p>
-
-        </div>
-    </details>
-
-
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bpk8kHcqLPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-</div>
-{% endblock %}
-{% else %}
-{% endif %}
+<div class="govuk-grid-column-full">
 
-{% if pagemenu[3] %}
-{% block section4 %}
+    <p>The GDS user needs format is as follows: </p>
+
+    <blockquote>
+        <p>
+            <i>As a [type of user], I need to [explain what the user wants / needs expects to do], so that [intended outcome] </i>
+        </p>
+    </blockquote>
+
+</div>
+
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p><i>(in draft, we’re still learning)</i>: </p>
+    <p>Within our research sample the type of users are claimants or customers of a service, and the intended outcome is always around claiming financial support.</p>
 
-    <ol class="govuk-list govuk-list--number">
-        {% for number, need in data['needs'] %}
-        <li>{{ need }}</li>
+    <p>A non-exhaustive list of needs is summarised here: </p>
+
+    <br />
+
+    <ol class="govuk-list govuk-list--number govuk-list--spaced">
+        {% for number, label in needs %}
+        <li><b>{{ label }}</b></li>
         {% else %}
         {% endfor %}
+
     </ol>
+
+    <!-- <ul class="govuk-list govuk-list--bullet">
+        <li>Get everything I’m eligible for </li>
+        <li>Reduce the stress of paperwork and admin </li>
+        <li>Reduce the burden of supplying proof </li>
+        <li>Save time </li>
+        <li>Avoid phoning the service </li>
+        <li>Feel safe and secure online </li>
+        <li>Feel confident in the way my data is being used</li>
+    </ul> -->
+
 </div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
 
-    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
-
-</div>
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[4] %}
-{% block section5 %}
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[5] %}
-{% block section6 %}
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[6] %}
-{% block section7 %}
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[7] %}
-{% block section8 %}
 {% endblock %}
 {% else %}
 {% endif %}

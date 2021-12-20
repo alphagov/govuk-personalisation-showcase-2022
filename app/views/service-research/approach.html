@@ -4,6 +4,16 @@
 {{ super() }}
 {% endblock %}
 
+
+{% block menu %}
+<ul class="govuk-list govuk-list--bullet">
+    {% for item in approachmenu %}
+    <li><a href="../service-research/approach.html#{{ item.anchor }}">{{ item.title }}</a></li>
+    {% else %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
 {% if pagemenu[0] %}
 {% block section1 %}
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">

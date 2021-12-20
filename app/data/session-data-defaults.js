@@ -226,6 +226,20 @@ module.exports = {
             anchor: "insight-11"
         }
     ],
+    userneedsmenu: [
+        {
+            title: "Background",
+            anchor: "background"
+        },
+        {
+            title: "Guidance",
+            anchor: "guidance "
+        },
+        {
+            title: "Summary",
+            anchor: "summary"
+        }
+    ],
     userrecommendationsmenu: [
         {
             title: "Clarity and transparency",
@@ -387,8 +401,8 @@ module.exports = {
     },
     needs: {
         needlabel1: 'Get everything I’m eligible for',
-        needlabel2: 'Avoid the stress of paperwork and admin',
-        needlabel3: 'Avoid the burden of supplying proof',
+        needlabel2: 'Reduce the stress of paperwork and admin',
+        needlabel3: 'Reduce the burden of supplying proof',
         needlabel4: 'Save time',
         needlabel5: 'Avoid phoning the service',
         needlabel6: 'Feel safe and secure online',
