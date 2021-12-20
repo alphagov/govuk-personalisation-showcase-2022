@@ -344,10 +344,10 @@ module.exports = {
     recommendationsmenu: [
         {
             title: "Section 1",
-            anchor: "explanation",
+            anchor: "section-1",
     }, {
-            title: "Diagram (placeholder)",
-            anchor: "diagram",
+            title: "Section 2",
+            anchor: "section-1",
     }
     ],
     pillarsmenu: [
