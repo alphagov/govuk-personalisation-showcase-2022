@@ -1,63 +1,4 @@
-{% extends "layout_handover_menupage.html" %}
-
-{% block menu %}
-<!-- PAGE MENU -->
-<div class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-bottom-8">
-    <div class="govuk-grid-column-one-half">
-        <ol class="govuk-list govuk-list--number govuk-list--spaced">
-
-
-            <li><a href="../service-research/approach.html">{{ data['serviceresearchmenu'][0]['title'] }}</a>
-                <!--  <ul class="govuk-list govuk-list--bullet">
-                    {% for item in approachmenu %}
-                    <li><a href="../service-research/approach.html#{{ item.anchor }}">{{ item.title }}</a></li>
-                    {% else %}
-                    {% endfor %}
-                </ul> -->
-            </li>
-            <li><a href="../service-research/summary.html">{{ data['serviceresearchmenu'][1]['title'] }}</a>
-                <!--   <ul class="govuk-list govuk-list--bullet">
-                    {% for item in summarymenu %}
-                    <li><a href="#{{ item.anchor }}">{{ item.title }}</a></li>
-                    {% else %}
-                    {% endfor %}
-
-                </ul> -->
-            </li>
-            <li><a href="../service-research/insights.html">{{ data['serviceresearchmenu'][2]['title'] }}</a>
-                <!--   <ul class="govuk-list govuk-list--bullet">
-                    {% for item in insightsmenu %}
-                    <li><a href="../service-research/insights.html#{{ item.anchor }}">{{ item.title }}</a></li>
-                    {% else %}
-                    {% endfor %}
-
-                </ul> -->
-            </li>
-            <li><a href="../service-research/recommendations.html">{{ data['serviceresearchmenu'][3]['title'] }}</a>
-                <!--    <ul class="govuk-list govuk-list--bullet">
-                    {% for item in insightsmenu %}
-                    <li><a href="../service-research/insights.html#{{ item.anchor }}">{{ item.title }}</a></li>
-                    {% else %}
-                    {% endfor %}
-
-                </ul> -->
-            </li>
-
-
-        </ol>
-    </div>
-    <div class="govuk-grid-column-one-half hide-on-mobile">
-
-        <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
-
-    </div>
-</div>
-<!-- VERTICAL SPACER -->
-<div class="govuk-grid-row govuk-!-padding-bottom-8">
-    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    </div>
-</div>
-{% endblock %}
+{% extends "layout_handover_child.html" %}s
 
 {% block title %}
 {{ super() }}
@@ -66,7 +7,7 @@
     <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
         <p class="govuk-body-l">
-            {{ data['objectives']['objective2'] }}
+            {{ data['objectives']['objective1'] }}
         </p>
 
     </div>
@@ -75,6 +16,23 @@
 
 {% if pagemenu[0] %}
 {% block section1 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+    <p>
+        <b>@sam</b> can we just have sentence that gives an intro to these 'approach' child pages please?
+    </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Assumptions</li>
+        <li>Life event</li>
+        <li>Testing</li>
+
+    </ul>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}

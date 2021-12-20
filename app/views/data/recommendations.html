@@ -1,0 +1,61 @@
+{% extends "layout_handover_child.html" %}s
+
+{% block title %}
+{{ super() }}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Detailed research is needed to fully understand the value and complexity of adopting each of the hypothetical account features</li>
+        <li>Conduct further research based on technical assessments of feature complexity</li>
+        <li>Widen the recruitment profile to cover a range of service roles (including technical and non-technical roles)</li>
+        <li>Conduct an assessment of technical dependencies to understand the intrinsic links between features (some features are enablers)</li>
+    </ul>
+
+</div>
+{% endblock %}
+
+
+{% block menu %}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

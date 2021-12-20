@@ -1,0 +1,133 @@
+{% extends "layout_handover_child.html" %}
+
+{% block title %}
+{{ super() }}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <p>As with the service research, we spoke to a wide range of government services in phase 2. We wanted to know what user journeys would look like if we joined up services, while exploring the data and technology requirements in order to enable this.</p>
+
+    <p>For the workshops we prioritised services who were also participating in our service research. That way we could get a full history of the service, including their current processes and the features they valued.</p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-2 govuk-!-padding-bottom-2">What we wanted to find out</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>To understand the steps involved in processing an application</li>
+        <li>What the users provide throughout the application process</li>
+        <li>The information that users receive from the service</li>
+        <li>How users keep their details up to date (if applicable)</li>
+        <li>How information flows between systems and staff</li>
+        <li>Any data sharing with other services or departments as part of the process</li>
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What was in scope</h3>
+
+    <ul class="govuk-list govuk-list--bullet ">
+        <li>The path / paths experienced by the majority of users</li>
+        <li>Data flows within and between services, directly involved in the service application</li>
+    </ul>
+
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What was out of scope</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Steps outside of the agreed start - end journey</li>
+        <li>Paths experienced by a very small proportion of users</li>
+        <li>Data sharing that is part of other service processes, such as fraud checks or anything not directly involved in the application process</li>
+    </ul>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <p>We ran workshops with service owners, product owners and other roles to help map out how services process applications and the data captured at each step of the process.</p>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">Participating services</h3>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>MOD - War Pension and Armed Forces Compensation Scheme</li>
+        <li>MOJ - Lasting power of attorney</li>
+        <li>LA - Register a birth</li>
+        <li>LA - Apply for a Blue Badge</li>
+        <li>HMRC - Register a trust</li>
+    </ol>
+
+    <p>HMRC Child Benefit also shared their existing process maps.</p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <p>During our service research and workshops, we asked services if they currently use and maintain data dictionaries.</p>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What we wanted to find out</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>The data items most commonly required by government service application forms</li>
+        <li>If services have a data dictionary or have implemented information standards</li>
+        <li>The level of variation in input validation</li>
+    </ul>
+
+    <p>HMRC Child Benefit also shared their existing process maps.</p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <p>We had intended to analyse service-held data dictionaries as a part of our research. Unfortunately, most of the services we spoke to didn’t have a data dictionary - although some identified it as an aspiration.</p>
+
+    <p>We found that services going through a digital transformation tended to prioritise increased technical maturity, with the data maturity possibly following once the technical foundations were in place.</p>
+
+    <p>As a result, our work broadened to look more generally at the data items needed by government services, as well as any input validation they have implemented and how they receive user’s information.
+    </p>
+
+</div>
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

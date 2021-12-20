@@ -1,10 +1,81 @@
-{% extends "layout_handover.html" %}
+{% extends "layout_handover_menupage.html" %}
+
+{% block title %}
+{{ super() }}
+<!-- Subheading -->
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+        <p class="govuk-body-l">{{ data['objectives']['objective3'] }}</p>
+        <p class="grey"><b>and</b></p>
+        <p class="govuk-body-l">{{ data['objectives']['objective4'] }}</p>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block menu %}
+<!-- PAGE MENU -->
+<div class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-one-half">
+        <ol class="govuk-list govuk-list--number govuk-list--spaced">
+
+
+            <li><a href="../data/approach.html">{{ data['datamenu'][0]['title'] }}</a>
+                <!--  <ul class="govuk-list govuk-list--bullet">
+                    {% for item in approachmenu %}
+                    <li><a href="../service-research/approach.html#{{ item.anchor }}">{{ item.title }}</a></li>
+                    {% else %}
+                    {% endfor %}
+                </ul> -->
+            </li>
+            <li><a href="../data/summary.html">{{ data['datamenu'][1]['title'] }}</a>
+                <!--   <ul class="govuk-list govuk-list--bullet">
+                    {% for item in summarymenu %}
+                    <li><a href="#{{ item.anchor }}">{{ item.title }}</a></li>
+                    {% else %}
+                    {% endfor %}
+
+                </ul> -->
+            </li>
+            <li><a href="../data/insights.html">{{ data['datamenu'][2]['title'] }}</a>
+                <!--   <ul class="govuk-list govuk-list--bullet">
+                    {% for item in insightsmenu %}
+                    <li><a href="../service-research/insights.html#{{ item.anchor }}">{{ item.title }}</a></li>
+                    {% else %}
+                    {% endfor %}
+
+                </ul> -->
+            </li>
+            <li><a href="../data/recommendations.html">{{ data['datamenu'][3]['title'] }}</a>
+                <!--    <ul class="govuk-list govuk-list--bullet">
+                    {% for item in insightsmenu %}
+                    <li><a href="../service-research/insights.html#{{ item.anchor }}">{{ item.title }}</a></li>
+                    {% else %}
+                    {% endfor %}
+
+                </ul> -->
+            </li>
+
+
+        </ol>
+    </div>
+    <div class="govuk-grid-column-one-half hide-on-mobile">
+
+        <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
+
+    </div>
+</div>
+<!-- VERTICAL SPACER -->
+<div class="govuk-grid-row govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    </div>
+</div>
+{% endblock %}
+
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <p class="govuk-body-l">{{ data['objectives']['objective1'] }}</p>
-</div>
 {% endblock %}
 {% else %}
 {% endif %}

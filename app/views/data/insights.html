@@ -1,0 +1,437 @@
+{% extends "layout_handover_child.html" %}s
+
+{% block title %}
+{{ super() }}
+<!-- Subheading 
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+        <p class="govuk-body-l">
+            {{ data['objectives']['objective1'] }}
+        </p>
+
+    </div>
+</div> -->
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <p> The technical maturity, resources and end users of each of the services involved in the research were very varied.</p>
+
+    <p>Whilst some of the current challenges are shared by services, many of the participants we spoke to have challenges and needs around joining up government services that are unique to their individual services and end users.
+
+    </p>
+
+
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Current data sharing activity</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>There is limited sharing outside of departments </li>
+                <li>Current legislation and the time taken to get agreements in place are significant barriers to sharing data within government</li>
+                <li>Third-party data is widely used as it’s easier to obtain than data from another government service - this comes at a cost to the service</li>
+                <li>Hugh reliance on manual processes to make use of data - preventing services from becoming fully digitised</li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Perceived benefits of cross government services</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Overcome differences in resources and levels of technical maturity - a centrally developed account could help the services transforming at different rates</li>
+                <li>Keeping accurate records</li>
+                <li>Prevent fraud and potential misuse of services</li>
+                <li>Empower services to exchange data freely</li>
+                <li>Reduce manual processing </li>
+                <li>Reduce costs</li>
+            </ul>
+
+        </div>
+
+        <div class="govuk-grid-column-one-third govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+            <blockquote>
+                <p><i>The account could enable us both to accelerate our transformation - to lean on - whichever platform we do or DWP do, we could use the account data sharing</i></p>
+                <p><b>MOD</b></p>
+            </blockquote>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Perceived challenges of cross government services</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Differences in data assurance standards across government could make consuming data from some government services difficult
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Some services may only be willing to be source of data in the future, rather than a consumer</li>
+                    </ul>
+                </li>
+                <li>Current legislation and resource commitment were also seen as future challenges</li>
+            </ul>
+
+        </div>
+
+        <div class="govuk-grid-column-one-third govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+            <blockquote>
+                <p><i>Identity Assurance level 4/3 - the highest levels - most other departments aren't there - the stakes are high - I can't see how we leverage the trust with other departments</i></p>
+                <p><b>Home Office</b></p>
+            </blockquote>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Future expectations of cross government services</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>A culture of trust</li>
+                <li>All data is on the table</li>
+                <li>Everything in one place</li>
+                <li>A level playing field</li>
+            </ul>
+
+        </div>
+
+        <div class="govuk-grid-column-one-third govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+            <blockquote>
+                <p><i>A life circumstance led approach</i></p>
+                <p><b>DWP - PIP</b></p>
+            </blockquote>
+
+        </div>
+
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-4">
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+            <blockquote>
+                <p><i>As a result of that transparency you can use the account to facilitate a conversation with DWP, or HMRC, it becomes your way into talking to government, it becomes a safe and trusted place</i></p>
+                <p><b>MOJ - LPA</b></p>
+            </blockquote>
+
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+            <blockquote>
+                <p><i>I think all data should be on the table, you're working in government, you have trust and respect and autonomy, to access the data and metadata to service citizens with the minimum number of contact points</i></p>
+                <p><b>MOD - Forces Compensation and War Pension Scheme</b></p>
+            </blockquote>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+    <div class="govuk-grid-row  govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">3.1 Feature prioritisation</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <p>As mentioned previously, any features associated with account setup were excluded from the initial service research.</p>
+                    <p>We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
+
+                </div>
+            </div>
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+                    <h4 class="govuk-heading-s">
+                        Top 5 features by value/associated complexity</h4>
+
+                    <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+                        <li><a href="../features/06.html">Trusted data</a> (Medium complexity)</li>
+                        <li><a href="../features/08.html">Global push</a> (High complexity)</li>
+                        <li><a href="../features/07.html">Notifications</a> (Low complexity)</li>
+                        <li><a href="../features/24.html">Reminders</a> (Low complexity)</li>
+                        <li><a href="../features/05.html">Use of existing data</a> (Medium complexity)</li>
+                    </ol>
+
+                    <p>Although notifications and reminders were regarded as being high value/low complexity, the full value of these will not be realised without the underlying data in place.</p>
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <h4 class="govuk-heading-s">
+                        Core features vs features that add additional value</h4>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+                        <li>Without the data led features and the underlying data being in place the full value of other features will be difficult to realise</li>
+                        <li>Data led features enable some of the easier features to become a reality</li>
+                    </ul>
+
+                    <p class="comment">Video to insert here</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">
+                3.2 Other significant opportunities </h3>
+
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <h4 class="govuk-heading-s">
+                        Account flags</h4>
+
+                    <p>Services spoke about there being considerable value in sharing/accessing facts or markers about users.</p>
+                    <p>These account flags fall into two categories:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+                        <li>Flags that are <b>visible</b> to the user within the GOV.UK account - Example: “In receipt of PIP” “Deceased”</li>
+                        <li>Flags that <b>aren’t visible</b> to the user - Example: “Account has been compromised - fraud risk”</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">
+                3.3 Emerging themes </h3>
+
+        </div>
+
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+
+                    <h4 class="govuk-heading-s">
+                        The operating model</h4>
+
+                    <p>There was concern about the operating model - if the data is wrong somewhere, you have to be able to change it:</p>
+
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+                        <li>What is the support mechanism?</li>
+                        <li>If the user contacts the contact centre - who's contact centre is this?</li>
+                        <li>Will the GOV.UK GDS contact centre need to resolve this or the service the data has come from?</li>
+                        <li>How will this be explained to the user?</li>
+                        <li>Would the operating model need to be established and functional before some features can be implemented?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+
+                            <h4 class="govuk-heading-s">User adoption/engagement</h4>
+
+                            <p>Some of the services felt that a number of the proposed features would need to be carefully considered from a user engagement perspective.</p>
+                            <p>Getting users to engage with their GOV.UK account to manage their data and account settings was seen by many as a difficult challenge to overcome in the future - in particular features such as profile completion, notifications and reminders.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+
+                            <h4 class="govuk-heading-s">User reactions</h4>
+
+                            <p>Exploring how to strike a healthy balance between the government knowing a great deal about the user while also helping them.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-grid-row ">
+                        <div class="govuk-grid-column-full">
+
+                            <h4 class="govuk-heading-s">Which data is useful data cross government services</h4>
+
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>Some data will only ever be service specific - this raises the question of how useful it would be to save some types of data within the account if it’s unlikely to be reused (it could also become unmanageable if large amounts of data are saved to the account)</li>
+                                <li>Some types of data will need to be excluded (for example, special forces personnel)</li>
+                                <li>GDPR - Users should only provide information that is necessary (there is a risk of asking for data without an explicit need - such as completing your profile)</li>
+                                <li>Awareness of there being a risk around making too many assumptions based on data (derived data)</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+
+                            <h4 class="govuk-heading-s">Data silos and aggregated data stores</h4>
+
+                            <p>Services felt that there could be a risk of GDS creating a data silos</p>
+
+                            <blockquote>
+                                <p><i>...it really needs to be a personal data store, rather than an aggregated data store yet another GDS silos</i></p>
+                            </blockquote>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+
+                            <h4 class="govuk-heading-s">Other account set up considerations</h4>
+
+                            <p>Completing ‘hygiene checks’, such as renewing consent permissions periodically.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+    <p>The methodology we used allowed us to explore features with service teams, learning where they saw value and complexity.</p>
+    <p>It’s important to remember that the final rankings are opinions and expectations based on a short description of each feature. Much more detailed research is needed to fully understand the true value and complexity of adopting each of the features. </p>
+    <p>
+        These sessions were conducted with service owners and product managers and the prioritisation exercise was not based on any technical assessments of complexity.
+    </p>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-4">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Detailed research is needed to fully understand the value and complexity of adopting each of the hypothetical account features</li>
+        <li>Conduct further research based on technical assessments of feature complexity</li>
+        <li>Widen the recruitment profile to cover a range of service roles (including technical and non-technical roles)</li>
+        <li>Conduct an assessment of technical dependencies to understand the intrinsic links between features (some features are enablers)</li>
+    </ul>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

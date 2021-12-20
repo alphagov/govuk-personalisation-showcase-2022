@@ -115,36 +115,6 @@ module.exports = {
             anchor: "ways-of-working",
     }
     ],
-    datamenu: [
-        {
-            title: "Objective",
-            anchor: "objective",
-    },
-        {
-            title: "Findings",
-            anchor: "findings",
-    },
-        {
-            title: "Workshops",
-            anchor: "workshops",
-    },
-        {
-            title: "Gap analysis",
-            anchor: "gapanalysis",
-    },
-        {
-            title: "Recommendations",
-            anchor: "recommendations",
-    },
-        {
-            title: "Data dictionary",
-            anchor: "dictionary",
-    },
-        {
-            title: "Data model",
-            anchor: "model",
-    }
-    ],
     userresearchmenu: [
         {
             title: "Approach",
@@ -329,6 +299,46 @@ module.exports = {
         {
             title: "Limitations",
             anchor: "limitations",
+    }
+    ],
+    datamenu: [
+        {
+            title: "Approach",
+            anchor: "approach",
+    },
+        {
+            title: "Summary",
+            anchor: "summary",
+    },
+        {
+            title: "Insights",
+            anchor: "insights",
+    },
+        {
+            title: "Recommendations",
+            anchor: "recommendations",
+        }
+    ],
+    dataapproachmenu: [
+        {
+            title: "Overview",
+            anchor: "overview",
+    },
+        {
+            title: "Workshops",
+            anchor: "workshops",
+    },
+        {
+            title: "Methodology",
+            anchor: "methodology",
+    },
+        {
+            title: "Data dictionary",
+            anchor: "data-dictionary",
+    },
+        {
+            title: "Challenges",
+            anchor: "challenges",
     }
     ],
     featuresmenu: [

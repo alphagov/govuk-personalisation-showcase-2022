@@ -836,6 +836,250 @@ router.get('/service-research/recommendations', function (req, res) {
     })
 })
 
+
+// DATA RESEARCH
+router.get('/data', function (req, res) {
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.datamenu.length;
+    let approachmenusections = req.session.data.dataapproachmenu.length;
+    let summarymenusections = req.session.data.datasummarymenu.length;
+    let insightsmenusections = req.session.data.datainsightsmenu.length;
+
+    let thispage = req.session.data.hubmenu[3].id;
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let approachmenu = []
+    let approachtitles = []
+    let approachanchors = []
+    let summarymenu = []
+    let summarytitles = []
+    let summaryanchors = []
+    let insightsmenu = []
+    let insightstitles = []
+    let insightsanchors = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.datamenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.datamenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.datamenu[i].anchor
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachmenu[i] = req.session.data.dataapproachmenu[i]
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarymenu[i] = req.session.data.datasummarymenu[i]
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsmenu[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachtitles[i] = req.session.data.dataapproachmenu[i].title
+    }
+    for (i = 0; i < approachmenusections; i++) {
+        approachanchors[i] = req.session.data.dataapproachmenu[i].anchor
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summarytitles[i] = req.session.data.datasummarymenu[i].title
+    }
+    for (i = 0; i < summarymenusections; i++) {
+        summaryanchors[i] = req.session.data.datasummarymenu[i].anchor
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightstitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < insightsmenusections; i++) {
+        insightsanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+
+    //return these
+    return res.render('data/index', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'approachmenu': approachmenu,
+        'approachmenusections': approachmenusections,
+        'approachtitles': approachtitles,
+        'approachanchors': approachanchors,
+        'summarymenu': summarymenu,
+        'summarymenusections': summarymenusections,
+        'summarytitles': summarytitles,
+        'summaryanchors': summaryanchors,
+        'insightsmenu': insightsmenu,
+        'insightsmenusections': insightsmenusections,
+        'insightstitles': insightstitles,
+        'insightsanchors': insightsanchors,
+        'thispage': thispage
+    })
+})
+
+// DATA approach
+router.get('/data/approach', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.datamenu[0].title;
+    let parent = req.session.data.hubmenu[4].title;
+    let parentlink = req.session.data.hubmenu[4].url;
+
+    console.log('This page is: ' + thispage)
+
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.dataapproachmenu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.dataapproachmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.dataapproachmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.dataapproachmenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('data/approach', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
+// DATA insights
+router.get('/data/insights', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.serviceresearchmenu[2].title;
+    let parent = req.session.data.hubmenu[3].title;
+    let parentlink = req.session.data.hubmenu[3].url;
+
+    console.log('This page is: ' + thispage)
+
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.serviceinsightsmenu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('service-research/insights', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
+// DATA recommendations
+router.get('/data/recommendations', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.serviceresearchmenu[3].title;
+    let parent = req.session.data.hubmenu[3].title;
+    let parentlink = req.session.data.hubmenu[3].url;
+
+    console.log('This page is: ' + thispage)
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+
+    // loop though the links and populate the arrays
+
+
+    //return these
+    return res.render('service-research/recommendations', {
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
