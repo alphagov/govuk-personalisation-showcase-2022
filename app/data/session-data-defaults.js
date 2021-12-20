@@ -329,10 +329,6 @@ module.exports = {
         {
             title: "Limitations",
             anchor: "limitations",
-    },
-        {
-            title: "Recommendations",
-            anchor: "recommendations",
     }
     ],
     featuresmenu: [

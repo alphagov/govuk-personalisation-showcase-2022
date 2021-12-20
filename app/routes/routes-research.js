@@ -804,6 +804,38 @@ router.get('/service-research/insights', function (req, res) {
     })
 })
 
+// SERVICE USER recommendations
+router.get('/service-research/recommendations', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.serviceresearchmenu[3].title;
+    let parent = req.session.data.hubmenu[3].title;
+    let parentlink = req.session.data.hubmenu[3].url;
+
+    console.log('This page is: ' + thispage)
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+
+    // loop though the links and populate the arrays
+
+
+    //return these
+    return res.render('service-research/recommendations', {
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
