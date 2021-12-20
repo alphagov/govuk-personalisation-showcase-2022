@@ -292,7 +292,18 @@ module.exports = {
     }
     ],
     servicesummarymenu: [
-
+        {
+            title: "Rationale",
+            anchor: "rationale"
+},
+        {
+            title: "Approach",
+            anchor: "approach"
+        },
+        {
+            title: "Insights",
+            anchor: "insights"
+        }
     ],
     serviceinsightsmenu: [
         {

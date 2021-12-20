@@ -3,15 +3,7 @@
 {% block title %}
 {{ super() }}
 <!-- Subheading -->
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-        <p class="govuk-body-l">
-            {{ data['objectives']['objective1'] }}
-        </p>
-
-    </div>
-</div>
 {% endblock %}
 
 {% if pagemenu[0] %}
@@ -19,80 +11,24 @@
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
     <p>
-        <b>@sam</b> can we just have sentence that gives an intro to these 'approach' child pages please?
+        We conducted user research with service users to explore the feasibility of joining up services across government, whilst identifying what service features would help make the GOV.UK account more personalised.
     </p>
 
 </div>
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Assumptions</li>
-        <li>Life event</li>
-        <li>Testing</li>
-
-    </ul>
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+    <p>In order to explore this concept we conducted initial exploratory moderated interviews followed by a second research round of research which was focussed on discussing and prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
 
-    <h3 class="govuk-heading-m">Number of rounds</h3>
+    <p>We created an online card sort using Optimal Workshop to elicit discussions and explore expectations around the features. </p>
 
-    <p class="govuk-body-l">
-        6
+    <p>We ran 16 research sessions over the 2 rounds of research from October 2021 - December 2021 with 11 different government services and spoke to 24 user research participants within these sessions.
     </p>
-
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
-
-    <h3 class="govuk-heading-m">Number of users</h3>
-
-    <p class="govuk-body-l">
-        61
-    </p>
-
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
-
-    <h3 class="govuk-heading-m">Features tested</h3>
-
-    <p class="govuk-body-l">
-        23
-    </p>
-
-</div>
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-
-    <p>We created front-end <a href="../prototypes/">prototypes</a> with account feature concepts, which were grouped by relevancy to the imagined scenario we created for each round.</p>
-
-    <p>We tested those prototypes and captured the users' understanding, perception and reactions to those features.</p>
-    <p>We were also keen to understand the users' expectations of how a feature would work from 'day 1' and how it could evolve, and how they thought features would connect and work together.</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                More about the features
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <p>The <a href="../features/">features section</a> compares users expectations with service expectations.</p>
-
-            <p>The risks, dependencies and complexities of joining up services across government, are captured in the <a href="#">risk log</a></p>
-
-        </div>
-    </details>
-
-
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
-
 </div>
 {% endblock %}
 {% else %}
@@ -100,10 +36,20 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bpk8kHcqLPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="govuk-grid-column-two-thirds">
+
+    <ol class="govuk-list govuk-list--number govuk-list--spaced">
+        <li>Services only share limited data outside of their own government departments - current legislation and the time to get agreements in place are significant barriers to sharing data. Many services instead use third party data (at a cost to the service) and have a high reliance on manual processes to make use of data - preventing services from becoming fully digitised.</li>
+        <li>Service users identified differences in data assurance standards, current legislation and resource commitment as the key challenges around joining up data cross government services.</li>
+        <li>The future expectation of cross government services is a level playing field for services could be created and that all data should be on the table. </li>
+        <li>Service users felt that differences in resources and levels of technical maturity could be overcome through joining up services within the GOV.UK account empowering services to exchange data freely. Keeping accurate records (preventing fraud and potential misuse of services) and cost reductions were also seen as potential benefits. </li>
+        <li>Service users saw the hypothetical account features as either core or value added features - without the data led features and the underlying data being in place it was felt that the full value of other features will be difficult to realise. </li>
+        <li>User adoption and user reactions were considerations raised by services users. </li>
+        <li>Some data will only ever be service specific and some data needs to be excluded. </li>
+        <li>Service users need to be clear on what the operating model and support mechanism is for end users.</li>
+
+    </ol>
+
 </div>
 {% endblock %}
 {% else %}
@@ -111,22 +57,7 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p><i>(in draft, we’re still learning)</i>: </p>
-
-    <ol class="govuk-list govuk-list--number">
-        {% for number, need in data['needs'] %}
-        <li>{{ need }}</li>
-        {% else %}
-        {% endfor %}
-    </ol>
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
