@@ -242,6 +242,22 @@ module.exports = {
         {
             title: "Impact on services",
             anchor: "recommendation-4"
+        },
+        {
+            title: "Understand the needs of citizen users ",
+            anchor: "recommendation-5"
+        },
+        {
+            title: "Do user research to understand how users could potentially use features",
+            anchor: "recommendation-6"
+        },
+        {
+            title: "Create a secure service which protects users’ privacy",
+            anchor: "recommendation-7"
+        },
+        {
+            title: "Listen to the way users describe things in their own words",
+            anchor: "recommendation-8"
         }
     ],
     serviceresearchmenu: [
