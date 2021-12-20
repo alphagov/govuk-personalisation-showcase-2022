@@ -2,15 +2,13 @@
 
 {% block title %}
 {{ super() }}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
-
+<div class="govuk-grid-column-two-thirds">
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li>Detailed research is needed to fully understand the value and complexity of adopting each of the hypothetical account features</li>
-        <li>Conduct further research based on technical assessments of feature complexity</li>
-        <li>Widen the recruitment profile to cover a range of service roles (including technical and non-technical roles)</li>
-        <li>Conduct an assessment of technical dependencies to understand the intrinsic links between features (some features are enablers)</li>
+        <li>Conduct research across government services to build an accurate picture on the use of data dictionaries and information standards, in particular the GPG 45.</li>
+        <li>Conduct research to understand, for services undergoing a digital transformation how their roadmap aligns with the Gov.UK Account roadmap.</li>
+        <li>Detailed research is needed with services to understand the technical requirements for services to implement features.</li>
+        <li>Widen the recruitment profile to include services with a greater digital maturity.</li>
     </ul>
-
 </div>
 {% endblock %}
 
@@ -18,11 +16,7 @@
 {% block menu %}
 {% endblock %}
 
-{% if pagemenu[0] %}
-{% block section1 %}
-{% endblock %}
-{% else %}
-{% endif %}
+
 
 {% if pagemenu[1] %}
 {% block section2 %}

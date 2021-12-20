@@ -341,6 +341,24 @@ module.exports = {
             anchor: "challenges",
     }
     ],
+    datainsightsmenu: [
+        {
+            title: "Background",
+            anchor: "background",
+        },
+        {
+            title: "Service research data findings",
+            anchor: "service-research-data-findings",
+    },
+        {
+            title: "Data Models",
+            anchor: "data-models",
+    },
+        {
+            title: "Data Dictionary",
+            anchor: "data-dictionary",
+    }
+    ],
     featuresmenu: [
         {
             title: "Summary",

@@ -995,15 +995,15 @@ router.get('/data/insights', function (req, res) {
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
 
-    let thispage = req.session.data.serviceresearchmenu[2].title;
-    let parent = req.session.data.hubmenu[3].title;
-    let parentlink = req.session.data.hubmenu[3].url;
+    let thispage = req.session.data.datamenu[2].title;
+    let parent = req.session.data.hubmenu[4].title;
+    let parentlink = req.session.data.hubmenu[4].url;
 
     console.log('This page is: ' + thispage)
 
 
     // calculate number of in page menu links
-    let menusections = req.session.data.serviceinsightsmenu.length;
+    let menusections = req.session.data.datainsightsmenu.length;
 
     // calculate number of features
     let featurestotal = req.session.data.rdd.features.length
@@ -1017,13 +1017,13 @@ router.get('/data/insights', function (req, res) {
 
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
-        pagemenu[i] = req.session.data.serviceinsightsmenu[i]
+        pagemenu[i] = req.session.data.datainsightsmenu[i]
     }
     for (i = 0; i < menusections; i++) {
-        titles[i] = req.session.data.serviceinsightsmenu[i].title
+        titles[i] = req.session.data.datainsightsmenu[i].title
     }
     for (i = 0; i < menusections; i++) {
-        anchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+        anchors[i] = req.session.data.datainsightsmenu[i].anchor
     }
     for (i = 0; i < featurestotal; i++) {
         featurestotal[i] = req.session.data.rdd.features[i]
@@ -1034,7 +1034,7 @@ router.get('/data/insights', function (req, res) {
     }
 
     //return these
-    return res.render('service-research/insights', {
+    return res.render('data/insights', {
         'pagemenu': pagemenu,
         'menusections': menusections,
         'titles': titles,
@@ -1058,9 +1058,9 @@ router.get('/data/recommendations', function (req, res) {
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
 
-    let thispage = req.session.data.serviceresearchmenu[3].title;
-    let parent = req.session.data.hubmenu[3].title;
-    let parentlink = req.session.data.hubmenu[3].url;
+    let thispage = req.session.data.datamenu[3].title;
+    let parent = req.session.data.hubmenu[4].title;
+    let parentlink = req.session.data.hubmenu[4].url;
 
     console.log('This page is: ' + thispage)
 
@@ -1073,7 +1073,7 @@ router.get('/data/recommendations', function (req, res) {
 
 
     //return these
-    return res.render('service-research/recommendations', {
+    return res.render('data/recommendations', {
         'thispage': thispage,
         'parent': parent,
         'parentlink': parentlink
