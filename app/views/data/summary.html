@@ -2,7 +2,7 @@
 
 {% block title %}
 {{ super() }}
-<!-- Subheading -->
+<!-- Subheading 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
@@ -11,26 +11,24 @@
         </p>
 
     </div>
-</div>
+</div> -->
 {% endblock %}
 
 {% if pagemenu[0] %}
 {% block section1 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>
-        <b>@sam</b> can we just have sentence that gives an intro to these 'approach' child pages please?
+    <p>To fully support the features we’ve been testing with users and services in phase 2, services need the following capabilities in place:
     </p>
 
-</div>
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-
     <ul class="govuk-list govuk-list--bullet">
-        <li>Assumptions</li>
-        <li>Life event</li>
-        <li>Testing</li>
-
+        <li>To have a digital front end path for customers</li>
+        <li>To seamlessly load service application data into their backend systems</li>
+        <li>To share information digitally with their users</li>
+        <li>For this information to be stored in structured and consistent formats</li>
     </ul>
+
+    <p>We engaged with services to understand their data and process gaps against their capabilities.</p>
 
 </div>
 {% endblock %}
@@ -39,71 +37,112 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <h3 class="govuk-heading-m">Number of rounds</h3>
-
-    <p class="govuk-body-l">
-        6
+    <p>Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation.</p>
+    <p>These include:
     </p>
 
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4 govuk-!-padding-top-2">
+        <li>Paper to digital frontend</li>
+        <li>Paper to digital backend</li>
+        <li>In-person to virtual services</li>
+        <li>Siloed digital services to single sign-on (SSO) - also known as ‘one stop shop’</li>
+    </ul>
 
-    <h3 class="govuk-heading-m">Number of users</h3>
+    <p>Many services are trying to move away from their current paper applications, which must be manually inputted into systems and not digitised at all.</p>
+    <p>The HRMC Ops team for Child Benefit receives 700,000 paper applications per year.</p>
 
-    <p class="govuk-body-l">
-        61
-    </p>
-
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
-
-    <h3 class="govuk-heading-m">Features tested</h3>
-
-    <p class="govuk-body-l">
-        23
-    </p>
+    <p>Some services that appear digital to users, may have manual backend processes.</p>
 
 </div>
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p>We created front-end <a href="../prototypes/">prototypes</a> with account feature concepts, which were grouped by relevancy to the imagined scenario we created for each round.</p>
+<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-8">
 
-    <p>We tested those prototypes and captured the users' understanding, perception and reactions to those features.</p>
-    <p>We were also keen to understand the users' expectations of how a feature would work from 'day 1' and how it could evolve, and how they thought features would connect and work together.</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                More about the features
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <p>The <a href="../features/">features section</a> compares users expectations with service expectations.</p>
-
-            <p>The risks, dependencies and complexities of joining up services across government, are captured in the <a href="#">risk log</a></p>
-
-        </div>
-    </details>
-
+    <blockquote>
+        <p><I>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox” </I></p>
+        <p><b>HO - MBTP</b></p>
+    </blockquote>
 
 </div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
 
-    <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
+<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <blockquote>
+        <p><I>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation” </I></p>
+        <p><b>MOD - AFCS</b></p>
+    </blockquote>
+
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+    <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account.</p>
+
+    <p>HMRC are developing the Single Customer Account, supporting people who are applying for Child Benefit and other services through a HMRC app.</p>
+
+</div>
+
+<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <blockquote>
+        <p><I>“The MOD is developing a single sign in portal where every single veteran and serving person will be able to log in and do their compensation and a lot of other services.” </I></p>
+        <p><b>MOD - AFCS</b></p>
+    </blockquote>
+
 
 </div>
 {% endblock %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bpk8kHcqLPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+
+    <p>We’ve used data models to show the difference between services As-Is processes and how they could be supported by GOV.UK account features.</p>
+    <p>The research used a small number of services so should not be taken as a full representation of all government services.</p>
+
+    <p>The data models that include potential GOV.UK account features are indicative of what might be possible and do not represent an implementation roadmap at this time.</p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">Themes</h3>
+
+    <h4 class="govuk-heading-s">As-is</h4>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
+        <li><b>Low visibility for the user</b> - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
+        <li><b>Manual verification</b> - services spend a significant amount of time validating the information users provide in their applications, often via telephone, post or manual system search. Some services do not verify the identity of applicants or involved parties.</li>
+    </ul>
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+
+    <h4 class="govuk-heading-s">Supported by GOV.UK features</h4>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li><b>Pre-fill</b> - using users profile information to populate service application forms</li>
+        <li><b>Verified information / account flags</b> - for services to access</li>
+        <li><b>Verified information / account flags</b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
+    </ul>
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+
+    <h4 class="govuk-heading-s">Service needs potentially not supported</h4>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li><b>Unique information needs</b> - services may need situation-specific information, for example something relating to a health diagnosis that can’t be linked to an account attribute.</li>
+        <li><b>Consent to receive information</b> - where services need to gather situation-specific information, they require a digital method to prove the user has consented and that it’s accessible to and recognised by staff in the requesting service/s. </li>
+        <li><b>Notifying non-account holders</b> - service journeys may have people involved who aren’t involved in the application but who need to be notified, for example if there are people to notify in a Lasting Power of Attorney.</li>
+    </ul>
+
 </div>
 {% endblock %}
 {% else %}
@@ -111,22 +150,7 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p><i>(in draft, we’re still learning)</i>: </p>
-
-    <ol class="govuk-list govuk-list--number">
-        {% for number, need in data['needs'] %}
-        <li>{{ need }}</li>
-        {% else %}
-        {% endfor %}
-    </ol>
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}

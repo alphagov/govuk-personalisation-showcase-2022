@@ -985,6 +985,69 @@ router.get('/data/approach', function (req, res) {
     })
 })
 
+// DATA summary
+router.get('/data/summary', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.datamenu[1].title;
+    let parent = req.session.data.hubmenu[4].title;
+    let parentlink = req.session.data.hubmenu[4].url;
+
+    console.log('This page is: ' + thispage)
+
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.datasummarymenu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.datasummarymenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.datasummarymenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.datasummarymenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('data/summary', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
 // DATA insights
 router.get('/data/insights', function (req, res) {
 

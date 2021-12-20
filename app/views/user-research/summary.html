@@ -10,14 +10,12 @@
 <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p class="govuk-body-l">
-
-
         We conducted user research with citizens to understand the perceived benefits and drawbacks of the GOV.UK account within joined up government transactions.
     </p>
 
 </div>
 <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 center hide-on-mobile">
-    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 55%;">
+    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 65%;">
 
 </div>
 {% endblock %}
@@ -26,7 +24,7 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>In order to explore this concept we created a variety of scenarios around the <a href="../user-research/approach#life-event">life event of ‘Life while having a baby’</a>.</p>
 
@@ -41,9 +39,9 @@
     <p><a href="../user-research/approach">Read about our approach in more detail</a></p>
 
 </div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-8 center hide-on-mobile">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 center hide-on-mobile">
 
-    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 55%;">
+    <img src="../../../public/images/research/remote-testing.svg" class="panel-image hide-on-mobile" style="max-width: 75%;">
 
 </div>
 {% endblock %}
@@ -52,12 +50,21 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
+<div class="govuk-grid-column-full govuk-!-padding-top-2">
+
+    <p class="govuk-body-l">
+
+        For the majority of participants we engaged with, the concept of the GOV.UK account within joined up transactions across government was well received. </p>
+
+
+</div>
+
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
-    <p>For the majority of participants we engaged with, the concept of the GOV.UK account within joined up transactions across government was well received. </p>
-
     <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-top-8 govuk-!-padding-bottom-8">
-        <li class="govuk-!-padding-bottom-2">Users identified the benefits of the concept of the GOV.UK account within cross gov transactions as:
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">Users identified the benefits of the concept of the GOV.UK account within cross gov transactions as:</p>
+
             <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-2">
                 <li>Everything in one place </li>
                 <li>Time saving </li>
@@ -65,23 +72,44 @@
                 <li>One login for everything</li>
             </ul>
         </li>
-        <li class="govuk-!-padding-bottom-2">Not everyone will perceive the GOV.UK account as valuable or useful
+        <li class="">
+            <p class="govuk-body-l">Not everyone will perceive the GOV.UK account as valuable or useful</p>
             <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-2">
                 <li>Some users questioned its usefulness and commented they would only use it if there was a clear reason for doing so </li>
                 <li>Some users are sceptical about entering data into an online service.</li>
             </ul>
         </li>
-        <p class="govuk-!-padding-bottom-2 govuk-body-s"><i>N.B.</i> This work did not seek to predict or quantify the segment of the future audience who would be pro / con GOV.UK accounts. It would not be good practice to do so since this work is still hypothetical.</p>
+        <p class="govuk-!-padding-bottom-8"><i>N.B.</i> This work did not seek to predict or quantify the segment of the future audience who would be pro / con GOV.UK accounts. It would not be good practice to do so since this work is still hypothetical.</p>
 
-        <li class="govuk-!-padding-bottom-2">Users want to be clear on how their data is being used. </li>
-        <li class="govuk-!-padding-bottom-2">User controls and functions for the management of their personal data were received positively in user research. </li>
-        <li class="govuk-!-padding-bottom-2">Users expect their data to be processed [if they enter it into a GOV.UK account] </li>
-        <li class="govuk-!-padding-bottom-2">Users see personalised or curated content as being accurate for them. </li>
-        <li class="govuk-!-padding-bottom-2">In their own words, users describe the GOV.UK account as: hub, umbrella, one stop shop, all under one roof</li>
-        <li class="govuk-!-padding-bottom-2">Users don’t care how their data is stored, as long as it is secure. </li>
-        <li class="govuk-!-padding-bottom-2">Users expect the government’s online services to be safe and secure.</li>
-
-
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">
+                Users want to be clear on how their data is being used
+            </p>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">User controls and functions for the management of their personal data were received positively in user research.</p>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">Users expect their data to be processed [if they enter it into a GOV.UK account]</p>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">Users see personalised or curated content as being accurate for them. </p>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">In their own words, users describe the GOV.UK account as:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-2">
+                <li>a hub</li>
+                <li>an umbrella</li>
+                <li>one stop shop</li>
+                <li>all under one roof</li>
+            </ul>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">Users don’t care how their data is stored, as long as it is secure.</p>
+        </li>
+        <li class="govuk-!-padding-bottom-8">
+            <p class="govuk-body-l">Users expect the government’s online services to be safe and secure.</p>
+        </li>
     </ol>
 
 

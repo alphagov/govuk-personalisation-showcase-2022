@@ -352,6 +352,20 @@ module.exports = {
             anchor: "challenges",
     }
     ],
+    datasummarymenu: [
+        {
+            title: "Background",
+            anchor: "background"
+},
+        {
+            title: "Digital Transformation Journey",
+            anchor: "transformation"
+},
+        {
+            title: "Capabilities",
+            anchor: "capabilities"
+}
+    ],
     datainsightsmenu: [
         {
             title: "Background",
