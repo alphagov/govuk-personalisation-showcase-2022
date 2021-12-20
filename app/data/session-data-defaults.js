@@ -148,7 +148,18 @@ module.exports = {
     }
     ],
     usersummarymenu: [
-
+        {
+            title: "Rationale",
+            anchor: "rationale"
+},
+        {
+            title: "Approach",
+            anchor: "approach"
+        },
+        {
+            title: "Insights",
+            anchor: "insights"
+        }
     ],
     userinsightsmenu: [
         {

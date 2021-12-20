@@ -7,21 +7,17 @@
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
-    <p>
-        <b>@sam</b> can we just have sentence that gives an intro to these 'approach' child pages please?
+    <p class="govuk-body-l">
+
+
+        We conducted user research with citizens to understand the perceived benefits and drawbacks of the GOV.UK account within joined up government transactions.
     </p>
 
 </div>
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Assumptions</li>
-        <li>Life event</li>
-        <li>Testing</li>
-
-    </ul>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 center hide-on-mobile">
+    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 55%;">
 
 </div>
 {% endblock %}
@@ -30,59 +26,24 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
-    <h3 class="govuk-heading-m">Number of rounds</h3>
+    <p>In order to explore this concept we created a variety of scenarios around the <a href="../user-research/approach#life-event">life event of ‘Life while having a baby’</a>.</p>
 
-    <p class="govuk-body-l">
-        6
-    </p>
+    <p>We used front end <a href="../prototypes/">prototypes</a> with user research participants, primarily to elicit discussions around the concept and the <a href="../features/">features</a> presented.</p>
 
-</div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+    <p>We were not focussing on usability testing, we anticipate that will follow at a future point in the programme of work. </p>
 
-    <h3 class="govuk-heading-m">Number of users</h3>
+    <p>We spoke to <b>52</b> user research participants over the course of 9 rounds of research from August 2021 - December 2021. </p>
 
-    <p class="govuk-body-l">
-        61
-    </p>
+    <br />
+
+    <p><a href="../user-research/approach">Read about our approach in more detail</a></p>
 
 </div>
-<div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-third govuk-!-padding-bottom-8 center hide-on-mobile">
 
-    <h3 class="govuk-heading-m">Features tested</h3>
-
-    <p class="govuk-body-l">
-        23
-    </p>
-
-</div>
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-
-    <p>We created front-end <a href="../prototypes/">prototypes</a> with account feature concepts, which were grouped by relevancy to the imagined scenario we created for each round.</p>
-
-    <p>We tested those prototypes and captured the users' understanding, perception and reactions to those features.</p>
-    <p>We were also keen to understand the users' expectations of how a feature would work from 'day 1' and how it could evolve, and how they thought features would connect and work together.</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                More about the features
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <p>The <a href="../features/">features section</a> compares users expectations with service expectations.</p>
-
-            <p>The risks, dependencies and complexities of joining up services across government, are captured in the <a href="#">risk log</a></p>
-
-        </div>
-    </details>
-
-
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/remote-testing.svg" style="max-width: 95%;">
+    <img src="../../../public/images/research/features.svg" class="panel-image hide-on-mobile" style="max-width: 55%;">
 
 </div>
 {% endblock %}
@@ -91,10 +52,39 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bpk8kHcqLPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <p>For the majority of participants we engaged with, the concept of the GOV.UK account within joined up transactions across government was well received. </p>
+
+    <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+        <li class="govuk-!-padding-bottom-2">Users identified the benefits of the concept of the GOV.UK account within cross gov transactions as:
+            <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-2">
+                <li>Everything in one place </li>
+                <li>Time saving </li>
+                <li>A consistent, easy and efficient way of dealing with the government</li>
+                <li>One login for everything</li>
+            </ul>
+        </li>
+        <li class="govuk-!-padding-bottom-2">Not everyone will perceive the GOV.UK account as valuable or useful
+            <ul class="govuk-list govuk-list--bullet govuk-!-padding-top-2">
+                <li>Some users questioned its usefulness and commented they would only use it if there was a clear reason for doing so </li>
+                <li>Some users are sceptical about entering data into an online service.</li>
+            </ul>
+        </li>
+        <p class="govuk-!-padding-bottom-2 govuk-body-s"><i>N.B.</i> This work did not seek to predict or quantify the segment of the future audience who would be pro / con GOV.UK accounts. It would not be good practice to do so since this work is still hypothetical.</p>
+
+        <li class="govuk-!-padding-bottom-2">Users want to be clear on how their data is being used. </li>
+        <li class="govuk-!-padding-bottom-2">User controls and functions for the management of their personal data were received positively in user research. </li>
+        <li class="govuk-!-padding-bottom-2">Users expect their data to be processed [if they enter it into a GOV.UK account] </li>
+        <li class="govuk-!-padding-bottom-2">Users see personalised or curated content as being accurate for them. </li>
+        <li class="govuk-!-padding-bottom-2">In their own words, users describe the GOV.UK account as: hub, umbrella, one stop shop, all under one roof</li>
+        <li class="govuk-!-padding-bottom-2">Users don’t care how their data is stored, as long as it is secure. </li>
+        <li class="govuk-!-padding-bottom-2">Users expect the government’s online services to be safe and secure.</li>
+
+
+    </ol>
+
+
 </div>
 {% endblock %}
 {% else %}
@@ -102,22 +92,7 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
-    <p><i>(in draft, we’re still learning)</i>: </p>
-
-    <ol class="govuk-list govuk-list--number">
-        {% for number, need in data['needs'] %}
-        <li>{{ need }}</li>
-        {% else %}
-        {% endfor %}
-    </ol>
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile">
-
-    <img src="../../../public/images/research/features.svg" style="max-width: 95%;">
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
