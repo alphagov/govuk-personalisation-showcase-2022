@@ -2,8 +2,132 @@
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-    <p>Content goes here...</p>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Clarity and transparency</h3>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Always prioritise ensuring the user’s <b>expectations</b> and the capability of the feature are aligned
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Clearly describe what the feature <b>does</b> and what it <b>does not</b> enable</li>
+                <li>Ensure your feature and content does not create new unmet expectations for <b>related features</b>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li class="comment"><i>[<b>give examples</b> - specific to research sessions]</i></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>Ensure the user can see <b>why</b> something is happening (e.g. be specific about how a page is being personalised, or why a service is being suggested)</li>
+        <li>Be clear about <b>impact</b> to the user - some features could lead to both user-perceived positive and negative outcomes (e.g. a new entitlement versus a benefit being turned off)</li>
+        <li>Ensure the user can review <b>what</b> has happened and when</li>
+        <li>Be clear about <b>responsibilities</b> - as the account becomes feature rich, it may allude to a shift in responsibilities away from the user</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Control and consent</h3>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Ensure the feature gives the user control and seeks their <b>permission</b></li>
+        <li>Most of all, users need to retain control of:</li>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Their <b>data</b> - nothing should go in or out of the account without permission and notification</li>
+            <li>The <b>use</b> of data - all features must be user controllable</li>
+            <li>Who gets to <b>see</b> their data - e.g. for the information passed to services, users must always control the final ‘GO’ step
+            </li>
+        </ul>
+    </ul>
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">UI scalability</h3>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Consider how a feature will <b>scale</b> when the account (and data within it) gets very large</li>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>How will the UI tolerate this?</li>
+            <li>Will the UI still be clear and simple to use?</li>
+        </ul>
+        <li>Be aware of <b>tipping points</b> when using the UI could become more overhead than the efficiency and/or accuracy goals they are supporting</li>
+    </ul>
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Understand the needs of citizen users</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>As described in our <a href="../user-research/approach.html">approach to user needs</a>, our user needs have been collated as an output of our rounds of research with universal credit claimants. We recommend continued learning in relation to other types of service users and their needs. </li>
+        <li>Understand how GOV.UK account features would impact user needs, either positively or adversely. </li>
+        <li>Employ tech solutions which truly meet user needs.</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Do user research to understand how users could potentially use features</h3>
+
+    <p>Understand how users would interact with a feature through observation and discussion.</p>
+
+    <p>An example of this is our work around a place to <a href="../features/18">upload documents</a>.</p>
+
+    <p>User research participants envisaged that they may use this as a space to upload previous address documents, letters with reference numbers, etc. </p>
+
+    <p>Consider how the feature should be best used and designed with clarity.</p>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+</div>
+
+
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Create a secure service which protects users’ privacy</h3>
+
+    <p>Concerns around privacy and security was a clear theme coming through in our user insights. In direct echo of service standard 9 - provide a secure service. </p>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <h3 class="govuk-heading-m">Listen to the way users describe things in their own words</h3>
+    <p>Users’ natural language and their descriptions of the GOV.UK account may help with profile, branding, and content.</p>
+
+</div>
+<div class="govuk-grid-column-one-third">
+
+
+
 </div>
 {% endblock %}
 {% else %}
@@ -11,8 +135,15 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-    <p>Content goes here...</p>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Detailed research is needed to fully understand the value and complexity of adopting each of the hypothetical account features</li>
+        <li>Conduct further research based on technical assessments of feature complexity</li>
+        <li>Widen the recruitment profile to cover a range of service roles (including technical and non-technical roles)</li>
+        <li>Conduct an assessment of technical dependencies to understand the intrinsic links between features (some features are enablers)</li>
+    </ul>
+
 </div>
 {% endblock %}
 {% else %}
@@ -20,8 +151,13 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-    <p>To follow...</p>
+<div class="govuk-grid-column-two-thirds">
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Conduct research across government services to build an accurate picture on the use of data dictionaries and information standards, in particular the GPG 45.</li>
+        <li>Conduct research to understand, for services undergoing a digital transformation how their roadmap aligns with the Gov.UK Account roadmap.</li>
+        <li>Detailed research is needed with services to understand the technical requirements for services to implement features.</li>
+        <li>Widen the recruitment profile to include services with a greater digital maturity.</li>
+    </ul>
 </div>
 {% endblock %}
 {% else %}

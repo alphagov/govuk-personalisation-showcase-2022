@@ -127,10 +127,6 @@ module.exports = {
         {
             title: "Insights",
             anchor: "insights",
-    },
-        {
-            title: "Recommendations",
-            anchor: "recommendations",
     }
     ],
     userapproachmenu: [
@@ -267,10 +263,6 @@ module.exports = {
         {
             title: "Insights",
             anchor: "insights",
-    },
-        {
-            title: "Recommendations",
-            anchor: "recommendations",
     }
     ],
     serviceapproachmenu: [
@@ -335,11 +327,7 @@ module.exports = {
         {
             title: "Insights",
             anchor: "insights",
-    },
-        {
-            title: "Recommendations",
-            anchor: "recommendations",
-        }
+    }
     ],
     dataapproachmenu: [
         {
@@ -407,11 +395,16 @@ module.exports = {
     ],
     recommendationsmenu: [
         {
-            title: "Section 1",
-            anchor: "section-1",
-    }, {
-            title: "Section 2",
-            anchor: "section-1",
+            title: "End user recommendations",
+            anchor: "end-user-recommendations",
+    },
+        {
+            title: "Service user recommendations",
+            anchor: "service-user-recommendations",
+    },
+        {
+            title: "Data recommendations",
+            anchor: "data-recommendations",
     }
     ],
     pillarsmenu: [
