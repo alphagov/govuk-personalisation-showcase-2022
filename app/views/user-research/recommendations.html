@@ -94,8 +94,6 @@
 {% block section4 %}
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
 
-    <p class="comment"><i>[Check with @Amy re this bit]</i></p>
-
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
         <li>Consider what a service needs to do to support this feature:
             <ul class="govuk-list govuk-list--bullet">
@@ -114,6 +112,8 @@
         </li>
     </ul>
 
+    <p class="comment"><i><b>[Check with @Amy re this bit]</b></i></p>
+
 </div>
 <div class="govuk-grid-column-one-third">
 
@@ -126,24 +126,54 @@
 
 {% if pagemenu[4] %}
 {% block section5 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>As described in our <a href="../user-research/approach.html">approach to user needs</a>, our user needs have been collated as an output of our rounds of research with universal credit claimants. We recommend continued learning in relation to other types of service users and their needs. </li>
+        <li>Understand how GOV.UK account features would impact user needs, either positively or adversely. </li>
+        <li>Employ tech solutions which truly meet user needs.</li>
+    </ul>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[5] %}
 {% block section6 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <p>Understand how users would interact with a feature through observation and discussion.</p>
+
+    <p>An example of this is our work around a place to <a href="../features/18">upload documents</a>.</p>
+
+    <p>User research participants envisaged that they may use this as a space to upload previous address documents, letters with reference numbers, etc. </p>
+
+    <p>Consider how the feature should be best used and designed with clarity [see <a href="#recommendation-1">point 1</a>]</p>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[6] %}
 {% block section7 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <p>Concerns around privacy and security was a clear theme coming through in our user insights. In direct echo of service standard 9 - provide a secure service. </p>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[7] %}
 {% block section8 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+
+    <p>Users’ natural language and their descriptions of the GOV.UK account may help with profile, branding, and content.</p>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
