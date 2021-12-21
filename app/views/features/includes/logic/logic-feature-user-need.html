@@ -44,5 +44,12 @@
 <strong class="govuk-tag govuk-tag--pink">
     {{ data['needs']['needlabel7'] }}
 </strong>
+<br /><br />
+{% else %}
+{% endif %}
+{% if "08" in userneeds %}
+<strong class="govuk-tag govuk-tag--pink">
+    {{ data['needs']['needlabel8'] }}
+</strong>
 {% else %}
 {% endif %}

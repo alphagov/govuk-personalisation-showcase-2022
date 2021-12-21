@@ -458,7 +458,8 @@ module.exports = {
         needlabel4: 'Save time',
         needlabel5: 'Avoid phoning the service',
         needlabel6: 'Feel safe and secure online',
-        needlabel7: 'Feel confident in the way my data is being used'
+        needlabel7: 'Feel confident in the way my data is being used',
+        needlabel8: 'Reduce cognitive load',
     },
     objectives: {
         objective1: 'Identify user benefits, expectations and challenges of a personalised experience across government, via the GOV.UK account',
