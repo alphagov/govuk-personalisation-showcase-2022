@@ -1,0 +1,53 @@
+{% extends "layout_feature.html" %}
+
+<!-- Available blocks to overwrite 
+
+1. featureVideo (Embed video above accordion)
+2. description (accordion panel)
+3. userfindings (accordion panel)
+4. servicefindings (accordion panel)
+5. risks (accordion panel)
+6. recommendations (accordion panel)
+7. underAccordion (Additional content space beneath accordion)
+8. relatedfeatures (Manual override or related features panel - requires <li>...</li>)
+
+-->
+
+<!-- ADD VIDEO - start with <iframe>... -->
+{% block featureVideo %}
+<!--
+<video style="width: 100%;" controls>
+
+    <source src="../../../public/videos/features/end-user/{{ fid }}.mp4" type="video/mp4">
+
+</video>
+-->
+{% endblock %}
+
+{% block description %}
+{{ super() }}
+{% endblock %}
+
+<!-- END USER FINDINGS -->
+{% block userfindings %}
+{{ super() }}
+{% endblock %}
+
+<!-- SERVICE FINDINGS -->
+{% block servicefindings %}
+{{ super() }}
+{% endblock %}
+
+<!-- RISKS / CHALLENGES / CONSIDERATIONS -->
+{% block risks %}
+{{ super() }}
+{% endblock %}
+
+<!-- RECOMMENDATIONS -->
+{% block recommendations %}
+{{ super() }}
+{% endblock %}
+
+<!-- CONTENT SPACE BENEATH ACCORDION -->
+{% block underAccordion %}
+{% endblock %}
