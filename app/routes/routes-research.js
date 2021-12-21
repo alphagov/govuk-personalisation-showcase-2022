@@ -89,7 +89,7 @@ router.get('/problem', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.problemmenu.length;
 
-    let thispage = req.session.data.hubmenu[0].id;
+    let thispage = req.session.data.hubmenu[0].id - 2;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
