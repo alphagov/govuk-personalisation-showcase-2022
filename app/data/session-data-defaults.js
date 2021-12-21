@@ -23,11 +23,6 @@ module.exports = {
     maintitle: "X-Gov Services",
     hubmenu: [
         {
-            title: "The people",
-            url: "/people",
-            id: 1
-    },
-        {
             title: "The problem",
             url: "/problem",
             id: 2
@@ -73,9 +68,9 @@ module.exports = {
             id: 10
     },
         {
-            title: "Case study",
-            url: "/case-study",
-            id: 11
+            title: "The people",
+            url: "/people",
+            id: 1
     },
         {
             title: "Prototypes",
