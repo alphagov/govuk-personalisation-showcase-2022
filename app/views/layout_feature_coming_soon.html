@@ -1,0 +1,293 @@
+{% extends "layout_handover.html" %}
+
+{% block pageTitle %}
+Feature | {{ name }}
+{% endblock %}
+
+{% block beforeContent %}
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- BREADCRUMBS -->
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="{{ data['indexlink'] }}" class="govuk-breadcrumbs__link">{{ data['maintitle'] }}</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a href="../features/" class="govuk-breadcrumbs__link">Features</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link">{% include "features/includes/logic/logic-feature-name.html" %}</a>
+        </li>
+    </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% block featureName %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
+        {% include "features/includes/logic/logic-feature-category.html" %}
+    </div>
+    <div class="govuk-grid-column-full govuk-!-padding-top-8">
+        <h1 class="govuk-heading-xl">
+            {{ fid }}. {{ name }}
+        </h1>
+    </div>
+</div>
+{% endblock %}
+
+<div class="govuk-grid-row">
+
+    <!-- End of two-thirds -->
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if showvideo === true %}
+        <div class="video-container">
+            {% block featureVideo %}
+            <!--
+<video style="width: 100%;" controls>
+
+    <source src="../../../public/videos/features/end-user/{{ fid }}.mp4" type="video/mp4">
+
+</video>
+-->
+            {% endblock %}
+        </div>
+        {% else %}
+        {% endif %}
+
+        <div class="govuk-accordion govuk-!-padding-top-8" data-module="govuk-accordion" id="accordion-with-summary-sections">
+
+            {% if showdesc === true %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-11">
+                            Description
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-11">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-11">
+                    {% block description %}
+                    {% include "features/includes/descriptions/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if showuser === true %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                            End user research findings
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                    {% block userfindings %}
+                    {% include "features/includes/end-user-findings/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if showservice === true %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+                            Service research findings
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+                    {% block servicefindings %}
+                    {% include "features/includes/service-user-findings/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if showrisks === true %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+                            Risks / challenges / considerations
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+                    {% block risks %}
+                    {% include "features/includes/risks/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if showrecommendations === true %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                            Recommendations
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+                    {% block recommendations %}
+                    {% include "features/includes/recommendations/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+
+            {% if relatedfeatures %}
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                            Related features
+                        </span>
+                    </h2>
+                    <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+
+                    </div>
+                </div>
+                <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+                    {% block relatedfeaturesdetailed %}
+                    {% include "features/includes/related-features/" + fid + ".html" %}
+                    {% endblock %}
+                    <br />
+                </div>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
+
+        {% block underAccordion %}
+        {% endblock %}
+
+    </div>
+    <!-- End of two-thirds -->
+
+    <!-- Start of one-third -->
+    <div class="govuk-grid-column-one-third">
+
+        {% if userneeds %}
+        <!-- User need -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">End user need</h3>
+                {% include "features/includes/logic/logic-feature-user-need.html" %}
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if impact %}
+        <!-- User impact -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">User impact</h3>
+                {% include "features/includes/logic/logic-feature-user-impact.html" %}
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if value %}
+        <!-- value to service -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Value to service</h3>
+
+                {% include "features/includes/logic/logic-feature-service-value.html" %}
+
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if complexityservice %}
+        <!-- complexity for service -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Complexity</h3>
+                {% include "features/includes/logic/logic-feature-service-complexity.html" %}
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if riskcategory %}
+        <!-- risk category -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Risk category</h3>
+                {% include "features/includes/logic/logic-feature-risk-category.html" %}
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        {% if relatedfeatures %}
+        <!-- Related features -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+                <h3 class="govuk-heading-s">Related features</h3>
+                <ul class="govuk-list govuk-body-s">
+                    {% block relatedfeatures %}
+                    {% include "features/includes/logic/logic-feature-related-features.html" %}
+                    {% endblock %}
+                </ul>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+    </div>
+    <!-- End of one-third -->
+</div>
+
+{% block footlink %}
+<div id="hippo-footer" class="govuk-grid-row center govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <a href="https://hippodigital.co.uk" target="_blank"><img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 120px;"></a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% include "includes/back-to-top.html" %}
+
+{% endblock %}
