@@ -86,10 +86,6 @@ module.exports = {
         {
             title: "The scope",
             anchor: "scope",
-    },
-        {
-            title: "The approach",
-            anchor: "approach",
     }
     ],
     peoplemenu: [

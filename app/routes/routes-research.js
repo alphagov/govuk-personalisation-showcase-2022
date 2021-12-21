@@ -290,6 +290,10 @@ router.get('/user-research/approach', function (req, res) {
     let thispage = req.session.data.userresearchmenu[0].title;
     let parent = req.session.data.hubmenu[1].title;
     let parentlink = req.session.data.hubmenu[1].url;
+    let nextpage = req.session.data.userresearchmenu[1].title;
+    let nextpagelink = req.session.data.userresearchmenu[1].anchor;
+    let prevpage = req.session.data.hubmenu[1].title;
+    let prevpagelink = req.session.data.hubmenu[1].url;
 
     console.log('This page is: ' + thispage)
 
@@ -336,7 +340,11 @@ router.get('/user-research/approach', function (req, res) {
         'names': names,
         'thispage': thispage,
         'parent': parent,
-        'parentlink': parentlink
+        'parentlink': parentlink,
+        'nextpage': nextpage,
+        'nextpagelink': nextpagelink,
+        'prevpage': prevpage,
+        'prevpagelink': prevpagelink
     })
 })
 
@@ -353,6 +361,10 @@ router.get('/user-research/summary', function (req, res) {
     let thispage = req.session.data.userresearchmenu[1].title;
     let parent = req.session.data.hubmenu[1].title;
     let parentlink = req.session.data.hubmenu[1].url;
+    let nextpage = req.session.data.userresearchmenu[2].title;
+    let nextpagelink = req.session.data.userresearchmenu[2].anchor;
+    let prevpage = req.session.data.userresearchmenu[0].title;
+    let prevpagelink = req.session.data.userresearchmenu[0].anchor;
 
     console.log('This page is: ' + thispage)
 
@@ -398,7 +410,11 @@ router.get('/user-research/summary', function (req, res) {
         'names': names,
         'thispage': thispage,
         'parent': parent,
-        'parentlink': parentlink
+        'parentlink': parentlink,
+        'nextpage': nextpage,
+        'nextpagelink': nextpagelink,
+        'prevpage': prevpage,
+        'prevpagelink': prevpagelink
     })
 })
 

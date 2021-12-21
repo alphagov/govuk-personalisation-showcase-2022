@@ -141,7 +141,6 @@
     {% block section4 %}
     {% endblock %}
 </div>
-
 {% else %}
 {% endif %}
 
@@ -257,18 +256,11 @@
 <!--
 <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
-    {% set nextid = thispage | float + 1 %}
-    {% set previd = thispage | float - 1 %}
-    {% set nexttitle = data['hubmenu'][nextid]['title'] %}
-    {% set prevtitle = data['hubmenu'][previd]['title'] %}
-    {% set nextlink = data['hubmenu'][nextid]['url'] %}
-    {% set prevlink = data['hubmenu'][previd]['url'] %}
-
     <div class="govuk-grid-column-one-quarter">
 
         <div class="previous-chapter">
             <p>← Previous</p>
-            <a href="{{ prevlink }}">{{ prevtitle }}</a>
+            <a href="{{ prevpagelink }}">{{ prevpage }}</a>
         </div>
     </div>
     <div class="govuk-grid-column-one-half hide-on-mobile">
@@ -279,20 +271,15 @@
     <div class="govuk-grid-column-one-quarter ">
         <div class="next-chapter">
             <p>Next →</p>
-            <a href="{{ nextlink }}">{{ nexttitle }}</a>
+            <a href="{{ nextpagelink }}">{{ nextpage }}</a>
         </div>
     </div>
-</div> 
+</div>
 -->
 {% endblock %}
 
 {% block footlink %}
-<div id="hippo-footer" class="govuk-grid-row center">
-    <div class="govuk-grid-column-full">
-        <a href="https://hippodigital.co.uk" target="_blank"><img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 120px;"></a>
-    </div>
-</div>
-
+{% include "includes/hippo-footer.html" %}
 {% endblock %}
 
 {% include "includes/back-to-top.html" %}
