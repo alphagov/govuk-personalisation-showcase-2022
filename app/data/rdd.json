@@ -261,7 +261,7 @@
             "showrisks": true,
             "showrecommendations": false,
             "prototypelink": "../prototypes/",
-            "relatedfeatures": ["21", "17", "08"],
+            "relatedfeatures": ["21", "17", "08", "20"],
             "riskcategory": "3"
     },
         {
