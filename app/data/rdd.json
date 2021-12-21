@@ -254,7 +254,7 @@
             "confidencevalueservice": "none",
             "complexityservice": "none",
             "confidencecomplexityservice": "none",
-            "showvideo": false,
+            "showvideo": true,
             "showdesc": true,
             "showuserfindings": true,
             "showservicefindings": false,
