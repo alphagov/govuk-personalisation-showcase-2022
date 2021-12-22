@@ -41,61 +41,6 @@
     </ul>
 </div> -->
 
-<div class="govuk-grid-column-full">
-
-    <h3 class="govuk-heading-m">by category</h3>
-
-</div>
-
-<div id="datalist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-
-    <strong class="govuk-tag govuk-tag--purple">
-        Types of data
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "data" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-
-</div>
-<div id="controllist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-
-    <strong class="govuk-tag govuk-tag--purple">
-        Control of data
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "control" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-
-</div>
-<div id="personalisationlist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-    <strong class="govuk-tag govuk-tag--purple">
-        Personalisation
-    </strong>
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "personalisation" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-</div>
-
 <div class="govuk-grid-column-full govuk-!-padding-top-8">
 
     <h3 class="govuk-heading-m">by priority</h3>
@@ -155,6 +100,63 @@
     </ul>
 
 </div>
+
+<div class="govuk-grid-column-full govuk-!-padding-top-8">
+
+    <h3 class="govuk-heading-m">by category</h3>
+
+</div>
+
+<div id="datalist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+
+    <strong class="govuk-tag govuk-tag--purple">
+        Types of data
+    </strong>
+
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if categories[i] === "data" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+
+</div>
+<div id="controllist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+
+    <strong class="govuk-tag govuk-tag--purple">
+        Control of data
+    </strong>
+
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if categories[i] === "control" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+
+</div>
+<div id="personalisationlist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+    <strong class="govuk-tag govuk-tag--purple">
+        Personalisation
+    </strong>
+    <ul class="govuk-list govuk-!-padding-top-8">
+        {% for i in range(1, featurestotal) -%}
+        {% if categories[i] === "personalisation" %}
+        <li>
+            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+        </li>
+        {% endif %}
+        {%- endfor %}
+    </ul>
+</div>
+
+
 
 {% endblock %}
 {% else %}
