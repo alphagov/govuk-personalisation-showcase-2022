@@ -20,7 +20,7 @@
         <li>A consistent, easy and efficient way of dealing with the government</li>
         <li>One login for everything</li>
     </ul>
-
+    <br />
     <p><i>N.B. we were testing a concept that we had designed for user research, the GOV.UK account does not exist with such a full range of functionality in real life. </i></p>
 
 </div>
@@ -30,13 +30,17 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>Generally speaking, users reacted positively to the concept of the GOV.UK account as part of a x-gov transaction, however, there were various comments around its usefulness being dependent on whether or not there was a genuine reason to use it. </p>
 
     <p>Comments in user research highlighted the fact that throughout certain periods of life (i.e. childcare) the likelihood of interacting with government services is much higher.</p>
 
     <p>For some, depending on lifestyle, the regularity of interactions with the government is much lower. Some users clearly articulated that they would find the account useful ‘now’ (during childcare) whereas otherwise they may not see the point. </p>
+
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>Further work around profile raising and adoption of the account will likely be needed in the future to understand how best to compel users to create an account and engage with its features. </p>
 
@@ -99,23 +103,26 @@
 
 {% if pagemenu[4] %}
 {% block section5 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
     <p>In our concept exploration, users expected that data saved to their GOV.UK account would be <a href="../features/08.html">‘pushed’</a> to the services they interact with. </p>
-    <p>When this was raised during user research we explored why.<br /> We heard answers such as:</p>
+    <p>When this was raised during user research we explored why.</p>
+    <p>We heard answers such as:</p>
     <br />
     <blockquote>
         <p><i>“Because I’m logged into the GOV.UK website” </i></p>
         <p><i>“Because it’s all within government”</i> </p>
         <p><i>“Because digital things are connected”</i></p>
     </blockquote>
-    <br />
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
     <p>This supplements and supports the original discovery research within the GOV.UK accounts programme which took place in 2019. </p>
     <p>One assumption is that the naming of the GOV.UK account - which is the same name as the GOV.UK website, could be manifesting this misconception.</p>
-    <br />
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
     <p><a href="../user-research/recommendations#recommendation-1">View end user recommendations on clarity and transparency</a>
     </p>
-
 </div>
 {% endblock %}
 {% else %}
@@ -126,6 +133,17 @@
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
 
     <p>When users see content that has been <a href="../features/04.html">personalised, curated, tailored</a> specifically to a person using data, they expect it to be accurate. </p>
+
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+                Example observed in research
+            </span>
+        </summary>
+        <div class="govuk-details__text">
+            When users saw information that had been curated for them on an ‘eligibility page’ they assumed it was accurate and that the amounts cited were the specific amounts they would receive as part of a benefit claim.
+        </div>
+    </details>
 
 </div>
 {% endblock %}
@@ -161,12 +179,14 @@
 
 {% if pagemenu[7] %}
 {% block section8 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
     <p>As part of a cross-team exercise, we asked users about their perspective on data storage.</p>
     <p>As expected, the average citizen will not be able to articulate preferences around storage. They do, however, reference security.</p>
 
     <p> The reason for posing this question in research, is that there has been some discussion in the programme about the use of solid PODS.</p>
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
     <p>Whilst this work is now being owned by another team, we recommended that the following end user issues be considered:</p>
 
     <ul class="govuk-list govuk-list--bullet">
@@ -175,12 +195,13 @@
         <li>Do PODS meet user needs?</li>
     </ul>
 
-    <br />
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
     <p><a href="../user-research/recommendations#recommendation-7">View end user recommendations on creating a secure service which protects users’ privacy
         </a>
     </p>
-
 
 </div>
 {% endblock %}
@@ -189,13 +210,13 @@
 
 {% if pagemenu[8] %}
 {% block section9 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-2">
 
     <p>Users commented that their data could be at risk if their GOV.UK account was ‘hacked’.</p>
     <p>Users expect that the government’s online services should be secure. </p>
 
-    <br />
-
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
     <p><a href="../user-research/recommendations#recommendation-7">View end user recommendations on creating a secure service which protects users’ privacy
         </a>
     </p>
@@ -207,17 +228,22 @@
 
 {% if pagemenu[9] %}
 {% block section10 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
     <p>We tested future features such as full automation of a transactional form. </p>
 
     <p> Whilst some users said that this would help in the sense that it would make life easier, some users expressed concerns over accuracy. </p>
 
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
+
     <p> Comments around accuracy generally related to benefit payments and there was a concern that if fully automated transactions are inaccurate, then it could impact their monthly benefit payment, or even their eligibility to continue claiming. </p>
 
-    <br />
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
     <p><a href="../user-research/recommendations#recommendation-2">View end user recommendations on control and consent</a>
     </p>
+
 
 </div>
 {% endblock %}
@@ -226,11 +252,14 @@
 
 {% if pagemenu[10] %}
 {% block section11 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>We engaged users in discussion around a space to <a href="../features/18.html">upload their personal documents</a> and there were various insights into the way in which users would interact with this.</p>
 
     <p>Users said that they could upload things such as: proof of previous address, council related bills, hospital letters with reference numbers on.</p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>We are not suggesting at this stage that a personal data store or area for uploads should be included within this programme - but we do recommend that features are designed and restricted in such a way that their usage is clear to end users. </p>
 
