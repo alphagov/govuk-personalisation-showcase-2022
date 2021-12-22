@@ -28,7 +28,7 @@
         <li>For this information to be stored in structured and consistent formats</li>
     </ul>
 
-    <p>We engaged with services to understand their data and process gaps against their capabilities.</p>
+    <p>We engaged with services to understand their data and <a href="#as-is">process gaps</a> against their <a href="#capabilities"> capabilities</a>.</p>
 
 </div>
 {% endblock %}
@@ -83,7 +83,7 @@
 
 </div>
 
-<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full  govuk-!-padding-top-4 govuk-!-padding-bottom-8">
 
     <blockquote>
         <p><I>“The MOD is developing a single sign in portal where every single veteran and serving person will be able to log in and do their compensation and a lot of other services.” </I></p>
@@ -99,19 +99,43 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-8">
 
-    <p>We’ve used data models to show the difference between services As-Is processes and how they could be supported by GOV.UK account features.</p>
-    <p>The research used a small number of services so should not be taken as a full representation of all government services.</p>
+    <p>We’ve used data models to show the difference between services As-Is processes and how they could be supported by cross government service features.</p>
 
-    <p>The data models that include potential GOV.UK account features are indicative of what might be possible and do not represent an implementation roadmap at this time.</p>
+    <p>The research used a small number of services to develop these examples and should not be taken as a representation of all government services.</p>
 
 </div>
+<div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-8">
+
+    <p>The data models that include potential cross government service features are indicative of what might be possible and do not represent an implementation roadmap at this time.</p>
+
+    <p>Further detailed technical assessment would be needed to develop and agree a To-Be.</p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-l">Themes</h3>
+
+    <h4 id="as-is" class="govuk-heading-m">As-is</h4>
+
+</div>
+
+<div class="govuk-grid-column-full center govuk-!-padding-bottom-8">
+
+    <a href="./../../public/images/research/Data%20flow%20diagrams%20-%20Service%20As-Is.jpg" target='_blank'> <img src="../../../public/images/research/Data%20flow%20diagrams%20-%20Service%20As-Is.jpg" class="panel-image "></a>
+
+    <p><i>Service 'As is'</i></p>
+
+    <p class="govuk-body-s">
+        <a href="./../../public/images/research/Data%20flow%20diagrams%20-%20Service%20As-Is.jpg" target='_blank'> Click to enlarge</a>
+    </p>
+
+
+</div>
+
 <div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">Themes</h3>
-
-    <h4 class="govuk-heading-s">As-is</h4>
 
     <ul class="govuk-list govuk-list--bullet">
         <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
@@ -121,21 +145,34 @@
 
 </div>
 
-<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-full center govuk-!-padding-bottom-8 govuk-!-padding-top-4">
 
-    <h4 class="govuk-heading-s">Supported by GOV.UK features</h4>
+    <a href="../../../public/images/research/Data%20flow%20diagrams%20-%20Service%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" target='_blank'> <img src="../../../public/images/research/Data%20flow%20diagrams%20-%20Service%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" class="panel-image "></a>
+
+    <p><i>Service possible 'To be' with X-Gov features</i></p>
+
+    <p class="govuk-body-s">
+        <a href="../../../public/images/research/Data%20flow%20diagrams%20-%20Service%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" target='_blank'> Click to enlarge </a>
+    </p>
+
+
+</div>
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+
+    <h4 class="govuk-heading-m">Cross government service features that would support the As-Is journey</h4>
 
     <ul class="govuk-list govuk-list--bullet">
-        <li><b>Pre-fill</b> - using users profile information to populate service application forms</li>
-        <li><b>Verified information / account flags</b> - for services to access</li>
-        <li><b>Verified information / account flags</b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
+        <li><b><a href="../features/15.html"> Pre-fill</a></b> - using users profile information to populate service application forms</li>
+        <li><b><a href="../features/06.html">Verified information</a> / <a href="../features/29.html">account flags</a></b> - for services to access</li>
+        <li><b><a href="../features/06.html">Verified information</a> / <a href="../features/29.html">account flags</a></b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
     </ul>
 
 </div>
 
-<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
-    <h4 class="govuk-heading-s">Service needs potentially not supported</h4>
+    <h4 class="govuk-heading-m">Service needs potentially not supported</h4>
 
     <ul class="govuk-list govuk-list--bullet">
         <li><b>Unique information needs</b> - services may need situation-specific information, for example something relating to a health diagnosis that can’t be linked to an account attribute.</li>
