@@ -404,6 +404,9 @@ module.exports = {
             anchor: "diagram",
     }
     ],
+    phase3menu: [
+
+    ],
     prototypemenu: [
 
     ],
@@ -448,6 +451,7 @@ module.exports = {
         needlabel6: 'Feel safe and secure online',
         needlabel7: 'Feel confident in the way my data is being used',
         needlabel8: 'Reduce cognitive load',
+        needlabel9: 'Find what I need easily'
     },
     objectives: {
         objective1: 'Identify user benefits, expectations and challenges of a personalised experience across government, via the GOV.UK account',

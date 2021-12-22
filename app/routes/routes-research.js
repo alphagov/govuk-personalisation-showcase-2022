@@ -1346,36 +1346,69 @@ router.get('/pillars', function (req, res) {
 // PHASE 3
 router.get('/phase-3', function (req, res) {
 
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
     // calculate number of in page menu links
-    let menusections = req.session.data.prototypemenu.length;
+    let menusections = req.session.data.phase3menu.length;
+
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
 
     let thispage = req.session.data.hubmenu[5].id;
 
     // create some empty arrays that we 'll pass into nunjucts
+    let names = []
+    let categories = []
+    let category = []
+    let fids = []
     let pagemenu = []
+    let featuresmenu = []
+    let features = []
     let titles = []
     let anchors = []
+    let priorities = []
 
     // loop though the links and populate the arrays
-    for (i = 0; i < menusections; i++) {
-        pagemenu[i] = req.session.data.prototypemenu[i]
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        categories[i] = req.session.data.rdd.features[i].category
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+        priorities[i] = req.session.data.rdd.features[i].priority
     }
     for (i = 0; i < menusections; i++) {
-        titles[i] = req.session.data.prototypemenu[i].title
+        pagemenu[i] = req.session.data.phase3menu[i]
     }
     for (i = 0; i < menusections; i++) {
-        anchors[i] = req.session.data.prototypemenu[i].anchor
+        titles[i] = req.session.data.phase3menu[i].title
     }
-
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.phase3menu[i].anchor
+    }
     //return these
     return res.render('phase-3/index', {
+        'featuresmenu': featuresmenu,
+        'featurestotal': featurestotal,
+        'features': features,
+        'fids': fids,
+        'categories': categories,
+        'category': category,
+        'priorities': priorities,
+        'names': names,
         'pagemenu': pagemenu,
-        'menusections': menusections,
         'titles': titles,
         'anchors': anchors,
+        'menusections': menusections,
         'thispage': thispage
-
-
     })
 })
 
