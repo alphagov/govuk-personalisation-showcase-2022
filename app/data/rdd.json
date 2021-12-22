@@ -86,7 +86,7 @@
             "showrecommendations": false,
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true&pli=1#gid=726455736",
             "relatedfeatures": ["01", "02", "05", "06", "07", "09", "10", "12", "16", "17", "18", "19", "20", "24", "33"],
-            "riskcategory": "3"
+            "riskcategory": ["02", "03"]
     },
         {
             "fid": "04",
@@ -262,7 +262,7 @@
             "showrecommendations": false,
             "prototypelink": "",
             "relatedfeatures": ["21", "17", "08", "20"],
-            "riskcategory": "3"
+            "riskcategory": ["02", "01", "03"]
     },
         {
             "fid": "12",
@@ -305,8 +305,8 @@
             "showrisks": true,
             "showrecommendations": false,
             "prototypelink": "",
-            "relatedfeatures": ["10", "21", "20", "08", "15", "14"],
-            "riskcategory": "02"
+            "relatedfeatures": ["10", "[20", "08", "15", "14"],
+            "riskcategory": ["02", "03"]
     },
         {
             "fid": "14",
@@ -349,8 +349,8 @@
             "showrisks": true,
             "showrecommendations": false,
             "prototypelink": "",
-            "relatedfeatures": ["10", "06", "13", "17", "21", "19", "16"],
-            "riskcategory": "01"
+            "relatedfeatures": ["10", "06", "13", "17", "21", "16"],
+            "riskcategory": ["01", "02", "03", "04"]
     },
         {
             "fid": "16",
@@ -481,8 +481,8 @@
             "showrisks": true,
             "showrecommendations": false,
             "prototypelink": "",
-            "relatedfeatures": ["03", "08", "10", "11", "12", "13", "17", "18", "19", "20"],
-            "riskcategory": "3"
+            "relatedfeatures": ["03", "08", "11", "12", "13", "17", "18", "19", "20"],
+            "riskcategory": ["02", "03", "01", "05"]
     },
         {
             "fid": "22",
