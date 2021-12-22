@@ -400,9 +400,6 @@ module.exports = {
     ],
     pillarsmenu: [
         {
-            title: "Explanation (placeholder)",
-            anchor: "explanation",
-    }, {
             title: "Diagram (placeholder)",
             anchor: "diagram",
     }
@@ -465,6 +462,14 @@ module.exports = {
         valuetoservicelabel2: 'Indifferent',
         valuetoservicelabel3: 'Somewhat valuable',
         valuetoservicelabel4: 'Valuable'
+    },
+    riskcategory: {
+        risklabel1: 'Impact on service',
+        risklabel2: 'User impact/acceptance',
+        risklabel3: 'Accuracy of data',
+        risklabel4: 'Liability',
+        risklabel5: 'Security/fraud',
+        risklabel6: 'Sensitivity of data',
     },
     glossary: {
         Banana: 'Definition goes here',

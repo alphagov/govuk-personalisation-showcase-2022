@@ -253,15 +253,27 @@ Feature | {{ name }}
         <!-- risk category -->
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-                <h3 class="govuk-heading-s">Risk category</h3>
+                <h3 class="govuk-heading-s">Risk categories</h3>
                 {% include "features/includes/logic/logic-feature-risk-category.html" %}
             </div>
         </div>
         {% else %}
         {% endif %}
 
+
+        {% if prototypelink %}
+        <!-- risk category -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <p><a href="{{ prototypelink }}" target="_blank">View on features spreadsheet</a> </p>
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
+        <!--
         {% if relatedfeatures %}
-        <!-- Related features -->
+
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
                 <h3 class="govuk-heading-s">Related features</h3>
@@ -271,7 +283,7 @@ Feature | {{ name }}
                     {% endblock %}
                 </ul>
             </div>
-        </div>
+        </div> -->
         {% else %}
         {% endif %}
 

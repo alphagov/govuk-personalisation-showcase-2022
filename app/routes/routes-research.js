@@ -1517,6 +1517,7 @@ router.get('/features/01', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1541,6 +1542,7 @@ router.get('/features/01', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1579,6 +1581,7 @@ router.get('/features/02', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1603,6 +1606,7 @@ router.get('/features/02', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1641,6 +1645,7 @@ router.get('/features/03', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1665,6 +1670,7 @@ router.get('/features/03', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1703,6 +1709,7 @@ router.get('/features/04', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1727,6 +1734,7 @@ router.get('/features/04', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1765,6 +1773,7 @@ router.get('/features/05', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1789,6 +1798,7 @@ router.get('/features/05', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1827,6 +1837,7 @@ router.get('/features/06', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1851,6 +1862,7 @@ router.get('/features/06', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1889,6 +1901,7 @@ router.get('/features/07', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1913,6 +1926,7 @@ router.get('/features/07', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -1951,6 +1965,7 @@ router.get('/features/08', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -1975,6 +1990,7 @@ router.get('/features/08', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2013,6 +2029,7 @@ router.get('/features/09', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2037,6 +2054,7 @@ router.get('/features/09', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2075,6 +2093,7 @@ router.get('/features/10', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2099,6 +2118,7 @@ router.get('/features/10', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2137,6 +2157,7 @@ router.get('/features/11', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2161,6 +2182,7 @@ router.get('/features/11', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2199,6 +2221,7 @@ router.get('/features/12', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2223,6 +2246,7 @@ router.get('/features/12', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2261,6 +2285,7 @@ router.get('/features/13', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2285,6 +2310,7 @@ router.get('/features/13', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2323,6 +2349,7 @@ router.get('/features/14', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2347,6 +2374,7 @@ router.get('/features/14', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2385,6 +2413,7 @@ router.get('/features/15', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2409,6 +2438,7 @@ router.get('/features/15', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2447,6 +2477,7 @@ router.get('/features/16', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2471,6 +2502,7 @@ router.get('/features/16', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2509,6 +2541,7 @@ router.get('/features/17', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2533,6 +2566,7 @@ router.get('/features/17', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2571,6 +2605,7 @@ router.get('/features/18', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2595,6 +2630,7 @@ router.get('/features/18', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2633,6 +2669,7 @@ router.get('/features/19', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2657,6 +2694,7 @@ router.get('/features/19', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2695,6 +2733,7 @@ router.get('/features/20', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2719,6 +2758,7 @@ router.get('/features/20', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2757,6 +2797,7 @@ router.get('/features/21', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2781,6 +2822,7 @@ router.get('/features/21', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2819,6 +2861,7 @@ router.get('/features/22', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2843,6 +2886,7 @@ router.get('/features/22', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2881,6 +2925,7 @@ router.get('/features/23', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2905,6 +2950,7 @@ router.get('/features/23', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -2943,6 +2989,7 @@ router.get('/features/24', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -2967,6 +3014,7 @@ router.get('/features/24', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3005,6 +3053,7 @@ router.get('/features/25', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3029,6 +3078,7 @@ router.get('/features/25', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3067,6 +3117,7 @@ router.get('/features/26', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3091,6 +3142,7 @@ router.get('/features/26', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3129,6 +3181,7 @@ router.get('/features/27', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3153,6 +3206,7 @@ router.get('/features/27', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3191,6 +3245,7 @@ router.get('/features/28', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3215,6 +3270,7 @@ router.get('/features/28', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3253,6 +3309,7 @@ router.get('/features/29', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3277,6 +3334,7 @@ router.get('/features/29', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3315,6 +3373,7 @@ router.get('/features/30', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3339,6 +3398,7 @@ router.get('/features/30', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3377,6 +3437,7 @@ router.get('/features/31', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3401,6 +3462,7 @@ router.get('/features/31', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3439,6 +3501,7 @@ router.get('/features/32', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3463,6 +3526,7 @@ router.get('/features/32', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
@@ -3501,6 +3565,7 @@ router.get('/features/33', function (req, res) {
     let showuser = req.session.data.rdd.features[index].showuserfindings
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
+    let riskcategory = req.session.data.rdd.features[index].riskcategory
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
@@ -3525,6 +3590,7 @@ router.get('/features/33', function (req, res) {
         'showuser': showuser,
         'showservice': showservice,
         'showrisks': showrisks,
+        'riskcategory': riskcategory,
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
