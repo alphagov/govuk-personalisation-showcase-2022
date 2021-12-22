@@ -70,11 +70,15 @@
 
     <p>A non-exhaustive list of needs is summarised here: </p>
 
-    <br />
+    <br /><br />
 
-    <ol class="govuk-list govuk-list--number govuk-list--spaced">
+    <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-top-8">
         {% for number, label in needs %}
-        <li><b>{{ label }}</b></li>
+        <li>
+            <p class="govuk-body-l">
+
+                {{ label }}</p>
+        </li>
         {% else %}
         {% endfor %}
 
