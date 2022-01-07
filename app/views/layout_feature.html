@@ -30,6 +30,8 @@ Feature | {{ name }}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
         {% include "features/includes/logic/logic-feature-category.html" %}
+        &nbsp;&nbsp;
+        {% include "features/includes/logic/logic-feature-priority.html" %}
     </div>
     <div class="govuk-grid-column-full govuk-!-padding-top-8">
         <h1 class="govuk-heading-xl">
@@ -207,7 +209,7 @@ Feature | {{ name }}
         <!-- User need -->
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-                <h3 class="govuk-heading-s">End user need</h3>
+                <h3 class="govuk-heading-s">User needs met</h3>
                 {% include "features/includes/logic/logic-feature-user-need.html" %}
             </div>
         </div>

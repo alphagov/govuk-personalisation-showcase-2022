@@ -1,15 +1,21 @@
 {% if category === "data" %}
-<strong class="govuk-tag govuk-tag--purple">
-    Types of data
-</strong>
+<a href="../features/#datalist" style="text-decoration: none;">
+    <strong class="govuk-tag govuk-tag--purple">
+        Types of data
+    </strong>
+</a>
 {% elif category === "control" %}
-<strong class="govuk-tag govuk-tag--purple">
-    Control of data
-</strong>
+<a href="../features/#controllist" style="text-decoration: none;">
+    <strong class="govuk-tag govuk-tag--purple">
+        Control of data
+    </strong>
+</a>
 {% elif category === "personalisation" %}
-<strong class="govuk-tag govuk-tag--purple">
-    Personalisation
-</strong>
+<a href="../features/#personalisationlist" style="text-decoration: none;">
+    <strong class="govuk-tag govuk-tag--purple">
+        Personalisation
+    </strong>
+</a>
 {% else %}
 <p>Feature category not set</p>
 {% endif %}

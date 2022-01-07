@@ -1,0 +1,20 @@
+{% if priority === "high" %}
+<a href="../features/#highplist">
+    <strong class="govuk-tag govuk-tag">
+        High priority
+    </strong></a>
+{% elif priority === "med" %}
+<a href="../features/#medplist">
+    <strong class="govuk-tag govuk-tag--blue">
+        Medium priority
+    </strong>
+</a>
+{% elif priority === "low" %}
+<a href="../features/#lowplist">
+    <strong class="govuk-tag govuk-tag--grey">
+        Low priority
+    </strong>
+</a>
+{% else %}
+<p>Feature priority not set</p>
+{% endif %}
