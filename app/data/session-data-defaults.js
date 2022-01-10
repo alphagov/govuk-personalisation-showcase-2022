@@ -380,7 +380,7 @@ module.exports = {
             anchor: "summary",
     },
         {
-            title: "List of all features",
+            title: "The features",
             anchor: "featurelist",
     }
     ],

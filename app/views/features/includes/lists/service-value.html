@@ -1,0 +1,55 @@
+<div class="govuk-grid-row">
+    <div id="highplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+
+        <strong class="govuk-tag govuk-tag">
+            High
+        </strong>
+
+        <ul class="govuk-list govuk-!-padding-top-4">
+            {% for i in range(1, featurestotal) -%}
+            {% if servicevalue[i] === "high" %}
+            <li>
+                <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+            </li>
+            {% endif %}
+            {%- endfor %}
+        </ul>
+
+    </div>
+
+    <div id="medplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+
+        <strong class="govuk-tag govuk-tag--blue">
+            Med
+        </strong>
+
+        <ul class="govuk-list govuk-!-padding-top-4">
+            {% for i in range(1, featurestotal) -%}
+            {% if servicevalue[i] === "med" %}
+            <li>
+                <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+            </li>
+            {% endif %}
+            {%- endfor %}
+        </ul>
+
+    </div>
+
+    <div id="lowplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+
+        <strong class="govuk-tag govuk-tag--grey">
+            Low
+        </strong>
+
+        <ul class="govuk-list govuk-!-padding-top-4">
+            {% for i in range(1, featurestotal) -%}
+            {% if servicevalue[i] === "low" %}
+            <li>
+                <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+            </li>
+            {% endif %}
+            {%- endfor %}
+        </ul>
+
+    </div>
+</div>

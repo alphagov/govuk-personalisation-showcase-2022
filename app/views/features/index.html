@@ -14,8 +14,7 @@
 
 
     <ul class="govuk-list govuk-list--bullet">
-        <li><a href="#datalist">Types of data</a></li>
-
+        <li><a href="#category">Types of data</a></li>
         <li><a href="#controllist">Control of data</a> </li>
         <li><a href="#personalisationlist">Personalisation</a> </li>
     </ul>
@@ -41,122 +40,78 @@
     </ul>
 </div> -->
 
-<div class="govuk-grid-column-full govuk-!-padding-top-8">
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">by priority</h3>
+    <p>The list of 30 features (not all researched) are sorted by different criteria in the tabs below:</p>
 
-</div>
+    <br /><br />
 
-<div id="highplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+    {% set priorityHtml %}
+    <h2 class="govuk-heading-m">Priority</h2>
+    {% include "features/includes/lists/priority.html" %}
+    {% endset -%}
 
-    <strong class="govuk-tag govuk-tag">
-        High (MVP)
-    </strong>
+    {% set categoryHtml %}
+    <h2 class="govuk-heading-m">Category</h2>
+    {% include "features/includes/lists/category.html" %}
+    {% endset -%}
 
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if priorities[i] === "high" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
+    {% set userimpactHtml %}
+    <h2 class="govuk-heading-m">User impact</h2>
+    {% include "features/includes/lists/user-impact.html" %}
+    {% endset -%}
 
-</div>
+    {% set servicevalueHtml %}
+    <h2 class="govuk-heading-m">Value to service</h2>
+    {% include "features/includes/lists/service-value.html" %}
+    {% endset -%}
 
-<div id="medplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
+    {% set complexityHtml %}
+    <h2 class="govuk-heading-m">Complexity to deliver</h2>
+    {% include "features/includes/lists/complexity.html" %}
+    {% endset -%}
 
-    <strong class="govuk-tag govuk-tag--blue">
-        Med
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if priorities[i] === "med" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-
-</div>
-
-<div id="lowplist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-
-    <strong class="govuk-tag govuk-tag--grey">
-        Low
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if priorities[i] === "low" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-
-</div>
-
-<div class="govuk-grid-column-full govuk-!-padding-top-8">
-
-    <h3 class="govuk-heading-m">by category</h3>
-
-</div>
-
-<div id="datalist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-
-    <strong class="govuk-tag govuk-tag--purple">
-        Types of data
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "data" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
+    {{ govukTabs({
+  items: [
+    {
+      label: "Priority",
+      id: "priority",
+      panel: {
+        html: priorityHtml
+      }
+    },
+    {
+      label: "Category",
+      id: "category",
+      panel: {
+        html: categoryHtml
+      }
+    },
+    {
+      label: "User impact",
+      id: "user-impact",
+      panel: {
+        html: userimpactHtml
+      }
+    },
+    {
+      label: "Value to service",
+      id: "service-value",
+      panel: {
+        html: servicevalueHtml
+      }
+    },
+{
+      label: "Complexity to deliver",
+      id: "complexity",
+      panel: {
+        html: complexityHtml
+      }
+    }
+  ]
+}) }}
 
 </div>
-<div id="controllist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-
-    <strong class="govuk-tag govuk-tag--purple">
-        Control of data
-    </strong>
-
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "control" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-
-</div>
-<div id="personalisationlist" class="govuk-grid-column-one-third govuk-!-padding-top-8">
-    <strong class="govuk-tag govuk-tag--purple">
-        Personalisation
-    </strong>
-    <ul class="govuk-list govuk-!-padding-top-8">
-        {% for i in range(1, featurestotal) -%}
-        {% if categories[i] === "personalisation" %}
-        <li>
-            <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
-        </li>
-        {% endif %}
-        {%- endfor %}
-    </ul>
-</div>
-
-
 
 {% endblock %}
 {% else %}

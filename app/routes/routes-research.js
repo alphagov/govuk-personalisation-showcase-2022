@@ -1477,6 +1477,8 @@ router.get('/features', function (req, res) {
     let titles = []
     let anchors = []
     let priorities = []
+    let impact = []
+    let complexity = []
 
     // loop though the features and populate the arrays
     for (i = 0; i < featurestotal; i++) {
@@ -1489,6 +1491,8 @@ router.get('/features', function (req, res) {
         names[i] = req.session.data.rdd.features[i].name
         fids[i] = req.session.data.rdd.features[i].fid
         priorities[i] = req.session.data.rdd.features[i].priority
+        impact[i] = req.session.data.rdd.features[i].userimpact
+        complexity[i] = req.session.data.rdd.features[i].complexityservice
     }
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
@@ -1510,6 +1514,8 @@ router.get('/features', function (req, res) {
         'categories': categories,
         'category': category,
         'priorities': priorities,
+        'impact': impact,
+        'complexity': complexity,
         'names': names,
         'pagemenu': pagemenu,
         'titles': titles,

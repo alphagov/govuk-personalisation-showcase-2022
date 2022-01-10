@@ -2,19 +2,19 @@
     <div class="govuk-grid-column-one-half">
 
         {% if value === "5" %}
-        <strong class="govuk-tag govuk-tag--green">
+        <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has high value to services">
             Valuable
         </strong>
         {% elif value === "4" %}
-        <strong class="govuk-tag govuk-tag">
+        <strong class="govuk-tag govuk-tag" title="Research suggests this feature has medium value to services">
             Somewhat valuable
         </strong>
         {% elif value === "3" %}
-        <strong class="govuk-tag govuk-tag--blue">
+        <strong class="govuk-tag govuk-tag--blue" title="Research suggests this feature has neither high or low value to services">
             Indifferent
         </strong>
         {% elif value === "2" %}
-        <strong class="govuk-tag govuk-tag--red">
+        <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has low value to services">
             Not valuable
         </strong>
         {% elif value === "1" %}
@@ -29,15 +29,15 @@
     <div class="govuk-grid-column-one-half">
 
         {% if confidenceservicevalue === "high" %}
-        <strong class="govuk-tag govuk-tag--green">
+        <strong class="govuk-tag govuk-tag--green" title="Research has high confidence in the value to service rating">
             High confidence
         </strong>
         {% elif confidenceservicevalue === "med" %}
-        <strong class="govuk-tag govuk-tag">
+        <strong class="govuk-tag govuk-tag" title="Research has medium confidence in the value to service rating">
             Medium confidence
         </strong>
         {% elif confidenceservicevalue === "low" %}
-        <strong class="govuk-tag govuk-tag--blue">
+        <strong class="govuk-tag govuk-tag--blue" title="Research has low confidence in the value to service rating">
             Low confidence
         </strong>
         {% elif confidenceservicevalue === "none" %}

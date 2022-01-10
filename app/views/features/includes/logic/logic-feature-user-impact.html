@@ -2,17 +2,20 @@
     <div class="govuk-grid-column-one-half">
 
         {% if impact === "high" %}
-        <strong class="govuk-tag govuk-tag--green">
-            High impact
-        </strong>
+        <a href="../features/#user-impact" class="tag-link">
+            <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature will have high impact in meeting user needs">
+                High impact
+            </strong></a>
         {% elif impact === "med" %}
-        <strong class="govuk-tag govuk-tag--orange">
-            Medium impact
-        </strong>
+        <a href="../features/#user-impact" class="tag-link">
+            <strong class="govuk-tag govuk-tag--orange" title="Research suggests this feature will have medium impact in meeting user needs">
+                Medium impact
+            </strong></a>
         {% elif impact === "low" %}
-        <strong class="govuk-tag govuk-tag--blue">
-            Low impact
-        </strong>
+        <a href="../features/#user-impact" class="tag-link">
+            <strong class="govuk-tag govuk-tag--blue" title="Research suggests this feature will have low impact in meeting user needs">
+                Low impact
+            </strong></a>
         {% elif impact === "none" %}
         <strong class="govuk-tag govuk-tag--grey">
             Not tested
@@ -25,15 +28,15 @@
     <div class="govuk-grid-column-one-half">
 
         {% if confidenceuserimpact === "high" %}
-        <strong class="govuk-tag govuk-tag--green">
+        <strong class="govuk-tag govuk-tag--green" title="Research has high confidence in the impact rating">
             High confidence
         </strong>
         {% elif confidenceuserimpact === "med" %}
-        <strong class="govuk-tag govuk-tag">
+        <strong class="govuk-tag govuk-tag" title="Research has medium confidence in the impact rating">
             Medium confidence
         </strong>
         {% elif confidenceuserimpact === "low" %}
-        <strong class="govuk-tag govuk-tag--blue">
+        <strong class="govuk-tag govuk-tag--blue" title="Research has low confidence in the impact rating">
             Low confidence
         </strong>
         {% elif confidenceuserimpact === "none" %}

@@ -2,15 +2,15 @@
     <div class="govuk-grid-column-one-half">
 
         {% if complexityservice === "high" %}
-        <strong class="govuk-tag govuk-tag--red">
+        <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has high complexity for services to introduce">
             High complexity
         </strong>
         {% elif complexityservice === "med" %}
-        <strong class="govuk-tag govuk-tag--orange">
+        <strong class="govuk-tag govuk-tag--orange" title="Research suggests this feature has medium complexity for services to introduce">
             Medium complexity
         </strong>
         {% elif complexityservice === "low" %}
-        <strong class="govuk-tag govuk-tag--green">
+        <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has low complexity for services to introduce">
             Low complexity
         </strong>
         {% elif complexityservice === "none" %}
@@ -25,15 +25,15 @@
     <div class="govuk-grid-column-one-half">
 
         {% if confidencecomplexityservice === "high" %}
-        <strong class="govuk-tag govuk-tag--green">
+        <strong class="govuk-tag govuk-tag--green" title="Research has high confidence in the complexity rating">
             High confidence
         </strong>
         {% elif confidencecomplexityservice === "med" %}
-        <strong class="govuk-tag govuk-tag">
+        <strong class="govuk-tag govuk-tag" title="Research has medium confidence in the complexity rating">
             Medium confidence
         </strong>
         {% elif confidencecomplexityservice === "low" %}
-        <strong class="govuk-tag govuk-tag--blue">
+        <strong class="govuk-tag govuk-tag--blue" title="Research has low confidence in the complexity rating">
             Low confidence
         </strong>
         {% elif confidencecomplexityservice === "none" %}
