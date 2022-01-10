@@ -1,13 +1,31 @@
 <div class="govuk-grid-row">
-    <div id="highplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+    <div id="highplist" class="govuk-grid-column-one-quarter govuk-!-padding-top-2">
+
+        <strong class="govuk-tag govuk-tag--green">
+            Valuable
+        </strong>
+
+        <ul class="govuk-list govuk-!-padding-top-4">
+            {% for i in range(1, featurestotal) -%}
+            {% if value[i] === "5" %}
+            <li>
+                <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+            </li>
+            {% endif %}
+            {%- endfor %}
+        </ul>
+
+    </div>
+
+    <div id="medplist" class="govuk-grid-column-one-quarter govuk-!-padding-top-2">
 
         <strong class="govuk-tag govuk-tag">
-            High
+            Somewhat valuable
         </strong>
 
         <ul class="govuk-list govuk-!-padding-top-4">
             {% for i in range(1, featurestotal) -%}
-            {% if servicevalue[i] === "high" %}
+            {% if value[i] === "4" %}
             <li>
                 <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
             </li>
@@ -17,15 +35,15 @@
 
     </div>
 
-    <div id="medplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+    <div id="lowplist" class="govuk-grid-column-one-quarter govuk-!-padding-top-2">
 
         <strong class="govuk-tag govuk-tag--blue">
-            Med
+            Indifferent
         </strong>
 
         <ul class="govuk-list govuk-!-padding-top-4">
             {% for i in range(1, featurestotal) -%}
-            {% if servicevalue[i] === "med" %}
+            {% if value[i] === "3" %}
             <li>
                 <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
             </li>
@@ -35,15 +53,15 @@
 
     </div>
 
-    <div id="lowplist" class="govuk-grid-column-one-third govuk-!-padding-top-2">
+    <div id="lowplist" class="govuk-grid-column-one-quarter govuk-!-padding-top-2">
 
-        <strong class="govuk-tag govuk-tag--grey">
-            Low
+        <strong class="govuk-tag govuk-tag--red">
+            Not valuable
         </strong>
 
         <ul class="govuk-list govuk-!-padding-top-4">
             {% for i in range(1, featurestotal) -%}
-            {% if servicevalue[i] === "low" %}
+            {% if value[i] === "2" %}
             <li>
                 <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
             </li>

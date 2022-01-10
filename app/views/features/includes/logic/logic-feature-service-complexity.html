@@ -2,17 +2,20 @@
     <div class="govuk-grid-column-one-half">
 
         {% if complexityservice === "high" %}
-        <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has high complexity for services to introduce">
-            High complexity
-        </strong>
+        <a href="../features/#complexity" class="tag-link">
+            <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has high complexity for services to introduce">
+                High complexity
+            </strong></a>
         {% elif complexityservice === "med" %}
-        <strong class="govuk-tag govuk-tag--orange" title="Research suggests this feature has medium complexity for services to introduce">
-            Medium complexity
-        </strong>
+        <a href="../features/#complexity" class="tag-link">
+            <strong class="govuk-tag govuk-tag--orange" title="Research suggests this feature has medium complexity for services to introduce">
+                Medium complexity
+            </strong></a>
         {% elif complexityservice === "low" %}
-        <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has low complexity for services to introduce">
-            Low complexity
-        </strong>
+        <a href="../features/#complexity" class="tag-link">
+            <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has low complexity for services to introduce">
+                Low complexity
+            </strong></a>
         {% elif complexityservice === "none" %}
         <strong class="govuk-tag govuk-tag--grey">
             Not tested

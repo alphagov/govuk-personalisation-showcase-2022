@@ -2,21 +2,25 @@
     <div class="govuk-grid-column-one-half">
 
         {% if value === "5" %}
-        <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has high value to services">
-            Valuable
-        </strong>
+        <a href="../features/#service-value" class="tag-link">
+            <strong class="govuk-tag govuk-tag--green" title="Research suggests this feature has high value to services">
+                Valuable
+            </strong></a>
         {% elif value === "4" %}
-        <strong class="govuk-tag govuk-tag" title="Research suggests this feature has medium value to services">
-            Somewhat valuable
-        </strong>
+        <a href="../features/#service-value" class="tag-link">
+            <strong class="govuk-tag govuk-tag" title="Research suggests this feature has medium value to services">
+                Somewhat valuable
+            </strong></a>
         {% elif value === "3" %}
-        <strong class="govuk-tag govuk-tag--blue" title="Research suggests this feature has neither high or low value to services">
-            Indifferent
-        </strong>
+        <a href="../features/#service-value" class="tag-link">
+            <strong class="govuk-tag govuk-tag--blue" title="Research suggests this feature has neither high or low value to services">
+                Indifferent
+            </strong></a>
         {% elif value === "2" %}
-        <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has low value to services">
-            Not valuable
-        </strong>
+        <a href="../features/#service-value" class="tag-link">
+            <strong class="govuk-tag govuk-tag--red" title="Research suggests this feature has low value to services">
+                Not valuable
+            </strong></a>
         {% elif value === "1" %}
         <strong class="govuk-tag govuk-tag--grey">
             Not tested
