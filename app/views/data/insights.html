@@ -6,7 +6,7 @@
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
     <p>To fully support the features we’ve been testing with users and services in phase 2, services need the following capabilities in place:</p>
 
@@ -27,9 +27,9 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
 
         <div class="govuk-grid-column-full">
 
@@ -37,67 +37,103 @@
             <p>These include:</p>
 
             <ol class="govuk-list govuk-list--number">
-                <li>Paper to digital frontend</li>
-                <li>Paper to digital backend</li>
-                <li>In-person to virtual services</li>
-                <li>Siloed digital services to single sign-on (SSO) - also known as ‘one stop shop’</li>
+                <li><a href="#trans-1">Paper to digital frontend</a></li>
+                <li><a href="#trans-2">Paper to digital backend</a></li>
+                <li><a href="#trans-3">In-person to virtual services</a></li>
+                <li><a href="#trans-4">Siloed digital services to single sign-on (SSO)</a> - also known as ‘one stop shop’</li>
             </ol>
 
         </div>
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
-        <div class="govuk-grid-column-full">
+        <div id="trans-1" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">1. Paper to digital frontend</h3>
 
-            <p>Many services are trying to move away from their current paper applications, which must be manually input into systems and may not be digitised at all:</p>
+            <p>Many services are trying to move away from their current paper applications, which must be manually input into systems and may not be digitised at all.</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Child Benefit - HMRC Ops team receive 700,000 paper applications per year.</li>
-                <li>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document. There's a lot of paper that you have to go through.” MOJ - LPA</li>
-                <li>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway” MOD - AFCS</li>
+            <p>For Child Benefit, the HMRC Ops team receive 700,000 paper applications per year.</p>
 
-            </ul>
+            <div class="govuk-grid-row govuk-!-padding-top-4">
+
+                <div class="govuk-grid-column-one-half">
+
+                    <p><i>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document.</i></p>
+                    <p><i> There's a lot of paper that you have to go through.”</i> <br /><b>MOJ - LPA</b></p>
+
+                </div>
+
+                <div class="govuk-grid-column-one-half">
+
+                    <p><i>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway”</i> <br /><b>MOD - AFCS</b></p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
-        <div class="govuk-grid-column-full">
+        <div id="trans-2" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">2. Paper to digital backend</h3>
 
             <p>Services that appear digital to the end user may have manual backend processes:</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox” HO - MBTP</li>
-                <li>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.” MOD - AFCS</li>
-                <li>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation” MOD - AFCS</li>
-            </ul>
+            <div class="govuk-grid-row govuk-!-padding-top-4">
+
+                <div class="govuk-grid-column-one-third">
+
+                    <p><i>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox”</i> <br /><b>HO - MBTP</b></p>
+
+                </div>
+
+                <div class="govuk-grid-column-one-third">
+
+                    <p><i>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.”</i> <br /><b>MOD - AFCS</b></p>
+
+                </div>
+
+                <div class="govuk-grid-column-one-third">
+
+                    <p><i>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation”</i> <br /><b>MOD - AFCS</b></p>
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
-        <div class="govuk-grid-column-full">
+        <div id="trans-3" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">3. In-person to virtual services</h3>
 
             <p>Some services have already embraced digital applications:</p>
 
-            <blockquote>
-                <i>
-                    <p>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</p>
-                    <p> … We have introduced our ID Verification app, which enable some of these steps to happen through an entirely digital process. You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.” HO</p>
-                </i>
-            </blockquote>
+            <div class="govuk-grid-row">
 
+                <div class="govuk-grid-column-one-half">
+                    <p> <i>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</i></p>
+
+                </div>
+
+                <div class="govuk-grid-column-one-half">
+
+                    <p><i> … We have introduced our ID Verification app, which enable some of these steps to happen through an entirely digital process.</i></p>
+                    <p><i>You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.”</i> <br /><b>HO</b></p>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -105,18 +141,23 @@
 
     <div class="govuk-grid-row govuk-!-padding-top-8">
 
-        <div class="govuk-grid-column-full">
+        <div id="trans-4" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">4. Siloed digital services to single sign-on (SSO)</h3>
 
             <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account:</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>“The MOD is developing a single sign in portal where every single veteran and serving person will be able to log in and do their compensation and a lot of other services.” MOD - AFCS</li>
-                <li>HMRC are developing the Single Customer Account, supporting people to apply for Child Benefit and other services through an HMRC app.</li>
-                <li>Defra - Future Farming are doing the same</li>
-            </ul>
+            <div class="govuk-grid-row govuk-!-padding-top-4">
 
+                <div class="govuk-grid-column-one-half">
+
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li><i>“The MOD is developing a single sign in portal where every single veteran and serving person will be able to log in and do their compensation and a lot of other services.” </i> - <b>MOD - AFCS</b></li>
+                        <li>HMRC are developing the Single Customer Account, supporting people to apply for Child Benefit and other services through an HMRC app.</li>
+                        <li>Defra - Future Farming are doing the same</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -129,48 +170,55 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
-    <div class="govuk-grid-row ">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+    <div class="govuk-grid-row govuk-!-padding-bottom-8">
 
         <div class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">Summary</h3>
 
-            <p>We’ve used data models to show the difference between services As-Is processes and how they could be supported by GOV.UK account features. The research used a small number of services so should not be taken as a full representation of all government services.</p>
+            <p>We’ve used data models to show the difference between services As-is processes and how they could be supported by GOV.UK account features.</p>
+            <p>The research used a small number of services so should not be taken as a full representation of all government services.</p>
 
             <p>These entity attribute diagrams model systems and data flows for:</p>
 
-            <ul class="govuk-list govuk-list--bullet">
-                <li>As-Is - How services currently process service applications. These diagrams show the data flows at a high level, the detailed process maps are in the Appendix [link].</li>
-                <li>Possible To-Be - How services might receive and process service applications, in context of a Gov.UK Account and the features we have explored in phase 2. They are indicative of what might be possible and do not represent an implementation roadmap at this time.</li>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+                <li><b>As-is</b><br />How services currently process service applications. These diagrams show the data flows at a high level, the detailed process maps are in the Appendix [link].</li>
+                <li><b>Possible To-be</b><br />How services might receive and process service applications, in context of a GOV.UK account and the features we have explored in phase 2. They are indicative of what might be possible and do not represent an implementation roadmap at this time.</li>
             </ul>
 
-            <p>These diagrams aim to illustrate both how service processes could change and to highlight service x-gov sharing needs that may not be met by the Gov.UK Account features.</p>
+            <p>These diagrams aim to illustrate both how service processes could change, and to highlight service needs that may not be met by the account features.</p>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">As-is</h3>
 
             <p class="comment">[Insert image from Miro]</p>
 
-            <h4 class="govuk-heading-s govuk-!-padding-top-8">As-is</h4>
-
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Broken data-flows - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
-                <li>Low visibility for the user - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
-                <li>Manual verification - services spend a significant amount of time validating the information users provide in their applications, often via telephone, post or manual system search. Some services do not verify the identity of applicants or involved parties.</li>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced ">
+                <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
+                <li><b>Low visibility for the user</b> - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
+                <li><b>Manual verification</b> - services spend a significant amount of time validating the information users provide in their applications, often via telephone, post or manual system search. Some services do not verify the identity of applicants or involved parties.</li>
             </ul>
+
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Possible To-be</h3>
 
             <p class="comment">[Insert image from Miro]</p>
 
-            <h4 class="govuk-heading-s govuk-!-padding-top-8">Supported by GOV.UK features</h4>
-
             <ul class="govuk-list govuk-list--bullet">
-                <li>Broken data-flows - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
-                <li>Pre-fill - using users profile information to populate service application forms</li>
-                <li>Verified information / account flags - for services to access</li>
-                <li>Verified information / account flags - for services to create as outputs of the transaction, for example a War Pension recipient</li>
+                <li><b>Pre-fill</b> - using users profile information to populate service application forms</li>
+                <li><b>Verified information / account flags</b> - for services to access</li>
+                <li><b>Verified information / account flags</b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
             </ul>
+        </div>
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-8">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Service needs potentially not supported</h3>
 
-            <h4 class="govuk-heading-s govuk-!-padding-top-8">Service needs potentially not supported</h4>
-
-            <ul class="govuk-list govuk-list--bullet">
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Unique information needs - services may need situation-specific information, for example something relating to a health condition that can’t be linked to an account attribute.</li>
                 <li>Example: MOD War Pension and Armed Forces Compensation Scheme caseworkers must collect information about the incident for which the applicant is claiming compensation, including medical documentation of the event and any treatment sought. The exact information required depends on the individual application and may not be linked to an attribute like a diagnosis, particularly as the incident may pre-date digitised NHS records.</li>
                 <li>Consent to receive information - where services need to gather situation-specific information, they require a digital method to prove the user has consented and that is accessible to and recognised by staff in the requesting services.</li>
@@ -194,20 +242,20 @@
     <p>Many of the features tested in phase 2 rely on users being able to reuse data entered into their account within service journeys, and vice versa. </p>
     <p>To maximise the benefits of these features, the following must be true for participating transactional services:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Services tend to need the same information from their users</li>
-        <li>This information is recorded in a consistent format</li>
-    </ul>
-
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Information analysis</h3>
+    <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-8">
+        <li><a href="#dd1">Services tend to need the same information from their users</a></li>
+        <li><a href="#dd2">Information is recorded in a consistent format</a>
+        </li>
+    </ol>
+    <h3 id="dd1" class="govuk-heading-l govuk-!-padding-top-8">1. Services tend to need the same information from their users</h3>
 
     <p>To test the premise that services tend to need the same information from their users, an analysis was carried out, using data already available.</p>
     <p>Two data sources were used:
     </p>
 
     <ul class="govuk-list govuk-list--bullet">
-        <li>List of data in Central Government - survey results on the data items each service collects (376 services, 80 different data items)</li>
-        <li>GOV.UK Content Data - Transaction pages activity data (365 services)</li>
+        <li><b>List of data in Central Government</b> - survey results on the data items each service collects (376 services, 80 different data items)</li>
+        <li><b>GOV.UK Content Data</b> - Transaction pages activity data (365 services)</li>
     </ul>
 
     <p>The analysis took the 50 most frequently visited service pages and matched them against survey responses. Variations in service name and URL limited data matching, resulting in 28 identified services.</p>
@@ -236,8 +284,8 @@
     </p>
 
     <ul class="govuk-list govuk-list--bullet">
-        <li>Highly user-centred services - 14 services ask for all 6 data items. Services include, Book a theory test and Register to vote. These services would maximise benefit from features that reuse users data.</li>
-        <li>Non user-centred services - 6 services use none of the 6 data items. These include Drive in a clean air zone and Check someone’s driving licence information. These services are less likely to benefit, but may ask for other data items not covered by this analysis.</li>
+        <li><b>Highly user-centred services</b> - 14 services ask for all 6 data items. Services include, Book a theory test and Register to vote. These services would maximise benefit from features that reuse users data.</li>
+        <li><b>Non user-centred services</b> - 6 services use none of the 6 data items. These include Drive in a clean air zone and Check someone’s driving licence information. These services are less likely to benefit, but may ask for other data items not covered by this analysis.</li>
     </ul>
 
     <h4 class="govuk-heading-s govuk-!-padding-top-8">How do these compare to the other survey responses?</h4>
@@ -246,16 +294,18 @@
 
     <p>Approximately 80 different data items are collected across all 376 services, and the top 28 services collect 47 different data items. Over 90% of services ask for less than 20 data items, and over 80% ask for 1-20 data items, which excludes niche services, e.g. Flood warning, that do not collect data in their service journey.
     </p>
-    <p><b>Findings</b></p>
+    <br />
 
-    <ul class="govuk-list govuk-list--bullet">
+    <h4 class="govuk-heading-s">Findings</h4>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
         <li>A few key data items are used by a large proportion of services</li>
         <li>Collecting this information in a GOV.UK account maximises data pre-population and reuse opportunities</li>
         <li>Increasing the number of data items collected will streamline some user journeys, but not all, and there will be diminishing returns</li>
         <li>Some services have very different data needs, and may be less able to benefit from Gov.UK Account features that reuse data.</li>
     </ul>
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Information validation</h3>
+    <h3 id="dd-2" class="govuk-heading-m govuk-!-padding-top-8">2. information is recorded in a consistent format</h3>
 
     <p>To understand if services are recording information in a consistent format, services who participated in the workshops were asked if they maintained data dictionaries and how they validate the information they receive from users.</p>
     <p>None of the services engaged currently maintain a data dictionary. The Defra - Fish Export service [link to case study] and Home Office were also engaged as services known to have a high level of data validation.</p>
