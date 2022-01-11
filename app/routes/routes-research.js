@@ -428,7 +428,7 @@ router.get('/user-research/insights', function (req, res) {
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
 
-    let thispage = req.session.data.userresearchmenu[2].title;
+    let thispage = req.session.data.userresearchmenu[1].title;
     let parent = req.session.data.hubmenu[1].title;
     let parentlink = req.session.data.hubmenu[1].url;
 
@@ -1142,7 +1142,6 @@ router.get('/data/insights', function (req, res) {
 
     console.log('This page is: ' + thispage)
 
-
     // calculate number of in page menu links
     let menusections = req.session.data.datainsightsmenu.length;
 
@@ -1215,6 +1214,66 @@ router.get('/data/recommendations', function (req, res) {
 
     //return these
     return res.render('data/recommendations', {
+        'thispage': thispage,
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
+// DATA survey
+router.get('/data/survey', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = []
+    let parent = req.session.data.hubmenu[3].title;
+    let parentlink = req.session.data.hubmenu[3].url;
+
+    console.log('This page is: ' + thispage)
+
+    // calculate number of in page menu links
+    let menusections = req.session.data.datasurveymenu.length;
+    let featurestotal = req.session.data.rdd.features.length
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let pagemenu = []
+    let titles = []
+    let anchors = []
+    let names = []
+    let fids = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < menusections; i++) {
+        pagemenu[i] = req.session.data.datasurveymenu[i]
+    }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.datasurveymenu[i].title
+    }
+    for (i = 0; i < menusections; i++) {
+        anchors[i] = req.session.data.datasurveymenu[i].anchor
+    }
+    for (i = 0; i < featurestotal; i++) {
+        featurestotal[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        names[i] = req.session.data.rdd.features[i].name
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    //return these
+    return res.render('data/survey', {
+        'pagemenu': pagemenu,
+        'menusections': menusections,
+        'titles': titles,
+        'anchors': anchors,
+        'featurestotal': featurestotal,
+        'fids': fids,
+        'names': names,
         'thispage': thispage,
         'parent': parent,
         'parentlink': parentlink

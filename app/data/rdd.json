@@ -208,7 +208,7 @@
             "confidenceuserimpact": "low",
             "valueservice": "2",
             "confidencevalueservice": "med",
-            "complexityservice": "high",
+            "complexityservice": "med",
             "confidencecomplexityservice": "med",
             "showvideo": true,
             "showdesc": true,

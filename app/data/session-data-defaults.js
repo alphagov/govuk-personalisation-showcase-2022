@@ -28,12 +28,12 @@ module.exports = {
             id: 2
     },
         {
-            title: "End user research",
+            title: "End users",
             url: "/user-research",
             id: 3
     },
         {
-            title: "Service research",
+            title: "Services",
             url: "/service-research",
             id: 4
     },
@@ -110,10 +110,6 @@ module.exports = {
         {
             title: "Approach",
             anchor: "approach",
-    },
-        {
-            title: "Summary",
-            anchor: "summary",
     },
         {
             title: "Insights",
@@ -356,6 +352,16 @@ module.exports = {
             anchor: "capabilities"
 }
     ],
+    datasurveymenu: [
+        {
+            title: "Approach",
+            anchor: "approach",
+        },
+        {
+            title: "Analysis",
+            anchor: "analysis",
+    }
+            ],
     datainsightsmenu: [
         {
             title: "Background",
