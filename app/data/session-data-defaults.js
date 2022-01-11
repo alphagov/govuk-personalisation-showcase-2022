@@ -21,6 +21,7 @@ module.exports = {
 
     indexlink: "/index-handover",
     maintitle: "X-Gov Services",
+    highlight: "Key insight(s)",
     hubmenu: [
         {
             title: "The problem",

@@ -36,7 +36,7 @@
             <p>Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation.</p>
             <p>These include:</p>
 
-            <ol class="govuk-list govuk-list--number">
+            <ol class="govuk-list govuk-list--number govuk-list--spaced">
                 <li><a href="#trans-1">Paper to digital frontend</a></li>
                 <li><a href="#trans-2">Paper to digital backend</a></li>
                 <li><a href="#trans-3">In-person to virtual services</a></li>
@@ -60,14 +60,22 @@
 
                 <div class="govuk-grid-column-one-half">
 
-                    <p><i>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document.</i></p>
-                    <p><i> There's a lot of paper that you have to go through.”</i> <br /><b>MOJ - LPA</b></p>
+                    <blockquote>
+                        <p><i>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document.</i></p>
+                        <p><i> There's a lot of paper that you have to go through.”</i></p>
+                    </blockquote>
+                    <p>
+                        <b>MOJ - LPA</b></p>
 
                 </div>
 
                 <div class="govuk-grid-column-one-half">
 
-                    <p><i>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway”</i> <br /><b>MOD - AFCS</b></p>
+                    <blockquote>
+                        <p><i>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway”</i></p>
+                    </blockquote>
+                    <p>
+                        <b>MOD - AFCS</b></p>
 
                 </div>
 
@@ -89,19 +97,28 @@
 
                 <div class="govuk-grid-column-one-third">
 
-                    <p><i>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox”</i> <br /><b>HO - MBTP</b></p>
+                    <blockquote>
+                        <p><i>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox”</i></p>
+                    </blockquote>
+                    <p><b>HO - MBTP</b></p>
 
                 </div>
 
                 <div class="govuk-grid-column-one-third">
 
-                    <p><i>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.”</i> <br /><b>MOD - AFCS</b></p>
+                    <blockquote>
+                        <p><i>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.”</i></p>
+                    </blockquote>
+                    <p><b>MOD - AFCS</b></p>
 
                 </div>
 
                 <div class="govuk-grid-column-one-third">
 
-                    <p><i>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation”</i> <br /><b>MOD - AFCS</b></p>
+                    <blockquote>
+                        <p><i>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation”</i> </p>
+                    </blockquote>
+                    <p><b>MOD - AFCS</b></p>
 
                 </div>
 
@@ -119,17 +136,21 @@
 
             <p>Some services have already embraced digital applications:</p>
 
-            <div class="govuk-grid-row">
+            <div class="govuk-grid-row govuk-!-padding-top-4">
 
                 <div class="govuk-grid-column-one-half">
-                    <p> <i>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</i></p>
+                    <blockquote>
+                        <p> <i>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</i>
+                        </p>
+                    </blockquote>
 
                 </div>
 
                 <div class="govuk-grid-column-one-half">
 
                     <p><i> … We have introduced our ID Verification app, which enable some of these steps to happen through an entirely digital process.</i></p>
-                    <p><i>You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.”</i> <br /><b>HO</b></p>
+                    <p><i>You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.”</i> </p>
+                    <p><b>HO</b></p>
 
                 </div>
 
@@ -144,17 +165,21 @@
         <div id="trans-4" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">4. Siloed digital services to single sign-on (SSO)</h3>
-
-            <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account:</p>
-
+            <div class="highlight">
+                <p class="highlight-header">
+                    {{ data['highlight'] }}
+                </p>
+                <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account.</p>
+            </div>
             <div class="govuk-grid-row govuk-!-padding-top-4">
 
-                <div class="govuk-grid-column-one-half">
+                <div class="govuk-grid-column-two-thirds">
 
                     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-                        <li><i>“The MOD is developing a single sign in portal where every single veteran and serving person will be able to log in and do their compensation and a lot of other services.” </i> - <b>MOD - AFCS</b></li>
+
                         <li>HMRC are developing the Single Customer Account, supporting people to apply for Child Benefit and other services through an HMRC app.</li>
                         <li>Defra - Future Farming are doing the same</li>
+                        <li>The MOD is developing a single sign in portal where <i>"every single veteran and serving person will be able to log in and do their compensation and a lot of other services"</i>.</li>
                     </ul>
                 </div>
             </div>
@@ -172,31 +197,34 @@
 {% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
     <div class="govuk-grid-row govuk-!-padding-bottom-8">
-
-        <div class="govuk-grid-column-full">
-
-            <h3 class="govuk-heading-m">Summary</h3>
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
             <p>We’ve used data models to show the difference between services As-is processes and how they could be supported by GOV.UK account features.</p>
-            <p>The research used a small number of services so should not be taken as a full representation of all government services.</p>
-
-            <p>These entity attribute diagrams model systems and data flows for:</p>
-
-            <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-top-2 govuk-!-padding-bottom-2">
-                <li><b>As-is</b><br />How services currently process service applications. These diagrams show the data flows at a high level, the detailed process maps are in the Appendix [link].</li>
-                <li><b>Possible To-be</b><br />How services might receive and process service applications, in context of a GOV.UK account and the features we have explored in phase 2. They are indicative of what might be possible and do not represent an implementation roadmap at this time.</li>
-            </ul>
 
             <p>These diagrams aim to illustrate both how service processes could change, and to highlight service needs that may not be met by the account features.</p>
 
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    The research used a small number of services so should not be taken as a full representation of all government services
+                </strong>
+            </div>
         </div>
     </div>
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">As-is</h3>
+    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+            <h3 class="govuk-heading-m">As-is</h3>
 
+            <p>These diagrams show the data flows at a high level:</p>
+        </div>
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8 center">
             <p class="comment">[Insert image from Miro]</p>
-
+            <p class="govuk-body-s">
+                <a href="#">View the detailed process maps</a>
+            </p>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced ">
                 <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
                 <li><b>Low visibility for the user</b> - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
@@ -204,28 +232,86 @@
             </ul>
 
         </div>
-        <div class="govuk-grid-column-one-half">
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">Possible To-be</h3>
 
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+            <h3 class="govuk-heading-m ">(Possible) To-be</h3>
+            <p>How services might receive and process service applications, in context of a GOV.UK account and the features we have explored in phase 2:</p>
+
+        </div>
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8 center">
             <p class="comment">[Insert image from Miro]</p>
-
-            <ul class="govuk-list govuk-list--bullet">
-                <li><b>Pre-fill</b> - using users profile information to populate service application forms</li>
-                <li><b>Verified information / account flags</b> - for services to access</li>
-                <li><b>Verified information / account flags</b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
+            <p class="govuk-body-s">
+                <a href="#">View the detailed process maps</a>
+            </p>
+        </div>
+        <div class="govuk-grid-column-two-thirds ">
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li><b><a href="../features/15.html">Auto-fill</a></b> - using users profile information to populate service application forms</li>
+                <li><b><a href="../features/06.html">Trusted data</a> / <a href="../features/29.html">account flags</a></b> - for services to access</li>
+                <li><b><a href="../features/06.html">Trusted data</a> / <a href="../features/29.html">account flags</a></b> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
             </ul>
         </div>
-        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-8">
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">Service needs potentially not supported</h3>
 
-            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-                <li>Unique information needs - services may need situation-specific information, for example something relating to a health condition that can’t be linked to an account attribute.</li>
-                <li>Example: MOD War Pension and Armed Forces Compensation Scheme caseworkers must collect information about the incident for which the applicant is claiming compensation, including medical documentation of the event and any treatment sought. The exact information required depends on the individual application and may not be linked to an attribute like a diagnosis, particularly as the incident may pre-date digitised NHS records.</li>
-                <li>Consent to receive information - where services need to gather situation-specific information, they require a digital method to prove the user has consented and that is accessible to and recognised by staff in the requesting services.</li>
-                <li>Example: in the MOD War Pension and Armed Forces Compensation Scheme, where caseworkers need to request information from the NHS, they must show the user has consented to have their medical records shared. As with the point above, this consent is specific to the information required.</li>
-                <li>Notifying non-account holders - service journeys may have people involved who aren’t involved in the application but who need to receive information.</li>
-                <li>Example: In the Lasting Power of Attorney service, applicants may include the details of People to be notified, who are not otherwise involved in the process but may register an objection if they have concerns about how the LPA will be used. People involved in this way may not have a Gov.UK Account, or it may not be linked to the application, requiring the service to maintain alternative ways of contacting them, e.g. post.</li>
-            </ul>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service needs potentially not supported</h3>
+
+            <h4 class="govuk-heading-s">
+                Unique information needs
+            </h4>
+            <p>Services may need situation-specific information, for example something relating to a health condition that can’t be linked to an account attribute.</p>
+
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View example
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p>MOD War Pension and Armed Forces Compensation Scheme caseworkers must collect information about the incident for which the applicant is claiming compensation, including medical documentation of the event and any treatment sought.</p>
+                    <p>The exact information required depends on the individual application and may not be linked to an attribute like a diagnosis, particularly as the incident may pre-date digitised NHS records.
+                    </p>
+                </div>
+            </details>
+
+
+            <br />
+
+            <h4 class="govuk-heading-s govuk-!-padding-top-4">Consent to receive information</h4>
+            <p>Where services need to gather situation-specific information, they require a digital method to prove the user has consented and that is accessible to and recognised by staff in the requesting services.</p>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View example
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p>In the MOD War Pension and Armed Forces Compensation Scheme, where caseworkers need to request information from the NHS, they must show the user has consented to have their medical records shared.</p>
+                    <p> As with the point above, this consent is specific to the information required.
+                    </p>
+                </div>
+            </details>
+
+
+            <br />
+
+            <h4 class="govuk-heading-s govuk-!-padding-top-4">Notifying non-account holders</h4>
+            <p>Service journeys may have people involved who aren’t involved in the application but who need to receive information.</p>
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View example
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p>In the Lasting Power of Attorney service, applicants may include the details of People to be notified, who are not otherwise involved in the process but may register an objection if they have concerns about how the LPA will be used.</p>
+                    <p>People involved in this way may not have a GOV.UK account, or it may not be linked to the application, requiring the service to maintain alternative ways of contacting them, e.g. post.</p>
+                </div>
+            </details>
 
         </div>
 
@@ -237,115 +323,212 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>Many of the features tested in phase 2 rely on users being able to reuse data entered into their account within service journeys, and vice versa. </p>
     <p>To maximise the benefits of these features, the following must be true for participating transactional services:</p>
 
-    <ol class="govuk-list govuk-list--number govuk-!-padding-bottom-8">
+    <br />
+
+    <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-bottom-8">
         <li><a href="#dd1">Services tend to need the same information from their users</a></li>
         <li><a href="#dd2">Information is recorded in a consistent format</a>
         </li>
     </ol>
-    <h3 id="dd1" class="govuk-heading-l govuk-!-padding-top-8">1. Services tend to need the same information from their users</h3>
 
-    <p>To test the premise that services tend to need the same information from their users, an analysis was carried out, using data already available.</p>
-    <p>Two data sources were used:
-    </p>
+    <div class="govuk-grid-row">
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li><b>List of data in Central Government</b> - survey results on the data items each service collects (376 services, 80 different data items)</li>
-        <li><b>GOV.UK Content Data</b> - Transaction pages activity data (365 services)</li>
-    </ul>
+        <div class="govuk-grid-column-full">
 
-    <p>The analysis took the 50 most frequently visited service pages and matched them against survey responses. Variations in service name and URL limited data matching, resulting in 28 identified services.</p>
-    <p>These were analysed to understand:
-    </p>
+            <h3 id="dd1" class="govuk-heading-l govuk-!-padding-top-8">1. Services tend to need the same information from their users</h3>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>What are the most frequently asked for data items?</li>
-        <li>To what extent do these frequently visited services ask for the same information?</li>
-        <li>How do these compare to the other survey responses?</li>
-    </ul>
+        </div>
 
-    <h4 class="govuk-heading-s govuk-!-padding-top-8">What are the most frequently asked for data items?</h4>
+    </div>
 
-    <p class="comment">[Insert table]</p>
+    <div class="govuk-grid-row">
 
-    <p>Unsurprisingly, the most commonly asked for data items were all personal details, required by over 50% of the 28 services. It wasn’t possible to tell if Date of birth was required for identity verification or if the services need the user's age for service provision.</p>
+        <div class="govuk-grid-column-full govuk-!-padding-top-4">
+            <h4 class="govuk-heading-m">What are the most frequently asked for data items?</h4>
+        </div>
 
+        <div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4 center">
+            <p class="comment ">[Insert graph]</p>
+        </div>
 
-    <h4 class="govuk-heading-s govuk-!-padding-top-8">To what extent do these frequently visited services ask for the same information?</h4>
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p class="comment">[Insert graph]</p>
+            <p>Unsurprisingly, the most commonly asked for data items were all personal details, required by over 50% of the 28 services.</p>
+            <p>It wasn’t possible to tell if Date of birth was required for identity verification or if the services need the user's age for service provision.</p>
 
-    <p>This graph shows the 28 services plotted against how many of the 6 common data items they require.</p>
-    <p>The graph shows two main groups:
-    </p>
+        </div>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li><b>Highly user-centred services</b> - 14 services ask for all 6 data items. Services include, Book a theory test and Register to vote. These services would maximise benefit from features that reuse users data.</li>
-        <li><b>Non user-centred services</b> - 6 services use none of the 6 data items. These include Drive in a clean air zone and Check someone’s driving licence information. These services are less likely to benefit, but may ask for other data items not covered by this analysis.</li>
-    </ul>
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
+            <h4 class="govuk-heading-m">To what extent do these frequently visited services ask for the same information?</h4>
+        </div>
 
-    <h4 class="govuk-heading-s govuk-!-padding-top-8">How do these compare to the other survey responses?</h4>
+        <div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4 center">
+            <p class="comment ">[Insert graph]</p>
+        </div>
 
-    <p class="comment">[Insert graph]</p>
-
-    <p>Approximately 80 different data items are collected across all 376 services, and the top 28 services collect 47 different data items. Over 90% of services ask for less than 20 data items, and over 80% ask for 1-20 data items, which excludes niche services, e.g. Flood warning, that do not collect data in their service journey.
-    </p>
-    <br />
-
-    <h4 class="govuk-heading-s">Findings</h4>
-
-    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
-        <li>A few key data items are used by a large proportion of services</li>
-        <li>Collecting this information in a GOV.UK account maximises data pre-population and reuse opportunities</li>
-        <li>Increasing the number of data items collected will streamline some user journeys, but not all, and there will be diminishing returns</li>
-        <li>Some services have very different data needs, and may be less able to benefit from Gov.UK Account features that reuse data.</li>
-    </ul>
-
-    <h3 id="dd-2" class="govuk-heading-m govuk-!-padding-top-8">2. information is recorded in a consistent format</h3>
-
-    <p>To understand if services are recording information in a consistent format, services who participated in the workshops were asked if they maintained data dictionaries and how they validate the information they receive from users.</p>
-    <p>None of the services engaged currently maintain a data dictionary. The Defra - Fish Export service [link to case study] and Home Office were also engaged as services known to have a high level of data validation.</p>
-
-    <p>As the first government service many people will encounter, the Home Office faces a number of unique challenges in verifying a person’s basic demographic information.</p>
-
-    <p>Name:</p>
-    <blockquote>
-        <i>
-            <p>“What is your name? I know it's probably easy for all of us, but it really isn't easy for most of the people we deal with. You can have five different versions of your name on [your documents], which one are you using and I think that's where it gets challenging.” HO</p>
-        </i>
-    </blockquote>
-    <br />
-    <p>Date of birth:</p>
-    <blockquote>
-        <i>
-            <p>“There's loads of countries that don't have Somerset House. So everybody is 01/01/1990, or they know what year they were born, but not what day or month. That's common in the Home Office.” HO</p>
-        </i>
-    </blockquote>
-    <br />
-    <p>Reference number:</p>
-    <blockquote>
-        <i>
-            <p>“There's no such thing as like a unique reference number in the U.K. One of our primary reference points across DWP data is the National Insurance Number, but in the Home Office we use things like document numbers for that passport. Every department is likely to have their own thing.” HO
+        <div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+            <p>This graph shows the 28 services plotted against how many of the 6 common data items they require.</p>
+            <p>The graph shows two main groups:
             </p>
-        </i>
-    </blockquote>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>
+                    <b>Highly user-centred services</b><br />
+                    14 services ask for all 6 data items.<br />
+                    Services include, Book a theory test and Register to vote.<br />
+                    These services would maximise benefit from features that reuse users data.
+                </li>
+                <li><b>Non user-centred services</b><br />
+                    6 services use none of the 6 data items. <br />
+                    These include Drive in a clean air zone and Check someone’s driving licence information. <br />
+                    These services are less likely to benefit, but may ask for other data items not covered by this analysis.</li>
+            </ul>
+        </div>
 
-    <p><b>Findings</b></p>
 
-    <p>The services engaged in Phase 2 vary significantly in how they receive and store application information from their users, and the level of data validation the services carry out, full detail is in the Appendix:
-    </p>
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Many services do not use the mandatory information standards (or do not find them applicable) and do not build and maintain data dictionaries.</li>
-        <li>Where services do use standards, different levels of assurance will still apply and may be use-case specific. One standard mentioned by several services is the Good Practice (GPG) 45 for verifying identity.</li>
-        <li>Services with lower data assurance needs may find it easier to benefit from cross-government data sharing.</li>
-        <li>Both within departments and across government, systems are unlikely to have a common vocabulary, and will find it difficult to understand each other.</li>
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
+            <h4 class="govuk-heading-m">How do these compare to the other survey responses?</h4>
 
-    </ul>
+        </div>
+
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+            <p>Approximately 80 different data items are collected across all 376 services, and the top 28 services collect 47 different data items.</p>
+
+            <p>Over 90% of services ask for less than 20 data items, and over 80% ask for 1-20 data items, which excludes niche services, e.g. Flood warning, that do not collect data in their service journey.
+            </p>
+        </div>
+
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
+            <div class="highlight">
+                <p class="highlight-header">
+                    {{ data['highlight'] }}
+                </p>
+
+                <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                    <li>A few key data items are used by a large proportion of services</li>
+                    <li>Collecting this information in a GOV.UK account maximises data pre-population and reuse opportunities</li>
+                    <li>Increasing the number of data items collected will streamline some user journeys, but not all, and there will be diminishing returns</li>
+                    <li>Some services have very different data needs, and may be less able to benefit from GOV.UK account features that reuse data.</li>
+                </ul>
+
+            </div>
+            <br />
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View sources
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p>Two data sources were used:
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <li>
+                            <p><b>List of data in Central Government</b><br />Survey results on the data items each service collects
+                                <span class="govuk-body-s">
+
+                                    (376 services, 80 different data items)</span></p>
+                        </li>
+                        <li>
+                            <p><b>GOV.UK Content Data</b><br />Transaction pages activity data
+                                <span class="govuk-body-s">
+
+                                    (365 services)</span></p>
+                        </li>
+                    </ul>
+                    <p>The analysis took the 50 most frequently visited service pages and matched them against survey responses.</p>
+                    <p>Variations in service name and URL limited data matching, resulting in 28 identified services.</p>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 id="dd-2" class="govuk-heading-l govuk-!-padding-top-8">2. Information is recorded in a consistent format</h3>
+
+            <p>To understand if services are recording information in a consistent format, services who participated in the workshops were asked if they maintained data dictionaries and how they validate the information they receive from users.</p>
+
+            <br />
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    None of the services we engaged with currently maintain a data dictionary
+                </strong>
+            </div>
+
+            <br />
+
+            <p>The Defra - Fish Export service <span class="comment">[link to case study]</span> and Home Office were also engaged as services known to have a high level of data validation.</p>
+
+            <p>As the first government service many people will encounter, the Home Office faces a number of unique challenges in verifying a person’s basic demographic information:</p>
+
+            <br /><br /><br />
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+            <p><b>Name:</b></p>
+            <blockquote>
+                <i>
+                    <p>What is your name? I know it's probably easy for all of us, but it really isn't easy for most of the people we deal with. You can have five different versions of your name on [your documents], which one are you using and I think that's where it gets challenging.</p>
+                </i>
+            </blockquote>
+            <br />
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <p><b>Date of birth:</b></p>
+            <blockquote>
+                <i>
+                    <p>There's loads of countries that don't have Somerset House. So everybody is 01/01/1990, or they know what year they were born, but not what day or month. That's common in the Home Office.</p>
+                </i>
+            </blockquote>
+            <br />
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <p><b>Reference number:</b></p>
+            <blockquote>
+                <i>
+                    <p>There's no such thing as like a unique reference number in the U.K. One of our primary reference points across DWP data is the National Insurance Number, but in the Home Office we use things like document numbers for that passport. Every department is likely to have their own thing.
+                    </p>
+                </i>
+            </blockquote>
+
+        </div>
+
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
+            <div class="highlight">
+                <p class="highlight-header">
+                    {{ data['highlight'] }}
+                </p>
+
+                <p>The services engaged in Phase 2 vary significantly in how they receive and store application information from their users, and the level of data validation the services carry out.
+                </p>
+            </div>
+
+            <br />
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Many services do not use the mandatory information standards (or do not find them applicable) and do not build and maintain data dictionaries.</li>
+                <li>Where services do use standards, different levels of assurance will still apply and may be use-case specific. One standard mentioned by several services is the Good Practice (GPG) 45 for verifying identity.</li>
+                <li>Services with lower data assurance needs may find it easier to benefit from cross-government data sharing.</li>
+                <li>Both within departments and across government, systems are unlikely to have a common vocabulary, and will find it difficult to understand each other.</li>
+
+            </ul>
+
+            <br />
+
+        </div>
+    </div>
 
 </div>
 {% endblock %}
