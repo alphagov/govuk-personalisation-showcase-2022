@@ -437,8 +437,8 @@ router.get('/user-research/insights', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.userinsightsmenu.length;
 
-    // calculate number of features
     let featurestotal = req.session.data.rdd.features.length
+    let totalneeds = req.session.data.needs.length;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -446,6 +446,7 @@ router.get('/user-research/insights', function (req, res) {
     let anchors = []
     let names = []
     let fids = []
+    let needs = req.session.data.needs
 
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
@@ -476,6 +477,7 @@ router.get('/user-research/insights', function (req, res) {
         'names': names,
         'thispage': thispage,
         'parent': parent,
+        'needs': needs,
         'parentlink': parentlink
     })
 })
