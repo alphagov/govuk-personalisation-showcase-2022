@@ -39,7 +39,7 @@
 
                 <div class="govuk-grid-column-one-half">
 
-                    <h4 class="govuk-heading-s">A user summarises the GOV.UK account in their own words </h4>
+                    <h4 class="govuk-heading-s">User summarises the GOV.UK account in their own words </h4>
 
                     <audio controls>
                         <source src="../../../public/mp3/end-users/insight-1.mp3" type="audio/mpeg">
@@ -73,7 +73,7 @@
 
                 <div class="govuk-grid-column-one-half">
 
-                    <h4 class="govuk-heading-s">A user discusses the pros and cons of x-gov transactions within the GOV.UK account </h4>
+                    <h4 class="govuk-heading-s">User discusses the pros and cons of x-gov transactions within the GOV.UK account </h4>
 
                     <audio controls>
                         <source src="../../../public/mp3/end-users/insight-1-2.mp3" type="audio/mpeg">
@@ -110,7 +110,7 @@
 
                 <div class="govuk-grid-column-one-half">
 
-                    <h4 class="govuk-heading-s">A user suggests that government services should be under one ‘hub’ </h4>
+                    <h4 class="govuk-heading-s">User suggests that government services should be under one ‘hub’ </h4>
 
                     <audio controls>
                         <source src="../../../public/mp3/end-users/insight-1-3.mp3" type="audio/mpeg">
@@ -214,28 +214,80 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>Generally speaking, users reacted positively to the concept of the GOV.UK account as part of a x-gov transaction, however, there were various comments around its usefulness being dependent on whether or not there was a genuine reason to use it. </p>
+    <div class="govuk-grid-row">
 
-    <p>Comments in user research highlighted the fact that throughout certain periods of life (i.e. childcare) the likelihood of interacting with government services is much higher.</p>
+        <div class="govuk-grid-column-one-half">
 
-    <p>For some, depending on lifestyle, the regularity of interactions with the government is much lower. Some users clearly articulated that they would find the account useful ‘now’ (during childcare) whereas otherwise they may not see the point. </p>
+            <p>Generally speaking, users reacted positively to the concept of the GOV.UK account as part of a x-gov transaction, however, there were various comments around its usefulness being dependent on whether or not there was a genuine reason to use it. </p>
 
+            <p>Comments in user research highlighted the fact that throughout certain periods of life (i.e. childcare) the likelihood of interacting with government services is much higher.</p>
+
+            <p>For some, depending on lifestyle, the regularity of interactions with the government is much lower. Some users clearly articulated that they would find the account useful ‘now’ (during childcare) whereas otherwise they may not see the point. </p>
+
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+            <p>Further work around profile raising and adoption of the account will likely be needed in the future to understand how best to compel users to create an account and engage with its features. </p>
+
+            <p>There will be some data sceptics within the future audience who will be unlikely to save data to a GOV.UK account. This project does not seek to quantify or predict this potential segment. </p>
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+
+        <div class="govuk-grid-column-one-half example">
+
+            <p class="example-header">{{ data['example'] }}</p>
+
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-full">
+
+                    <h4 class="govuk-heading-s">User discusses adoption and usefulness of the GOV.UK account as dependent on the point in their life</h4>
+
+                    <audio controls>
+                        <source src="../../../public/mp3/end-users/insight-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <br />
+                    <p class="govuk-body-s">
+                        A participant from ?
+                    </p>
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                View transcript
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+
+                            <blockquote>
+                                <p class="govuk-body-s">
+                                    To follow...</p>
+
+
+                            </blockquote>
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
-
-    <p>Further work around profile raising and adoption of the account will likely be needed in the future to understand how best to compel users to create an account and engage with its features. </p>
-
-    <p>There will be some data sceptics within the future audience who will be unlikely to save data to a GOV.UK account. This project does not seek to quantify or predict this potential segment. </p>
-
-</div>
-<div class="govuk-grid-column-one-third">
 
 
-
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
