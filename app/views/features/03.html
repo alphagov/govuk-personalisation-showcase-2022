@@ -13,56 +13,30 @@
 
 -->
 
-<!-- ADD VIDEO - start with <iframe>... -->
-{% block featureVideo %}
-<video style="width: 100%;" controls>
+{% block description %}
+{{ super() }}
+{% endblock %}
 
-    <source src="../../../public/videos/features/end-user/03-part%201.mp4" type="video/mp4">
+<!-- END USER FINDINGS -->
+{% block userfindings %}
+{{ super() }}
+{% endblock %}
 
-</video>
+<!-- SERVICE FINDINGS -->
+{% block servicefindings %}
+{{ super() }}
+{% endblock %}
 
-<p class="govuk-body-s">
-    Part 1
-</p>
-</div>
+<!-- RISKS / CHALLENGES / CONSIDERATIONS -->
+{% block risks %}
+{{ super() }}
+{% endblock %}
 
-<div class="video-container">
+<!-- RECOMMENDATIONS -->
+{% block recommendations %}
+{{ super() }}
+{% endblock %}
 
-    <video style="width: 100%;" controls>
-
-        <source src="../../../public/videos/features/end-user/03-part%202.mp4" type="video/mp4">
-
-    </video>
-
-    <p class="govuk-body-s">
-        Part 2
-    </p>
-    {% endblock %}
-
-    {% block description %}
-    {{ super() }}
-    {% endblock %}
-
-    <!-- END USER FINDINGS -->
-    {% block userfindings %}
-    {{ super() }}
-    {% endblock %}
-
-    <!-- SERVICE FINDINGS -->
-    {% block servicefindings %}
-    {{ super() }}
-    {% endblock %}
-
-    <!-- RISKS / CHALLENGES / CONSIDERATIONS -->
-    {% block risks %}
-    {{ super() }}
-    {% endblock %}
-
-    <!-- RECOMMENDATIONS -->
-    {% block recommendations %}
-    {{ super() }}
-    {% endblock %}
-
-    <!-- CONTENT SPACE BENEATH ACCORDION -->
-    {% block underAccordion %}
-    {% endblock %}
+<!-- CONTENT SPACE BENEATH ACCORDION -->
+{% block underAccordion %}
+{% endblock %}

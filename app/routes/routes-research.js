@@ -1615,9 +1615,10 @@ router.get('/features/01', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1640,7 +1641,8 @@ router.get('/features/01', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1679,9 +1681,10 @@ router.get('/features/02', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1704,7 +1707,8 @@ router.get('/features/02', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1743,9 +1747,10 @@ router.get('/features/03', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1768,7 +1773,8 @@ router.get('/features/03', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1807,9 +1813,10 @@ router.get('/features/04', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1832,7 +1839,8 @@ router.get('/features/04', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1871,9 +1879,10 @@ router.get('/features/05', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1896,7 +1905,8 @@ router.get('/features/05', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1935,9 +1945,10 @@ router.get('/features/06', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -1960,7 +1971,8 @@ router.get('/features/06', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -1999,9 +2011,10 @@ router.get('/features/07', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2024,7 +2037,8 @@ router.get('/features/07', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2063,9 +2077,10 @@ router.get('/features/08', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2088,7 +2103,8 @@ router.get('/features/08', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2127,9 +2143,10 @@ router.get('/features/09', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2152,7 +2169,8 @@ router.get('/features/09', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2191,9 +2209,10 @@ router.get('/features/10', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2216,7 +2235,8 @@ router.get('/features/10', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2255,9 +2275,10 @@ router.get('/features/11', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2280,7 +2301,8 @@ router.get('/features/11', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2319,9 +2341,10 @@ router.get('/features/12', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2344,7 +2367,8 @@ router.get('/features/12', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2383,9 +2407,10 @@ router.get('/features/13', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2408,7 +2433,8 @@ router.get('/features/13', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2447,9 +2473,10 @@ router.get('/features/14', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2472,7 +2499,8 @@ router.get('/features/14', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2511,9 +2539,10 @@ router.get('/features/15', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2536,7 +2565,8 @@ router.get('/features/15', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2575,9 +2605,10 @@ router.get('/features/16', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2600,7 +2631,8 @@ router.get('/features/16', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2639,9 +2671,10 @@ router.get('/features/17', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2664,7 +2697,8 @@ router.get('/features/17', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2703,9 +2737,10 @@ router.get('/features/18', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2728,7 +2763,8 @@ router.get('/features/18', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2767,9 +2803,10 @@ router.get('/features/19', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2792,7 +2829,8 @@ router.get('/features/19', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2831,9 +2869,10 @@ router.get('/features/20', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2856,7 +2895,8 @@ router.get('/features/20', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2895,9 +2935,10 @@ router.get('/features/21', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2920,7 +2961,8 @@ router.get('/features/21', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -2959,9 +3001,10 @@ router.get('/features/22', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -2984,7 +3027,8 @@ router.get('/features/22', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3023,9 +3067,10 @@ router.get('/features/23', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3048,7 +3093,8 @@ router.get('/features/23', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3087,9 +3133,10 @@ router.get('/features/24', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3112,7 +3159,8 @@ router.get('/features/24', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3151,9 +3199,10 @@ router.get('/features/25', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3176,7 +3225,8 @@ router.get('/features/25', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3215,9 +3265,10 @@ router.get('/features/26', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3240,7 +3291,8 @@ router.get('/features/26', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3279,9 +3331,10 @@ router.get('/features/27', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3304,7 +3357,8 @@ router.get('/features/27', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3343,9 +3397,10 @@ router.get('/features/28', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3368,7 +3423,8 @@ router.get('/features/28', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3407,9 +3463,10 @@ router.get('/features/29', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3432,7 +3489,8 @@ router.get('/features/29', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3471,9 +3529,10 @@ router.get('/features/30', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3496,7 +3555,8 @@ router.get('/features/30', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3535,9 +3595,10 @@ router.get('/features/31', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3560,7 +3621,8 @@ router.get('/features/31', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3599,9 +3661,10 @@ router.get('/features/32', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3624,7 +3687,8 @@ router.get('/features/32', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
@@ -3663,9 +3727,10 @@ router.get('/features/33', function (req, res) {
     let confidenceservicevalue = req.session.data.rdd.features[index].confidencevalueservice
     let complexityservice = req.session.data.rdd.features[index].complexityservice
     let confidencecomplexityservice = req.session.data.rdd.features[index].confidencecomplexityservice
-    let showvideo = req.session.data.rdd.features[index].showvideo
+    let showdescvideo = req.session.data.rdd.features[index].showdescvideo
     let showdesc = req.session.data.rdd.features[index].showdesc
     let showuser = req.session.data.rdd.features[index].showuserfindings
+    let showservicevideo = req.session.data.rdd.features[index].showservicevideo
     let showservice = req.session.data.rdd.features[index].showservicefindings
     let showrisks = req.session.data.rdd.features[index].showrisks
     let riskcategory = req.session.data.rdd.features[index].riskcategory
@@ -3688,7 +3753,8 @@ router.get('/features/33', function (req, res) {
         'confidenceservicevalue': confidenceservicevalue,
         'complexityservice': complexityservice,
         'confidencecomplexityservice': confidencecomplexityservice,
-        'showvideo': showvideo,
+        'showdescvideo': showdescvideo,
+        'showservicevideo': showservicevideo,
         'showdesc': showdesc,
         'showuser': showuser,
         'showservice': showservice,
