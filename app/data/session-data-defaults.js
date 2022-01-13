@@ -413,7 +413,18 @@ module.exports = {
     }
     ],
     phase3menu: [
-
+        {
+            title: "Communicate recommendations for prioritised features to relevant teams",
+            anchor: "objective-1",
+        },
+        {
+            title: "Recommend an approach for implementing the prioritised features",
+            anchor: "objective-2",
+    },
+        {
+            title: "Knowledge sharing across teams within the wider programme",
+            anchor: "objective-3",
+    }
     ],
     prototypemenu: [
 

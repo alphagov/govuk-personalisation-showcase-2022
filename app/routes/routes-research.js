@@ -1473,7 +1473,7 @@ router.get('/phase-3', function (req, res) {
     })
 })
 
-// PHASE 3
+// CASE STUDY
 router.get('/case-study', function (req, res) {
 
     // calculate number of in page menu links
