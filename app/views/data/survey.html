@@ -10,8 +10,16 @@
 {% block section1 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-4">
 
-    <p class="graph-title">How many users interact with the service you work with each year?</p>
-    <img src="../../../public/images/research/test-graph.svg" class="graph">
+    <p class="govuk-body-l">
+        Identify gaps in the technical architecture of services
+    </p>
+
+    <p>Our focus was to explore the feasibility of joining up services across government, and their readiness to participate in cross-government data sharing via the GOV.UK account.</p>
+    <p>
+        We wanted to understand the technical and data capabilities of a diverse range of government services, through quantitative research.
+    </p>
+
+
 
 </div>
 {% endblock %}
@@ -20,9 +28,23 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>To follow</p>
+    <p>We created a short survey targeted at lead and senior service developers.</p>
+    <p>The survey captured information about: </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#Participants">Participants</a></li>
+        <li><a href="#users">The users of the service</a></li>
+        <li><a href="#maturity">The technical maturity of the service</a></li>
+        <li><a href="#sharing"> Data sharing</a></li>
+        <li><a href="#other"> Other data questions</a></li>
+    </ul>
+
+    <p>Participants were also invited to participate in follow-up research.</p>
+    <br />
+    <p><a href="#">View the full list of survey questions</a>.
+    </p>
 
 </div>
 {% endblock %}
@@ -31,18 +53,385 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+
+    <p>Participation in the survey was voluntary, it was shared with the following channels to encourage responses from the target roles:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>GDS Slack engineering channels</li>
+        <li>Service research participants</li>
+        <li>Week note - a request for technical leads</li>
+    </ul>
+
+    <p>The survey received 23 responses.</p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+    <h3 class="govuk-heading-m">Roles</h3>
+    <p>All participants hold a technical role within a user-facing or support service, mainly:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Technical Architect</li>
+        <li>Solution Architect</li>
+        <li>Lead Developer</li>
+        <li>Senior Developer</li>
+        <li>Developer</li>
+    </ul>
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+    <h3 class="govuk-heading-m">Services</h3>
+    <p>Participants work for 23 different services across a range of government departments and public sector bodies, including:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Defra</li>
+        <li>DVSA</li>
+        <li>DWP</li>
+        <li>GDS</li>
+        <li>HMRC</li>
+        <li>Home Office</li>
+        <li>NHS</li>
+    </ul>
+</div>
+
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[3] %}
 {% block section4 %}
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list">
+        <li><a href="#users"> 4.1 Users</a></li>
+        <li><a href="#maturity"> 4.2 Technical maturity</a></li>
+        <li><a href="#sharing"> 4.3 Data sharing</a></li>
+        <li><a href="#apis"> 4.4 APIs</a></li>
+        <li><a href="#other">4.5 Other data questions</a></li>
+    </ul>
+
+</div>
+<div id="users" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">4.1 Users</h3>
+
+    <p>Over 90% of services have individuals as the end user, with many also supporting people with delegated access (56%) and businesses (48%).</p>
+
+    <p>All services surveyed can be accessed online, services are a variety of sizes and usage frequencies, generally they are used daily, and have more than a million users per year:
+    </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <p class="graph-title">How many users interact with the service you work with each year?</p>
+    <img src="../../../public/images/research/data-graphs/Q4.svg" class="graph">
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <p class="graph-title">How often does a typical user interact with your service?</p>
+    <img src="../../../public/images/research/data-graphs/Q5.svg" class="graph">
+
+</div>
+<div id="maturity" class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">4.2 Technical maturity</h3>
+
+    <p>Participants were asked which of the following statements best describes their service:</p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+            <h4 class="govuk-heading-s">Statement 1</h4>
+            <blockquote>
+                <p>The service is well architecturally structured, documented, monitored and regularly updated using CI/CD pipelines. It is easy to add in new functionality without compromising the service, and new ways are looked at to continually improve the service</p>
+            </blockquote>
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+            <h4 class="govuk-heading-s">Statement 2</h4>
+            <blockquote>
+                <p>The service is well architecturally structured, documented and monitored. It is relatively easy to add in new functionality without compromising the service, but some alterations to services may come with risk as they interact with legacy systems/processes</p>
+            </blockquote>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+            <h4 class="govuk-heading-s">Statement 3</h4>
+            <blockquote>
+                <p>The service uses an approved version of the organisation’s standard software process for developing and maintaining software, and regular changes are implemented through a standardised process. Any major changes to this service are still seen as hard, but possible</p>
+            </blockquote>
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+            <h4 class="govuk-heading-s">Statement 4</h4>
+            <blockquote>
+                <p>The service is characterised as ad hoc, and occasionally even chaotic. Few processes are defined, and success depends on individual effort. There is a high risk of a software change - likely this has not been done for years.</p>
+            </blockquote>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+            <h4 class="govuk-heading-s">Statement 5</h4>
+            <blockquote>
+                <p>The service is largely handled manually.</p>
+            </blockquote>
+
+        </div>
+    </div>
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+    <p class="graph-title">Which statement best describes your service?</p>
+    <p>Most participants identified their service as <b>Statement 1</b>. However without a definition of “well structured” their definition may not match our own.</p>
+    <img src="../../../public/images/research/data-graphs/Q9.svg" class="graph">
+
+    <strong class="govuk-tag govuk-tag--colour" style="background: #1d70b8;">
+        Statement 1
+    </strong>
+    <strong class="govuk-tag govuk-tag--colour" style="background: #003078;">
+        Statement 2
+    </strong>
+    <strong class="govuk-tag govuk-tag--colour" style="background: #4c2c92;">
+        Statement 3
+    </strong>
+    <strong class="govuk-tag govuk-tag--colour" style="background: #0b0c0c;">
+        Statement 4
+    </strong>
+    <strong class="govuk-tag govuk-tag--colour" style="background: #acacac;">
+        Statement 5 (not selected)
+    </strong>
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+
+    <p class="graph-title">Does your service currently give users a way to sign in online?</p>
+    <p>The majority of services have an existing sign in capacity</p>
+    <img src="../../../public/images/research/data-graphs/Q8.svg" class="graph">
+
+</div>
+<div id="sharing" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">4.3 Data sharing</h3>
+
+    <p>Services already share data “across government” to an extent.</p>
+    <p>Further questions will need to be asked to ascertain which data this is, whether it is optional, and what they do if they cannot get the data.
+    </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <p class="graph-title">Does your service already acquire data from other government departments, agencies or bodies?</p>
+    <img src="../../../public/images/research/data-graphs/Q17.svg" class="graph">
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <p class="graph-title">Does your service provide data to other government departments, agencies or bodies?</p>
+    <img src="../../../public/images/research/data-graphs/Q20.svg" class="graph">
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <h4 class="govuk-heading-s">Services need access to more information about their users</h4>
+    <p>47% of participants answered yes to the question:</p>
+    <p><i>“Many services hold information about the citizens they support (e.g. their address, employment status, NI number). Would having access to this information (with explicit consent from the user) be helpful to your service if it could be shared?”</i> </p>
+    <p>The data source does affect the level of trust services would have in the data. </p>
+
+    <h4 class="govuk-heading-s govuk-!-padding-top-4">Services generally agreed that the data would need to come from an authoritative source</h4>
+    <p><i>“Authentication and authorisation are at the core of what we do. Trust is very, very important and provision of data for onward consumption has to be trustworthy”</i> </p>
+
+    <h4 class="govuk-heading-s govuk-!-padding-top-4">Some services saw a value in unverified data</h4>
+    <p><i>“Whilst we'd recognise that different services put varying amounts into their data and person validation, once we identified the level to which each went with their data, we could still make use of it - even anecdotal, non-verified data can be used as a secondary validation point against our own data, for example.”</i> </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <p class="graph-title">I believe that my service would have different levels of trust depending on the service that the data has been acquired from</p>
+    <img src="../../../public/images/research/data-graphs/Q16.svg" class="graph">
+
+</div>
+<div id="apis" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">4.4 APIs</h3>
+
+    <p>Services believe they have the ability to call external data sources via RESTful web services.</p>
+    <p> Further questions will need to be asked to understand if they can make data available in the same way.
+    </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <p class="graph-title">How easy or difficult is it to make the service consume data from a simple third-party REST API from the “online” service?</p>
+    <img src="../../../public/images/research/data-graphs/Q11.svg" class="graph">
+
+</div>
+<div id="other" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <h3 class="govuk-heading-m">4.5 Other data questions</h3>
+
+    <h4 class="govuk-heading-s">Pain points</h4>
+
+    <p>There is a recognition of pain points with current setups, and there is a lack of data abstraction when examining services' relationship to data:
+    </p>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-4">
+
+    <p class="graph-title">Are there any pain points or problems that you encounter with the data that is currently shared with your service team?</p>
+    <img src="../../../public/images/research/data-graphs/Q18.svg" class="graph">
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+
+    <p class="graph-title">Does your service have a data dictionary?</p>
+    <img src="../../../public/images/research/data-graphs/Q26.svg" class="graph">
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+    <h4 class="govuk-heading-s">High level issues like MOUs</h4>
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><i>"We have particular problems gaining access to an individual's medical history from the NHS, due to their requirement to see a wet signature from the individual as proof of our right to access their data."</i> VeteransUK</li>
+        <li><i>“Data sharing agreements, we would like more data!”</i> DWP</li>
+        <li><i>“Data sharing agreements and MOUs can be a bit fun!”</i> GDS</li>
+
+    </ul>
+
+    <h4 class="govuk-heading-s govuk-!-padding-top-8">Low level data issues</h4>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><i>“Uses FTP, difficult to change. Data is shared with ONS, NHS, DWP, HMRC. No standard formats.”</i> HMPO</li>
+        <li><i>“Data is rekeyed from local authority case management systems”</i> Office for Product Safety and Standards</li>
+        <li><i>“May need to significantly transform data. Data is sometimes excessive (large payloads) and more likely to be rate limited as a result. Data is sparsely populated”</i> HRMC</li>
+    </ul>
+</div>
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[4] %}
 {% block section5 %}
+
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-8">
+
+    <h3 class="govuk-heading-m">Technical maturity</h3>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><i>“Uses FTP, difficult to change. Data is shared with ONS, NHS, DWP, HMRC. No standard formats.”</i> HMPO</li>
+        <li><i>“Data is rekeyed from local authority case management systems”</i> Office for Product Safety and Standards</li>
+        <li><i>“May need to significantly transform data. Data is sometimes excessive (large payloads) and more likely to be rate limited as a result. Data is sparsely populated”</i> HRMC</li>
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Data maturity</h3>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>“Tech” maturity may be different to “data” maturity, services may have performed aspects of digital transformation at a delivery level but think of data as a secondary concern.</li>
+        <li>Data maturity may become a higher priority for services looking to increase data sharing and create a more joined-up experience for users.</li>
+
+    </ul>
+
+    <h3 class="govuk-heading-m govuk-!-padding-top-8">Data sharing</h3>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Services are already sharing information with each other</li>
+        <li>Services would like more access to information about the citizens they support, such as their address, employment status, NI number.</li>
+        <li>Services at all levels of maturity face similar data sharing challenges, particularly setting up data sharing agreements.</li>
+
+    </ul>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+<div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-8">
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+        <li><b>Follow-up</b> - the survey methodology has limited our ability to probe for further information with participating services.</li>
+        <li><b>Sensitivity</b> - participants may not have felt comfortable providing answers that present their service in an unfavourable manner or as technically immature.</li>
+        <li><b>Self-selection bias</b> - survey respondents decided entirely for themselves whether or not they wanted to participate - this may have impacted on the representation of services, with less engagement with the GDS GOV.UK Account programme of work. This makes it difficult to generalise the findings from the sample to the overall service population.</li>
+        <li><b>Recruitment channels</b> - services with lower levels of maturity may not have the technical roles we targeted with the survey, and may not be active on the GDS and engineering channels used to recruit for this study.</li>
+    </ul>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+
+    <h3 class="govuk-heading-m ">7.1 Assessing digital maturity - to what extent are services fully digitised</h3>
+
+    <p>Learnings from the service and data research from X-Gov Services have highlighted that most services are reliant on manual processes to support their online service.</p>
+    <p> Further exploration is required to establish to what extent this is the case across government services:</p>
+
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+        <li><b>Digitalisation of functions</b> - to what extent do services rely on manual processes that could be digitalised e.g. manually rekeying data?</li>
+        <li><b>Digitalisation of business processes</b> - to what extent are tasks performed by individuals to support the service offering, e.g. reviewing medical evidence to support an application?</li>
+        <li><b>Login capacity</b> - do the services without a login not have one by choice or because of a lack of resource or capability? How might services without a login capacity expect to onboard to the GOV.UK account?</li>
+        <li><b>Maturity frameworks</b> - can digital maturity be captured in a standardised way e.g. using the data maturity framework?</li>
+
+    </ul>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+
+    <h3 class="govuk-heading-m ">7.2 Current data sharing practises</h3>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><b>Data acquisition/provision</b> - How do services currently share data with each other, is this automated via APIs or is there a reliance on manual processes?</li>
+        <li><b>Data processing</b> - is there any reliance on any sort of backend processes/manual processing to make use of the data received?</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+
+    <h3 class="govuk-heading-m ">7.3 Use of external data</h3>
+
+    <p>The service and data research highlighted that services are using data from 3rd parties, e.g. Ordnance Survey data, 3rd party address lookups and use of Experian data.</p>
+    <p> Understanding the extent to which this is happening across government services would allow for common gaps in data availability to be identified, as well as providing evidence for a business case with potential cost savings.</p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Are services using data from external (outside of government) data sources? </li>
+        <li>What sort of data is this? </li>
+        <li>What is it used for? </li>
+        <li>Why is it acquired from an external data source?</li>
+        <li>How much does this cost?</li>
+    </ul>
+
+</div>
+<div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+
+    <h3 class="govuk-heading-m ">7.4 Access to data</h3>
+
+    <p>Learnings from research have highlighted that services would like greater access to data, including about their users held by other services.</p>
+    <p> Further exploration is needed to understand for services across government:</p>
+
+</div>
+<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>What sort of citizen level data would be useful to services and why?</li>
+        <li>How are services managing without access to this data?</li>
+    </ul>
+
+</div>
 {% endblock %}
 {% else %}
 {% endif %}

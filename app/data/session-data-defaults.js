@@ -356,12 +356,32 @@ module.exports = {
     ],
     datasurveymenu: [
         {
-            title: "Approach",
-            anchor: "approach",
-        },
+            title: "Objective",
+            anchor: "Objective",
+    },
+        {
+            title: "Methodology",
+            anchor: "Methodology",
+    },
+        {
+            title: "Participants",
+            anchor: "Participants",
+    },
         {
             title: "Analysis",
-            anchor: "analysis",
+            anchor: "Analysis",
+    },
+        {
+            title: "Themes",
+            anchor: "Themes",
+    },
+        {
+            title: "Limitations of the research",
+            anchor: "Limitations",
+    },
+        {
+            title: "Areas for further exploration",
+            anchor: "Exploration",
     }
             ],
     datainsightsmenu: [
