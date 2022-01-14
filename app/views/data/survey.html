@@ -6,6 +6,10 @@
 {{ super() }}
 {% endblock %}
 
+{% block extralinks %}
+<li><a href="technical-data-survey.pdf" target="_blank">Technical and data survey (PDF)</a> </li>
+{% endblock %}
+
 {% if pagemenu[0] %}
 {% block section1 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-4">
@@ -28,31 +32,6 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-
-    <p>We created a short survey targeted at lead and senior service developers.</p>
-    <p>The survey captured information about: </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-        <li><a href="#Participants">Participants</a></li>
-        <li><a href="#users">The users of the service</a></li>
-        <li><a href="#maturity">The technical maturity of the service</a></li>
-        <li><a href="#sharing"> Data sharing</a></li>
-        <li><a href="#other"> Other data questions</a></li>
-    </ul>
-
-    <p>Participants were also invited to participate in follow-up research.</p>
-    <br />
-    <p><a href="#">View the full list of survey questions</a>.
-    </p>
-
-</div>
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[2] %}
-{% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
     <p>Participation in the survey was voluntary, it was shared with the following channels to encourage responses from the target roles:</p>
@@ -64,6 +43,8 @@
     </ul>
 
     <p>The survey received 23 responses.</p>
+
+    <p>Participants were also invited to participate in follow-up research.</p>
 
 </div>
 <div class="govuk-grid-column-one-half govuk-!-padding-top-4 govuk-!-padding-bottom-4">
@@ -95,22 +76,22 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[3] %}
-{% block section4 %}
+{% if pagemenu[2] %}
+{% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
 
     <ul class="govuk-list">
-        <li><a href="#users"> 4.1 Users</a></li>
-        <li><a href="#maturity"> 4.2 Technical maturity</a></li>
-        <li><a href="#sharing"> 4.3 Data sharing</a></li>
-        <li><a href="#apis"> 4.4 APIs</a></li>
-        <li><a href="#other">4.5 Other data questions</a></li>
+        <li><a href="#users"> 3.1 Users</a></li>
+        <li><a href="#maturity"> 3.2 Technical maturity</a></li>
+        <li><a href="#sharing"> 3.3 Data sharing</a></li>
+        <li><a href="#apis"> 3.4 APIs</a></li>
+        <li><a href="#other">3.5 Other data questions</a></li>
     </ul>
 
 </div>
 <div id="users" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">4.1 Users</h3>
+    <h3 class="govuk-heading-m">3.1 Users</h3>
 
     <p>Over 90% of services have individuals as the end user, with many also supporting people with delegated access (56%) and businesses (48%).</p>
 
@@ -132,7 +113,7 @@
 </div>
 <div id="maturity" class="govuk-grid-column-full govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">4.2 Technical maturity</h3>
+    <h3 class="govuk-heading-m">3.2 Technical maturity</h3>
 
     <p>Participants were asked which of the following statements best describes their service:</p>
 
@@ -216,7 +197,7 @@
 </div>
 <div id="sharing" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">4.3 Data sharing</h3>
+    <h3 class="govuk-heading-m">3.3 Data sharing</h3>
 
     <p>Services already share data “across government” to an extent.</p>
     <p>Further questions will need to be asked to ascertain which data this is, whether it is optional, and what they do if they cannot get the data.
@@ -257,7 +238,7 @@
 </div>
 <div id="apis" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">4.4 APIs</h3>
+    <h3 class="govuk-heading-m">3.4 APIs</h3>
 
     <p>Services believe they have the ability to call external data sources via RESTful web services.</p>
     <p> Further questions will need to be asked to understand if they can make data available in the same way.
@@ -272,7 +253,7 @@
 </div>
 <div id="other" class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m">4.5 Other data questions</h3>
+    <h3 class="govuk-heading-m">3.5 Other data questions</h3>
 
     <h4 class="govuk-heading-s">Pain points</h4>
 
@@ -314,16 +295,17 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[4] %}
-{% block section5 %}
+{% if pagemenu[3] %}
+{% block section4 %}
 
 <div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-8">
 
     <h3 class="govuk-heading-m">Technical maturity</h3>
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li><i>“Uses FTP, difficult to change. Data is shared with ONS, NHS, DWP, HMRC. No standard formats.”</i> HMPO</li>
-        <li><i>“Data is rekeyed from local authority case management systems”</i> Office for Product Safety and Standards</li>
-        <li><i>“May need to significantly transform data. Data is sometimes excessive (large payloads) and more likely to be rate limited as a result. Data is sparsely populated”</i> HRMC</li>
+        <li>Services have demonstrated considerable levels of online presence and hence are quite mature in that area.</li>
+        <li>The validity of self reported maturity is difficult to assess because of a lack of standard definitions for technical maturity.</li>
+        <li>Services that have had a recent “fresh start” (e.g. because of Brexit) may appear the most mature. This is true of some Defra services.</li>
+
     </ul>
 
     <h3 class="govuk-heading-m govuk-!-padding-top-8">Data maturity</h3>
@@ -346,8 +328,8 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[5] %}
-{% block section6 %}
+{% if pagemenu[4] %}
+{% block section5 %}
 <div class="govuk-grid-column-two-thirds govuk-!-padding-top-2 govuk-!-padding-bottom-8">
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
 
@@ -361,11 +343,11 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[6] %}
-{% block section7 %}
+{% if pagemenu[5] %}
+{% block section6 %}
 <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
 
-    <h3 class="govuk-heading-m ">7.1 Assessing digital maturity - to what extent are services fully digitised</h3>
+    <h3 class="govuk-heading-m ">6.1 Assessing digital maturity - to what extent are services fully digitised</h3>
 
     <p>Learnings from the service and data research from X-Gov Services have highlighted that most services are reliant on manual processes to support their online service.</p>
     <p> Further exploration is required to establish to what extent this is the case across government services:</p>
@@ -386,7 +368,7 @@
 </div>
 <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
 
-    <h3 class="govuk-heading-m ">7.2 Current data sharing practises</h3>
+    <h3 class="govuk-heading-m ">6.2 Current data sharing practises</h3>
 
 </div>
 <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
@@ -399,7 +381,7 @@
 </div>
 <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
 
-    <h3 class="govuk-heading-m ">7.3 Use of external data</h3>
+    <h3 class="govuk-heading-m ">6.3 Use of external data</h3>
 
     <p>The service and data research highlighted that services are using data from 3rd parties, e.g. Ordnance Survey data, 3rd party address lookups and use of Experian data.</p>
     <p> Understanding the extent to which this is happening across government services would allow for common gaps in data availability to be identified, as well as providing evidence for a business case with potential cost savings.</p>
@@ -418,7 +400,7 @@
 </div>
 <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
 
-    <h3 class="govuk-heading-m ">7.4 Access to data</h3>
+    <h3 class="govuk-heading-m ">6.4 Access to data</h3>
 
     <p>Learnings from research have highlighted that services would like greater access to data, including about their users held by other services.</p>
     <p> Further exploration is needed to understand for services across government:</p>

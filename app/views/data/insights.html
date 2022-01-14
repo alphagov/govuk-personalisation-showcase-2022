@@ -33,20 +33,28 @@
 
         <div class="govuk-grid-column-full">
 
-            <p>Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation.</p>
-            <p>These include:</p>
+            <div class="highlight">
+                <p class="highlight-header">
+                    {{ data['highlight'] }}
+                </p>
+                <p>Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation.</p>
+            </div>
+
+            <br />
+
+            <!--   <p>These include:</p>
 
             <ol class="govuk-list govuk-list--number govuk-list--spaced">
                 <li><a href="#trans-1">Paper to digital frontend</a></li>
                 <li><a href="#trans-2">Paper to digital backend</a></li>
                 <li><a href="#trans-3">In-person to virtual services</a></li>
                 <li><a href="#trans-4">Siloed digital services to single sign-on (SSO)</a> - also known as ‘one stop shop’</li>
-            </ol>
+            </ol> -->
 
         </div>
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
         <div id="trans-1" class="govuk-grid-column-full">
 
@@ -56,36 +64,42 @@
 
             <p>For Child Benefit, the HMRC Ops team receive 700,000 paper applications per year.</p>
 
-            <div class="govuk-grid-row govuk-!-padding-top-4">
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Service quotes
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-grid-row govuk-!-padding-top-4">
+                        <div class="govuk-grid-column-one-half">
 
-                <div class="govuk-grid-column-one-half">
+                            <blockquote>
+                                <p><i>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document.</i></p>
+                                <p><i> There's a lot of paper that you have to go through.”</i></p>
+                            </blockquote>
+                            <p>
+                                <b>MOJ - LPA</b></p>
 
-                    <blockquote>
-                        <p><i>“If you're making an LPA for both your health and welfare as well as your financial and property affairs, that's a 24 page document.</i></p>
-                        <p><i> There's a lot of paper that you have to go through.”</i></p>
-                    </blockquote>
-                    <p>
-                        <b>MOJ - LPA</b></p>
+                        </div>
 
+                        <div class="govuk-grid-column-one-half">
+
+                            <blockquote>
+                                <p><i>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway”</i></p>
+                            </blockquote>
+                            <p>
+                                <b>MOD - AFCS</b></p>
+
+                        </div>
+
+                    </div>
                 </div>
-
-                <div class="govuk-grid-column-one-half">
-
-                    <blockquote>
-                        <p><i>“Its an extremely heavy paper based process, the application form is about 40 pages of paper ... the compensation service represents about 80 percent of all of our paper. And so you can imagine the the the lorries travelling up and down the motorway”</i></p>
-                    </blockquote>
-                    <p>
-                        <b>MOD - AFCS</b></p>
-
-                </div>
-
-            </div>
+            </details>
 
         </div>
-
     </div>
-
-    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
         <div id="trans-2" class="govuk-grid-column-full">
 
@@ -93,42 +107,52 @@
 
             <p>Services that appear digital to the end user may have manual backend processes:</p>
 
-            <div class="govuk-grid-row govuk-!-padding-top-4">
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Service quotes
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-grid-row govuk-!-padding-top-4">
 
-                <div class="govuk-grid-column-one-third">
+                        <div class="govuk-grid-column-one-third">
 
-                    <blockquote>
-                        <p><i>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox”</i></p>
-                    </blockquote>
-                    <p><b>HO - MBTP</b></p>
+                            <blockquote>
+                                <p><i>“About half the forms pass information to backend systems … and half just generate a simple email that goes into a shared email inbox”</i></p>
+                            </blockquote>
+                            <p><b>HO - MBTP</b></p>
 
+                        </div>
+
+                        <div class="govuk-grid-column-one-third">
+
+                            <blockquote>
+                                <p><i>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.”</i></p>
+                            </blockquote>
+                            <p><b>MOD - AFCS</b></p>
+
+                        </div>
+
+                        <div class="govuk-grid-column-one-third">
+
+                            <blockquote>
+                                <p><i>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation”</i> </p>
+                            </blockquote>
+                            <p><b>MOD - AFCS</b></p>
+
+                        </div>
+
+                    </div>
                 </div>
+            </details>
 
-                <div class="govuk-grid-column-one-third">
 
-                    <blockquote>
-                        <p><i>“Despite you applying for your service digitally we still print it off in the back, put it into a paper file to walk it down a corridor to give it to a doctor.”</i></p>
-                    </blockquote>
-                    <p><b>MOD - AFCS</b></p>
-
-                </div>
-
-                <div class="govuk-grid-column-one-third">
-
-                    <blockquote>
-                        <p><i>“Worst case scenario … someone from my team has to get a blank proforma and post it, that person receives it, signs, puts it back into a freepost addressed envelope and then posts it back to our operation”</i> </p>
-                    </blockquote>
-                    <p><b>MOD - AFCS</b></p>
-
-                </div>
-
-            </div>
 
         </div>
 
     </div>
-
-    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
         <div id="trans-3" class="govuk-grid-column-full">
 
@@ -136,54 +160,70 @@
 
             <p>Some services have already embraced digital applications:</p>
 
-            <div class="govuk-grid-row govuk-!-padding-top-4">
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Service quotes
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-grid-row govuk-!-padding-top-4">
 
-                <div class="govuk-grid-column-one-half">
-                    <blockquote>
-                        <p> <i>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</i>
-                        </p>
-                    </blockquote>
+                        <div class="govuk-grid-column-one-half">
+                            <blockquote>
+                                <p> <i>“Two or three years ago, if we needed to verify your identity our only option would be to ask you to come and visit a Visa Application Centre, usually in your capital city, which could be hundreds of miles away from where you live and at your own expense, and book an appointment and go in and have manual checks performed...</i>
+                                </p>
+                            </blockquote>
 
+                        </div>
+
+                        <div class="govuk-grid-column-one-half">
+
+                            <p><i> … We have introduced our ID Verification app, which enable some of these steps to happen through an entirely digital process.</i></p>
+                            <p><i>You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.”</i> </p>
+                            <p><b>HO</b></p>
+
+                        </div>
+
+                    </div>
                 </div>
+            </details>
 
-                <div class="govuk-grid-column-one-half">
 
-                    <p><i> … We have introduced our ID Verification app, which enable some of these steps to happen through an entirely digital process.</i></p>
-                    <p><i>You can do exactly what you used to do at the VAC, or you can do that on your own smartphone in 10 minutes.”</i> </p>
-                    <p><b>HO</b></p>
-
-                </div>
-
-            </div>
 
         </div>
 
     </div>
-
     <div class="govuk-grid-row govuk-!-padding-top-8">
 
         <div id="trans-4" class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m">4. Siloed digital services to single sign-on (SSO)</h3>
 
-            <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+            <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account.</p>
 
-                <div class="govuk-grid-column-two-thirds">
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Service examples
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
 
-                    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                        <div class="govuk-grid-column-two-thirds">
 
-                        <li>HMRC are developing the Single Customer Account, supporting people to apply for Child Benefit and other services through an HMRC app.</li>
-                        <li>Defra - Future Farming are doing the same</li>
-                        <li>The MOD is developing a single sign in portal where <i>"every single veteran and serving person will be able to log in and do their compensation and a lot of other services"</i>.</li>
-                    </ul>
+                            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+
+                                <li>HMRC are developing the Single Customer Account, supporting people to apply for Child Benefit and other services through an HMRC app.</li>
+                                <li>Defra - Future Farming are doing the same</li>
+                                <li>The MOD is developing a single sign in portal where <i>"every single veteran and serving person will be able to log in and do their compensation and a lot of other services"</i>.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="highlight">
-                <p class="highlight-header">
-                    {{ data['highlight'] }}
-                </p>
-                <p>Many departments are developing SSO account functionality, aiming to make multiple services accessible within one account.</p>
-            </div>
+            </details>
+
         </div>
 
     </div>
@@ -516,40 +556,49 @@
 
             <p>As the first government service many people will encounter, the Home Office faces a number of unique challenges in verifying a person’s basic demographic information:</p>
 
-            <br /><br /><br />
-        </div>
-
-        <div class="govuk-grid-column-one-third">
-            <p><b>Name:</b></p>
-            <blockquote>
-                <i>
-                    <p>What is your name? I know it's probably easy for all of us, but it really isn't easy for most of the people we deal with. You can have five different versions of your name on [your documents], which one are you using and I think that's where it gets challenging.</p>
-                </i>
-            </blockquote>
             <br />
         </div>
-        <div class="govuk-grid-column-one-third">
-            <p><b>Date of birth:</b></p>
-            <blockquote>
-                <i>
-                    <p>There's loads of countries that don't have Somerset House. So everybody is 01/01/1990, or they know what year they were born, but not what day or month. That's common in the Home Office.</p>
-                </i>
-            </blockquote>
-            <br />
-        </div>
-        <div class="govuk-grid-column-one-third">
-            <p><b>Reference number:</b></p>
-            <blockquote>
-                <i>
-                    <p>There's no such thing as like a unique reference number in the U.K. One of our primary reference points across DWP data is the National Insurance Number, but in the Home Office we use things like document numbers for that passport. Every department is likely to have their own thing.
-                    </p>
-                </i>
-            </blockquote>
 
+        <div class="govuk-grid-column-two-thirds">
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Service quotes
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+
+                    <p><b>Name:</b></p>
+                    <blockquote>
+                        <i>
+                            <p>What is your name? I know it's probably easy for all of us, but it really isn't easy for most of the people we deal with. You can have five different versions of your name on [your documents], which one are you using and I think that's where it gets challenging.</p>
+                        </i>
+                    </blockquote>
+                    <br />
+
+                    <p><b>Date of birth:</b></p>
+                    <blockquote>
+                        <i>
+                            <p>There's loads of countries that don't have Somerset House. So everybody is 01/01/1990, or they know what year they were born, but not what day or month. That's common in the Home Office.</p>
+                        </i>
+                    </blockquote>
+                    <br />
+
+
+                    <p><b>Reference number:</b></p>
+                    <blockquote>
+                        <i>
+                            <p>There's no such thing as like a unique reference number in the U.K. One of our primary reference points across DWP data is the National Insurance Number, but in the Home Office we use things like document numbers for that passport. Every department is likely to have their own thing.
+                            </p>
+                        </i>
+                    </blockquote>
+
+                </div>
+            </details>
         </div>
+
 
         <div class="govuk-grid-column-full govuk-!-padding-top-8">
-
 
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Many services do not use the mandatory information standards (or do not find them applicable) and do not build and maintain data dictionaries.</li>
@@ -558,8 +607,8 @@
                 <li>Both within departments and across government, systems are unlikely to have a common vocabulary, and will find it difficult to understand each other.</li>
             </ul>
 
-            <br />
-
+        </div>
+        <div class="govuk-grid-column-full govuk-!-padding-top-8">
             <div class="highlight">
                 <p class="highlight-header">
                     {{ data['highlight'] }}
@@ -569,9 +618,6 @@
                 </p>
             </div>
 
-
-
-            <br />
 
         </div>
     </div>

@@ -360,10 +360,6 @@ module.exports = {
             anchor: "Objective",
     },
         {
-            title: "Methodology",
-            anchor: "Methodology",
-    },
-        {
             title: "Participants",
             anchor: "Participants",
     },
