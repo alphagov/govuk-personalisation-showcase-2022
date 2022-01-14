@@ -22,7 +22,7 @@ module.exports = {
     indexlink: "/index-handover",
     maintitle: "X-Gov Services",
     highlight: "Key insight(s)",
-    example: "Example(s) from research",
+    example: "Research example(s)",
     hubmenu: [
         {
             title: "The problem",
@@ -382,20 +382,28 @@ module.exports = {
             ],
     datainsightsmenu: [
         {
-            title: "Background",
-            anchor: "background",
+            title: "There are four key capabilities needed for services to support the features we’ve tested",
+            anchor: "insight-1",
         },
         {
-            title: "Service research data findings",
-            anchor: "service-research-data-findings",
+            title: "Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation",
+            anchor: "insight-2",
     },
         {
-            title: "Data Models",
-            anchor: "data-models",
+            title: "GOV.UK account features may support and improve services business processes",
+            anchor: "insight-3",
     },
         {
-            title: "Data Dictionary",
-            anchor: "data-dictionary",
+            title: "Services will have needs that GOV.UK account features can’t meet",
+            anchor: "insight--4",
+    },
+        {
+            title: "Services generally need the same information from their users",
+            anchor: "insight--5",
+    },
+        {
+            title: "Services vary significantly in how they receive and record information from their users",
+            anchor: "insight--6",
     }
     ],
     featuresmenu: [
