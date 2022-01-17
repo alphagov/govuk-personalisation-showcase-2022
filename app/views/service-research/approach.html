@@ -5,24 +5,21 @@
 {% endblock %}
 
 
-{% block menu %}
-<ul class="govuk-list govuk-list--bullet">
-    {% for item in approachmenu %}
-    <li><a href="../service-research/approach.html#{{ item.anchor }}">{{ item.title }}</a></li>
-    {% else %}
-    {% endfor %}
-</ul>
-{% endblock %}
+
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>In the second phase of the project, we wanted to broaden our research to include government services.</p>
 
     <p>Our main focus was to explore the feasibility of joining up services across government, whilst identifying what service features would help make the GOV.UK account more personalised.</p>
 
-    <p>For the research, we wanted to represent the needs and views of a diverse range of government service teams. We did this by broadening the recruitment profile beyond the services within the life event (<a href="../user-research/approach.html#life-event">‘Life while having a baby’</a>) to include a range of central government services and small local authorities.
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+    <p>For the research, we wanted to represent the needs and views of a diverse range of government service teams.</p>
+    <p> We did this by broadening the recruitment profile beyond the services within the life event (<a href="../user-research/approach.html#life-event">‘Life while having a baby’</a>) to include a range of central government services and small local authorities.
     </p>
 
 </div>
@@ -32,52 +29,63 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
+    <div class="govuk-grid-row">
 
-    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li> {{ data['objectives']['objective2'] }}</li>
-        <li>Understand the perceptions around data sharing and the appetite for joining up data across government services</li>
+        <div class="govuk-grid-column-full">
 
-    </ul>
+            <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+            <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-body-l">
+                <li>{{ data['objectives']['objective2'] }}</li>
+                <li>Understand the perceptions around data sharing and the appetite for joining up data across government services</li>
 
-    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li>Current data sharing activity</li>
-        <li>Current challenges</li>
-        <li>Benefits of joining up services</li>
-        <li>Future challenges of joining up services</li>
-        <li>Future expectations</li>
-        <li>Service readiness</li>
-    </ul>
+            </ol>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Current data sharing activity</li>
+                <li>Current challenges</li>
+                <li>Benefits of joining up services</li>
+                <li>Future challenges of joining up services</li>
+                <li>Future expectations</li>
+                <li>Service readiness</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+
+            <p>We interviewed service owners and product managers.</p>
 
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
 
-    <p>We interviewed service owners and product managers.</p>
+            <ol class="govuk-list govuk-list--number">
+                <li><b>DEFRA</b> - Future Farming</li>
+                <li><b>MOJ</b> - Lasting power of attorney (digital sociologist)</li>
+                <li><b>HO</b> - Update your UK Visas and Immigration account</li>
+                <li><b>MOD</b>: AH Modernisation, Veterans</li>
+                <li><b>MOJ</b> - Lasting power of attorney (service owner)</li>
+                <li><b>Northampton Council</b>: Register a birth</li>
+                <li><b>OFSTED</b>: Register as a childminder / Register as a nanny</li>
+                <li><b>Camden LA</b> - The Camden account</li>
+                <li><b>Northampton Council</b> - Blue Badge</li>
+                <li><b>DWP</b> - Personal Independence Payment (PIP)</li>
+            </ol>
 
-
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
-
-    <ol class="govuk-list govuk-list--number">
-        <li><b>DEFRA</b> - Future Farming</li>
-        <li><b>MOJ</b> - Lasting power of attorney (digital sociologist)</li>
-        <li><b>HO</b> - Update your UK Visas and Immigration account</li>
-        <li><b>MOD</b>: AH Modernisation, Veterans</li>
-        <li><b>MOJ</b> - Lasting power of attorney (service owner)</li>
-        <li><b>Northampton Council</b>: Register a birth</li>
-        <li><b>OFSTED</b>: Register as a childminder / Register as a nanny</li>
-        <li><b>Camden LA</b> - The Camden account</li>
-        <li><b>Northampton Council</b> - Blue Badge</li>
-        <li><b>DWP</b> - Personal Independence Payment (PIP)</li>
-    </ol>
-
-    <br />
-
-    <p><a href="../service-research/insights.html#round-1">View Round 1 insights</a> </p>
-
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% else %}
@@ -85,71 +93,85 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
+    <div class="govuk-grid-row">
 
-    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li>Determine the complexity vs. value of different account features identified in the backlog</li>
-        <li>Capture the risks, dependencies and complexities of joining up services</li>
-    </ul>
+        <div class="govuk-grid-column-full">
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+            <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
 
-    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-        <li>Understand the service expectations and challenges for each feature</li>
-        <li>How each of the features could deliver future value to a service</li>
-        <li>Results from the sessions aggregated into a matrix, showing feature placement across value and complexity of adoption</li>
-    </ul>
+            <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-body-l">
+                <li>Determine the complexity vs. value of different account features identified in the backlog</li>
+                <li>Capture the risks, dependencies and complexities of joining up services</li>
+            </ol>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Understand the service expectations and challenges for each feature</li>
+                <li>How each of the features could deliver future value to a service</li>
+                <li>Results from the sessions aggregated into a matrix, showing feature placement across value and complexity of adoption</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+
+            <p>We did an interview and moderated card sorting with service owners and product managers.</p>
+
+            <p>Any features associated with account setup were excluded from the initial service research. We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
+
+            <p>We discussed each of these <a href="#features-tested"> 13 hypothetical account features</a> and asked participants to card sort each feature in 2 ways:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>the perceived potential future <b>value to the service</b> </li>
+                <li>the perceived <b>complexity of adoption</b></li>
+            </ul>
+
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
+
+            <ol class="govuk-list govuk-list--number">
+                <li><b>MOJ</b> - Lasting power of attorney </li>
+                <li><b>DEFRA</b> - Future Farming</li>
+                <li><b>HMRC</b> - Register a trust</li>
+                <li><b>Camden LA</b> - The Camden account</li>
+                <li><b>Northampton Council</b> - Blue Badge</li>
+                <li><b>DWP</b> - Personal independence payment (PIP)</li>
+            </ol>
+
+            <h3 id="features-tested" class="govuk-heading-m govuk-!-padding-top-8">Features included in the research</h3>
+
+            <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
+                <li><a href="../features/06.html"> Verified data</a></li>
+                <li><a href="../features/08.html">Global push</a></li>
+                <li><a href="../features/07.html">Notifications</a></li>
+                <li><a href="../features/24.html">Reminders</a></li>
+                <li><a href="../features/05.html">Use of existing data</a></li>
+                <li><a href="../features/19.html">Fixed vs editable data</a></li>
+                <li><a href="../features/20.html">Share specific data with another person’s GOV.UK account</a></li>
+                <li><a href="../features/18.html">Saved documents</a></li>
+                <li><a href="../features/01.html">Suggested eligibility</a></li>
+                <li><a href="../features/16.html">Calculated data based on known information (Derived data)</a></li>
+                <li><a href="../features/04.html">Personalised content</a></li>
+                <li><a href="../features/15.html">Autofill forms</a></li>
+                <li><a href="../features/09.html">Prompt user to complete profile</a></li>
+            </ul>
 
 
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
 
-    <p>We did an interview and moderated card sorting with service owners and product managers.</p>
-
-    <p>Any features associated with account setup were excluded from the initial service research. We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
-
-    <p>We discussed each of these 13 hypothetical account features and asked participants to card sort each feature in 2 ways:
-    </p>
-
-    <ul class="govuk-list govuk-list--bullet">
-        <li>the perceived potential future value to the service </li>
-        <li>the perceived complexity of adoption</li>
-    </ul>
-
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Features included in the research</h3>
-
-    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
-        <li><a href="../features/06.html"> Verified data</a></li>
-        <li><a href="../features/08.html">Global push</a></li>
-        <li><a href="../features/07.html">Notifications</a></li>
-        <li><a href="../features/24.html">Reminders</a></li>
-        <li><a href="../features/05.html">Use of existing data</a></li>
-        <li><a href="../features/19.html">Fixed vs editable data</a></li>
-        <li><a href="../features/20.html">Share specific data with another person’s GOV.UK account</a></li>
-        <li><a href="../features/18.html">Saved documents</a></li>
-        <li><a href="../features/01.html">Suggested eligibility</a></li>
-        <li><a href="../features/16.html">Calculated data based on known information (Derived data)</a></li>
-        <li><a href="../features/04.html">Personalised content</a></li>
-        <li><a href="../features/15.html">Autofill forms</a></li>
-        <li><a href="../features/09.html">Prompt user to complete profile</a></li>
-    </ul>
-
-
-    <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
-
-    <ol class="govuk-list govuk-list--number">
-        <li><b>MOJ</b> - Lasting power of attorney </li>
-        <li><b>DEFRA</b> - Future Farming</li>
-        <li><b>HMRC</b>: Register a trust</li>
-        <li><b>Camden LA</b> - The Camden account</li>
-        <li><b>Northampton Council</b> - Blue Badge</li>
-        <li><b>DWP</b>: Personal independence payment (PIP)</li>
-    </ol>
-
-    <br />
-
-    <p><a href="../service-research/insights.html#round-2">View Round 2 insights</a> </p>
+        </div>
+    </div>
 
 </div>
 {% endblock %}
@@ -158,9 +180,13 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-one-half">
 
-    <p>Due to limited availability at the end of the year, many service teams were unable to support with user research. We were unable to recruit services that exactly matched those within our life event (‘Life when having a baby’).</p>
+    <p>Due to limited availability at the end of the year, many service teams were unable to support with user research.</p>
+    <p>We were unable to recruit services that exactly matched those within our life event (‘Life when having a baby’).</p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
     <p>To overcome this, we recruited a wide range of services users (across local and central government) to make sure our findings are representative of service needs.</p>
 </div>

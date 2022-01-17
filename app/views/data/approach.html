@@ -26,7 +26,7 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
     <h3 class="govuk-heading-m govuk-!-padding-top-2 govuk-!-padding-bottom-2">What we wanted to find out</h3>
 
@@ -68,7 +68,7 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>We ran workshops with service owners, product owners and other roles to help map out how services process applications and the data captured at each step of the process.</p>
 
@@ -91,7 +91,7 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>During our service research and workshops, we asked services if they currently use and maintain data dictionaries.</p>
 
@@ -103,8 +103,6 @@
         <li>The level of variation in input validation</li>
     </ul>
 
-    <p>HMRC Child Benefit also shared their existing process maps.</p>
-
 </div>
 {% endblock %}
 {% else %}
@@ -112,11 +110,14 @@
 
 {% if pagemenu[4] %}
 {% block section5 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>We had intended to analyse service-held data dictionaries as a part of our research. Unfortunately, most of the services we spoke to didn’t have a data dictionary - although some identified it as an aspiration.</p>
 
     <p>We found that services going through a digital transformation tended to prioritise increased technical maturity, with the data maturity possibly following once the technical foundations were in place.</p>
+
+</div>
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>As a result, our work broadened to look more generally at the data items needed by government services, as well as any input validation they have implemented and how they receive user’s information.
     </p>
