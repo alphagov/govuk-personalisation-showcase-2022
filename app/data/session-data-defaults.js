@@ -288,20 +288,56 @@ module.exports = {
     ],
     serviceinsightsmenu: [
         {
-            title: "Background",
-            anchor: "background ",
+            title: "Services only share limited data outside of their own government departments",
+            anchor: "insight-1",
     },
         {
-            title: "Round 1",
-            anchor: "round-1",
+            title: "Many services use third party data with a high reliance on manual processes ",
+            anchor: "insight-2",
     },
         {
-            title: "Round 2",
-            anchor: "round-2",
+            title: "Services are transforming at different rates which creates compatibility issues",
+            anchor: "insight-3",
     },
         {
-            title: "Limitations",
-            anchor: "limitations",
+            title: "Services expect to benefit from sharing data across X-Gov in a number of ways",
+            anchor: "insight-4",
+    },
+        {
+            title: "Data assurance standards and current legislation are fundamental service concerns",
+            anchor: "insight-5",
+    },
+        {
+            title: "Existing roadmaps and resource commitment creates competing priorities with the GOV.UK account integration",
+            anchor: "insight-6",
+    },
+        {
+            title: "Services expect that a level playing field will be created, with all available data on the table",
+            anchor: "insight-7",
+    },
+        {
+            title: "Services identified joining up systems and back office processes as key challenges",
+            anchor: "insight-8",
+    },
+        {
+            title: "Services see the hypothetical account features as either “core or value added”",
+            anchor: "insight-9",
+    },
+        {
+            title: "Service users expect to be clear about the operating model and support mechanism for end users",
+            anchor: "insight-10",
+    },
+        {
+            title: "User adoption and user reactions are key considerations",
+            anchor: "insight-11",
+    },
+        {
+            title: "Services identified that not all data should be available for re-use within the GOV account",
+            anchor: "insight-12",
+    },
+        {
+            title: "Services believe that individual control of data is essential",
+            anchor: "insight-13",
     }
     ],
     datamenu: [

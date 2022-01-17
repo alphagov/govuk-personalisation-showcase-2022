@@ -250,6 +250,32 @@
 {% else %}
 {% endif %}
 
+{% if pagemenu[12] %}
+<!-- {{ pagemenu[12]['title'] }} -->
+<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">13</span>
+            <br />{{ pagemenu[12]['title'] }}</h2>
+    </div>
+    {% block section13 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
+{% if pagemenu[13] %}
+<!-- {{ pagemenu[13]['title'] }} -->
+<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+    <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-l"> <span class="section-number">14</span>
+            <br />{{ pagemenu[13]['title'] }}</h2>
+    </div>
+    {% block section14 %}
+    {% endblock %}
+</div>
+{% else %}
+{% endif %}
+
 {% include "includes/line-hr.html" %}
 
 {% block prevnext %}
