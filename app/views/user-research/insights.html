@@ -16,31 +16,20 @@
 
             <p>A recurring piece of feedback was the usefulness of having <b>everything in one place</b>. </p>
 
-            <p>Users also commented on saving time, having a consistent, easy and efficient way of dealing with the government, and having one login for everything.</p>
+            <p>Users also commented on:</p>
 
-            <!--  <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-bottom-2">
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-bottom-2">
                 <li>Time saving </li>
                 <li>A consistent, easy and efficient way of dealing with the government</li>
                 <li>One login for everything</li>
-            </ul> -->
-
-            <p>Observing user reactions and analysing user comments such as these, enables us to define <a href="user-needs.html">user needs</a>, such as:
-            </p>
-
-            <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-top-2">
-                <li>Reduce the stress of paperwork and admin </li>
-                <li>Save time </li>
-                <li>Avoid phoning the service </li>
-                <li>Reduce cognitive load </li>
-                <li>Find what I need easily</li>
             </ul>
+
 
         </div>
 
     </div>
 
-
-    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+    <div class="govuk-grid-row  govuk-!-padding-bottom-4">
 
         <details class="govuk-details example" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -146,7 +135,7 @@
 
                                 <blockquote>
                                     <p class="govuk-body-s">
-                                        To follow... </p>
+                                        Don’t know, like I said just put everything under there in relation to benefits, childcare, but not just childcare, even child benefit, yeah UC, tax credit. If you could put it all under one thing. Because the thing is, you ring one person and then you’re passed to another place then your passed to another place, ‘oh we can’t help you at Universal Credit, you have to ring HMRC’, well you’re one in the bloody same to me, you know so, why can’t they just be like that anyway, you know and just have one hub kind of thing that deals with everything? I don’t know, maybe it’s a pipe dream or maybe this is what’s really going to happen now</p>
                                 </blockquote>
                             </div>
                         </details>
@@ -177,7 +166,7 @@
 
                                 <blockquote>
                                     <p class="govuk-body-s">
-                                        To follow</p>
+                                        It's really straight forward, like it’s really straight forward. And because it’s all, ok so for me when I did my Universal claim, it was a bit long winded, so this because a lot of my information has been verified through the GOV.UK website anyway, it just makes it easier and probably a bit quicker to get through because certain details have already been verified. So you can see everything in one place. It just looks a lot easier, honestly</p>
 
 
                                 </blockquote>
@@ -190,6 +179,25 @@
             </div>
         </details>
 
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+
+        <div class="govuk-grid-column-full">
+
+            <p>Observing user reactions and analysing user comments such as these, enables us to define user needs. </p>
+
+            <p>Through these comments alone we can <a href="user-needs.html#user-needs">identify a list of user needs</a>, such as:
+            </p>
+
+            <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-6">
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce the stress of paperwork and admin</strong> </li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Save time </strong></li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Avoid phoning the service </strong></li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce cognitive load</strong> </li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Find what I need easily </strong></li>
+            </ul>
+        </div>
     </div>
 
 </div>
@@ -207,7 +215,7 @@
 
             <p>Generally speaking, users reacted positively to the concept of the GOV.UK account as part of a x-gov transaction, however, there were various comments around its usefulness being dependent on whether or not there was a genuine reason to use it. </p>
 
-            <p>Comments in user research highlighted the fact that throughout certain periods of life (i.e. childcare) the likelihood of interacting with government services is much higher.</p>
+            <p>Comments in user research highlighted the fact that throughout certain periods of life (i.e. <a href="../user-research/approach.html#life-event"> childcare</a>) the likelihood of interacting with government services is much higher.</p>
 
             <p>For some, depending on lifestyle, the regularity of interactions with the government is much lower. Some users clearly articulated that they would find the account useful ‘now’ (during childcare) whereas otherwise they may not see the point. </p>
 
@@ -245,7 +253,7 @@
 
                         <br />
                         <p class="govuk-body-s">
-                            A participant from ?
+                            Participant from <a href="../phase-2-round-3/"> phase 2 round 3 </a>
                         </p>
 
                         <details class="govuk-details" data-module="govuk-details">
@@ -258,7 +266,7 @@
 
                                 <blockquote>
                                     <p class="govuk-body-s">
-                                        To follow...</p>
+                                        I am involved with the government at the moment, this would be really great because obviously, you know as he goes to school things change, you have to contact the government or your council or government websites. And so I am in contact with the government at this stage in my life, so this would be appropriate for me. Maybe two or three years ago I wouldn’t have used the government websites really, I mean for information randomly. But as I need to sign into my Universal Credit every month, there’s a repetitive kind of reason that I need to go into the gov website, so an account, a personalised account for me right now would be really useful.</p>
 
 
                                 </blockquote>
@@ -571,7 +579,7 @@
                 {% for i in range(1, featurestotal) -%}
                 {% if categories[i] === "control" %}
                 <li>
-                    <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+                    <a href="../features/{{ fids[i] }}">{{ names[i] }}</a>
                 </li>
                 {% endif %}
                 {%- endfor %}
@@ -594,20 +602,71 @@
 
 {% if pagemenu[5] %}
 {% block section6 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full">
 
-    <p>When users see content that has been <a href="../features/04.html">personalised, curated, tailored</a> specifically to a person using data, they expect it to be accurate. </p>
+    <div class="govuk-grid-row govuk-!-padding-bottom-8">
 
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                Example observed in research
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            When users saw information that had been curated for them on an ‘eligibility page’ they assumed it was accurate and that the amounts cited were the specific amounts they would receive as part of a benefit claim.
+        <div class="govuk-grid-column-two-thirds">
+
+            <p>When users see <a href="../features/04.html">content that has been curated</a> specifically to a person using data from the GOV.UK account, they expect it to be accurate. </p>
+
+            <p>This is especially relevant for eligibility pages which detail the likelihood of eligibility and estimate amounts. For example, information on Universal Credit plus the childcare element calls out the most the user <i>could</i> receive.</p>
+
+            <p> In user research we observed participants quickly scanning the page and assuming the amount they saw was an accurate calculation. </p>
+
         </div>
-    </details>
+
+        <div class="govuk-grid-column-one-third center">
+
+            <img src="../../../public/images/research/personalised.png" class="panel-image shadow" alt="A personalised version of the Universal Credit start page that suggests an up-to amount for payments">
+
+            <p class="govuk-body-s">
+                From <a href="../round-2/">round 2</a>
+            </p>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p><i>It’s telling me the amount I’ll get and a link to go and apply as well.</i></p>
+                                    <p>from <a href="../phase-2-round-1/"> phase 2, round 1</a></p>
+                                </blockquote>
+
+                            </div>
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p><i>I’m surprised by how accurate all of the information is.</i></p>
+                                    <p>from <a href="../phase-2-round-5/"> phase 2, round 5</a></p>
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+
+        </div>
+    </div>
 
 </div>
 {% endblock %}
@@ -616,26 +675,141 @@
 
 {% if pagemenu[6] %}
 {% block section7 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row">
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>hub</li>
-        <li>umbrella</li>
-        <li>one stop shop</li>
-        <li>all under one roof</li>
-    </ul>
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
 
-    <p>Understanding users’ natural language can be used to inform content, and how the GOV.UK account is described. </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>hub</li>
+                <li>umbrella</li>
+                <li>one stop shop</li>
+                <li>all under one roof</li>
+            </ul>
 
-    <br />
-    <p><a href="../user-research/recommendations#recommendation-1">View end user recommendations on clarity and transparency</a>
-    </p>
+            <p>Understanding users’ natural language can be used to inform content, and how the GOV.UK account is described. </p>
 
-</div>
-<div class="govuk-grid-column-one-third hide-on-mobile govuk-!-padding-bottom-8">
+        </div>
+        <div class="govuk-grid-column-one-third hide-on-mobile govuk-!-padding-bottom-8">
 
-    <img src="../../../public/images/research/umbrella.svg" class="panel-image" alt="An umbrella">
+            <img src="../../../public/images/research/umbrella.svg" class="panel-image" alt="An umbrella">
 
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>I guess it’s just sort of a central hub where you can access all the GOV.UK services
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../phase-2-round-2/">phase 2, round 2</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>It [the account] would fit my circumstances. Like an umbrella account.
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-2/">phase 1 round 2</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>It keeps everything in one place, under like, one umbrella
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-3/">phase 1 round 3</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>I mean thinking about myself, I would use something like this as I do use Universal Credit…it’s like a one stop shop if I need to update anything
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-1/">phase 1, round 1</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>It helps you to apply for things in a personal way so you don’t need to fill details in again. It’s a one stop shop
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../phase-2-round-3/">phase 2 round 3</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>It’s nifty really. It all needs to be under one roof.
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-2/">phase 1 round 2</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+
+
+            </div>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% else %}
@@ -643,30 +817,30 @@
 
 {% if pagemenu[7] %}
 {% block section8 %}
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-
-    <p>As part of a cross-team exercise, we asked users about their perspective on data storage.</p>
-    <p>As expected, the average citizen will not be able to articulate preferences around storage. They do, however, reference security.</p>
-
-    <p> The reason for posing this question in research, is that there has been some discussion in the programme about the use of solid PODS.</p>
-</div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-    <p>Whilst this work is now being owned by another team, we recommended that the following end user issues be considered:</p>
-
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Whether control and ownership over data is a positive thing for citizens - We recommend an impact assessment to better understand worse case scenarios.</li>
-        <li>Whether PODS would entail any transfer of responsibility to users, and if so, what risks and concerns could that cause for citizen users.</li>
-        <li>Do PODS meet user needs?</li>
-    </ul>
-
-</div>
-
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
-    <p><a href="../user-research/recommendations#recommendation-7">View end user recommendations on creating a secure service which protects users’ privacy
-        </a>
-    </p>
+            <p>As part of a cross-team exercise, we asked users about their perspective on data storage.</p>
+            <p>As expected, the average citizen will not be able to articulate preferences around storage. They do, however, reference security.</p>
 
+            <p> The reason for posing this question in research, is that there has been some discussion in the programme about the use of solid PODS.</p>
+            <p>Whilst this work is now being owned by another team, we recommended that the following end user issues be considered:</p>
+        </div>
+    </div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-4">
+
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Whether control and ownership over data is a positive thing for citizens - we recommend an impact assessment to better understand worst case scenarios. Whilst solid PODS would give users the choice over whether they own their data, we would argue that choice is not always a good thing. </li>
+                <li>Whether PODS would entail any transfer of responsibility to users, and if so, what risks and concerns could that cause for citizen users. Can they realistically comprehend the complexities and consequences? </li>
+                <li>Would any future transfer of responsibility go against the intrinsic user need of ‘reducing cognitive load’? </li>
+                <li>Do PODS meet user needs?</li>
+            </ul>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% else %}
@@ -674,17 +848,142 @@
 
 {% if pagemenu[8] %}
 {% block section9 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-2">
-
-    <p>Users commented that their data could be at risk if their GOV.UK account was ‘hacked’.</p>
-    <p>Users expect that the government’s online services should be secure. </p>
-
-</div>
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <p><a href="../user-research/recommendations#recommendation-7">View end user recommendations on creating a secure service which protects users’ privacy
-        </a>
-    </p>
 
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-2">
+
+            <p>The theme of security was mentioned by users throughout the rounds of user research.</p>
+            <p> Whilst many research participants we spoke to were trusting of the government, there was a concern around the data in their GOV.UK account being hacked and compromised. </p>
+
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-2">
+
+            <p>
+                As mentioned in <a href="#insight-2"> insight 2</a> we acknowledge there are some data sceptics who will be unlikely to engage with the account. </p>
+            <p>
+                A secure service is one of the conditions which fosters willingness to save and use information within the GOV.UK account.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>[The GOV.UK account] is positive in terms of saving time but there’s a lot in there if it gets compromised
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-1/">phase 1, round 1</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>I worry about the data but you’ve just got to trust them. When I sign up it’s a contract between me and the government
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-1/">phase 1 round 1</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>Personalisation like this is ok because they wouldn’t do it without your consent
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-2/">phase 1 round 2</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>I would want to save all information. I’m quite happy as long as it’s secure. It’s the government website so the trust is there
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-3/">phase 1, round 3</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>I would be happy to save data when using gov services
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../round-1/">phase 1 round 1</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+
+                                <blockquote>
+                                    <p>
+                                        <i>There’s always going to be an issue with security, being hacked on my end or the GOV.UK end with details being leaked. But then they already have my details so I’ve already taken that risk anyway
+                                        </i>
+                                    </p>
+                                    <p class="govuk-body-s">
+                                        Participant from <a href="../phase-2-round-1/">phase 2 round 1</a>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+
+
+            </div>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% else %}
@@ -692,54 +991,198 @@
 
 {% if pagemenu[9] %}
 {% block section10 %}
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-
-    <p>We tested future features such as full automation of a transactional form. </p>
-
-    <p> Whilst some users said that this would help in the sense that it would make life easier, some users expressed concerns over accuracy. </p>
-    <br /><br />
-    <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-                Examples in prototypes
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <a href="../round-3/index.html">Phase 1 round 3</a> was full pre-fill of replace passport
-            <br /><br />
-            <a href="../phase-2-round-3/">Phase 2 round 3</a> was auto reapply for the childcare service
-        </div>
-    </details>
-
-</div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-
-    <p> Comments around accuracy generally related to benefit payments and there was a concern that if fully automated transactions are inaccurate, then it could impact their monthly benefit payment, or even their eligibility to continue claiming. </p>
-
-</div>
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <p><a href="../user-research/recommendations#recommendation-2">View end user recommendations on control and consent</a>
-    </p>
 
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
+
+            <p>We explored concepts which could be introduced in the future as a move to a more ‘proactive’ government</p>
+
+            <p>In phase 3, round 2, we tested the concept of an automated recurring transaction relating to childcare, as well as the ability to <a href="../features/30.html">{{ data['features']['30'] }}</a> to the childcare provider.</p>
+
+            <p> Automation in this way received conflicting reviews. Some users saw this as a useful, more accurate way of processing a transaction, however, others were concerned that an error in automation may result in an inaccurate transaction which may lead to an issue with a benefit payment. </p>
+
+
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
+
+            <p>A note on our team experience of user research is relevant here - the participants we spoke to in round 2 served as an important reminder that we work with people with complex lives. </p>
+            <p>Although automation may be part of future roadmap or strategy, it should be carefully managed so that users do not incur errors which could impact their lives. </p>
+
+            <p>Automation could help, but could also compromise these user needs:
+            </p>
+
+            <ul class="govuk-list govuk-list--spaced">
+                <li> <strong class="govuk-tag govuk-tag--turquoise">
+                        {{ data['needs']['needlabel1'] }}
+                    </strong></li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">
+                        {{ data['needs']['needlabel7'] }}
+                    </strong></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p>
+                                        <i>This would be a good idea - it would mean I wouldn’t have to do it again.
+                                        </i>
+                                    </p>
+
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p>
+                                        <i>It’s definitely a pro because I’m really forgetful - I’ve got a lot to do. It's one less thing, it’s perfect
+                                        </i>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                        </div>
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-half">
+                                <blockquote>
+                                    <p>
+                                        <i>There could be a change and because you have it automatically updated, you don’t change it in time and it could mess up your claim
+                                        </i>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p>
+                                        <i>What if there’s a system error or malfunction?
+                                        </i>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+
+                        </div>
+
+                        <div class="govuk-grid-row govuk-!-padding-top-2">
+
+                            <div class="govuk-grid-column-full">
+
+                                <h3 class="govuk-heading-s">Examples in prototypes </h3>
+
+                                <p><a href="../round-3/"> Phase 1 round 3</a> was full pre-fill of replace passport </p>
+                                <p><a href="../phase-2-round-3/"> Phase 2 round 3</a> was auto reapply for the childcare service</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </details>
+
+
+
+            </div>
+
+        </div>
+    </div>
 
 </div>
+
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[10] %}
 {% block section11 %}
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>We engaged users in discussion around a space to <a href="../features/18.html">upload their personal documents</a> and there were various insights into the way in which users would interact with this.</p>
 
-    <p>Users said that they could upload things such as: proof of previous address, council related bills, hospital letters with reference numbers on.</p>
+    <div class="govuk-grid-row">
 
-</div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+        <div class="govuk-grid-column-full">
 
-    <p>We are not suggesting at this stage that a personal data store or area for uploads should be included within this programme - but we do recommend that features are designed and restricted in such a way that their usage is clear to end users. </p>
+            <p>Users expect to be able to contact GOV.UK accounts if they experience issues or need help. </p>
 
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p>
+                                        <i>If the form doesn’t have the option…I’d have to email them
+                                        </i>
+                                    </p>
+
+                                </blockquote>
+
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+
+                                <blockquote>
+                                    <p>
+                                        <i>Is there a help section for people with this account - like live chat?
+                                        </i>
+                                    </p>
+
+
+                                </blockquote>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
+
+
+            </div>
+
+        </div>
+    </div>
 
 </div>
 {% endblock %}
