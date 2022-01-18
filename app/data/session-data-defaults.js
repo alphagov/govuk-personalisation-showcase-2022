@@ -55,14 +55,9 @@ module.exports = {
             id: 7
     },
         {
-            title: "The 3 Pillars",
+            title: "The Pillars",
             url: "/pillars",
             id: 8
-    },
-        {
-            title: "Phase 3",
-            url: "/phase-3",
-            id: 9
     },
         {
             title: "Glossary",
@@ -77,7 +72,7 @@ module.exports = {
         {
             title: "Prototypes",
             url: "/prototypes",
-            id: 12
+            id: 9
     }
              ],
     problemmenu: [
@@ -468,8 +463,8 @@ module.exports = {
     ],
     pillarsmenu: [
         {
-            title: "Diagram (placeholder)",
-            anchor: "diagram",
+            title: "Summary",
+            anchor: "summary",
     }
     ],
     phase3menu: [

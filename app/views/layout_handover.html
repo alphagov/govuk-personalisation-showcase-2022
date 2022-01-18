@@ -47,6 +47,23 @@
         </li>
     </ol>
 </div>
+{% if done === true %}
+{% else %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+        <div class="govuk-phase-banner">
+            <p class="govuk-phase-banner__content">
+                <strong class="govuk-tag govuk-tag--yellow govuk-phase-banner__content__tag">
+                    ⚠️ In draft
+                </strong>
+                <span class="govuk-phase-banner__text">
+                    please note: this page is still a work-in-progress
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}
 
 {% block content %}
@@ -201,7 +218,7 @@
 {% include "includes/line-hr.html" %}
 
 {% block prevnext %}
-<div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+<!-- <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
     {% set nextid = thispage | float + 1 %}
     {% set previd = thispage | float - 1 %}
@@ -228,7 +245,7 @@
             <a href="{{ nextlink }}">{{ nexttitle }}</a>
         </div>
     </div>
-</div>
+</div> -->
 {% endblock %}
 
 {% block footlink %}

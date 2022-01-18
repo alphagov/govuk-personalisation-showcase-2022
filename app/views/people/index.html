@@ -50,12 +50,6 @@
         Data
     </p>
 </div>
-<div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-4">
-    <p class="hide-on-mobile"><img src="../../../public/images/team/mike.svg" class="team-thumbnail"> </p>
-    <p><b>Mike Stoodley</b> <br />
-        Architecture
-    </p>
-</div>
 {% endblock %}
 {% else %}
 {% endif %}
@@ -77,7 +71,7 @@
 <div class="govuk-grid-column-one-third govuk-!-padding-bottom-4">
     <p><a href="#"><b>
                 Robert Rankine</b></a> <br />
-        <b>Lead Product Manager</b> <br />
+        <b>Head of Product</b> <br />
         GOV.UK
     </p>
 </div>
@@ -161,33 +155,3 @@
 {% endif %}
 
 <br /><br />
-
-<!-- PREVIOUS AND NEXT PANELS-->
-{% block prevnext %}
-<div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
-
-    {% set nextid = thispage | float + 1 %}
-    {% set previd = thispage | float - 1 %}
-    {% set nexttitle = data['hubmenu'][nextid]['title'] %}
-    {% set prevtitle = data['hubmenu'][previd]['title'] %}
-    {% set nextlink = data['hubmenu'][nextid]['url'] %}
-    {% set prevlink = data['hubmenu'][previd]['url'] %}
-
-    <div class="govuk-grid-column-one-quarter">
-
-        <div class="previous-chapter">
-            <p>Previous:</p>
-            <a href="{{ data['indexlink'] }}">Home</a>
-        </div>
-    </div>
-    <div class="govuk-grid-column-one-half hide-on-mobile">
-        &nbsp;
-    </div>
-    <div class="govuk-grid-column-one-quarter ">
-        <div class="next-chapter">
-            <p>Next:</p>
-            <a href="{{ nextlink }}">{{ nexttitle }}</a>
-        </div>
-    </div>
-</div>
-{% endblock %}

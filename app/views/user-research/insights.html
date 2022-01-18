@@ -475,31 +475,11 @@
 
             </p>
 
-            <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                        View features which allow users to control their data
-                    </span>
-                </summary>
-                <div class="govuk-details__text">
-                    <ul class="govuk-list  govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-4">
-                        {% for i in range(1, featurestotal) -%}
-                        {% if categories[i] === "control" %}
-                        <li>
-                            <a href="../features/{{ fids[i] }}">{{ names[i] }}</a>
-                        </li>
-                        {% endif %}
-                        {%- endfor %}
-                    </ul>
-                </div>
-            </details>
-
-
             <p>We believe that providing users with ways to manage their data fosters confidence in the account and meets the following <a href="../user-research/user-needs.html"> user need</a>: </p>
 
-            <strong class="govuk-tag govuk-tag--turquoise">
-                {{ data['needs']['needlabel7'] }}
-            </strong>
+            <p><strong class="govuk-tag govuk-tag--turquoise">
+                    {{ data['needs']['needlabel7'] }}
+                </strong></p>
 
         </div>
 
@@ -594,6 +574,25 @@
 
             </div>
 
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View features which allow users to control their data
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <ul class="govuk-list  govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+                        {% for i in range(1, featurestotal) -%}
+                        {% if categories[i] === "control" %}
+                        <li>
+                            <a href="../features/{{ fids[i] }}">{{ names[i] }}</a>
+                        </li>
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+                </div>
+            </details>
+
         </div>
     </div>
 
@@ -624,6 +623,7 @@
             <img src="../../../public/images/research/personalised.png" class="panel-image shadow" alt="A personalised version of the Universal Credit start page that suggests an up-to amount for payments">
 
             <p class="govuk-body-s">
+                <br />
                 From <a href="../round-2/">round 2</a>
             </p>
 
@@ -693,7 +693,7 @@
             <p>Understanding users’ natural language can be used to inform content, and how the GOV.UK account is described. </p>
 
         </div>
-        <div class="govuk-grid-column-one-third hide-on-mobile govuk-!-padding-bottom-8">
+        <div class="govuk-grid-column-one-third hide-on-mobile govuk-!-padding-bottom-4">
 
             <img src="../../../public/images/research/umbrella.svg" class="panel-image" alt="An umbrella">
 
@@ -915,11 +915,6 @@
                                 </blockquote>
 
                             </div>
-
-
-                        </div>
-                        <div class="govuk-grid-row">
-
                             <div class="govuk-grid-column-one-third">
 
                                 <blockquote>
@@ -934,6 +929,11 @@
                                 </blockquote>
 
                             </div>
+
+                        </div>
+                        <div class="govuk-grid-row">
+
+
                             <div class="govuk-grid-column-one-third">
 
                                 <blockquote>
@@ -948,7 +948,7 @@
                                 </blockquote>
 
                             </div>
-                            <div class="govuk-grid-column-one-third">
+                            <div class="govuk-grid-column-two-thirds">
 
                                 <blockquote>
                                     <p>
@@ -986,9 +986,9 @@
 
         <div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
-            <p>We explored concepts which could be introduced in the future as a move to a more ‘proactive’ government</p>
+            <p>We explored concepts which could be introduced in the future as a move to a more ‘proactive’ government.</p>
 
-            <p>In phase 3, round 2, we tested the concept of an automated recurring transaction relating to childcare, as well as the ability to <a href="../features/30.html">{{ data['features']['30'] }}</a> to the childcare provider.</p>
+            <p>In <a href="../phase-2-round-2/"> phase 2, round 2</a>, we tested the concept of an automated recurring transaction relating to childcare, as well as the ability to <a href="../features/30.html">{{ data['features']['30'] }}</a> to the childcare provider.</p>
 
             <p> Automation in this way received conflicting reviews. Some users saw this as a useful, more accurate way of processing a transaction, however, others were concerned that an error in automation may result in an inaccurate transaction which may lead to an issue with a benefit payment. </p>
 

@@ -48,13 +48,52 @@ router.get('/index-handover', function (req, res) {
     })
 })
 
+// INDEX PAGE (to update when URL changes)
+router.get('/index-handover-2', function (req, res) {
+
+    // calculate number of hub menu links
+    let hubmenuamount = req.session.data.hubmenu.length;
+
+    console.log('Menu links total is: ' + hubmenuamount)
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let hubmenu = []
+    let hubmenutitles = []
+    let hubmenuURLs = []
+    let hubmenuIDs = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenu[i] = req.session.data.hubmenu[i]
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenutitles[i] = req.session.data.hubmenu[i].title
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenuURLs[i] = req.session.data.hubmenu[i].url
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenuIDs[i] = req.session.data.hubmenu[i].id
+    }
+
+    //return these
+    return res.render('index-handover-2', {
+        'hubmenuamount': hubmenuamount,
+        'hubmenu': hubmenu,
+        'hubmenutitles': hubmenutitles,
+        'hubmenuURLs': hubmenuURLs,
+        'hubmenuIDs': hubmenuIDs
+
+    })
+})
+
 // PEOPLE  
 router.get('/people', function (req, res) {
 
     // calculate number of in page menu links
     let menusections = req.session.data.peoplemenu.length;
 
-    let thispage = req.session.data.hubmenu[7].id;
+    let thispage = req.session.data.hubmenu[6].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -163,7 +202,7 @@ router.get('/user-research', function (req, res) {
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
 
-    let thispage = req.session.data.hubmenu[9].id;
+    let thispage = req.session.data.hubmenu[8].id;
 
     // calculate number of in page menu links
     let menusections = req.session.data.userresearchmenu.length;
@@ -1308,7 +1347,7 @@ router.get('/data/survey', function (req, res) {
 // GLOSSARY
 router.get('/glossary', function (req, res) {
 
-    let thispage = req.session.data.hubmenu[6].id;
+    let thispage = req.session.data.hubmenu[5].id;
 
     let pagemenu = []
 
@@ -1326,7 +1365,7 @@ router.get('/prototypes', function (req, res) {
     // calculate number of in page menu links
     let menusections = req.session.data.prototypemenu.length;
 
-    let thispage = req.session.data.hubmenu[8].id;
+    let thispage = req.session.data.hubmenu[9].id;
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -1351,8 +1390,6 @@ router.get('/prototypes', function (req, res) {
         'titles': titles,
         'anchors': anchors,
         'thispage': thispage
-
-
     })
 })
 
