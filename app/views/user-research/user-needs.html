@@ -4,29 +4,54 @@
 
 {% block title %}
 {{ super() }}
-<!-- Subheading 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-
-        <p class="govuk-body-l">
-            {{ data['objectives']['objective1'] }}
-        </p>
-
-    </div>
-</div> -->
 {% endblock %}
 
 {% if pagemenu[0] %}
 {% block section1 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>The original <a href="https://docs.google.com/presentation/d/1r7Rq563dsahkepnyhRkfWOd9t-YnBDqK2YJj8Lc-IS4/edit#slide=id.g8ae8b29489_0_55" target="_blank">GOV.UK accounts discovery that took place in 2019</a> identified user needs and set out the original justification for the work.</p>
+    <div class="govuk-grid-row">
 
-    <p>Whilst our project was not aimed at gathering user needs as part of discovery style research, we have found it useful to document user needs along the way. </p>
+        <div class="govuk-grid-column-full">
 
-    <p>These user needs have enabled valuable discussions across the project. By putting user needs first, we can discuss which features best meet these needs, and also identify whether any of the provisional ideas for features could adversely impact users.</p>
+            <p>This list is non-exhaustive. Further user needs will be uncovered as research continues. </p>
 
-    <p>This has all supported conversations around risk, impact and future service design. </p>
+            <br />
+
+            <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-top-8 govuk-!-padding-bottom-8 highlight">
+                {% for number, label in needs %}
+                <li>
+                    <p class="govuk-body-l">
+
+                        {{ label }}</p>
+                </li>
+                {% else %}
+                {% endfor %}
+            </ol>
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-full">
+
+            <p>An acknowledgement of the full GDS format as follows: </p>
+
+            <blockquote>
+                <p><b>
+                        <i>As a [type of user], I need to [explain what the user wants / needs expects to do], so that [intended outcome] </i></b>
+                </p>
+            </blockquote>
+
+            <p>Our needs summarised above relate to that middle clause around wants / needs / expectations, as enablers to cross-gov services</p>
+
+            <p><a href="https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs" target="_blank">View 'Learning about users and their needs' in the Service Manual. </a> </p>
+
+        </div>
+
+    </div>
 
 </div>
 {% endblock %}
@@ -35,17 +60,26 @@
 
 {% if pagemenu[1] %}
 {% block section2 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8 ">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>We acknowledge that if we had chosen a different life event, these needs may look different. For example, if our work had focussed on ‘starting a business’ we may not have compiled this list of user needs.</p>
+    <div class="govuk-grid-row">
 
-    <p>Our project did not seek to define user needs across a plethora of possible cross-gov transactions.</p>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 ">
 
-    <p>We anticipate that this learning will be ongoing over time in the programme of work.
-    </p>
+            <p>We acknowledge that if we had chosen a different life event, these needs may look different.</p>
+            <p> For example, if our work had focussed on ‘starting a business’ our summary of user needs may have been different. </p>
 
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 ">
+
+
+            <p>Our project did not seek to define user needs across a plethora of possible cross-gov transactions.</p>
+            <p>We anticipate that this learning will be ongoing over time in the programme of work
+            </p>
+
+        </div>
+    </div>
 </div>
-
 {% endblock %}
 {% else %}
 {% endif %}
@@ -54,38 +88,28 @@
 {% block section3 %}
 <div class="govuk-grid-column-full">
 
-    <p>The GDS user needs format is as follows: </p>
+    <div class="govuk-grid-row">
 
-    <blockquote>
-        <p>
-            <i>As a [type of user], I need to [explain what the user wants / needs expects to do], so that [intended outcome] </i>
-        </p>
-    </blockquote>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
+            <p>The original <a href="https://docs.google.com/presentation/d/1r7Rq563dsahkepnyhRkfWOd9t-YnBDqK2YJj8Lc-IS4/edit#slide=id.g8ae8b29489_0_55" target="_blank">GOV.UK accounts discovery that took place in 2019</a> identified user needs and set out the original justification for the work.</p>
+
+            <p>Whilst our project was not aimed at gathering user needs as part of discovery style research, we have found it useful to document user needs along the way. </p>
+
+
+
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+            <p>These user needs have enabled valuable discussions across the project. By putting user needs first, we can discuss which features best meet these needs, and also identify whether any of the provisional ideas for features could adversely impact users.</p>
+
+            <p>This has all supported conversations around risk, impact and future service design. </p>
+
+        </div>
+
+    </div>
 </div>
-
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
-
-    <p>Within our research sample the type of users are claimants or customers of a service, and the intended outcome is always around claiming financial support.</p>
-
-    <p>A non-exhaustive list of needs is summarised here: </p>
-
-    <br /><br />
-
-    <ol class="govuk-list govuk-list--number govuk-list--spaced govuk-!-padding-top-8">
-        {% for number, label in needs %}
-        <li>
-            <p class="govuk-body-l">
-
-                {{ label }}</p>
-        </li>
-        {% else %}
-        {% endfor %}
-
-    </ol>
-
-</div>
-
 {% endblock %}
 {% else %}
 {% endif %}

@@ -194,16 +194,16 @@ module.exports = {
     ],
     userneedsmenu: [
         {
+            title: "Identified user needs",
+            anchor: "user-needs"
+        },
+        {
+            title: "How our ‘life event’ relates to user needs",
+            anchor: "life-event"
+        },
+        {
             title: "Background",
             anchor: "background"
-        },
-        {
-            title: "Guidance",
-            anchor: "guidance "
-        },
-        {
-            title: "Summary",
-            anchor: "summary"
         }
     ],
     userrecommendationsmenu: [
