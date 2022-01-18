@@ -152,7 +152,7 @@ module.exports = {
     ],
     userinsightsmenu: [
         {
-            title: "Users identified a variety of benefits of the concept of the GOV.UK account within X-Gov transactions",
+            title: "Users identified various benefits of the GOV.UK account and the concept of X-GOV journeys",
             anchor: "insight-1"
         },
         {
