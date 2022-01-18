@@ -212,13 +212,19 @@
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4 govuk-!-padding-top-2">
     <div class="govuk-grid-row govuk-!-padding-bottom-4">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-one-half">
 
             <p>We’ve used data models to show the difference between services As-is processes and how they could be supported by GOV.UK account features.</p>
 
             <p>These diagrams aim to illustrate both how service processes could change, and to highlight service needs that may not be met by the account features.</p>
+
+
+
+        </div>
+
+        <div class="govuk-grid-column-one-half">
 
             <p>The data models that include potential GOV.UK account features are indicative of what might be possible and do not represent an implementation roadmap at this time.
             </p>
@@ -227,155 +233,157 @@
 
         </div>
     </div>
-    <details class="govuk-details example" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text example-header">
-                View the As-is and Could-be data models
-            </span>
-        </summary>
-        <div class="govuk-details__text">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-l">As-is</h3>
+    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+        <div class="govuk-grid-column-full">
+            <details class="govuk-details example" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text example-header">
+                        View the As-is and Could-be data models
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <h3 class="govuk-heading-l">As-is</h3>
 
-                    <p>These diagrams show the data flows at a high level:</p>
+                            <p>These diagrams show the data flows at a high level:</p>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service application with manual evidence gathering from 3rd party data sources</h4>
+
+                            <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20As-Is.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with fully online application process
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20As-Is.jpg" class="graph shadow"></a>
+
+                        </div>
+
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with verbal data collection
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20As-Is.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple parties involved in the application process
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20As-Is.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple department interactions
+
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20As-Is.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
+                                <li><b>Low visibility for the user</b> - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
+                                <li><b>Manual verification</b> - services spend a significant amount of time validating the information users provide in their applications, often via telephone, post or manual system search. Some services do not verify the identity of applicants or involved parties.</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div class="govuk-grid-row govuk-!-padding-top-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+                            <h3 class="govuk-heading-l">Could-be</h3>
+                            <p>How services might receive and process service applications, in context of a GOV.UK account and the features we have explored in phase 2:</p>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service application with manual evidence gathering from 3rd party data sources</h4>
+
+                            <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with fully online application process
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
+
+                        </div>
+
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with verbal data collection
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple parties involved in the application process
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple department interactions
+
+                            </h4>
+
+                            <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
+
+                        </div>
+                    </div>
+                    <div class="govuk-grid-row govuk-!-padding-bottom-8">
+                        <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a href="../features/15.html">{{ data['features']['15'] }}</a> - using users profile information to populate service application forms</li>
+                                <li><a href="../features/06.html">{{ data['features']['06'] }}</a> / <a href="../features/29.html"> {{ data['features']['29'] }}</a> - users verified information for services to access</li>
+                                <li><a href="../features/06.html">{{ data['features']['06'] }}</a> / <a href="../features/29.html"> {{ data['features']['29'] }}</a> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
+                            </ul>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service application with manual evidence gathering from 3rd party data sources</h4>
-
-                    <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20As-Is.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with fully online application process
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20As-Is.jpg" class="graph shadow"></a>
-
-                </div>
-
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with verbal data collection
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20As-Is.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple parties involved in the application process
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20As-Is.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple department interactions
-
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20As-Is.jpg" target="_blank"><img src="../../../public/images/research/data-flows/as-is-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20As-Is.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><b>Broken data-flows</b> - PDF applications or digital frontend applications that must be printed and posted into the service.</li>
-                        <li><b>Low visibility for the user</b> - an application status is often captured and regularly updated in backend systems, but services may be unable to share this information with the user.</li>
-                        <li><b>Manual verification</b> - services spend a significant amount of time validating the information users provide in their applications, often via telephone, post or manual system search. Some services do not verify the identity of applicants or involved parties.</li>
-
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="govuk-grid-row govuk-!-padding-top-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
-                    <h3 class="govuk-heading-l">Could-be</h3>
-                    <p>How services might receive and process service applications, in context of a GOV.UK account and the features we have explored in phase 2:</p>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service application with manual evidence gathering from 3rd party data sources</h4>
-
-                    <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20application%20with%20manual%20evidence%20gathering%20from%203rd%20party%20data%20sources%20Possible%20To-Be%20with%20X-Gov%20Features.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with fully online application process
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20fully%20online%20application%20process%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
-
-                </div>
-
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with verbal data collection
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20verbal%20data%20collection%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple parties involved in the application process
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20parties%20involved%20in%20the%20application%20process%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <h4 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-4">Service with multiple department interactions
-
-                    </h4>
-
-                    <a href="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20Possible%20To-Be.jpg" target="_blank"><img src="../../../public/images/research/data-flows/to-be-Data%20flow%20diagrams%20-%20Service%20with%20multiple%20department%20interactions%20-%20Possible%20To-Be.jpg" class="graph shadow"></a>
-
-                </div>
-            </div>
-            <div class="govuk-grid-row govuk-!-padding-bottom-8">
-                <div class="govuk-grid-column-full govuk-!-padding-bottom-8 ">
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><a href="../features/15.html">{{ data['features']['15'] }}</a> - using users profile information to populate service application forms</li>
-                        <li><a href="../features/06.html">{{ data['features']['06'] }}</a> / <a href="../features/29.html"> {{ data['features']['29'] }}</a> - users verified information for services to access</li>
-                        <li><a href="../features/06.html">{{ data['features']['06'] }}</a> / <a href="../features/29.html"> {{ data['features']['29'] }}</a> - for services to create as outputs of the transaction, for example a War Pension recipient</li>
-                    </ul>
-
-                </div>
-            </div>
+            </details>
         </div>
-    </details>
-
-
+    </div>
 </div>
 {% endblock %}
 {% else %}
