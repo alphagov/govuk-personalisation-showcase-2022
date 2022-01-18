@@ -253,10 +253,11 @@
 
             <p>Research within this programme has been going for some time, with a <a href="https://docs.google.com/presentation/d/1r7Rq563dsahkepnyhRkfWOd9t-YnBDqK2YJj8Lc-IS4/edit#slide=id.g8ae8b29489_0_55" target="_blank">GOV.UK accounts discovery</a> taking place in 2019.</p>
             <p>In order to build on that work, our initial brief looked at testing the role of GOV.UK accounts within cross government journeys.</p>
+            <p>The primary focus of our citizen research was on feature concept exploration.</p>
 
         </div>
         <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
-            <p>The primary focus of our citizen research was on feature concept exploration.</p>
+
 
             <p>We used front end <a href="../prototypes/">prototypes</a> to walk users through example scenarios. This way, we were able to elicit discussions about their expectations and perceptions of the GOV.UK account, its role in cross government services and the various <a href="../features/">features</a>.</p>
             <p>In some sessions we asked participants to input information into form fields, insisting they used fictional information in the prototype.
@@ -266,7 +267,7 @@
     </div>
 </div>
 
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+<!-- <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4 govuk-!-padding-bottom-2">
 
@@ -285,15 +286,17 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4 govuk-!-padding-bottom-2">
-
-            <h4 class="govuk-heading-s">Gathering insights</h4>
-
-        </div>
 
         <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
 
@@ -315,36 +318,32 @@
             </p>
 
         </div>
-        {% endblock %}
-        {% else %}
-        {% endif %}
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 
-        {% if pagemenu[3] %}
-        {% block section4 %}
-        {% endblock %}
-        {% else %}
-        {% endif %}
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
 
-        {% if pagemenu[4] %}
-        {% block section5 %}
-        {% endblock %}
-        {% else %}
-        {% endif %}
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
 
-        {% if pagemenu[5] %}
-        {% block section6 %}
-        {% endblock %}
-        {% else %}
-        {% endif %}
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
 
-        {% if pagemenu[6] %}
-        {% block section7 %}
-        {% endblock %}
-        {% else %}
-        {% endif %}
-
-        {% if pagemenu[7] %}
-        {% block section8 %}
-        {% endblock %}
-        {% else %}
-        {% endif %}
+{% if pagemenu[7] %}
+{% block section8 %}
+{% endblock %}
+{% else %}
+{% endif %}

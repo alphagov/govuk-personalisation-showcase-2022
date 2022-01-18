@@ -130,6 +130,10 @@ module.exports = {
         {
             title: "Testing",
             anchor: "testing",
+    },
+        {
+            title: "Gathering insights",
+            anchor: "gathering-insights",
     }
     ],
     usersummarymenu: [
