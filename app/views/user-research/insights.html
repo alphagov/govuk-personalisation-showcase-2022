@@ -12,24 +12,39 @@
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
     <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-one-half">
 
             <p>A recurring piece of feedback was the usefulness of having <b>everything in one place</b>. </p>
 
             <p>Users also commented on:</p>
 
-            <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-bottom-2">
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Time saving </li>
                 <li>A consistent, easy and efficient way of dealing with the government</li>
                 <li>One login for everything</li>
             </ul>
 
+            <p>Observing user reactions and analysing user comments such as these, enables us to define user needs. </p>
+
 
         </div>
+        <div class="govuk-grid-column-one-half">
 
+
+            <p>Through these comments alone we can <a href="user-needs.html#user-needs">identify a list of user needs</a>, such as:
+            </p>
+
+            <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-6">
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce the stress of paperwork and admin</strong> </li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Save time </strong></li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Avoid phoning the service </strong></li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce cognitive load</strong> </li>
+                <li> <strong class="govuk-tag govuk-tag--turquoise">Find what I need easily </strong></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="govuk-grid-row  govuk-!-padding-bottom-4">
+    <div class="govuk-grid-row  govuk-!-padding-bottom-4 govuk-!-padding-top-4">
 
         <details class="govuk-details example" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -179,25 +194,6 @@
             </div>
         </details>
 
-    </div>
-
-    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
-
-        <div class="govuk-grid-column-full">
-
-            <p>Observing user reactions and analysing user comments such as these, enables us to define user needs. </p>
-
-            <p>Through these comments alone we can <a href="user-needs.html#user-needs">identify a list of user needs</a>, such as:
-            </p>
-
-            <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-6">
-                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce the stress of paperwork and admin</strong> </li>
-                <li> <strong class="govuk-tag govuk-tag--turquoise">Save time </strong></li>
-                <li> <strong class="govuk-tag govuk-tag--turquoise">Avoid phoning the service </strong></li>
-                <li> <strong class="govuk-tag govuk-tag--turquoise">Reduce cognitive load</strong> </li>
-                <li> <strong class="govuk-tag govuk-tag--turquoise">Find what I need easily </strong></li>
-            </ul>
-        </div>
     </div>
 
 </div>
@@ -463,7 +459,7 @@
 
     <div class="govuk-grid-row govuk-!-padding-bottom-4">
 
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-one-half">
 
             <p>Not all users will want to save everything to their GOV.UK account.</p>
             <p>Users said that there were some data items they would not save - for example, details subject to change such as weekly pay, and their children’s personal data.
@@ -473,9 +469,43 @@
 
         </div>
 
+        <div class="govuk-grid-column-one-half">
+
+            <p>Throughout user research, we explored a variety of design concepts which would provide users with easy and transparent ways of managing their data.
+
+            </p>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        View features which allow users to control their data
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <ul class="govuk-list  govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+                        {% for i in range(1, featurestotal) -%}
+                        {% if categories[i] === "control" %}
+                        <li>
+                            <a href="../features/{{ fids[i] }}">{{ names[i] }}</a>
+                        </li>
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+                </div>
+            </details>
+
+
+            <p>We believe that providing users with ways to manage their data fosters confidence in the account and meets the following <a href="../user-research/user-needs.html"> user need</a>: </p>
+
+            <strong class="govuk-tag govuk-tag--turquoise">
+                {{ data['needs']['needlabel7'] }}
+            </strong>
+
+        </div>
+
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+    <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
 
         <div class="govuk-grid-column-full">
 
@@ -567,33 +597,6 @@
         </div>
     </div>
 
-    <div class="govuk-grid-row govuk-!-padding-bottom-4">
-
-        <div class="govuk-grid-column-full">
-
-            <p>Throughout user research, we explored a variety of design concepts which would provide users with easy and transparent ways of managing their data:
-
-            </p>
-
-            <ul class="govuk-list  govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-4">
-                {% for i in range(1, featurestotal) -%}
-                {% if categories[i] === "control" %}
-                <li>
-                    <a href="../features/{{ fids[i] }}">{{ names[i] }}</a>
-                </li>
-                {% endif %}
-                {%- endfor %}
-            </ul>
-
-            <p>We believe that providing users with ways to manage their data fosters confidence in the account and meets the following <a href="../user-research/user-needs.html"> user need</a>: </p>
-
-            <strong class="govuk-tag govuk-tag--turquoise">
-                {{ data['needs']['needlabel7'] }}
-            </strong>
-
-        </div>
-
-    </div>
 
 </div>
 {% endblock %}
