@@ -225,8 +225,6 @@
 
     <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
 
-
-
         <details class="govuk-details example" data-module="govuk-details">
             <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text example-header">
@@ -272,28 +270,84 @@
                 </div>
             </div>
         </details>
-
-
-
     </div>
 
 </div>
-
-
 {% endblock %}
 {% else %}
 {% endif %}
 
 {% if pagemenu[2] %}
 {% block section3 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-top-4 govuk-!-padding-bottom-8">
 
-    <p>Some users commented that they thought the information would be used for demographic analysis </p>
+    <div class="govuk-grid-row">
 
-    <p>A small number of users were concerned about the data that the government was gathering about them, with a concern that it would be used against them one day. </p>
-    <br />
-    <p><a href="../user-research/recommendations#recommendation-1">View end user recommendations on clarity and transparency</a>
-    </p>
+        <div class="govuk-grid-column-one-half">
+
+
+            <p>Some believed the information entered into a GOV.UK account could be used for demographic analysis. </p>
+
+        </div>
+        <div class="govuk-grid-column-one-half">
+
+            <p> A small number of research participants we spoke to, expressed concerns around surveillance.</p>
+
+        </div>
+
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+
+        <details class="govuk-details example" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text example-header">
+                    {{ data['example'] }}
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-half">
+
+                        <blockquote>
+                            <p>
+                                <i>
+                                    This data would be used by the government for forecasting and demographics
+
+                                </i>
+                            </p>
+                            <p>
+                                from <a href="../round-1/"> phase 1, round 1</a>
+                            </p>
+
+                        </blockquote>
+
+                    </div>
+
+                    <div class="govuk-grid-column-one-half">
+
+                        <blockquote>
+                            <p>
+                                <i>
+                                    I would share information but not details about my children - it’s too personal, too ‘'Big Brother'
+
+                                </i>
+                            </p>
+                            <p>
+                                from <a href="../round-1/"> phase 1, round 1</a>
+                            </p>
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+            </div>
+        </details>
+
+
+
+    </div>
 
 
 </div>
@@ -303,26 +357,93 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-    <p>Where we covered this in concept testing: </p>
+    <div class="govuk-grid-row govuk-!-padding-top-4">
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>In our user research scenarios:
-            <ul class="govuk-list govuk-list--bullet">
-                <li>we asked users to consent to save individual items of data to their GOV.UK account</li>
-                <li>We then asked users to consent before this was used in a transactional form</li>
-                <li>Users reacted positively to this level of management</li>
-            </ul>
-        </li>
-        <li>We also iterated on the <a href="../features/03.html">dashboard</a> options for the <a href="../features/21.html">management of data</a> </li>
-        <li>We iterated on ideas around <a href="../features/17.html">audit trail</a> which were also well received </li>
-        <li>We indicated at a page and paragraph level where data was being used for <a href="../features/04.html"> curated content and personalisation</a> </li>
-        <li>We explored options around <a href="../features/10.html">global controls</a> in a ‘settings’ area of the account</li>
-    </ul>
-    <br />
-    <p><a href="../user-research/recommendations#recommendation-2">View end user recommendations on control and consent</a>
-    </p>
+        <div class="govuk-grid-column-one-half">
+
+            <p>Users also expected that if they entered data to a GOV.UK account, this data would be shared across all government services. This upholds findings from previous rounds of user research carried out by GOV.UK teams. </p>
+            <p>As a team, we refer to this idea of data sharing as <a href="../features/08.html"> ‘global push’</a>. That is, if a user adds, amends or deletes data, it will automatically be updated, or ‘pushed’, across the account and relevant government services.</p>
+
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <p>The expectation that ‘global push’ occurs, was a recurring theme throughout our user research sessions, and one that presents a risk in terms of human impact due to the gap between that expectation and reality.</p>
+
+            <p> If users engage in a transaction and believe that the data has been pushed and processed by all relevant services, when in reality that is not the case, the outcome could be detrimental - particularly in scenarios relating to benefits and eligibility.</p>
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Future design should take user expectations into account
+                </strong>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-6">
+
+        <details class="govuk-details example" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text example-header">
+                    {{ data['example'] }}
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <p> We asked user research participants to explain their expectation around global push, and we heard answers such as:
+                </p>
+                <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-third">
+
+                        <blockquote>
+                            <p>
+                                <i>
+                                    Because I’m logged into the GOV.UK website
+                                </i>
+                            </p>
+
+                        </blockquote>
+
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+
+                        <blockquote>
+                            <p>
+                                <i>
+                                    Because it’s all within government
+
+                                </i>
+                            </p>
+
+                        </blockquote>
+
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+
+                        <blockquote>
+                            <p>
+                                <i>
+                                    Because digital things are connected
+                                </i>
+                            </p>
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+            </div>
+        </details>
+
+    </div>
 
 </div>
 {% endblock %}
@@ -331,26 +452,142 @@
 
 {% if pagemenu[4] %}
 {% block section5 %}
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-
-    <p>In our concept exploration, users expected that data saved to their GOV.UK account would be <a href="../features/08.html">‘pushed’</a> to the services they interact with. </p>
-    <p>When this was raised during user research we explored why.</p>
-    <p>We heard answers such as:</p>
-    <br />
-    <blockquote>
-        <p><i>“Because I’m logged into the GOV.UK website” </i></p>
-        <p><i>“Because it’s all within government”</i> </p>
-        <p><i>“Because digital things are connected”</i></p>
-    </blockquote>
-</div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
-    <p>This supplements and supports the original discovery research within the GOV.UK accounts programme which took place in 2019. </p>
-    <p>One assumption is that the naming of the GOV.UK account - which is the same name as the GOV.UK website, could be manifesting this misconception.</p>
-
-</div>
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
-    <p><a href="../user-research/recommendations#recommendation-1">View end user recommendations on clarity and transparency</a>
-    </p>
+
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <p>Not all users will want to save everything to their GOV.UK account.</p>
+            <p>Users said that there were some data items they would not save - for example, details subject to change such as weekly pay, and their children’s personal data.
+            </p>
+            <p>Therefore, providing users with the choice to save at an individual data item level is preferable.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+                <details class="govuk-details example" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text example-header">
+                            {{ data['example'] }}
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        <div class="govuk-grid-row">
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <h4 class="govuk-heading-s">A user explains why they wouldn’t save information that was subject to change </h4>
+
+                                <audio controls>
+                                    <source src="../../../public/mp3/end-users/insight-4-1.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+
+                                <br />
+                                <p class="govuk-body-s">
+                                    Participant from phase 1 round 2
+                                </p>
+
+                                <details class="govuk-details" data-module="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            View transcript
+                                        </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+
+                                        <blockquote>
+                                            <p class="govuk-body-s">
+                                                I’d probably save everything apart from childcare costs, average weekly hours worked, and your average weekly pay, but that’s only purely because I work different hours each week, I get paid different each week and my child costs are different each week. So for me, that would probably be what I’d do, just to make it a little bit easier when I come to it, instead of having to delete what’s already in there. But if I was in like a job where I get paid the same amount every week or every month and my hours didn’t change, then I’d be quite happy to save all my details on there for next time.</p>
+
+
+                                        </blockquote>
+                                    </div>
+                                </details>
+
+                            </div>
+
+                            <div class="govuk-grid-column-one-half">
+
+                                <h4 class="govuk-heading-s">A user reacts positively to the choice to save at individual data item level</h4>
+
+                                <audio controls>
+                                    <source src="../../../public/mp3/end-users/insight-4-2.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+
+                                <br />
+                                <p class="govuk-body-s">
+                                    Participant from phase 1 round 2
+                                </p>
+
+                                <details class="govuk-details" data-module="govuk-details">
+                                    <summary class="govuk-details__summary">
+                                        <span class="govuk-details__summary-text">
+                                            View transcript
+                                        </span>
+                                    </summary>
+                                    <div class="govuk-details__text">
+
+                                        <blockquote>
+                                            <p class="govuk-body-s">
+                                                Quite a few sites that I’ve used before, they don’t give you the option, they just save everything. So, it’s quite good that they give you the option because, I mean, each person’s different; some people will be happy for all the information to be stored, some people wouldn’t want any information storing at all. So the fact that that actually gives you the option to save all of your information, or some of your information, or none at all, I think that’s quite good. Because it gives everybody the opportunity then, of their preferences.</p>
+
+
+                                        </blockquote>
+                                    </div>
+                                </details>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <p>Throughout user research, we explored a variety of design concepts which would provide users with easy and transparent ways of managing their data:
+
+            </p>
+
+            <ul class="govuk-list  govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+                {% for i in range(1, featurestotal) -%}
+                {% if categories[i] === "control" %}
+                <li>
+                    <a href="../features/{{ fids[i] }}">{{ fids[i] }}. {{ names[i] }}</a>
+                </li>
+                {% endif %}
+                {%- endfor %}
+            </ul>
+
+            <p>We believe that providing users with ways to manage their data fosters confidence in the account and meets the following <a href="../user-research/user-needs.html"> user need</a>: </p>
+
+            <strong class="govuk-tag govuk-tag--turquoise">
+                {{ data['needs']['needlabel7'] }}
+            </strong>
+
+        </div>
+
+    </div>
+
 </div>
 {% endblock %}
 {% else %}

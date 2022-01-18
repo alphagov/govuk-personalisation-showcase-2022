@@ -70,6 +70,7 @@
         {
             "fid": "03",
             "name": "Dashboard",
+            "done": true,
             "category": "control",
             "priority": "high",
             "userneeds": ["02", "06", "07", "08"],

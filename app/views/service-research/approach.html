@@ -4,9 +4,6 @@
 {{ super() }}
 {% endblock %}
 
-
-
-
 {% if pagemenu[0] %}
 {% block section1 %}
 <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
@@ -48,20 +45,21 @@
     <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-two-thirds">
+
             <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
 
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-                <li>Current data sharing activity</li>
+                <li>Current data sharing activity between government services</li>
                 <li>Current challenges</li>
-                <li>Benefits of joining up services</li>
-                <li>Future challenges of joining up services</li>
-                <li>Future expectations</li>
-                <li>Service readiness</li>
+                <li>Benefits of joining up services and sharing data across government, via the GOV.UK account</li>
+                <li>Future challenges of joining up services and sharing data across government, via the GOV.UK account</li>
+                <li>Future expectations of joining up services and and sharing data across government, via the GOV.UK account</li>
+                <li>Service readiness for sharing data across government, via the GOV.UK account</li>
             </ul>
 
         </div>
     </div>
-    <div class="govuk-grid-row">
+    <!-- <div class="govuk-grid-row">
 
         <div class="govuk-grid-column-full">
             <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
@@ -85,7 +83,7 @@
             </ol>
 
         </div>
-    </div>
+    </div> -->
 </div>
 {% endblock %}
 {% else %}
@@ -108,16 +106,43 @@
 
         </div>
     </div>
+
     <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h3 class="govuk-heading-m govuk-!-padding-top-8">Assumptions</h3>
+
+            <p>We framed the sessions based on the following:</p>
+
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+                <li>Looking 5-10 years into the future</li>
+                <li>All services use the GOV.UK account single sign-on</li>
+                <li>The account has the capability to save and reuse data</li>
+                <li>There are a number of account features that potentially could be available to users to create a personalised experience</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
 
             <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
 
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
-                <li>Understand the service expectations and challenges for each feature</li>
-                <li>How each of the features could deliver future value to a service</li>
-                <li>Results from the sessions aggregated into a matrix, showing feature placement across value and complexity of adoption</li>
+                <li>Understand service expectations and challenges for each feature</li>
+                <li>Explore how each of the features could deliver future value to a service</li>
+                <li>Explore the perceived complexity of adopting each feature
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>Any risks services associate with the feature</li>
+                        <li>Possible impact on the service</li>
+                        <li>Considerations around design/technical/legal/behavioural/cultural </li>
+                        <li>Any other possible consequences of the feature</li>
+
+                    </ul>
+                </li>
             </ul>
 
         </div>
@@ -127,7 +152,7 @@
         <div class="govuk-grid-column-full">
             <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
 
-            <p>We did an interview and moderated card sorting with service owners and product managers.</p>
+            <p>We conducted an interview and moderated card sorting with service owners and product managers.</p>
 
             <p>Any features associated with account setup were excluded from the initial service research. We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
 
@@ -153,19 +178,19 @@
             <h3 id="features-tested" class="govuk-heading-m govuk-!-padding-top-8">Features included in the research</h3>
 
             <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
-                <li><a href="../features/06.html"> Verified data</a></li>
-                <li><a href="../features/08.html">Global push</a></li>
-                <li><a href="../features/07.html">Notifications</a></li>
-                <li><a href="../features/24.html">Reminders</a></li>
-                <li><a href="../features/05.html">Use of existing data</a></li>
-                <li><a href="../features/19.html">Fixed vs editable data</a></li>
-                <li><a href="../features/20.html">Share specific data with another person’s GOV.UK account</a></li>
-                <li><a href="../features/18.html">Saved documents</a></li>
-                <li><a href="../features/01.html">Suggested eligibility</a></li>
-                <li><a href="../features/16.html">Calculated data based on known information (Derived data)</a></li>
-                <li><a href="../features/04.html">Personalised content</a></li>
-                <li><a href="../features/15.html">Autofill forms</a></li>
-                <li><a href="../features/09.html">Prompt user to complete profile</a></li>
+                <li><a href="../features/06.html">{{ data['features']['06'] }}</a></li>
+                <li><a href="../features/08.html">{{ data['features']['08'] }}</a></li>
+                <li><a href="../features/07.html">{{ data['features']['07'] }}</a></li>
+                <li><a href="../features/24.html">{{ data['features']['24'] }}</a></li>
+                <li><a href="../features/05.html">{{ data['features']['05'] }}</a></li>
+                <li><a href="../features/19.html">{{ data['features']['19'] }}</a></li>
+                <li><a href="../features/20.html">{{ data['features']['20'] }}</a></li>
+                <li><a href="../features/18.html">{{ data['features']['18'] }}</a></li>
+                <li><a href="../features/01.html">{{ data['features']['01'] }}</a></li>
+                <li><a href="../features/16.html">{{ data['features']['16'] }}</a></li>
+                <li><a href="../features/04.html">{{ data['features']['04'] }}</a></li>
+                <li><a href="../features/15.html">{{ data['features']['15'] }}</a></li>
+                <li><a href="../features/09.html">{{ data['features']['09'] }}</a></li>
             </ul>
 
 
@@ -180,22 +205,62 @@
 
 {% if pagemenu[3] %}
 {% block section4 %}
-<div class="govuk-grid-column-one-half">
+<div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
-    <p>Due to limited availability at the end of the year, many service teams were unable to support with user research.</p>
-    <p>We were unable to recruit services that exactly matched those within our life event (‘Life when having a baby’).</p>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Challenges</h3>
+
+        </div>
+
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+
+            <p>Due to limited availability at the end of the year, many service teams were unable to support with user research.</p>
+            <p>We were unable to recruit services that exactly matched those within our life event (‘Life when having a baby’).</p>
+
+        </div>
+        <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+
+            <p>To overcome this, we recruited a wide range of services users (across local and central government) to make sure our findings are representative of service needs.</p>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-padding-top-8">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Research limitations</h3>
+
+        </div>
+
+    </div>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+
+            <p>The methodology we used allowed us to explore features with service teams, learning where they saw value and complexity.</p>
+            <p>It’s important to remember that the final rankings are opinions and expectations based on a short description of each feature.
+            </p>
+
+        </div>
+        <div class="govuk-grid-column-one-half">
+
+            <p>Much more detailed research is needed to fully understand the true value and complexity of adopting each of the features.</p>
+            <p>
+                These sessions were conducted with service owners and product managers and the prioritisation exercise was not based on any technical assessments of complexity.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
-
-    <p>To overcome this, we recruited a wide range of services users (across local and central government) to make sure our findings are representative of service needs.</p>
-</div>
-{% endblock %}
-{% else %}
-{% endif %}
-
-{% if pagemenu[4] %}
-{% block section5 %}
 {% endblock %}
 {% else %}
 {% endif %}

@@ -40,8 +40,7 @@
     </ul>
 
 </div>
-
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
     <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What was in scope</h3>
 
@@ -51,7 +50,7 @@
     </ul>
 
 </div>
-<div class="govuk-grid-column-one-half govuk-!-padding-bottom-8">
+<div class="govuk-grid-column-one-half govuk-!-padding-bottom-4">
 
     <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What was out of scope</h3>
 
@@ -62,13 +61,9 @@
     </ul>
 
 </div>
-{% endblock %}
-{% else %}
-{% endif %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8">
 
-{% if pagemenu[2] %}
-{% block section3 %}
-<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+    <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">Methodology</h3>
 
     <p>We ran workshops with service owners, product owners and other roles to help map out how services process applications and the data captured at each step of the process.</p>
 
@@ -82,15 +77,13 @@
         <li><b>HMRC</b>- Register a trust</li>
     </ol>
 
-    <p>HMRC Child Benefit also shared their existing process maps.</p>
-
 </div>
 {% endblock %}
 {% else %}
 {% endif %}
 
-{% if pagemenu[3] %}
-{% block section4 %}
+{% if pagemenu[2] %}
+{% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>During our service research and workshops, we asked services if they currently use and maintain data dictionaries.</p>
@@ -108,8 +101,8 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[4] %}
-{% block section5 %}
+{% if pagemenu[3] %}
+{% block section4 %}
 <div class="govuk-grid-column-one-half govuk-!-padding-bottom-8 govuk-!-padding-top-2">
 
     <p>We had intended to analyse service-held data dictionaries as a part of our research. Unfortunately, most of the services we spoke to didn’t have a data dictionary - although some identified it as an aspiration.</p>

@@ -432,8 +432,6 @@ router.get('/user-research/insights', function (req, res) {
     let parent = req.session.data.hubmenu[1].title;
     let parentlink = req.session.data.hubmenu[1].url;
 
-    console.log('This page is: ' + thispage)
-
     // calculate number of in page menu links
     let menusections = req.session.data.userinsightsmenu.length;
 
@@ -447,23 +445,39 @@ router.get('/user-research/insights', function (req, res) {
     let names = []
     let fids = []
     let needs = req.session.data.needs
+    let categories = []
+    let category = []
+    let featuresmenu = []
+    let features = []
+    let priorities = []
+    let impact = []
+    let complexity = []
+    let value = []
 
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
         pagemenu[i] = req.session.data.userinsightsmenu[i]
     }
     for (i = 0; i < menusections; i++) {
-        titles[i] = req.session.data.userinsightsmenu[i].title
-    }
-    for (i = 0; i < menusections; i++) {
         anchors[i] = req.session.data.userinsightsmenu[i].anchor
     }
+    for (i = 0; i < menusections; i++) {
+        titles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    // loop though the features and populate the arrays
     for (i = 0; i < featurestotal; i++) {
-        featurestotal[i] = req.session.data.rdd.features[i]
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < featurestotal; i++) {
+        categories[i] = req.session.data.rdd.features[i].category
     }
     for (i = 0; i < featurestotal; i++) {
         names[i] = req.session.data.rdd.features[i].name
         fids[i] = req.session.data.rdd.features[i].fid
+        priorities[i] = req.session.data.rdd.features[i].priority
+        impact[i] = req.session.data.rdd.features[i].userimpact
+        complexity[i] = req.session.data.rdd.features[i].complexityservice
+        value[i] = req.session.data.rdd.features[i].valueservice
     }
 
     //return these
@@ -478,7 +492,16 @@ router.get('/user-research/insights', function (req, res) {
         'thispage': thispage,
         'parent': parent,
         'needs': needs,
-        'parentlink': parentlink
+        'parentlink': parentlink,
+        'featuresmenu': featuresmenu,
+        'features': features,
+        'categories': categories,
+        'category': category,
+        'priorities': priorities,
+        'impact': impact,
+        'complexity': complexity,
+        'value': value,
+        'thispage': thispage
     })
 })
 
@@ -1738,6 +1761,7 @@ router.get('/features/03', function (req, res) {
     // grab the items we need to display and make the form work
     let fid = req.session.data.rdd.features[index].fid
     let name = req.session.data.rdd.features[index].name
+    let done = req.session.data.rdd.features[index].done
     let category = req.session.data.rdd.features[index].category
     let priority = req.session.data.rdd.features[index].priority
     let userneeds = req.session.data.rdd.features[index].userneeds
@@ -1763,6 +1787,7 @@ router.get('/features/03', function (req, res) {
     return res.render('features/03', {
         'fid': fid,
         'name': name,
+        'done': done,
         'category': category,
         'priority': priority,
         'features': features,

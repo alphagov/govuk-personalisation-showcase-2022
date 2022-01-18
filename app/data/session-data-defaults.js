@@ -156,19 +156,19 @@ module.exports = {
             anchor: "insight-2"
         },
         {
-            title: "Users want to be clear on how their data is being used",
+            title: "Users hold a variety of assumptions about how their data is used by the government",
             anchor: "insight-3"
         },
         {
-            title: "Data control and management functions were received positively in user research",
+            title: "Users hold a variety of assumptions about how their data is shared by the government",
             anchor: "insight-4"
         },
         {
-            title: "Users expect their data will be processed in some way",
+            title: "Users appreciate the ability to control and manage their data",
             anchor: "insight-5"
         },
         {
-            title: "Users see curated or personalised content as being accurate to them",
+            title: "Users read personalised content as accurate to them",
             anchor: "insight-6"
         },
         {
@@ -184,11 +184,11 @@ module.exports = {
             anchor: "insight-9"
         },
         {
-            title: "There were mixed perceptions of future features such as automated transactions",
+            title: "Automated transactions create a sense of nervousness for some users ",
             anchor: "insight-10"
         },
         {
-            title: "User perception of how features could be used may not align to how we intended them to be used (needs rewrite)",
+            title: "Users expect a way of getting in touch if they have an issue with their account",
             anchor: "insight-11"
         }
     ],
@@ -268,8 +268,8 @@ module.exports = {
             anchor: "round-2",
     },
         {
-            title: "Challenges",
-            anchor: "challenges",
+            title: "Challenges & limitations",
+            anchor: "limitations",
     }
     ],
     servicesummarymenu: [
@@ -362,10 +362,6 @@ module.exports = {
         {
             title: "Workshops",
             anchor: "workshops",
-    },
-        {
-            title: "Methodology",
-            anchor: "methodology",
     },
         {
             title: "Data dictionary",
@@ -506,7 +502,7 @@ module.exports = {
         "14": "Edit details in a service journey",
         "15": "Autofill",
         "16": "Derived data",
-        "17": "Audit trail / activity log",
+        "17": "Audit trail",
         "18": "Saved documents",
         "19": "Fixed vs editable data",
         "20": "Shared information",
@@ -518,7 +514,7 @@ module.exports = {
         "26": "Data naming conventions",
         "27": "Forecasting",
         "28": "GOV.UK preferences used for services",
-        "29": "Service data used to personalise content",
+        "29": "Account flags",
         "33": "Store card and manage recurring payment"
     },
     needs: {
