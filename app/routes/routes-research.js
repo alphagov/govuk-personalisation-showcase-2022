@@ -2592,6 +2592,7 @@ router.get('/features/15', function (req, res) {
     // grab the items we need to display and make the form work
     let fid = req.session.data.rdd.features[index].fid
     let name = req.session.data.rdd.features[index].name
+    let done = req.session.data.rdd.features[index].done
     let category = req.session.data.rdd.features[index].category
     let priority = req.session.data.rdd.features[index].priority
     let userneeds = req.session.data.rdd.features[index].userneeds
@@ -2617,6 +2618,7 @@ router.get('/features/15', function (req, res) {
     return res.render('features/15', {
         'fid': fid,
         'name': name,
+        'done': done,
         'category': category,
         'priority': priority,
         'features': features,

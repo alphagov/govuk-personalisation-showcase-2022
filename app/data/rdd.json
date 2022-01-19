@@ -339,6 +339,7 @@
         {
             "fid": "15",
             "name": "Autofill",
+            "done": true,
             "category": "personalisation",
             "priority": "high",
             "userneeds": ["02", "03", "04", "05", "07"],
