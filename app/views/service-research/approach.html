@@ -30,7 +30,7 @@
 
     <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-full highlight">
 
             <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
 
@@ -42,11 +42,11 @@
         </div>
     </div>
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
 
         <div class="govuk-grid-column-two-thirds">
 
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+            <h3 class="govuk-heading-m govuk-!-padding-top-8 govuk-!-padding-bottom-2">What we wanted to find out</h3>
 
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Current data sharing activity between government services</li>
@@ -59,12 +59,18 @@
 
         </div>
     </div>
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-top-4">
 
         <div class="govuk-grid-column-full">
             <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
 
             <p>We interviewed service owners and product managers.</p>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-4">
+
+        <div class="govuk-grid-column-full">
 
             <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
 
@@ -92,9 +98,9 @@
 {% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-bottom-4">
 
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-full highlight">
 
             <h3 class="govuk-heading-m govuk-!-padding-top-2">Objectives</h3>
 
@@ -106,11 +112,11 @@
         </div>
     </div>
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
         <div class="govuk-grid-column-two-thirds">
 
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">Assumptions</h3>
+            <h3 class="govuk-heading-m ">Assumptions</h3>
 
             <p>We framed the sessions based on the following:</p>
 
@@ -124,11 +130,11 @@
         </div>
     </div>
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
 
         <div class="govuk-grid-column-two-thirds">
 
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">What we wanted to find out</h3>
+            <h3 class="govuk-heading-m govuk-!-padding-bottom-2">What we wanted to find out</h3>
 
             <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
                 <li>Understand service expectations and challenges for each feature</li>
@@ -146,16 +152,24 @@
 
         </div>
     </div>
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
 
         <div class="govuk-grid-column-full">
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">Methodology</h3>
+
+            <h3 class="govuk-heading-m ">Methodology</h3>
+
+        </div>
+
+        <div class="govuk-grid-column-one-half">
 
             <p>We conducted an interview and moderated card sorting with service owners and product managers.</p>
 
             <p>Any features associated with account setup were excluded from the initial service research. We focused on prioritising features that could be enabled after the account has the capability to save and reuse data.</p>
 
-            <p>We discussed each of these <a href="#features-tested"> 13 hypothetical account features</a> and asked participants to card sort each feature in 2 ways:
+        </div>
+        <div class="govuk-grid-column-one-half">
+
+            <p>We discussed each of these 13 hypothetical account features and asked participants to card sort each feature in 2 ways:
             </p>
 
             <ul class="govuk-list govuk-list--bullet">
@@ -163,7 +177,38 @@
                 <li>the perceived <b>complexity of adoption</b></li>
             </ul>
 
-            <h3 class="govuk-heading-m govuk-!-padding-top-8">Participants</h3>
+            <details class="govuk-details govuk-!-padding-top-2" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Features included in the research
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
+                        <li><a href="../features/06.html">{{ data['features']['06'] }}</a></li>
+                        <li><a href="../features/08.html">{{ data['features']['08'] }}</a></li>
+                        <li><a href="../features/07.html">{{ data['features']['07'] }}</a></li>
+                        <li><a href="../features/24.html">{{ data['features']['24'] }}</a></li>
+                        <li><a href="../features/05.html">{{ data['features']['05'] }}</a></li>
+                        <li><a href="../features/19.html">{{ data['features']['19'] }}</a></li>
+                        <li><a href="../features/20.html">{{ data['features']['20'] }}</a></li>
+                        <li><a href="../features/18.html">{{ data['features']['18'] }}</a></li>
+                        <li><a href="../features/01.html">{{ data['features']['01'] }}</a></li>
+                        <li><a href="../features/16.html">{{ data['features']['16'] }}</a></li>
+                        <li><a href="../features/04.html">{{ data['features']['04'] }}</a></li>
+                        <li><a href="../features/15.html">{{ data['features']['15'] }}</a></li>
+                        <li><a href="../features/09.html">{{ data['features']['09'] }}</a></li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-4">
+
+        <div class="govuk-grid-column-full">
+
+            <h3 class="govuk-heading-m">Participants</h3>
 
             <ol class="govuk-list govuk-list--number">
                 <li><b>MOJ</b> - Lasting power of attorney </li>
@@ -174,29 +219,10 @@
                 <li><b>DWP</b> - Personal independence payment (PIP)</li>
             </ol>
 
-            <h3 id="features-tested" class="govuk-heading-m govuk-!-padding-top-8">Features included in the research</h3>
-
-            <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-8">
-                <li><a href="../features/06.html">{{ data['features']['06'] }}</a></li>
-                <li><a href="../features/08.html">{{ data['features']['08'] }}</a></li>
-                <li><a href="../features/07.html">{{ data['features']['07'] }}</a></li>
-                <li><a href="../features/24.html">{{ data['features']['24'] }}</a></li>
-                <li><a href="../features/05.html">{{ data['features']['05'] }}</a></li>
-                <li><a href="../features/19.html">{{ data['features']['19'] }}</a></li>
-                <li><a href="../features/20.html">{{ data['features']['20'] }}</a></li>
-                <li><a href="../features/18.html">{{ data['features']['18'] }}</a></li>
-                <li><a href="../features/01.html">{{ data['features']['01'] }}</a></li>
-                <li><a href="../features/16.html">{{ data['features']['16'] }}</a></li>
-                <li><a href="../features/04.html">{{ data['features']['04'] }}</a></li>
-                <li><a href="../features/15.html">{{ data['features']['15'] }}</a></li>
-                <li><a href="../features/09.html">{{ data['features']['09'] }}</a></li>
-            </ul>
-
 
 
         </div>
     </div>
-
 </div>
 {% endblock %}
 {% else %}
