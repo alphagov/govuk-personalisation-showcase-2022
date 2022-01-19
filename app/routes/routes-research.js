@@ -129,6 +129,7 @@ router.get('/problem', function (req, res) {
     let menusections = req.session.data.problemmenu.length;
 
     let thispage = req.session.data.hubmenu[0].id - 2;
+    let done = true
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -149,6 +150,7 @@ router.get('/problem', function (req, res) {
     //return these
     return res.render('problem/index', {
         'pagemenu': pagemenu,
+        'done': done,
         'menusections': menusections,
         'titles': titles,
         'anchors': anchors,
