@@ -21,13 +21,18 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[1] %}
-{% block section2 %}
+{% if pagemenu[2] %}
+{% block section3 %}
 <div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-8">
 
     <div class="govuk-grid-row highlight">
 
-        <h3 class="govuk-heading-l">Phase 1</h3>
+        <h3 class="govuk-heading-l govuk-!-padding-bottom-0" style="margin-bottom: 0px;">Phase 1</h3>
+        <strong class="govuk-tag govuk-tag--green">
+            completed
+        </strong>
+
+        <br /><br />
 
 
         <p class="govuk-body-l">Exploring users needs, expectations and perceived benefits of a seamless, joined up and personalised experience when completing sequential tasks across more than one government service</p>
@@ -79,7 +84,12 @@
 
     <div class="govuk-grid-row highlight">
 
-        <h3 class="govuk-heading-l">Phase 2</h3>
+        <h3 class="govuk-heading-l govuk-!-padding-bottom-0" style="margin-bottom: 0px;">Phase 2</h3>
+        <strong class="govuk-tag govuk-tag--green">
+            completed
+        </strong>
+
+        <br /><br />
 
         <p class="govuk-body-l">Exploring the feasibility of joining up services across government, and what features within a GOV.UK account will serve a better and personalised experience for the user</p>
 
@@ -141,7 +151,7 @@
             <details class="govuk-details " data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                        What's not in the Phase 2 scope
+                        What wasn’t in the Phase 2 scope
                     </span>
                 </summary>
 
@@ -167,7 +177,12 @@
 
     <div class="govuk-grid-row highlight">
 
-        <h3 class="govuk-heading-l">Phase 3</h3>
+        <h3 class="govuk-heading-l govuk-!-padding-bottom-0" style="margin-bottom: 0px;">Phase 3 </h3>
+        <strong class="govuk-tag govuk-tag">
+            ONGOING until 14-Feb-2022
+        </strong>
+
+        <br /><br />
         <p class="govuk-body-l"> Collaborating with other teams across the programme to share our knowledge and insights, while making suggestions for the next steps</p>
         <p class="govuk-body-l"> Creating an implementation roadmap for future account features, based on findings from phase 1 and 2</p>
 
@@ -274,8 +289,34 @@
 {% else %}
 {% endif %}
 
-{% if pagemenu[2] %}
-{% block section3 %}
+{% if pagemenu[1] %}
+{% block section2 %}
+<div class="govuk-grid-column-full govuk-!-padding-bottom-8 govuk-!-padding-top-2">
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full">
+
+            <p class="govuk-body-l">
+
+                Exploring a seamless, joined up and personalised experience for users when completing sequential tasks across more than one government service.</p>
+
+        </div>
+
+    </div>
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <p>As a team we approached this as a proof of concept, designing in a future state that reflects this scenario.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 {% endblock %}
 {% else %}
 {% endif %}

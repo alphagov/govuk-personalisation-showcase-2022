@@ -81,7 +81,11 @@ module.exports = {
             anchor: "overview",
     },
         {
-            title: "The scope",
+            title: "Our task",
+            anchor: "task",
+    },
+        {
+            title: "Our scope",
             anchor: "scope",
     }
     ],
