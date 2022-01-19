@@ -81,12 +81,12 @@ module.exports = {
             anchor: "overview",
     },
         {
-            title: "Our task",
+            title: "The objective",
             anchor: "task",
     },
         {
-            title: "Our scope",
-            anchor: "scope",
+            title: "The approach",
+            anchor: "approach",
     }
     ],
     peoplemenu: [
