@@ -126,6 +126,46 @@ router.get('/index', function (req, res) {
     })
 })
 
+
+// INDEX PAGE (to update when URL changes)
+router.get('/', function (req, res) {
+
+    // calculate number of hub menu links
+    let hubmenuamount = req.session.data.hubmenu.length;
+
+    console.log('Menu links total is: ' + hubmenuamount)
+
+    // create some empty arrays that we 'll pass into nunjucts
+    let hubmenu = []
+    let hubmenutitles = []
+    let hubmenuURLs = []
+    let hubmenuIDs = []
+
+    // loop though the links and populate the arrays
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenu[i] = req.session.data.hubmenu[i]
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenutitles[i] = req.session.data.hubmenu[i].title
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenuURLs[i] = req.session.data.hubmenu[i].url
+    }
+    for (i = 0; i < hubmenuamount; i++) {
+        hubmenuIDs[i] = req.session.data.hubmenu[i].id
+    }
+
+    //return these
+    return res.render('index.html', {
+        'hubmenuamount': hubmenuamount,
+        'hubmenu': hubmenu,
+        'hubmenutitles': hubmenutitles,
+        'hubmenuURLs': hubmenuURLs,
+        'hubmenuIDs': hubmenuIDs
+
+    })
+})
+
 // PEOPLE  
 router.get('/people', function (req, res) {
 
