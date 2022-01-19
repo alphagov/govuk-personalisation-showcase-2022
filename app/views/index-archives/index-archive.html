@@ -1,0 +1,295 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+{% include "includes/projectname.html" %} - The Hub
+{% endset%}
+
+{% block pageTitle %}
+{% include "includes/projectname.html" %} hub page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            {% include "includes/projectname.html" %}
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="problem" class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The problem
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-body-l">The user experience for tasks that span multiple services is fragmented.</p>
+                <p class="govuk-body-l"> Users have to understand and navigate the structure of government to work out what is relevant to them and input the same information across services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="vision" class="govuk-grid-column-one-half">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    The vision
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-body-l">A seamless, joined up and personalised experience for users when completing sequential tasks across more than one government service</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <ol class="govuk-list govuk-list--number">
+            <li><a href="#section-1">{% include "includes/index-section-1.html" %}</a></li>
+            <li><a href="#section-2">{% include "includes/index-section-2.html" %}</a></li>
+            <li><a href="#section-3">{% include "includes/index-section-3.html" %}</a></li>
+            <!--   <li><a href="research/index.html">{% include "includes/index-section-4.html" %}</a></li> -->
+        </ol>
+    </div>
+</div>
+
+<!--
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <ul class="govuk-list govuk-list--bullet">
+            {% for i in range(1, total) -%}
+            <li><a href="/research/feature/{{ fids[i] }}">{{ names[i] }}</a></li>
+            {%- endfor %}
+        </ul>
+
+    </div>
+</div> -->
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-1" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">{% include "includes/index-section-1.html" %}</h2>
+
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-1" class="govuk-grid-column-full">
+        <ul class="govuk-list">
+            <li>
+                <a href="mailto:leah.thompson@digital.cabinet-office.gov.uk">
+                    Leah Thompson</a> (Product Manager)
+            </li>
+            <li>
+                <a href="mailto:adam.friday@digital.cabinet-office.gov.uk">Adam Friday</a> (Delivery Manager)
+            </li>
+            <li>
+                <a href="mailto:sam.robinson@digital.cabinet-office.gov.uk">Sam Robinson</a> (Content Designer)
+            </li>
+            <li>
+                <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a> (Designer)
+            </li>
+            <li>
+                <a href="mailto:ruth.taylor@digital.cabinet-office.gov.uk">
+                    Ruth Taylor</a> (User Researcher)
+            </li>
+            <li>
+                <a href="mailto:amy.barrs@digital.cabinet-office.gov.uk">
+                    Amy Barrs</a> (User Researcher)
+            </li>
+            <li>
+                <a href="#">Kasmyn Chen</a> (Business Analyst)
+            </li>
+            <li>
+                <a href="mailto:michael.stoodley@digital.cabinet-office.gov.uk">Mike Stoodley</a> (Technical Architect)
+            </li>
+            <li>
+                <a href="mailto:jonny.edwards@digital.cabinet-office.gov.uk">Jonny Edwards</a> (Data Scientist)
+            </li>
+            <li>
+                <a href="mailto:tracy.green@hippodigital.co.uk">Tracy Green</a> (Engagement Lead)
+            </li>
+            <li>
+                <a href="mailto:andrew.leimdorfer@digital.cabinet-office.gov.uk">Andrew Leimdorfer</a> (Senior Product Manager - GOVUK Accounts)
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br /><br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-2" class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">{% include "includes/index-section-2.html" %}</h2>
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <ul class="govuk-list ">
+
+            <li>📄 <a href="https://docs.google.com/presentation/d/1cQOiCJ2eFjnd2zQ_ZTOIien11-u2ZDDMgb9mCB1Xgio/edit#slide=id.ged4501178c_0_0P">Phase 1 report</a></li>
+            <li><img src="../../public/images/slack.png" height="18px;"> <a href="https://gds.slack.com/archives/C024MKU7RLP">Slack channel (GDS)</a></li>
+            <li>📂 <a href="https://drive.google.com/drive/u/0/folders/1knj8TE9me4o7FGQNtM0pAn30-BMt407X" target="_blank">Project (GDS)</a></li>
+            <li>📂 <a href="https://drive.google.com/drive/u/2/folders/0APQTfByqSsKlUk9PVA" target="_blank">Admin (Hippo)</a></li>
+            <!--  <li><img src="../../public/images/miro.svg" style="height: 18px;"> <a href="https://miro.com/app/board/o9J_l6rYOGw=/" target="_blank">Research (note taking / affinity mapping)</a></li>
+            <li><img src="../../public/images/Figma-logo.svg" style="height: 18px;"> <a href="https://www.figma.com/file/OCbZOmhqS1LanDWF6utzIX/GOV-UK-Personalisation?node-id=0%3A1" target="_blank">Design</a></li> -->
+
+        </ul>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div id="section-3" class="govuk-grid-column-full">
+
+        <h3 class="govuk-heading-l">{% include "includes/index-section-3.html" %}</h3>
+
+        <p>Users researched with: <span class="govuk-heading-l">54</span></p>
+
+        <br />
+    </div>
+    <div class="govuk-grid-column-full">
+
+        <h4 class="govuk-heading-m">Phase 1</h4>
+
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>31-Aug-2021 to 02-Sep-2021</small></p>
+
+        <a href="round-1/"><button class="govuk-button">View round 1</button></a>
+
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>07-Sep-2021 to 09-Sep-2021</small></p>
+
+        <a href="round-2/"><button class="govuk-button">View round 2</button></a>
+
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>14-Sep-2021 - 17-Sep-2021</small></p>
+
+        <a href="round-3/"><button class="govuk-button">View round 3</button></a>
+
+    </div>
+
+    <div class="govuk-grid-column-full">
+
+        <br />
+
+        <h4 class="govuk-heading-m">Phase 2</h4>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-2">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>26-Oct-2021 to 27-Oct-2021</small></p>
+
+        <a href="phase-2-round-1/"><button class="govuk-button">View round 1</button></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-2">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>04-Nov-2021 to 05-Nov-2021</small></p>
+
+        <a href="phase-2-round-2/"><button class="govuk-button">View round 2</button></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-2">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>25-Nov-2021 to 26-Nov-2021</small></p>
+
+        <a href="phase-2-round-3/"><button class="govuk-button">View round 3</button></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-2">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>02-Dec-2021 to 03-Dec-2021</small></p>
+
+        <a href="phase-2-round-4/"><button class="govuk-button">View round 4</button></a>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter govuk-!-padding-bottom-2">
+
+        <strong class="govuk-tag govuk-tag--green govuk-!-margin-top-0" style="font-size: 11px;">Testing complete</strong>
+
+        <p class="govuk-hint govuk-!-margin-top-1"><small>08-Dec-2021 to 09-Dec-2021</small></p>
+
+        <a href="phase-2-round-5/"><button class="govuk-button">View round 5</button></a>
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <br />
+        <hr>
+        <br /><br />
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body-s">Last updated:<br />
+            12-Dec-2021 at 22:54
+            <br />
+            <a href="mailto:jon.maher@digital.cabinet-office.gov.uk">Jon Maher</a>
+        </p>
+    </div>
+</div>
+
+<br /><br />
+
+{% endblock %}

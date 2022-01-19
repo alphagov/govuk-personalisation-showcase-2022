@@ -19,7 +19,7 @@ Example usage:
 
 module.exports = {
 
-    indexlink: "/index-handover",
+    indexlink: "/index",
     maintitle: "X-Gov Services",
     highlight: "Key insight(s)",
     example: "Research example(s)",
