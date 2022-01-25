@@ -73,6 +73,16 @@ module.exports = {
             title: "Prototypes",
             url: "/prototypes",
             id: 9
+    },
+        {
+            title: "Q&A",
+            url: "/q-and-a",
+            id: 11
+    },
+        {
+            title: "Engagement",
+            url: "/engagement",
+            id: 12
     }
              ],
     problemmenu: [
@@ -560,6 +570,308 @@ module.exports = {
         Kiwi: 'Definition goes here',
         Orange: 'Definition goes here',
         Pear: 'Definition goes here'
-    }
-
+    },
+    teams: [
+        {
+            name: "Collecting Information from Users",
+            id: 0,
+            slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Harry Vos",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "Astrid Simonsen",
+                    email: ""
+           },
+                {
+                    role: "Tech",
+                    name: "James Shepherd",
+                    email: ""
+           },
+                {
+                    role: "Design",
+                    name: "Tim Paul",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "GDX",
+            id: 1,
+            slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Antonia Panayotova",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "J Harrison",
+                    email: ""
+           },
+                {
+                    role: "Tech",
+                    name: "Andrew Maddison",
+                    email: ""
+           }, {
+                    role: "Tech",
+                    name: "Erin Raj-Staniland ",
+                    email: ""
+           },
+                {
+                    role: "Research",
+                    name: "Ting Ting Zhao",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "My Data Team",
+            id: 2,
+            slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "Paul Wakely",
+                    email: ""
+           },
+                {
+                    role: "Tech",
+                    name: "Michael Stoodley",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Accounts",
+            id: 3,
+            slacklink: "https://gds.slack.com/archives/C012GEZBZM0",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Maxwell Riess",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "Lisa King",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Authentication",
+            id: 4,
+            slacklink: "https://gds.slack.com/archives/C01TN7NC951",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Karen Lamb",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "Nia Jones",
+                    email: ""
+           },
+                {
+                    role: "Tech",
+                    name: "Darren Hutton",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "SMT",
+            id: 5,
+            slacklink: "",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Robert Rankin",
+                    email: ""
+                }
+           ]
+        },
+        {
+            name: "Whole User Journeys",
+            id: 6,
+            slacklink: "https://gds.slack.com/archives/C02ETRFAU82",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Laura Flannery",
+                    email: ""
+                },
+                {
+                    role: "Design",
+                    name: "Ignacia Orellana",
+                    email: ""
+           },
+                {
+                    role: "Design",
+                    name: "Paulina Gonzalez-Ortega",
+                    email: ""
+           },
+                {
+                    role: "Content",
+                    name: "Jane Van Der Ban",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Design for adoption",
+            id: 7,
+            slacklink: "https://gds.slack.com/archives/C02A5LGV9U2",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Data labs",
+            id: 8,
+            slacklink: "https://gds.slack.com/archives/CHR4UQKU4",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Mohamed Abdisalam",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Connected Insights",
+            id: 9,
+            slacklink: "https://gds.slack.com/archives/C02LU2DKK51",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Ganesh Senthi",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "Tony Azuka",
+                    email: ""
+           },
+                {
+                    role: "Research",
+                    name: "Kobi King",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Data groups",
+            id: 10,
+            slacklink: "https://gds.slack.com/archives/C01J9R88WV9",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Manuel Rodriguezknapik",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "Digital Identity",
+            id: 11,
+            slacklink: "https://gds.slack.com/archives/CABG3AZNV",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Emily Labrum",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "",
+                    email: ""
+           },
+                {
+                    role: "Tech",
+                    name: "Peter Chamberlain",
+                    email: ""
+           },
+                {
+                    role: "Content",
+                    name: "Paola Roccuzzo",
+                    email: ""
+           },
+                {
+                    role: "Design",
+                    name: "Tory Dunn",
+                    email: ""
+           }
+           ]
+        },
+        {
+            name: "GaaP",
+            id: 12,
+            slacklink: "https://gds.slack.com/archives/C01E20X06JK",
+            focus: "",
+            members: [
+                {
+                    role: "Product",
+                    name: "Tim Paul",
+                    email: ""
+                },
+                {
+                    role: "Delivery",
+                    name: "",
+                    email: ""
+           }
+           ]
+        }
+        ],
+    roles: [
+       "Product",
+        "Delivery",
+        "Design",
+        "Content",
+        "Research",
+        "Tech"
+    ]
 }

@@ -92,9 +92,20 @@ router.get('/people', function (req, res) {
 
     // calculate number of in page menu links
     let menusections = req.session.data.peoplemenu.length;
+    
+        // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
 
     let thispage = req.session.data.hubmenu[6].id;
     let done = true;
+    let teamsnumber = req.session.data.teams.length;
+    let membersnumber = []
+    let teams = []
+    let teamnames = []
+    let members = []
+    let roles = []
+    let membernames = []
+    let emails = []
 
     // create some empty arrays that we 'll pass into nunjucts
     let pagemenu = []
@@ -111,6 +122,28 @@ router.get('/people', function (req, res) {
     for (i = 0; i < menusections; i++) {
         anchors[i] = req.session.data.peoplemenu[i].anchor
     }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[i].members.length
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        members[i] = req.session.data.teams[i].members
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
 
     //return these
     return res.render('people/index', {
@@ -119,7 +152,15 @@ router.get('/people', function (req, res) {
         'menusections': menusections,
         'titles': titles,
         'anchors': anchors,
-        'thispage': thispage
+        'thispage': thispage,
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'roles': roles,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
 
     })
 })
@@ -157,6 +198,89 @@ router.get('/problem', function (req, res) {
         'titles': titles,
         'anchors': anchors,
         'thispage': thispage
+
+    })
+})
+
+// Q AND A  
+router.get('/q-and-a', function (req, res) {
+
+    let thispage = req.session.data.hubmenu[7].id;
+
+    //return these
+    return res.render('q-and-a/index', {
+        'thispage': thispage
+
+    })
+})
+
+// ENGAGEMENT
+router.get('/engagement', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let thispage = req.session.data.hubmenu[10].id;
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = []
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[i].members.length
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        members[i] = req.session.data.teams[i].members
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('engagement/index', {
+        'thispage': thispage,
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
 
     })
 })
@@ -1691,6 +1815,7 @@ router.get('/features/01', function (req, res) {
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+    let teams = req.session.data.rdd.features[index].teams
 
     let total = req.session.data.rdd.features.length
 
@@ -1717,7 +1842,8 @@ router.get('/features/01', function (req, res) {
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
-        'relatedfeatures': relatedfeatures
+        'relatedfeatures': relatedfeatures,
+        'teams': teams
     })
 })
 

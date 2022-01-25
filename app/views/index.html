@@ -41,6 +41,64 @@
 <div id="vision" class="govuk-grid-row">
     <div class="govuk-grid-column-one-third govuk-!-padding-bottom-8">
         {% include "includes/hubmenu.html" %}
+        <br />
+
+        <p class="govuk-body-s">
+            Last updated: 12:16 25-Jan-2022
+        </p>
+        <details class="govuk-details govuk-body-s" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    Change log
+                </span>
+            </summary>
+            <div class="govuk-details__text govuk-body-s">
+                <ul class="govuk-list govuk-body-s">
+                    <li>
+                        <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text govuk-body-s">
+                                    <b>19-Jan-22</b>
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text govuk-body-s">
+                                version 1
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text govuk-body-s">
+                                    <b>25-Jan-22</b>
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text govuk-body-s">
+                                Added:
+
+                                <ul class="govuk-list govuk-list--bullet govuk-body-s">
+                                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScDT2JIGAfRIHmFpixzTfTyANeix_jfGWob2DFo80q4yAAfKA/viewform?usp=sf_link" target="_blank"> Contact us form</a></li>
+                                    <li><a href="q-and-a/">Q &amp; As</a></li>
+                                    <li><a href="engagement/">Engagement</a></li>
+
+                                </ul>
+
+                                <br />
+                                Updated:
+
+                                <ul class="govuk-list govuk-list--bullet govuk-body-s">
+                                    <li><a href="people/index.html"> The people</a></li>
+                                    <li><a href="features/01.html"> {{ data['features']['01'] }}</a></li>
+                                    <li><a href="features/02.html">{{ data['features']['02'] }}</a></li>
+
+                                </ul>
+                            </div>
+                        </details>
+
+                    </li>
+                </ul>
+            </div>
+        </details>
     </div>
     <div class="govuk-grid-column-two-thirds">
 
@@ -59,13 +117,22 @@
 
         <p>If you’d like to discuss the work we’ve done or if you’ve got any questions, please reach out:
         </p>
-        <p class="govuk-!-padding-top-4"><a href="https://gds.slack.com/team/U02BV7WF6BV" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank">Leah Thompson - Product Owner </a></p>
+
+        <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-4">
+            <!--  <li><a href="https://gds.slack.com/team/U02BV7WF6BV" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank">Leah Thompson - Product Owner </a>
+            </li> -->
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScDT2JIGAfRIHmFpixzTfTyANeix_jfGWob2DFo80q4yAAfKA/viewform?usp=sf_link" target="_blank"><img src="../../public/images/google-form.png" class="icon" target="_blank">Contact us form</a></li>
+
+        </ul>
+
     </div>
+
 </div>
+
 
 <!--  Hippo Digital -->
 <div id="hippo-digital" class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
         <img src="../../public/images/research/Government-Digital-Service-logo.png" style="max-width: 70px;">&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://hippodigital.co.uk" target="_blank"> <img src="../../public/images/research/hippodigital_logo-black.svg" style="max-width: 90px;"></a>
     </div>

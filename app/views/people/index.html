@@ -89,17 +89,19 @@
 {% if pagemenu[2] %}
 {% block section3 %}
 <div class="govuk-grid-column-two-thirds">
-    <p>We've engaged with a number of teams within the programme, providing clarity and insight into the problem we’re trying to solve whilst also communicating the scope of our project.</p>
+    <p>We've <a href="../engagement/"> engaged</a> with a number of teams within the programme, providing clarity and insight into the problem we’re trying to solve whilst also communicating the scope of our project.</p>
 
-    <p>These teams include:</p>
+    <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+                Teams and contacts identified
+            </span>
+        </summary>
+        <div class="govuk-details__text">
 
-    <ul class="govuk-list govuk-list--bullet">
-        <li>Accounts</li>
-        <li>GDX</li>
-        <li>Whole User Journeys</li>
-        <li>Manage Your Data</li>
-        <li>DI</li>
-    </ul>
+            {% include "includes/team-tabs.html" %}
+        </div>
+    </details>
 </div>
 <div class="govuk-grid-column-one-third hide-on-mobile">
     <p><img class="panel-image" src="../../../public/images/research/venn-4.svg"></p>

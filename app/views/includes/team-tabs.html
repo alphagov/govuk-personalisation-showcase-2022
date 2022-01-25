@@ -1,0 +1,94 @@
+{% set teamstab %}
+
+<ol class="govuk-list govuk-list--spaced govuk-!-padding-top-4">
+    {% for team in teams | sort(attribute="name") %}
+    <li class="govuk-!-padding-bottom-4">
+
+        {% if team.name %}
+        <h3 class="govuk-heading-m">
+            {% if team.slacklink %}
+            <a href="{{ team.slacklink }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank"> {{ team.name }}</a>
+            {% else %}
+            {{ team.name }}
+            {% endif %}
+        </h3>
+        {% endif %}
+
+        {% if team.focus %}
+        <p>{{ team.focus }}</p>
+        {% endif %}
+
+        <ul class="govuk-list govuk-list--bullet">
+            {% for member in team.members | sort(attribute="role") %}
+            {% if member.name %}
+            <li>{{ member.role }} -
+                {% if member.email %}
+                <a href="mailto:{{ member.email }}">{{ member.name }}</a>
+                {% else %}
+                {{ member.name }}
+                {% endif %}
+            </li>
+            {% else %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+    </li>
+    {% endfor %}
+</ol>
+
+{% endset -%}
+
+{% set discipline %}
+
+{% for role in roles | sort %}
+
+<ul class="govuk-list govuk-list--spaced govuk-!-padding-top-8">
+    <li>
+        <h3 class="govuk-heading-m">{{ role }}</h3>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-!-padding-bottom-4">
+            {% for team in teams %}
+
+            {% for member in team.members | sort %}
+            {% if member.name %}
+            {% if member.role == role %}
+
+            <li>{% if member.email %}<a href="mailto:{{ member.email }}">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %} - {% if team.slacklink %}
+                <a href="{{ team.slacklink }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank"> {{ team.name }}</a>
+                {% else %}
+                {{ team.name }}
+                {% endif %}</li>
+
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+
+            {% endfor %}
+        </ul>
+    </li>
+
+</ul>
+
+{% endfor %}
+
+{% endset -%}
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "By team",
+      id: "teams",
+      panel: {
+        html: teamstab
+      }
+    },
+    {
+      label: "By discipline",
+      id: "discipline",
+      panel: {
+        html: discipline
+      }
+    }
+  ]
+}) }}

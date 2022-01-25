@@ -1,0 +1,88 @@
+{% extends "layout_handover.html" %}
+
+{% block title %}
+{{ super() }}
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <h2 class="govuk-heading-l">Teams &amp; people</h2>
+
+        {% include "includes/team-tabs.html" %}
+
+        <!-- Specific team 
+        {% for team in teams %}
+        {% if team.name == "GDX" %}
+
+        <p><b>{{ team.name }}</b></p>
+
+        <ol class="govuk-list govuk-list--number govuk-list--spaced">
+
+            {% for member in team.members %}
+            {% if member.name %}
+
+            <li> {% if member.email %}<a href="mailto:{{ member.email }}">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %} - {{ member.role }}</li>
+
+            {% endif %}
+            {% endfor %}
+
+        </ol>
+        {% endif %}
+        {% endfor %}  -->
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block menu %}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}s
+{% endblock %}
+{% else %}
+{% endif %}

@@ -1,0 +1,93 @@
+{% extends "layout_handover.html" %}
+
+{% block title %}
+{{ super() }}
+<div class="govuk-grid-row govuk-!-padding-bottom-8">
+
+    <div class="govuk-grid-column-full">
+
+        <p class="govuk-body-l">
+            These are responses to questions submitted via our <a href="https://docs.google.com/forms/d/e/1FAIpQLScDT2JIGAfRIHmFpixzTfTyANeix_jfGWob2DFo80q4yAAfKA/viewform?usp=sf_link" target="_blank"><img src="../../public/images/google-form.png" class="icon" target="_blank">Contact us form</a>
+        </p>
+
+    </div>
+
+</div>
+<div class="govuk-grid-row govuk-!-padding-bottom-8">
+
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            A question goes here
+                        </span>
+                    </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <p class='govuk-body'>The answer goes here.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block menu %}
+{% endblock %}
+
+{% if pagemenu[0] %}
+{% block section1 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[1] %}
+{% block section2 %}
+
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[2] %}
+{% block section3 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[4] %}
+{% block section5 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[5] %}
+{% block section6 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[6] %}
+{% block section7 %}
+{% endblock %}
+{% else %}
+{% endif %}
+
+{% if pagemenu[7] %}
+{% block section8 %}s
+{% endblock %}
+{% else %}
+{% endif %}

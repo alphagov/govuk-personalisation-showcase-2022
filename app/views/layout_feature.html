@@ -286,6 +286,17 @@ Feature | {{ name }}
         {% else %}
         {% endif %}
 
+        {% if teams %}
+        <!-- risk category -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full govuk-!-padding-bottom-8">
+                <h3 class="govuk-heading-s">Interested parties</h3>
+                {% include "includes/logic-teams.html" %}
+            </div>
+        </div>
+        {% else %}
+        {% endif %}
+
 
         {% if prototypelink %}
         <!-- risk category -->
