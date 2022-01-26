@@ -3420,6 +3420,12 @@ router.get('/features/25', function (req, res) {
     // this index needs match the feature ID
     let index = 25
 
+    // if done = true it will remove in draft banner
+    let done = true
+
+    // if depreciated = true it will add in depreciated banner
+    let depreciated = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -3451,6 +3457,8 @@ router.get('/features/25', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
+        'depreciated': depreciated,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -3486,6 +3494,12 @@ router.get('/features/26', function (req, res) {
     // this index needs match the feature ID
     let index = 26
 
+    // if done = true it will remove in draft banner
+    let done = true
+
+    // if depreciated = true it will add in depreciated banner
+    let depreciated = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -3517,6 +3531,8 @@ router.get('/features/26', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
+        'depreciated': depreciated,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -3618,6 +3634,12 @@ router.get('/features/28', function (req, res) {
     // this index needs match the feature ID
     let index = 28
 
+    // if done = true it will remove in draft banner
+    let done = true
+
+    // if depreciated = true it will add in depreciated banner
+    let depreciated = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -3649,6 +3671,8 @@ router.get('/features/28', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
+        'depreciated': depreciated,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,

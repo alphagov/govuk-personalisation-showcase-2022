@@ -39,23 +39,45 @@ Feature | {{ name }}
     </div>
 </div>
 {% endif %}
+{% if depreciated === true %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
+        <div class="govuk-phase-banner">
+            <p class="govuk-phase-banner__content">
+                <strong class="govuk-tag govuk-tag--red govuk-phase-banner__content__tag">
+                    ❌ Depreciated
+                </strong>
+                <span class="govuk-phase-banner__text">
+                    please note: This feature has been depreciated
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+{% else %}
+{% endif %}
 {% endblock %}
 
 {% block content %}
 
 {% block featureName %}
+
 <div class="govuk-grid-row">
+    {% if depreciated === true %}
+    {% else %}
     <div class="govuk-grid-column-full govuk-!-padding-bottom-2">
         {% include "features/includes/logic/logic-feature-category.html" %}
         &nbsp;&nbsp;
         {% include "features/includes/logic/logic-feature-priority.html" %}
     </div>
+    {% endif %}
     <div class="govuk-grid-column-full govuk-!-padding-top-8">
         <h1 class="govuk-heading-xl">
             {{ fid }}. {{ name }}
         </h1>
     </div>
 </div>
+
 {% endblock %}
 
 <div class="govuk-grid-row">
@@ -63,6 +85,8 @@ Feature | {{ name }}
     <!-- End of two-thirds -->
     <div class="govuk-grid-column-two-thirds">
 
+        {% if depreciated === true %}
+        {% else %}
         <div class="govuk-accordion govuk-!-padding-top-8" data-module="govuk-accordion" id="accordion-with-summary-sections">
 
             {% if showdesc === true %}
@@ -222,7 +246,7 @@ Feature | {{ name }}
 
         {% block underAccordion %}
         {% endblock %}
-
+        {% endif %}
     </div>
     <!-- End of two-thirds -->
 

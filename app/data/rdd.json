@@ -562,6 +562,36 @@
             "riskcategory": "04"
     },
         {
+            "fid": "25",
+            "name": "Uses of data",
+            "done": true,
+            "depreciated": true,
+            "category": "",
+            "priority": "",
+            "showdescvideo": false,
+            "showdesc": false,
+            "showuserfindings": false,
+            "showservicefindings": false,
+            "showrisks": false,
+            "showrecommendations": false,
+            "prototypelink": ""
+    },
+        {
+            "fid": "26",
+            "name": "Data naming conventions",
+            "done": true,
+            "depreciated": true,
+            "category": "",
+            "priority": "",
+            "showdescvideo": false,
+            "showdesc": false,
+            "showuserfindings": false,
+            "showservicefindings": false,
+            "showrisks": false,
+            "showrecommendations": false,
+            "prototypelink": ""
+    },
+        {
             "fid": "27",
             "name": "Forecasting",
             "category": "personalisation",
@@ -582,6 +612,21 @@
             "prototypelink": "",
             "relatedfeatures": ["10"],
             "riskcategory": "3"
+    },
+        {
+            "fid": "28",
+            "name": "GOV.UK preferences used for services",
+            "done": true,
+            "depreciated": true,
+            "category": "",
+            "priority": "",
+            "showdescvideo": false,
+            "showdesc": false,
+            "showuserfindings": false,
+            "showservicefindings": false,
+            "showrisks": false,
+            "showrecommendations": false,
+            "prototypelink": ""
     },
         {
             "fid": "29",
