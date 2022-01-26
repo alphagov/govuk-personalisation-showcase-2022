@@ -577,6 +577,7 @@ module.exports = {
             id: 0,
             slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -605,6 +606,7 @@ module.exports = {
             id: 1,
             slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -637,6 +639,7 @@ module.exports = {
             id: 2,
             slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -660,6 +663,7 @@ module.exports = {
             id: 3,
             slacklink: "https://gds.slack.com/archives/C012GEZBZM0",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -678,6 +682,7 @@ module.exports = {
             id: 4,
             slacklink: "https://gds.slack.com/archives/C01TN7NC951",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -701,6 +706,7 @@ module.exports = {
             id: 5,
             slacklink: "",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -714,6 +720,7 @@ module.exports = {
             id: 6,
             slacklink: "https://gds.slack.com/archives/C02ETRFAU82",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -742,6 +749,7 @@ module.exports = {
             id: 7,
             slacklink: "https://gds.slack.com/archives/C02A5LGV9U2",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -760,6 +768,7 @@ module.exports = {
             id: 8,
             slacklink: "https://gds.slack.com/archives/CHR4UQKU4",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -778,6 +787,7 @@ module.exports = {
             id: 9,
             slacklink: "https://gds.slack.com/archives/C02LU2DKK51",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -801,6 +811,7 @@ module.exports = {
             id: 10,
             slacklink: "https://gds.slack.com/archives/C01J9R88WV9",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -819,6 +830,7 @@ module.exports = {
             id: 11,
             slacklink: "https://gds.slack.com/archives/CABG3AZNV",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
@@ -852,6 +864,7 @@ module.exports = {
             id: 12,
             slacklink: "https://gds.slack.com/archives/C01E20X06JK",
             focus: "",
+            roadmap: "",
             members: [
                 {
                     role: "Product",
