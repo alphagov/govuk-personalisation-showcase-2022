@@ -2144,6 +2144,9 @@ router.get('/features/06', function (req, res) {
     // this index needs match the feature ID
     let index = 6
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2175,6 +2178,7 @@ router.get('/features/06', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -2210,6 +2214,9 @@ router.get('/features/07', function (req, res) {
     // this index needs match the feature ID
     let index = 7
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2241,6 +2248,7 @@ router.get('/features/07', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -2276,6 +2284,9 @@ router.get('/features/08', function (req, res) {
     // this index needs match the feature ID
     let index = 8
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2307,6 +2318,7 @@ router.get('/features/08', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -2342,6 +2354,9 @@ router.get('/features/09', function (req, res) {
     // this index needs match the feature ID
     let index = 9
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2373,6 +2388,7 @@ router.get('/features/09', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -2408,6 +2424,9 @@ router.get('/features/10', function (req, res) {
     // this index needs match the feature ID
     let index = 10
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2439,6 +2458,7 @@ router.get('/features/10', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
