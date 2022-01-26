@@ -92,8 +92,8 @@ router.get('/people', function (req, res) {
 
     // calculate number of in page menu links
     let menusections = req.session.data.peoplemenu.length;
-    
-        // calculate number of roles
+
+    // calculate number of roles
     let rolesnumber = req.session.data.roles.length;
 
     let thispage = req.session.data.hubmenu[6].id;
@@ -1791,6 +1791,9 @@ router.get('/features/01', function (req, res) {
     // this index needs match the feature ID
     let index = 1
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -1823,6 +1826,7 @@ router.get('/features/01', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
@@ -1856,8 +1860,12 @@ router.get('/features/02', function (req, res) {
         let path = 'app/data/'
         req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
     }
+
     // this index needs match the feature ID
     let index = 2
+
+    // if done = true it will remove in draft banner
+    let done = true
 
     let features = req.session.data.features;
 
@@ -1889,6 +1897,7 @@ router.get('/features/02', function (req, res) {
     return res.render('features/02', {
         'fid': fid,
         'name': name,
+        'done': done,
         'category': category,
         'priority': priority,
         'features': features,
@@ -1925,12 +1934,14 @@ router.get('/features/03', function (req, res) {
     // this index needs match the feature ID
     let index = 3
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
     let fid = req.session.data.rdd.features[index].fid
     let name = req.session.data.rdd.features[index].name
-    let done = req.session.data.rdd.features[index].done
     let category = req.session.data.rdd.features[index].category
     let priority = req.session.data.rdd.features[index].priority
     let userneeds = req.session.data.rdd.features[index].userneeds
@@ -1993,6 +2004,9 @@ router.get('/features/04', function (req, res) {
     // this index needs match the feature ID
     let index = 4
 
+    // if done = true it will remove in draft banner
+    let done = true
+
     let features = req.session.data.features;
 
     // grab the items we need to display and make the form work
@@ -2024,6 +2038,7 @@ router.get('/features/04', function (req, res) {
         'fid': fid,
         'name': name,
         'category': category,
+        'done': done,
         'priority': priority,
         'features': features,
         'userneeds': userneeds,
