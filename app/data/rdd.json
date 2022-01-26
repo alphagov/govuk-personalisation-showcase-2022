@@ -130,7 +130,7 @@
             "showservicefindings": true,
             "showrisks": true,
             "showrecommendations": false,
-            "prototypelink": "",
+            "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true#gid=1309183479",
             "relatedfeatures": ["03", "06", "29", "21", "13", "09", "19", "16"],
             "riskcategory": ["03", "05", "02", "06"]
     },
