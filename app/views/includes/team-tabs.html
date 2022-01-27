@@ -14,9 +14,9 @@
         </h3>
         {% endif %}
 
-        {% if team.focus %}
+        <!--   {% if team.focus %}
         <p>{{ team.focus }}</p>
-        {% endif %}
+        {% endif %} -->
 
         <ul class="govuk-list govuk-list--bullet">
             {% for member in team.members | sort(attribute="role") %}

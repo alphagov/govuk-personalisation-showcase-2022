@@ -576,7 +576,7 @@ module.exports = {
             name: "Collecting Information from Users",
             id: 0,
             slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
-            focus: "",
+            focus: "Team's mission statement / vision goes here",
             roadmap: "",
             members: [
                 {
@@ -829,7 +829,7 @@ module.exports = {
             name: "Digital Identity",
             id: 11,
             slacklink: "https://gds.slack.com/archives/CABG3AZNV",
-            focus: "",
+            focus: "test",
             roadmap: "",
             members: [
                 {
