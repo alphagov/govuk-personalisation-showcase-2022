@@ -319,6 +319,7 @@ router.get('/people/teams/01', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let fids = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -328,6 +329,9 @@ router.get('/people/teams/01', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -352,6 +356,7 @@ router.get('/people/teams/01', function (req, res) {
     return res.render('people/teams/01', {
         'teams': teams,
         'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -377,6 +382,7 @@ router.get('/people/teams/02', function (req, res) {
     }
 
     let teamindex = 01
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -388,6 +394,9 @@ router.get('/people/teams/02', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -397,6 +406,9 @@ router.get('/people/teams/02', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -420,6 +432,8 @@ router.get('/people/teams/02', function (req, res) {
     //return these
     return res.render('people/teams/02', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -445,6 +459,7 @@ router.get('/people/teams/03', function (req, res) {
     }
 
     let teamindex = 02
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -457,6 +472,7 @@ router.get('/people/teams/03', function (req, res) {
     let teams = []
     let features = []
     let featurenames = []
+    let fids = []
     let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
@@ -469,6 +485,7 @@ router.get('/people/teams/03', function (req, res) {
         features[i] = req.session.data.rdd.features[i]
         featurenames[i] = req.session.data.rdd.features[i].name
         featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -492,9 +509,11 @@ router.get('/people/teams/03', function (req, res) {
     //return these
     return res.render('people/teams/03', {
         'teams': teams,
+        'pageid': pageid,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
+        'fids': fids,
         'featureteams': featureteams,
         'teamnames': teamnames,
         'teamindex': teamindex,
@@ -599,6 +618,7 @@ router.get('/people/teams/05', function (req, res) {
     }
 
     let teamindex = 04
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -610,6 +630,9 @@ router.get('/people/teams/05', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -619,6 +642,9 @@ router.get('/people/teams/05', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -642,10 +668,12 @@ router.get('/people/teams/05', function (req, res) {
     //return these
     return res.render('people/teams/05', {
         'teams': teams,
+        'pageid': pageid,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
         'teamindex': teamindex,
+        'fids': fids,
         'roles': roles,
         'rolesnumber': rolesnumber,
         'featurestotal': featurestotal,
@@ -667,6 +695,7 @@ router.get('/people/teams/06', function (req, res) {
     }
 
     let teamindex = 05
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -678,6 +707,9 @@ router.get('/people/teams/06', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -687,6 +719,9 @@ router.get('/people/teams/06', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -710,6 +745,8 @@ router.get('/people/teams/06', function (req, res) {
     //return these
     return res.render('people/teams/06', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -735,6 +772,7 @@ router.get('/people/teams/07', function (req, res) {
     }
 
     let teamindex = 06
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -746,6 +784,9 @@ router.get('/people/teams/07', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -755,6 +796,9 @@ router.get('/people/teams/07', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -778,6 +822,8 @@ router.get('/people/teams/07', function (req, res) {
     //return these
     return res.render('people/teams/07', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -803,6 +849,7 @@ router.get('/people/teams/08', function (req, res) {
     }
 
     let teamindex = 07
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -814,6 +861,9 @@ router.get('/people/teams/08', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -823,6 +873,9 @@ router.get('/people/teams/08', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -846,6 +899,8 @@ router.get('/people/teams/08', function (req, res) {
     //return these
     return res.render('people/teams/08', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -871,6 +926,7 @@ router.get('/people/teams/09', function (req, res) {
     }
 
     let teamindex = 08
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -882,6 +938,9 @@ router.get('/people/teams/09', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -891,6 +950,9 @@ router.get('/people/teams/09', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -914,6 +976,8 @@ router.get('/people/teams/09', function (req, res) {
     //return these
     return res.render('people/teams/09', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -939,6 +1003,7 @@ router.get('/people/teams/10', function (req, res) {
     }
 
     let teamindex = 09
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -950,6 +1015,9 @@ router.get('/people/teams/10', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -959,6 +1027,9 @@ router.get('/people/teams/10', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -982,6 +1053,8 @@ router.get('/people/teams/10', function (req, res) {
     //return these
     return res.render('people/teams/10', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -1007,6 +1080,7 @@ router.get('/people/teams/11', function (req, res) {
     }
 
     let teamindex = 10
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -1018,6 +1092,9 @@ router.get('/people/teams/11', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -1027,6 +1104,9 @@ router.get('/people/teams/11', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -1050,6 +1130,8 @@ router.get('/people/teams/11', function (req, res) {
     //return these
     return res.render('people/teams/11', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -1075,6 +1157,7 @@ router.get('/people/teams/12', function (req, res) {
     }
 
     let teamindex = 11
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -1086,6 +1169,9 @@ router.get('/people/teams/12', function (req, res) {
     let membersnumber = []
     let teams = []
     let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
     let teamnames = []
     let members = req.session.data.teams[teamindex].members
     let roles = []
@@ -1095,6 +1181,9 @@ router.get('/people/teams/12', function (req, res) {
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
     }
     for (i = 0; i < teamsnumber; i++) {
         teams[i] = req.session.data.teams[i]
@@ -1118,6 +1207,8 @@ router.get('/people/teams/12', function (req, res) {
     //return these
     return res.render('people/teams/12', {
         'teams': teams,
+        'pageid': pageid,
+        'fids': fids,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
