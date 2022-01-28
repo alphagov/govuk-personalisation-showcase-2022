@@ -2,16 +2,21 @@
 
 <ol class="govuk-list govuk-list--spaced govuk-!-padding-top-4">
     {% for team in teams | sort(attribute="name") %}
+    {% set url = ("0" + (team.id + 1)).slice(-2) %}
     <li class="govuk-!-padding-bottom-4">
 
         {% if team.name %}
         <h3 class="govuk-heading-m">
-            {% if team.slacklink %}
-            <a href="{{ team.slacklink }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank"> {{ team.name }}</a>
-            {% else %}
-            {{ team.name }}
-            {% endif %}
+
+            <a href="../people/teams/{{ url }}" target="_blank">{{ team.name }} </a>
+
         </h3>
+        <p>
+            {% if team.slacklink %}
+            <img src="../../public/images/slack.png" class="icon" target="_blank"><a href="{{ team.slacklink }}" target="_blank">Team Slack</a>
+            {% else %}
+            {% endif %}
+        </p>
         {% endif %}
 
         <!--   {% if team.focus %}
@@ -23,7 +28,7 @@
             {% if member.name %}
             <li>{{ member.role }} -
                 {% if member.email %}
-                <a href="mailto:{{ member.email }}">{{ member.name }}</a>
+                <a href="{{ member.email }}" target="_blank">{{ member.name }}</a>
                 {% else %}
                 {{ member.name }}
                 {% endif %}
@@ -53,7 +58,7 @@
             {% if member.name %}
             {% if member.role == role %}
 
-            <li>{% if member.email %}<a href="mailto:{{ member.email }}">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %} - {% if team.slacklink %}
+            <li>{% if member.email %}<a href="{{ member.email }}" target="_blank">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %} - {% if team.slacklink %}
                 <a href="{{ team.slacklink }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank"> {{ team.name }}</a>
                 {% else %}
                 {{ team.name }}

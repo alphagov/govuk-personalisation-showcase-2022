@@ -576,7 +576,7 @@ module.exports = {
             name: "Collecting Information from Users",
             id: 0,
             slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
-            focus: "Team's mission statement / vision goes here",
+            focus: "",
             roadmap: "",
             members: [
                 {
@@ -668,12 +668,17 @@ module.exports = {
                 {
                     role: "Product",
                     name: "Maxwell Riess",
-                    email: ""
+                    email: "https://gds.slack.com/team/UDBAFQCM7"
                 },
                 {
                     role: "Delivery",
                     name: "Lisa King",
-                    email: ""
+                    email: "https://gds.slack.com/team/U01GF1LC4MQ"
+           },
+                {
+                    role: "Research",
+                    name: "Ned Thistlethwaite",
+                    email: "https://gds.slack.com/team/UAFL5K6JK"
            }
            ]
         },
@@ -798,11 +803,6 @@ module.exports = {
                     role: "Delivery",
                     name: "Tony Azuka",
                     email: ""
-           },
-                {
-                    role: "Research",
-                    name: "Kobi King",
-                    email: ""
            }
            ]
         },
@@ -878,7 +878,7 @@ module.exports = {
            }
            ]
         }
-        ],
+    ],
     roles: [
        "Product",
         "Delivery",

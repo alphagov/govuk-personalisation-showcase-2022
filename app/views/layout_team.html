@@ -15,10 +15,10 @@
             <a href="{{ data['indexlink'] }}" class="govuk-breadcrumbs__link">{{ data['maintitle'] }}</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a href="../people/" class="govuk-breadcrumbs__link">The people</a>
+            <a href="../#contacts" class="govuk-breadcrumbs__link">The people</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link">{{ data['teams'][teamindex]['name'] }}</a>
+            <a class="govuk-breadcrumbs__link" href="{{ pageid }}">{{ data['teams'][teamindex]['name'] }}</a>
         </li>
     </ol>
 </div>
@@ -61,7 +61,7 @@
 
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 
-
+            {% if data['teams'][teamindex]['engagement'] %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -71,9 +71,13 @@
                     </h2>
                 </div>
                 <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    {% block engagements %}
                     <p class='govuk-body'>Summary of engagements with teams (@Leah working on format)</p>
+                    {% endblock %}
                 </div>
             </div>
+            {% else %}
+            {% endif %}
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -95,7 +99,37 @@
                     </h2>
                 </div>
                 <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-                    <p class='govuk-body'>List of features this team may be interested in goes here</p>
+
+
+                    {% for feature in features -%}
+                    {% if feature.teams %}
+                    {% for teams in feature.teams -%}
+
+                    <ul class="govuk-list govuk-list--spaced">
+                        {% if teams == pageid %}
+                        <li><a href="../../features/{{ feature.fid }}">{{ feature.name }}</a><br />
+                            {% include "../../features/includes/descriptions/{{ feature.fid }}" %}
+                        </li>
+                        {% endif %}
+                    </ul>
+
+                    {%- endfor %}
+                    {% else %}
+                    {% endif %}
+                    {%- endfor %}
+
+                    <br />
+
+                    <!--    {% for i in range(1, featurestotal) -%}
+                    {{ featurenames[i] }}
+
+                    <p>{{ featureteams[i] }} are interested in {{ fids[i] }} {{ featurenames[i] }}</p>
+
+
+                    {%- endfor %} -->
+
+
+
                 </div>
             </div>
             <div class="govuk-accordion__section ">

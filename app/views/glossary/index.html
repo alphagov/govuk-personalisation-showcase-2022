@@ -3,6 +3,7 @@
 {% block menu %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        {{ test }}
         <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
             {% for word, definition in data['glossary'] | dictsort %}
             <li><b>{{ word }}</b><br />

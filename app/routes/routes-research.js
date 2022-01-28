@@ -240,6 +240,7 @@ router.get('/engagement', function (req, res) {
     let focus = []
     let members = []
     let roles = []
+    let urls = []
     let needs = []
     let membernames = []
     let emails = []
@@ -268,6 +269,9 @@ router.get('/engagement', function (req, res) {
     for (i = 0; i < teamsnumber; i++) {
         focus[i] = req.session.data.teams[i].focus
     }
+    for (i = 0; i < teamsnumber; i++) {
+        urls[i] = req.session.data.teams[i].id + 1
+    }
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
@@ -276,12 +280,14 @@ router.get('/engagement', function (req, res) {
     return res.render('engagement/index', {
         'thispage': thispage,
         'teams': teams,
+        'urls': urls,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
         'focus': focus,
         'roles': roles,
         'rolesnumber': rolesnumber,
+        'features': features,
         'featurestotal': featurestotal,
         'membernames': membernames,
         'emails': emails,
@@ -301,6 +307,7 @@ router.get('/people/teams/01', function (req, res) {
     }
 
     let teamindex = 00
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
 
     // calculate number of teams
     let teamsnumber = req.session.data.teams.length;
@@ -344,6 +351,7 @@ router.get('/people/teams/01', function (req, res) {
     //return these
     return res.render('people/teams/01', {
         'teams': teams,
+        'pageid': pageid,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'teamnames': teamnames,
@@ -357,6 +365,774 @@ router.get('/people/teams/01', function (req, res) {
 
     })
 })
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/02', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 01
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/02', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/03', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 02
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let featurenames = []
+    let featureteams = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/03', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'featurenames': featurenames,
+        'featureteams': featureteams,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'features': features,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/04', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 03
+    let pageid = ("0" + (req.session.data.teams[teamindex].id + 1)).slice(-2)
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let featurenames = []
+    let fids = []
+    let featureteams = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+        featurenames[i] = req.session.data.rdd.features[i].name
+        featureteams[i] = req.session.data.rdd.features[i].teams
+        fids[i] = req.session.data.rdd.features[i].fid
+    }
+
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/04', {
+        'teams': teams,
+        'pageid': pageid,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'featurenames': featurenames,
+        'featureteams': featureteams,
+        'fids': fids,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'features': features,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/05', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 04
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/05', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/06', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 05
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/06', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/07', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 06
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/07', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/08', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 07
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/08', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/09', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 08
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/09', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/10', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 09
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/10', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/11', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 10
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/11', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+// TEAM TEMPLATE - UPDATE URLS AND INDEX TO MATCH TEAM ID
+router.get('/people/teams/12', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let teamindex = 11
+
+    // calculate number of teams
+    let teamsnumber = req.session.data.teams.length;
+    // calculate number of roles
+    let rolesnumber = req.session.data.roles.length;
+    // calculate number of features
+    let featurestotal = req.session.data.rdd.features.length
+
+    let membersnumber = []
+    let teams = []
+    let features = []
+    let teamnames = []
+    let members = req.session.data.teams[teamindex].members
+    let roles = []
+    let needs = []
+    let membernames = []
+    let emails = []
+
+    for (i = 0; i < featurestotal; i++) {
+        features[i] = req.session.data.rdd.features[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teams[i] = req.session.data.teams[i]
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        membersnumber[i] = req.session.data.teams[teamindex].members.length
+    }
+    for (i = 0; i < rolesnumber; i++) {
+        roles[i] = req.session.data.roles[i]
+    }
+    for (i = 0; i < membersnumber; i++) {
+        emails[i] = req.session.data.teams.members[i].email
+    }
+    for (i = 0; i < membersnumber; i++) {
+        membernames[i] = req.session.data.teams.members[i].name
+    }
+
+    //return these
+    return res.render('people/teams/12', {
+        'teams': teams,
+        'teamsnumber': teamsnumber,
+        'membersnumber': membersnumber,
+        'teamnames': teamnames,
+        'teamindex': teamindex,
+        'roles': roles,
+        'rolesnumber': rolesnumber,
+        'featurestotal': featurestotal,
+        'membernames': membernames,
+        'emails': emails,
+        'members': members
+
+    })
+})
+
+
 
 // DATA
 router.get('/data', function (req, res) {
@@ -1804,6 +2580,7 @@ router.get('/features', function (req, res) {
     let impact = []
     let complexity = []
     let value = []
+    let teams = []
 
     // loop though the features and populate the arrays
     for (i = 0; i < featurestotal; i++) {
@@ -1819,6 +2596,7 @@ router.get('/features', function (req, res) {
         impact[i] = req.session.data.rdd.features[i].userimpact
         complexity[i] = req.session.data.rdd.features[i].complexityservice
         value[i] = req.session.data.rdd.features[i].valueservice
+        teams[i] = req.session.data.rdd.features[i].teams
     }
     // loop though the links and populate the arrays
     for (i = 0; i < menusections; i++) {
@@ -1848,6 +2626,7 @@ router.get('/features', function (req, res) {
         'titles': titles,
         'anchors': anchors,
         'menusections': menusections,
+        'teams': teams,
         'thispage': thispage
     })
 })
@@ -2034,6 +2813,7 @@ router.get('/features/03', function (req, res) {
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+    let teams = req.session.data.rdd.features[index].teams
 
     let total = req.session.data.rdd.features.length
 
@@ -2061,7 +2841,8 @@ router.get('/features/03', function (req, res) {
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
-        'relatedfeatures': relatedfeatures
+        'relatedfeatures': relatedfeatures,
+        'teams': teams
     })
 })
 

@@ -44,7 +44,7 @@
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true#gid=1242826283",
             "relatedfeatures": ["02", "04", "10", "23", "24", "27"],
             "riskcategory": ["01", "02"],
-            "teams": []
+            "teams": ["03", "04"]
     },
         {
             "fid": "02",
@@ -88,7 +88,8 @@
             "showrecommendations": false,
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true&pli=1#gid=726455736",
             "relatedfeatures": ["01", "02", "05", "06", "07", "09", "10", "12", "16", "17", "18", "19", "20", "24", "33"],
-            "riskcategory": ["02", "03"]
+            "riskcategory": ["02", "03"],
+            "teams": ["04"]
     },
         {
             "fid": "04",
