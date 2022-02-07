@@ -601,7 +601,7 @@ module.exports = {
             name: "GOV.UK Forms",
             id: 0,
             slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
-            focus: "",
+            focus: "Tackling the long tail of pdf and other document-based service forms, supporting services to quickly create online forms using a common form-building platform for government.",
             roadmap: "",
             members: [
                 {
@@ -630,7 +630,7 @@ module.exports = {
             name: "GDX",
             id: 1,
             slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
-            focus: "",
+            focus: "Looking at operational data used to deliver public services. A project to explore the value and feasibility of a common solution for data sharing across government. Looking at existing data shares to identify challenges and test prototypes, Aiming to facilitate the sharing of data about citizens",
             roadmap: "",
             members: [
                 {
@@ -687,7 +687,7 @@ module.exports = {
             name: "Accounts",
             id: 3,
             slacklink: "https://gds.slack.com/archives/C012GEZBZM0",
-            focus: "",
+            focus: "Part of one login for government, looking at how users navigate to the account, how to manage having multiple accounts and what a signed-in state looks like for users",
             roadmap: "",
             members: [
                 {
@@ -711,7 +711,7 @@ module.exports = {
             name: "Authentication",
             id: 4,
             slacklink: "https://gds.slack.com/archives/C01TN7NC951",
-            focus: "",
+            focus: "Dealing with User Authentication and ensuring that the individual logging into a service is recognised and who they say they are.",
             roadmap: "",
             members: [
                 {
@@ -797,7 +797,7 @@ module.exports = {
             name: "Data labs",
             id: 8,
             slacklink: "https://gds.slack.com/archives/CHR4UQKU4",
-            focus: "",
+            focus: "The Data Labs team analyse data across the gov.uk website to provide teams with insight and recommendations as to how personalisation should be enabled for the user",
             roadmap: "",
             members: [
                 {
