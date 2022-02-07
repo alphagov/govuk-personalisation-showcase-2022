@@ -589,12 +589,12 @@ module.exports = {
         risklabel6: 'Sensitivity of data',
     },
     glossary: {
-        Banana: 'Definition goes here',
-        Apple: 'Definition goes here',
-        Cherry: 'Definition goes here',
-        Kiwi: 'Definition goes here',
-        Orange: 'Definition goes here',
-        Pear: 'Definition goes here'
+        "X-Gov Services": 'Joined up services across government ',
+        "PODS": 'Personal Data Store -  a way of storing user data within their GOV.UK account',
+        "CI / CD pipelines": 'A Continuous integration/continuous delivery (CI/CD) pipeline is a series of steps that must be performed in order to deliver a new version of software.',
+        "DI": 'Digital Identity',
+        "GDX": 'Government Data Exchange',
+        "SSI": 'Single Sign On'
     },
     teams: [
         {

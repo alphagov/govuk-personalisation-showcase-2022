@@ -1,13 +1,15 @@
 {% extends "layout_handover.html" %}
 
 {% block menu %}
-<div class="govuk-grid-row">
+<div class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-two-thirds">
         {{ test }}
-        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <ul class="govuk-list govuk-list--spaced">
             {% for word, definition in data['glossary'] | dictsort %}
-            <li><b>{{ word }}</b><br />
-                {{ definition }}</li>
+            <li class="govuk-!-padding-bottom-8">
+                <h4 class="govuk-heading-m">{{ word }}</h4>
+                {{ definition }}
+            </li>
             {% endfor %}
         </ul>
     </div>
