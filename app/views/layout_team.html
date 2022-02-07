@@ -90,16 +90,15 @@
                 <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
 
                     <p>These are features this team may have an interest in:</p>
+                    <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-4">
 
-                    {% for feature in features -%}
-                    {% if feature.teams %}
-                    {% for teams in feature.teams -%}
-                    {% if teams == pageid %}
-
-                    <ul class="govuk-list govuk-list--spaced">
+                        {% for feature in features -%}
+                        {% if feature.teams %}
+                        {% for teams in feature.teams -%}
+                        {% if teams == pageid %}
 
                         <li>
-                            <h4 class="govuk-heading-s govuk-!-padding-bottom-2 govuk-!-padding-top-2"><a href="../../features/{{ feature.fid }}"><b>{{ feature.fid }}. {{ feature.name }}</b></a></h4>
+                            <a href="../../features/{{ feature.fid }}">{{ feature.fid }}. {{ feature.name }}</a>
                             <!--    <details class="govuk-details" data-module="govuk-details">
                                 <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
@@ -111,18 +110,16 @@
 
                                 </div>
                             </details> -->
-
                         </li>
 
+                        {% endif %}
+                        {%- endfor %}
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
                     </ul>
 
-                    {% endif %}
-                    {%- endfor %}
-                    {% else %}
-                    {% endif %}
-                    {%- endfor %}
-
-                    <div class="govuk-warning-text govuk-!-padding-top-8">
+                    <div class="govuk-warning-text govuk-!-padding-top-8 govuk-!-padding-bottom-8">
                         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                         <strong class="govuk-warning-text__text">
                             <span class="govuk-warning-text__assistive">Warning</span>
@@ -141,7 +138,76 @@
                     </h2>
                 </div>
                 <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                    <p class='govuk-body'>List of insights this team may be interested in goes here</p>
+
+                    <h3 class="govuk-heading-m">End user insights</h3>
+                    <p>These are end user insights this team may have an interest in:</p>
+
+                    <ul class="govuk-list govuk-list--spaced govuk-list--bullet govuk-!-padding-top-4">
+
+                        {% for insight in userinsights -%}
+                        {% if insight.teams %}
+
+                        {% for team in insight.teams -%}
+
+                        {% if team == pageid %}
+                        <li>
+                            <a href="../../user-research/insights.html#{{ insight.anchor }}">{{ insight.title }}</a>
+                        </li>
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m govuk-!-padding-top-8">Service insights</h3>
+                    <p>These are service insights this team may have an interest in:</p>
+
+                    <ul class="govuk-list govuk-list--spaced govuk-list--bullet govuk-!-padding-top-4">
+
+                        {% for insight in serviceinsights -%}
+                        {% if insight.teams %}
+
+                        {% for team in insight.teams -%}
+
+                        {% if team == pageid %}
+                        <li>
+                            <a href="../../service-research/insights.html#{{ insight.anchor }}">{{ insight.title }}</a>
+                        </li>
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m govuk-!-padding-top-8">Data/tech insights</h3>
+                    <p>These are data/tech insights this team may have an interest in:</p>
+
+                    <ul class="govuk-list govuk-list--spaced govuk-list--bullet govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+                        {% for insight in datainsights -%}
+                        {% if insight.teams %}
+
+                        {% for team in insight.teams -%}
+
+                        {% if team == pageid %}
+                        <li>
+                            <a href="../../data/insights.html#{{ insight.anchor }}">{{ insight.title }}</a>
+                        </li>
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+
+                        {% else %}
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+
                 </div>
             </div>
             <div class="govuk-accordion__section ">
@@ -153,7 +219,32 @@
                     </h2>
                 </div>
                 <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-                    <p class='govuk-body'>List of recommendations this team may be interested in goes here</p>
+
+                    <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-8">
+
+                        {% for recommendation in recommendations | sort(attribute="priority") | reverse -%}
+                        {% if recommendation.teams %}
+
+                        {% for team in recommendation.teams -%}
+
+                        {% if team == pageid %}
+                        <li class="govuk-!-padding-bottom-8">
+                            <a href="../../recommendations#rec-{{ recommendation.rid }}"><strong class="govuk-tag govuk-tag">
+                                    {{ recommendation.priority }}
+                                </strong><br />{{ recommendation.title }}</a>&nbsp;
+                        </li>
+                        {% else %}
+
+                        {% endif %}
+                        {%- endfor %}
+
+                        {% else %}
+
+
+                        {% endif %}
+                        {%- endfor %}
+                    </ul>
+
                 </div>
             </div>
         </div>

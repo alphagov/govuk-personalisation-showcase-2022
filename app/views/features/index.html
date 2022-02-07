@@ -113,6 +113,96 @@
 
 </div>
 
+<div class="govuk-grid-column-full">
+
+
+
+    <p class="govuk-!-padding-top-8 govuk-!-padding-bottom-8">The features are also sorted by the teams that may be interested in thems in the tabs below:</p>
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+            Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+
+            <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#by-team">
+                    By team
+                </a>
+            </li>
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#by-feature">
+                    By feature
+                </a>
+            </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="by-feature">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+
+            <br /><br />
+            {% for i in range(1, featurestotal) -%}
+
+            <p class="govuk-!-padding-top-8"><b><a href="../features/{{ fids[i] }}"> <b>{{ fids[i] }} {{ names[i] }}</b></a></b></p>
+
+            <ul class="govuk-list govuk-list--spaced">
+                {% for team in featureteams[i] | sort -%}
+                {% set teamindex = (1 + team).slice(-1) | int %}
+                {% set teamindexx = teamindex + 1 %}
+                <li><a href="../people/teams/{{ team }}"> <strong class="govuk-tag govuk-tag">{{ data['teams'][teamindex]['name'] }} </strong></a></li>
+                {%- endfor %}
+            </ul>
+
+            {%- endfor %}
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="by-team">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <br /><br />
+
+            {% for team in teams -%}
+            {% set teamidd = (1 + team.id) | int %}
+            {% set teamiddd = ("0" + teamidd) %}
+
+            <p class="govuk-!-padding-top-8">
+
+                <a href="../people/teams/{{ teamiddd }}" class="tag-link">
+                    <strong class="govuk-tag govuk-tag">
+                        {{ team.name }}
+                    </strong></a></p>
+
+            <ul class="govuk-list govuk-list--spaced">
+                {% for i in range(1, featurestotal) -%}
+                {% for team in featureteams[i] | sort -%}
+                {% set teamindex = (1 + team).slice(-1) | int %}
+                {% set teamindexx = teamindex %}
+
+
+                {% if teamiddd == teamindexx %}
+
+                <li><a href="../features/{{ fids[i] }}">{{ names[i] }}</a></li>
+                {% else %}
+
+                {% endif %}
+                {%- endfor %}
+                {%- endfor %}
+
+            </ul>
+
+            {%- endfor %}
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
 {% endblock %}
 {% else %}
 {% endif %}

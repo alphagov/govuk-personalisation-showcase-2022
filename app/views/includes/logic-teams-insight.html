@@ -1,0 +1,8 @@
+ {% set teamindex = ("0" + (team)).slice(-2) %}
+ {% set teamindexx = teamindex - 1 | int %}
+ <a href="../people/teams/{{ team }}.html" class="tag-link">
+     <strong class="govuk-tag govuk-tag">
+         {{ data['teams'][teamindexx]['name'] }}
+     </strong>
+ </a>
+ <br /><br />

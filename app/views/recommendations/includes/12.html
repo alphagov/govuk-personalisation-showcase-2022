@@ -1,0 +1,36 @@
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['why'] }} </h3>
+<p>Our findings suggest that users are open to curated content as long as they are clear on how the data is being used, and as long as they have consented to data usage for personalisation. </p>
+
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['what'] }}</h3>
+<p>Further research could uncover whether there are any elements of curated and personalised content which become uncomfortable and intrusive for users. </p>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['who'] }}</h3>
+{% include "recommendations/includes/logic-teams-recommendations.html" %}
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['challenges'] }}</h3>
+<p><i>N/a</i></p>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['consequences'] }}</h3>
+<p>No implications identified at present..</p>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['considerations'] }}</h3>
+<p>This will not add value at the current time. This could be a future piece of research. </p>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['more'] }}</h3>
+<p><a href="../features/04">{{ data['features']['04'] }}</a> </p>
+
+<br />
+
+<p>The following features are all part of the wider 'personalisation' category:</p>
+
+
+<ul class="govuk-list govuk-!-padding-top-4">
+    {% for feature in features -%}
+    {% if feature.category === "personalisation" %}
+    <li>
+        <a href="../features/{{ feature.fid }}">{{ feature.name }}</a>
+    </li>
+    {% endif %}
+    {%- endfor %}
+</ul>

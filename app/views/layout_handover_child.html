@@ -65,6 +65,7 @@
 </div>
 {% endblock %}
 
+
 {% if pagemenu %}
 {% block menu %}
 <!-- PAGE MENU -->
@@ -90,9 +91,11 @@
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[0] %}
 <!-- {{ pagemenu[0]['title'] }} -->
-<div id="{{ pagemenu[0]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[0]['anchor'] }}" class="govuk-grid-row  govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l">
             <span class="section-number">1</span>
@@ -102,12 +105,43 @@
     {% block section1 %}
     {% endblock %}
 </div>
+{% if pagemenu[0].teams %}
+{% block section1teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[0].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[1] %}
 <!-- {{ pagemenu[1]['title'] }} -->
-<div id="{{ pagemenu[1]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[1]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">2</span>
             <br /> {{ pagemenu[1]['title'] }}</h2>
@@ -115,12 +149,41 @@
     {% block section2 %}
     {% endblock %}
 </div>
+{% if pagemenu[1].teams %}
+{% block section2teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[1].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[2] %}
 <!-- {{ pagemenu[2]['title'] }} -->
-<div id="{{ pagemenu[2]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[2]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">3</span>
             <br />{{ pagemenu[2]['title'] }}</h2>
@@ -128,12 +191,41 @@
     {% block section3 %}
     {% endblock %}
 </div>
+{% if pagemenu[2].teams %}
+{% block section3teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[2].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[3] %}
 <!-- {{ pagemenu[3]['title'] }} -->
-<div id="{{ pagemenu[3]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[3]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">4</span>
             <br />{{ pagemenu[3]['title'] }}</h2>
@@ -141,12 +233,41 @@
     {% block section4 %}
     {% endblock %}
 </div>
+{% if pagemenu[3].teams %}
+{% block section4teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[3].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[4] %}
 <!-- {{ pagemenu[4]['title'] }} -->
-<div id="{{ pagemenu[4]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[4]['anchor'] }}" class="govuk-grid-row  govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">5</span>
             <br />{{ pagemenu[4]['title'] }}</h2>
@@ -154,13 +275,41 @@
     {% block section5 %}
     {% endblock %}
 </div>
+{% if pagemenu[4].teams %}
+{% block section5teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
 
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[4].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[5] %}
 <!-- {{ pagemenu[5]['title'] }} -->
-<div id="{{ pagemenu[5]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[5]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">6</span>
             <br />{{ pagemenu[5]['title'] }}</h2>
@@ -168,13 +317,41 @@
     {% block section6 %}
     {% endblock %}
 </div>
+{% if pagemenu[5].teams %}
+{% block section6teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
 
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[5].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[6] %}
 <!-- {{ pagemenu[6]['title'] }} -->
-<div id="{{ pagemenu[6]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[6]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">7</span>
             <br />{{ pagemenu[6]['title'] }}</h2>
@@ -182,12 +359,41 @@
     {% block section7 %}
     {% endblock %}
 </div>
+{% if pagemenu[6].teams %}
+{% block section7teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[6].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[7] %}
 <!-- {{ pagemenu[7]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">8</span>
             <br />{{ pagemenu[7]['title'] }}</h2>
@@ -195,12 +401,41 @@
     {% block section8 %}
     {% endblock %}
 </div>
+{% if pagemenu[7].teams %}
+{% block section8teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[7].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[8] %}
 <!-- {{ pagemenu[8]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[8]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">9</span>
             <br />{{ pagemenu[8]['title'] }}</h2>
@@ -208,12 +443,41 @@
     {% block section9 %}
     {% endblock %}
 </div>
+{% if pagemenu[8].teams %}
+{% block section9teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[8].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[9] %}
 <!-- {{ pagemenu[9]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[9]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">10</span>
             <br />{{ pagemenu[9]['title'] }}</h2>
@@ -221,12 +485,41 @@
     {% block section10 %}
     {% endblock %}
 </div>
+{% if pagemenu[9].teams %}
+{% block section10teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[9].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[10] %}
 <!-- {{ pagemenu[10]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[10]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">11</span>
             <br />{{ pagemenu[10]['title'] }}</h2>
@@ -234,12 +527,41 @@
     {% block section11 %}
     {% endblock %}
 </div>
+{% if pagemenu[10].teams %}
+{% block section11teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[10].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[11] %}
 <!-- {{ pagemenu[11]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[11]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">12</span>
             <br />{{ pagemenu[11]['title'] }}</h2>
@@ -247,12 +569,41 @@
     {% block section12 %}
     {% endblock %}
 </div>
+{% if pagemenu[11].teams %}
+{% block section12teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[11].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[12] %}
 <!-- {{ pagemenu[12]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[12]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">13</span>
             <br />{{ pagemenu[12]['title'] }}</h2>
@@ -260,12 +611,41 @@
     {% block section13 %}
     {% endblock %}
 </div>
+{% if pagemenu[12].teams %}
+{% block section13teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[12].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
+
 {% if pagemenu[13] %}
 <!-- {{ pagemenu[13]['title'] }} -->
-<div id="{{ pagemenu[7]['anchor'] }}" class="govuk-grid-row govuk-!-padding-bottom-8 govuk-!-padding-top-8">
+<br /><br />
+<div id="{{ pagemenu[13]['anchor'] }}" class="govuk-grid-row govuk-!-padding-top-8">
     <div class="govuk-grid-column-full">
         <h2 class="govuk-heading-l"> <span class="section-number">14</span>
             <br />{{ pagemenu[13]['title'] }}</h2>
@@ -273,35 +653,39 @@
     {% block section14 %}
     {% endblock %}
 </div>
+{% if pagemenu[13].teams %}
+{% block section14teams %}
+<div class="govuk-grid-row  govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-full">
+        <details class="govuk-details highlight" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text highlight-header">
+                    Interested parties
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-grid-row govuk-!-padding-bottom-4 govuk-!-padding-top-4">
+
+                    <div class="govuk-grid-column-one-half">
+                        {% for team in pagemenu[13].teams %}
+                        {% include "includes/logic-teams-insight.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </details>
+    </div>
+</div>
+{% endblock %}
+{% else %}
+{% endif %}
 {% else %}
 {% endif %}
 
 
 
 {% block prevnext %}
-<!--
-<div class="govuk-grid-row govuk-!-padding-top-8 govuk-!-padding-bottom-8">
-
-    <div class="govuk-grid-column-one-quarter">
-
-        <div class="previous-chapter">
-            <p>← Previous</p>
-            <a href="{{ prevpagelink }}">{{ prevpage }}</a>
-        </div>
-    </div>
-    <div class="govuk-grid-column-one-half hide-on-mobile">
-
-        &nbsp;
-
-    </div>
-    <div class="govuk-grid-column-one-quarter ">
-        <div class="next-chapter">
-            <p>Next →</p>
-            <a href="{{ nextpagelink }}">{{ nextpage }}</a>
-        </div>
-    </div>
-</div>
--->
 {% endblock %}
 
 {% block footlink %}

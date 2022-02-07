@@ -79,11 +79,6 @@ module.exports = {
             url: "/q-and-a",
             id: 11
     },
-        {
-            title: "Engagement",
-            url: "/engagement",
-            id: 12
-    }
              ],
     problemmenu: [
         {
@@ -162,47 +157,58 @@ module.exports = {
     userinsightsmenu: [
         {
             title: "Users identified various benefits of the GOV.UK account and the concept of X-GOV journeys",
-            anchor: "insight-1"
+            anchor: "insight-1",
+            teams: ["04", "05"]
         },
         {
             title: "Not everyone will perceive the GOV.UK account as valuable or useful",
-            anchor: "insight-2"
+            anchor: "insight-2",
+            teams: ["04", "08"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is used by the government",
-            anchor: "insight-3"
+            anchor: "insight-3",
+            teams: ["04"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is shared by the government",
-            anchor: "insight-4"
+            anchor: "insight-4",
+            teams: ["04", "03"]
         },
         {
             title: "Users appreciate the ability to control and manage their data",
-            anchor: "insight-5"
+            anchor: "insight-5",
+            teams: ["04", "03"]
         },
         {
             title: "Users read personalised content as accurate to them",
-            anchor: "insight-6"
+            anchor: "insight-6",
+            teams: ["04"]
         },
         {
             title: "Users’ descriptions of the GOV.UK account in their own words",
-            anchor: "insight-7"
+            anchor: "insight-7",
+            teams: ["04", "08"]
         },
         {
             title: "Users don’t care how their data is stored, as long as it is secure",
-            anchor: "insight-8"
+            anchor: "insight-8",
+            teams: ["04", "03"]
         },
         {
             title: "Users expect the government’s online services to be secure",
-            anchor: "insight-9"
+            anchor: "insight-9",
+            teams: ["04"]
         },
         {
             title: "Automated transactions create a sense of nervousness for some users ",
-            anchor: "insight-10"
+            anchor: "insight-10",
+            teams: ["04"]
         },
         {
             title: "Users expect a way of getting in touch if they have an issue with their account",
-            anchor: "insight-11"
+            anchor: "insight-11",
+            teams: ["04"]
         }
     ],
     userneedsmenu: [
@@ -303,54 +309,67 @@ module.exports = {
         {
             title: "Services only share limited data outside of their own government departments",
             anchor: "insight-1",
+            teams: ["04", "05"]
     },
         {
             title: "Many services use third party data with a high reliance on manual processes ",
             anchor: "insight-2",
+            teams: ["04", "05"]
     },
         {
             title: "Services are transforming at different rates which creates compatibility issues",
             anchor: "insight-3",
+            teams: ["04", "05"]
     },
         {
             title: "Services expect to benefit from sharing data across X-Gov in a number of ways",
             anchor: "insight-4",
+            teams: ["04", "05"]
     },
         {
             title: "Data assurance standards and current legislation are fundamental service concerns",
             anchor: "insight-5",
+            teams: ["04", "05"]
     },
         {
             title: "Existing roadmaps and resource commitment creates competing priorities with the GOV.UK account integration",
             anchor: "insight-6",
+            teams: ["04", "05"]
     },
         {
             title: "Services expect that a level playing field will be created, with all available data on the table",
             anchor: "insight-7",
+            teams: ["04", "05"]
     },
         {
             title: "Services identified joining up systems and back office processes as key challenges",
             anchor: "insight-8",
+            teams: ["04", "05"]
     },
         {
             title: "Services see the hypothetical account features as either “core or value added”",
             anchor: "insight-9",
+            teams: ["04", "05"]
     },
         {
             title: "Service users expect to be clear about the operating model and support mechanism for end users",
             anchor: "insight-10",
+            teams: ["04", "05"]
     },
         {
             title: "User adoption and user reactions are key considerations",
             anchor: "insight-11",
+            teams: ["04", "05"]
     },
         {
             title: "Services identified that not all data should be available for re-use within the GOV account",
             anchor: "insight-12",
+            teams: ["04", "05"]
     },
         {
             title: "Services believe that individual control of data is essential",
             anchor: "insight-13",
+            teams: ["04", "05"]
     }
     ],
     datamenu: [
@@ -429,26 +448,32 @@ module.exports = {
         {
             title: "There are four key capabilities needed for services to support the features we’ve tested",
             anchor: "insight-1",
+            teams: ["04", "05"]
         },
         {
             title: "Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation",
             anchor: "insight-2",
+            teams: ["04", "05"]
     },
         {
             title: "GOV.UK account features may support and improve services business processes",
             anchor: "insight-3",
+            teams: ["04", "05"]
     },
         {
             title: "Services will have needs that GOV.UK account features can’t meet",
             anchor: "insight--4",
+            teams: ["04", "05"]
     },
         {
             title: "Services generally need the same information from their users",
             anchor: "insight--5",
+            teams: ["04", "05"]
     },
         {
             title: "Services vary significantly in how they receive and record information from their users",
             anchor: "insight--6",
+            teams: ["04", "05"]
     }
     ],
     featuresmenu: [
@@ -463,16 +488,16 @@ module.exports = {
     ],
     recommendationsmenu: [
         {
-            title: "End user recommendations",
-            anchor: "end-user-recommendations",
+            title: "Now",
+            anchor: "now-recommendations",
     },
         {
-            title: "Service user recommendations",
-            anchor: "service-user-recommendations",
+            title: "Next",
+            anchor: "next-recommendations",
     },
         {
-            title: "Data recommendations",
-            anchor: "data-recommendations",
+            title: "Later",
+            anchor: "later-recommendations",
     }
     ],
     pillarsmenu: [
@@ -635,10 +660,10 @@ module.exports = {
            ]
         },
         {
-            name: "My Data Team",
+            name: "Manage My Data",
             id: 2,
             slacklink: "https://gds.slack.com/archives/C02QZE8QZPS",
-            focus: "",
+            focus: "The Manage My Data team are exploring a solution for storage of user data through Solid Pods",
             roadmap: "",
             members: [
                 {
@@ -886,5 +911,135 @@ module.exports = {
         "Content",
         "Research",
         "Tech"
-    ]
+    ],
+    recommendationheadings: {
+        why: "Why do we recommend this?",
+        what: "What will it enable?",
+        who: "Who should pick this up?",
+        challenges: "What are the challenges/potential blockers?",
+        consequences: "What happens if this isn’t implemented?",
+        considerations: "Are there any other considerations?",
+        more: "Where can I find more information about this?"
+    },
+    recommendations: [
+        {
+            rid: 0,
+            title: "Further user research and consultation with SMEs to understand which tech options will best meet user needs",
+            teams: ["03", "01"],
+            priority: "now",
+            discipline: ["End user", "Service research", "Architecture", "Data"]
+        },
+        {
+            rid: 1,
+            title: "Conduct a further communications and branding exercise on the naming and description of the GOV.UK account",
+            teams: ["04", "08"],
+            priority: "now",
+            discipline: ["End user", "Service research", "Branding", "Adoption"]
+        },
+        {
+            rid: 2,
+            title: "Further end user concept testing of an attribute store, and attribute sharing",
+            teams: ["01"],
+            priority: "next",
+            discipline: ["End user", "Service research", "Data", "Architecture"]
+        },
+        {
+            rid: 3,
+            title: "Explore user expectations around document upload",
+            teams: ["03", "04", "01"],
+            priority: "later",
+            discipline: ["End user", "Architecture"]
+        },
+        {
+            rid: 4,
+            title: "Further exploration around encouraging/compelling to set up a GOV.UK account and add data to it",
+            teams: ["08", "04", "01"],
+            priority: "later",
+            discipline: ["End user", "Branding", "Adoption"]
+        },
+        {
+            rid: 5,
+            title: "Provide users with a way of contacting the GOV.UK accounts team",
+            teams: ["04"],
+            priority: "later",
+            discipline: ["End user", "Service research", "Operating model"]
+        },
+        {
+            rid: 6,
+            title: "Conduct further concept exploration on legacy data",
+            teams: ["04", "12", "09", "03", "01"],
+            priority: "later",
+            discipline: ["End user", "Service research", "Data", "Architecture", "Legal"]
+        },
+        {
+            rid: 7,
+            title: "Conduct concept exploration with end users on account flags",
+            teams: ["04"],
+            priority: "later",
+            discipline: ["End user", "Service research", "Data", "Architecture"]
+        },
+        {
+            rid: 8,
+            title: "Conduct further experimentation on personalised navigation",
+            teams: ["04", "07"],
+            priority: "later",
+            discipline: ["End user"]
+        },
+        {
+            rid: 9,
+            title: "Conduct further concept exploration on external data ",
+            teams: ["04", "03", "01"],
+            priority: "later",
+            discipline: ["End user", "Data", "Legal"]
+                },
+        {
+            rid: 10,
+            title: "Conduct further concept exploration on payment methods ",
+            teams: ["04", "01"],
+            priority: "later",
+            discipline: ["End user"]
+        },
+        {
+            rid: 11,
+            title: "Conduct further research on shared information with safeguarding SMEs ",
+            teams: ["04", "07", "03", "01"],
+            priority: "later",
+            discipline: ["End user", "Service research", "Legal", "Data", "Architecture"]
+        },
+        {
+            rid: 12,
+            title: "Do further concept exploration on curated and personalised content",
+            teams: ["04", "07", "03"],
+            priority: "later",
+            discipline: ["End user", "Service research", "Legal", "Data"]
+                },
+        {
+            rid: 13,
+            title: "Do further research on different end users of the GOV.UK account",
+            teams: ["05", "12", "04", "01", "03", "02"],
+            priority: "later",
+            discipline: ["End user", "Adoption", "Legal", "Service research"]
+                },
+        {
+            rid: 14,
+            title: "Continue research on consent patterns",
+            teams: ["04", "01"],
+            priority: "later",
+            discipline: ["End user", "Legal"]
+                },
+        {
+            rid: 15,
+            title: "Explore how to effectively communicate and educate government services about the GOV.UK account and the long-term vision ",
+            teams: ["08"],
+            priority: "now",
+            discipline: ["Service research", "Adoption"]
+                },
+        {
+            rid: 16,
+            title: "Conduct research to understand, for services undergoing a digital transformation, how their roadmap aligns with the GOV.UK account roadmap",
+            teams: ["08"],
+            priority: "next",
+            discipline: ["Service research"]
+                }
+            ]
 }
