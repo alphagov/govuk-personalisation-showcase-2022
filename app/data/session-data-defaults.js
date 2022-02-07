@@ -462,17 +462,17 @@ module.exports = {
     },
         {
             title: "Services will have needs that GOV.UK account features can’t meet",
-            anchor: "insight--4",
+            anchor: "insight-4",
             teams: ["04", "05"]
     },
         {
             title: "Services generally need the same information from their users",
-            anchor: "insight--5",
+            anchor: "insight-5",
             teams: ["04", "05"]
     },
         {
             title: "Services vary significantly in how they receive and record information from their users",
-            anchor: "insight--6",
+            anchor: "insight-6",
             teams: ["04", "05"]
     }
     ],
@@ -489,15 +489,15 @@ module.exports = {
     recommendationsmenu: [
         {
             title: "Now",
-            anchor: "now-recommendations",
+            anchor: "now",
     },
         {
             title: "Next",
-            anchor: "next-recommendations",
+            anchor: "next",
     },
         {
             title: "Later",
-            anchor: "later-recommendations",
+            anchor: "later",
     }
     ],
     pillarsmenu: [
@@ -598,7 +598,7 @@ module.exports = {
     },
     teams: [
         {
-            name: "Collecting Information from Users",
+            name: "GOV.UK Forms",
             id: 0,
             slacklink: "https://gds.slack.com/archives/C01F4NWT6CW",
             focus: "",
@@ -607,7 +607,7 @@ module.exports = {
                 {
                     role: "Product",
                     name: "Harry Vos",
-                    email: ""
+                    email: "https://gds.slack.com/team/UAEUDVA4Q"
                 },
                 {
                     role: "Delivery",
@@ -915,7 +915,7 @@ module.exports = {
     recommendationheadings: {
         why: "Why do we recommend this?",
         what: "What will it enable?",
-        who: "Who should pick this up?",
+        who: "Interested parties",
         challenges: "What are the challenges/potential blockers?",
         consequences: "What happens if this isn’t implemented?",
         considerations: "Are there any other considerations?",
@@ -927,105 +927,105 @@ module.exports = {
             title: "Further user research and consultation with SMEs to understand which tech options will best meet user needs",
             teams: ["03", "01"],
             priority: "now",
-            discipline: ["End user", "Service research", "Architecture", "Data"]
+            discipline: ["End user research", "Service research", "Architecture", "Data"]
         },
         {
             rid: 1,
             title: "Conduct a further communications and branding exercise on the naming and description of the GOV.UK account",
             teams: ["04", "08"],
             priority: "now",
-            discipline: ["End user", "Service research", "Branding", "Adoption"]
+            discipline: ["End user research", "Service research", "Branding", "Adoption"]
         },
         {
             rid: 2,
             title: "Further end user concept testing of an attribute store, and attribute sharing",
             teams: ["01"],
             priority: "next",
-            discipline: ["End user", "Service research", "Data", "Architecture"]
+            discipline: ["End user research", "Service research", "Data", "Architecture"]
         },
         {
             rid: 3,
             title: "Explore user expectations around document upload",
             teams: ["03", "04", "01"],
             priority: "later",
-            discipline: ["End user", "Architecture"]
+            discipline: ["End user research", "Architecture"]
         },
         {
             rid: 4,
             title: "Further exploration around encouraging/compelling to set up a GOV.UK account and add data to it",
             teams: ["08", "04", "01"],
             priority: "later",
-            discipline: ["End user", "Branding", "Adoption"]
+            discipline: ["End user research", "Branding", "Adoption"]
         },
         {
             rid: 5,
             title: "Provide users with a way of contacting the GOV.UK accounts team",
             teams: ["04"],
             priority: "later",
-            discipline: ["End user", "Service research", "Operating model"]
+            discipline: ["End user research", "Service research", "Operating model"]
         },
         {
             rid: 6,
             title: "Conduct further concept exploration on legacy data",
             teams: ["04", "12", "09", "03", "01"],
             priority: "later",
-            discipline: ["End user", "Service research", "Data", "Architecture", "Legal"]
+            discipline: ["End user research", "Service research", "Data", "Architecture", "Legal"]
         },
         {
             rid: 7,
             title: "Conduct concept exploration with end users on account flags",
             teams: ["04"],
             priority: "later",
-            discipline: ["End user", "Service research", "Data", "Architecture"]
+            discipline: ["End user research", "Service research", "Data", "Architecture"]
         },
         {
             rid: 8,
             title: "Conduct further experimentation on personalised navigation",
             teams: ["04", "07"],
             priority: "later",
-            discipline: ["End user"]
+            discipline: ["End user research"]
         },
         {
             rid: 9,
             title: "Conduct further concept exploration on external data ",
             teams: ["04", "03", "01"],
             priority: "later",
-            discipline: ["End user", "Data", "Legal"]
+            discipline: ["End user research", "Data", "Legal"]
                 },
         {
             rid: 10,
             title: "Conduct further concept exploration on payment methods ",
             teams: ["04", "01"],
             priority: "later",
-            discipline: ["End user"]
+            discipline: ["End user research"]
         },
         {
             rid: 11,
             title: "Conduct further research on shared information with safeguarding SMEs ",
             teams: ["04", "07", "03", "01"],
             priority: "later",
-            discipline: ["End user", "Service research", "Legal", "Data", "Architecture"]
+            discipline: ["End user research", "Service research", "Legal", "Data", "Architecture"]
         },
         {
             rid: 12,
             title: "Do further concept exploration on curated and personalised content",
             teams: ["04", "07", "03"],
             priority: "later",
-            discipline: ["End user", "Service research", "Legal", "Data"]
+            discipline: ["End user research", "Service research", "Legal", "Data"]
                 },
         {
             rid: 13,
             title: "Do further research on different end users of the GOV.UK account",
             teams: ["05", "12", "04", "01", "03", "02"],
             priority: "later",
-            discipline: ["End user", "Adoption", "Legal", "Service research"]
+            discipline: ["End user research", "Adoption", "Legal", "Service research"]
                 },
         {
             rid: 14,
             title: "Continue research on consent patterns",
             teams: ["04", "01"],
             priority: "later",
-            discipline: ["End user", "Legal"]
+            discipline: ["End user research", "Legal"]
                 },
         {
             rid: 15,
@@ -1046,6 +1046,20 @@ module.exports = {
             title: "Conduct further service research to fully understand the value and complexity of adopting each of the hypothetical account features ",
             teams: ["08"],
             priority: "next",
+            discipline: ["Service research", "Legal", "Data", "Architecture", "Adoption"]
+                },
+        {
+            rid: 18,
+            title: "Conduct further research with services to assess the technical complexity of features from a service integration perspective",
+            teams: ["08"],
+            priority: "next",
+            discipline: ["Service research", "Legal", "Data", "Architecture", "Adoption"]
+                },
+        {
+            rid: 19,
+            title: "Create a set of service team user needs for each feature",
+            teams: ["08"],
+            priority: "later",
             discipline: ["Service research"]
                 }
             ]

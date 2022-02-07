@@ -1,0 +1,59 @@
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['why'] }} </h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>In the second round of the cross-government service research, participants recruited from services were from non-technical roles and were predominately service owners or product managers. </li>
+    <li>The existing service research exploring the value/complexity of future potential features is not based on any technical assessments of complexity. </li>
+    <li>Whilst we also conducted a technical and data readiness survey to explore the feasibility of joining up services across government, and their readiness to participate in cross-government data sharing via the GOV.UK account, there were a number of limitations:
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li><b>Follow-up</b> - the survey methodology limited our ability to probe for further information with participating services.</li>
+            <li><b>Sensitivity</b> - participants may not have felt comfortable providing answers that present their service in an unfavourable manner or as technically immature.</li>
+            <li><b>Self-selection bias</b> - survey respondents decided entirely for themselves whether or not they wanted to participate - this may have impacted on the representation of services, with less engagement with the GDS GOV.UK account programme of work. This makes it difficult to generalise the findings from the sample to the overall service population.</li>
+            <li><b>Recruitment channels</b> - services with lower levels of maturity may not have the technical roles we targeted with the survey, and may not be active on the GDS and engineering channels used to recruit for this study.</li>
+            <li><b>Standardisation</b> - We did not have access to a standardised approach/framework to assess technical and data maturity against.</li>
+
+        </ul>
+    </li>
+    <li>We recommend dedicated research sessions with service team members in technical roles across services with varying levels of technical and data maturity, using a prototype to explore each feature and specifically any technical, integration and onboarding considerations/requirements.</li>
+</ul>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['what'] }}</h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>This research will allow interactive, in-depth exploration into technical service user needs, expectations, complexity, perceived risks and the resource commitment associated with implementing the feature via the GOV.UK account. </li>
+    <li>Help to identify the realities of how services are impacted by each feature. Services need to fully understand these realities in order to buy into the Account proposition. It also provides useful insights for GDS that can be used to feed into an adoption plan. </li>
+    <li>Findings from this research would directly feed into an onboarding plan for each feature. It would allow an understanding of what support services need and what challenges services may face as they integrate into the account and each new feature.</li>
+</ul>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['who'] }}</h3>
+{% include "recommendations/includes/logic-teams-recommendations.html" %}
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['challenges'] }}</h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>Engagement and recruiting services has been challenging within the cross-government services programme - our experience has been that many services teams are reluctant to engage or unable to support our user research due to their own service commitments. </li>
+    <li>Initially the recruitment of participants from service teams needs to be aligned with the GOV.UK account onboarding team. Beyond this, the research needs to also include a diverse range of services that are not yet onboarding to allow for the research to be representative of cross-government services. </li>
+    <li>However it's important to note that many services may not have in-house technical resources to participate in this research. In fulfilling this recommendation (researching with services that have technical roles within their teams/or in house technical support) could create a minimum bar to engagement. </li>
+    <li>Technical roles may have a different understanding of service needs than POs, particularly the more arms-length tech support teams like HO MBTP who may not be aware of/aligned with service and end user needs</li>
+</ul>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['consequences'] }}</h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>There may be service considerations around how features are developed/implemented that have not been considered. </li>
+    <li>Resource commitment needs to be understood so that service teams can allocate sufficient time/resource on their roadmap to support implementation. </li>
+    <li>There may be an expectation in services that GDS would meet some of the resourcing costs to support implementation, particularly if the service does not perceive benefits from the account/features.</li>
+    <li>There is a significant risk that services will not be able to integrate features with the GOV.UK account. </li>
+    <li>Without understanding service needs around onboarding it will be difficult to effectively communicate what services need to know in order to onboard a particular feature. </li>
+    <li>If services do integrate features, there may be unforeseen problems that services encounter downstream. </li>
+    <li>There may be unforeseen risks associated with features - unless these are understood these risks can’t be mitigated or avoided. </li>
+    <li>If services not already on the onboarding roadmap aren't included, there's a risk the integration plan is only fit for services with a particular tech/digital maturity, creating a 2 tier system.</li>
+</ul>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['considerations'] }}</h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+    <li>Within GDS many teams are actively recruiting and engaging with services for user research - there is a high risk of services being contacted by multiple teams working in the GOV.UK account/GDS space which can easily lead to disengagement and confusion. </li>
+    <li>Clear alignment between teams at GDS is needed to track which services have been contacted for research and which services are already actively participating in research to prevent this situation from occurring. </li>
+    <li>Many of the recruitment briefs around the GOV.UK account may sound similar to service teams so clear communication and alignment between GDS teams about recruitment briefs is important.</li>
+</ul>
+
+<h3 class="govuk-heading-s govuk-!-padding-top-8">{{ data['recommendationheadings']['more'] }}</h3>
+<p><a href="../service-research/insights.html">Service research insights </a></p>
+<p><a href="../data/insights.html#{{ data['datainsightsmenu'][05]['anchor'] }}">{{ data['datainsightsmenu'][05]['title'] }} </a></p>
+<p><a href="../data/insights.html#{{ data['datainsightsmenu'][00]['anchor'] }}">{{ data['datainsightsmenu'][00]['title'] }} </a></p>
+<p><a href="../data/survey">Technical and data readiness survey</a></p>

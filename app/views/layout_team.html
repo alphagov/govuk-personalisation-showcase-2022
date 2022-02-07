@@ -260,7 +260,7 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
                 <p>
-                    <a href="{{ team.slacklink }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank">Team Slack channel</a>
+                    <a href="{{ data['teams'][teamindex]['slacklink'] }}" target="_blank"><img src="../../public/images/slack.png" class="icon" target="_blank">Team Slack channel</a>
                 </p>
 
             </div>
@@ -269,7 +269,7 @@
         {% endif %}
 
 
-        {% if data['teams'][teamindex]['slacklink'] %}
+        {% if data['teams'][teamindex]['members'] %}
         <!-- risk category -->
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full govuk-!-padding-bottom-4">
@@ -279,7 +279,7 @@
                     {% for member in data['teams'][teamindex]['members'] | sort(attribute="role") %}
 
 
-                    <li><b>{{ member.role }}</b> - {% if member.email %}<a href="mailto:{{ member.email }}">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %}
+                    <li><b>{{ member.role }}</b> - {% if member.email %}<a href="{{ member.email }}">{{ member.name }}</a> {% else %} {{ member.name }} {% endif %}
 
                     </li>
 

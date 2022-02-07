@@ -4130,6 +4130,7 @@ router.get('/features/15', function (req, res) {
     let showrecommendations = req.session.data.rdd.features[index].showrecommendations
     let prototypelink = req.session.data.rdd.features[index].prototypelink
     let relatedfeatures = req.session.data.rdd.features[index].relatedfeatures
+    let teams = req.session.data.rdd.features[index].teams
 
     let total = req.session.data.rdd.features.length
 
@@ -4157,7 +4158,8 @@ router.get('/features/15', function (req, res) {
         'showrecommendations': showrecommendations,
         'prototypelink': prototypelink,
         'total': total,
-        'relatedfeatures': relatedfeatures
+        'relatedfeatures': relatedfeatures,
+        'teams': teams
     })
 })
 
