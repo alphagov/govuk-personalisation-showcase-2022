@@ -1040,6 +1040,13 @@ module.exports = {
             teams: ["08"],
             priority: "next",
             discipline: ["Service research"]
+                },
+        {
+            rid: 17,
+            title: "Conduct further service research to fully understand the value and complexity of adopting each of the hypothetical account features ",
+            teams: ["08"],
+            priority: "next",
+            discipline: ["Service research"]
                 }
             ]
 }
