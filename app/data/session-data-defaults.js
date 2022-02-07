@@ -688,7 +688,7 @@ module.exports = {
             id: 3,
             slacklink: "https://gds.slack.com/archives/C012GEZBZM0",
             focus: "Part of one login for government, looking at how users navigate to the account, how to manage having multiple accounts and what a signed-in state looks like for users",
-            roadmap: "",
+            roadmap: "https://docs.google.com/document/d/1BYIhbNCD4hZKF3ZqN-KYwOlZ1SHPODYv3tpCXvcnG1g/edit?usp=sharing",
             members: [
                 {
                     role: "Product",
@@ -750,7 +750,7 @@ module.exports = {
             id: 6,
             slacklink: "https://gds.slack.com/archives/C02ETRFAU82",
             focus: "",
-            roadmap: "",
+            roadmap: "https://docs.google.com/document/d/19kByzQeF_NiiseyCfjOAPRUIftDg3Ben-WYw6dCcmUU/edit?usp=sharing",
             members: [
                 {
                     role: "Product",
@@ -798,7 +798,7 @@ module.exports = {
             id: 8,
             slacklink: "https://gds.slack.com/archives/CHR4UQKU4",
             focus: "The Data Labs team analyse data across the gov.uk website to provide teams with insight and recommendations as to how personalisation should be enabled for the user",
-            roadmap: "",
+            roadmap: "https://docs.google.com/document/d/1MLiiiZelVq6N0f6A7hiVbrYOZZUf0lc3Au5A8wLVzfk/edit?usp=sharing",
             members: [
                 {
                     role: "Product",
@@ -817,7 +817,7 @@ module.exports = {
             id: 9,
             slacklink: "https://gds.slack.com/archives/C02LU2DKK51",
             focus: "",
-            roadmap: "",
+            roadmap: "https://docs.google.com/document/d/11ZPMUQcevrb-or8NB83NTULhfiXooWi-8z9R4sWM9gY/edit?usp=sharing",
             members: [
                 {
                     role: "Product",
