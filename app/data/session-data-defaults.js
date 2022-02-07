@@ -927,20 +927,21 @@ module.exports = {
             title: "Further user research and consultation with SMEs to understand which tech options will best meet user needs",
             teams: ["03", "01"],
             priority: "now",
-            discipline: ["End user research", "Service research", "Architecture", "Data"]
+            discipline: ["End user research", "Architecture", "Data", "Security"]
         },
         {
             rid: 1,
-            title: "Conduct a further communications and branding exercise on the naming and description of the GOV.UK account",
+            title: "Conduct a communications and branding exercise on the naming and description of the GOV.UK account",
             teams: ["04", "08"],
             priority: "now",
-            discipline: ["End user research", "Service research", "Branding", "Adoption"]
+            discipline: ["End user research", "Service research", "Branding", "Adoption", "Communication"]
         },
         {
             rid: 2,
             title: "Further end user concept testing of an attribute store, and attribute sharing",
             teams: ["01"],
             priority: "next",
+            show: false,
             discipline: ["End user research", "Service research", "Data", "Architecture"]
         },
         {
@@ -952,10 +953,10 @@ module.exports = {
         },
         {
             rid: 4,
-            title: "Further exploration around encouraging/compelling to set up a GOV.UK account and add data to it",
+            title: "Further exploration around encouraging/compelling users to set up a GOV.UK account and add data to it",
             teams: ["08", "04", "01"],
             priority: "later",
-            discipline: ["End user research", "Branding", "Adoption"]
+            discipline: ["End user research", "Branding", "Adoption", "Communication"]
         },
         {
             rid: 5,
@@ -987,24 +988,24 @@ module.exports = {
         },
         {
             rid: 9,
-            title: "Conduct further concept exploration on external data ",
+            title: "Conduct further concept exploration on external data",
             teams: ["04", "03", "01"],
             priority: "later",
             discipline: ["End user research", "Data", "Legal"]
                 },
         {
             rid: 10,
-            title: "Conduct further concept exploration on payment methods ",
+            title: "Conduct further concept exploration on payment methods",
             teams: ["04", "01"],
             priority: "later",
             discipline: ["End user research"]
         },
         {
             rid: 11,
-            title: "Conduct further research on shared information with safeguarding SMEs ",
+            title: "Conduct further research on shared information with safeguarding SMEs",
             teams: ["04", "07", "03", "01"],
             priority: "later",
-            discipline: ["End user research", "Service research", "Legal", "Data", "Architecture"]
+            discipline: ["End user research", "Service research", "Legal", "Data", "Architecture", "Security"]
         },
         {
             rid: 12,
@@ -1015,7 +1016,7 @@ module.exports = {
                 },
         {
             rid: 13,
-            title: "Do further research on different end users of the GOV.UK account",
+            title: "Research different end users of the GOV.UK account",
             teams: ["05", "12", "04", "01", "03", "02"],
             priority: "later",
             discipline: ["End user research", "Adoption", "Legal", "Service research"]
@@ -1032,14 +1033,14 @@ module.exports = {
             title: "Explore how to effectively communicate and educate government services about the GOV.UK account and the long-term vision ",
             teams: ["08"],
             priority: "now",
-            discipline: ["Service research", "Adoption"]
+            discipline: ["Service research", "Adoption", "Communication"]
                 },
         {
             rid: 16,
             title: "Conduct research to understand, for services undergoing a digital transformation, how their roadmap aligns with the GOV.UK account roadmap",
             teams: ["08"],
             priority: "next",
-            discipline: ["Service research"]
+            discipline: ["Service research", "Communication", "Adoption"]
                 },
         {
             rid: 17,
@@ -1061,6 +1062,48 @@ module.exports = {
             teams: ["08"],
             priority: "later",
             discipline: ["Service research"]
+                },
+        {
+            rid: 20,
+            title: "Conduct research across government services to build an accurate picture on the use of data dictionaries and information standards, in particular the GPG 45",
+            teams: ["TBD"],
+            priority: "now",
+            discipline: ["Service research", "Data"]
+                },
+        {
+            rid: 21,
+            title: "Widen the recruitment profile to include services with greater digital maturity",
+            teams: ["08"],
+            priority: "now",
+            discipline: ["Service research", "Data"]
+                },
+        {
+            rid: 22,
+            title: "Understand which data items present the greatest benefits to users in terms of reuse and personalisation",
+            teams: ["04", "01", "07"],
+            priority: "now",
+            discipline: ["Service research", "Data", "End user research"]
+                },
+        {
+            rid: 23,
+            title: "Consider development, implementation and maintenance of a cross-government data dictionary, or ongoing cross-government data matching",
+            teams: ["01", "TBD"],
+            priority: "now",
+            discipline: ["Service research", "Data", "End user research"]
+                },
+        {
+            rid: 24,
+            title: "Develop an adoption roadmap targeting services with low digital maturity",
+            teams: ["08", "06"],
+            priority: "now",
+            discipline: ["Service research", "Data", "Adoption"]
+                },
+        {
+            rid: 25,
+            title: "Re-examine the GOV.UK account principles for minimal data use, in context of the future account features",
+            teams: ["04"],
+            priority: "next",
+            discipline: ["Legal", "Data"]
                 }
             ]
 }

@@ -6,7 +6,8 @@
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         {% for recommendation in recommendations %}
         {% if recommendation.priority == "now" %}
-
+        {% if recommendation.show == false %}
+        {% else %}
         <div id="rec-{{ recommendation.rid}}" class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
@@ -28,7 +29,7 @@
                 <br />
             </div>
         </div>
-
+        {% endif %}
         {% else %}
         {% endif %}
 
@@ -47,7 +48,8 @@
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         {% for recommendation in recommendations %}
         {% if recommendation.priority == "next" %}
-
+        {% if recommendation.show == false %}
+        {% else %}
         <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
@@ -67,7 +69,7 @@
                 {% include "recommendations/includes/" + recommendation.rid + ".html" %}
             </div>
         </div>
-
+        {% endif %}
         {% else %}
         {% endif %}
 
@@ -87,7 +89,8 @@
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         {% for recommendation in recommendations %}
         {% if recommendation.priority == "later" %}
-
+        {% if recommendation.show == false %}
+        {% else %}
         <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
@@ -107,7 +110,7 @@
                 {% include "recommendations/includes/" + recommendation.rid + ".html" %}
             </div>
         </div>
-
+        {% endif %}
         {% else %}
         {% endif %}
 
