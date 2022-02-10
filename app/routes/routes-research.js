@@ -318,6 +318,10 @@ router.get('/people/teams/01', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -335,6 +339,14 @@ router.get('/people/teams/01', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -360,16 +372,62 @@ router.get('/people/teams/01', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/01', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -410,6 +468,10 @@ router.get('/people/teams/02', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -427,6 +489,14 @@ router.get('/people/teams/02', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -452,16 +522,62 @@ router.get('/people/teams/02', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/02', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -503,6 +619,10 @@ router.get('/people/teams/03', function (req, res) {
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     // calculate number of recommendations
     let rectotal = req.session.data.recommendations.length;
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -524,6 +644,14 @@ router.get('/people/teams/03', function (req, res) {
     let recommendations = req.session.data.recommendations
     let rids = []
     let recteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -549,6 +677,14 @@ router.get('/people/teams/03', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < rectotal; i++) {
+        rids[i] = req.session.data.recommendations[i].rid
+        rectitles[i] = req.session.data.recommendations[i].title
+        recteams[i] = req.session.data.recommendations[i].teams
+    }
+    for (i = 0; i < teamsnumber; i++) {
+        teamnames[i] = req.session.data.teams[i].name
+    }
     for (i = 0; i < userinsighttotal; i++) {
         userinsights[i] = req.session.data.userinsightsmenu[i]
     }
@@ -561,13 +697,31 @@ router.get('/people/teams/03', function (req, res) {
     for (i = 0; i < userinsighttotal; i++) {
         userteams[i] = req.session.data.userinsightsmenu[i].teams
     }
-    for (i = 0; i < rectotal; i++) {
-        rids[i] = req.session.data.recommendations[i].rid
-        rectitles[i] = req.session.data.recommendations[i].title
-        recteams[i] = req.session.data.recommendations[i].teams
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
     }
-    for (i = 0; i < teamsnumber; i++) {
-        teamnames[i] = req.session.data.teams[i].name
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
     }
 
     //return these
@@ -575,9 +729,18 @@ router.get('/people/teams/03', function (req, res) {
         'teams': teams,
         'pageid': pageid,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -592,10 +755,6 @@ router.get('/people/teams/03', function (req, res) {
         'features': features,
         'membernames': membernames,
         'emails': emails,
-        'recommendations': recommendations,
-        'rids': rids,
-        'recteams': recteams,
-        'rectitles': rectitles,
         'members': members
     })
 })
@@ -773,6 +932,10 @@ router.get('/people/teams/05', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -790,6 +953,14 @@ router.get('/people/teams/05', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -815,16 +986,62 @@ router.get('/people/teams/05', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/05', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -865,6 +1082,10 @@ router.get('/people/teams/06', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -882,6 +1103,14 @@ router.get('/people/teams/06', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -907,16 +1136,62 @@ router.get('/people/teams/06', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/06', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -957,6 +1232,10 @@ router.get('/people/teams/07', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -974,6 +1253,14 @@ router.get('/people/teams/07', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -999,16 +1286,62 @@ router.get('/people/teams/07', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/07', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -1200,6 +1533,10 @@ router.get('/people/teams/09', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -1217,6 +1554,14 @@ router.get('/people/teams/09', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -1242,16 +1587,62 @@ router.get('/people/teams/09', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/09', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -1292,6 +1683,10 @@ router.get('/people/teams/10', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -1309,6 +1704,14 @@ router.get('/people/teams/10', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -1334,16 +1737,62 @@ router.get('/people/teams/10', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/10', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -1384,6 +1833,10 @@ router.get('/people/teams/11', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -1401,6 +1854,14 @@ router.get('/people/teams/11', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -1426,16 +1887,62 @@ router.get('/people/teams/11', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
 
     //return these
     return res.render('people/teams/11', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
@@ -1476,6 +1983,10 @@ router.get('/people/teams/12', function (req, res) {
     // calculate number of end user insight links
     let userinsighttotal = req.session.data.userinsightsmenu.length;
     let recommendations = req.session.data.recommendations
+    // calculate number of service insight links
+    let serviceinsighttotal = req.session.data.serviceinsightsmenu.length;
+    // calculate number of data insight links
+    let datainsighttotal = req.session.data.datainsightsmenu.length;
 
     let membersnumber = []
     let teams = []
@@ -1493,6 +2004,14 @@ router.get('/people/teams/12', function (req, res) {
     let usertitles = []
     let useranchors = []
     let userteams = []
+    let serviceinsights = []
+    let servicetitles = []
+    let serviceanchors = []
+    let serviceteams = []
+    let datainsights = []
+    let datatitles = []
+    let dataanchors = []
+    let datateams = []
 
     for (i = 0; i < featurestotal; i++) {
         features[i] = req.session.data.rdd.features[i]
@@ -1518,15 +2037,61 @@ router.get('/people/teams/12', function (req, res) {
     for (i = 0; i < membersnumber; i++) {
         membernames[i] = req.session.data.teams.members[i].name
     }
+    for (i = 0; i < userinsighttotal; i++) {
+        userinsights[i] = req.session.data.userinsightsmenu[i]
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        usertitles[i] = req.session.data.userinsightsmenu[i].title
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        useranchors[i] = req.session.data.userinsightsmenu[i].anchor
+    }
+    for (i = 0; i < userinsighttotal; i++) {
+        userteams[i] = req.session.data.userinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceinsights[i] = req.session.data.serviceinsightsmenu[i]
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        servicetitles[i] = req.session.data.serviceinsightsmenu[i].title
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceanchors[i] = req.session.data.serviceinsightsmenu[i].anchor
+    }
+    for (i = 0; i < serviceinsighttotal; i++) {
+        serviceteams[i] = req.session.data.serviceinsightsmenu[i].teams
+    }
+
+    for (i = 0; i < datainsighttotal; i++) {
+        datainsights[i] = req.session.data.datainsightsmenu[i]
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datatitles[i] = req.session.data.datainsightsmenu[i].title
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        dataanchors[i] = req.session.data.datainsightsmenu[i].anchor
+    }
+    for (i = 0; i < datainsighttotal; i++) {
+        datateams[i] = req.session.data.datainsightsmenu[i].teams
+    }
     //return these
     return res.render('people/teams/12', {
         'teams': teams,
         'pageid': pageid,
-        'recommendations': recommendations,
         'userinsights': userinsights,
+        'recommendations': recommendations,
         'usertitles': usertitles,
         'useranchors': useranchors,
         'userteams': userteams,
+        'serviceinsights': serviceinsights,
+        'servicetitles': servicetitles,
+        'serviceanchors': serviceanchors,
+        'serviceteams': serviceteams,
+        'datainsights': datainsights,
+        'datatitles': datatitles,
+        'dataanchors': dataanchors,
+        'datateams': datateams,
         'teamsnumber': teamsnumber,
         'membersnumber': membersnumber,
         'featurenames': featurenames,
