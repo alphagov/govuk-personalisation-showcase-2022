@@ -158,27 +158,27 @@ module.exports = {
         {
             title: "Users identified various benefits of the GOV.UK account and the concept of X-GOV journeys",
             anchor: "insight-1",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "08"]
         },
         {
             title: "Not everyone will perceive the GOV.UK account as valuable or useful",
             anchor: "insight-2",
-            teams: ["04", "08", "07"]
+            teams: ["04", "08", "07", "08"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is used by the government",
             anchor: "insight-3",
-            teams: ["04", "07"]
+            teams: ["04", "07", "02"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is shared by the government",
             anchor: "insight-4",
-            teams: ["04", "03", "07", "01"]
+            teams: ["04", "03", "07", "01", "02"]
         },
         {
             title: "Users appreciate the ability to control and manage their data",
             anchor: "insight-5",
-            teams: ["04", "03"]
+            teams: ["04", "03", "02", "08"]
         },
         {
             title: "Users read personalised content as accurate to them",
@@ -188,7 +188,7 @@ module.exports = {
         {
             title: "Users’ descriptions of the GOV.UK account in their own words",
             anchor: "insight-7",
-            teams: ["04", "08", "07"]
+            teams: ["04", "08", "07", "08"]
         },
         {
             title: "Users don’t care how their data is stored, as long as it is secure",
@@ -198,7 +198,7 @@ module.exports = {
         {
             title: "Users expect the government’s online services to be secure",
             anchor: "insight-9",
-            teams: ["04"]
+            teams: ["04", "08"]
         },
         {
             title: "Automated transactions create a sense of nervousness for some users ",
@@ -309,57 +309,57 @@ module.exports = {
         {
             title: "Services only share limited data outside of their own government departments",
             anchor: "insight-1",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "02"]
     },
         {
             title: "Many services use third party data with a high reliance on manual processes ",
             anchor: "insight-2",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "02"]
     },
         {
             title: "Services are transforming at different rates which creates compatibility issues",
             anchor: "insight-3",
-            teams: ["04", "05", "07", "01"]
+            teams: ["04", "05", "07", "01", "02"]
     },
         {
             title: "Services expect to benefit from sharing data across X-Gov in a number of ways",
             anchor: "insight-4",
-            teams: ["04", "05", "07", "01"]
+            teams: ["04", "05", "07", "01", "02"]
     },
         {
             title: "Data assurance standards and current legislation are fundamental service concerns",
             anchor: "insight-5",
-            teams: ["04", "05", "07", "01"]
+            teams: ["04", "05", "07", "01", "02"]
     },
         {
             title: "Existing roadmaps and resource commitment creates competing priorities with the GOV.UK account integration",
             anchor: "insight-6",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "08"]
     },
         {
             title: "Services expect that a level playing field will be created, with all available data on the table",
             anchor: "insight-7",
-            teams: ["04", "05"]
+            teams: ["04", "05", "02"]
     },
         {
             title: "Services identified joining up systems and back office processes as key challenges",
             anchor: "insight-8",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "02"]
     },
         {
             title: "Services see the hypothetical account features as either “core or value added”",
             anchor: "insight-9",
-            teams: ["04", "05"]
+            teams: ["04", "05", "08"]
     },
         {
             title: "Service users expect to be clear about the operating model and support mechanism for end users",
             anchor: "insight-10",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "08"]
     },
         {
             title: "User adoption and user reactions are key considerations",
             anchor: "insight-11",
-            teams: ["04", "05"]
+            teams: ["04", "05", "08"]
     },
         {
             title: "Services identified that not all data should be available for re-use within the GOV account",
@@ -458,22 +458,22 @@ module.exports = {
         {
             title: "GOV.UK account features may support and improve services business processes",
             anchor: "insight-3",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "08"]
     },
         {
             title: "Services will have needs that GOV.UK account features can’t meet",
             anchor: "insight-4",
-            teams: ["04", "05"]
+            teams: ["04", "05", "08"]
     },
         {
             title: "Services generally need the same information from their users",
             anchor: "insight-5",
-            teams: ["04", "05", "07", "01"]
+            teams: ["04", "05", "07", "01", "02"]
     },
         {
             title: "Services vary significantly in how they receive and record information from their users",
             anchor: "insight-6",
-            teams: ["04", "05", "07", "01"]
+            teams: ["04", "05", "07", "01", "02"]
     }
     ],
     featuresmenu: [
@@ -854,8 +854,8 @@ module.exports = {
             name: "Digital Identity",
             id: 11,
             slacklink: "https://gds.slack.com/archives/CABG3AZNV",
-            focus: "test",
-            roadmap: "",
+            focus: "A safe, easy way for the public to access all government services online in the same place - a single sign-on and identity checking system for government",
+            roadmap: "https://docs.google.com/presentation/d/1NymhqTMY1w0DBb-cO8TE_UQG-SabI0fcW9W8hbY1VrI/edit#slide=id.gcf8ddf212e_0_0",
             members: [
                 {
                     role: "Product",
@@ -880,6 +880,11 @@ module.exports = {
                 {
                     role: "Design",
                     name: "Tory Dunn",
+                    email: ""
+           },
+                {
+                    role: "Design",
+                    name: "Matt Fielding",
                     email: ""
            }
            ]
@@ -1017,7 +1022,7 @@ module.exports = {
         {
             rid: 13,
             title: "Research different end users of the GOV.UK account",
-            teams: ["05", "12", "04", "01", "03", "02"],
+            teams: ["05", "12", "04", "01", "03"],
             priority: "later",
             discipline: ["End user research", "Adoption", "Legal", "Service research"]
                 },
@@ -1066,7 +1071,7 @@ module.exports = {
         {
             rid: 20,
             title: "Conduct research across government services to build an accurate picture on the use of data dictionaries and information standards, in particular the GPG 45",
-            teams: ["TBD"],
+            teams: ["01", "02"],
             priority: "now",
             discipline: ["Service research", "Data"]
                 },
@@ -1087,7 +1092,7 @@ module.exports = {
         {
             rid: 23,
             title: "Consider development, implementation and maintenance of a cross-government data dictionary, or ongoing cross-government data matching",
-            teams: ["01", "TBD"],
+            teams: ["01", "02"],
             priority: "now",
             discipline: ["Service research", "Data", "End user research"]
                 },
