@@ -173,7 +173,7 @@ module.exports = {
         {
             title: "Users hold a variety of assumptions about how their data is shared by the government",
             anchor: "insight-4",
-            teams: ["04", "03", "07"]
+            teams: ["04", "03", "07", "01"]
         },
         {
             title: "Users appreciate the ability to control and manage their data",
@@ -203,7 +203,7 @@ module.exports = {
         {
             title: "Automated transactions create a sense of nervousness for some users ",
             anchor: "insight-10",
-            teams: ["04", "07"]
+            teams: ["04", "07", "01"]
         },
         {
             title: "Users expect a way of getting in touch if they have an issue with their account",
@@ -319,17 +319,17 @@ module.exports = {
         {
             title: "Services are transforming at different rates which creates compatibility issues",
             anchor: "insight-3",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     },
         {
             title: "Services expect to benefit from sharing data across X-Gov in a number of ways",
             anchor: "insight-4",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     },
         {
             title: "Data assurance standards and current legislation are fundamental service concerns",
             anchor: "insight-5",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     },
         {
             title: "Existing roadmaps and resource commitment creates competing priorities with the GOV.UK account integration",
@@ -364,7 +364,7 @@ module.exports = {
         {
             title: "Services identified that not all data should be available for re-use within the GOV account",
             anchor: "insight-12",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     },
         {
             title: "Services believe that individual control of data is essential",
@@ -453,7 +453,7 @@ module.exports = {
         {
             title: "Most of the services we spoke to are either planning, supporting or currently undergoing a digital transformation",
             anchor: "insight-2",
-            teams: ["04", "05"]
+            teams: ["04", "05", "01"]
     },
         {
             title: "GOV.UK account features may support and improve services business processes",
@@ -468,12 +468,12 @@ module.exports = {
         {
             title: "Services generally need the same information from their users",
             anchor: "insight-5",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     },
         {
             title: "Services vary significantly in how they receive and record information from their users",
             anchor: "insight-6",
-            teams: ["04", "05", "07"]
+            teams: ["04", "05", "07", "01"]
     }
     ],
     featuresmenu: [
