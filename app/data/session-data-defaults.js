@@ -158,22 +158,22 @@ module.exports = {
         {
             title: "Users identified various benefits of the GOV.UK account and the concept of X-GOV journeys",
             anchor: "insight-1",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
         },
         {
             title: "Not everyone will perceive the GOV.UK account as valuable or useful",
             anchor: "insight-2",
-            teams: ["04", "08"]
+            teams: ["04", "08", "07"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is used by the government",
             anchor: "insight-3",
-            teams: ["04"]
+            teams: ["04", "07"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is shared by the government",
             anchor: "insight-4",
-            teams: ["04", "03"]
+            teams: ["04", "03", "07"]
         },
         {
             title: "Users appreciate the ability to control and manage their data",
@@ -183,12 +183,12 @@ module.exports = {
         {
             title: "Users read personalised content as accurate to them",
             anchor: "insight-6",
-            teams: ["04"]
+            teams: ["04", "07"]
         },
         {
             title: "Users’ descriptions of the GOV.UK account in their own words",
             anchor: "insight-7",
-            teams: ["04", "08"]
+            teams: ["04", "08", "07"]
         },
         {
             title: "Users don’t care how their data is stored, as long as it is secure",
@@ -203,7 +203,7 @@ module.exports = {
         {
             title: "Automated transactions create a sense of nervousness for some users ",
             anchor: "insight-10",
-            teams: ["04"]
+            teams: ["04", "07"]
         },
         {
             title: "Users expect a way of getting in touch if they have an issue with their account",
@@ -309,32 +309,32 @@ module.exports = {
         {
             title: "Services only share limited data outside of their own government departments",
             anchor: "insight-1",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Many services use third party data with a high reliance on manual processes ",
             anchor: "insight-2",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services are transforming at different rates which creates compatibility issues",
             anchor: "insight-3",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services expect to benefit from sharing data across X-Gov in a number of ways",
             anchor: "insight-4",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Data assurance standards and current legislation are fundamental service concerns",
             anchor: "insight-5",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Existing roadmaps and resource commitment creates competing priorities with the GOV.UK account integration",
             anchor: "insight-6",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services expect that a level playing field will be created, with all available data on the table",
@@ -344,7 +344,7 @@ module.exports = {
         {
             title: "Services identified joining up systems and back office processes as key challenges",
             anchor: "insight-8",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services see the hypothetical account features as either “core or value added”",
@@ -354,7 +354,7 @@ module.exports = {
         {
             title: "Service users expect to be clear about the operating model and support mechanism for end users",
             anchor: "insight-10",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "User adoption and user reactions are key considerations",
@@ -364,7 +364,7 @@ module.exports = {
         {
             title: "Services identified that not all data should be available for re-use within the GOV account",
             anchor: "insight-12",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services believe that individual control of data is essential",
@@ -458,7 +458,7 @@ module.exports = {
         {
             title: "GOV.UK account features may support and improve services business processes",
             anchor: "insight-3",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services will have needs that GOV.UK account features can’t meet",
@@ -468,12 +468,12 @@ module.exports = {
         {
             title: "Services generally need the same information from their users",
             anchor: "insight-5",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     },
         {
             title: "Services vary significantly in how they receive and record information from their users",
             anchor: "insight-6",
-            teams: ["04", "05"]
+            teams: ["04", "05", "07"]
     }
     ],
     featuresmenu: [
