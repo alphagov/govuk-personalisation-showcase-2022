@@ -749,7 +749,7 @@ module.exports = {
             name: "Whole User Journeys",
             id: 6,
             slacklink: "https://gds.slack.com/archives/C02ETRFAU82",
-            focus: "",
+            focus: "To simplify users’ interactions with government by helping departments join up across complex problems, and working together to improve them",
             roadmap: "https://docs.google.com/document/d/19kByzQeF_NiiseyCfjOAPRUIftDg3Ben-WYw6dCcmUU/edit?usp=sharing",
             members: [
                 {
