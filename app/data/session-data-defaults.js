@@ -509,7 +509,7 @@ module.exports = {
     },
         {
             title: "Data storage & security",
-            anchor: "data-security",
+            anchor: "security",
     }
     ],
     pillarsmenu: [
@@ -1149,8 +1149,91 @@ module.exports = {
             title: "Design with future scalability in mind",
             teams: ["04"],
             priority: "design",
-            show: false,
             discipline: ["Design", "End user research"]
+                },
+        {
+            rid: 29,
+            title: "Consider the impact on services before proceeding with design and implementation",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research", "Service research"]
+                },
+        {
+            rid: 30,
+            title: "Provide clear messaging on how the government will (or will not) process data",
+            teams: ["04"],
+            priority: "design",
+            discipline: ["Design", "Data", "Architecture", "End user research", "Service research"]
+                },
+        {
+            rid: 31,
+            title: "Ensure user expectations and the capability of the feature is aligned. We believe this is a priority for service design",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research"]
+                },
+        {
+            rid: 32,
+            title: "Ensure the user can see why something is happening - be specific about how a page is being personalised, or why a service is being suggested",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research"]
+                },
+        {
+            rid: 33,
+            title: "Be clear about impact to the user",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research"]
+                },
+        {
+            rid: 34,
+            title: "Ensure the user can review what has happened and when",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research"]
+                },
+        {
+            rid: 35,
+            title: "Be clear about responsibilities - as the account becomes feature rich, it may shift responsibilities away from the user",
+            teams: ["04", "07"],
+            priority: "design",
+            discipline: ["Design", "End user research", "Legal"]
+                },
+        {
+            rid: 36,
+            title: "Ensure the feature gives the user control and seeks their permission",
+            teams: ["04", "07"],
+            priority: "control",
+            discipline: ["Design", "End user research", "Legal", "Consent"]
+                },
+        {
+            rid: 37,
+            title: "Give users the ability to control their data",
+            teams: ["04", "07", "03"],
+            priority: "control",
+            discipline: ["Design", "End user research", "Legal", "Consent", "Data"]
+                },
+        {
+            rid: 38,
+            title: "Give users control and visibility over who gets to see their data",
+            teams: ["04", "07", "03"],
+            priority: "control",
+            discipline: ["Design", "End user research", "Legal", "Consent", "Data"]
+                },
+        {
+            rid: 39,
+            title: "Give users control over their data at individual item level",
+            teams: ["04", "07", "03"],
+            priority: "control",
+            discipline: ["Design", "End user research", "Legal", "Consent", "Data"]
+                },
+        {
+            rid: 40,
+            title: "Create a secure service which protects users’ privacy",
+            teams: ["04", "07", "03", "05", "12"],
+            priority: "security",
+            discipline: ["Design", "End user research", "Legal", "Consent", "Data"]
                 }
             ]
 }
