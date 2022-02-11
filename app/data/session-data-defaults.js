@@ -500,8 +500,16 @@ module.exports = {
             anchor: "later",
     },
         {
-            title: "Design recommendations & considerations",
+            title: "Design considerations",
             anchor: "design",
+    },
+        {
+            title: "Control & consent",
+            anchor: "control",
+    },
+        {
+            title: "Data storage & security",
+            anchor: "data-security",
     }
     ],
     pillarsmenu: [
