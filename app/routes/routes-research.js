@@ -2911,6 +2911,26 @@ router.get('/service-research/insights', function (req, res) {
     })
 })
 
+// USER RESEARCH user needs
+router.get('/service-research/service-needs', function (req, res) {
+
+    // pull in JSON data file if someone jumps directly to this page
+    if (!req.session.data['rdd']) {
+        let idvFile = 'rdd.json'
+        let path = 'app/data/'
+        req.session.data['rdd'] = loadJSONFromFile(idvFile, path)
+    }
+
+    let parent = req.session.data.hubmenu[2].title;
+    let parentlink = req.session.data.hubmenu[2].url;
+
+    //return these
+    return res.render('service-research/service-needs', {
+        'parent': parent,
+        'parentlink': parentlink
+    })
+})
+
 // SERVICE USER recommendations
 router.get('/service-research/recommendations', function (req, res) {
 
