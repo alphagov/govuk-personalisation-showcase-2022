@@ -44,7 +44,7 @@
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true#gid=1242826283",
             "relatedfeatures": ["02", "04", "10", "23", "24", "27"],
             "riskcategory": ["01", "02"],
-            "teams": ["05", "04", "07"]
+            "teams": ["05", "04", "07", "09"]
     },
         {
             "fid": "02",
@@ -67,7 +67,7 @@
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true#gid=1219713023",
             "relatedfeatures": ["01", "04", "10", "23", "24", "27"],
             "riskcategory": ["01", "02"],
-            "teams": ["04", "07"]
+            "teams": ["04", "07", "09"]
     },
         {
             "fid": "03",
@@ -113,7 +113,7 @@
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true#gid=1202747903",
             "relatedfeatures": ["10", "01", "02", "27", "29", "28", "23", "22"],
             "riskcategory": ["04", "02", "03"],
-            "teams": ["04", "05", "07"]
+            "teams": ["04", "05", "07", "09"]
     },
         {
             "fid": "05",
@@ -396,7 +396,7 @@
             "prototypelink": "https://docs.google.com/spreadsheets/d/14Qim_YrApvCgST80fDHTsPNo3jFGOmFALhKHzS-5eAk/edit?skip_itp2_check=true&pli=1#gid=874979296",
             "relatedfeatures": ["06", "08", "21"],
             "riskcategory": ["03", "02"],
-            "teams": ["04"]
+            "teams": ["04", "09"]
     },
         {
             "fid": "17",

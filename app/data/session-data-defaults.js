@@ -65,7 +65,7 @@ module.exports = {
             id: 10
     },
         {
-            title: "The people",
+            title: "People & teams",
             url: "/people",
             id: 1
     },
@@ -163,12 +163,12 @@ module.exports = {
         {
             title: "Not everyone will perceive the GOV.UK account as valuable or useful",
             anchor: "insight-2",
-            teams: ["04", "08", "07", "08"]
+            teams: ["04", "08", "07", "08", "09"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is used by the government",
             anchor: "insight-3",
-            teams: ["04", "07", "02"]
+            teams: ["04", "07", "02", "09"]
         },
         {
             title: "Users hold a variety of assumptions about how their data is shared by the government",
@@ -183,7 +183,7 @@ module.exports = {
         {
             title: "Users read personalised content as accurate to them",
             anchor: "insight-6",
-            teams: ["04", "07"]
+            teams: ["04", "07", "09"]
         },
         {
             title: "Users’ descriptions of the GOV.UK account in their own words",
@@ -369,7 +369,7 @@ module.exports = {
         {
             title: "Services believe that individual control of data is essential",
             anchor: "insight-13",
-            teams: ["04", "05"]
+            teams: ["04", "05", "09"]
     }
     ],
     datamenu: [
@@ -473,7 +473,7 @@ module.exports = {
         {
             title: "Services vary significantly in how they receive and record information from their users",
             anchor: "insight-6",
-            teams: ["04", "05", "07", "01", "02"]
+            teams: ["04", "05", "07", "01", "02", "09"]
     }
     ],
     featuresmenu: [
@@ -594,7 +594,7 @@ module.exports = {
         "CI / CD pipelines": 'A Continuous integration/continuous delivery (CI/CD) pipeline is a series of steps that must be performed in order to deliver a new version of software.',
         "DI": 'Digital Identity',
         "GDX": 'Government Data Exchange',
-        "SSI": 'Single Sign On'
+        "SSI / SSO": 'Single Sign On'
     },
     teams: [
         {
@@ -711,7 +711,7 @@ module.exports = {
             name: "Authentication",
             id: 4,
             slacklink: "https://gds.slack.com/archives/C01TN7NC951",
-            focus: "Dealing with User Authentication and ensuring that the individual logging into a service is recognised and who they say they are.",
+            focus: "Dealing with User Authentication and ensuring that the individual logging into a service is recognised and who they say they are",
             roadmap: "",
             members: [
                 {
@@ -797,18 +797,23 @@ module.exports = {
             name: "Data labs",
             id: 8,
             slacklink: "https://gds.slack.com/archives/CHR4UQKU4",
-            focus: "The Data Labs team analyse data across the gov.uk website to provide teams with insight and recommendations as to how personalisation should be enabled for the user",
+            focus: "The Data Labs team analyse data across the GOV.UK website to provide teams with insight and recommendations as to how personalisation should be enabled for the user",
             roadmap: "https://docs.google.com/document/d/1MLiiiZelVq6N0f6A7hiVbrYOZZUf0lc3Au5A8wLVzfk/edit?usp=sharing",
             members: [
                 {
                     role: "Product",
                     name: "Mohamed Abdisalam",
-                    email: ""
+                    email: "https://gds.slack.com/team/UD58P6DTL"
                 },
                 {
-                    role: "Delivery",
-                    name: "",
-                    email: ""
+                    role: "Data science",
+                    name: "Felix Reilly",
+                    email: "https://gds.slack.com/team/U02H51QG5QA"
+           },
+                {
+                    role: "Design",
+                    name: "John Steward",
+                    email: "https://gds.slack.com/team/U01G8B2DX8R"
            }
            ]
         },
@@ -944,7 +949,7 @@ module.exports = {
         {
             rid: 2,
             title: "Further end user concept testing of an attribute store, and attribute sharing",
-            teams: ["01"],
+            teams: ["01", "09"],
             priority: "next",
             show: false,
             discipline: ["End user research", "Service research", "Data", "Architecture"]
@@ -987,7 +992,7 @@ module.exports = {
         {
             rid: 8,
             title: "Conduct further experimentation on personalised navigation",
-            teams: ["04", "07"],
+            teams: ["04", "07", "09"],
             priority: "later",
             discipline: ["End user research"]
         },
@@ -1015,7 +1020,7 @@ module.exports = {
         {
             rid: 12,
             title: "Do further concept exploration on curated and personalised content",
-            teams: ["04", "07", "03"],
+            teams: ["04", "07", "03", "09"],
             priority: "later",
             discipline: ["End user research", "Service research", "Legal", "Data"]
                 },
@@ -1071,7 +1076,7 @@ module.exports = {
         {
             rid: 20,
             title: "Conduct research across government services to build an accurate picture on the use of data dictionaries and information standards, in particular the GPG 45",
-            teams: ["01", "02"],
+            teams: ["01", "02", "09"],
             priority: "now",
             discipline: ["Service research", "Data"]
                 },
@@ -1085,14 +1090,14 @@ module.exports = {
         {
             rid: 22,
             title: "Understand which data items present the greatest benefits to users in terms of reuse and personalisation",
-            teams: ["04", "01", "07"],
+            teams: ["04", "01", "07", "09"],
             priority: "now",
             discipline: ["Service research", "Data", "End user research"]
                 },
         {
             rid: 23,
             title: "Consider development, implementation and maintenance of a cross-government data dictionary, or ongoing cross-government data matching",
-            teams: ["01", "02"],
+            teams: ["01", "02", "09"],
             priority: "now",
             discipline: ["Service research", "Data", "End user research"]
                 },
@@ -1106,7 +1111,7 @@ module.exports = {
         {
             rid: 25,
             title: "Re-examine the GOV.UK account principles for minimal data use, in context of the future account features",
-            teams: ["04"],
+            teams: ["04", "09"],
             priority: "next",
             discipline: ["Legal", "Data"]
                 }
