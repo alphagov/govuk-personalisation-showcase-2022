@@ -1198,6 +1198,7 @@ module.exports = {
             title: "Be clear about responsibilities - as the account becomes feature rich, it may shift responsibilities away from the user",
             teams: ["04", "07"],
             priority: "design",
+            show: false,
             discipline: ["Design", "End user research", "Legal"]
                 },
         {
