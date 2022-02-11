@@ -122,3 +122,43 @@
 {% endblock %}
 {% else %}
 {% endif %}
+
+{% if pagemenu[3] %}
+{% block section4 %}
+<div class="govuk-grid-column-full">
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        {% for recommendation in recommendations %}
+        {% if recommendation.priority == "design" %}
+        {% if recommendation.show == false %}
+        {% else %}
+        <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        {{ recommendation.title }}
+                    </span>
+                </h2>
+                <div class="govuk-accordion__section-summary govuk-body govuk-!-padding-bottom-4 govuk-!-padding-top-4" id="accordion-with-summary-sections-summary-1">
+                    {% for discipline in recommendation.discipline | sort %}
+                    <strong class="govuk-tag govuk-tag--grey">
+                        {{ discipline }}
+                    </strong>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content govuk-!-padding-bottom-8" aria-labelledby="accordion-default-heading-1">
+                {% include "recommendations/includes/" + recommendation.rid + ".html" %}
+            </div>
+        </div>
+        {% endif %}
+        {% else %}
+        {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}
+{% else %}
+{% endif %}

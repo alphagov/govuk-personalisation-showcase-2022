@@ -498,6 +498,10 @@ module.exports = {
         {
             title: "Later",
             anchor: "later",
+    },
+        {
+            title: "Design recommendations & considerations",
+            anchor: "design",
     }
     ],
     pillarsmenu: [
@@ -1131,6 +1135,14 @@ module.exports = {
             teams: ["04"],
             priority: "next",
             discipline: ["Service research", "End user research", "Operating model", "Communication"]
+                },
+        {
+            rid: 28,
+            title: "Design with future scalability in mind",
+            teams: ["04"],
+            priority: "design",
+            show: false,
+            discipline: ["Design", "End user research"]
                 }
             ]
 }
