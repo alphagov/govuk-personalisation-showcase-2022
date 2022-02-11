@@ -223,6 +223,10 @@
                     <ul class="govuk-list govuk-list--spaced govuk-!-padding-top-4 govuk-!-padding-bottom-8">
 
                         {% for recommendation in recommendations | sort(attribute="priority") | reverse -%}
+                        {% if recommendation.show == false %}
+                        {% else %}
+
+
                         {% if recommendation.teams %}
 
                         {% for team in recommendation.teams -%}
@@ -236,11 +240,11 @@
                         {% else %}
 
                         {% endif %}
+
                         {%- endfor %}
 
                         {% else %}
-
-
+                        {% endif %}
                         {% endif %}
                         {%- endfor %}
                     </ul>

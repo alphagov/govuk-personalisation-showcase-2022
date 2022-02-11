@@ -973,6 +973,7 @@ module.exports = {
             title: "Provide users with a way of contacting the GOV.UK accounts team",
             teams: ["04"],
             priority: "later",
+            show: false,
             discipline: ["End user research", "Service research", "Operating model"]
         },
         {
@@ -1050,6 +1051,7 @@ module.exports = {
             title: "Conduct research to understand, for services undergoing a digital transformation, how their roadmap aligns with the GOV.UK account roadmap",
             teams: ["08"],
             priority: "next",
+            show: false,
             discipline: ["Service research", "Communication", "Adoption"]
                 },
         {
@@ -1085,6 +1087,7 @@ module.exports = {
             title: "Widen the recruitment profile to include services with greater digital maturity",
             teams: ["08"],
             priority: "now",
+            show: false,
             discipline: ["Service research", "Data"]
                 },
         {
@@ -1114,6 +1117,20 @@ module.exports = {
             teams: ["04", "09"],
             priority: "next",
             discipline: ["Legal", "Data"]
+                },
+        {
+            rid: 26,
+            title: "Conduct research across government services to determine the status of their digital transformation and how it will align with the GOV.UK account roadmap",
+            teams: ["08"],
+            priority: "now",
+            discipline: ["Service research", "Data", "Adoption", "Architecture", "Communication"]
+                },
+        {
+            rid: 27,
+            title: "Understand how to deliver an effective customer support model",
+            teams: ["04"],
+            priority: "next",
+            discipline: ["Service research", "End user research", "Operating model", "Communication"]
                 }
             ]
 }
