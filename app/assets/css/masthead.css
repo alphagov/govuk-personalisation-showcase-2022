@@ -1,6 +1,3 @@
-// Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import "../../../lib/extensions/extensions";
-
 #account {
     color: white;
     float: right;
