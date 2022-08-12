@@ -1,4 +1,7 @@
-# Publishing on the web (Heroku)
+---
+title: Publish on the web
+---
+# Publish on the web (Heroku)
 
 Heroku runs your prototype online, the same as it runs on your machine, but available to others at any time. Other similar services are available.
 
@@ -10,7 +13,7 @@ You'll need to have [put your code on GitHub](/docs/github-desktop) to use this 
 
 2. In the top right click **New** then **Create new app**.
 
-![Screenshot of Heroku Create App page](/public/images/docs/heroku-create-app.png)
+![Screenshot of Heroku Create New App page](/public/images/docs/heroku-create-app.png)
 
 3. Enter a name for your prototype app. App names in Heroku have to be unique across all the users of Heroku. It can be helpful to add your name or organisation to the start of the name to make it unique. For example joelanman-juggling-prototype.
 
@@ -22,7 +25,7 @@ You'll need to have [put your code on GitHub](/docs/github-desktop) to use this 
 
 1. For **Deployment method** choose **GitHub**. ‘Deploy’ means publish.
 
-![Screenshot of Heroku deploy page](/public/images/docs/heroku-deploy.png)
+![Screenshot of section of page headed Deployment method](/public/images/docs/heroku-deploy.png)
 
 2. Scroll down and click **Connect to GitHub**.
 

@@ -1,3 +1,7 @@
+---
+title: Use components from the Design System
+caption: Build a basic prototype
+---
 # Use components from the Design System
 
 You can copy example code from the GOV.UK Design System to add page elements like radios and text inputs - we call these ‘components’.
@@ -12,8 +16,8 @@ In the Design System, components have both Nunjucks and HTML example code. Eithe
 
 ## Add radios to question 1
 
-1. Go to the [stacked radios](https://design-system.service.gov.uk/components/radios/#stacked-radios) section of the Design System.
-2. Select the **Nunjucks** tab, then **Copy code**.
+1. Go to the [radios component in the Design System](https://design-system.service.gov.uk/components/radios/).
+2. Select the **Nunjucks** tab under the first example, then **Copy code**.
 3. Open `juggling-balls.html` in your `app/views` folder.
 4. Replace the 2 example `<p>...</p>` paragraphs with the code you copied.
 5. The example comes with a heading that is connected to the answers for accessibility, so delete the old `<h1>` tag with "How many balls can you juggle?".
